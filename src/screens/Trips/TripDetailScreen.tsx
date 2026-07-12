@@ -1,0 +1,119 @@
+import React from 'react';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { TripsStackParamList } from '@/navigation/types';
+import { useApp } from '@/context/AppContext';
+import { colors, spacing, radius, shadows, typography } from '@/theme';
+import { getParkById } from '@/data/parks';
+
+type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
+
+function formatDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+export default function TripDetailScreen({ route, navigation }: Props) {
+  const { tripId } = route.params;
+  const { trips } = useApp();
+  const trip = trips.find((t) => t.id === tripId);
+  const park = trip ? getParkById(trip.parkId) : null;
+
+  if (!trip || !park) return null;
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+        {/* Hero */}
+        <View style={styles.hero}>
+          <View style={styles.heroImageBox}>
+            <Text style={styles.heroEmoji}>🏔️</Text>
+          </View>
+          <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
+            <Text style={styles.backIcon}>‹</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.content}>
+          <Text style={styles.parkName}>{park.name}</Text>
+          <Text style={styles.dates}>{formatDate(trip.startDate)} – {formatDate(trip.endDate)}</Text>
+
+          {/* Activities */}
+          {trip.activities.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Activities</Text>
+              <View style={styles.tagRow}>
+                {trip.activities.map((a) => (
+                  <View key={a} style={styles.tag}>
+                    <Text style={styles.tagText}>{a}</Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          )}
+
+          {/* Journal */}
+          {trip.notes ? (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Journal</Text>
+              <View style={styles.journalCard}>
+                <Text style={styles.journalText}>{trip.notes}</Text>
+              </View>
+            </View>
+          ) : null}
+
+          {/* Wildlife */}
+          {trip.wildlifeSightings && trip.wildlifeSightings.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Wildlife Spotted</Text>
+              <View style={styles.tagRow}>
+                {trip.wildlifeSightings.map((w) => (
+                  <View key={w} style={[styles.tag, styles.tagWildlife]}>
+                    <Text style={styles.tagText}>🦌 {w}</Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          )}
+
+          {/* Stats */}
+          <View style={styles.statsRow}>
+            {trip.milesHiked ? (
+              <View style={styles.statChip}><Text style={styles.statNum}>{trip.milesHiked}</Text><Text style={styles.statLabel}>Miles</Text></View>
+            ) : null}
+            {trip.rating ? (
+              <View style={styles.statChip}><Text style={styles.statNum}>{'⭐'.repeat(trip.rating)}</Text><Text style={styles.statLabel}>Rating</Text></View>
+            ) : null}
+            {trip.weather ? (
+              <View style={styles.statChip}><Text style={styles.statNum}>🌤</Text><Text style={styles.statLabel}>{trip.weather}</Text></View>
+            ) : null}
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: colors.background },
+  scroll: { paddingBottom: spacing['5xl'] },
+  hero: { height: 220, position: 'relative' },
+  heroImageBox: { flex: 1, backgroundColor: '#C5DEBA', alignItems: 'center', justifyContent: 'center' },
+  heroEmoji: { fontSize: 64, opacity: 0.7 },
+  backBtn: { position: 'absolute', top: 16, left: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
+  backIcon: { fontSize: 24, color: colors.textPrimary, lineHeight: 30 },
+  content: { padding: spacing.xl, gap: spacing.xl },
+  parkName: { ...typography.h2, color: colors.textPrimary },
+  dates: { ...typography.body, color: colors.textSecondary },
+  section: { gap: spacing.sm },
+  sectionTitle: { ...typography.h5, color: colors.textPrimary },
+  tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+  tag: { backgroundColor: '#EEF5E8', borderRadius: radius.full, paddingHorizontal: spacing.md, paddingVertical: spacing.xs },
+  tagWildlife: { backgroundColor: '#FFF3E8' },
+  tagText: { ...typography.labelSmall, color: colors.primary },
+  journalCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, ...shadows.sm },
+  journalText: { ...typography.body, color: colors.textPrimary, lineHeight: 22 },
+  statsRow: { flexDirection: 'row', gap: spacing.md, flexWrap: 'wrap' },
+  statChip: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, alignItems: 'center', minWidth: 80, ...shadows.sm },
+  statNum: { ...typography.h5, color: colors.textPrimary },
+  statLabel: { ...typography.caption, color: colors.textSecondary, marginTop: 2 },
+});

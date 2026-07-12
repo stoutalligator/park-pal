@@ -1,0 +1,94 @@
+import { Park } from '@/types';
+
+export const ALL_PARKS: Park[] = [
+  // --- Northeast ---
+  { id: 'acadia', name: 'Acadia', state: 'Maine', region: 'Northeast', description: 'Rocky coastline, mountains, and forests on the Atlantic coast of Maine.', establishedYear: 1919, acres: 49076, image: '', status: 'visited', isFavorite: true },
+  { id: 'shenandoah', name: 'Shenandoah', state: 'Virginia', region: 'Northeast', description: 'Blue Ridge Mountains with waterfalls, wildflowers, and the famous Skyline Drive.', establishedYear: 1935, acres: 199045, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'new-river-gorge', name: 'New River Gorge', state: 'West Virginia', region: 'Northeast', description: 'Ancient river canyon in the Appalachian Mountains, a haven for rock climbing and whitewater.', establishedYear: 2020, acres: 72808, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- Southeast ---
+  { id: 'great-smoky', name: 'Great Smoky Mountains', state: 'Tennessee / North Carolina', region: 'Southeast', description: 'Mist-covered mountains, diverse wildlife, and vibrant wildflower seasons.', establishedYear: 1934, acres: 522427, image: '', status: 'visited', isFavorite: true },
+  { id: 'biscayne', name: 'Biscayne', state: 'Florida', region: 'Southeast', description: 'Mostly aquatic park protecting coral reefs and islands near Miami.', establishedYear: 1980, acres: 172971, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'dry-tortugas', name: 'Dry Tortugas', state: 'Florida', region: 'Southeast', description: 'Remote island park accessible only by boat or seaplane, famous for Fort Jefferson.', establishedYear: 1992, acres: 64701, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'everglades', name: 'Everglades', state: 'Florida', region: 'Southeast', description: 'Subtropical wilderness of sawgrass marshes and mangrove forests.', establishedYear: 1934, acres: 1508938, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'congaree', name: 'Congaree', state: 'South Carolina', region: 'Southeast', description: 'Largest intact expanse of old growth bottomland forest in the Southeast.', establishedYear: 2003, acres: 26546, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'mammoth-cave', name: 'Mammoth Cave', state: 'Kentucky', region: 'Southeast', description: 'World\'s longest known cave system beneath rolling Kentucky hills.', establishedYear: 1941, acres: 54012, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'virgin-islands', name: 'Virgin Islands', state: 'U.S. Virgin Islands', region: 'Southeast', description: 'Tropical paradise with white-sand beaches and vibrant coral reefs.', establishedYear: 1956, acres: 14944, image: '', status: 'bucketList', isFavorite: false },
+
+  // --- Midwest ---
+  { id: 'cuyahoga-valley', name: 'Cuyahoga Valley', state: 'Ohio', region: 'Midwest', description: 'Rolling hills, waterfalls, and the Cuyahoga River in northeast Ohio.', establishedYear: 2000, acres: 32572, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'indiana-dunes', name: 'Indiana Dunes', state: 'Indiana', region: 'Midwest', description: 'Stunning sand dunes along the southern shore of Lake Michigan.', establishedYear: 2019, acres: 15349, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'isle-royale', name: 'Isle Royale', state: 'Michigan', region: 'Midwest', description: 'Remote archipelago in Lake Superior, home to wolves and moose.', establishedYear: 1940, acres: 571790, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'voyageurs', name: 'Voyageurs', state: 'Minnesota', region: 'Midwest', description: 'Water-based park with interconnected lakes along the Canadian border.', establishedYear: 1975, acres: 218200, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'wind-cave', name: 'Wind Cave', state: 'South Dakota', region: 'Midwest', description: 'One of the world\'s longest caves beneath the Black Hills prairie.', establishedYear: 1903, acres: 33847, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'badlands', name: 'Badlands', state: 'South Dakota', region: 'Midwest', description: 'Dramatic landscapes of eroded buttes and spires rising from the Great Plains.', establishedYear: 1978, acres: 242756, image: '', status: 'visited', isFavorite: false },
+  { id: 'theodore-roosevelt', name: 'Theodore Roosevelt', state: 'North Dakota', region: 'Midwest', description: 'Rugged badlands where Teddy Roosevelt found his love for conservation.', establishedYear: 1978, acres: 70447, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- South Central ---
+  { id: 'big-bend', name: 'Big Bend', state: 'Texas', region: 'SouthCentral', description: 'Vast desert wilderness where the Chihuahuan Desert meets the Rio Grande.', establishedYear: 1944, acres: 801163, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'guadalupe-mountains', name: 'Guadalupe Mountains', state: 'Texas', region: 'SouthCentral', description: 'Ancient marine fossil reef rising from the Chihuahuan Desert.', establishedYear: 1972, acres: 86367, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'hot-springs', name: 'Hot Springs', state: 'Arkansas', region: 'SouthCentral', description: 'Historic bathhouses and natural hot springs in the Ouachita Mountains.', establishedYear: 1921, acres: 5554, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'ozark', name: 'Ozark', state: 'Missouri / Arkansas', region: 'SouthCentral', description: 'Scenic rivers, caves, and forests of the Ozark Plateau.', establishedYear: 1964, acres: 80785, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- Mountain ---
+  { id: 'rocky-mountain', name: 'Rocky Mountain', state: 'Colorado', region: 'Mountain', description: 'Snow-capped peaks, alpine lakes, and abundant wildlife along the Continental Divide.', establishedYear: 1915, acres: 265828, image: '', status: 'visited', isFavorite: true, visitedDates: ['2023-10-08', '2023-10-11'] },
+  { id: 'black-canyon', name: 'Black Canyon of the Gunnison', state: 'Colorado', region: 'Mountain', description: 'Dramatic dark canyon cut by the Gunnison River over two million years.', establishedYear: 1999, acres: 30780, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'great-sand-dunes', name: 'Great Sand Dunes', state: 'Colorado', region: 'Mountain', description: 'Tallest sand dunes in North America rise against the Sangre de Cristo Mountains.', establishedYear: 2004, acres: 107342, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'mesa-verde', name: 'Mesa Verde', state: 'Colorado', region: 'Mountain', description: 'Ancestral Puebloan cliff dwellings perched in the canyon walls of the Colorado Plateau.', establishedYear: 1906, acres: 52485, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'arches', name: 'Arches', state: 'Utah', region: 'Mountain', description: 'Over 2,000 natural sandstone arches in a landscape of red rock fins and balanced boulders.', establishedYear: 1971, acres: 76679, image: '', status: 'visited', isFavorite: true },
+  { id: 'bryce-canyon', name: 'Bryce Canyon', state: 'Utah', region: 'Mountain', description: 'Forests of orange, red, and white hoodoos carved from the Paunsaugunt Plateau.', establishedYear: 1928, acres: 35835, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'canyonlands', name: 'Canyonlands', state: 'Utah', region: 'Mountain', description: 'Vast wilderness of canyons, mesas, and buttes carved by the Colorado and Green Rivers.', establishedYear: 1964, acres: 337598, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'capitol-reef', name: 'Capitol Reef', state: 'Utah', region: 'Mountain', description: 'A hidden gem of twisted rock and ancient fruita orchards in southern Utah.', establishedYear: 1971, acres: 241904, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'zion', name: 'Zion', state: 'Utah', region: 'Mountain', description: 'Towering red cliffs, emerald pools, and the famous Narrows slot canyon.', establishedYear: 1919, acres: 147243, image: '', status: 'visited', isFavorite: true, visitedDates: ['2024-03-02', '2024-03-05'] },
+  { id: 'grand-teton', name: 'Grand Teton', state: 'Wyoming', region: 'Mountain', description: 'Jagged peaks, crystal clear lakes, and abundant wildlife. Adventure is always calling.', establishedYear: 1929, acres: 310000, image: '', status: 'visited', isFavorite: true, visitedDates: ['2023-08-12', '2023-08-16'] },
+  { id: 'yellowstone', name: 'Yellowstone', state: 'Wyoming / Montana / Idaho', region: 'Mountain', description: 'World\'s first national park, famous for geysers, hot springs, and incredible wildlife.', establishedYear: 1872, acres: 2219791, image: '', status: 'visited', isFavorite: true, visitedDates: ['2024-04-10', '2024-04-14'] },
+  { id: 'glacier', name: 'Glacier', state: 'Montana', region: 'Mountain', description: 'Going-to-the-Sun Road winds through a landscape of glaciers, lakes, and wildflowers.', establishedYear: 1910, acres: 1013322, image: '', status: 'bucketList', isFavorite: true },
+  { id: 'glacier-bay', name: 'Glacier Bay', state: 'Alaska', region: 'Alaska', description: 'Tidewater glaciers calving into emerald bays with humpback whales below.', establishedYear: 1980, acres: 3223384, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'grand-canyon', name: 'Grand Canyon', state: 'Arizona', region: 'Mountain', description: 'One of the world\'s great natural wonders — a mile-deep canyon carved by the Colorado River.', establishedYear: 1919, acres: 1201647, image: '', status: 'visited', isFavorite: true },
+  { id: 'petrified-forest', name: 'Petrified Forest', state: 'Arizona', region: 'Mountain', description: 'Ancient logs of colorful petrified wood scattered across the Painted Desert.', establishedYear: 1962, acres: 221390, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'saguaro', name: 'Saguaro', state: 'Arizona', region: 'Mountain', description: 'The quintessential American desert, home to the giant saguaro cactus.', establishedYear: 1994, acres: 91715, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'carlsbad-caverns', name: 'Carlsbad Caverns', state: 'New Mexico', region: 'Mountain', description: 'Spectacular underground chambers decorated with extraordinary stalactites.', establishedYear: 1930, acres: 46766, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'white-sands', name: 'White Sands', state: 'New Mexico', region: 'Mountain', description: 'Glistening gypsum dunes stretch across the northern Chihuahuan Desert.', establishedYear: 2019, acres: 146344, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'great-basin', name: 'Great Basin', state: 'Nevada', region: 'Mountain', description: 'Lonely Wheeler Peak and ancient bristlecone pines in the Nevada high desert.', establishedYear: 1986, acres: 77180, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- Pacific ---
+  { id: 'yosemite', name: 'Yosemite', state: 'California', region: 'Pacific', description: 'Iconic granite valleys, towering sequoias, and roaring waterfalls in the Sierra Nevada.', establishedYear: 1890, acres: 748436, image: '', status: 'visited', isFavorite: true },
+  { id: 'sequoia', name: 'Sequoia', state: 'California', region: 'Pacific', description: 'Home to the world\'s largest trees, including the mighty General Sherman.', establishedYear: 1890, acres: 404063, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'kings-canyon', name: 'Kings Canyon', state: 'California', region: 'Pacific', description: 'Deep canyons, ancient sequoias, and rugged backcountry in the southern Sierra.', establishedYear: 1940, acres: 461901, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'death-valley', name: 'Death Valley', state: 'California', region: 'Pacific', description: 'The hottest and driest place in North America — a landscape of extremes.', establishedYear: 1994, acres: 3422024, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'joshua-tree', name: 'Joshua Tree', state: 'California', region: 'Pacific', description: 'Surreal landscape of twisted Joshua trees where the Mojave and Colorado Deserts meet.', establishedYear: 1994, acres: 795156, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'channel-islands', name: 'Channel Islands', state: 'California', region: 'Pacific', description: 'Pristine island wilderness off the coast of Southern California, rich in marine life.', establishedYear: 1980, acres: 249561, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'pinnacles', name: 'Pinnacles', state: 'California', region: 'Pacific', description: 'Volcanic rock spires, talus caves, and California condor habitat in central California.', establishedYear: 2013, acres: 26606, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'redwood', name: 'Redwood', state: 'California', region: 'Pacific', description: 'Towering coast redwoods — the world\'s tallest trees — along the foggy northern coast.', establishedYear: 1968, acres: 138999, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'lassen-volcanic', name: 'Lassen Volcanic', state: 'California', region: 'Pacific', description: 'Boiling mud pots, steaming fumaroles, and volcanic peaks in northern California.', establishedYear: 1916, acres: 106589, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'olympic', name: 'Olympic', state: 'Washington', region: 'Pacific', description: 'Temperate rainforests, rugged coastline, and glacier-capped peaks on Washington\'s peninsula.', establishedYear: 1938, acres: 922650, image: '', status: 'bucketList', isFavorite: true },
+  { id: 'mount-rainier', name: 'Mount Rainier', state: 'Washington', region: 'Pacific', description: 'An active stratovolcano draped in glaciers, surrounded by wildflower meadows.', establishedYear: 1899, acres: 236381, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'north-cascades', name: 'North Cascades', state: 'Washington', region: 'Pacific', description: 'The American Alps — jagged peaks, glaciers, and turquoise alpine lakes.', establishedYear: 1968, acres: 504643, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'crater-lake', name: 'Crater Lake', state: 'Oregon', region: 'Pacific', description: 'The deepest lake in the US, formed in the caldera of a collapsed volcano — brilliant blue water.', establishedYear: 1902, acres: 183224, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'haleakala', name: 'Haleakalā', state: 'Hawaii', region: 'Hawaii', description: 'A massive shield volcano on Maui, famous for its otherworldly summit sunrise views.', establishedYear: 1961, acres: 33265, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'hawaii-volcanoes', name: 'Hawaiʻi Volcanoes', state: 'Hawaii', region: 'Hawaii', description: 'Active volcanoes — Kīlauea and Mauna Loa — continuously reshaping the Big Island.', establishedYear: 1916, acres: 323431, image: '', status: 'bucketList', isFavorite: false },
+  { id: 'national-park-samoa', name: 'National Park of American Samoa', state: 'American Samoa', region: 'Hawaii', description: 'Remote tropical park in the South Pacific with coral reefs and ancient rainforest.', establishedYear: 1988, acres: 8257, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- Alaska ---
+  { id: 'denali', name: 'Denali', state: 'Alaska', region: 'Alaska', description: 'North America\'s highest peak dominates a wilderness of tundra and grizzly bears.', establishedYear: 1917, acres: 6045153, image: '', status: 'bucketList', isFavorite: true },
+  { id: 'katmai', name: 'Katmai', state: 'Alaska', region: 'Alaska', description: 'Watch brown bears feast on sockeye salmon at Brooks Falls in this remote wilderness.', establishedYear: 1980, acres: 4093077, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'kenai-fjords', name: 'Kenai Fjords', state: 'Alaska', region: 'Alaska', description: 'Glaciers calving into the sea, orca, and sea otters along the Kenai coast.', establishedYear: 1980, acres: 669984, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'kobuk-valley', name: 'Kobuk Valley', state: 'Alaska', region: 'Alaska', description: 'Great Sand Dunes within the Arctic Circle — one of Alaska\'s most remote parks.', establishedYear: 1980, acres: 1750717, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'lake-clark', name: 'Lake Clark', state: 'Alaska', region: 'Alaska', description: 'Remote Alaskan wilderness of volcanoes, glaciers, and pristine river systems.', establishedYear: 1980, acres: 4030015, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'wrangell-st-elias', name: 'Wrangell–St. Elias', state: 'Alaska', region: 'Alaska', description: 'Largest U.S. national park — a world of glaciers, mountains, and wild rivers.', establishedYear: 1980, acres: 13175799, image: '', status: 'notVisited', isFavorite: false },
+  { id: 'gates-arctic', name: 'Gates of the Arctic', state: 'Alaska', region: 'Alaska', description: 'No roads, no trails — pure Arctic wilderness north of the Arctic Circle.', establishedYear: 1980, acres: 7523897, image: '', status: 'notVisited', isFavorite: false },
+
+  // --- Additional Mountain / Pacific ---
+  { id: 'nps-guam', name: 'War in the Pacific', state: 'Guam', region: 'Hawaii', description: 'Commemorates the Pacific Theater of WWII on the island of Guam.', establishedYear: 1978, acres: 2037, image: '', status: 'notVisited', isFavorite: false },
+];
+
+export const TOTAL_PARKS = 63;
+
+export const getParkById = (id: string): Park | undefined =>
+  ALL_PARKS.find((p) => p.id === id);
+
+export const getParksByStatus = (status: Park['status']): Park[] =>
+  ALL_PARKS.filter((p) => p.status === status);
+
+export const getParksByRegion = (region: Park['region']): Park[] =>
+  ALL_PARKS.filter((p) => p.region === region);
