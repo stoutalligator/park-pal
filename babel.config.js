@@ -7,6 +7,7 @@ module.exports = function (api) {
         root: ['.'],
         alias: { '@': './src' },
       }],
+      'react-native-worklets/plugin',
     ],
   };
 };

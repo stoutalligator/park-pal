@@ -1,5 +1,5 @@
 export const fontFamilies = {
-  heading: 'Fredoka_700Bold',
+  heading: 'FredokaOne_400Regular',
   bodyRegular: 'Nunito_400Regular',
   bodySemiBold: 'Nunito_600SemiBold',
   bodyBold: 'Nunito_700Bold',

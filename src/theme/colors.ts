@@ -3,6 +3,7 @@ export const colors = {
   background: '#F5F0E8',
   surface: '#FFFFFF',
   surfaceWarm: '#FAF7F2',
+  cream: '#EAD9B7',
 
   // Brand / Primary
   primary: '#2D5016',
@@ -15,6 +16,7 @@ export const colors = {
   orange: '#D4845A',
   rose: '#C4847A',
   brown: '#8B6340',
+  brownDark: '#5C4028',
 
   // Text
   textPrimary: '#1C2B13',
