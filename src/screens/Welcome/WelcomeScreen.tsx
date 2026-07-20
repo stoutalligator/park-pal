@@ -12,7 +12,7 @@ export default function WelcomeScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
       <Image
-        source={require('@/assets/scenes/bear-title-scene.png')}
+        source={require('@/assets/mascot/bear-title-scene.png')}
         style={styles.backgroundImage}
         resizeMode="cover"
       />
