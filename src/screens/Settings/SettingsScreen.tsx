@@ -9,29 +9,21 @@ const SETTINGS_ROWS = [
   {
     section: 'Account',
     items: [
-      { label: 'Profile', sub: 'Name, avatar, explorer style', icon: require('@/assets/icons/icon-profile.png') },
-      { label: 'My Goal', sub: 'Update your park goal', icon: require('@/assets/icons/icon-achievements.png') },
+      { label: 'Profile', sub: 'Name, avatar, explorer style', icon: require('@/assets/icons/icon-profile.png'), screen: 'EditProfile' },
+      { label: 'My Goal', sub: 'Update your park goal', icon: require('@/assets/icons/icon-achievements.png'), screen: 'EditGoal' },
     ],
   },
   {
     section: 'App',
     items: [
-      { label: 'Units', sub: 'Miles / Kilometers', icon: require('@/assets/icons/icon-explore.png') },
-      { label: 'Notifications', sub: 'Reminders & updates', icon: require('@/assets/icons/icon-notifications.png') },
-    ],
-  },
-  {
-    section: 'Data',
-    items: [
-      { label: 'Backup & Sync', sub: 'Coming soon', icon: require('@/assets/icons/icon-offline-maps.png') },
-      { label: 'Export Data', sub: 'Export your trips as CSV', icon: require('@/assets/icons/icon-journal.png') },
+      { label: 'Units', sub: 'Miles / Kilometers', icon: require('@/assets/icons/icon-explore.png'), screen: 'Units' },
     ],
   },
   {
     section: 'About',
     items: [
-      { label: 'About Park Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png') },
-      { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png') },
+      { label: 'About Park Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png'), screen: 'About' },
+      { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png'), screen: 'PrivacyPolicy' },
     ],
   },
 ];
@@ -61,8 +53,13 @@ export default function SettingsScreen() {
           <View key={section} style={styles.section}>
             <Text style={styles.sectionLabel}>{section.toUpperCase()}</Text>
             <View style={styles.group}>
-              {items.map(({ label, sub, icon }, i) => (
-                <TouchableOpacity key={label} style={[styles.row, i < items.length - 1 && styles.rowBorder]} activeOpacity={0.7}>
+              {items.map(({ label, sub, icon, screen }, i) => (
+                <TouchableOpacity
+                  key={label}
+                  style={[styles.row, i < items.length - 1 && styles.rowBorder]}
+                  activeOpacity={0.7}
+                  onPress={() => navigation.navigate(screen)}
+                >
                   <Image source={icon} style={styles.rowIcon} resizeMode="contain" />
                   <View style={styles.rowText}>
                     <Text style={styles.rowLabel}>{label}</Text>

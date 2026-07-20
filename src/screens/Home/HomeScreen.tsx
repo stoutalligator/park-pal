@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import Svg, { Line, Circle } from 'react-native-svg';
+import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
@@ -20,29 +19,6 @@ const STATUS_MAP: Record<Filter, ParkStatus | null> = {
   'Bucket List': 'bucketList',
 };
 
-function MenuIcon() {
-  return (
-    <Svg width={20} height={20} viewBox="0 0 20 20">
-      <Line x1={2} y1={5} x2={18} y2={5} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-      <Line x1={2} y1={10} x2={18} y2={10} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-      <Line x1={2} y1={15} x2={18} y2={15} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-    </Svg>
-  );
-}
-
-function FilterIcon() {
-  return (
-    <Svg width={20} height={20} viewBox="0 0 20 20">
-      <Line x1={2} y1={5} x2={18} y2={5} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-      <Circle cx={13} cy={5} r={2.5} fill={colors.background} stroke={colors.textPrimary} strokeWidth={1.5} />
-      <Line x1={2} y1={10} x2={18} y2={10} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-      <Circle cx={7} cy={10} r={2.5} fill={colors.background} stroke={colors.textPrimary} strokeWidth={1.5} />
-      <Line x1={2} y1={15} x2={18} y2={15} stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" />
-      <Circle cx={14} cy={15} r={2.5} fill={colors.background} stroke={colors.textPrimary} strokeWidth={1.5} />
-    </Svg>
-  );
-}
-
 export default function HomeScreen() {
   const { parks, stats } = useApp();
   const navigation = useNavigation<any>();
@@ -60,13 +36,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity hitSlop={12}>
-          <MenuIcon />
-        </TouchableOpacity>
         <Text style={styles.title}>Explore</Text>
-        <TouchableOpacity hitSlop={12}>
-          <FilterIcon />
-        </TouchableOpacity>
       </View>
 
       <View style={styles.toggleRow}>
@@ -98,9 +68,6 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
 
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     paddingHorizontal: spacing.xl,
     paddingTop: spacing['2xl'],
     paddingBottom: spacing.md,

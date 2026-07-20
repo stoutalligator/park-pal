@@ -21,6 +21,11 @@ import CollectionScreen from '@/screens/Collection/CollectionScreen';
 import StatsScreen from '@/screens/Stats/StatsScreen';
 import WishlistScreen from '@/screens/Wishlist/WishlistScreen';
 import SettingsScreen from '@/screens/Settings/SettingsScreen';
+import EditProfileScreen from '@/screens/Settings/EditProfileScreen';
+import EditGoalScreen from '@/screens/Settings/EditGoalScreen';
+import UnitsScreen from '@/screens/Settings/UnitsScreen';
+import AboutScreen from '@/screens/Settings/AboutScreen';
+import PrivacyPolicyScreen from '@/screens/Settings/PrivacyPolicyScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
@@ -68,6 +73,11 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Stats" component={StatsScreen} />
       <ProfileStack.Screen name="Wishlist" component={WishlistScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
+      <ProfileStack.Screen name="EditProfile" component={EditProfileScreen} />
+      <ProfileStack.Screen name="EditGoal" component={EditGoalScreen} />
+      <ProfileStack.Screen name="Units" component={UnitsScreen} />
+      <ProfileStack.Screen name="About" component={AboutScreen} />
+      <ProfileStack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} />
     </ProfileStack.Navigator>
   );
 }

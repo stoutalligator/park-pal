@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar } from '@/types';
+import { Park, Trip, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { ALL_ANIMALS } from '@/data/animals';
@@ -11,6 +11,7 @@ const DEFAULT_PROFILE: UserProfile = {
   onboardingComplete: false,
   profileBackground: 'mountain-lake',
   avatar: 'hiking',
+  units: 'mi',
 };
 
 interface TrailCompletionRow {
@@ -46,6 +47,7 @@ interface AppContextValue {
   completeOnboarding: (profile: Partial<UserProfile>) => void;
   updateProfileBackground: (background: ProfileBackground) => void;
   updateProfileAvatar: (avatar: ProfileAvatar) => void;
+  updateUnits: (units: Units) => void;
   signOut: () => Promise<void>;
   isTrailCompleted: (trailId: string) => boolean;
   isAnimalSpotted: (animalId: string) => boolean;
@@ -90,6 +92,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           onboardingComplete: data.onboarding_complete,
           profileBackground: data.profile_background,
           avatar: data.avatar,
+          units: (data.units as Units) ?? 'mi',
         });
       });
   }, [session]);
@@ -355,6 +358,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }, [session]);
 
+  const updateUnits = useCallback((units: Units) => {
+    setUserProfile((prev) => ({ ...prev, units }));
+    if (session) {
+      supabase.from('profiles').update({ units }).eq('id', session.user.id).then();
+    }
+  }, [session]);
+
   const signOut = useCallback(async () => {
     await supabase.auth.signOut();
     setUserProfile(DEFAULT_PROFILE);
@@ -378,6 +388,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         completeOnboarding,
         updateProfileBackground,
         updateProfileAvatar,
+        updateUnits,
         signOut,
         isTrailCompleted,
         isAnimalSpotted,

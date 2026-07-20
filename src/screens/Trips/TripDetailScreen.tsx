@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path, Polygon } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -8,6 +8,7 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkById } from '@/data/parks';
 import { getParkScene } from '@/data/parkImages';
+import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
 
@@ -19,6 +20,21 @@ function BackArrowIcon() {
   return (
     <Svg width={16} height={16} viewBox="0 0 16 16">
       <Path d="M10 2 4 8l6 6" fill="none" stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function TrashIcon() {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 24 24">
+      <Path
+        d="M4 7h16M9 7V4h6v3m-9 0 1 13a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-13M10 11v6M14 11v6"
+        fill="none"
+        stroke={colors.rose}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </Svg>
   );
 }
@@ -36,12 +52,28 @@ function StarIcon({ filled, size = 16 }: { filled: boolean; size?: number }) {
 
 export default function TripDetailScreen({ route, navigation }: Props) {
   const { tripId } = route.params;
-  const { trips } = useApp();
+  const { trips, deleteTrip, userProfile } = useApp();
+  const units = userProfile.units;
   const insets = useSafeAreaInsets();
   const trip = trips.find((t) => t.id === tripId);
   const park = trip ? getParkById(trip.parkId) : null;
 
   if (!trip || !park) return null;
+
+  const confirmDelete = () => {
+    const remove = () => {
+      deleteTrip(trip.id);
+      navigation.goBack();
+    };
+    if (Platform.OS === 'web') {
+      if (window.confirm('Delete this trip? This cannot be undone.')) remove();
+      return;
+    }
+    Alert.alert('Delete Trip', 'Delete this trip? This cannot be undone.', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Delete', style: 'destructive', onPress: remove },
+    ]);
+  };
 
   return (
     <View style={styles.container}>
@@ -51,6 +83,9 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <Image source={getParkScene(park.id)} style={styles.heroImage} resizeMode="cover" />
           <TouchableOpacity style={[styles.backBtn, { top: insets.top + 16 }]} onPress={() => navigation.goBack()}>
             <BackArrowIcon />
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.deleteBtn, { top: insets.top + 16 }]} onPress={confirmDelete}>
+            <TrashIcon />
           </TouchableOpacity>
         </View>
 
@@ -89,7 +124,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
               <View style={styles.tagRow}>
                 {trip.trailsHiked.map((t) => (
                   <View key={t.trailId ?? t.name} style={styles.tag}>
-                    <Text style={styles.tagText}>{t.name} · {t.miles} mi</Text>
+                    <Text style={styles.tagText}>{t.name} · {convertMiles(t.miles, units).toFixed(1)} {distanceLabel(units)}</Text>
                   </View>
                 ))}
               </View>
@@ -113,10 +148,10 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           {/* Stats */}
           <View style={styles.statsRow}>
             {trip.milesHiked ? (
-              <View style={styles.statChip}><Text style={styles.statNum}>{trip.milesHiked}</Text><Text style={styles.statLabel}>Miles</Text></View>
+              <View style={styles.statChip}><Text style={styles.statNum}>{convertMiles(trip.milesHiked, units).toFixed(1)}</Text><Text style={styles.statLabel}>{distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}</Text></View>
             ) : null}
             {trip.elevationGainFt ? (
-              <View style={styles.statChip}><Text style={styles.statNum}>{trip.elevationGainFt.toLocaleString()}</Text><Text style={styles.statLabel}>Elev. Gain (ft)</Text></View>
+              <View style={styles.statChip}><Text style={styles.statNum}>{Math.round(convertFeet(trip.elevationGainFt, units)).toLocaleString()}</Text><Text style={styles.statLabel}>Elev. Gain ({elevationLabel(units)})</Text></View>
             ) : null}
             {trip.rating ? (
               <View style={styles.statChip}>
@@ -144,6 +179,7 @@ const styles = StyleSheet.create({
   hero: { height: 320, position: 'relative', backgroundColor: colors.surfaceWarm },
   heroImage: { width: '100%', height: '100%' },
   backBtn: { position: 'absolute', top: 16, left: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
+  deleteBtn: { position: 'absolute', top: 16, right: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
   content: {
     padding: spacing.xl,
     gap: spacing.xl,

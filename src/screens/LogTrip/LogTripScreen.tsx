@@ -8,6 +8,7 @@ import { ActivityType, TripTrailEntry, TrailDifficulty, AnimalRarity } from '@/t
 import { ALL_TRAILS } from '@/data/trails';
 import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
+import { convertMiles, convertFeet, toMiles, toFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 const HERO_ACTIVITY_IMAGES: number[] = [
   require('@/assets/activities/bear-hiking.png'),
@@ -137,7 +138,8 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
 ];
 
 export default function LogTripScreen() {
-  const { parks, logTrip } = useApp();
+  const { parks, logTrip, userProfile } = useApp();
+  const units = userProfile.units;
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const [heroImage, setHeroImage] = useState<number>(randomHeroImage);
@@ -210,9 +212,10 @@ export default function LogTripScreen() {
 
   const addCustomTrail = () => {
     const name = customTrailName.trim();
-    const miles = parseFloat(customTrailMiles);
-    if (!name || Number.isNaN(miles)) return;
-    const elevationGainFt = parseFloat(customTrailElevation) || 0;
+    const enteredDistance = parseFloat(customTrailMiles);
+    if (!name || Number.isNaN(enteredDistance)) return;
+    const miles = toMiles(enteredDistance, units);
+    const elevationGainFt = toFeet(parseFloat(customTrailElevation) || 0, units);
     setSelectedTrails((prev) => [...prev, { name, miles, elevationGainFt }]);
     setCustomTrailName('');
     setCustomTrailMiles('');
@@ -366,7 +369,7 @@ export default function LogTripScreen() {
                   >
                     <Text style={[styles.trailChipName, active && styles.trailChipNameActive]}>{trail.name}</Text>
                     <Text style={[styles.trailChipMeta, active && styles.trailChipMetaActive]}>
-                      {trail.miles} mi · {trail.elevationGainFt.toLocaleString()} ft gain
+                      {convertMiles(trail.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(trail.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
                     </Text>
                   </TouchableOpacity>
                 );
@@ -388,7 +391,7 @@ export default function LogTripScreen() {
           <View style={styles.customTrailRow}>
             <TextInput
               style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-              placeholder="Miles"
+              placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
               placeholderTextColor={colors.textMuted}
               keyboardType="numeric"
               value={customTrailMiles}
@@ -396,7 +399,7 @@ export default function LogTripScreen() {
             />
             <TextInput
               style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-              placeholder="Elev. ft"
+              placeholder={`Elev. ${elevationLabel(units)}`}
               placeholderTextColor={colors.textMuted}
               keyboardType="numeric"
               value={customTrailElevation}

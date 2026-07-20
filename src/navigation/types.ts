@@ -40,4 +40,9 @@ export type ProfileStackParamList = {
   Stats: undefined;
   Wishlist: undefined;
   Settings: undefined;
+  EditProfile: undefined;
+  EditGoal: undefined;
+  Units: undefined;
+  About: undefined;
+  PrivacyPolicy: undefined;
 };

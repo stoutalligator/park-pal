@@ -6,8 +6,9 @@ import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { ALL_TRAILS } from '@/data/trails';
-import { Trail, TrailDifficulty } from '@/types';
+import { Trail, TrailDifficulty, Units } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
+import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'ParkTrails'>;
 
@@ -30,7 +31,7 @@ function CheckBadge() {
   );
 }
 
-function TrailListCard({ trail, completed }: { trail: Trail; completed: boolean }) {
+function TrailListCard({ trail, completed, units }: { trail: Trail; completed: boolean; units: Units }) {
   return (
     <View style={styles.itemCard}>
       <View style={styles.itemTitleRow}>
@@ -39,8 +40,8 @@ function TrailListCard({ trail, completed }: { trail: Trail; completed: boolean 
       </View>
       <Text style={styles.itemDescription}>{trail.description}</Text>
       <View style={styles.itemMetaRow}>
-        <Text style={styles.itemMeta}>{trail.miles} mi</Text>
-        <Text style={styles.itemMeta}>{trail.elevationGainFt.toLocaleString()} ft gain</Text>
+        <Text style={styles.itemMeta}>{convertMiles(trail.miles, units).toFixed(1)} {distanceLabel(units)}</Text>
+        <Text style={styles.itemMeta}>{Math.round(convertFeet(trail.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain</Text>
         <View style={[styles.pill, { backgroundColor: DIFFICULTY_COLOR[trail.difficulty] }]}>
           <Text style={styles.pillText}>{trail.difficulty}</Text>
         </View>
@@ -51,7 +52,8 @@ function TrailListCard({ trail, completed }: { trail: Trail; completed: boolean 
 
 export default function ParkTrailsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, isTrailCompleted } = useApp();
+  const { parks, isTrailCompleted, userProfile } = useApp();
+  const units = userProfile.units;
   const [search, setSearch] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<'All' | TrailDifficulty>('All');
 
@@ -97,7 +99,7 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
       <Text style={styles.progressText}>{completedCount} of {allTrails.length} completed</Text>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {trails.map((trail) => (
-          <TrailListCard key={trail.id} trail={trail} completed={isTrailCompleted(trail.id)} />
+          <TrailListCard key={trail.id} trail={trail} completed={isTrailCompleted(trail.id)} units={units} />
         ))}
       </ScrollView>
     </SafeAreaView>

@@ -6,15 +6,17 @@ import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ProgressRing from '@/components/ProgressRing';
 import ScreenHeader from '@/components/ScreenHeader';
 import { TOTAL_PARKS } from '@/data/parks';
+import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 export default function StatsScreen() {
-  const { stats } = useApp();
+  const { stats, userProfile } = useApp();
   const navigation = useNavigation<any>();
+  const units = userProfile.units;
 
   const STAT_CARDS = [
     { label: 'Total Trips', value: stats.totalTrips, icon: require('@/assets/icons/icon-trips.png') },
-    { label: 'Miles Hiked', value: stats.totalMilesHiked, icon: require('@/assets/icons/mountain.png') },
-    { label: 'Elevation Gain (ft)', value: stats.totalElevationGain, icon: require('@/assets/icons/icon-hikes.png') },
+    { label: `Miles Hiked (${distanceLabel(units)})`, value: convertMiles(stats.totalMilesHiked, units).toFixed(1), icon: require('@/assets/icons/mountain.png') },
+    { label: `Elevation Gain (${elevationLabel(units)})`, value: Math.round(convertFeet(stats.totalElevationGain, units)).toLocaleString(), icon: require('@/assets/icons/icon-hikes.png') },
     { label: 'States Visited', value: stats.statesVisited, icon: require('@/assets/icons/icon-map.png') },
     { label: 'Photos Saved', value: stats.totalPhotos, icon: require('@/assets/icons/icon-photos.png') },
     { label: 'Bucket List', value: stats.bucketListCount, icon: require('@/assets/icons/icon-favorites.png') },

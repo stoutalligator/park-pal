@@ -142,6 +142,8 @@ export type ProfileAvatar =
   | 'rock-climbing'
   | 'winter-activity';
 
+export type Units = 'mi' | 'km';
+
 export interface UserProfile {
   name: string;
   explorerStyle?: ExplorerStyle;
@@ -149,4 +151,5 @@ export interface UserProfile {
   onboardingComplete: boolean;
   profileBackground: ProfileBackground;
   avatar: ProfileAvatar;
+  units: Units;
 }

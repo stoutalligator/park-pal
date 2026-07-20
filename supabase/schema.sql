@@ -1,6 +1,10 @@
 -- Park Pal — Supabase schema
 -- Run this once in the Supabase SQL Editor (Project > SQL Editor > New query),
 -- then run `node scripts/seed-supabase.mjs` to populate parks/badges.
+--
+-- If you already ran this against an existing project, apply new columns
+-- incrementally instead of re-running the whole file, e.g.:
+--   alter table public.profiles add column if not exists units text not null default 'mi' check (units in ('mi', 'km'));
 
 create extension if not exists pgcrypto;
 
@@ -40,6 +44,7 @@ create table public.profiles (
   onboarding_complete boolean not null default false,
   profile_background text not null default 'mountain-lake',
   avatar text not null default 'hiking',
+  units text not null default 'mi' check (units in ('mi', 'km')),
   created_at timestamptz not null default now()
 );
 

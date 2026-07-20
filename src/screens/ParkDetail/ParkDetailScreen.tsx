@@ -144,7 +144,13 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
           </View>
 
           {/* Status actions */}
-          {park.status !== 'visited' && (
+          {park.status === 'visited' ? (
+            <View style={styles.actionRow}>
+              <TouchableOpacity style={[styles.actionChip, styles.actionChipAlt]} onPress={() => updateParkStatus(park.id, 'notVisited')}>
+                <Text style={[styles.actionChipText, styles.actionChipAltText]}>Mark Not Visited</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
             <View style={styles.actionRow}>
               <TouchableOpacity style={styles.actionChip} onPress={() => updateParkStatus(park.id, 'visited')}>
                 <Text style={styles.actionChipText}>Mark Visited</Text>
