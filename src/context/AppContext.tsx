@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { Park, Trip, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground } from '@/types';
+import { Park, Trip, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { MOCK_TRIPS } from '@/data/trips';
 import { ALL_BADGES } from '@/data/badges';
@@ -18,6 +18,7 @@ interface AppContextValue {
   deleteTrip: (tripId: string) => void;
   completeOnboarding: (profile: Partial<UserProfile>) => void;
   updateProfileBackground: (background: ProfileBackground) => void;
+  updateProfileAvatar: (avatar: ProfileAvatar) => void;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -30,6 +31,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     name: 'Explorer',
     onboardingComplete: false,
     profileBackground: 'mountain-lake',
+    avatar: 'hiking',
   });
 
   const stats: UserStats = {
@@ -86,6 +88,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setUserProfile((prev) => ({ ...prev, profileBackground: background }));
   }, []);
 
+  const updateProfileAvatar = useCallback((avatar: ProfileAvatar) => {
+    setUserProfile((prev) => ({ ...prev, avatar }));
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -101,6 +107,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         deleteTrip,
         completeOnboarding,
         updateProfileBackground,
+        updateProfileAvatar,
       }}
     >
       {children}

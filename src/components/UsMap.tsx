@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { colors, shadows } from '@/theme';
 import { Park, ParkStatus } from '@/types';
 import { IMAGE_HEIGHT, CROP_TOP, CROPPED_WIDTH, CROPPED_HEIGHT, projectPark, resolveOverlaps } from '@/utils/mapProjection';
+import { getParkImage } from '@/data/parkImages';
 
 const PIN_SIZE = 26;
 const BADGE_SIZE = 14;
@@ -58,9 +59,13 @@ function Pin({ park, x, y, onPress }: PinProps) {
       hitSlop={8}
       style={[styles.pin, { left: x - PIN_SIZE / 2, top: y - PIN_SIZE / 2 }]}
     >
-      <Svg width={14} height={14} viewBox="0 0 14 14">
-        <Polygon points="1,11 5,4 7,7 9,3 13,11" fill={colors.tan} opacity={0.9} />
-      </Svg>
+      <View style={styles.pinImageClip}>
+        <Image
+          source={getParkImage(park.id)}
+          style={styles.pinImage}
+          resizeMode="cover"
+        />
+      </View>
       <View style={[styles.badge, { backgroundColor: badge.bg }]}>
         <StatusIcon icon={badge.icon} />
       </View>
@@ -166,6 +171,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     ...shadows.sm,
+  },
+  pinImageClip: {
+    width: PIN_SIZE - 4,
+    height: PIN_SIZE - 4,
+    borderRadius: (PIN_SIZE - 4) / 2,
+    overflow: 'hidden',
+  },
+  pinImage: {
+    width: PIN_SIZE - 4,
+    height: PIN_SIZE - 4,
   },
   badge: {
     position: 'absolute',

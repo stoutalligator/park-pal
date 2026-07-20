@@ -94,10 +94,28 @@ export type ExplorerGoal =
 
 export type ProfileBackground = 'mountain-lake' | 'forest' | 'arches' | 'mountain-gate' | 'night-camping';
 
+export type ProfileAvatar =
+  | 'hiking'
+  | 'camping'
+  | 'wildlife-viewing'
+  | 'kayaking'
+  | 'scenic-drive'
+  | 'photography'
+  | 'backpacking'
+  | 'stargazing'
+  | 'fishing'
+  | 'horseback-riding'
+  | 'nature-walk'
+  | 'waterfall-hike'
+  | 'picnic'
+  | 'rock-climbing'
+  | 'winter-activity';
+
 export interface UserProfile {
   name: string;
   explorerStyle?: ExplorerStyle;
   goal?: ExplorerGoal;
   onboardingComplete: boolean;
   profileBackground: ProfileBackground;
+  avatar: ProfileAvatar;
 }

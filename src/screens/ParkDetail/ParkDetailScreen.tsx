@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
+import { getParkImage } from '@/data/parkImages';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -24,13 +25,17 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
         {/* Hero */}
         <View style={styles.hero}>
           <View style={styles.heroImageBox}>
-            <Text style={styles.heroEmoji}>🏔️</Text>
+            <Image source={getParkImage(park.id)} style={styles.heroImage} resizeMode="cover" />
           </View>
           <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
             <Text style={styles.backIcon}>‹</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.heartBtn} onPress={() => toggleFavorite(park.id)}>
-            <Text style={styles.heartIcon}>{park.isFavorite ? '❤️' : '🤍'}</Text>
+            <Image
+              source={require('@/assets/icons/icon-favorites.png')}
+              style={[styles.heartIcon, !park.isFavorite && styles.heartIconInactive]}
+              resizeMode="contain"
+            />
           </TouchableOpacity>
         </View>
 
@@ -49,15 +54,15 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
           {/* Facts */}
           <View style={styles.factsRow}>
             <View style={styles.fact}>
-              <Text style={styles.factIcon}>📅</Text>
+              <Image source={require('@/assets/icons/icon-calendar.png')} style={styles.factIcon} resizeMode="contain" />
               <Text style={styles.factLabel}>Est. {park.establishedYear}</Text>
             </View>
             <View style={styles.fact}>
-              <Text style={styles.factIcon}>📍</Text>
+              <Image source={require('@/assets/icons/icon-map.png')} style={styles.factIcon} resizeMode="contain" />
               <Text style={styles.factLabel}>{park.state}</Text>
             </View>
             <View style={styles.fact}>
-              <Text style={styles.factIcon}>🌲</Text>
+              <Image source={require('@/assets/icons/mountain.png')} style={styles.factIcon} resizeMode="contain" />
               <Text style={styles.factLabel}>{park.acres.toLocaleString()} Acres</Text>
             </View>
           </View>
@@ -66,12 +71,12 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
           <View style={styles.actionRow}>
             {park.status !== 'visited' && (
               <TouchableOpacity style={styles.actionChip} onPress={() => updateParkStatus(park.id, 'visited')}>
-                <Text style={styles.actionChipText}>✓ Mark Visited</Text>
+                <Text style={styles.actionChipText}>Mark Visited</Text>
               </TouchableOpacity>
             )}
             {park.status !== 'bucketList' && (
               <TouchableOpacity style={[styles.actionChip, styles.actionChipAlt]} onPress={() => updateParkStatus(park.id, 'bucketList')}>
-                <Text style={[styles.actionChipText, styles.actionChipAltText]}>⭐ Bucket List</Text>
+                <Text style={[styles.actionChipText, styles.actionChipAltText]}>Bucket List</Text>
               </TouchableOpacity>
             )}
           </View>
@@ -95,7 +100,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
       <View style={styles.footer}>
         <PrimaryButton
           label={park.status === 'visited' ? '+ Log Another Trip' : '+ Log This Park'}
-          icon="🌲"
+          icon={require('@/assets/icons/icon-parks.png')}
           onPress={() => {}}
           style={styles.ctaBtn}
         />
@@ -109,12 +114,13 @@ const styles = StyleSheet.create({
   scroll: { paddingBottom: 100 },
 
   hero: { height: 240, position: 'relative' },
-  heroImageBox: { flex: 1, backgroundColor: '#C5DEBA', alignItems: 'center', justifyContent: 'center' },
-  heroEmoji: { fontSize: 64, opacity: 0.7 },
+  heroImageBox: { flex: 1, backgroundColor: colors.surfaceWarm, alignItems: 'center', justifyContent: 'center' },
+  heroImage: { width: '100%', height: '100%' },
   backBtn: { position: 'absolute', top: 16, left: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
   backIcon: { fontSize: 24, color: colors.textPrimary, lineHeight: 30 },
   heartBtn: { position: 'absolute', top: 16, right: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
-  heartIcon: { fontSize: 18 },
+  heartIcon: { width: 18, height: 18 },
+  heartIconInactive: { opacity: 0.3 },
 
   content: { padding: spacing.xl, gap: spacing.xl },
   titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' },
@@ -126,13 +132,13 @@ const styles = StyleSheet.create({
 
   factsRow: { flexDirection: 'row', gap: spacing.xl },
   fact: { gap: 4, alignItems: 'center' },
-  factIcon: { fontSize: 20 },
+  factIcon: { width: 20, height: 20 },
   factLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
 
   actionRow: { flexDirection: 'row', gap: spacing.md },
   actionChip: { paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, backgroundColor: colors.primary, borderRadius: radius.full },
   actionChipText: { ...typography.labelSmall, color: colors.textInverse },
-  actionChipAlt: { backgroundColor: '#FFF3E8', borderWidth: 1.5, borderColor: colors.orange },
+  actionChipAlt: { backgroundColor: colors.surfaceWarm, borderWidth: 1.5, borderColor: colors.orange },
   actionChipAltText: { color: colors.orange },
 
   section: { gap: spacing.sm },

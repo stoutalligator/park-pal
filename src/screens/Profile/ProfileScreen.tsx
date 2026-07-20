@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Modal, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { BlurView } from 'expo-blur';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import TripCard from '@/components/TripCard';
-import { ProfileBackground } from '@/types';
+import { ProfileBackground, ProfileAvatar } from '@/types';
 
 const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: number }[] = [
   { key: 'mountain-lake', label: 'Mountain Lake', source: require('@/assets/scenes/scene-mountain-lake.png') },
@@ -17,6 +17,29 @@ const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: numbe
 
 const BACKGROUND_BY_KEY = Object.fromEntries(BACKGROUND_OPTIONS.map((o) => [o.key, o.source])) as Record<
   ProfileBackground,
+  number
+>;
+
+const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number }[] = [
+  { key: 'hiking', label: 'Hiking', source: require('@/assets/activities/bear-hiking.png') },
+  { key: 'camping', label: 'Camping', source: require('@/assets/activities/bear-camping.png') },
+  { key: 'wildlife-viewing', label: 'Wildlife', source: require('@/assets/activities/bear-wildlife-viewing.png') },
+  { key: 'kayaking', label: 'Kayaking', source: require('@/assets/activities/bear-kayaking.png') },
+  { key: 'scenic-drive', label: 'Scenic Drive', source: require('@/assets/activities/bear-scenic-drive.png') },
+  { key: 'photography', label: 'Photography', source: require('@/assets/activities/bear-photography.png') },
+  { key: 'backpacking', label: 'Backpacking', source: require('@/assets/activities/bear-backpacking.png') },
+  { key: 'stargazing', label: 'Stargazing', source: require('@/assets/activities/bear-stargazing.png') },
+  { key: 'fishing', label: 'Fishing', source: require('@/assets/activities/bear-fishing.png') },
+  { key: 'horseback-riding', label: 'Horseback', source: require('@/assets/activities/bear-horseback-riding.png') },
+  { key: 'nature-walk', label: 'Nature Walk', source: require('@/assets/activities/bear-nature-walk.png') },
+  { key: 'waterfall-hike', label: 'Waterfall Hike', source: require('@/assets/activities/bear-waterfall-hike.png') },
+  { key: 'picnic', label: 'Picnic', source: require('@/assets/activities/bear-picnic.png') },
+  { key: 'rock-climbing', label: 'Rock Climbing', source: require('@/assets/activities/bear-rock-climbing.png') },
+  { key: 'winter-activity', label: 'Winter', source: require('@/assets/activities/bear-winter-activity.png') },
+];
+
+const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.source])) as Record<
+  ProfileAvatar,
   number
 >;
 
@@ -54,14 +77,16 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const HERO_HEIGHT = SCREEN_WIDTH / HERO_IMAGE_ASPECT;
 
 export default function ProfileScreen() {
-  const { stats, trips, badges, userProfile, updateProfileBackground } = useApp();
+  const { stats, trips, badges, userProfile, updateProfileBackground, updateProfileAvatar } = useApp();
   const navigation = useNavigation<any>();
   const [pickerVisible, setPickerVisible] = useState(false);
+  const [avatarPickerVisible, setAvatarPickerVisible] = useState(false);
 
   const recentTrips = trips.slice(0, 3);
   const earnedBadges = badges.filter((b) => b.earned);
 
   const heroSource = BACKGROUND_BY_KEY[userProfile.profileBackground] ?? BACKGROUND_BY_KEY['mountain-lake'];
+  const avatarSource = AVATAR_BY_KEY[userProfile.avatar] ?? AVATAR_BY_KEY['hiking'];
 
   return (
     <SafeAreaView style={styles.container}>
@@ -78,10 +103,14 @@ export default function ProfileScreen() {
             <Image source={require('@/assets/icons/icon-photos.png')} style={styles.editBackgroundIcon} />
           </TouchableOpacity>
 
-          <View style={styles.heroContent}>
-            <View style={styles.avatarRing}>
-              <Image source={require('@/assets/mascot/mascot-happy.png')} style={styles.avatarImage} resizeMode="contain" />
-            </View>
+          <View style={styles.heroContent} pointerEvents="box-none">
+            <TouchableOpacity
+              style={styles.avatarRing}
+              onPress={() => setAvatarPickerVisible(true)}
+              activeOpacity={0.85}
+            >
+              <Image source={avatarSource} style={styles.avatarImage} resizeMode="contain" />
+            </TouchableOpacity>
             <View style={styles.blurStack}>
               <BlurView intensity={12} tint="dark" style={[StyleSheet.absoluteFill, styles.blurLayer3]} />
               <BlurView intensity={24} tint="dark" style={[StyleSheet.absoluteFill, styles.blurLayer2]} />
@@ -162,11 +191,52 @@ export default function ProfileScreen() {
         </View>
       </ScrollView>
 
-      <Modal visible={pickerVisible} transparent animationType="fade" onRequestClose={() => setPickerVisible(false)}>
-        <TouchableOpacity style={styles.modalBackdrop} activeOpacity={1} onPress={() => setPickerVisible(false)}>
+      {avatarPickerVisible && (
+        <View style={styles.modalOverlay}>
+          <TouchableOpacity
+            style={StyleSheet.absoluteFill}
+            activeOpacity={1}
+            onPress={() => setAvatarPickerVisible(false)}
+          />
+          <View style={styles.modalSheet}>
+            <Text style={styles.modalTitle}>Choose Your Bear</Text>
+            <ScrollView contentContainerStyle={styles.avatarGrid} showsVerticalScrollIndicator={false}>
+              {AVATAR_OPTIONS.map((option) => {
+                const selected = option.key === userProfile.avatar;
+                return (
+                  <TouchableOpacity
+                    key={option.key}
+                    style={styles.avatarOptionCard}
+                    activeOpacity={0.85}
+                    onPress={() => {
+                      updateProfileAvatar(option.key);
+                      setAvatarPickerVisible(false);
+                    }}
+                  >
+                    <View style={[styles.avatarOptionThumb, selected && styles.avatarOptionThumbSelected]}>
+                      <Image source={option.source} style={styles.avatarOptionImage} resizeMode="contain" />
+                    </View>
+                    <Text style={styles.optionLabel} numberOfLines={1}>
+                      {option.label}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+          </View>
+        </View>
+      )}
+
+      {pickerVisible && (
+        <View style={styles.modalOverlay}>
+          <TouchableOpacity
+            style={StyleSheet.absoluteFill}
+            activeOpacity={1}
+            onPress={() => setPickerVisible(false)}
+          />
           <View style={styles.modalSheet}>
             <Text style={styles.modalTitle}>Choose a Background</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.modalRow}>
+            <ScrollView contentContainerStyle={styles.modalGrid} showsVerticalScrollIndicator={false}>
               {BACKGROUND_OPTIONS.map((option) => {
                 const selected = option.key === userProfile.profileBackground;
                 return (
@@ -188,8 +258,8 @@ export default function ProfileScreen() {
               })}
             </ScrollView>
           </View>
-        </TouchableOpacity>
-      </Modal>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -309,10 +379,15 @@ const styles = StyleSheet.create({
   linkLabel: { ...typography.labelSemiBold, color: colors.textPrimary },
   linkChevron: { fontSize: 20, color: colors.textMuted },
 
-  modalBackdrop: {
-    flex: 1,
+  modalOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     backgroundColor: colors.overlay,
     justifyContent: 'flex-end',
+    zIndex: 10,
   },
   modalSheet: {
     backgroundColor: colors.background,
@@ -320,9 +395,16 @@ const styles = StyleSheet.create({
     borderTopRightRadius: radius['2xl'],
     paddingVertical: spacing.xl,
     paddingLeft: spacing.xl,
+    maxHeight: '75%',
   },
   modalTitle: { ...typography.h5, color: colors.textPrimary, marginBottom: spacing.lg, paddingRight: spacing.xl },
-  modalRow: { gap: spacing.md, paddingRight: spacing.xl, paddingBottom: spacing.sm },
+  modalGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: spacing.md,
+    paddingRight: spacing.xl,
+    paddingBottom: spacing.sm,
+  },
   optionCard: { alignItems: 'center', gap: spacing.xs, width: 96 },
   optionThumb: {
     width: 96,
@@ -333,4 +415,25 @@ const styles = StyleSheet.create({
   },
   optionThumbSelected: { borderColor: colors.primary },
   optionLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
+
+  avatarGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: spacing.md,
+    paddingRight: spacing.xl,
+    paddingBottom: spacing.sm,
+  },
+  avatarOptionCard: { alignItems: 'center', gap: spacing.xs, width: 76 },
+  avatarOptionThumb: {
+    width: 76,
+    height: 76,
+    borderRadius: radius.lg,
+    backgroundColor: colors.surfaceWarm,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 3,
+    borderColor: 'transparent',
+  },
+  avatarOptionThumbSelected: { borderColor: colors.primary },
+  avatarOptionImage: { width: 54, height: 54 },
 });
