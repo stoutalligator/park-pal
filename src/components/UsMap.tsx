@@ -1,11 +1,16 @@
 import React, { useMemo, useState } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, StyleSheet, LayoutChangeEvent } from 'react-native';
+import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Svg, { Polyline, Polygon } from 'react-native-svg';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors, shadows } from '@/theme';
 import { Park, ParkStatus } from '@/types';
 import { IMAGE_HEIGHT, CROP_TOP, CROPPED_WIDTH, CROPPED_HEIGHT, projectPark, resolveOverlaps } from '@/utils/mapProjection';
 import { getParkImage } from '@/data/parkImages';
+
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 2.5;
 
 const PIN_SIZE = 26;
 const BADGE_SIZE = 14;
@@ -85,6 +90,25 @@ export default function UsMap({ parks, onPressPark }: Props) {
     setViewportHeight(e.nativeEvent.layout.height);
   };
 
+  // Pinch-to-zoom is purely a presentational scale layered on top of the
+  // existing fit-to-height map/pin layout below — it doesn't touch any of
+  // that positioning math.
+  const pinchScale = useSharedValue(1);
+  const savedScale = useSharedValue(1);
+
+  const pinchGesture = Gesture.Pinch()
+    .onUpdate((e) => {
+      const next = savedScale.value * e.scale;
+      pinchScale.value = Math.min(Math.max(next, MIN_ZOOM), MAX_ZOOM);
+    })
+    .onEnd(() => {
+      savedScale.value = pinchScale.value;
+    });
+
+  const zoomStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: pinchScale.value }],
+  }));
+
   // Scale so the map fills the available height exactly (no vertical
   // letterboxing or scrolling); width naturally overflows and is reached
   // by panning horizontally, since Alaska/the islands sit at its edges.
@@ -102,37 +126,39 @@ export default function UsMap({ parks, onPressPark }: Props) {
   }, [parks, scale]);
 
   return (
-    <View style={styles.viewport} onLayout={onLayout}>
-      {scale > 0 && (
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.scroll}
-          contentContainerStyle={{ width: displayWidth }}
-        >
-          <View style={{ width: displayWidth, height: viewportHeight, overflow: 'hidden' }}>
-            <Image
-              source={require('@/assets/maps/us-map.png')}
-              style={{ width: displayWidth, height: imageDisplayHeight, marginTop: imageTopOffset }}
-              resizeMode="stretch"
-            />
-            {pins.map(({ park, x, y }) => (
-              <Pin key={park.id} park={park} x={x} y={y} onPress={() => onPressPark(park.id)} />
-            ))}
-          </View>
-        </ScrollView>
-      )}
-      <LinearGradient
-        pointerEvents="none"
-        colors={[colors.background, `${colors.background}00`]}
-        style={styles.fadeTop}
-      />
-      <LinearGradient
-        pointerEvents="none"
-        colors={[`${colors.background}00`, colors.background]}
-        style={styles.fadeBottom}
-      />
-    </View>
+    <GestureDetector gesture={pinchGesture}>
+      <View style={styles.viewport} onLayout={onLayout}>
+        {scale > 0 && (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={styles.scroll}
+            contentContainerStyle={{ width: displayWidth }}
+          >
+            <Animated.View style={[{ width: displayWidth, height: viewportHeight, overflow: 'hidden' }, zoomStyle]}>
+              <Image
+                source={require('@/assets/maps/us-map.png')}
+                style={{ width: displayWidth, height: imageDisplayHeight, marginTop: imageTopOffset }}
+                resizeMode="stretch"
+              />
+              {pins.map(({ park, x, y }) => (
+                <Pin key={park.id} park={park} x={x} y={y} onPress={() => onPressPark(park.id)} />
+              ))}
+            </Animated.View>
+          </ScrollView>
+        )}
+        <LinearGradient
+          pointerEvents="none"
+          colors={[colors.background, `${colors.background}00`]}
+          style={styles.fadeTop}
+        />
+        <LinearGradient
+          pointerEvents="none"
+          colors={[`${colors.background}00`, colors.background]}
+          style={styles.fadeBottom}
+        />
+      </View>
+    </GestureDetector>
   );
 }
 
@@ -142,6 +168,7 @@ const styles = StyleSheet.create({
   viewport: {
     flex: 1,
     position: 'relative',
+    overflow: 'hidden',
   },
   scroll: {
     flex: 1,
@@ -181,6 +208,11 @@ const styles = StyleSheet.create({
   pinImage: {
     width: PIN_SIZE - 4,
     height: PIN_SIZE - 4,
+    // Source park-icon art is a circular badge that only fills ~66% of its
+    // square canvas (measured directly from the art); scale up so the badge
+    // itself fills this circular clip edge-to-edge instead of leaving a
+    // visible ring of the canvas background.
+    transform: [{ scale: 1.55 }],
   },
   badge: {
     position: 'absolute',
