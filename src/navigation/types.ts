@@ -16,6 +16,7 @@ export type MainTabParamList = {
 
 export type HomeStackParamList = {
   Home: undefined;
+  ParkDetail: { parkId: string };
 };
 
 export type ParksStackParamList = {

@@ -33,19 +33,26 @@ Never introduce a new hex value outside this palette. If a design genuinely need
 - **No photorealism, no photography** — everything is illustrated, ever.
 - **No emoji, ever**, as a stand-in for a missing asset. If something's missing, create it properly.
 - **No generic vector-icon-font look** (e.g. plain Material/Ionicons-style glyphs) for anything that represents a park, badge, mascot, or featured UI element — those must be custom. `@expo/vector-icons` is fine only for small utility chrome (e.g. a plain chevron or close button), not for anything visible/decorative.
-- **Mascot consistency**: the bear mascot's proportions, line weight, and palette must stay consistent across every pose — check `docs/reference-images/style-guide.png` and existing files in `src/assets/scenes/` before drawing a new pose.
-- **Badges**: sticker-style, circular or shield-shaped, illustrated line art with a flat-color fill — match the tone of existing badge assets if any exist in `src/assets/`.
+- **Mascot consistency**: the bear mascot's proportions, line weight, and palette must stay consistent across every pose — check `docs/reference-images/style-guide.png` and existing files in `src/assets/mascot/` before drawing a new pose.
+- **Badges**: sticker-style, circular or shield-shaped, illustrated line art with a flat-color fill — match the tone of existing badge assets in `src/assets/badges/`.
 - **Map pins / park thumbnails**: circular illustrated thumbnail with a small checkmark badge overlay for visited status (per `explore-screen.png`).
 
 ## File conventions
 
-- Icons (small, single-color-ish, reusable) → `src/assets/icons/`, inline SVG preferred so they can be themed/recolored via props rather than baked-in colors where reasonable.
-- Larger illustrated scenes (empty states, mascot poses, hero art) → `src/assets/scenes/`, PNG is fine if the illustration has richer shading/detail than a clean SVG can express well.
-- Name files descriptively and consistently with what's already there (kebab-case, e.g. `favorite-heart.png`, `mountain.png`) — check the existing folder contents before naming a new file to avoid near-duplicates.
+Assets are bucketed by use case under `src/assets/`, not dumped into one folder:
+
+- `src/assets/icons/` — small utility/UI icons (nav, sidebar, small standalone glyphs like the welcome-screen heart/mountain). Inline SVG preferred so they can be themed/recolored via props where reasonable.
+- `src/assets/activities/` — bear-doing-an-activity illustrations (hiking, kayaking, stargazing, etc.), used for `ActivityType` selection. PNG, richer illustrated style. Name `bear-<activity>.png`.
+- `src/assets/badges/` — achievement badge art matching `Badge.icon`. Name `badge-<badge-id>.png`.
+- `src/assets/mascot/` — every bear mascot asset that isn't an activity icon: the full-body ranger figure, expression faces (happy, excited, thinking, etc.), and hero/title scenes. Name `mascot-<pose>.png` for poses/expressions; scene art can use a descriptive name (e.g. `bear-title-scene.png`).
+- `src/assets/textures/` — background pattern/texture swatches (e.g. topographic fills). Kept as opaque tiles, not transparent, since they're meant to fill an area rather than float over one.
+- `src/assets/maps/` — full-scene map backgrounds (e.g. the illustrated US map on the Explore screen). Large opaque scene art; pin/overlay coordinates for these live alongside the consuming component (see `src/utils/mapProjection.ts`), not in this folder.
+
+Name files descriptively and consistently with what's already there (kebab-case) — check the relevant folder's existing contents before naming a new file to avoid near-duplicates.
 
 ## Workflow when a new asset is needed
 
-1. Check `src/assets/icons/` and `src/assets/scenes/` first — it may already exist under a different name.
+1. Check the relevant `src/assets/<category>/` folder first — it may already exist under a different name.
 2. Check `docs/reference-images/style-guide.png` for the closest visual reference.
 3. Draw the asset following the palette and line-weight rules above.
-4. Save to the correct folder, then report the exact path back so it can be wired into the component/screen that needed it.
+4. Save to the correct category folder, then report the exact path back so it can be wired into the component/screen that needed it.

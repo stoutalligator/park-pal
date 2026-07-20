@@ -14,10 +14,10 @@ Hard rules:
 - Never use flat, corporate-style vector-icon-font look — assets should read as illustrated, not iconographic clip art.
 - No real photography or photo-realistic renders — everything is illustrated.
 - Pull colors only from `src/theme/colors.ts` — never invent new hex values outside that palette.
-- Save new assets into the correct existing subfolder under `src/assets/` (`icons/` or `scenes/`), matching naming conventions already in use there. Don't create new top-level asset folders without checking in first.
+- Save new assets into the correct existing use-case folder under `src/assets/` (`icons/`, `activities/`, `badges/`, `mascot/`, or `textures/` — see the `svg` skill for which one fits), matching naming conventions already in use there. Don't create new top-level asset folders without checking in first.
 
 Workflow:
-1. Confirm what's actually missing (check `src/assets/icons/` and `src/assets/scenes/` first — it may already exist).
+1. Confirm what's actually missing (check the relevant `src/assets/<category>/` folder first — it may already exist).
 2. Check `docs/reference-images/style-guide.png` for tone/line-weight reference.
 3. Produce the asset as inline SVG (preferred for icons — scalable, themeable) or a PNG (for richer illustrated scenes matching existing asset style).
 4. Report back the exact file path and what it should be swapped in for, so the requesting agent/session can wire it in.

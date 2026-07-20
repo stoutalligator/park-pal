@@ -22,6 +22,9 @@ export interface Park {
   status: ParkStatus;
   isFavorite: boolean;
   visitedDates?: string[];
+  /** Approximate latitude/longitude of the park, used to place its pin on the Explore map. */
+  lat: number;
+  lng: number;
 }
 
 export type ActivityType =

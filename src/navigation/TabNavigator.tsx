@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { colors, spacing, shadows, typography } from '@/theme';
+import { colors, spacing, shadows, typography, fontFamilies } from '@/theme';
 import { MainTabParamList, HomeStackParamList, ParksStackParamList, TripsStackParamList, ProfileStackParamList } from './types';
 
 // Screens
@@ -31,6 +31,7 @@ function HomeStackNav() {
   return (
     <HomeStack.Navigator screenOptions={{ headerShown: false }}>
       <HomeStack.Screen name="Home" component={HomeScreen} />
+      <HomeStack.Screen name="ParkDetail" component={ParkDetailScreen} />
     </HomeStack.Navigator>
   );
 }
@@ -71,11 +72,11 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
   const insets = useSafeAreaInsets();
 
   const tabConfig = [
-    { key: 'HomeTab', label: 'Home', icon: '🏠' },
-    { key: 'ParksTab', label: 'Parks', icon: '🌲' },
-    { key: 'LogTrip', label: '', icon: '+' },
-    { key: 'TripsTab', label: 'Trips', icon: '🗺️' },
-    { key: 'ProfileTab', label: 'Profile', icon: '🐻' },
+    { key: 'HomeTab', label: 'Home', icon: require('@/assets/icons/icon-dashboard.png') },
+    { key: 'ParksTab', label: 'Parks', icon: require('@/assets/icons/icon-parks.png') },
+    { key: 'LogTrip', label: '', icon: null },
+    { key: 'TripsTab', label: 'Trips', icon: require('@/assets/icons/icon-trips.png') },
+    { key: 'ProfileTab', label: 'Profile', icon: require('@/assets/icons/icon-profile.png') },
   ];
 
   return (
@@ -104,7 +105,11 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
 
         return (
           <TouchableOpacity key={route.key} onPress={onPress} style={styles.tabItem} activeOpacity={0.7}>
-            <Text style={[styles.tabIcon, isFocused && styles.tabIconActive]}>{config.icon}</Text>
+            <Image
+              source={config.icon}
+              style={[styles.tabIcon, isFocused && styles.tabIconActive]}
+              resizeMode="contain"
+            />
             <Text style={[styles.tabLabel, isFocused && styles.tabLabelActive]}>{config.label}</Text>
           </TouchableOpacity>
         );
@@ -144,7 +149,8 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.xs,
   },
   tabIcon: {
-    fontSize: 20,
+    width: 22,
+    height: 22,
     marginBottom: 2,
     opacity: 0.45,
   },
@@ -157,7 +163,7 @@ const styles = StyleSheet.create({
   },
   tabLabelActive: {
     color: colors.tabActive,
-    fontFamily: 'Nunito_700Bold',
+    fontFamily: fontFamilies.bodyBold,
   },
   fabWrapper: {
     flex: 1,
