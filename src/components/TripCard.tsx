@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
 import { getParkById } from '@/data/parks';
@@ -22,7 +22,7 @@ export default function TripCard({ trip, onPress }: Props) {
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={styles.card}>
       <View style={styles.imageBox}>
-        <Text style={styles.parkEmoji}>🏔️</Text>
+        <Image source={require('@/assets/icons/icon-parks.png')} style={styles.parkIcon} resizeMode="contain" />
       </View>
       <View style={styles.content}>
         <Text style={styles.parkName} numberOfLines={1}>{park?.name ?? 'Unknown Park'}</Text>
@@ -55,8 +55,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  parkEmoji: {
-    fontSize: 26,
+  parkIcon: {
+    width: 30,
+    height: 30,
   },
   content: {
     flex: 1,

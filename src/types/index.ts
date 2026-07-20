@@ -92,9 +92,12 @@ export type ExplorerGoal =
   | 'Track past trips'
   | 'Visit all 63 National Parks';
 
+export type ProfileBackground = 'mountain-lake' | 'forest' | 'arches' | 'mountain-gate' | 'night-camping';
+
 export interface UserProfile {
   name: string;
   explorerStyle?: ExplorerStyle;
   goal?: ExplorerGoal;
   onboardingComplete: boolean;
+  profileBackground: ProfileBackground;
 }
