@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Polyline, Polygon } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
@@ -38,21 +39,22 @@ function TreeIcon({ size = 20 }: { size?: number }) {
 export default function ParkDetailScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
   const { parks, trips, toggleFavorite, updateParkStatus } = useApp();
+  const insets = useSafeAreaInsets();
   const park = parks.find((p) => p.id === parkId);
   const parkTrips = trips.filter((t) => t.parkId === parkId);
 
   if (!park) return null;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Hero */}
         <View style={styles.hero}>
           <Image source={getParkScene(park.id)} style={styles.heroImage} resizeMode="cover" />
-          <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={[styles.backBtn, { top: insets.top + 16 }]} onPress={() => navigation.goBack()}>
             <BackArrowIcon />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.heartBtn} onPress={() => toggleFavorite(park.id)}>
+          <TouchableOpacity style={[styles.heartBtn, { top: insets.top + 16 }]} onPress={() => toggleFavorite(park.id)}>
             <Image
               source={require('@/assets/icons/icon-favorites.png')}
               style={[styles.heartIcon, !park.isFavorite && styles.heartIconInactive]}
@@ -127,14 +129,14 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
       </ScrollView>
 
       {/* Bottom CTA */}
-      <View style={styles.footer}>
+      <View style={[styles.footer, { paddingBottom: insets.bottom + spacing.xl }]}>
         <PrimaryButton
           label={park.status === 'visited' ? '+ LOG ANOTHER TRIP' : '+ LOG THIS PARK'}
           onPress={() => {}}
           style={styles.ctaBtn}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 

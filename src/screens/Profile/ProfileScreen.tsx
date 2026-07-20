@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BlurView } from 'expo-blur';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
@@ -61,6 +62,7 @@ const HERO_HEIGHT = SCREEN_WIDTH / HERO_IMAGE_ASPECT;
 export default function ProfileScreen() {
   const { stats, trips, badges, userProfile, updateProfileBackground, updateProfileAvatar } = useApp();
   const navigation = useNavigation<any>();
+  const insets = useSafeAreaInsets();
   const [pickerVisible, setPickerVisible] = useState(false);
   const [avatarPickerVisible, setAvatarPickerVisible] = useState(false);
 
@@ -71,13 +73,13 @@ export default function ProfileScreen() {
   const avatarSource = AVATAR_BY_KEY[userProfile.avatar] ?? AVATAR_BY_KEY['hiking'];
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.hero}>
           <Image source={heroSource} style={styles.heroImage} resizeMode="cover" />
 
           <TouchableOpacity
-            style={styles.editBackgroundBtn}
+            style={[styles.editBackgroundBtn, { top: insets.top + spacing.lg }]}
             onPress={() => setPickerVisible(true)}
             hitSlop={10}
             activeOpacity={0.85}
@@ -242,7 +244,7 @@ export default function ProfileScreen() {
           </View>
         </View>
       )}
-    </SafeAreaView>
+    </View>
   );
 }
 

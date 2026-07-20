@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path, Polygon } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { TripsStackParamList } from '@/navigation/types';
@@ -36,18 +37,19 @@ function StarIcon({ filled, size = 16 }: { filled: boolean; size?: number }) {
 export default function TripDetailScreen({ route, navigation }: Props) {
   const { tripId } = route.params;
   const { trips } = useApp();
+  const insets = useSafeAreaInsets();
   const trip = trips.find((t) => t.id === tripId);
   const park = trip ? getParkById(trip.parkId) : null;
 
   if (!trip || !park) return null;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Hero */}
         <View style={styles.hero}>
           <Image source={getParkScene(park.id)} style={styles.heroImage} resizeMode="cover" />
-          <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={[styles.backBtn, { top: insets.top + 16 }]} onPress={() => navigation.goBack()}>
             <BackArrowIcon />
           </TouchableOpacity>
         </View>
@@ -115,7 +117,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, typography, shadows } from '@/theme';
 import { useApp } from '@/context/AppContext';
+import { preloadAssets } from '@/utils/preloadAssets';
 import PrimaryButton from '@/components/PrimaryButton';
 import SecondaryButton from '@/components/SecondaryButton';
 
@@ -11,6 +12,20 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Welcome'>;
 
 export default function WelcomeScreen({ navigation }: Props) {
   const { completeOnboarding } = useApp();
+  const [assetsReady, setAssetsReady] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    preloadAssets((fraction) => {
+      if (!cancelled) setProgress(fraction);
+    }).finally(() => {
+      if (!cancelled) setAssetsReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const startExploring = () => {
     completeOnboarding({});
@@ -38,17 +53,28 @@ export default function WelcomeScreen({ navigation }: Props) {
         </View>
 
         <View style={styles.buttons}>
-          <PrimaryButton
-            label="Start Exploring"
-            icon={require('@/assets/icons/mountain.png')}
-            onPress={startExploring}
-            style={styles.primaryBtn}
-          />
-          <SecondaryButton
-            label="Log In / Sign Up"
-            onPress={() => navigation.navigate('Auth')}
-            style={styles.secondaryBtn}
-          />
+          {assetsReady ? (
+            <>
+              <PrimaryButton
+                label="Start Exploring"
+                icon={require('@/assets/icons/mountain.png')}
+                onPress={startExploring}
+                style={styles.primaryBtn}
+              />
+              <SecondaryButton
+                label="Log In / Sign Up"
+                onPress={() => navigation.navigate('Auth')}
+                style={styles.secondaryBtn}
+              />
+            </>
+          ) : (
+            <View style={styles.loadingBlock}>
+              <View style={styles.progressTrack}>
+                <View style={[styles.progressFill, { width: `${Math.round(progress * 100)}%` }]} />
+              </View>
+              <Text style={styles.loadingText}>Preparing your adventure...</Text>
+            </View>
+          )}
         </View>
       </SafeAreaView>
     </View>
@@ -119,5 +145,29 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.brownDark,
     ...shadows.lg,
+  },
+  loadingBlock: {
+    width: '85%',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
+  progressTrack: {
+    width: '100%',
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: colors.cream,
+    borderWidth: 2,
+    borderColor: colors.brownDark,
+    overflow: 'hidden',
+    ...shadows.lg,
+  },
+  progressFill: {
+    height: '100%',
+    backgroundColor: colors.primary,
+    borderRadius: 2,
+  },
+  loadingText: {
+    ...typography.labelSemiBold,
+    color: colors.brownDark,
   },
 });
