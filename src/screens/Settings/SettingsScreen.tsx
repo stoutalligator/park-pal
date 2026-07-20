@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Alert, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ScreenHeader from '@/components/ScreenHeader';
+import { useApp } from '@/context/AppContext';
 
 const SETTINGS_ROWS = [
   {
@@ -37,6 +38,20 @@ const SETTINGS_ROWS = [
 
 export default function SettingsScreen() {
   const navigation = useNavigation<any>();
+  const { session, signOut } = useApp();
+
+  const confirmSignOut = () => {
+    // Alert.alert is a no-op on react-native-web, so fall back to
+    // window.confirm there to keep the confirmation on web too.
+    if (Platform.OS === 'web') {
+      if (window.confirm('Are you sure you want to sign out?')) signOut();
+      return;
+    }
+    Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Sign Out', style: 'destructive', onPress: signOut },
+    ]);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -59,6 +74,18 @@ export default function SettingsScreen() {
             </View>
           </View>
         ))}
+
+        {session ? (
+          <View style={styles.section}>
+            <View style={styles.group}>
+              <TouchableOpacity style={styles.row} activeOpacity={0.7} onPress={confirmSignOut}>
+                <View style={styles.rowText}>
+                  <Text style={styles.signOutLabel}>Sign Out</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        ) : null}
       </ScrollView>
     </SafeAreaView>
   );
@@ -77,4 +104,5 @@ const styles = StyleSheet.create({
   rowLabel: { ...typography.labelSemiBold, color: colors.textPrimary },
   rowSub: { ...typography.caption, color: colors.textSecondary },
   chevron: { fontSize: 20, color: colors.textMuted },
+  signOutLabel: { ...typography.labelSemiBold, color: colors.rose, textAlign: 'center' },
 });

@@ -3,15 +3,12 @@ import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, typography, shadows } from '@/theme';
-import { useApp } from '@/context/AppContext';
 import { preloadAssets } from '@/utils/preloadAssets';
 import PrimaryButton from '@/components/PrimaryButton';
-import SecondaryButton from '@/components/SecondaryButton';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Welcome'>;
 
 export default function WelcomeScreen({ navigation }: Props) {
-  const { completeOnboarding } = useApp();
   const [assetsReady, setAssetsReady] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -26,11 +23,6 @@ export default function WelcomeScreen({ navigation }: Props) {
       cancelled = true;
     };
   }, []);
-
-  const startExploring = () => {
-    completeOnboarding({});
-    navigation.replace('Main', { screen: 'HomeTab' } as any);
-  };
 
   return (
     <View style={styles.container}>
@@ -54,19 +46,12 @@ export default function WelcomeScreen({ navigation }: Props) {
 
         <View style={styles.buttons}>
           {assetsReady ? (
-            <>
-              <PrimaryButton
-                label="Start Exploring"
-                icon={require('@/assets/icons/mountain.png')}
-                onPress={startExploring}
-                style={styles.primaryBtn}
-              />
-              <SecondaryButton
-                label="Log In / Sign Up"
-                onPress={() => navigation.navigate('Auth')}
-                style={styles.secondaryBtn}
-              />
-            </>
+            <PrimaryButton
+              label="Log In / Sign Up"
+              icon={require('@/assets/icons/mountain.png')}
+              onPress={() => navigation.navigate('Auth')}
+              style={styles.primaryBtn}
+            />
           ) : (
             <View style={styles.loadingBlock}>
               <View style={styles.progressTrack}>
@@ -135,13 +120,6 @@ const styles = StyleSheet.create({
   },
   primaryBtn: {
     width: '85%',
-    borderWidth: 2,
-    borderColor: colors.brownDark,
-    ...shadows.lg,
-  },
-  secondaryBtn: {
-    width: '85%',
-    backgroundColor: colors.cream,
     borderWidth: 2,
     borderColor: colors.brownDark,
     ...shadows.lg,

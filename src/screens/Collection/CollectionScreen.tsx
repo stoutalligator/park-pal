@@ -20,10 +20,6 @@ export default function CollectionScreen() {
   const { badges } = useApp();
   const navigation = useNavigation<any>();
 
-  const earned = badges.filter((b) => b.earned);
-  const locked = badges.filter((b) => !b.earned);
-  const pct = badges.length > 0 ? Math.round((earned.length / badges.length) * 100) : 0;
-
   return (
     <SafeAreaView style={styles.container}>
       <ScreenHeader title="Badge Collection" onBack={() => navigation.goBack()} />
@@ -31,29 +27,13 @@ export default function CollectionScreen() {
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Summary */}
         <View style={styles.summaryCard}>
-          <Text style={styles.summaryCount}>{earned.length} / {badges.length}</Text>
-          <Text style={styles.summaryLabel}>Badges Earned</Text>
-          <View style={styles.summaryBar}>
-            <View style={[styles.summaryBarFill, { width: `${pct}%` as any }]} />
-          </View>
+          <Text style={styles.summaryCount}>Badges Coming Soon</Text>
+          <Text style={styles.summaryLabel}>We're still building badge tracking — check back soon!</Text>
         </View>
 
-        {/* Earned grid */}
-        <Text style={styles.sectionLabel}>Earned — {earned.length} badges</Text>
-        <View style={styles.grid}>
-          {earned.map((b) => (
-            <View key={b.id} style={styles.badge}>
-              <Image source={getBadgeImage(b.id)} style={styles.badgeImage} resizeMode="contain" />
-              <Text style={styles.badgeName}>{b.name}</Text>
-              <Text style={styles.badgeDesc} numberOfLines={2}>{b.description}</Text>
-            </View>
-          ))}
-        </View>
-
-        {/* Locked list with progress */}
-        <Text style={[styles.sectionLabel, styles.lockedLabel]}>In Progress — {locked.length} remaining</Text>
+        <Text style={styles.sectionLabel}>{badges.length} Badges</Text>
         <View style={styles.lockedList}>
-          {locked.map((b) => (
+          {badges.map((b) => (
             <View key={b.id} style={styles.lockedRow}>
               <View style={styles.lockedIconBubble}>
                 <Image source={getBadgeImage(b.id)} style={styles.lockedIconImage} resizeMode="contain" />
@@ -64,14 +44,6 @@ export default function CollectionScreen() {
               <View style={styles.lockedInfo}>
                 <Text style={styles.lockedName}>{b.name}</Text>
                 <Text style={styles.lockedDesc}>{b.description}</Text>
-                {b.progress !== undefined && b.goal ? (
-                  <View style={styles.barRow}>
-                    <View style={styles.bar}>
-                      <View style={[styles.barFill, { width: `${(b.progress / b.goal) * 100}%` as any }]} />
-                    </View>
-                    <Text style={styles.barLabel}>{b.progress}/{b.goal}</Text>
-                  </View>
-                ) : null}
               </View>
             </View>
           ))}

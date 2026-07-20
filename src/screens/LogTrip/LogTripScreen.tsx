@@ -1,10 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native';
 import Svg, { Path, Polygon, Circle, Line } from 'react-native-svg';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ActivityType } from '@/types';
+import { ActivityType, TripTrailEntry, TrailDifficulty, AnimalRarity } from '@/types';
+import { ALL_TRAILS } from '@/data/trails';
+import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
 
 const HERO_ACTIVITY_IMAGES: number[] = [
@@ -110,6 +112,9 @@ function CloseIcon({ color, size = 10 }: { color: string; size?: number }) {
   );
 }
 
+const DIFFICULTY_RANK: Record<TrailDifficulty, number> = { Easy: 0, Moderate: 1, Hard: 2 };
+const RARITY_RANK: Record<AnimalRarity, number> = { Common: 0, Uncommon: 1, Rare: 2 };
+
 const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactElement }[] = [
   { label: 'Hiking', render: (c) => <BootIcon color={c} /> },
   { label: 'Camping', render: (c) => <TentIcon color={c} /> },
@@ -134,8 +139,9 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
 export default function LogTripScreen() {
   const { parks, logTrip } = useApp();
   const navigation = useNavigation<any>();
+  const route = useRoute<any>();
   const [heroImage, setHeroImage] = useState<number>(randomHeroImage);
-  const [selectedParkId, setSelectedParkId] = useState<string>('yellowstone');
+  const [selectedParkId, setSelectedParkId] = useState<string>(route.params?.parkId ?? 'yellowstone');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedActivities, setSelectedActivities] = useState<ActivityType[]>([]);
@@ -143,14 +149,28 @@ export default function LogTripScreen() {
   const [showParkPicker, setShowParkPicker] = useState(false);
   const [wildlifeSightings, setWildlifeSightings] = useState<string[]>([]);
   const [wildlifeInput, setWildlifeInput] = useState('');
+  const [selectedTrails, setSelectedTrails] = useState<TripTrailEntry[]>([]);
+  const [customTrailName, setCustomTrailName] = useState('');
+  const [customTrailMiles, setCustomTrailMiles] = useState('');
+  const [customTrailElevation, setCustomTrailElevation] = useState('');
 
   useFocusEffect(
     useCallback(() => {
       setHeroImage(randomHeroImage());
-    }, [])
+      if (route.params?.parkId) {
+        setSelectedParkId(route.params.parkId);
+        setSelectedTrails([]);
+      }
+    }, [route.params?.parkId])
   );
 
   const selectedPark = parks.find((p) => p.id === selectedParkId);
+  const parkTrails = ALL_TRAILS.filter((t) => t.parkId === selectedParkId).sort(
+    (a, b) => DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty]
+  );
+  const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === selectedParkId).sort(
+    (a, b) => RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]
+  );
 
   const toggleActivity = (a: ActivityType) => {
     setSelectedActivities((prev) =>
@@ -172,6 +192,39 @@ export default function LogTripScreen() {
     setWildlifeSightings((prev) => prev.filter((w) => w !== sighting));
   };
 
+  const toggleAnimal = (name: string) => {
+    setWildlifeSightings((prev) =>
+      prev.some((w) => w.toLowerCase() === name.toLowerCase())
+        ? prev.filter((w) => w.toLowerCase() !== name.toLowerCase())
+        : [...prev, name]
+    );
+  };
+
+  const toggleTrail = (trailId: string, name: string, miles: number, elevationGainFt: number) => {
+    setSelectedTrails((prev) =>
+      prev.some((t) => t.trailId === trailId)
+        ? prev.filter((t) => t.trailId !== trailId)
+        : [...prev, { trailId, name, miles, elevationGainFt }]
+    );
+  };
+
+  const addCustomTrail = () => {
+    const name = customTrailName.trim();
+    const miles = parseFloat(customTrailMiles);
+    if (!name || Number.isNaN(miles)) return;
+    const elevationGainFt = parseFloat(customTrailElevation) || 0;
+    setSelectedTrails((prev) => [...prev, { name, miles, elevationGainFt }]);
+    setCustomTrailName('');
+    setCustomTrailMiles('');
+    setCustomTrailElevation('');
+  };
+
+  const removeTrail = (entry: TripTrailEntry) => {
+    setSelectedTrails((prev) =>
+      prev.filter((t) => (entry.trailId ? t.trailId !== entry.trailId : t.name !== entry.name))
+    );
+  };
+
   const handleSave = () => {
     if (!selectedParkId || !startDate) {
       Alert.alert('Missing info', 'Please select a park and start date.');
@@ -185,6 +238,7 @@ export default function LogTripScreen() {
       notes,
       photos: [],
       wildlifeSightings,
+      trailsHiked: selectedTrails,
     });
     Alert.alert('Adventure saved!', 'Your passport is growing.', [{ text: 'Awesome!' }]);
     setStartDate('');
@@ -193,6 +247,10 @@ export default function LogTripScreen() {
     setSelectedActivities([]);
     setWildlifeSightings([]);
     setWildlifeInput('');
+    setSelectedTrails([]);
+    setCustomTrailName('');
+    setCustomTrailMiles('');
+    setCustomTrailElevation('');
   };
 
   return (
@@ -223,7 +281,15 @@ export default function LogTripScreen() {
             <View style={styles.dropdown}>
               <ScrollView style={{ maxHeight: 200 }} nestedScrollEnabled>
                 {parks.map((p) => (
-                  <TouchableOpacity key={p.id} style={styles.dropdownItem} onPress={() => { setSelectedParkId(p.id); setShowParkPicker(false); }}>
+                  <TouchableOpacity
+                    key={p.id}
+                    style={styles.dropdownItem}
+                    onPress={() => {
+                      setSelectedParkId(p.id);
+                      setShowParkPicker(false);
+                      setSelectedTrails([]);
+                    }}
+                  >
                     <Text style={[styles.dropdownText, selectedParkId === p.id && styles.dropdownTextActive]}>{p.name}</Text>
                   </TouchableOpacity>
                 ))}
@@ -284,9 +350,96 @@ export default function LogTripScreen() {
           </View>
         </View>
 
+        {/* Trails */}
+        {parkTrails.length > 0 && (
+          <View style={styles.field}>
+            <Text style={styles.label}>Which trails did you hike?</Text>
+            <View style={styles.trailList}>
+              {parkTrails.map((trail) => {
+                const active = selectedTrails.some((t) => t.trailId === trail.id);
+                return (
+                  <TouchableOpacity
+                    key={trail.id}
+                    style={[styles.trailChip, active && styles.trailChipActive]}
+                    onPress={() => toggleTrail(trail.id, trail.name, trail.miles, trail.elevationGainFt)}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={[styles.trailChipName, active && styles.trailChipNameActive]}>{trail.name}</Text>
+                    <Text style={[styles.trailChipMeta, active && styles.trailChipMetaActive]}>
+                      {trail.miles} mi · {trail.elevationGainFt.toLocaleString()} ft gain
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </View>
+        )}
+
+        {/* Custom trail entry */}
+        <View style={styles.field}>
+          <Text style={styles.label}>Add a trail we don't have</Text>
+          <TextInput
+            style={[styles.wildlifeInput, styles.customTrailNameInput]}
+            placeholder="Trail name"
+            placeholderTextColor={colors.textMuted}
+            value={customTrailName}
+            onChangeText={setCustomTrailName}
+          />
+          <View style={styles.customTrailRow}>
+            <TextInput
+              style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+              placeholder="Miles"
+              placeholderTextColor={colors.textMuted}
+              keyboardType="numeric"
+              value={customTrailMiles}
+              onChangeText={setCustomTrailMiles}
+            />
+            <TextInput
+              style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+              placeholder="Elev. ft"
+              placeholderTextColor={colors.textMuted}
+              keyboardType="numeric"
+              value={customTrailElevation}
+              onChangeText={setCustomTrailElevation}
+            />
+            <TouchableOpacity style={styles.wildlifeAddBtn} onPress={addCustomTrail} activeOpacity={0.8}>
+              <Text style={styles.wildlifeAddBtnText}>+</Text>
+            </TouchableOpacity>
+          </View>
+          {selectedTrails.length > 0 && (
+            <View style={styles.wildlifeTagRow}>
+              {selectedTrails.map((entry) => (
+                <View key={entry.trailId ?? entry.name} style={styles.wildlifeTag}>
+                  <Text style={styles.wildlifeTagText}>{entry.name}</Text>
+                  <TouchableOpacity onPress={() => removeTrail(entry)} hitSlop={8}>
+                    <CloseIcon color={colors.orange} />
+                  </TouchableOpacity>
+                </View>
+              ))}
+            </View>
+          )}
+        </View>
+
         {/* Wildlife */}
         <View style={styles.field}>
           <Text style={styles.label}>Wildlife Spotted</Text>
+          {parkAnimals.length > 0 && (
+            <View style={styles.animalChipRow}>
+              {parkAnimals.map((animal) => {
+                const active = wildlifeSightings.some((w) => w.toLowerCase() === animal.name.toLowerCase());
+                return (
+                  <TouchableOpacity
+                    key={animal.id}
+                    style={[styles.animalChip, active && styles.animalChipActive]}
+                    onPress={() => toggleAnimal(animal.name)}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={[styles.animalChipText, active && styles.animalChipTextActive]}>{animal.name}</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          )}
           <View style={styles.wildlifeInputRow}>
             <TextInput
               style={styles.wildlifeInput}
@@ -391,6 +544,24 @@ const styles = StyleSheet.create({
   activityIconImg: { width: 22, height: 22 },
   activityLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
   activityLabelActive: { color: colors.textInverse },
+
+  trailList: { gap: spacing.sm },
+  trailChip: { backgroundColor: colors.surface, borderRadius: radius.lg, borderWidth: 2, borderColor: colors.border, padding: spacing.md, ...shadows.sm },
+  trailChipActive: { borderColor: colors.primary, backgroundColor: colors.primary },
+  trailChipName: { ...typography.labelSemiBold, color: colors.textPrimary },
+  trailChipNameActive: { color: colors.textInverse },
+  trailChipMeta: { ...typography.caption, color: colors.textSecondary, marginTop: 2 },
+  trailChipMetaActive: { color: colors.textInverse },
+
+  customTrailRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginTop: spacing.sm },
+  customTrailNameInput: { width: '100%' },
+  customTrailNumberInput: { flex: 1, minWidth: 0 },
+
+  animalChipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginBottom: spacing.md },
+  animalChip: { backgroundColor: colors.surface, borderRadius: radius.full, borderWidth: 1.5, borderColor: colors.border, paddingHorizontal: spacing.md, paddingVertical: spacing.xs },
+  animalChipActive: { borderColor: colors.primary, backgroundColor: colors.primary },
+  animalChipText: { ...typography.labelSmall, color: colors.textSecondary },
+  animalChipTextActive: { color: colors.textInverse },
 
   wildlifeInputRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   wildlifeInput: { flex: 1, backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.md, ...typography.body, color: colors.textPrimary, ...shadows.sm },

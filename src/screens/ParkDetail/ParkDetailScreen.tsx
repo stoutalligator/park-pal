@@ -1,17 +1,63 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import Svg, { Polyline, Polygon } from 'react-native-svg';
+import Svg, { Polyline, Polygon, Path, Circle } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkScene } from '@/data/parkImages';
+import { ALL_TRAILS } from '@/data/trails';
+import { ALL_ANIMALS } from '@/data/animals';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'ParkDetail'>;
+
+function TrailIcon({ size = 24 }: { size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M2 20 8 8l3 6 2-3 9 9" fill="none" stroke={colors.sage} strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" />
+      <Circle cx="20" cy="5" r="2.2" fill={colors.orange} />
+    </Svg>
+  );
+}
+
+function PawIcon({ size = 24 }: { size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="16" r="5" fill={colors.orange} />
+      <Circle cx="5" cy="9" r="2.6" fill={colors.orange} />
+      <Circle cx="11" cy="5" r="2.6" fill={colors.orange} />
+      <Circle cx="17.5" cy="6.5" r="2.6" fill={colors.orange} />
+      <Circle cx="21.5" cy="12" r="2.4" fill={colors.orange} />
+    </Svg>
+  );
+}
+
+function SummaryCard({
+  icon,
+  title,
+  subtitle,
+  onPress,
+}: {
+  icon: React.ReactElement;
+  title: string;
+  subtitle: string;
+  onPress: () => void;
+}) {
+  return (
+    <TouchableOpacity style={styles.summaryCard} onPress={onPress} activeOpacity={0.85}>
+      <View style={styles.summaryIconBox}>{icon}</View>
+      <View style={styles.summaryContent}>
+        <Text style={styles.summaryTitle}>{title}</Text>
+        <Text style={styles.summarySubtitle}>{subtitle}</Text>
+      </View>
+      <Text style={styles.chevron}>{'›'}</Text>
+    </TouchableOpacity>
+  );
+}
 
 function BackArrowIcon() {
   return (
@@ -38,10 +84,14 @@ function TreeIcon({ size = 20 }: { size?: number }) {
 
 export default function ParkDetailScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, trips, toggleFavorite, updateParkStatus } = useApp();
+  const { parks, trips, toggleFavorite, updateParkStatus, isTrailCompleted, isAnimalSpotted } = useApp();
   const insets = useSafeAreaInsets();
   const park = parks.find((p) => p.id === parkId);
   const parkTrips = trips.filter((t) => t.parkId === parkId);
+  const parkTrails = ALL_TRAILS.filter((t) => t.parkId === parkId);
+  const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === parkId);
+  const trailsCompletedCount = parkTrails.filter((t) => isTrailCompleted(t.id)).length;
+  const animalsSpottedCount = parkAnimals.filter((a) => isAnimalSpotted(a.id)).length;
 
   if (!park) return null;
 
@@ -107,6 +157,28 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
             </View>
           )}
 
+          {/* Trails & Animal Compendium summary cards */}
+          {(parkTrails.length > 0 || parkAnimals.length > 0) && (
+            <View style={styles.section}>
+              {parkTrails.length > 0 && (
+                <SummaryCard
+                  icon={<TrailIcon />}
+                  title="Trails"
+                  subtitle={`${trailsCompletedCount} of ${parkTrails.length} completed`}
+                  onPress={() => navigation.navigate('ParkTrails', { parkId: park.id })}
+                />
+              )}
+              {parkAnimals.length > 0 && (
+                <SummaryCard
+                  icon={<PawIcon />}
+                  title="Animal Compendium"
+                  subtitle={`${animalsSpottedCount} of ${parkAnimals.length} spotted`}
+                  onPress={() => navigation.navigate('ParkAnimals', { parkId: park.id })}
+                />
+              )}
+            </View>
+          )}
+
           {/* Memories */}
           {parkTrips.length > 0 && (
             <View style={styles.section}>
@@ -132,7 +204,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
       <View style={[styles.footer, { paddingBottom: insets.bottom + spacing.xl }]}>
         <PrimaryButton
           label={park.status === 'visited' ? '+ LOG ANOTHER TRIP' : '+ LOG THIS PARK'}
-          onPress={() => {}}
+          onPress={() => (navigation as any).navigate('LogTrip', { parkId: park.id })}
           style={styles.ctaBtn}
         />
       </View>
@@ -182,6 +254,13 @@ const styles = StyleSheet.create({
   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between' },
   sectionTitle: { ...typography.h5, color: colors.textPrimary },
   viewAll: { ...typography.labelSmall, color: colors.sage },
+
+  summaryCard: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.md, marginBottom: spacing.md, gap: spacing.md, ...shadows.sm },
+  summaryIconBox: { width: 44, height: 44, borderRadius: radius.md, backgroundColor: colors.surfaceWarm, alignItems: 'center', justifyContent: 'center' },
+  summaryContent: { flex: 1, gap: 2 },
+  summaryTitle: { ...typography.labelBold, color: colors.textPrimary },
+  summarySubtitle: { ...typography.bodySmall, color: colors.textSecondary },
+  chevron: { fontSize: 22, color: colors.textMuted },
 
   footer: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: spacing.xl, backgroundColor: colors.background },
   ctaBtn: { width: '100%' },

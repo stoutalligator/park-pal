@@ -131,13 +131,19 @@ export default function ProfileScreen() {
               <Text style={styles.viewAll}>View All</Text>
             </TouchableOpacity>
           </View>
-          {recentTrips.map((trip) => (
-            <TripCard
-              key={trip.id}
-              trip={trip}
-              onPress={() => navigation.navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })}
-            />
-          ))}
+          {recentTrips.length > 0 ? (
+            recentTrips.map((trip) => (
+              <TripCard
+                key={trip.id}
+                trip={trip}
+                onPress={() => navigation.navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })}
+              />
+            ))
+          ) : (
+            <TouchableOpacity onPress={() => navigation.navigate('LogTrip')} activeOpacity={0.7}>
+              <Text style={styles.emptyText}>No Recent Trips, log one here</Text>
+            </TouchableOpacity>
+          )}
         </View>
 
         {/* Collection preview */}
@@ -148,17 +154,21 @@ export default function ProfileScreen() {
               <Text style={styles.viewAll}>View All</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.badgeRow}>
-            {earnedBadges.slice(0, 4).map((b) => (
-              <View key={b.id} style={styles.badgeBubble}>
-                <Image
-                  source={getBadgeImage(b.id)}
-                  style={styles.badgeImage}
-                  resizeMode="contain"
-                />
-              </View>
-            ))}
-          </View>
+          {earnedBadges.length > 0 ? (
+            <View style={styles.badgeRow}>
+              {earnedBadges.slice(0, 4).map((b) => (
+                <View key={b.id} style={styles.badgeBubble}>
+                  <Image
+                    source={getBadgeImage(b.id)}
+                    style={styles.badgeImage}
+                    resizeMode="contain"
+                  />
+                </View>
+              ))}
+            </View>
+          ) : (
+            <Text style={styles.emptyText}>Badges coming soon</Text>
+          )}
         </View>
 
         {/* Shortcut links */}
@@ -335,6 +345,7 @@ const styles = StyleSheet.create({
   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   sectionTitle: { ...typography.h5, color: colors.textPrimary },
   viewAll: { ...typography.labelSmall, color: colors.sage },
+  emptyText: { ...typography.body, color: colors.textSecondary },
 
   badgeRow: { flexDirection: 'row', gap: spacing.md },
   badgeBubble: {

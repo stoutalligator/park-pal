@@ -82,6 +82,20 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             </View>
           ) : null}
 
+          {/* Trails Hiked */}
+          {trip.trailsHiked && trip.trailsHiked.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Trails Hiked</Text>
+              <View style={styles.tagRow}>
+                {trip.trailsHiked.map((t) => (
+                  <View key={t.trailId ?? t.name} style={styles.tag}>
+                    <Text style={styles.tagText}>{t.name} · {t.miles} mi</Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          )}
+
           {/* Wildlife */}
           {trip.wildlifeSightings && trip.wildlifeSightings.length > 0 && (
             <View style={styles.section}>
@@ -100,6 +114,9 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <View style={styles.statsRow}>
             {trip.milesHiked ? (
               <View style={styles.statChip}><Text style={styles.statNum}>{trip.milesHiked}</Text><Text style={styles.statLabel}>Miles</Text></View>
+            ) : null}
+            {trip.elevationGainFt ? (
+              <View style={styles.statChip}><Text style={styles.statNum}>{trip.elevationGainFt.toLocaleString()}</Text><Text style={styles.statLabel}>Elev. Gain (ft)</Text></View>
             ) : null}
             {trip.rating ? (
               <View style={styles.statChip}>

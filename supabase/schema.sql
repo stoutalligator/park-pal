@@ -81,6 +81,7 @@ create table public.trips (
   wildlife_sightings text[],
   rating smallint check (rating between 1 and 5),
   miles_hiked numeric,
+  elevation_gain_ft numeric,
   created_at timestamptz not null default now()
 );
 
@@ -105,6 +106,57 @@ create table public.user_badges (
   primary key (user_id, badge_id)
 );
 
+-- Reference data: popular trails and animals per park (seeded via
+-- scripts/seed-supabase.mjs, read-only to clients). Not every park has
+-- entries yet — content is filled in incrementally.
+create table public.trails (
+  id text primary key,
+  park_id text not null references public.parks(id) on delete cascade,
+  name text not null,
+  description text not null default '',
+  miles numeric not null,
+  elevation_gain_ft int not null,
+  difficulty text not null check (difficulty in ('Easy', 'Moderate', 'Hard'))
+);
+
+create table public.animals (
+  id text primary key,
+  park_id text not null references public.parks(id) on delete cascade,
+  name text not null,
+  description text not null default '',
+  rarity text not null check (rarity in ('Common', 'Uncommon', 'Rare'))
+);
+
+-- One row per completion/sighting event (not upserted) — repeat hikes of the
+-- same trail across different trips each add a row, so sum(miles) correctly
+-- accumulates, while "has this ever been done" is just "a row exists".
+-- trail_id/animal_id are nullable to support custom entries the user typed
+-- in that aren't in the trails/animals catalog.
+-- trip_id links a completion back to the trip it happened on (cascades on
+-- trip delete, unlike trail_id/animal_id which orphan-not-destroy so catalog
+-- edits never wipe a user's history).
+create table public.user_trail_completions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  trail_id text references public.trails(id) on delete set null,
+  trip_id uuid references public.trips(id) on delete cascade,
+  park_id text not null references public.parks(id) on delete cascade,
+  name text not null,
+  miles numeric not null,
+  elevation_gain_ft int not null default 0,
+  completed_at timestamptz not null default now()
+);
+
+create table public.user_animal_sightings (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  animal_id text references public.animals(id) on delete set null,
+  trip_id uuid references public.trips(id) on delete cascade,
+  park_id text not null references public.parks(id) on delete cascade,
+  name text not null,
+  spotted_at timestamptz not null default now()
+);
+
 -- ---------------------------------------------------------------------------
 -- Row Level Security
 -- ---------------------------------------------------------------------------
@@ -116,11 +168,19 @@ alter table public.user_park_status enable row level security;
 alter table public.trips enable row level security;
 alter table public.trip_photos enable row level security;
 alter table public.user_badges enable row level security;
+alter table public.trails enable row level security;
+alter table public.animals enable row level security;
+alter table public.user_trail_completions enable row level security;
+alter table public.user_animal_sightings enable row level security;
 
 -- Reference data: readable by anyone, no client writes (seeded via SQL only).
 create policy "parks are publicly readable" on public.parks
   for select using (true);
 create policy "badges are publicly readable" on public.badges
+  for select using (true);
+create policy "trails are publicly readable" on public.trails
+  for select using (true);
+create policy "animals are publicly readable" on public.animals
   for select using (true);
 
 create policy "users manage their own profile" on public.profiles
@@ -146,6 +206,12 @@ create policy "users manage their own trip photos" on public.trip_photos
 create policy "users manage their own badges" on public.user_badges
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+create policy "users manage their own trail completions" on public.user_trail_completions
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+create policy "users manage their own animal sightings" on public.user_animal_sightings
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
 -- ---------------------------------------------------------------------------
 -- Base privileges
 --
@@ -159,12 +225,16 @@ grant usage on schema public to anon, authenticated, service_role;
 
 grant select on public.parks to anon, authenticated;
 grant select on public.badges to anon, authenticated;
+grant select on public.trails to anon, authenticated;
+grant select on public.animals to anon, authenticated;
 
 grant select, insert, update, delete on public.profiles to authenticated;
 grant select, insert, update, delete on public.user_park_status to authenticated;
 grant select, insert, update, delete on public.trips to authenticated;
 grant select, insert, update, delete on public.trip_photos to authenticated;
 grant select, insert, update, delete on public.user_badges to authenticated;
+grant select, insert, update, delete on public.user_trail_completions to authenticated;
+grant select, insert, update, delete on public.user_animal_sightings to authenticated;
 
 -- service_role is the trusted backend/admin key (used only by scripts/*.mjs,
 -- never shipped to the app) — it should have unrestricted access to

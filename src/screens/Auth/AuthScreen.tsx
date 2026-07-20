@@ -6,6 +6,7 @@ import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, radius, typography, shadows } from '@/theme';
 import { ExplorerStyle, ExplorerGoal } from '@/types';
 import { useApp } from '@/context/AppContext';
+import { supabase } from '@/lib/supabase';
 import PrimaryButton from '@/components/PrimaryButton';
 import SegmentedToggle from '@/components/SegmentedToggle';
 
@@ -99,20 +100,43 @@ export default function AuthScreen({ navigation }: Props) {
   const [password, setPassword] = useState('');
   const [selectedStyle, setSelectedStyle] = useState<ExplorerStyle | null>(null);
   const [selectedGoal, setSelectedGoal] = useState<ExplorerGoal | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [checkEmail, setCheckEmail] = useState(false);
 
-  const goToApp = () => navigation.replace('Main', { screen: 'HomeTab' } as any);
-
-  const handleSubmit = () => {
-    if (mode === 'Sign Up') {
-      completeOnboarding({
-        name: name.trim() || 'Explorer',
-        explorerStyle: selectedStyle ?? undefined,
-        goal: selectedGoal ?? undefined,
-      });
-    } else {
-      completeOnboarding({});
+  const handleSubmit = async () => {
+    setErrorMessage(null);
+    if (!email.trim() || !password) {
+      setErrorMessage('Please enter an email and password.');
+      return;
     }
-    goToApp();
+    setSubmitting(true);
+    try {
+      if (mode === 'Sign Up') {
+        const { data, error } = await supabase.auth.signUp({ email: email.trim(), password });
+        if (error) throw error;
+        if (data.session) {
+          // A session came back immediately (email confirmation is off) —
+          // RootNavigator picks up the session change and swaps to Main on
+          // its own; just write the chosen profile details onto it.
+          completeOnboarding({
+            name: name.trim() || 'Explorer',
+            explorerStyle: selectedStyle ?? undefined,
+            goal: selectedGoal ?? undefined,
+          });
+        } else {
+          setCheckEmail(true);
+        }
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+        if (error) throw error;
+        // RootNavigator swaps to Main automatically once the session lands.
+      }
+    } catch (err: any) {
+      setErrorMessage(err?.message ?? 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -125,13 +149,38 @@ export default function AuthScreen({ navigation }: Props) {
         </View>
 
         <Image source={require('@/assets/mascot/mascot-happy.png')} style={styles.mascot} resizeMode="contain" />
+
+        {checkEmail ? (
+          <>
+            <Text style={styles.title}>Check Your Email</Text>
+            <Text style={styles.subtitle}>
+              We sent a confirmation link to {email.trim()}. Confirm your account, then log in below.
+            </Text>
+            <PrimaryButton
+              label="Back to Log In"
+              onPress={() => {
+                setCheckEmail(false);
+                setMode('Log In');
+              }}
+              style={styles.submitBtn}
+            />
+          </>
+        ) : (
+          <>
         <Text style={styles.title}>{mode === 'Log In' ? 'Welcome Back' : 'Create Your Account'}</Text>
         <Text style={styles.subtitle}>
           {mode === 'Log In' ? 'Log in to keep tracking your adventures.' : 'Join Park Pal and start your journey.'}
         </Text>
 
         <View style={styles.toggleRow}>
-          <SegmentedToggle options={['Log In', 'Sign Up'] as const} value={mode} onChange={setMode} />
+          <SegmentedToggle
+            options={['Log In', 'Sign Up'] as const}
+            value={mode}
+            onChange={(m) => {
+              setMode(m);
+              setErrorMessage(null);
+            }}
+          />
         </View>
 
         <View style={styles.form}>
@@ -209,18 +258,29 @@ export default function AuthScreen({ navigation }: Props) {
           </>
         )}
 
+        {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
+
         <PrimaryButton
-          label={mode === 'Log In' ? 'Log In' : 'Create Account'}
+          label={submitting ? 'Please wait…' : mode === 'Log In' ? 'Log In' : 'Create Account'}
           onPress={handleSubmit}
+          disabled={submitting}
           style={styles.submitBtn}
         />
 
-        <TouchableOpacity onPress={() => setMode(mode === 'Log In' ? 'Sign Up' : 'Log In')} style={styles.switchLink}>
+        <TouchableOpacity
+          onPress={() => {
+            setMode(mode === 'Log In' ? 'Sign Up' : 'Log In');
+            setErrorMessage(null);
+          }}
+          style={styles.switchLink}
+        >
           <Text style={styles.switchLinkText}>
             {mode === 'Log In' ? "Don't have an account? " : 'Already have an account? '}
             <Text style={styles.switchLinkTextBold}>{mode === 'Log In' ? 'Sign Up' : 'Log In'}</Text>
           </Text>
         </TouchableOpacity>
+          </>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -261,6 +321,8 @@ const styles = StyleSheet.create({
   optionIconImg: { width: 22, height: 22 },
   optionLabel: { ...typography.labelSemiBold, color: colors.textSecondary, textAlign: 'center' },
   optionLabelActive: { color: colors.textInverse },
+
+  errorText: { ...typography.bodySmall, color: colors.rose, textAlign: 'center', marginTop: spacing.lg },
 
   submitBtn: { width: '100%', marginTop: spacing.xl },
   switchLink: { marginTop: spacing.lg },

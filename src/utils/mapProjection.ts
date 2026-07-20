@@ -29,7 +29,7 @@ const ALASKA_PIXEL_BOX = { x0: 16, y0: 192, x1: 352, y1: 424 };
 const CONTINENTAL_BOUNDS = { minLat: 24.5, maxLat: 49.5, minLng: -125, maxLng: -66.5 };
 const ALASKA_BOUNDS = { minLat: 57.5, maxLat: 68.5, minLng: -160, maxLng: -136 };
 
-// Hawaii, American Samoa, Guam, and the Virgin Islands are each drawn as a
+// Hawaii, American Samoa, and the Virgin Islands are each drawn as a
 // single small island with only 1-2 parks apiece — not worth a projected
 // bounding box, so their pixel positions are hand-placed on the artwork.
 //
@@ -43,7 +43,6 @@ const FIXED_PARK_PIXELS: Record<string, { x: number; y: number }> = {
   'hawaii-volcanoes': { x: 318, y: 1055 },
   'national-park-samoa': { x: 134, y: 1036 },
   'virgin-islands': { x: 790, y: 1090 },
-  'nps-guam': { x: 950, y: 1005 },
 
   // Florida peninsula
   everglades: { x: 828, y: 985 },

@@ -9,7 +9,7 @@ export type RootStackParamList = {
 export type MainTabParamList = {
   HomeTab: undefined;
   ParksTab: undefined;
-  LogTrip: undefined;
+  LogTrip: { parkId?: string } | undefined;
   TripsTab: undefined;
   ProfileTab: undefined;
 };
@@ -17,11 +17,15 @@ export type MainTabParamList = {
 export type HomeStackParamList = {
   Home: undefined;
   ParkDetail: { parkId: string };
+  ParkTrails: { parkId: string };
+  ParkAnimals: { parkId: string };
 };
 
 export type ParksStackParamList = {
   Explore: undefined;
   ParkDetail: { parkId: string };
+  ParkTrails: { parkId: string };
+  ParkAnimals: { parkId: string };
 };
 
 export type TripsStackParamList = {

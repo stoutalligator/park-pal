@@ -14,6 +14,7 @@ export default function StatsScreen() {
   const STAT_CARDS = [
     { label: 'Total Trips', value: stats.totalTrips, icon: require('@/assets/icons/icon-trips.png') },
     { label: 'Miles Hiked', value: stats.totalMilesHiked, icon: require('@/assets/icons/mountain.png') },
+    { label: 'Elevation Gain (ft)', value: stats.totalElevationGain, icon: require('@/assets/icons/icon-hikes.png') },
     { label: 'States Visited', value: stats.statesVisited, icon: require('@/assets/icons/icon-map.png') },
     { label: 'Photos Saved', value: stats.totalPhotos, icon: require('@/assets/icons/icon-photos.png') },
     { label: 'Bucket List', value: stats.bucketListCount, icon: require('@/assets/icons/icon-favorites.png') },

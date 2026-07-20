@@ -92,9 +92,41 @@ async function seedBadges() {
   console.log(`Seeded ${rows.length} badges.`);
 }
 
+async function seedTrails() {
+  const trails = extractArrayLiteral(path.join(ROOT, 'src/data/trails.ts'), 'ALL_TRAILS');
+  const rows = trails.map((t) => ({
+    id: t.id,
+    park_id: t.parkId,
+    name: t.name,
+    description: t.description,
+    miles: t.miles,
+    elevation_gain_ft: t.elevationGainFt,
+    difficulty: t.difficulty,
+  }));
+  const { error } = await supabase.from('trails').upsert(rows, { onConflict: 'id' });
+  if (error) throw new Error(`Seeding trails failed: ${error.message}`);
+  console.log(`Seeded ${rows.length} trails.`);
+}
+
+async function seedAnimals() {
+  const animals = extractArrayLiteral(path.join(ROOT, 'src/data/animals.ts'), 'ALL_ANIMALS');
+  const rows = animals.map((a) => ({
+    id: a.id,
+    park_id: a.parkId,
+    name: a.name,
+    description: a.description,
+    rarity: a.rarity,
+  }));
+  const { error } = await supabase.from('animals').upsert(rows, { onConflict: 'id' });
+  if (error) throw new Error(`Seeding animals failed: ${error.message}`);
+  console.log(`Seeded ${rows.length} animals.`);
+}
+
 async function main() {
   await seedParks();
   await seedBadges();
+  await seedTrails();
+  await seedAnimals();
   console.log('Seed complete.');
 }
 

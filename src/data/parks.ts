@@ -28,7 +28,6 @@ export const ALL_PARKS: Park[] = [
   { id: 'big-bend', name: 'Big Bend', state: 'Texas', region: 'SouthCentral', description: 'Vast desert wilderness where the Chihuahuan Desert meets the Rio Grande.', establishedYear: 1944, acres: 801163, image: '', status: 'bucketList', isFavorite: false, lat: 29.25, lng: -103.25 },
   { id: 'guadalupe-mountains', name: 'Guadalupe Mountains', state: 'Texas', region: 'SouthCentral', description: 'Ancient marine fossil reef rising from the Chihuahuan Desert.', establishedYear: 1972, acres: 86367, image: '', status: 'notVisited', isFavorite: false, lat: 31.92, lng: -104.87 },
   { id: 'hot-springs', name: 'Hot Springs', state: 'Arkansas', region: 'SouthCentral', description: 'Historic bathhouses and natural hot springs in the Ouachita Mountains.', establishedYear: 1921, acres: 5554, image: '', status: 'notVisited', isFavorite: false, lat: 34.51, lng: -93.05 },
-  { id: 'ozark', name: 'Ozark', state: 'Missouri / Arkansas', region: 'SouthCentral', description: 'Scenic rivers, caves, and forests of the Ozark Plateau.', establishedYear: 1964, acres: 80785, image: '', status: 'notVisited', isFavorite: false, lat: 37.16, lng: -91.25 },
 
   // --- Mountain ---
   { id: 'rocky-mountain', name: 'Rocky Mountain', state: 'Colorado', region: 'Mountain', description: 'Snow-capped peaks, alpine lakes, and abundant wildlife along the Continental Divide.', establishedYear: 1915, acres: 265828, image: '', status: 'visited', isFavorite: true, lat: 40.34, lng: -105.68, visitedDates: ['2023-10-08', '2023-10-11'] },
@@ -78,8 +77,8 @@ export const ALL_PARKS: Park[] = [
   { id: 'wrangell-st-elias', name: 'Wrangell–St. Elias', state: 'Alaska', region: 'Alaska', description: 'Largest U.S. national park — a world of glaciers, mountains, and wild rivers.', establishedYear: 1980, acres: 13175799, image: '', status: 'notVisited', isFavorite: false, lat: 61.0, lng: -142.0 },
   { id: 'gates-arctic', name: 'Gates of the Arctic', state: 'Alaska', region: 'Alaska', description: 'No roads, no trails — pure Arctic wilderness north of the Arctic Circle.', establishedYear: 1980, acres: 7523897, image: '', status: 'notVisited', isFavorite: false, lat: 67.78, lng: -153.3 },
 
-  // --- Additional Mountain / Pacific ---
-  { id: 'nps-guam', name: 'War in the Pacific', state: 'Guam', region: 'Hawaii', description: 'Commemorates the Pacific Theater of WWII on the island of Guam.', establishedYear: 1978, acres: 2037, image: '', status: 'notVisited', isFavorite: false, lat: 13.47, lng: 144.75 },
+  // --- Additional South Central ---
+  { id: 'gateway-arch', name: 'Gateway Arch', state: 'Missouri', region: 'SouthCentral', description: 'Iconic 630-foot stainless steel arch on the St. Louis riverfront, honoring westward expansion.', establishedYear: 2018, acres: 193, image: '', status: 'notVisited', isFavorite: false, lat: 38.62, lng: -90.18 },
 ];
 
 export const TOTAL_PARKS = 63;

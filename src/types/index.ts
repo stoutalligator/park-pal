@@ -37,6 +37,13 @@ export type ActivityType =
   | 'Stargazing'
   | 'Other';
 
+export interface TripTrailEntry {
+  trailId?: string;
+  name: string;
+  miles: number;
+  elevationGainFt: number;
+}
+
 export interface Trip {
   id: string;
   parkId: string;
@@ -48,8 +55,32 @@ export interface Trip {
   weather?: string;
   favoriteTrail?: string;
   wildlifeSightings?: string[];
+  trailsHiked?: TripTrailEntry[];
   rating?: number;
   milesHiked?: number;
+  elevationGainFt?: number;
+}
+
+export type TrailDifficulty = 'Easy' | 'Moderate' | 'Hard';
+
+export interface Trail {
+  id: string;
+  parkId: string;
+  name: string;
+  description: string;
+  miles: number;
+  elevationGainFt: number;
+  difficulty: TrailDifficulty;
+}
+
+export type AnimalRarity = 'Common' | 'Uncommon' | 'Rare';
+
+export interface Animal {
+  id: string;
+  parkId: string;
+  name: string;
+  description: string;
+  rarity: AnimalRarity;
 }
 
 export type BadgeCategory = 'parks' | 'activity' | 'region' | 'memory' | 'special';
@@ -59,7 +90,6 @@ export interface Badge {
   name: string;
   description: string;
   category: BadgeCategory;
-  icon: string;
   earned: boolean;
   earnedDate?: string;
   progress?: number;
@@ -74,6 +104,7 @@ export interface UserStats {
   totalTrips: number;
   totalPhotos: number;
   totalMilesHiked: number;
+  totalElevationGain: number;
   statesVisited: number;
   favoriteActivity: string;
 }

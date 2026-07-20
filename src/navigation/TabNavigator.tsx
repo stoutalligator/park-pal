@@ -10,6 +10,8 @@ import { MainTabParamList, HomeStackParamList, ParksStackParamList, TripsStackPa
 import HomeScreen from '@/screens/Home/HomeScreen';
 import ExploreScreen from '@/screens/Explore/ExploreScreen';
 import ParkDetailScreen from '@/screens/ParkDetail/ParkDetailScreen';
+import ParkTrailsScreen from '@/screens/ParkDetail/ParkTrailsScreen';
+import ParkAnimalsScreen from '@/screens/ParkDetail/ParkAnimalsScreen';
 import LogTripScreen from '@/screens/LogTrip/LogTripScreen';
 import TripsScreen from '@/screens/Trips/TripsScreen';
 import TripDetailScreen from '@/screens/Trips/TripDetailScreen';
@@ -31,6 +33,8 @@ function HomeStackNav() {
     <HomeStack.Navigator screenOptions={{ headerShown: false }}>
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen name="ParkDetail" component={ParkDetailScreen} />
+      <HomeStack.Screen name="ParkTrails" component={ParkTrailsScreen} />
+      <HomeStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
     </HomeStack.Navigator>
   );
 }
@@ -40,6 +44,8 @@ function ParksStackNav() {
     <ParksStack.Navigator screenOptions={{ headerShown: false }}>
       <ParksStack.Screen name="Explore" component={ExploreScreen} />
       <ParksStack.Screen name="ParkDetail" component={ParkDetailScreen} />
+      <ParksStack.Screen name="ParkTrails" component={ParkTrailsScreen} />
+      <ParksStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
     </ParksStack.Navigator>
   );
 }
