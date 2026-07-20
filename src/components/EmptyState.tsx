@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { colors, spacing, typography } from '@/theme';
 import PrimaryButton from './PrimaryButton';
 
@@ -13,7 +13,7 @@ interface Props {
 export default function EmptyState({ title, subtitle, actionLabel, onAction }: Props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.mascot}>🐻</Text>
+      <Image source={require('@/assets/mascot/mascot-thinking.png')} style={styles.mascot} resizeMode="contain" />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
       {actionLabel && onAction ? (
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   mascot: {
-    fontSize: 56,
+    width: 72,
+    height: 72,
     marginBottom: spacing.md,
   },
   title: {

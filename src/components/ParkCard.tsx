@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Park } from '@/types';
+import { getParkImage } from '@/data/parkImages';
 import StatusBadge from './StatusBadge';
 
 interface Props {
@@ -14,7 +15,7 @@ export default function ParkCard({ park, onPress, onFavorite }: Props) {
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={styles.card}>
       <View style={styles.imageBox}>
-        <Text style={styles.parkEmoji}>🏔️</Text>
+        <Image source={getParkImage(park.id)} style={styles.parkImage} resizeMode="cover" />
       </View>
       <View style={styles.content}>
         <Text style={styles.name} numberOfLines={1}>{park.name}</Text>
@@ -22,7 +23,11 @@ export default function ParkCard({ park, onPress, onFavorite }: Props) {
         <StatusBadge status={park.status} />
       </View>
       <TouchableOpacity onPress={onFavorite} hitSlop={12} style={styles.heart}>
-        <Text style={styles.heartIcon}>{park.isFavorite ? '❤️' : '🤍'}</Text>
+        <Image
+          source={require('@/assets/icons/icon-favorites.png')}
+          style={[styles.heartIcon, !park.isFavorite && styles.heartIconInactive]}
+          resizeMode="contain"
+        />
       </TouchableOpacity>
     </TouchableOpacity>
   );
@@ -46,9 +51,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surfaceWarm,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
   },
-  parkEmoji: {
-    fontSize: 28,
+  parkImage: {
+    width: 60,
+    height: 60,
   },
   content: {
     flex: 1,
@@ -66,6 +73,10 @@ const styles = StyleSheet.create({
     padding: spacing.xs,
   },
   heartIcon: {
-    fontSize: 18,
+    width: 18,
+    height: 18,
+  },
+  heartIconInactive: {
+    opacity: 0.3,
   },
 });

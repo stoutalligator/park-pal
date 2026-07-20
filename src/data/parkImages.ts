@@ -70,3 +70,26 @@ const FALLBACK_IMAGE = require('@/assets/parks/park-yellowstone.png');
 export function getParkImage(parkId: string): number {
   return PARK_IMAGES[parkId] ?? FALLBACK_IMAGE;
 }
+
+// Placeholder until each park has its own bespoke scene illustration — for
+// now, deterministically assign one of the existing scene backgrounds per
+// park (stable across re-renders) rather than a true random pick.
+const PARK_SCENES: number[] = [
+  require('@/assets/scenes/scene-mountain-lake.png'),
+  require('@/assets/scenes/scene-forest.png'),
+  require('@/assets/scenes/scene-arches.png'),
+  require('@/assets/scenes/scene-mountain-gate.png'),
+  require('@/assets/scenes/scene-night-camping.png'),
+];
+
+function hashString(value: string): number {
+  let hash = 0;
+  for (let i = 0; i < value.length; i++) {
+    hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+}
+
+export function getParkScene(parkId: string): number {
+  return PARK_SCENES[hashString(parkId) % PARK_SCENES.length];
+}

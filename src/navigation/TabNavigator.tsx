@@ -16,7 +16,6 @@ import TripDetailScreen from '@/screens/Trips/TripDetailScreen';
 import ProfileScreen from '@/screens/Profile/ProfileScreen';
 import PassportScreen from '@/screens/Passport/PassportScreen';
 import CollectionScreen from '@/screens/Collection/CollectionScreen';
-import AchievementsScreen from '@/screens/Achievements/AchievementsScreen';
 import StatsScreen from '@/screens/Stats/StatsScreen';
 import WishlistScreen from '@/screens/Wishlist/WishlistScreen';
 import SettingsScreen from '@/screens/Settings/SettingsScreen';
@@ -60,7 +59,6 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Profile" component={ProfileScreen} />
       <ProfileStack.Screen name="Passport" component={PassportScreen} />
       <ProfileStack.Screen name="Collection" component={CollectionScreen} />
-      <ProfileStack.Screen name="Achievements" component={AchievementsScreen} />
       <ProfileStack.Screen name="Stats" component={StatsScreen} />
       <ProfileStack.Screen name="Wishlist" component={WishlistScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
@@ -80,7 +78,7 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
   ];
 
   return (
-    <View style={[styles.tabBar, { paddingBottom: insets.bottom }]}>
+    <View style={[styles.tabBar, { paddingBottom: insets.bottom + spacing.md }]}>
       {state.routes.map((route: any, index: number) => {
         const config = tabConfig[index];
         const isFocused = state.index === index;
@@ -139,7 +137,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.tabBackground,
     borderTopWidth: 1,
     borderTopColor: colors.border,
-    paddingTop: spacing.sm,
+    paddingTop: spacing.md,
     alignItems: 'center',
     ...shadows.sm,
   },

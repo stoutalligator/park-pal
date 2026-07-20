@@ -13,7 +13,9 @@ export default function TripsScreen() {
   if (trips.length === 0) {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>Trips</Text>
+        <View style={styles.header}>
+          <Text style={styles.title}>Trips</Text>
+        </View>
         <EmptyState
           title="No adventures logged yet."
           subtitle="Ready to save your first trail memory?"
@@ -44,7 +46,7 @@ export default function TripsScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  header: { paddingHorizontal: spacing.xl, paddingTop: spacing.lg, paddingBottom: spacing.sm },
+  header: { paddingHorizontal: spacing.xl, paddingTop: spacing['2xl'], paddingBottom: spacing.sm },
   title: { ...typography.h3, color: colors.textPrimary },
   scroll: { paddingHorizontal: spacing.xl, paddingTop: spacing.md, paddingBottom: spacing['5xl'] },
 });

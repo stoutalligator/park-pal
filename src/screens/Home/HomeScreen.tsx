@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: spacing.xl,
-    paddingTop: spacing.lg,
+    paddingTop: spacing['2xl'],
     paddingBottom: spacing.md,
   },
   title: { ...typography.h3, color: colors.textPrimary },

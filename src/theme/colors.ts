@@ -1,6 +1,6 @@
 export const colors = {
   // Backgrounds
-  background: '#F5F0E8',
+  background: '#FFFFFF',
   surface: '#FFFFFF',
   surfaceWarm: '#FAF7F2',
   cream: '#EAD9B7',
@@ -38,7 +38,7 @@ export const colors = {
   // Tab bar
   tabActive: '#2D5016',
   tabInactive: '#9BA88D',
-  tabBackground: '#F5F0E8',
+  tabBackground: '#FFFFFF',
 } as const;
 
 export type ColorKey = keyof typeof colors;

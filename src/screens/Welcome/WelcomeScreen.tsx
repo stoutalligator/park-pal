@@ -3,12 +3,20 @@ import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, typography, shadows } from '@/theme';
+import { useApp } from '@/context/AppContext';
 import PrimaryButton from '@/components/PrimaryButton';
 import SecondaryButton from '@/components/SecondaryButton';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Welcome'>;
 
 export default function WelcomeScreen({ navigation }: Props) {
+  const { completeOnboarding } = useApp();
+
+  const startExploring = () => {
+    completeOnboarding({});
+    navigation.replace('Main', { screen: 'HomeTab' } as any);
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -33,12 +41,12 @@ export default function WelcomeScreen({ navigation }: Props) {
           <PrimaryButton
             label="Start Exploring"
             icon={require('@/assets/icons/mountain.png')}
-            onPress={() => navigation.navigate('Onboarding')}
+            onPress={startExploring}
             style={styles.primaryBtn}
           />
           <SecondaryButton
             label="Log In / Sign Up"
-            onPress={() => navigation.navigate('Onboarding')}
+            onPress={() => navigation.navigate('Auth')}
             style={styles.secondaryBtn}
           />
         </View>

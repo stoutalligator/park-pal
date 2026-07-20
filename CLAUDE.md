@@ -93,7 +93,8 @@ docs/
 forest:   '#2D5016'  // deep forest green — primary buttons, active states
 sage:     '#6B8C5A'  // sage green — secondary accents
 sky:      '#A8C5D4'  // light sky blue — highlights
-cream:    '#F5F0E8'  // warm parchment — all screen backgrounds
+background: '#FFFFFF' // white — all screen backgrounds (premium, clean feel)
+cream:    '#EAD9B7'  // warm tan-cream — accent card fills, not the base background
 tan:      '#C9A96E'  // warm tan — cards, borders
 orange:   '#D4845A'  // soft orange — accents, activity icons
 rose:     '#C4847A'  // muted rose — hearts, favorites
@@ -107,10 +108,10 @@ brown:    '#8B6340'  // earthy brown — mascot details, outlined icons
 
 ### UI Rules (match the reference exactly)
 
-- Screen backgrounds: always cream `#F5F0E8`
+- Screen backgrounds: always white `#FFFFFF` (`colors.background`)
 - Buttons: pill-shaped (`borderRadius: 999`), forest green fill for primary, outlined for secondary
-- Cards: `borderRadius: 16`, white or cream fill, soft shadow (`elevation: 3` / iOS shadow)
-- Tab bar: cream background, forest green active icon + label, unselected in tan/gray
+- Cards: `borderRadius: 16`, white fill, soft shadow (`elevation: 3` / iOS shadow) — since cards and background are both white, shadow is what separates them
+- Tab bar: white background, forest green active icon + label, unselected in tan/gray
 - Center FAB (`+`): forest green circle, larger than tabs, slight elevation
 - Map pins: circular park photo thumbnails with a checkmark badge overlay for visited parks
 - Badges: sticker-style, circular or shield-shaped, illustrated
@@ -120,7 +121,7 @@ brown:    '#8B6340'  // earthy brown — mascot details, outlined icons
 
 ## Working in This Codebase
 
-All color and typography values must come from `src/theme/` — never hardcode hex values or font names inline. Every screen uses the cream background; deviating from this will break the visual cohesion. The illustrated bear mascot is a first-class UI element, not an afterthought — if a screen feels empty without it, add it.
+All color and typography values must come from `src/theme/` — never hardcode hex values or font names inline. Every screen uses the white background (`colors.background`); deviating from this will break the visual cohesion. The illustrated bear mascot is a first-class UI element, not an afterthought — if a screen feels empty without it, add it.
 
 ---
 

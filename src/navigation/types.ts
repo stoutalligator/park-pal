@@ -2,7 +2,7 @@ import { NavigatorScreenParams } from '@react-navigation/native';
 
 export type RootStackParamList = {
   Welcome: undefined;
-  Onboarding: undefined;
+  Auth: undefined;
   Main: NavigatorScreenParams<MainTabParamList>;
 };
 
@@ -33,7 +33,6 @@ export type ProfileStackParamList = {
   Profile: undefined;
   Passport: undefined;
   Collection: undefined;
-  Achievements: undefined;
   Stats: undefined;
   Wishlist: undefined;
   Settings: undefined;

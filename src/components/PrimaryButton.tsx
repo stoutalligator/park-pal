@@ -5,7 +5,7 @@ import { colors, radius, spacing, typography } from '@/theme';
 interface Props {
   label: string;
   onPress: () => void;
-  icon?: string | ImageSourcePropType;
+  icon?: string | ImageSourcePropType | React.ReactElement;
   style?: ViewStyle;
   disabled?: boolean;
 }
@@ -20,8 +20,10 @@ export default function PrimaryButton({ label, onPress, icon, style, disabled }:
     >
       {typeof icon === 'string' ? (
         <Text style={styles.icon}>{icon}</Text>
+      ) : React.isValidElement(icon) ? (
+        icon
       ) : icon ? (
-        <Image source={icon} style={styles.iconImage} resizeMode="contain" />
+        <Image source={icon as ImageSourcePropType} style={styles.iconImage} resizeMode="contain" />
       ) : null}
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>

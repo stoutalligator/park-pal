@@ -6,6 +6,7 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import TripCard from '@/components/TripCard';
 import { ProfileBackground, ProfileAvatar } from '@/types';
+import { getBadgeImage } from '@/data/badgeImages';
 
 const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: number }[] = [
   { key: 'mountain-lake', label: 'Mountain Lake', source: require('@/assets/scenes/scene-mountain-lake.png') },
@@ -43,29 +44,10 @@ const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.sou
   number
 >;
 
-// Not every badge has bespoke art yet; these map onto the closest illustrated
-// badge we have, with a generic ranger badge as a fallback for the rest.
-const BADGE_IMAGE_MAP: Record<string, number> = {
-  'first-park': require('@/assets/badges/badge-first-park.png'),
-  'parks-10': require('@/assets/badges/badge-10-parks.png'),
-  'parks-25': require('@/assets/badges/badge-25-parks.png'),
-  'parks-50': require('@/assets/badges/badge-50-parks.png'),
-  'parks-all': require('@/assets/badges/badge-junior-ranger.png'),
-  sunrise: require('@/assets/badges/badge-sunrise-seeker.png'),
-  'road-tripper': require('@/assets/badges/badge-coast-to-coast.png'),
-  'mountain-region': require('@/assets/badges/badge-mountain-master.png'),
-  'utah-five': require('@/assets/badges/badge-desert-explorer.png'),
-  coastal: require('@/assets/badges/badge-waterfall-chaser.png'),
-  hiker: require('@/assets/badges/badge-mountain-master.png'),
-  camper: require('@/assets/badges/badge-forest-discoverer.png'),
-};
-const BADGE_FALLBACK_IMAGE = require('@/assets/badges/badge-junior-ranger.png');
-
 const SHORTCUTS = [
   { label: 'Passport', screen: 'Passport', icon: require('@/assets/icons/icon-passport.png') },
-  { label: 'Achievements', screen: 'Achievements', icon: require('@/assets/icons/icon-achievements.png') },
   { label: 'Stats', screen: 'Stats', icon: require('@/assets/icons/icon-explore.png') },
-  { label: 'Wishlist', screen: 'Wishlist', icon: require('@/assets/icons/icon-favorites.png') },
+  { label: 'Bucket List', screen: 'Wishlist', icon: require('@/assets/icons/icon-favorites.png') },
   { label: 'Settings', screen: 'Settings', icon: require('@/assets/icons/icon-settings.png') },
 ];
 
@@ -168,7 +150,7 @@ export default function ProfileScreen() {
             {earnedBadges.slice(0, 4).map((b) => (
               <View key={b.id} style={styles.badgeBubble}>
                 <Image
-                  source={BADGE_IMAGE_MAP[b.id] ?? BADGE_FALLBACK_IMAGE}
+                  source={getBadgeImage(b.id)}
                   style={styles.badgeImage}
                   resizeMode="contain"
                 />

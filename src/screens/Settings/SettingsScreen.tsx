@@ -1,13 +1,38 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
+import ScreenHeader from '@/components/ScreenHeader';
 
 const SETTINGS_ROWS = [
-  { section: 'Account', items: [{ label: '👤 Profile', sub: 'Name, avatar, explorer style' }, { label: '🎯 My Goal', sub: 'Update your park goal' }] },
-  { section: 'App', items: [{ label: '📐 Units', sub: 'Miles / Kilometers' }, { label: '🔔 Notifications', sub: 'Reminders & updates' }] },
-  { section: 'Data', items: [{ label: '💾 Backup & Sync', sub: 'Coming soon' }, { label: '📤 Export Data', sub: 'Export your trips as CSV' }] },
-  { section: 'About', items: [{ label: '🏕️ About Park Pal', sub: 'v1.0.0' }, { label: '🔐 Privacy Policy', sub: '' }] },
+  {
+    section: 'Account',
+    items: [
+      { label: 'Profile', sub: 'Name, avatar, explorer style', icon: require('@/assets/icons/icon-profile.png') },
+      { label: 'My Goal', sub: 'Update your park goal', icon: require('@/assets/icons/icon-achievements.png') },
+    ],
+  },
+  {
+    section: 'App',
+    items: [
+      { label: 'Units', sub: 'Miles / Kilometers', icon: require('@/assets/icons/icon-explore.png') },
+      { label: 'Notifications', sub: 'Reminders & updates', icon: require('@/assets/icons/icon-notifications.png') },
+    ],
+  },
+  {
+    section: 'Data',
+    items: [
+      { label: 'Backup & Sync', sub: 'Coming soon', icon: require('@/assets/icons/icon-offline-maps.png') },
+      { label: 'Export Data', sub: 'Export your trips as CSV', icon: require('@/assets/icons/icon-journal.png') },
+    ],
+  },
+  {
+    section: 'About',
+    items: [
+      { label: 'About Park Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png') },
+      { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png') },
+    ],
+  },
 ];
 
 export default function SettingsScreen() {
@@ -15,25 +40,20 @@ export default function SettingsScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Text style={styles.back}>‹ Back</Text>
-        </TouchableOpacity>
-        <Text style={styles.title}>Settings</Text>
-        <View style={{ width: 60 }} />
-      </View>
+      <ScreenHeader title="Settings" onBack={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {SETTINGS_ROWS.map(({ section, items }) => (
           <View key={section} style={styles.section}>
             <Text style={styles.sectionLabel}>{section.toUpperCase()}</Text>
             <View style={styles.group}>
-              {items.map(({ label, sub }, i) => (
+              {items.map(({ label, sub, icon }, i) => (
                 <TouchableOpacity key={label} style={[styles.row, i < items.length - 1 && styles.rowBorder]} activeOpacity={0.7}>
+                  <Image source={icon} style={styles.rowIcon} resizeMode="contain" />
                   <View style={styles.rowText}>
                     <Text style={styles.rowLabel}>{label}</Text>
                     {sub ? <Text style={styles.rowSub}>{sub}</Text> : null}
                   </View>
-                  <Text style={styles.chevron}>›</Text>
+                  <Text style={styles.chevron}>{'›'}</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -46,15 +66,13 @@ export default function SettingsScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: spacing.xl, paddingVertical: spacing.md },
-  back: { ...typography.labelSemiBold, color: colors.primary, fontSize: 18 },
-  title: { ...typography.h4, color: colors.textPrimary },
-  scroll: { padding: spacing.xl, paddingBottom: spacing['5xl'], gap: spacing.xl },
+  scroll: { paddingHorizontal: spacing.xl, paddingBottom: spacing['5xl'], gap: spacing.xl },
   section: { gap: spacing.sm },
   sectionLabel: { ...typography.caption, color: colors.textMuted, letterSpacing: 1.5, paddingLeft: spacing.xs },
   group: { backgroundColor: colors.surface, borderRadius: radius.xl, overflow: 'hidden', ...shadows.sm },
   row: { flexDirection: 'row', alignItems: 'center', padding: spacing.lg, gap: spacing.md },
   rowBorder: { borderBottomWidth: 1, borderBottomColor: colors.divider },
+  rowIcon: { width: 22, height: 22 },
   rowText: { flex: 1, gap: 2 },
   rowLabel: { ...typography.labelSemiBold, color: colors.textPrimary },
   rowSub: { ...typography.caption, color: colors.textSecondary },

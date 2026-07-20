@@ -1,11 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import FilterPill from '@/components/FilterPill';
 import ParkCard from '@/components/ParkCard';
-import ProgressRing from '@/components/ProgressRing';
 import { ParkStatus } from '@/types';
 import { TOTAL_PARKS } from '@/data/parks';
 
@@ -41,16 +40,13 @@ export default function ExploreScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.title}>Explore</Text>
-        <TouchableOpacity hitSlop={12}>
-          <Text style={styles.filterIcon}>⚙️</Text>
-        </TouchableOpacity>
+        <Text style={styles.title}>Parks</Text>
+        <Text style={styles.subtitle}>{stats.totalVisited} / {TOTAL_PARKS} visited</Text>
       </View>
 
       {/* Search */}
       <View style={styles.searchRow}>
         <View style={styles.searchBox}>
-          <Text style={styles.searchIcon}>🔍</Text>
           <TextInput
             style={styles.searchInput}
             placeholder="Search parks..."
@@ -62,38 +58,16 @@ export default function ExploreScreen() {
       </View>
 
       {/* Filter pills */}
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.pills}>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.pillsScroll}
+        contentContainerStyle={styles.pills}
+      >
         {FILTERS.map((f) => (
           <FilterPill key={f} label={f} active={filter === f} onPress={() => setFilter(f)} />
         ))}
       </ScrollView>
-
-      {/* Map placeholder */}
-      <View style={styles.mapCard}>
-        <Text style={styles.mapEmoji}>🗺️</Text>
-        <Text style={styles.mapLabel}>Interactive Map</Text>
-        <Text style={styles.mapSub}>Tap parks on the map to explore</Text>
-        {/* Park pin dots scattered */}
-        {parks.filter((p) => p.status === 'visited').slice(0, 5).map((p, i) => (
-          <View key={p.id} style={[styles.pin, { top: 20 + i * 22, left: 30 + i * 30 }]}>
-            <Text style={styles.pinDot}>📍</Text>
-          </View>
-        ))}
-        {/* Mascot peeking */}
-        <View style={styles.mapMascot}>
-          <Text style={{ fontSize: 28 }}>🐻</Text>
-        </View>
-      </View>
-
-      {/* Progress card */}
-      <View style={styles.progressCard}>
-        <View>
-          <Text style={styles.progressTitle}>Your Progress</Text>
-          <Text style={styles.progressCount}>{stats.totalVisited} / {TOTAL_PARKS}</Text>
-          <Text style={styles.progressSub}>National Parks Visited</Text>
-        </View>
-        <ProgressRing percentage={stats.completionPercentage} size={64} />
-      </View>
 
       {/* Park list */}
       <ScrollView style={styles.list} contentContainerStyle={styles.listContent} showsVerticalScrollIndicator={false}>
@@ -107,7 +81,7 @@ export default function ExploreScreen() {
         ))}
         {filtered.length === 0 && (
           <View style={styles.empty}>
-            <Text style={styles.emptyIcon}>🐻</Text>
+            <Image source={require('@/assets/mascot/mascot-thinking.png')} style={styles.emptyIcon} resizeMode="contain" />
             <Text style={styles.emptyText}>No parks found. Try a different filter!</Text>
           </View>
         )}
@@ -118,44 +92,20 @@ export default function ExploreScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: spacing.xl, paddingTop: spacing.lg, paddingBottom: spacing.sm },
+  header: { paddingHorizontal: spacing.xl, paddingTop: spacing['2xl'], paddingBottom: spacing.sm, gap: 2 },
   title: { ...typography.h3, color: colors.textPrimary },
-  filterIcon: { fontSize: 20 },
+  subtitle: { ...typography.bodySmall, color: colors.textSecondary },
 
   searchRow: { paddingHorizontal: spacing.xl, marginBottom: spacing.sm },
-  searchBox: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, paddingHorizontal: spacing.md, gap: spacing.sm, ...shadows.sm },
-  searchIcon: { fontSize: 16 },
+  searchBox: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, paddingHorizontal: spacing.md, ...shadows.sm },
   searchInput: { flex: 1, height: 44, ...typography.body, color: colors.textPrimary },
 
-  pills: { paddingHorizontal: spacing.xl, paddingBottom: spacing.sm },
-
-  mapCard: {
-    marginHorizontal: spacing.xl,
-    height: 160,
-    backgroundColor: '#D4E8C4',
-    borderRadius: radius.xl,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: spacing.md,
-    overflow: 'hidden',
-    position: 'relative',
-  },
-  mapEmoji: { fontSize: 32, opacity: 0.3, position: 'absolute' },
-  mapLabel: { ...typography.h5, color: colors.primary },
-  mapSub: { ...typography.caption, color: colors.sage },
-  pin: { position: 'absolute' },
-  pin0: { top: 30, left: 60 },
-  pinDot: { fontSize: 18 },
-  mapMascot: { position: 'absolute', bottom: 8, right: 16 },
-
-  progressCard: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, marginHorizontal: spacing.xl, marginBottom: spacing.md, ...shadows.sm },
-  progressTitle: { ...typography.labelBold, color: colors.textPrimary, marginBottom: 4 },
-  progressCount: { ...typography.h4, color: colors.textPrimary },
-  progressSub: { ...typography.caption, color: colors.textSecondary },
+  pillsScroll: { flexGrow: 0, flexShrink: 0 },
+  pills: { paddingHorizontal: spacing.xl, paddingBottom: spacing.md, alignItems: 'flex-start' },
 
   list: { flex: 1 },
   listContent: { paddingHorizontal: spacing.xl, paddingBottom: spacing['5xl'] },
   empty: { alignItems: 'center', paddingTop: spacing['3xl'], gap: spacing.md },
-  emptyIcon: { fontSize: 40 },
+  emptyIcon: { width: 72, height: 72 },
   emptyText: { ...typography.body, color: colors.textSecondary, textAlign: 'center' },
 });
