@@ -87,6 +87,30 @@ function StarIcon({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
+function SunriseIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="15" r="4.5" fill={color} />
+      <Line x1="12" y1="4" x2="12" y2="7" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="4.5" y1="9" x2="6.5" y2="10.7" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="19.5" y1="9" x2="17.5" y2="10.7" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="2" y1="20" x2="22" y2="20" stroke={color} strokeWidth={2} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+function SunsetIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="11" r="4.5" fill={color} />
+      <Line x1="12" y1="20" x2="12" y2="17" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="4.5" y1="15" x2="6.5" y2="13.3" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="19.5" y1="15" x2="17.5" y2="13.3" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Line x1="2" y1="20" x2="22" y2="20" stroke={color} strokeWidth={2} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
 function DotsIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
@@ -145,6 +169,8 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
     ),
   },
   { label: 'Stargazing', render: (c) => <StarIcon color={c} /> },
+  { label: 'Sunrise', render: (c) => <SunriseIcon color={c} /> },
+  { label: 'Sunset', render: (c) => <SunsetIcon color={c} /> },
   { label: 'Other', render: (c) => <DotsIcon color={c} /> },
 ];
 

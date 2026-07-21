@@ -141,6 +141,18 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             </View>
           ) : null}
 
+          {/* Photos */}
+          {trip.photos.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Photos</Text>
+              <View style={styles.photoGrid}>
+                {trip.photos.map((uri) => (
+                  <Image key={uri} source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
+                ))}
+              </View>
+            </View>
+          )}
+
           {/* Trails Hiked */}
           {trip.trailsHiked && trip.trailsHiked.length > 0 && (
             <View style={styles.section}>
@@ -224,6 +236,8 @@ const styles = StyleSheet.create({
   tagTextWildlife: { color: colors.orange },
   journalCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, ...shadows.sm },
   journalText: { ...typography.body, color: colors.textPrimary, lineHeight: 22 },
+  photoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+  photoThumb: { width: '31%', aspectRatio: 1, borderRadius: radius.md, backgroundColor: colors.surfaceWarm },
   statsRow: { flexDirection: 'row', gap: spacing.md, flexWrap: 'wrap' },
   statChip: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, alignItems: 'center', minWidth: 80, ...shadows.sm },
   statNum: { ...typography.h5, color: colors.textPrimary },

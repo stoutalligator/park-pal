@@ -1,8 +1,9 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import { Park, Trip, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
+import { BADGE_PROGRESS } from '@/data/badgeRules';
 import { ALL_ANIMALS } from '@/data/animals';
 import { supabase } from '@/lib/supabase';
 
@@ -115,7 +116,8 @@ const AppContext = createContext<AppContextValue | null>(null);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [parks, setParks] = useState<Park[]>(ALL_PARKS);
   const [trips, setTrips] = useState<Trip[]>([]);
-  const [badges, setBadges] = useState<Badge[]>(ALL_BADGES);
+  const [earnedDates, setEarnedDates] = useState<Record<string, string>>({});
+  const earnedIdsRef = useRef<Set<string>>(new Set());
   const [userProfile, setUserProfile] = useState<UserProfile>(DEFAULT_PROFILE);
   const [session, setSession] = useState<Session | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
@@ -176,6 +178,28 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             };
           })
         );
+      });
+  }, [session]);
+
+  useEffect(() => {
+    if (!session) {
+      setEarnedDates({});
+      earnedIdsRef.current = new Set();
+      return;
+    }
+    supabase
+      .from('user_badges')
+      .select('badge_id, earned_date')
+      .eq('user_id', session.user.id)
+      .eq('earned', true)
+      .then(({ data, error }) => {
+        if (error || !data) return;
+        const dates: Record<string, string> = {};
+        data.forEach((row) => {
+          if (row.earned_date) dates[row.badge_id] = row.earned_date;
+        });
+        setEarnedDates(dates);
+        earnedIdsRef.current = new Set(Object.keys(dates));
       });
   }, [session]);
 
@@ -251,6 +275,43 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     (animalId: string) => animalSightings.some((row) => row.animal_id === animalId),
     [animalSightings]
   );
+
+  const badges: Badge[] = useMemo(() => {
+    const completedTrailIds = trailCompletions.map((row) => row.trail_id).filter((id): id is string => !!id);
+    const spottedAnimalIds = animalSightings.map((row) => row.animal_id).filter((id): id is string => !!id);
+    return ALL_BADGES.map((badge) => {
+      const goal = badge.goal ?? 1;
+      const rawProgress = BADGE_PROGRESS[badge.id]?.({ parks, trips, completedTrailIds, spottedAnimalIds }) ?? 0;
+      const progress = Math.min(rawProgress, goal);
+      const earned = progress >= goal;
+      return { ...badge, progress, goal, earned, earnedDate: earned ? earnedDates[badge.id] : undefined };
+    });
+  }, [parks, trips, trailCompletions, animalSightings, earnedDates]);
+
+  // The first time a badge's live-computed progress clears its goal, freeze
+  // an earned_date server-side so "earned N days ago" stays stable rather
+  // than recalculating to "today" on every load.
+  useEffect(() => {
+    if (!session) return;
+    const newlyEarned = badges.filter((b) => b.earned && !earnedIdsRef.current.has(b.id));
+    if (newlyEarned.length === 0) return;
+    const earnedAt = new Date().toISOString();
+    newlyEarned.forEach((b) => earnedIdsRef.current.add(b.id));
+    supabase
+      .from('user_badges')
+      .upsert(
+        newlyEarned.map((b) => ({ badge_id: b.id, earned: true, earned_date: earnedAt, progress: b.progress ?? 0 })),
+        { onConflict: 'user_id,badge_id' }
+      )
+      .then();
+    setEarnedDates((prev) => {
+      const next = { ...prev };
+      newlyEarned.forEach((b) => {
+        next[b.id] = earnedAt;
+      });
+      return next;
+    });
+  }, [badges, session]);
 
   // Lets a user hand-check a trail that was part of a custom/combined route
   // they logged rather than picked from the catalog. Recorded as a

@@ -1,26 +1,29 @@
-// Only 12 bespoke badge illustrations exist so far (each with its name baked
-// into the art), but there are more badge definitions than that — badges
-// without a matching illustration fall back to the generic Junior Ranger
-// badge rather than showing mismatched text.
+// Badges without a matching illustration borrow one of the ones below as a
+// placeholder (see getBadgeImage) rather than showing mismatched text. Ask
+// the badge-dev agent for the full list of filenames still needed under
+// src/assets/badges/.
 const BADGE_IMAGES: Record<string, number> = {
   'first-park': require('@/assets/badges/badge-first-park.png'),
-  'parks-10': require('@/assets/badges/badge-10-parks.png'),
-  'parks-25': require('@/assets/badges/badge-25-parks.png'),
-  'parks-50': require('@/assets/badges/badge-50-parks.png'),
-  hiker: require('@/assets/badges/badge-mountain-master.png'),
-  camper: require('@/assets/badges/badge-forest-discoverer.png'),
-  wildlife: require('@/assets/badges/badge-forest-discoverer.png'),
-  photographer: require('@/assets/badges/badge-sunrise-seeker.png'),
-  sunrise: require('@/assets/badges/badge-sunrise-seeker.png'),
-  'road-tripper': require('@/assets/badges/badge-coast-to-coast.png'),
-  'mountain-region': require('@/assets/badges/badge-mountain-master.png'),
-  'northeast-region': require('@/assets/badges/badge-state-explorer.png'),
-  'utah-five': require('@/assets/badges/badge-desert-explorer.png'),
-  coastal: require('@/assets/badges/badge-waterfall-chaser.png'),
+  'parks-5': require('@/assets/badges/badge-parks-5.png'),
+  'parks-10': require('@/assets/badges/badge-parks-10.png'),
 };
 
-const BADGE_FALLBACK_IMAGE = require('@/assets/badges/badge-junior-ranger.png');
+const REAL_IMAGE_LIST = Object.values(BADGE_IMAGES);
 
+function hashString(value: string): number {
+  let hash = 0;
+  for (let i = 0; i < value.length; i++) {
+    hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+}
+
+// Badges without their own real illustration yet borrow one of the existing
+// real ones (stable per badge id, same approach as getParkScene in
+// parkImages.ts) instead of a single generic placeholder, so the Collection
+// screen still shows varied art in the current target style while the rest
+// of the badge revamp is in progress.
 export function getBadgeImage(badgeId: string): number {
-  return BADGE_IMAGES[badgeId] ?? BADGE_FALLBACK_IMAGE;
+  if (BADGE_IMAGES[badgeId]) return BADGE_IMAGES[badgeId];
+  return REAL_IMAGE_LIST[hashString(badgeId) % REAL_IMAGE_LIST.length];
 }

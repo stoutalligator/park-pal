@@ -36,6 +36,7 @@ const REAL_PARK_SCENES: Record<string, number> = {
   'denali': require('@/assets/parks-scenes/parks-scene-denali.png'),
   'dry-tortugas': require('@/assets/parks-scenes/parks-scene-dry-tortugas.png'),
   'everglades': require('@/assets/parks-scenes/parks-scene-everglades.png'),
+  'gates-arctic': require('@/assets/parks-scenes/parks-scene-gates-arctic.png'),
   'gateway-arch': require('@/assets/parks-scenes/parks-scene-gateway-arch.png'),
   'glacier': require('@/assets/parks-scenes/parks-scene-glacier.png'),
   'glacier-bay': require('@/assets/parks-scenes/parks-scene-glacier-bay.png'),
@@ -80,7 +81,6 @@ const REAL_PARK_SCENES: Record<string, number> = {
   'yellowstone': require('@/assets/parks-scenes/parks-scene-yellowstone.png'),
   'yosemite': require('@/assets/parks-scenes/parks-scene-yosemite.png'),
   'zion': require('@/assets/parks-scenes/parks-scene-zion.png'),
-  // gates-arctic has no real scene yet — falls back to the rotating pick below.
 };
 
 const REAL_ICON_LIST = Object.values(REAL_PARK_ICONS);

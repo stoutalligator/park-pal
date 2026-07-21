@@ -349,15 +349,15 @@ const styles = StyleSheet.create({
 
   badgeRow: { flexDirection: 'row', gap: spacing.md },
   badgeBubble: {
-    width: 60,
-    height: 68,
+    width: 78,
+    height: 88,
     borderRadius: radius.md,
     backgroundColor: colors.surfaceWarm,
     alignItems: 'center',
     justifyContent: 'center',
     ...shadows.sm,
   },
-  badgeImage: { width: 48, height: 56 },
+  badgeImage: { width: 66, height: 76 },
 
   linkRow: {
     flexDirection: 'row',

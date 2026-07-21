@@ -35,6 +35,8 @@ export type ActivityType =
   | 'Scenic Drive'
   | 'Photography'
   | 'Stargazing'
+  | 'Sunrise'
+  | 'Sunset'
   | 'Other';
 
 export interface TripTrailEntry {
@@ -83,7 +85,7 @@ export interface Animal {
   rarity: AnimalRarity;
 }
 
-export type BadgeCategory = 'parks' | 'activity' | 'region' | 'memory' | 'special';
+export type BadgeCategory = 'parks' | 'activity' | 'region' | 'memory' | 'special' | 'distance' | 'secret';
 
 export interface Badge {
   id: string;
@@ -94,6 +96,8 @@ export interface Badge {
   earnedDate?: string;
   progress?: number;
   goal?: number;
+  /** Secret badges show as "???" in the Collection screen until earned. */
+  secret?: boolean;
 }
 
 export interface UserStats {
