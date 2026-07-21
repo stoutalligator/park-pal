@@ -20,7 +20,7 @@ const STATUS_MAP: Record<Filter, ParkStatus | null> = {
 };
 
 export default function ExploreScreen() {
-  const { parks, stats, toggleFavorite } = useApp();
+  const { parks, stats, toggleFavorite, updateParkStatus } = useApp();
   const navigation = useNavigation<any>();
   const [filter, setFilter] = useState<Filter>('All Parks');
   const [search, setSearch] = useState('');
@@ -33,7 +33,7 @@ export default function ExploreScreen() {
       const q = search.toLowerCase();
       list = list.filter((p) => p.name.toLowerCase().includes(q) || p.state.toLowerCase().includes(q));
     }
-    return list;
+    return [...list].sort((a, b) => a.name.localeCompare(b.name));
   }, [parks, filter, search]);
 
   return (
@@ -77,6 +77,8 @@ export default function ExploreScreen() {
             park={park}
             onPress={() => navigation.navigate('ParkDetail', { parkId: park.id })}
             onFavorite={() => toggleFavorite(park.id)}
+            onToggleVisited={() => updateParkStatus(park.id, park.status === 'visited' ? 'notVisited' : 'visited')}
+            onToggleBucketList={() => updateParkStatus(park.id, park.status === 'bucketList' ? 'notVisited' : 'bucketList')}
           />
         ))}
         {filtered.length === 0 && (

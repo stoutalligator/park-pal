@@ -4,6 +4,7 @@ import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
 import { getParkById } from '@/data/parks';
 import { getParkImage } from '@/data/parkImages';
+import { parseLocalDate } from '@/utils/dates';
 
 interface Props {
   trip: Trip;
@@ -11,8 +12,8 @@ interface Props {
 }
 
 function formatDateRange(start: string, end: string): string {
-  const s = new Date(start);
-  const e = new Date(end);
+  const s = parseLocalDate(start);
+  const e = parseLocalDate(end);
   const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
   return `${s.toLocaleDateString('en-US', opts)} – ${e.toLocaleDateString('en-US', { ...opts, year: 'numeric' })}`;
 }

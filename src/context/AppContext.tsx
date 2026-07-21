@@ -51,6 +51,8 @@ interface AppContextValue {
   signOut: () => Promise<void>;
   isTrailCompleted: (trailId: string) => boolean;
   isAnimalSpotted: (animalId: string) => boolean;
+  markTrailCompleted: (trailId: string, parkId: string, name: string) => void;
+  unmarkTrailCompleted: (trailId: string) => void;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -187,6 +189,28 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     [animalSightings]
   );
 
+  // Lets a user hand-check a trail that was part of a custom/combined route
+  // they logged rather than picked from the catalog. Recorded as a
+  // trip_id-less completion row with zero miles/elevation so it flips the
+  // "completed" indicator without touching mileage stats.
+  const markTrailCompleted = useCallback((trailId: string, parkId: string, name: string) => {
+    if (trailCompletions.some((row) => row.trail_id === trailId)) return;
+    const row: TrailCompletionRow = { trail_id: trailId, trip_id: null, park_id: parkId, name, miles: 0, elevation_gain_ft: 0 };
+    setTrailCompletions((prev) => [...prev, row]);
+    if (session) {
+      supabase.from('user_trail_completions').insert(row).then();
+    }
+  }, [trailCompletions, session]);
+
+  // Only clears the manual (trip_id-less) completion — a completion earned
+  // by an actual logged trip is left alone, since that's real history.
+  const unmarkTrailCompleted = useCallback((trailId: string) => {
+    setTrailCompletions((prev) => prev.filter((row) => !(row.trail_id === trailId && row.trip_id === null)));
+    if (session) {
+      supabase.from('user_trail_completions').delete().eq('trail_id', trailId).is('trip_id', null).then();
+    }
+  }, [session]);
+
   const stats: UserStats = {
     totalVisited: parks.filter((p) => p.status === 'visited').length,
     totalRemaining: TOTAL_PARKS - parks.filter((p) => p.status === 'visited').length,
@@ -196,8 +220,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     ),
     totalTrips: trips.length,
     totalPhotos: trips.reduce((acc, t) => acc + t.photos.length, 0),
-    totalMilesHiked: trailCompletions.reduce((acc, row) => acc + row.miles, 0),
-    totalElevationGain: trailCompletions.reduce((acc, row) => acc + row.elevation_gain_ft, 0),
+    totalMilesHiked: trips.reduce((acc, t) => acc + (t.milesHiked ?? 0), 0),
+    totalElevationGain: trips.reduce((acc, t) => acc + (t.elevationGainFt ?? 0), 0),
     statesVisited: new Set(
       parks.filter((p) => p.status === 'visited').map((p) => p.state)
     ).size,
@@ -392,6 +416,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         signOut,
         isTrailCompleted,
         isAnimalSpotted,
+        markTrailCompleted,
+        unmarkTrailCompleted,
       }}
     >
       {children}

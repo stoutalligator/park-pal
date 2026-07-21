@@ -21,22 +21,29 @@ const DIFFICULTY_COLOR: Record<TrailDifficulty, string> = {
 const DIFFICULTY_FILTERS: ('All' | TrailDifficulty)[] = ['All', 'Easy', 'Moderate', 'Hard'];
 const DIFFICULTY_RANK: Record<TrailDifficulty, number> = { Easy: 0, Moderate: 1, Hard: 2 };
 
-function CheckBadge() {
+function CompletionToggle({ completed, onToggle }: { completed: boolean; onToggle: () => void }) {
   return (
-    <View style={styles.checkBadge}>
-      <Svg width={10} height={10} viewBox="0 0 12 12">
-        <Polyline points="2,6 5,9 10,3" fill="none" stroke={colors.textInverse} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-      </Svg>
-    </View>
+    <TouchableOpacity
+      onPress={onToggle}
+      hitSlop={10}
+      activeOpacity={0.7}
+      style={[styles.checkBadge, completed && styles.checkBadgeCompleted]}
+    >
+      {completed && (
+        <Svg width={10} height={10} viewBox="0 0 12 12">
+          <Polyline points="2,6 5,9 10,3" fill="none" stroke={colors.textInverse} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+        </Svg>
+      )}
+    </TouchableOpacity>
   );
 }
 
-function TrailListCard({ trail, completed, units }: { trail: Trail; completed: boolean; units: Units }) {
+function TrailListCard({ trail, completed, units, onToggleCompleted }: { trail: Trail; completed: boolean; units: Units; onToggleCompleted: () => void }) {
   return (
     <View style={styles.itemCard}>
       <View style={styles.itemTitleRow}>
-        <Text style={styles.itemName}>{trail.name}</Text>
-        {completed && <CheckBadge />}
+        <Text style={[styles.itemName, styles.itemNameFlex]}>{trail.name}</Text>
+        <CompletionToggle completed={completed} onToggle={onToggleCompleted} />
       </View>
       <Text style={styles.itemDescription}>{trail.description}</Text>
       <View style={styles.itemMetaRow}>
@@ -52,7 +59,7 @@ function TrailListCard({ trail, completed, units }: { trail: Trail; completed: b
 
 export default function ParkTrailsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, isTrailCompleted, userProfile } = useApp();
+  const { parks, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
   const units = userProfile.units;
   const [search, setSearch] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<'All' | TrailDifficulty>('All');
@@ -99,7 +106,17 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
       <Text style={styles.progressText}>{completedCount} of {allTrails.length} completed</Text>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {trails.map((trail) => (
-          <TrailListCard key={trail.id} trail={trail} completed={isTrailCompleted(trail.id)} units={units} />
+          <TrailListCard
+            key={trail.id}
+            trail={trail}
+            completed={isTrailCompleted(trail.id)}
+            units={units}
+            onToggleCompleted={() =>
+              isTrailCompleted(trail.id)
+                ? unmarkTrailCompleted(trail.id)
+                : markTrailCompleted(trail.id, trail.parkId, trail.name)
+            }
+          />
         ))}
       </ScrollView>
     </SafeAreaView>
@@ -124,10 +141,12 @@ const styles = StyleSheet.create({
   itemCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.md, marginBottom: spacing.md, gap: 4, ...shadows.sm },
   itemTitleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   itemName: { ...typography.labelBold, color: colors.textPrimary },
+  itemNameFlex: { flex: 1 },
   itemDescription: { ...typography.bodySmall, color: colors.textSecondary },
   itemMetaRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md, marginTop: 2 },
   itemMeta: { ...typography.caption, color: colors.textMuted },
   pill: { paddingHorizontal: spacing.sm, paddingVertical: 2, borderRadius: radius.full },
   pillText: { ...typography.labelSmall, fontSize: 10, color: colors.textInverse },
-  checkBadge: { width: 18, height: 18, borderRadius: 9, backgroundColor: colors.primary, borderWidth: 2, borderColor: colors.background, alignItems: 'center', justifyContent: 'center' },
+  checkBadge: { width: 22, height: 22, borderRadius: 11, backgroundColor: colors.surfaceWarm, borderWidth: 2, borderColor: colors.border, alignItems: 'center', justifyContent: 'center' },
+  checkBadgeCompleted: { backgroundColor: colors.primary, borderColor: colors.primary },
 });

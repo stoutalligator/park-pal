@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native';
-import Svg, { Path, Polygon, Circle, Line } from 'react-native-svg';
+import Svg, { Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
@@ -113,6 +113,14 @@ function CloseIcon({ color, size = 10 }: { color: string; size?: number }) {
   );
 }
 
+function CheckIcon({ color, size = 14 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 12 12">
+      <Polyline points="2,6 5,9 10,3" fill="none" stroke={color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
 const DIFFICULTY_RANK: Record<TrailDifficulty, number> = { Easy: 0, Moderate: 1, Hard: 2 };
 const RARITY_RANK: Record<AnimalRarity, number> = { Common: 0, Uncommon: 1, Rare: 2 };
 
@@ -138,33 +146,69 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
 ];
 
 export default function LogTripScreen() {
-  const { parks, logTrip, userProfile } = useApp();
+  const { parks, trips, logTrip, updateTrip, userProfile } = useApp();
   const units = userProfile.units;
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
+  const editingTrip = route.params?.tripId ? trips.find((t) => t.id === route.params.tripId) : undefined;
   const [heroImage, setHeroImage] = useState<number>(randomHeroImage);
-  const [selectedParkId, setSelectedParkId] = useState<string>(route.params?.parkId ?? 'yellowstone');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [selectedActivities, setSelectedActivities] = useState<ActivityType[]>([]);
-  const [notes, setNotes] = useState('');
+  const [selectedParkId, setSelectedParkId] = useState<string>(editingTrip?.parkId ?? route.params?.parkId ?? 'yellowstone');
+  const [startDate, setStartDate] = useState(editingTrip?.startDate ?? '');
+  const [endDate, setEndDate] = useState(editingTrip?.endDate ?? '');
+  const [selectedActivities, setSelectedActivities] = useState<ActivityType[]>(editingTrip?.activities ?? []);
+  const [notes, setNotes] = useState(editingTrip?.notes ?? '');
   const [showParkPicker, setShowParkPicker] = useState(false);
-  const [wildlifeSightings, setWildlifeSightings] = useState<string[]>([]);
+  const [wildlifeSightings, setWildlifeSightings] = useState<string[]>(editingTrip?.wildlifeSightings ?? []);
   const [wildlifeInput, setWildlifeInput] = useState('');
-  const [selectedTrails, setSelectedTrails] = useState<TripTrailEntry[]>([]);
+  const [selectedTrails, setSelectedTrails] = useState<TripTrailEntry[]>(editingTrip?.trailsHiked ?? []);
   const [customTrailName, setCustomTrailName] = useState('');
   const [customTrailMiles, setCustomTrailMiles] = useState('');
   const [customTrailElevation, setCustomTrailElevation] = useState('');
+  const [editingTrailKey, setEditingTrailKey] = useState<string | null>(null);
+  const [editMiles, setEditMiles] = useState('');
+  const [editElevation, setEditElevation] = useState('');
 
   useFocusEffect(
     useCallback(() => {
       setHeroImage(randomHeroImage());
-      if (route.params?.parkId) {
-        setSelectedParkId(route.params.parkId);
-        setSelectedTrails([]);
-      }
-    }, [route.params?.parkId])
+    }, [])
   );
+
+  // The LogTrip tab stays mounted once visited, so useState's initial value
+  // above only ever applies to the very first time this screen is opened.
+  // Re-navigating here later — to edit a different trip, or to log a fresh
+  // trip after having just edited one — leaves stale fields from whatever
+  // was last shown unless we resync whenever the requested trip/park
+  // actually changes. Keyed on the param values (not focus) so it doesn't
+  // wipe an in-progress "create" form just from switching tabs and back.
+  const editingTripId: string | undefined = route.params?.tripId;
+  const requestedParkId: string | undefined = route.params?.parkId;
+  useEffect(() => {
+    const trip = editingTripId ? trips.find((t) => t.id === editingTripId) : undefined;
+    if (trip) {
+      setSelectedParkId(trip.parkId);
+      setStartDate(trip.startDate);
+      setEndDate(trip.endDate);
+      setSelectedActivities(trip.activities);
+      setNotes(trip.notes);
+      setWildlifeSightings(trip.wildlifeSightings ?? []);
+      setSelectedTrails(trip.trailsHiked ?? []);
+    } else {
+      setSelectedParkId(requestedParkId ?? 'yellowstone');
+      setStartDate('');
+      setEndDate('');
+      setSelectedActivities([]);
+      setNotes('');
+      setWildlifeSightings([]);
+      setSelectedTrails([]);
+    }
+    setWildlifeInput('');
+    setCustomTrailName('');
+    setCustomTrailMiles('');
+    setCustomTrailElevation('');
+    setEditingTrailKey(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editingTripId, requestedParkId]);
 
   const selectedPark = parks.find((p) => p.id === selectedParkId);
   const parkTrails = ALL_TRAILS.filter((t) => t.parkId === selectedParkId).sort(
@@ -202,12 +246,21 @@ export default function LogTripScreen() {
     );
   };
 
+  const trailKeyOf = (entry: { trailId?: string; name: string }) => entry.trailId ?? entry.name;
+
   const toggleTrail = (trailId: string, name: string, miles: number, elevationGainFt: number) => {
-    setSelectedTrails((prev) =>
-      prev.some((t) => t.trailId === trailId)
-        ? prev.filter((t) => t.trailId !== trailId)
-        : [...prev, { trailId, name, miles, elevationGainFt }]
-    );
+    const active = selectedTrails.some((t) => t.trailId === trailId);
+    if (active) {
+      setSelectedTrails((prev) => prev.filter((t) => t.trailId !== trailId));
+      if (editingTrailKey === trailId) setEditingTrailKey(null);
+      return;
+    }
+    // Pre-fill with the trail's full distance — most hikes cover the whole
+    // trail, but the fields stay open so a partial hike can be dialed down.
+    setSelectedTrails((prev) => [...prev, { trailId, name, miles, elevationGainFt }]);
+    setEditingTrailKey(trailId);
+    setEditMiles(convertMiles(miles, units).toFixed(1));
+    setEditElevation(Math.round(convertFeet(elevationGainFt, units)).toString());
   };
 
   const addCustomTrail = () => {
@@ -226,6 +279,23 @@ export default function LogTripScreen() {
     setSelectedTrails((prev) =>
       prev.filter((t) => (entry.trailId ? t.trailId !== entry.trailId : t.name !== entry.name))
     );
+    if (editingTrailKey === trailKeyOf(entry)) setEditingTrailKey(null);
+  };
+
+  const startEditTrail = (entry: TripTrailEntry) => {
+    setEditingTrailKey(trailKeyOf(entry));
+    setEditMiles(convertMiles(entry.miles, units).toFixed(1));
+    setEditElevation(Math.round(convertFeet(entry.elevationGainFt, units)).toString());
+  };
+
+  const saveEditTrail = (entry: TripTrailEntry) => {
+    const enteredDistance = parseFloat(editMiles);
+    const miles = Number.isNaN(enteredDistance) ? entry.miles : toMiles(enteredDistance, units);
+    const elevationGainFt = toFeet(parseFloat(editElevation) || 0, units);
+    setSelectedTrails((prev) =>
+      prev.map((t) => (trailKeyOf(t) === trailKeyOf(entry) ? { ...t, miles, elevationGainFt } : t))
+    );
+    setEditingTrailKey(null);
   };
 
   const handleSave = () => {
@@ -233,6 +303,31 @@ export default function LogTripScreen() {
       Alert.alert('Missing info', 'Please select a park and start date.');
       return;
     }
+
+    if (editingTrip) {
+      const milesHiked = selectedTrails.length > 0
+        ? selectedTrails.reduce((acc, t) => acc + t.miles, 0)
+        : editingTrip.milesHiked;
+      const elevationGainFt = selectedTrails.length > 0
+        ? selectedTrails.reduce((acc, t) => acc + t.elevationGainFt, 0)
+        : editingTrip.elevationGainFt;
+      updateTrip({
+        ...editingTrip,
+        parkId: selectedParkId,
+        startDate,
+        endDate: endDate || startDate,
+        activities: selectedActivities,
+        notes,
+        wildlifeSightings,
+        trailsHiked: selectedTrails,
+        milesHiked,
+        elevationGainFt,
+      });
+      Alert.alert('Trip updated!', 'Your changes have been saved.', [{ text: 'Nice!' }]);
+      navigation.goBack();
+      return;
+    }
+
     logTrip({
       parkId: selectedParkId,
       startDate,
@@ -254,6 +349,7 @@ export default function LogTripScreen() {
     setCustomTrailName('');
     setCustomTrailMiles('');
     setCustomTrailElevation('');
+    setEditingTrailKey(null);
   };
 
   return (
@@ -264,7 +360,7 @@ export default function LogTripScreen() {
           <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()} hitSlop={10}>
             <BackArrowIcon />
           </TouchableOpacity>
-          <Text style={styles.screenTitle}>Log a Trip</Text>
+          <Text style={styles.screenTitle}>{editingTrip ? 'Edit Trip' : 'Log a Trip'}</Text>
           <View style={styles.backBtn} />
         </View>
 
@@ -291,6 +387,7 @@ export default function LogTripScreen() {
                       setSelectedParkId(p.id);
                       setShowParkPicker(false);
                       setSelectedTrails([]);
+                      setEditingTrailKey(null);
                     }}
                   >
                     <Text style={[styles.dropdownText, selectedParkId === p.id && styles.dropdownTextActive]}>{p.name}</Text>
@@ -409,19 +506,63 @@ export default function LogTripScreen() {
               <Text style={styles.wildlifeAddBtnText}>+</Text>
             </TouchableOpacity>
           </View>
-          {selectedTrails.length > 0 && (
-            <View style={styles.wildlifeTagRow}>
-              {selectedTrails.map((entry) => (
-                <View key={entry.trailId ?? entry.name} style={styles.wildlifeTag}>
-                  <Text style={styles.wildlifeTagText}>{entry.name}</Text>
-                  <TouchableOpacity onPress={() => removeTrail(entry)} hitSlop={8}>
-                    <CloseIcon color={colors.orange} />
-                  </TouchableOpacity>
-                </View>
-              ))}
-            </View>
-          )}
         </View>
+
+        {/* Selected trails — tap to log a partial distance */}
+        {selectedTrails.length > 0 && (
+          <View style={styles.field}>
+            <Text style={styles.label}>Your Trails</Text>
+            <View style={styles.trailSummaryList}>
+              {selectedTrails.map((entry) => {
+                const editing = editingTrailKey === trailKeyOf(entry);
+                return (
+                  <View key={trailKeyOf(entry)} style={styles.trailSummaryCard}>
+                    {editing ? (
+                      <>
+                        <Text style={styles.trailSummaryName}>{entry.name}</Text>
+                        <View style={styles.customTrailRow}>
+                          <TextInput
+                            style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                            placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
+                            placeholderTextColor={colors.textMuted}
+                            keyboardType="numeric"
+                            value={editMiles}
+                            onChangeText={setEditMiles}
+                            autoFocus
+                          />
+                          <TextInput
+                            style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                            placeholder={`Elev. ${elevationLabel(units)}`}
+                            placeholderTextColor={colors.textMuted}
+                            keyboardType="numeric"
+                            value={editElevation}
+                            onChangeText={setEditElevation}
+                          />
+                          <TouchableOpacity style={styles.wildlifeAddBtn} onPress={() => saveEditTrail(entry)} activeOpacity={0.8}>
+                            <CheckIcon color={colors.textInverse} />
+                          </TouchableOpacity>
+                        </View>
+                      </>
+                    ) : (
+                      <TouchableOpacity style={styles.trailSummaryRow} onPress={() => startEditTrail(entry)} activeOpacity={0.7}>
+                        <View style={styles.trailSummaryText}>
+                          <Text style={styles.trailSummaryName}>{entry.name}</Text>
+                          <Text style={styles.trailSummaryMeta}>
+                            {convertMiles(entry.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(entry.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
+                          </Text>
+                        </View>
+                        <Text style={styles.trailSummaryEdit}>Edit</Text>
+                        <TouchableOpacity onPress={() => removeTrail(entry)} hitSlop={8}>
+                          <CloseIcon color={colors.orange} />
+                        </TouchableOpacity>
+                      </TouchableOpacity>
+                    )}
+                  </View>
+                );
+              })}
+            </View>
+          </View>
+        )}
 
         {/* Wildlife */}
         <View style={styles.field}>
@@ -501,7 +642,7 @@ export default function LogTripScreen() {
         </View>
 
         <PrimaryButton
-          label="SAVE TRIP"
+          label={editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
           icon={<TreeIcon color={colors.textInverse} />}
           onPress={handleSave}
           style={styles.saveBtn}
@@ -559,6 +700,14 @@ const styles = StyleSheet.create({
   customTrailRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginTop: spacing.sm },
   customTrailNameInput: { width: '100%' },
   customTrailNumberInput: { flex: 1, minWidth: 0 },
+
+  trailSummaryList: { gap: spacing.sm },
+  trailSummaryCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.md, ...shadows.sm },
+  trailSummaryRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  trailSummaryText: { flex: 1 },
+  trailSummaryName: { ...typography.labelSemiBold, color: colors.textPrimary },
+  trailSummaryMeta: { ...typography.caption, color: colors.textSecondary, marginTop: 2 },
+  trailSummaryEdit: { ...typography.labelSmall, color: colors.sage },
 
   animalChipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginBottom: spacing.md },
   animalChip: { backgroundColor: colors.surface, borderRadius: radius.full, borderWidth: 1.5, borderColor: colors.border, paddingHorizontal: spacing.md, paddingVertical: spacing.xs },

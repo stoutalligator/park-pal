@@ -9,17 +9,33 @@ import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkById } from '@/data/parks';
 import { getParkScene } from '@/data/parkImages';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
+import { parseLocalDate } from '@/utils/dates';
 
 type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
 
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  return parseLocalDate(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
 function BackArrowIcon() {
   return (
     <Svg width={16} height={16} viewBox="0 0 16 16">
       <Path d="M10 2 4 8l6 6" fill="none" stroke={colors.textPrimary} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function EditIcon() {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 24 24">
+      <Path
+        d="M4 20h4l11-11a2.12 2.12 0 0 0-3-3L5 17v3Z"
+        fill="none"
+        stroke={colors.textPrimary}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </Svg>
   );
 }
@@ -84,9 +100,17 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <TouchableOpacity style={[styles.backBtn, { top: insets.top + 16 }]} onPress={() => navigation.goBack()}>
             <BackArrowIcon />
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.deleteBtn, { top: insets.top + 16 }]} onPress={confirmDelete}>
-            <TrashIcon />
-          </TouchableOpacity>
+          <View style={[styles.heroActions, { top: insets.top + 16 }]}>
+            <TouchableOpacity
+              style={styles.heroActionBtn}
+              onPress={() => (navigation as any).navigate('LogTrip', { tripId: trip.id })}
+            >
+              <EditIcon />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.heroActionBtn} onPress={confirmDelete}>
+              <TrashIcon />
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.content}>
@@ -179,7 +203,8 @@ const styles = StyleSheet.create({
   hero: { height: 320, position: 'relative', backgroundColor: colors.surfaceWarm },
   heroImage: { width: '100%', height: '100%' },
   backBtn: { position: 'absolute', top: 16, left: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
-  deleteBtn: { position: 'absolute', top: 16, right: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
+  heroActions: { position: 'absolute', top: 16, right: 16, flexDirection: 'row', gap: spacing.sm },
+  heroActionBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
   content: {
     padding: spacing.xl,
     gap: spacing.xl,

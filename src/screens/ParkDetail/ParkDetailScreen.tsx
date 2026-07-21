@@ -74,6 +74,22 @@ function BackArrowIcon() {
   );
 }
 
+function CheckIcon({ color }: { color: string }) {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 12 12">
+      <Polyline points="2,6 5,9 10,3" fill="none" stroke={color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function BookmarkIcon({ color }: { color: string }) {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 14 14">
+      <Path d="M3 1.5h8a.5.5 0 0 1 .5.5v11l-4.5-2.6L2.5 13V2a.5.5 0 0 1 .5-.5Z" fill="none" stroke={color} strokeWidth={1.6} strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
 function TreeIcon({ size = 20 }: { size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 20 20">
@@ -104,13 +120,27 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
           <TouchableOpacity style={[styles.backBtn, { top: insets.top + 16 }]} onPress={() => navigation.goBack()}>
             <BackArrowIcon />
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.heartBtn, { top: insets.top + 16 }]} onPress={() => toggleFavorite(park.id)}>
-            <Image
-              source={require('@/assets/icons/icon-favorites.png')}
-              style={[styles.heartIcon, !park.isFavorite && styles.heartIconInactive]}
-              resizeMode="contain"
-            />
-          </TouchableOpacity>
+          <View style={[styles.heroActions, { top: insets.top + 16 }]}>
+            <TouchableOpacity
+              style={[styles.heroActionBtn, park.status === 'visited' && styles.heroActionBtnVisitedActive]}
+              onPress={() => updateParkStatus(park.id, park.status === 'visited' ? 'notVisited' : 'visited')}
+            >
+              <CheckIcon color={park.status === 'visited' ? colors.textInverse : colors.textSecondary} />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.heroActionBtn, park.status === 'bucketList' && styles.heroActionBtnBucketActive]}
+              onPress={() => updateParkStatus(park.id, park.status === 'bucketList' ? 'notVisited' : 'bucketList')}
+            >
+              <BookmarkIcon color={park.status === 'bucketList' ? colors.textInverse : colors.textSecondary} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.heroActionBtn} onPress={() => toggleFavorite(park.id)}>
+              <Image
+                source={require('@/assets/icons/icon-favorites.png')}
+                style={[styles.heartIcon, !park.isFavorite && styles.heartIconInactive]}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* Info */}
@@ -142,26 +172,6 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
               <Text style={styles.factLabel}>{park.acres.toLocaleString()} Acres</Text>
             </View>
           </View>
-
-          {/* Status actions */}
-          {park.status === 'visited' ? (
-            <View style={styles.actionRow}>
-              <TouchableOpacity style={[styles.actionChip, styles.actionChipAlt]} onPress={() => updateParkStatus(park.id, 'notVisited')}>
-                <Text style={[styles.actionChipText, styles.actionChipAltText]}>Mark Not Visited</Text>
-              </TouchableOpacity>
-            </View>
-          ) : (
-            <View style={styles.actionRow}>
-              <TouchableOpacity style={styles.actionChip} onPress={() => updateParkStatus(park.id, 'visited')}>
-                <Text style={styles.actionChipText}>Mark Visited</Text>
-              </TouchableOpacity>
-              {park.status !== 'bucketList' && (
-                <TouchableOpacity style={[styles.actionChip, styles.actionChipAlt]} onPress={() => updateParkStatus(park.id, 'bucketList')}>
-                  <Text style={[styles.actionChipText, styles.actionChipAltText]}>Bucket List</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-          )}
 
           {/* Trails & Animal Compendium summary cards */}
           {(parkTrails.length > 0 || parkAnimals.length > 0) && (
@@ -225,7 +235,10 @@ const styles = StyleSheet.create({
   hero: { height: 320, position: 'relative', backgroundColor: colors.surfaceWarm },
   heroImage: { width: '100%', height: '100%' },
   backBtn: { position: 'absolute', top: 16, left: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
-  heartBtn: { position: 'absolute', top: 16, right: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
+  heroActions: { position: 'absolute', top: 16, right: 16, flexDirection: 'row', gap: spacing.sm },
+  heroActionBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
+  heroActionBtnVisitedActive: { backgroundColor: colors.visited },
+  heroActionBtnBucketActive: { backgroundColor: colors.bucketList },
   heartIcon: { width: 18, height: 18 },
   heartIconInactive: { opacity: 0.3 },
 
@@ -249,12 +262,6 @@ const styles = StyleSheet.create({
   factDivider: { width: 1, height: 34, backgroundColor: colors.divider },
   factIcon: { width: 26, height: 26 },
   factLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
-
-  actionRow: { flexDirection: 'row', gap: spacing.md },
-  actionChip: { paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, backgroundColor: colors.primary, borderRadius: radius.full },
-  actionChipText: { ...typography.labelSmall, color: colors.textInverse },
-  actionChipAlt: { backgroundColor: colors.surfaceWarm, borderWidth: 1.5, borderColor: colors.orange },
-  actionChipAltText: { color: colors.orange },
 
   section: { gap: spacing.sm },
   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between' },

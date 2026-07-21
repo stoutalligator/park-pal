@@ -20,12 +20,14 @@ const RARITY_COLOR: Record<AnimalRarity, string> = {
 const RARITY_FILTERS: ('All' | AnimalRarity)[] = ['All', 'Common', 'Uncommon', 'Rare'];
 const RARITY_RANK: Record<AnimalRarity, number> = { Common: 0, Uncommon: 1, Rare: 2 };
 
-function CheckBadge() {
+function CheckBadge({ completed }: { completed: boolean }) {
   return (
-    <View style={styles.checkBadge}>
-      <Svg width={10} height={10} viewBox="0 0 12 12">
-        <Polyline points="2,6 5,9 10,3" fill="none" stroke={colors.textInverse} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-      </Svg>
+    <View style={[styles.checkBadge, completed && styles.checkBadgeCompleted]}>
+      {completed && (
+        <Svg width={10} height={10} viewBox="0 0 12 12">
+          <Polyline points="2,6 5,9 10,3" fill="none" stroke={colors.textInverse} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+        </Svg>
+      )}
     </View>
   );
 }
@@ -34,8 +36,8 @@ function AnimalListCard({ animal, spotted }: { animal: Animal; spotted: boolean 
   return (
     <View style={styles.itemCard}>
       <View style={styles.itemTitleRow}>
-        <Text style={styles.itemName}>{animal.name}</Text>
-        {spotted && <CheckBadge />}
+        <Text style={[styles.itemName, styles.itemNameFlex]}>{animal.name}</Text>
+        <CheckBadge completed={spotted} />
       </View>
       <Text style={styles.itemDescription}>{animal.description}</Text>
       <View style={styles.itemMetaRow}>
@@ -120,9 +122,11 @@ const styles = StyleSheet.create({
   itemCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.md, marginBottom: spacing.md, gap: 4, ...shadows.sm },
   itemTitleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   itemName: { ...typography.labelBold, color: colors.textPrimary },
+  itemNameFlex: { flex: 1 },
   itemDescription: { ...typography.bodySmall, color: colors.textSecondary },
   itemMetaRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md, marginTop: 2 },
   pill: { paddingHorizontal: spacing.sm, paddingVertical: 2, borderRadius: radius.full },
   pillText: { ...typography.labelSmall, fontSize: 10, color: colors.textInverse },
-  checkBadge: { width: 18, height: 18, borderRadius: 9, backgroundColor: colors.primary, borderWidth: 2, borderColor: colors.background, alignItems: 'center', justifyContent: 'center' },
+  checkBadge: { width: 22, height: 22, borderRadius: 11, backgroundColor: colors.surfaceWarm, borderWidth: 2, borderColor: colors.border, alignItems: 'center', justifyContent: 'center' },
+  checkBadgeCompleted: { backgroundColor: colors.primary, borderColor: colors.primary },
 });
