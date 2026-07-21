@@ -201,11 +201,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     overflow: 'hidden',
   },
-  // The source art is a circular badge inset on a white square canvas, so
-  // the image is deliberately oversized and clipped by the ring's
-  // overflow:hidden — this crops away that built-in white margin instead
-  // of just scaling it down and showing it.
-  stampImage: { width: '132%', height: '132%' },
+  // The source art is a circular badge inset on a white square canvas — the
+  // badge itself only spans ~66% of the canvas width (measured directly off
+  // the PNGs) — so the image is oversized ~1/0.66 and clipped by the ring's
+  // overflow:hidden to crop that built-in white margin away entirely.
+  stampImage: { width: '160%', height: '160%' },
   stampDate: { ...typography.caption, fontSize: 10, letterSpacing: 0.5, marginTop: 4 },
   stampName: { ...typography.labelSmall, color: colors.textPrimary, textAlign: 'center' },
 
