@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 import Svg, { Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
@@ -121,6 +122,8 @@ function CheckIcon({ color, size = 14 }: { color: string; size?: number }) {
   );
 }
 
+const MAX_PHOTOS = 3;
+
 const DIFFICULTY_RANK: Record<TrailDifficulty, number> = { Easy: 0, Moderate: 1, Hard: 2 };
 const RARITY_RANK: Record<AnimalRarity, number> = { Common: 0, Uncommon: 1, Rare: 2 };
 
@@ -161,6 +164,7 @@ export default function LogTripScreen() {
   const [wildlifeSightings, setWildlifeSightings] = useState<string[]>(editingTrip?.wildlifeSightings ?? []);
   const [wildlifeInput, setWildlifeInput] = useState('');
   const [selectedTrails, setSelectedTrails] = useState<TripTrailEntry[]>(editingTrip?.trailsHiked ?? []);
+  const [photos, setPhotos] = useState<string[]>(editingTrip?.photos ?? []);
   const [customTrailName, setCustomTrailName] = useState('');
   const [customTrailMiles, setCustomTrailMiles] = useState('');
   const [customTrailElevation, setCustomTrailElevation] = useState('');
@@ -193,6 +197,7 @@ export default function LogTripScreen() {
       setNotes(trip.notes);
       setWildlifeSightings(trip.wildlifeSightings ?? []);
       setSelectedTrails(trip.trailsHiked ?? []);
+      setPhotos(trip.photos ?? []);
     } else {
       setSelectedParkId(requestedParkId ?? 'yellowstone');
       setStartDate('');
@@ -201,6 +206,7 @@ export default function LogTripScreen() {
       setNotes('');
       setWildlifeSightings([]);
       setSelectedTrails([]);
+      setPhotos([]);
     }
     setWildlifeInput('');
     setCustomTrailName('');
@@ -244,6 +250,24 @@ export default function LogTripScreen() {
         ? prev.filter((w) => w.toLowerCase() !== name.toLowerCase())
         : [...prev, name]
     );
+  };
+
+  const pickPhoto = async () => {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      Alert.alert('Photo access needed', 'Allow photo library access to add trip photos.');
+      return;
+    }
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      quality: 0.7,
+    });
+    if (result.canceled) return;
+    setPhotos((prev) => [...prev, result.assets[0].uri].slice(0, MAX_PHOTOS));
+  };
+
+  const removePhoto = (uri: string) => {
+    setPhotos((prev) => prev.filter((p) => p !== uri));
   };
 
   const trailKeyOf = (entry: { trailId?: string; name: string }) => entry.trailId ?? entry.name;
@@ -318,6 +342,7 @@ export default function LogTripScreen() {
         endDate: endDate || startDate,
         activities: selectedActivities,
         notes,
+        photos,
         wildlifeSightings,
         trailsHiked: selectedTrails,
         milesHiked,
@@ -334,7 +359,7 @@ export default function LogTripScreen() {
       endDate: endDate || startDate,
       activities: selectedActivities,
       notes,
-      photos: [],
+      photos,
       wildlifeSightings,
       trailsHiked: selectedTrails,
     });
@@ -346,6 +371,7 @@ export default function LogTripScreen() {
     setWildlifeSightings([]);
     setWildlifeInput('');
     setSelectedTrails([]);
+    setPhotos([]);
     setCustomTrailName('');
     setCustomTrailMiles('');
     setCustomTrailElevation('');
@@ -629,15 +655,23 @@ export default function LogTripScreen() {
           </View>
         </View>
 
-        {/* Add Photos placeholder */}
+        {/* Add Photos */}
         <View style={styles.field}>
           <Text style={styles.label}>Add Photos</Text>
           <View style={styles.photoRow}>
-            <Image source={require('@/assets/scenes/scene-mountain-lake.png')} style={styles.photoThumb} resizeMode="cover" />
-            <Image source={require('@/assets/scenes/scene-forest.png')} style={styles.photoThumb} resizeMode="cover" />
-            <TouchableOpacity style={[styles.photoThumb, styles.photoAdd]}>
-              <Text style={styles.photoAddIcon}>+</Text>
-            </TouchableOpacity>
+            {photos.map((uri) => (
+              <TouchableOpacity key={uri} style={styles.photoThumbWrap} onPress={() => removePhoto(uri)} activeOpacity={0.8}>
+                <Image source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
+                <View style={styles.photoRemoveBadge}>
+                  <CloseIcon color={colors.textInverse} />
+                </View>
+              </TouchableOpacity>
+            ))}
+            {photos.length < MAX_PHOTOS && (
+              <TouchableOpacity style={[styles.photoThumb, styles.photoAdd]} onPress={pickPhoto} activeOpacity={0.8}>
+                <Text style={styles.photoAddIcon}>+</Text>
+              </TouchableOpacity>
+            )}
           </View>
         </View>
 
@@ -736,9 +770,22 @@ const styles = StyleSheet.create({
   charCount: { ...typography.caption, color: colors.textMuted, textAlign: 'right', marginTop: spacing.xs },
 
   photoRow: { flexDirection: 'row', gap: spacing.md },
+  photoThumbWrap: { width: 72, height: 72 },
   photoThumb: { width: 72, height: 72, borderRadius: radius.md, backgroundColor: colors.surfaceWarm },
   photoAdd: { alignItems: 'center', justifyContent: 'center', borderWidth: 2, borderColor: colors.border, borderStyle: 'dashed' },
   photoAddIcon: { fontSize: 24, color: colors.textMuted },
+  photoRemoveBadge: {
+    position: 'absolute',
+    top: -6,
+    right: -6,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: colors.orange,
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...shadows.sm,
+  },
 
   saveBtn: { marginHorizontal: spacing.xl },
 });

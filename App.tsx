@@ -7,6 +7,7 @@ import { useFonts, FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
 import { AppProvider } from '@/context/AppContext';
 import RootNavigator from '@/navigation/RootNavigator';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import { colors, radius, shadows } from '@/theme';
 
 export default function App() {
@@ -28,11 +29,13 @@ export default function App() {
   const app = (
     <GestureHandlerRootView style={styles.flex}>
       <SafeAreaProvider>
-        <AppProvider>
-          <NavigationContainer>
-            <RootNavigator />
-          </NavigationContainer>
-        </AppProvider>
+        <ErrorBoundary>
+          <AppProvider>
+            <NavigationContainer>
+              <RootNavigator />
+            </NavigationContainer>
+          </AppProvider>
+        </ErrorBoundary>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );

@@ -10,9 +10,11 @@
       "backgroundColor": "#F5F0E8"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.parkpal.app"
     },
     "android": {
+      "package": "com.parkpal.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -26,7 +28,13 @@
     },
     "plugins": [
       "expo-font",
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Park Pal uses your photos to add memories to your trip log."
+        }
+      ]
     ]
   }
 }

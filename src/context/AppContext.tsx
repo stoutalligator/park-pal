@@ -30,6 +30,61 @@ interface AnimalSightingRow {
   name: string;
 }
 
+const TRIP_PHOTOS_BUCKET = 'trip-photos';
+
+function storagePathFromPublicUrl(url: string): string | null {
+  const marker = `/storage/v1/object/public/${TRIP_PHOTOS_BUCKET}/`;
+  const index = url.indexOf(marker);
+  return index === -1 ? null : url.slice(index + marker.length);
+}
+
+function publicUrlFromStoragePath(path: string): string {
+  return supabase.storage.from(TRIP_PHOTOS_BUCKET).getPublicUrl(path).data.publicUrl;
+}
+
+// Reconciles a trip's desired photo list (a mix of already-uploaded public
+// URLs and freshly-picked local file URIs, capped at 3 by the schema) against
+// what's stored. Local URIs get uploaded; public URLs are re-linked without
+// re-uploading; anything dropped from the list is deleted from Storage too.
+async function syncTripPhotos(tripId: string, userId: string, photos: string[]): Promise<string[]> {
+  const { data: existingRows } = await supabase
+    .from('trip_photos')
+    .select('storage_path')
+    .eq('trip_id', tripId);
+
+  const keptPaths = new Set<string>();
+  const finalPaths: string[] = [];
+  for (const photo of photos.slice(0, 3)) {
+    const existingPath = storagePathFromPublicUrl(photo);
+    if (existingPath) {
+      finalPaths.push(existingPath);
+      keptPaths.add(existingPath);
+      continue;
+    }
+    const path = `${userId}/${tripId}/${Date.now()}-${Math.random().toString(36).slice(2)}.jpg`;
+    const response = await fetch(photo);
+    const arrayBuffer = await response.arrayBuffer();
+    await supabase.storage.from(TRIP_PHOTOS_BUCKET).upload(path, arrayBuffer, { contentType: 'image/jpeg' });
+    finalPaths.push(path);
+  }
+
+  const orphanedPaths = (existingRows ?? [])
+    .map((row) => row.storage_path)
+    .filter((path) => !keptPaths.has(path));
+  if (orphanedPaths.length) {
+    await supabase.storage.from(TRIP_PHOTOS_BUCKET).remove(orphanedPaths);
+  }
+
+  await supabase.from('trip_photos').delete().eq('trip_id', tripId);
+  if (finalPaths.length) {
+    await supabase
+      .from('trip_photos')
+      .insert(finalPaths.map((storage_path, slot) => ({ trip_id: tripId, storage_path, slot })));
+  }
+
+  return finalPaths.map(publicUrlFromStoragePath);
+}
+
 interface AppContextValue {
   parks: Park[];
   trips: Trip[];
@@ -145,9 +200,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .select('*')
         .eq('user_id', session.user.id)
         .order('start_date', { ascending: false }),
-    ]).then(([trailRes, animalRes, tripRes]) => {
+      supabase
+        .from('trip_photos')
+        .select('trip_id, storage_path, slot')
+        .eq('user_id', session.user.id),
+    ]).then(([trailRes, animalRes, tripRes, photoRes]) => {
       const trailRows: TrailCompletionRow[] = trailRes.data ?? [];
       const animalRows: AnimalSightingRow[] = animalRes.data ?? [];
+      const photoRows = photoRes.data ?? [];
       setTrailCompletions(trailRows);
       setAnimalSightings(animalRows);
       if (!tripRes.data) return;
@@ -159,7 +219,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           endDate: row.end_date,
           activities: row.activities as ActivityType[],
           notes: row.notes,
-          photos: [],
+          photos: photoRows
+            .filter((p) => p.trip_id === row.id)
+            .sort((a, b) => a.slot - b.slot)
+            .map((p) => publicUrlFromStoragePath(p.storage_path)),
           weather: row.weather ?? undefined,
           favoriteTrail: row.favorite_trail ?? undefined,
           wildlifeSightings: animalRows.filter((a) => a.trip_id === row.id).map((a) => a.name),
@@ -282,7 +345,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       if (!error && data) tripId = data.id;
     }
 
-    const newTrip: Trip = { ...trip, milesHiked, elevationGainFt, id: tripId };
+    let photos = trip.photos;
+    if (session && photos.length) {
+      photos = await syncTripPhotos(tripId, session.user.id, photos);
+    }
+
+    const newTrip: Trip = { ...trip, photos, milesHiked, elevationGainFt, id: tripId };
     setTrips((prev) => [newTrip, ...prev]);
     setParks((prev) =>
       prev.map((p) =>
@@ -319,9 +387,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }, [parks, persistParkStatus, session]);
 
-  const updateTrip = useCallback((trip: Trip) => {
-    setTrips((prev) => prev.map((t) => (t.id === trip.id ? trip : t)));
+  const updateTrip = useCallback(async (trip: Trip) => {
+    let photos = trip.photos;
     if (session) {
+      photos = await syncTripPhotos(trip.id, session.user.id, trip.photos);
       supabase
         .from('trips')
         .update({
@@ -340,11 +409,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .eq('id', trip.id)
         .then();
     }
+    const updatedTrip = { ...trip, photos };
+    setTrips((prev) => prev.map((t) => (t.id === trip.id ? updatedTrip : t)));
   }, [session]);
 
   const deleteTrip = useCallback((tripId: string) => {
     setTrips((prev) => prev.filter((t) => t.id !== tripId));
     if (session) {
+      // trip_photos rows cascade with the trip, but the underlying Storage
+      // objects don't — remove those explicitly before the row disappears.
+      supabase
+        .from('trip_photos')
+        .select('storage_path')
+        .eq('trip_id', tripId)
+        .then(({ data }) => {
+          if (data?.length) {
+            supabase.storage.from(TRIP_PHOTOS_BUCKET).remove(data.map((row) => row.storage_path)).then();
+          }
+        });
       supabase.from('trips').delete().eq('id', tripId).then();
       // Cascades server-side too; mirror locally so counts/checkmarks update immediately.
       setTrailCompletions((prev) => prev.filter((r) => r.trip_id !== tripId));
