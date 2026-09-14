@@ -167,7 +167,7 @@ export default function ProfileScreen() {
               ))}
             </View>
           ) : (
-            <Text style={styles.emptyText}>Badges coming soon</Text>
+            <Text style={styles.emptyText}>No badges earned yet, get exploring!</Text>
           )}
         </View>
 

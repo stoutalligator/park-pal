@@ -18,7 +18,6 @@ export interface Park {
   description: string;
   establishedYear: number;
   acres: number;
-  image: string;
   status: ParkStatus;
   isFavorite: boolean;
   visitedDates?: string[];
