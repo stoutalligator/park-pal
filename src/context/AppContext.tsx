@@ -7,6 +7,7 @@ import { BADGE_PROGRESS } from '@/data/badgeRules';
 import { ALL_ANIMALS } from '@/data/animals';
 import { supabase } from '@/lib/supabase';
 import { showToast } from '@/components/Toast';
+import { celebrateBadges } from '@/components/BadgeEarnedModal';
 import { captureException } from '@/lib/sentry';
 
 // Logs the failure and surfaces a toast so a failed save is never silent —
@@ -420,6 +421,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const newlyEarned = badges.filter((b) => b.earned && !earnedIdsRef.current.has(b.id));
     if (newlyEarned.length === 0) return;
     const earnedAt = new Date().toISOString();
+    // Only pop the celebration once the initial server hydration (badgesLoaded)
+    // has actually completed — otherwise the async race between trips/parks
+    // loading and user_badges loading would make every already-earned badge
+    // look "newly earned" on a plain app open.
+    if (badgesLoaded) celebrateBadges(newlyEarned);
     newlyEarned.forEach((b) => earnedIdsRef.current.add(b.id));
     supabase
       .from('user_badges')
@@ -437,7 +443,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       });
       return next;
     });
-  }, [badges, session]);
+  }, [badges, session, badgesLoaded]);
 
   // Lets a user hand-check a trail that was part of a custom/combined route
   // they logged rather than picked from the catalog. Recorded as a

@@ -697,7 +697,7 @@ export default function LogTripScreen() {
               style={[styles.wildlifeInput, styles.customTrailNumberInput]}
               placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
               placeholderTextColor={colors.textMuted}
-              keyboardType="numeric"
+              keyboardType="decimal-pad"
               value={customTrailMiles}
               onChangeText={setCustomTrailMiles}
             />
@@ -705,7 +705,7 @@ export default function LogTripScreen() {
               style={[styles.wildlifeInput, styles.customTrailNumberInput]}
               placeholder={`Elev. ${elevationLabel(units)}`}
               placeholderTextColor={colors.textMuted}
-              keyboardType="numeric"
+              keyboardType="decimal-pad"
               value={customTrailElevation}
               onChangeText={setCustomTrailElevation}
             />
@@ -731,7 +731,7 @@ export default function LogTripScreen() {
                             style={[styles.wildlifeInput, styles.customTrailNumberInput]}
                             placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
                             placeholderTextColor={colors.textMuted}
-                            keyboardType="numeric"
+                            keyboardType="decimal-pad"
                             value={editMiles}
                             onChangeText={setEditMiles}
                             autoFocus
@@ -740,7 +740,7 @@ export default function LogTripScreen() {
                             style={[styles.wildlifeInput, styles.customTrailNumberInput]}
                             placeholder={`Elev. ${elevationLabel(units)}`}
                             placeholderTextColor={colors.textMuted}
-                            keyboardType="numeric"
+                            keyboardType="decimal-pad"
                             value={editElevation}
                             onChangeText={setEditElevation}
                           />

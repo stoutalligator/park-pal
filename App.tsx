@@ -10,6 +10,8 @@ import { AppProvider } from '@/context/AppContext';
 import RootNavigator from '@/navigation/RootNavigator';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ToastHost } from '@/components/Toast';
+import { BadgeEarnedModalHost } from '@/components/BadgeEarnedModal';
+import { navigationRef } from '@/navigation/navigationRef';
 import { colors, radius, shadows } from '@/theme';
 import { initSentry } from '@/lib/sentry';
 
@@ -48,10 +50,11 @@ export default function App() {
       <SafeAreaProvider>
         <ErrorBoundary>
           <AppProvider>
-            <NavigationContainer>
+            <NavigationContainer ref={navigationRef}>
               <RootNavigator />
             </NavigationContainer>
             <ToastHost />
+            <BadgeEarnedModalHost />
           </AppProvider>
         </ErrorBoundary>
       </SafeAreaProvider>
