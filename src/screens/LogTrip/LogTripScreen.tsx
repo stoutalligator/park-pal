@@ -629,9 +629,14 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
           </View>
         )}
 
-        {mode !== 'plan' && (
-          <>
-            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Trails</Text>
+        {/* Trails can be planned ahead of time too — picking them now doesn't
+            affect stats/badges, since those only ever look at logged trips,
+            but it lets someone map out which trails they want each day
+            before the trip happens. */}
+        <>
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>
+              {mode === 'plan' ? "Trails you'd like to hike" : 'Trails'}
+            </Text>
             {parkTrails.length > 0 && (
               <View style={styles.trailList}>
                 {parkTrails.map((trail) => {
@@ -737,7 +742,10 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
                 </View>
               </>
             )}
+        </>
 
+        {mode !== 'plan' && (
+          <>
             <Text style={[styles.sublabel, styles.sublabelSpaced]}>Wildlife Spotted</Text>
             {parkAnimals.length > 0 && (
               <View style={styles.animalChipRow}>
