@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, TripType, TripTrailEntry, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
+import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
 import { ALL_ANIMALS } from '@/data/animals';
+import { addDays } from '@/utils/dates';
 import { supabase } from '@/lib/supabase';
 import { showToast } from '@/components/Toast';
 import { celebrateBadges } from '@/components/BadgeEarnedModal';
@@ -33,6 +34,7 @@ interface TrailCompletionRow {
   name: string;
   miles: number;
   elevation_gain_ft: number;
+  day_number?: number | null;
 }
 
 interface AnimalSightingRow {
@@ -40,6 +42,20 @@ interface AnimalSightingRow {
   trip_id: string | null;
   park_id: string;
   name: string;
+  day_number?: number | null;
+}
+
+interface DayActivityRow {
+  trip_id: string;
+  day_number: number;
+  activity: string;
+  viewpoint: string | null;
+}
+
+interface DayWeatherRow {
+  trip_id: string;
+  day_number: number;
+  weather: string;
 }
 
 const TRIP_PHOTOS_BUCKET = 'trip-photos';
@@ -126,27 +142,69 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
   return finalPaths.map((p) => urlMap[p]).filter((u): u is string => !!u);
 }
 
-// Shared row-building for user_trail_completions / user_animal_sightings
-// inserts — used by both logTrip and completeTrip so the two stay in sync.
-function buildTrailRows(trailsHiked: TripTrailEntry[], tripId: string, parkId: string): TrailCompletionRow[] {
-  return trailsHiked.map((t) => ({
-    trail_id: t.trailId ?? null,
-    trip_id: tripId,
-    park_id: parkId,
-    name: t.name,
-    miles: t.miles,
-    elevation_gain_ft: t.elevationGainFt,
-  }));
+// Shared row-building for user_trail_completions / user_animal_sightings /
+// trip_day_activities / trip_day_weather inserts — used by both logTrip and
+// completeTrip so the two stay in sync. Each takes the trip's full per-day
+// breakdown and flattens it, tagging every row with the day it belongs to.
+function buildTrailRows(days: TripDayEntry[], tripId: string, parkId: string): TrailCompletionRow[] {
+  return days.flatMap((day) =>
+    day.trailsHiked.map((t) => ({
+      trail_id: t.trailId ?? null,
+      trip_id: tripId,
+      park_id: parkId,
+      name: t.name,
+      miles: t.miles,
+      elevation_gain_ft: t.elevationGainFt,
+      day_number: day.dayNumber,
+    }))
+  );
 }
 
-function buildAnimalRows(wildlifeSightings: string[], tripId: string, parkId: string): AnimalSightingRow[] {
+function buildAnimalRows(days: TripDayEntry[], tripId: string, parkId: string): AnimalSightingRow[] {
   const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === parkId);
-  return wildlifeSightings.map((name) => ({
-    animal_id: parkAnimals.find((a) => a.name.toLowerCase() === name.toLowerCase())?.id ?? null,
-    trip_id: tripId,
-    park_id: parkId,
-    name,
-  }));
+  return days.flatMap((day) =>
+    day.wildlifeSightings.map((name) => ({
+      animal_id: parkAnimals.find((a) => a.name.toLowerCase() === name.toLowerCase())?.id ?? null,
+      trip_id: tripId,
+      park_id: parkId,
+      name,
+      day_number: day.dayNumber,
+    }))
+  );
+}
+
+function buildDayActivityRows(days: TripDayEntry[], tripId: string): DayActivityRow[] {
+  return days.flatMap((day) =>
+    day.activities.map((a) => ({
+      trip_id: tripId,
+      day_number: day.dayNumber,
+      activity: a.activity,
+      viewpoint: a.viewpoint?.trim() || null,
+    }))
+  );
+}
+
+function buildDayWeatherRows(days: TripDayEntry[], tripId: string): DayWeatherRow[] {
+  return days
+    .filter((day) => day.weather)
+    .map((day) => ({
+      trip_id: tripId,
+      day_number: day.dayNumber,
+      weather: day.weather as string,
+    }));
+}
+
+// The flat `activities`/`wildlifeSightings`/`trailsHiked`/miles/elevation
+// fields on Trip stay populated as aggregates across all days — this is
+// what keeps badgeRules.ts and stats working unchanged even though the
+// source of truth for a trip saved through the day-by-day flow is `days`.
+function aggregateFromDays(days: TripDayEntry[]) {
+  const activities = Array.from(new Set(days.flatMap((d) => d.activities.map((a) => a.activity))));
+  const wildlifeSightings = days.flatMap((d) => d.wildlifeSightings);
+  const trailsHiked = days.flatMap((d) => d.trailsHiked);
+  const milesHiked = trailsHiked.reduce((acc, t) => acc + t.miles, 0);
+  const elevationGainFt = trailsHiked.reduce((acc, t) => acc + t.elevationGainFt, 0);
+  return { activities, wildlifeSightings, trailsHiked, milesHiked, elevationGainFt };
 }
 
 interface AppContextValue {
@@ -319,11 +377,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     Promise.all([
       supabase
         .from('user_trail_completions')
-        .select('trail_id, trip_id, park_id, name, miles, elevation_gain_ft')
+        .select('trail_id, trip_id, park_id, name, miles, elevation_gain_ft, day_number')
         .eq('user_id', session.user.id),
       supabase
         .from('user_animal_sightings')
-        .select('animal_id, trip_id, park_id, name')
+        .select('animal_id, trip_id, park_id, name, day_number')
+        .eq('user_id', session.user.id),
+      supabase
+        .from('trip_day_activities')
+        .select('trip_id, day_number, activity, viewpoint')
+        .eq('user_id', session.user.id),
+      supabase
+        .from('trip_day_weather')
+        .select('trip_id, day_number, weather')
         .eq('user_id', session.user.id),
       supabase
         .from('trips')
@@ -334,9 +400,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .from('trip_photos')
         .select('trip_id, storage_path, slot')
         .eq('user_id', session.user.id),
-    ]).then(async ([trailRes, animalRes, tripRes, photoRes]) => {
+    ]).then(async ([trailRes, animalRes, dayActivityRes, dayWeatherRes, tripRes, photoRes]) => {
       const trailRows: TrailCompletionRow[] = trailRes.data ?? [];
       const animalRows: AnimalSightingRow[] = animalRes.data ?? [];
+      const dayActivityRows: DayActivityRow[] = dayActivityRes.data ?? [];
+      const dayWeatherRows: DayWeatherRow[] = dayWeatherRes.data ?? [];
       const photoRows = photoRes.data ?? [];
       setTrailCompletions(trailRows);
       setAnimalSightings(animalRows);
@@ -348,34 +416,69 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       // one Storage round trip per photo.
       const photoUrlMap = await signedUrlsFromStoragePaths(photoRows.map((p) => p.storage_path));
       setTrips(
-        tripRes.data.map((row) => ({
-          id: row.id,
-          parkId: row.park_id,
-          tripType: (row.trip_type as TripType) ?? 'logged',
-          startDate: row.start_date,
-          endDate: row.end_date,
-          activities: row.activities as ActivityType[],
-          notes: row.notes,
-          photos: photoRows
-            .filter((p) => p.trip_id === row.id)
-            .sort((a, b) => a.slot - b.slot)
-            .map((p) => photoUrlMap[p.storage_path])
-            .filter((u): u is string => !!u),
-          weather: row.weather ?? undefined,
-          favoriteTrail: row.favorite_trail ?? undefined,
-          wildlifeSightings: animalRows.filter((a) => a.trip_id === row.id).map((a) => a.name),
-          trailsHiked: trailRows
-            .filter((t) => t.trip_id === row.id)
-            .map((t) => ({
+        tripRes.data.map((row) => {
+          const tripTrailRows = trailRows.filter((t) => t.trip_id === row.id);
+          const tripAnimalRows = animalRows.filter((a) => a.trip_id === row.id);
+          const tripDayActivityRows = dayActivityRows.filter((a) => a.trip_id === row.id);
+          const tripDayWeatherRows = dayWeatherRows.filter((w) => w.trip_id === row.id);
+          // A trip only has `days` if it was saved through the per-day flow —
+          // legacy trips (nothing tagged with a day_number) get none, so
+          // TripDetailScreen falls back to the flat fields below unchanged.
+          const dayNumbers = Array.from(
+            new Set([
+              ...tripTrailRows.map((t) => t.day_number).filter((n): n is number => n != null),
+              ...tripAnimalRows.map((a) => a.day_number).filter((n): n is number => n != null),
+              ...tripDayActivityRows.map((a) => a.day_number),
+              ...tripDayWeatherRows.map((w) => w.day_number),
+            ])
+          ).sort((a, b) => a - b);
+          const days: TripDayEntry[] = dayNumbers.map((dayNumber) => ({
+            dayNumber,
+            date: addDays(row.start_date, dayNumber - 1),
+            activities: tripDayActivityRows
+              .filter((a) => a.day_number === dayNumber)
+              .map((a) => ({ activity: a.activity as ActivityType, viewpoint: a.viewpoint ?? undefined })),
+            trailsHiked: tripTrailRows
+              .filter((t) => t.day_number === dayNumber)
+              .map((t) => ({
+                trailId: t.trail_id ?? undefined,
+                name: t.name,
+                miles: t.miles,
+                elevationGainFt: t.elevation_gain_ft,
+                dayNumber,
+              })),
+            wildlifeSightings: tripAnimalRows.filter((a) => a.day_number === dayNumber).map((a) => a.name),
+            weather: tripDayWeatherRows.find((w) => w.day_number === dayNumber)?.weather as WeatherType | undefined,
+          }));
+          return {
+            id: row.id,
+            parkId: row.park_id,
+            tripType: (row.trip_type as TripType) ?? 'logged',
+            startDate: row.start_date,
+            endDate: row.end_date,
+            activities: row.activities as ActivityType[],
+            notes: row.notes,
+            photos: photoRows
+              .filter((p) => p.trip_id === row.id)
+              .sort((a, b) => a.slot - b.slot)
+              .map((p) => photoUrlMap[p.storage_path])
+              .filter((u): u is string => !!u),
+            weather: row.weather ?? undefined,
+            favoriteTrail: row.favorite_trail ?? undefined,
+            wildlifeSightings: tripAnimalRows.map((a) => a.name),
+            trailsHiked: tripTrailRows.map((t) => ({
               trailId: t.trail_id ?? undefined,
               name: t.name,
               miles: t.miles,
               elevationGainFt: t.elevation_gain_ft,
+              dayNumber: t.day_number ?? undefined,
             })),
-          rating: row.rating ?? undefined,
-          milesHiked: row.miles_hiked ?? undefined,
-          elevationGainFt: row.elevation_gain_ft ?? undefined,
-        }))
+            rating: row.rating ?? undefined,
+            milesHiked: row.miles_hiked ?? undefined,
+            elevationGainFt: row.elevation_gain_ft ?? undefined,
+            days: days.length > 0 ? days : undefined,
+          };
+        })
       );
     })
       .catch((error) => {
@@ -531,8 +634,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [parks, persistParkStatus]);
 
   const logTrip = useCallback(async (trip: Omit<Trip, 'id'>) => {
-    const milesHiked = trip.trailsHiked?.reduce((acc, t) => acc + t.miles, 0) ?? trip.milesHiked;
-    const elevationGainFt = trip.trailsHiked?.reduce((acc, t) => acc + t.elevationGainFt, 0) ?? trip.elevationGainFt;
+    const aggregate = trip.days?.length ? aggregateFromDays(trip.days) : null;
+    const activities = aggregate?.activities ?? trip.activities;
+    const wildlifeSightings = aggregate?.wildlifeSightings ?? trip.wildlifeSightings;
+    const trailsHiked = aggregate?.trailsHiked ?? trip.trailsHiked;
+    const milesHiked = aggregate?.milesHiked ?? trip.trailsHiked?.reduce((acc, t) => acc + t.miles, 0) ?? trip.milesHiked;
+    const elevationGainFt = aggregate?.elevationGainFt ?? trip.trailsHiked?.reduce((acc, t) => acc + t.elevationGainFt, 0) ?? trip.elevationGainFt;
 
     let tripId = `trip-${Date.now()}`;
     if (session) {
@@ -543,11 +650,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           trip_type: trip.tripType,
           start_date: trip.startDate,
           end_date: trip.endDate,
-          activities: trip.activities,
+          activities,
           notes: trip.notes,
-          weather: trip.weather ?? null,
           favorite_trail: trip.favoriteTrail ?? null,
-          wildlife_sightings: trip.wildlifeSightings ?? null,
+          wildlife_sightings: wildlifeSightings ?? null,
           rating: trip.rating ?? null,
           miles_hiked: milesHiked ?? null,
           elevation_gain_ft: elevationGainFt ?? null,
@@ -574,7 +680,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    const newTrip: Trip = { ...trip, photos, milesHiked, elevationGainFt, id: tripId };
+    const newTrip: Trip = { ...trip, activities, wildlifeSightings, trailsHiked, photos, milesHiked, elevationGainFt, id: tripId };
     setTrips((prev) => [newTrip, ...prev]);
 
     // Logging a trip always means "I went" — 'visited', as before. Planning
@@ -590,25 +696,44 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       persistParkStatus(trip.parkId, nextStatus, isFavorite);
     }
 
-    if (session) {
-      if (newTrip.trailsHiked?.length) {
-        const rows = buildTrailRows(newTrip.trailsHiked, tripId, trip.parkId);
-        setTrailCompletions((prev) => [...prev, ...rows]);
+    if (session && newTrip.days?.length) {
+      const days = newTrip.days;
+      const trailRows = buildTrailRows(days, tripId, trip.parkId);
+      const animalRows = buildAnimalRows(days, tripId, trip.parkId);
+      const activityRows = buildDayActivityRows(days, tripId);
+      const weatherRows = buildDayWeatherRows(days, tripId);
+      if (trailRows.length) {
+        setTrailCompletions((prev) => [...prev, ...trailRows]);
         supabase
           .from('user_trail_completions')
-          .insert(rows)
+          .insert(trailRows)
           .then(({ error }) => {
             if (error) reportError('save the trails from this trip', error);
           });
       }
-      if (newTrip.wildlifeSightings?.length) {
-        const rows = buildAnimalRows(newTrip.wildlifeSightings, tripId, trip.parkId);
-        setAnimalSightings((prev) => [...prev, ...rows]);
+      if (animalRows.length) {
+        setAnimalSightings((prev) => [...prev, ...animalRows]);
         supabase
           .from('user_animal_sightings')
-          .insert(rows)
+          .insert(animalRows)
           .then(({ error }) => {
             if (error) reportError('save the wildlife sightings from this trip', error);
+          });
+      }
+      if (activityRows.length) {
+        supabase
+          .from('trip_day_activities')
+          .insert(activityRows)
+          .then(({ error }) => {
+            if (error) reportError('save the activities from this trip', error);
+          });
+      }
+      if (weatherRows.length) {
+        supabase
+          .from('trip_day_weather')
+          .insert(weatherRows)
+          .then(({ error }) => {
+            if (error) reportError('save the weather for this trip', error);
           });
       }
     }
@@ -616,6 +741,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const updateTrip = useCallback(async (trip: Trip) => {
     const previousTrip = trips.find((t) => t.id === trip.id);
+    const aggregate = trip.days?.length ? aggregateFromDays(trip.days) : null;
+    const activities = aggregate?.activities ?? trip.activities;
+    const wildlifeSightings = aggregate?.wildlifeSightings ?? trip.wildlifeSightings;
+    const trailsHiked = aggregate?.trailsHiked ?? trip.trailsHiked;
+    const milesHiked = aggregate?.milesHiked ?? trip.milesHiked;
+    const elevationGainFt = aggregate?.elevationGainFt ?? trip.elevationGainFt;
     let photos = trip.photos;
     if (session) {
       try {
@@ -630,14 +761,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           trip_type: trip.tripType,
           start_date: trip.startDate,
           end_date: trip.endDate,
-          activities: trip.activities,
+          activities,
           notes: trip.notes,
-          weather: trip.weather ?? null,
           favorite_trail: trip.favoriteTrail ?? null,
-          wildlife_sightings: trip.wildlifeSightings ?? null,
+          wildlife_sightings: wildlifeSightings ?? null,
           rating: trip.rating ?? null,
-          miles_hiked: trip.milesHiked ?? null,
-          elevation_gain_ft: trip.elevationGainFt ?? null,
+          miles_hiked: milesHiked ?? null,
+          elevation_gain_ft: elevationGainFt ?? null,
         })
         .eq('id', trip.id);
       if (error) {
@@ -645,8 +775,43 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         reportError('save your changes', error);
         return;
       }
+
+      // Editing a trip replaces its whole day-by-day breakdown rather than
+      // diffing it — simplest way to handle days being added, removed, or
+      // rearranged when the date range itself changes.
+      if (trip.days) {
+        const days = trip.days;
+        await Promise.all([
+          supabase.from('user_trail_completions').delete().eq('trip_id', trip.id),
+          supabase.from('user_animal_sightings').delete().eq('trip_id', trip.id),
+          supabase.from('trip_day_activities').delete().eq('trip_id', trip.id),
+          supabase.from('trip_day_weather').delete().eq('trip_id', trip.id),
+        ]);
+        const trailRows = buildTrailRows(days, trip.id, trip.parkId);
+        const animalRows = buildAnimalRows(days, trip.id, trip.parkId);
+        const activityRows = buildDayActivityRows(days, trip.id);
+        const weatherRows = buildDayWeatherRows(days, trip.id);
+        if (trailRows.length) {
+          const { error: trailError } = await supabase.from('user_trail_completions').insert(trailRows);
+          if (trailError) reportError('save the trails from this trip', trailError);
+        }
+        if (animalRows.length) {
+          const { error: animalError } = await supabase.from('user_animal_sightings').insert(animalRows);
+          if (animalError) reportError('save the wildlife sightings from this trip', animalError);
+        }
+        if (activityRows.length) {
+          const { error: activityError } = await supabase.from('trip_day_activities').insert(activityRows);
+          if (activityError) reportError('save the activities from this trip', activityError);
+        }
+        if (weatherRows.length) {
+          const { error: weatherError } = await supabase.from('trip_day_weather').insert(weatherRows);
+          if (weatherError) reportError('save the weather for this trip', weatherError);
+        }
+        setTrailCompletions((prev) => [...prev.filter((t) => t.trip_id !== trip.id), ...trailRows]);
+        setAnimalSightings((prev) => [...prev.filter((a) => a.trip_id !== trip.id), ...animalRows]);
+      }
     }
-    const updatedTrip = { ...trip, photos };
+    const updatedTrip: Trip = { ...trip, activities, wildlifeSightings, trailsHiked, photos, milesHiked, elevationGainFt };
     setTrips((prev) => prev.map((t) => (t.id === trip.id ? updatedTrip : t)));
 
     // Editing a still-planned trip onto a different park moves the
@@ -672,8 +837,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   // wildlife, rating, weather) and always sets the park to 'visited', unlike
   // the conditional plan-time status in logTrip.
   const completeTrip = useCallback(async (trip: Trip) => {
-    const milesHiked = trip.trailsHiked?.reduce((acc, t) => acc + t.miles, 0) ?? trip.milesHiked;
-    const elevationGainFt = trip.trailsHiked?.reduce((acc, t) => acc + t.elevationGainFt, 0) ?? trip.elevationGainFt;
+    const aggregate = trip.days?.length ? aggregateFromDays(trip.days) : null;
+    const activities = aggregate?.activities ?? trip.activities;
+    const wildlifeSightings = aggregate?.wildlifeSightings ?? trip.wildlifeSightings;
+    const trailsHiked = aggregate?.trailsHiked ?? trip.trailsHiked;
+    const milesHiked = aggregate?.milesHiked ?? trip.trailsHiked?.reduce((acc, t) => acc + t.miles, 0) ?? trip.milesHiked;
+    const elevationGainFt = aggregate?.elevationGainFt ?? trip.trailsHiked?.reduce((acc, t) => acc + t.elevationGainFt, 0) ?? trip.elevationGainFt;
     let photos = trip.photos;
 
     if (session) {
@@ -691,11 +860,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           park_id: trip.parkId,
           start_date: trip.startDate,
           end_date: trip.endDate,
-          activities: trip.activities,
+          activities,
           notes: trip.notes,
-          weather: trip.weather ?? null,
           favorite_trail: trip.favoriteTrail ?? null,
-          wildlife_sightings: trip.wildlifeSightings ?? null,
+          wildlife_sightings: wildlifeSightings ?? null,
           rating: trip.rating ?? null,
           miles_hiked: milesHiked ?? null,
           elevation_gain_ft: elevationGainFt ?? null,
@@ -707,34 +875,47 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    const completedTrip: Trip = { ...trip, tripType: 'logged', photos, milesHiked, elevationGainFt };
+    const completedTrip: Trip = { ...trip, tripType: 'logged', activities, wildlifeSightings, trailsHiked, photos, milesHiked, elevationGainFt };
     setTrips((prev) => prev.map((t) => (t.id === trip.id ? completedTrip : t)));
 
     setParks((prev) => prev.map((p) => (p.id === trip.parkId ? { ...p, status: 'visited' } : p)));
     const isFavorite = parks.find((p) => p.id === trip.parkId)?.isFavorite ?? false;
     persistParkStatus(trip.parkId, 'visited', isFavorite);
 
-    if (session) {
-      if (completedTrip.trailsHiked?.length) {
-        const rows = buildTrailRows(completedTrip.trailsHiked, trip.id, trip.parkId);
-        setTrailCompletions((prev) => [...prev, ...rows]);
-        supabase
-          .from('user_trail_completions')
-          .insert(rows)
-          .then(({ error }) => {
-            if (error) reportError('save the trails from this trip', error);
-          });
+    // A planned trip's day breakdown so far only has activities (no
+    // trails/wildlife/weather were possible before it happened) — replacing
+    // rather than appending covers both a fresh completion and re-completing
+    // after further edits.
+    if (session && completedTrip.days?.length) {
+      const days = completedTrip.days;
+      await Promise.all([
+        supabase.from('user_trail_completions').delete().eq('trip_id', trip.id),
+        supabase.from('user_animal_sightings').delete().eq('trip_id', trip.id),
+        supabase.from('trip_day_activities').delete().eq('trip_id', trip.id),
+        supabase.from('trip_day_weather').delete().eq('trip_id', trip.id),
+      ]);
+      const trailRows = buildTrailRows(days, trip.id, trip.parkId);
+      const animalRows = buildAnimalRows(days, trip.id, trip.parkId);
+      const activityRows = buildDayActivityRows(days, trip.id);
+      const weatherRows = buildDayWeatherRows(days, trip.id);
+      if (trailRows.length) {
+        const { error: trailError } = await supabase.from('user_trail_completions').insert(trailRows);
+        if (trailError) reportError('save the trails from this trip', trailError);
       }
-      if (completedTrip.wildlifeSightings?.length) {
-        const rows = buildAnimalRows(completedTrip.wildlifeSightings, trip.id, trip.parkId);
-        setAnimalSightings((prev) => [...prev, ...rows]);
-        supabase
-          .from('user_animal_sightings')
-          .insert(rows)
-          .then(({ error }) => {
-            if (error) reportError('save the wildlife sightings from this trip', error);
-          });
+      if (animalRows.length) {
+        const { error: animalError } = await supabase.from('user_animal_sightings').insert(animalRows);
+        if (animalError) reportError('save the wildlife sightings from this trip', animalError);
       }
+      if (activityRows.length) {
+        const { error: activityError } = await supabase.from('trip_day_activities').insert(activityRows);
+        if (activityError) reportError('save the activities from this trip', activityError);
+      }
+      if (weatherRows.length) {
+        const { error: weatherError } = await supabase.from('trip_day_weather').insert(weatherRows);
+        if (weatherError) reportError('save the weather for this trip', weatherError);
+      }
+      setTrailCompletions((prev) => [...prev.filter((t) => t.trip_id !== trip.id), ...trailRows]);
+      setAnimalSightings((prev) => [...prev.filter((a) => a.trip_id !== trip.id), ...animalRows]);
     }
   }, [parks, persistParkStatus, session]);
 

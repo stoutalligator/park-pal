@@ -7,6 +7,23 @@ export function parseLocalDate(dateStr: string): Date {
   return new Date(year, month - 1, day);
 }
 
+export function addDays(dateStr: string, days: number): string {
+  const d = parseLocalDate(dateStr);
+  d.setDate(d.getDate() + days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+export function dayCountBetween(start: string, end: string): number {
+  if (!start || !end) return 1;
+  const s = parseLocalDate(start);
+  const e = parseLocalDate(end);
+  const diff = Math.round((e.getTime() - s.getTime()) / (1000 * 60 * 60 * 24));
+  return Math.max(1, diff + 1);
+}
+
 export function formatDateRange(start: string, end: string): string {
   const s = parseLocalDate(start);
   const e = parseLocalDate(end);

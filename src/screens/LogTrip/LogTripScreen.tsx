@@ -1,18 +1,29 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert, Dimensions, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import Svg, { Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ActivityType, TripTrailEntry, TrailDifficulty, AnimalRarity } from '@/types';
+import {
+  ActivityType,
+  TripTrailEntry,
+  TrailDifficulty,
+  AnimalRarity,
+  TripDayActivity,
+  TripDayEntry,
+  WeatherType,
+  Trail,
+  Animal,
+  Units,
+} from '@/types';
 import { ALL_TRAILS } from '@/data/trails';
 import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
 import DateRangePicker from '@/components/DateRangePicker';
 import { showToast } from '@/components/Toast';
 import { convertMiles, convertFeet, toMiles, toFeet, distanceLabel, elevationLabel } from '@/utils/units';
-import { formatDateRange } from '@/utils/dates';
+import { formatDateRange, addDays, dayCountBetween, parseLocalDate } from '@/utils/dates';
 
 type FormMode = 'plan' | 'log' | 'complete';
 
@@ -210,6 +221,131 @@ function CompassIcon({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
+const WEATHER_CLOUD_PATH = 'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z';
+
+export function WeatherSunnyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="12" r="4.2" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path
+        d="M18.3 12h2.1M16.45 16.45l1.49 1.49M12 18.3v2.1M7.55 16.45l-1.49 1.49M5.7 12H3.6M7.55 7.55 6.06 6.06M12 5.7V3.6M16.45 7.55l1.49-1.49"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
+export function WeatherPartlyCloudyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="8.5" cy="8" r="3.2" fill="none" stroke={color} strokeWidth={1.5} />
+      <Path
+        d="M5.53 10.97 4.4 12.1M4.3 8H2.7M5.53 5.03 4.4 3.9M8.5 3.8V2.2"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+      />
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(4,4) scale(0.8)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function WeatherCloudyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(-1,-4) scale(0.55)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(4,3) scale(0.85)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function WeatherRainyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(3,-2) scale(0.75)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M8 15 6.5 19M12 15l-1.5 4M16 15l-1.5 4"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
+export function WeatherStormyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(3,-2) scale(0.75)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M13 14 9.5 18.5h2.3L10.8 22 15 16.5h-2.4z" fill={color} />
+    </Svg>
+  );
+}
+
+export function WeatherSnowyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(3,-2) scale(0.75)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M7.5 15.4v2.2M6.4 16.5h2.2M6.62 15.62l1.76 1.76M8.38 15.62 6.62 17.38M12 16.7v2.6M10.7 18h2.6M10.86 16.86l1.28 1.28M12.14 16.86l-1.28 1.28M16.5 15.4v2.2M15.4 16.5h2.2M15.62 15.62l1.76 1.76M17.38 15.62l-1.76 1.76"
+        stroke={color}
+        strokeWidth={1.3}
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
 function TreeIcon({ color, size = 18 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 20 20">
@@ -287,6 +423,399 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
   { label: 'Other', render: (c) => <CompassIcon color={c} /> },
 ];
 
+const WEATHER_OPTIONS: { type: WeatherType; label: string; render: (color: string) => React.ReactElement }[] = [
+  { type: 'Sunny', label: 'Sunny', render: (c) => <WeatherSunnyIcon color={c} /> },
+  { type: 'PartlyCloudy', label: 'Partly Cloudy', render: (c) => <WeatherPartlyCloudyIcon color={c} /> },
+  { type: 'Cloudy', label: 'Cloudy', render: (c) => <WeatherCloudyIcon color={c} /> },
+  { type: 'Rainy', label: 'Rainy', render: (c) => <WeatherRainyIcon color={c} /> },
+  { type: 'Stormy', label: 'Stormy', render: (c) => <WeatherStormyIcon color={c} /> },
+  { type: 'Snowy', label: 'Snowy', render: (c) => <WeatherSnowyIcon color={c} /> },
+];
+
+function RatingStarIcon({ filled, size = 26 }: { filled: boolean; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Polygon
+        points="12,2 14.9,9 22.5,9.3 16.4,14 18.5,21.3 12,17.1 5.5,21.3 7.6,14 1.5,9.3 9.1,9"
+        fill={filled ? colors.orange : colors.divider}
+      />
+    </Svg>
+  );
+}
+
+// Per-day form state — one of these per calendar day of the trip, lifted up
+// into LogTripScreen's `dayEntries` map so Save can assemble the full
+// TripDayEntry[] the same shape AppContext expects.
+interface DayFormState {
+  activities: TripDayActivity[];
+  trails: TripTrailEntry[];
+  wildlife: string[];
+  weather?: WeatherType;
+}
+
+function emptyDay(): DayFormState {
+  return { activities: [], trails: [], wildlife: [] };
+}
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const PAGE_WIDTH = SCREEN_WIDTH - spacing.xl * 2;
+
+interface DayPageProps {
+  dayNumber: number;
+  dateLabel: string;
+  mode: FormMode;
+  units: Units;
+  parkTrails: Trail[];
+  parkAnimals: Animal[];
+  value: DayFormState;
+  onChange: (next: DayFormState) => void;
+  width: number;
+}
+
+// The day pager's per-page content — this is the same picker UI the flat
+// form used to show once for the whole trip (activity chips + viewpoint,
+// trail picker with custom-add, wildlife picker with custom-add, weather),
+// just scoped to a single day's DayFormState instead of the whole trip.
+function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, value, onChange, width }: DayPageProps) {
+  const [wildlifeInput, setWildlifeInput] = useState('');
+  const [customTrailName, setCustomTrailName] = useState('');
+  const [customTrailMiles, setCustomTrailMiles] = useState('');
+  const [customTrailElevation, setCustomTrailElevation] = useState('');
+  const [editingTrailKey, setEditingTrailKey] = useState<string | null>(null);
+  const [editMiles, setEditMiles] = useState('');
+  const [editElevation, setEditElevation] = useState('');
+
+  const trailKeyOf = (entry: { trailId?: string; name: string }) => entry.trailId ?? entry.name;
+
+  const toggleActivity = (label: ActivityType) => {
+    const exists = value.activities.some((a) => a.activity === label);
+    onChange({
+      ...value,
+      activities: exists
+        ? value.activities.filter((a) => a.activity !== label)
+        : [...value.activities, { activity: label }],
+    });
+  };
+
+  const setViewpoint = (label: ActivityType, text: string) => {
+    onChange({
+      ...value,
+      activities: value.activities.map((a) => (a.activity === label ? { ...a, viewpoint: text } : a)),
+    });
+  };
+
+  const toggleTrail = (trailId: string, name: string, miles: number, elevationGainFt: number) => {
+    const active = value.trails.some((t) => t.trailId === trailId);
+    if (active) {
+      onChange({ ...value, trails: value.trails.filter((t) => t.trailId !== trailId) });
+      if (editingTrailKey === trailId) setEditingTrailKey(null);
+      return;
+    }
+    onChange({ ...value, trails: [...value.trails, { trailId, name, miles, elevationGainFt }] });
+    setEditingTrailKey(trailId);
+    setEditMiles(convertMiles(miles, units).toFixed(1));
+    setEditElevation(Math.round(convertFeet(elevationGainFt, units)).toString());
+  };
+
+  const addCustomTrail = () => {
+    const name = customTrailName.trim();
+    const enteredDistance = parseFloat(customTrailMiles);
+    if (!name || Number.isNaN(enteredDistance)) return;
+    const miles = toMiles(enteredDistance, units);
+    const elevationGainFt = toFeet(parseFloat(customTrailElevation) || 0, units);
+    onChange({ ...value, trails: [...value.trails, { name, miles, elevationGainFt }] });
+    setCustomTrailName('');
+    setCustomTrailMiles('');
+    setCustomTrailElevation('');
+  };
+
+  const removeTrail = (entry: TripTrailEntry) => {
+    onChange({
+      ...value,
+      trails: value.trails.filter((t) => (entry.trailId ? t.trailId !== entry.trailId : t.name !== entry.name)),
+    });
+    if (editingTrailKey === trailKeyOf(entry)) setEditingTrailKey(null);
+  };
+
+  const startEditTrail = (entry: TripTrailEntry) => {
+    setEditingTrailKey(trailKeyOf(entry));
+    setEditMiles(convertMiles(entry.miles, units).toFixed(1));
+    setEditElevation(Math.round(convertFeet(entry.elevationGainFt, units)).toString());
+  };
+
+  const saveEditTrail = (entry: TripTrailEntry) => {
+    const enteredDistance = parseFloat(editMiles);
+    const miles = Number.isNaN(enteredDistance) ? entry.miles : toMiles(enteredDistance, units);
+    const elevationGainFt = toFeet(parseFloat(editElevation) || 0, units);
+    onChange({
+      ...value,
+      trails: value.trails.map((t) => (trailKeyOf(t) === trailKeyOf(entry) ? { ...t, miles, elevationGainFt } : t)),
+    });
+    setEditingTrailKey(null);
+  };
+
+  const addWildlifeSighting = () => {
+    const trimmed = wildlifeInput.trim();
+    if (!trimmed || value.wildlife.some((w) => w.toLowerCase() === trimmed.toLowerCase())) {
+      setWildlifeInput('');
+      return;
+    }
+    onChange({ ...value, wildlife: [...value.wildlife, trimmed] });
+    setWildlifeInput('');
+  };
+
+  const removeWildlifeSighting = (sighting: string) => {
+    onChange({ ...value, wildlife: value.wildlife.filter((w) => w !== sighting) });
+  };
+
+  const toggleAnimal = (name: string) => {
+    const exists = value.wildlife.some((w) => w.toLowerCase() === name.toLowerCase());
+    onChange({
+      ...value,
+      wildlife: exists
+        ? value.wildlife.filter((w) => w.toLowerCase() !== name.toLowerCase())
+        : [...value.wildlife, name],
+    });
+  };
+
+  const toggleWeather = (type: WeatherType) => {
+    onChange({ ...value, weather: value.weather === type ? undefined : type });
+  };
+
+  return (
+    <View style={[styles.dayPage, { width }]}>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.dayPageContent} nestedScrollEnabled>
+        <Text style={styles.dayPageTitle}>Day {dayNumber} · {dateLabel}</Text>
+
+        <Text style={styles.sublabel}>{mode === 'plan' ? 'What are you hoping to do?' : 'What did you do?'}</Text>
+        <View style={styles.activityGrid}>
+          {ACTIVITIES.map(({ label, render }) => {
+            const active = value.activities.some((a) => a.activity === label);
+            const iconColor = active ? colors.textInverse : colors.brown;
+            return (
+              <TouchableOpacity
+                key={label}
+                style={[styles.activityChip, active && styles.activityChipActive]}
+                onPress={() => toggleActivity(label)}
+                activeOpacity={0.8}
+              >
+                {render(iconColor)}
+                <Text style={[styles.activityLabel, active && styles.activityLabelActive]}>{label}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+
+        {/* Hiking and Wildlife already get their "what/where" from the trail
+            and animal pickers below, so a separate viewpoint field would just
+            duplicate that. "Other" asks what happened instead of where,
+            since there's no picker to fall back on for it. */}
+        {value.activities.some((a) => a.activity !== 'Hiking' && a.activity !== 'Wildlife') && (
+          <View style={styles.viewpointList}>
+            {value.activities
+              .filter((a) => a.activity !== 'Hiking' && a.activity !== 'Wildlife')
+              .map((a) => (
+                <View key={a.activity} style={styles.viewpointRow}>
+                  <Text style={styles.viewpointLabel}>{a.activity}</Text>
+                  <TextInput
+                    style={styles.wildlifeInput}
+                    placeholder={a.activity === 'Other' ? 'What did you do? (optional)' : 'Where? (optional)'}
+                    placeholderTextColor={colors.textMuted}
+                    value={a.viewpoint ?? ''}
+                    onChangeText={(t) => setViewpoint(a.activity, t)}
+                  />
+                </View>
+              ))}
+          </View>
+        )}
+
+        {mode !== 'plan' && (
+          <>
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Trails</Text>
+            {parkTrails.length > 0 && (
+              <View style={styles.trailList}>
+                {parkTrails.map((trail) => {
+                  const active = value.trails.some((t) => t.trailId === trail.id);
+                  return (
+                    <TouchableOpacity
+                      key={trail.id}
+                      style={[styles.trailChip, active && styles.trailChipActive]}
+                      onPress={() => toggleTrail(trail.id, trail.name, trail.miles, trail.elevationGainFt)}
+                      activeOpacity={0.8}
+                    >
+                      <Text style={[styles.trailChipName, active && styles.trailChipNameActive]}>{trail.name}</Text>
+                      <Text style={[styles.trailChipMeta, active && styles.trailChipMetaActive]}>
+                        {convertMiles(trail.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(trail.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
+                      </Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+            )}
+
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Add a trail we don't have</Text>
+            <TextInput
+              style={[styles.wildlifeInput, styles.customTrailNameInput]}
+              placeholder="Trail name"
+              placeholderTextColor={colors.textMuted}
+              value={customTrailName}
+              onChangeText={setCustomTrailName}
+            />
+            <View style={styles.customTrailRow}>
+              <TextInput
+                style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
+                placeholderTextColor={colors.textMuted}
+                keyboardType="decimal-pad"
+                value={customTrailMiles}
+                onChangeText={setCustomTrailMiles}
+              />
+              <TextInput
+                style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                placeholder={`Elev. ${elevationLabel(units)}`}
+                placeholderTextColor={colors.textMuted}
+                keyboardType="decimal-pad"
+                value={customTrailElevation}
+                onChangeText={setCustomTrailElevation}
+              />
+              <TouchableOpacity style={styles.wildlifeAddBtn} onPress={addCustomTrail} activeOpacity={0.8}>
+                <Text style={styles.wildlifeAddBtnText}>+</Text>
+              </TouchableOpacity>
+            </View>
+
+            {value.trails.length > 0 && (
+              <>
+                <Text style={[styles.sublabel, styles.sublabelSpaced]}>Your Trails</Text>
+                <View style={styles.trailSummaryList}>
+                  {value.trails.map((entry) => {
+                    const editing = editingTrailKey === trailKeyOf(entry);
+                    return (
+                      <View key={trailKeyOf(entry)} style={styles.trailSummaryCard}>
+                        {editing ? (
+                          <>
+                            <Text style={styles.trailSummaryName}>{entry.name}</Text>
+                            <View style={styles.customTrailRow}>
+                              <TextInput
+                                style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                                placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
+                                placeholderTextColor={colors.textMuted}
+                                keyboardType="decimal-pad"
+                                value={editMiles}
+                                onChangeText={setEditMiles}
+                                autoFocus
+                              />
+                              <TextInput
+                                style={[styles.wildlifeInput, styles.customTrailNumberInput]}
+                                placeholder={`Elev. ${elevationLabel(units)}`}
+                                placeholderTextColor={colors.textMuted}
+                                keyboardType="decimal-pad"
+                                value={editElevation}
+                                onChangeText={setEditElevation}
+                              />
+                              <TouchableOpacity style={styles.wildlifeAddBtn} onPress={() => saveEditTrail(entry)} activeOpacity={0.8}>
+                                <CheckIcon color={colors.textInverse} />
+                              </TouchableOpacity>
+                            </View>
+                          </>
+                        ) : (
+                          <TouchableOpacity style={styles.trailSummaryRow} onPress={() => startEditTrail(entry)} activeOpacity={0.7}>
+                            <View style={styles.trailSummaryText}>
+                              <Text style={styles.trailSummaryName}>{entry.name}</Text>
+                              <Text style={styles.trailSummaryMeta}>
+                                {convertMiles(entry.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(entry.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
+                              </Text>
+                            </View>
+                            <Text style={styles.trailSummaryEdit}>Edit</Text>
+                            <TouchableOpacity onPress={() => removeTrail(entry)} hitSlop={8}>
+                              <CloseIcon color={colors.orange} />
+                            </TouchableOpacity>
+                          </TouchableOpacity>
+                        )}
+                      </View>
+                    );
+                  })}
+                </View>
+              </>
+            )}
+
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Wildlife Spotted</Text>
+            {parkAnimals.length > 0 && (
+              <View style={styles.animalChipRow}>
+                {parkAnimals.map((animal) => {
+                  const active = value.wildlife.some((w) => w.toLowerCase() === animal.name.toLowerCase());
+                  return (
+                    <TouchableOpacity
+                      key={animal.id}
+                      style={[styles.animalChip, active && styles.animalChipActive]}
+                      onPress={() => toggleAnimal(animal.name)}
+                      activeOpacity={0.8}
+                    >
+                      <Text style={[styles.animalChipText, active && styles.animalChipTextActive]}>{animal.name}</Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+            )}
+            <View style={styles.wildlifeInputRow}>
+              <TextInput
+                style={styles.wildlifeInput}
+                placeholder="e.g. Elk, Moose, Bald Eagle..."
+                placeholderTextColor={colors.textMuted}
+                value={wildlifeInput}
+                onChangeText={setWildlifeInput}
+                onSubmitEditing={addWildlifeSighting}
+                returnKeyType="done"
+              />
+              <TouchableOpacity style={styles.wildlifeAddBtn} onPress={addWildlifeSighting} activeOpacity={0.8}>
+                <Text style={styles.wildlifeAddBtnText}>+</Text>
+              </TouchableOpacity>
+            </View>
+            {value.wildlife.length > 0 && (
+              <View style={styles.wildlifeTagRow}>
+                {value.wildlife.map((sighting) => (
+                  <View key={sighting} style={styles.wildlifeTag}>
+                    <Text style={styles.wildlifeTagText}>{sighting}</Text>
+                    <TouchableOpacity onPress={() => removeWildlifeSighting(sighting)} hitSlop={8}>
+                      <CloseIcon color={colors.orange} />
+                    </TouchableOpacity>
+                  </View>
+                ))}
+              </View>
+            )}
+
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Weather</Text>
+            <View style={styles.weatherRow}>
+              {WEATHER_OPTIONS.map(({ type, label, render }) => {
+                const active = value.weather === type;
+                const iconColor = active ? colors.textInverse : colors.brown;
+                return (
+                  <TouchableOpacity
+                    key={type}
+                    style={[styles.weatherChip, active && styles.weatherChipActive]}
+                    onPress={() => toggleWeather(type)}
+                    activeOpacity={0.8}
+                  >
+                    {render(iconColor)}
+                    <Text style={[styles.weatherChipLabel, active && styles.weatherChipLabelActive]}>{label}</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </>
+        )}
+      </ScrollView>
+    </View>
+  );
+}
+
+function buildDayEntriesMap(trip: { days?: TripDayEntry[] } | undefined): Record<number, DayFormState> {
+  const map: Record<number, DayFormState> = {};
+  trip?.days?.forEach((d) => {
+    map[d.dayNumber] = { activities: d.activities, trails: d.trailsHiked, wildlife: d.wildlifeSightings, weather: d.weather };
+  });
+  return map;
+}
+
 export default function LogTripScreen() {
   const { parks, trips, logTrip, updateTrip, completeTrip, userProfile } = useApp();
   const units = userProfile.units;
@@ -303,19 +832,21 @@ export default function LogTripScreen() {
   const [selectedParkId, setSelectedParkId] = useState<string>(editingTrip?.parkId ?? route.params?.parkId ?? 'yellowstone');
   const [startDate, setStartDate] = useState(editingTrip?.startDate ?? '');
   const [endDate, setEndDate] = useState(editingTrip?.endDate ?? '');
-  const [selectedActivities, setSelectedActivities] = useState<ActivityType[]>(editingTrip?.activities ?? []);
   const [notes, setNotes] = useState(editingTrip?.notes ?? '');
   const [showParkPicker, setShowParkPicker] = useState(false);
-  const [wildlifeSightings, setWildlifeSightings] = useState<string[]>(editingTrip?.wildlifeSightings ?? []);
-  const [wildlifeInput, setWildlifeInput] = useState('');
-  const [selectedTrails, setSelectedTrails] = useState<TripTrailEntry[]>(editingTrip?.trailsHiked ?? []);
   const [photos, setPhotos] = useState<string[]>(editingTrip?.photos ?? []);
-  const [customTrailName, setCustomTrailName] = useState('');
-  const [customTrailMiles, setCustomTrailMiles] = useState('');
-  const [customTrailElevation, setCustomTrailElevation] = useState('');
-  const [editingTrailKey, setEditingTrailKey] = useState<string | null>(null);
-  const [editMiles, setEditMiles] = useState('');
-  const [editElevation, setEditElevation] = useState('');
+  const [rating, setRating] = useState<number>(editingTrip?.rating ?? completingTrip?.rating ?? 0);
+  // Step 1 ("details") collects everything trip-wide — park, dates, notes,
+  // photos, rating. Step 2 ("days") is the per-day pager. Splitting the form
+  // into these two steps (rather than one long scroll of stacked
+  // per-day sections) keeps each day's picker UI focused on one day at a
+  // time instead of competing for space with every other day at once.
+  const [step, setStep] = useState<'details' | 'days'>('details');
+  const [pageIndex, setPageIndex] = useState(0);
+  const dayScrollRef = useRef<ScrollView>(null);
+  const [dayEntries, setDayEntries] = useState<Record<number, DayFormState>>(() =>
+    buildDayEntriesMap(editingTrip ?? completingTrip)
+  );
   // Park and dates start open since they're required first; everything else
   // stays tucked away until tapped, so the form doesn't read as one long list.
   const [expanded, setExpanded] = useState<Record<string, boolean>>({ park: true, when: true });
@@ -347,26 +878,20 @@ export default function LogTripScreen() {
       setSelectedParkId(trip.parkId);
       setStartDate(trip.startDate);
       setEndDate(trip.endDate);
-      setSelectedActivities(trip.activities);
       setNotes(trip.notes);
-      setWildlifeSightings(trip.wildlifeSightings ?? []);
-      setSelectedTrails(trip.trailsHiked ?? []);
       setPhotos(trip.photos ?? []);
+      setRating(trip.rating ?? 0);
     } else {
       setSelectedParkId(requestedParkId ?? 'yellowstone');
       setStartDate('');
       setEndDate('');
-      setSelectedActivities([]);
       setNotes('');
-      setWildlifeSightings([]);
-      setSelectedTrails([]);
       setPhotos([]);
+      setRating(0);
     }
-    setWildlifeInput('');
-    setCustomTrailName('');
-    setCustomTrailMiles('');
-    setCustomTrailElevation('');
-    setEditingTrailKey(null);
+    setDayEntries(buildDayEntriesMap(trip));
+    setStep('details');
+    setPageIndex(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editingTripId, completeTripId, requestedParkId]);
 
@@ -379,32 +904,11 @@ export default function LogTripScreen() {
     (a, b) => RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]
   );
 
-  const toggleActivity = (a: ActivityType) => {
-    setSelectedActivities((prev) =>
-      prev.includes(a) ? prev.filter((x) => x !== a) : [...prev, a]
-    );
-  };
+  const dayCount = startDate ? dayCountBetween(startDate, endDate || startDate) : 0;
+  const dayNumbers = Array.from({ length: dayCount }, (_, i) => i + 1);
 
-  const addWildlifeSighting = () => {
-    const trimmed = wildlifeInput.trim();
-    if (!trimmed || wildlifeSightings.some((w) => w.toLowerCase() === trimmed.toLowerCase())) {
-      setWildlifeInput('');
-      return;
-    }
-    setWildlifeSightings((prev) => [...prev, trimmed]);
-    setWildlifeInput('');
-  };
-
-  const removeWildlifeSighting = (sighting: string) => {
-    setWildlifeSightings((prev) => prev.filter((w) => w !== sighting));
-  };
-
-  const toggleAnimal = (name: string) => {
-    setWildlifeSightings((prev) =>
-      prev.some((w) => w.toLowerCase() === name.toLowerCase())
-        ? prev.filter((w) => w.toLowerCase() !== name.toLowerCase())
-        : [...prev, name]
-    );
+  const setDayEntry = (dayNumber: number, next: DayFormState) => {
+    setDayEntries((prev) => ({ ...prev, [dayNumber]: next }));
   };
 
   const pickPhoto = async () => {
@@ -425,57 +929,43 @@ export default function LogTripScreen() {
     setPhotos((prev) => prev.filter((p) => p !== uri));
   };
 
-  const trailKeyOf = (entry: { trailId?: string; name: string }) => entry.trailId ?? entry.name;
+  const canProceedToDays = !!selectedParkId && !!startDate;
 
-  const toggleTrail = (trailId: string, name: string, miles: number, elevationGainFt: number) => {
-    const active = selectedTrails.some((t) => t.trailId === trailId);
-    if (active) {
-      setSelectedTrails((prev) => prev.filter((t) => t.trailId !== trailId));
-      if (editingTrailKey === trailId) setEditingTrailKey(null);
+  const handleNext = () => {
+    if (!canProceedToDays) {
+      Alert.alert('Missing info', 'Please select a park and start date.');
       return;
     }
-    // Pre-fill with the trail's full distance — most hikes cover the whole
-    // trail, but the fields stay open so a partial hike can be dialed down.
-    setSelectedTrails((prev) => [...prev, { trailId, name, miles, elevationGainFt }]);
-    setEditingTrailKey(trailId);
-    setEditMiles(convertMiles(miles, units).toFixed(1));
-    setEditElevation(Math.round(convertFeet(elevationGainFt, units)).toString());
+    setStep('days');
+    setPageIndex(0);
+    dayScrollRef.current?.scrollTo({ x: 0, animated: false });
   };
 
-  const addCustomTrail = () => {
-    const name = customTrailName.trim();
-    const enteredDistance = parseFloat(customTrailMiles);
-    if (!name || Number.isNaN(enteredDistance)) return;
-    const miles = toMiles(enteredDistance, units);
-    const elevationGainFt = toFeet(parseFloat(customTrailElevation) || 0, units);
-    setSelectedTrails((prev) => [...prev, { name, miles, elevationGainFt }]);
-    setCustomTrailName('');
-    setCustomTrailMiles('');
-    setCustomTrailElevation('');
+  // Web mouse-wheel scrolling never fires a "momentum" phase the way a touch
+  // swipe does, so onMomentumScrollEnd alone leaves the dot indicator stuck
+  // after a wheel-driven page change — track every scroll event instead.
+  const handleDayScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const index = Math.round(e.nativeEvent.contentOffset.x / PAGE_WIDTH);
+    setPageIndex((prev) => (prev === index ? prev : index));
   };
 
-  const removeTrail = (entry: TripTrailEntry) => {
-    setSelectedTrails((prev) =>
-      prev.filter((t) => (entry.trailId ? t.trailId !== entry.trailId : t.name !== entry.name))
-    );
-    if (editingTrailKey === trailKeyOf(entry)) setEditingTrailKey(null);
+  const handleDayScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const index = Math.round(e.nativeEvent.contentOffset.x / PAGE_WIDTH);
+    setPageIndex(index);
   };
 
-  const startEditTrail = (entry: TripTrailEntry) => {
-    setEditingTrailKey(trailKeyOf(entry));
-    setEditMiles(convertMiles(entry.miles, units).toFixed(1));
-    setEditElevation(Math.round(convertFeet(entry.elevationGainFt, units)).toString());
-  };
-
-  const saveEditTrail = (entry: TripTrailEntry) => {
-    const enteredDistance = parseFloat(editMiles);
-    const miles = Number.isNaN(enteredDistance) ? entry.miles : toMiles(enteredDistance, units);
-    const elevationGainFt = toFeet(parseFloat(editElevation) || 0, units);
-    setSelectedTrails((prev) =>
-      prev.map((t) => (trailKeyOf(t) === trailKeyOf(entry) ? { ...t, miles, elevationGainFt } : t))
-    );
-    setEditingTrailKey(null);
-  };
+  const buildDays = (): TripDayEntry[] =>
+    dayNumbers.map((dayNumber) => {
+      const entry = dayEntries[dayNumber] ?? emptyDay();
+      return {
+        dayNumber,
+        date: addDays(startDate, dayNumber - 1),
+        activities: entry.activities,
+        trailsHiked: entry.trails.map((t) => ({ ...t, dayNumber })),
+        wildlifeSightings: entry.wildlife,
+        weather: entry.weather,
+      };
+    });
 
   const handleSave = () => {
     if (!selectedParkId || !startDate) {
@@ -483,25 +973,23 @@ export default function LogTripScreen() {
       return;
     }
 
+    const days = buildDays();
+
     if (mode === 'complete' && completingTrip) {
-      const milesHiked = selectedTrails.length > 0
-        ? selectedTrails.reduce((acc, t) => acc + t.miles, 0)
-        : completingTrip.milesHiked;
-      const elevationGainFt = selectedTrails.length > 0
-        ? selectedTrails.reduce((acc, t) => acc + t.elevationGainFt, 0)
-        : completingTrip.elevationGainFt;
       completeTrip({
         ...completingTrip,
         parkId: selectedParkId,
         startDate,
         endDate: endDate || startDate,
-        activities: selectedActivities,
+        activities: [],
         notes,
         photos,
-        wildlifeSightings,
-        trailsHiked: selectedTrails,
-        milesHiked,
-        elevationGainFt,
+        wildlifeSightings: [],
+        trailsHiked: [],
+        milesHiked: undefined,
+        elevationGainFt: undefined,
+        rating: rating || undefined,
+        days,
       });
       showToast('Trip completed! Your passport is growing.', 'success');
       (navigation as any).navigate('TripsTab', { screen: 'Trips' });
@@ -509,25 +997,21 @@ export default function LogTripScreen() {
     }
 
     if (editingTrip) {
-      const milesHiked = selectedTrails.length > 0
-        ? selectedTrails.reduce((acc, t) => acc + t.miles, 0)
-        : editingTrip.milesHiked;
-      const elevationGainFt = selectedTrails.length > 0
-        ? selectedTrails.reduce((acc, t) => acc + t.elevationGainFt, 0)
-        : editingTrip.elevationGainFt;
       updateTrip({
         ...editingTrip,
         tripType: mode === 'plan' ? 'planned' : 'logged',
         parkId: selectedParkId,
         startDate,
         endDate: endDate || startDate,
-        activities: selectedActivities,
+        activities: [],
         notes,
         photos,
-        wildlifeSightings,
-        trailsHiked: selectedTrails,
-        milesHiked,
-        elevationGainFt,
+        wildlifeSightings: [],
+        trailsHiked: [],
+        milesHiked: undefined,
+        elevationGainFt: undefined,
+        rating: rating || undefined,
+        days,
       });
       showToast('Trip updated! Your changes have been saved.', 'success');
       (navigation as any).navigate('TripsTab', { screen: 'Trips' });
@@ -539,11 +1023,13 @@ export default function LogTripScreen() {
       tripType: mode === 'plan' ? 'planned' : 'logged',
       startDate,
       endDate: endDate || startDate,
-      activities: selectedActivities,
+      activities: [],
       notes,
       photos,
-      wildlifeSightings,
-      trailsHiked: selectedTrails,
+      wildlifeSightings: [],
+      trailsHiked: [],
+      rating: rating || undefined,
+      days,
     });
     // Alert.alert is a no-op on web (same limitation worked around in
     // SettingsScreen), so success feedback goes through the cross-platform
@@ -557,328 +1043,205 @@ export default function LogTripScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        {/* Header */}
-        <View style={styles.header}>
-          <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()} hitSlop={10}>
-            <BackArrowIcon />
-          </TouchableOpacity>
-          <Text style={styles.screenTitle}>
-            {mode === 'complete' ? 'Mark as Completed' : editingTrip ? 'Edit Trip' : mode === 'plan' ? 'Plan a Trip' : 'Log a Trip'}
-          </Text>
-          <View style={styles.backBtn} />
-        </View>
-
-        {/* Header illustration */}
-        <View style={styles.heroArea}>
-          <Image source={heroImage} style={styles.heroImage} resizeMode="contain" />
-        </View>
-
-        {/* Park selector */}
-        <Accordion
-          title="Which park?"
-          summary={selectedPark?.name ?? 'Select a park'}
-          expanded={!!expanded.park}
-          onToggle={() => toggleSection('park')}
+      {/* Header */}
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.backBtn}
+          onPress={() => (step === 'days' ? setStep('details') : navigation.goBack())}
+          hitSlop={10}
         >
-          <TouchableOpacity style={styles.selector} onPress={() => setShowParkPicker(!showParkPicker)}>
-            <Text style={styles.selectorText}>{selectedPark?.name ?? 'Select a park'}</Text>
-            <Text style={styles.selectorIcon}>{'▾'}</Text>
-          </TouchableOpacity>
-          {showParkPicker && (
-            <View style={styles.dropdown}>
-              <ScrollView style={{ maxHeight: 200 }} nestedScrollEnabled>
-                {sortedParks.map((p) => (
-                  <TouchableOpacity
-                    key={p.id}
-                    style={styles.dropdownItem}
-                    onPress={() => {
-                      setSelectedParkId(p.id);
-                      setShowParkPicker(false);
-                      setSelectedTrails([]);
-                      setEditingTrailKey(null);
-                    }}
-                  >
-                    <Text style={[styles.dropdownText, selectedParkId === p.id && styles.dropdownTextActive]}>{p.name}</Text>
+          <BackArrowIcon />
+        </TouchableOpacity>
+        <Text style={styles.screenTitle}>
+          {mode === 'complete' ? 'Mark as Completed' : editingTrip ? 'Edit Trip' : mode === 'plan' ? 'Plan a Trip' : 'Log a Trip'}
+        </Text>
+        <View style={styles.backBtn} />
+      </View>
+
+      {step === 'details' ? (
+        <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+          {/* Header illustration */}
+          <View style={styles.heroArea}>
+            <Image source={heroImage} style={styles.heroImage} resizeMode="contain" />
+          </View>
+
+          {/* Park selector */}
+          <Accordion
+            title="Which park?"
+            summary={selectedPark?.name ?? 'Select a park'}
+            expanded={!!expanded.park}
+            onToggle={() => toggleSection('park')}
+          >
+            <TouchableOpacity style={styles.selector} onPress={() => setShowParkPicker(!showParkPicker)}>
+              <Text style={styles.selectorText}>{selectedPark?.name ?? 'Select a park'}</Text>
+              <Text style={styles.selectorIcon}>{'▾'}</Text>
+            </TouchableOpacity>
+            {showParkPicker && (
+              <View style={styles.dropdown}>
+                <ScrollView style={{ maxHeight: 200 }} nestedScrollEnabled>
+                  {sortedParks.map((p) => (
+                    <TouchableOpacity
+                      key={p.id}
+                      style={styles.dropdownItem}
+                      onPress={() => {
+                        setSelectedParkId(p.id);
+                        setShowParkPicker(false);
+                        setDayEntries({});
+                      }}
+                    >
+                      <Text style={[styles.dropdownText, selectedParkId === p.id && styles.dropdownTextActive]}>{p.name}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              </View>
+            )}
+          </Accordion>
+
+          {/* Date */}
+          <Accordion
+            title={mode === 'plan' ? 'When are you planning to go?' : 'When did you go?'}
+            summary={startDate ? formatDateRange(startDate, endDate || startDate) : 'Not set'}
+            expanded={!!expanded.when}
+            onToggle={() => toggleSection('when')}
+          >
+            <DateRangePicker
+              startDate={startDate}
+              endDate={endDate}
+              onChange={(s, e) => {
+                setStartDate(s);
+                setEndDate(e);
+              }}
+            />
+          </Accordion>
+
+          {/* Notes */}
+          <Accordion
+            title="Notes / Memories"
+            summary={notes.trim() ? notes.trim() : 'Add notes'}
+            expanded={!!expanded.notes}
+            onToggle={() => toggleSection('notes')}
+          >
+            <View style={styles.notesBox}>
+              <TextInput
+                style={styles.notesInput}
+                placeholder="Amazing views! We saw elk and hiked to the waterfall."
+                placeholderTextColor={colors.textMuted}
+                multiline
+                maxLength={200}
+                value={notes}
+                onChangeText={setNotes}
+              />
+              <Text style={styles.charCount}>{notes.length}/200</Text>
+            </View>
+          </Accordion>
+
+          {/* Rating — trip-wide, not per-day, and only meaningful once
+              something's actually happened. */}
+          {mode !== 'plan' && (
+            <Accordion
+              title="Rate This Trip"
+              summary={rating ? `${rating} of 5 stars` : 'Not rated yet'}
+              expanded={!!expanded.rating}
+              onToggle={() => toggleSection('rating')}
+            >
+              <View style={styles.ratingRow}>
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <TouchableOpacity key={i} onPress={() => setRating(rating === i ? 0 : i)} hitSlop={6}>
+                    <RatingStarIcon filled={i <= rating} />
                   </TouchableOpacity>
                 ))}
-              </ScrollView>
-            </View>
+              </View>
+            </Accordion>
           )}
-        </Accordion>
 
-        {/* Date */}
-        <Accordion
-          title={mode === 'plan' ? 'When are you planning to go?' : 'When did you go?'}
-          summary={startDate ? formatDateRange(startDate, endDate || startDate) : 'Not set'}
-          expanded={!!expanded.when}
-          onToggle={() => toggleSection('when')}
-        >
-          <DateRangePicker
-            startDate={startDate}
-            endDate={endDate}
-            onChange={(s, e) => {
-              setStartDate(s);
-              setEndDate(e);
-            }}
-          />
-        </Accordion>
-
-        {/* Activities */}
-        <Accordion
-          title={mode === 'plan' ? 'What are you hoping to do?' : 'What did you do?'}
-          summary={selectedActivities.length ? selectedActivities.join(', ') : 'None selected yet'}
-          expanded={!!expanded.activities}
-          onToggle={() => toggleSection('activities')}
-        >
-          <View style={styles.activityGrid}>
-            {ACTIVITIES.map(({ label, render }) => {
-              const active = selectedActivities.includes(label);
-              const iconColor = active ? colors.textInverse : colors.brown;
-              return (
-                <TouchableOpacity
-                  key={label}
-                  style={[styles.activityChip, active && styles.activityChipActive]}
-                  onPress={() => toggleActivity(label)}
-                  activeOpacity={0.8}
-                >
-                  {render(iconColor)}
-                  <Text style={[styles.activityLabel, active && styles.activityLabelActive]}>{label}</Text>
-                </TouchableOpacity>
-              );
-            })}
-          </View>
-        </Accordion>
-
-        {mode !== 'plan' && (
-        <>
-        {/* Trails */}
-        <Accordion
-          title="Trails"
-          summary={selectedTrails.length ? `${selectedTrails.length} selected` : 'None yet'}
-          expanded={!!expanded.trails}
-          onToggle={() => toggleSection('trails')}
-        >
-          {parkTrails.length > 0 && (
-            <>
-            <Text style={styles.sublabel}>Which trails did you hike?</Text>
-            <View style={styles.trailList}>
-              {parkTrails.map((trail) => {
-                const active = selectedTrails.some((t) => t.trailId === trail.id);
-                return (
-                  <TouchableOpacity
-                    key={trail.id}
-                    style={[styles.trailChip, active && styles.trailChipActive]}
-                    onPress={() => toggleTrail(trail.id, trail.name, trail.miles, trail.elevationGainFt)}
-                    activeOpacity={0.8}
-                  >
-                    <Text style={[styles.trailChipName, active && styles.trailChipNameActive]}>{trail.name}</Text>
-                    <Text style={[styles.trailChipMeta, active && styles.trailChipMetaActive]}>
-                      {convertMiles(trail.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(trail.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
-                    </Text>
+          {/* Add Photos */}
+          {mode !== 'plan' && (
+            <Accordion
+              title="Add Photos"
+              summary={photos.length ? `${photos.length} of ${MAX_PHOTOS} added` : 'Add photos'}
+              expanded={!!expanded.photos}
+              onToggle={() => toggleSection('photos')}
+            >
+              <View style={styles.photoRow}>
+                {photos.map((uri) => (
+                  <TouchableOpacity key={uri} style={styles.photoThumbWrap} onPress={() => removePhoto(uri)} activeOpacity={0.8}>
+                    <Image source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
+                    <View style={styles.photoRemoveBadge}>
+                      <CloseIcon color={colors.textInverse} />
+                    </View>
                   </TouchableOpacity>
-                );
-              })}
-            </View>
-            </>
+                ))}
+                {photos.length < MAX_PHOTOS && (
+                  <TouchableOpacity style={[styles.photoThumb, styles.photoAdd]} onPress={pickPhoto} activeOpacity={0.8}>
+                    <Text style={styles.photoAddIcon}>+</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            </Accordion>
           )}
 
-          {/* Custom trail entry */}
-          <Text style={[styles.sublabel, styles.sublabelSpaced]}>Add a trail we don't have</Text>
-          <TextInput
-            style={[styles.wildlifeInput, styles.customTrailNameInput]}
-            placeholder="Trail name"
-            placeholderTextColor={colors.textMuted}
-            value={customTrailName}
-            onChangeText={setCustomTrailName}
+          <PrimaryButton
+            label="NEXT: DAY-BY-DAY"
+            icon={<TreeIcon color={colors.textInverse} />}
+            onPress={handleNext}
+            disabled={!canProceedToDays}
+            style={styles.saveBtn}
           />
-          <View style={styles.customTrailRow}>
-            <TextInput
-              style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-              placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
-              placeholderTextColor={colors.textMuted}
-              keyboardType="decimal-pad"
-              value={customTrailMiles}
-              onChangeText={setCustomTrailMiles}
-            />
-            <TextInput
-              style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-              placeholder={`Elev. ${elevationLabel(units)}`}
-              placeholderTextColor={colors.textMuted}
-              keyboardType="decimal-pad"
-              value={customTrailElevation}
-              onChangeText={setCustomTrailElevation}
-            />
-            <TouchableOpacity style={styles.wildlifeAddBtn} onPress={addCustomTrail} activeOpacity={0.8}>
-              <Text style={styles.wildlifeAddBtnText}>+</Text>
+        </ScrollView>
+      ) : (
+        <View style={styles.daysStepContainer}>
+          <View style={styles.daysHeaderRow}>
+            <View style={styles.daysHeaderText}>
+              <Text style={styles.daysHeaderTitle}>{selectedPark?.name}</Text>
+              <Text style={styles.daysHeaderSubtitle}>{formatDateRange(startDate, endDate || startDate)}</Text>
+            </View>
+            <TouchableOpacity onPress={() => setStep('details')} hitSlop={8}>
+              <Text style={styles.editDetailsLink}>Edit trip details</Text>
             </TouchableOpacity>
           </View>
 
-          {/* Selected trails — tap to log a partial distance */}
-          {selectedTrails.length > 0 && (
-            <>
-            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Your Trails</Text>
-            <View style={styles.trailSummaryList}>
-              {selectedTrails.map((entry) => {
-                const editing = editingTrailKey === trailKeyOf(entry);
-                return (
-                  <View key={trailKeyOf(entry)} style={styles.trailSummaryCard}>
-                    {editing ? (
-                      <>
-                        <Text style={styles.trailSummaryName}>{entry.name}</Text>
-                        <View style={styles.customTrailRow}>
-                          <TextInput
-                            style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-                            placeholder={distanceLabel(units) === 'mi' ? 'Miles' : 'Kilometers'}
-                            placeholderTextColor={colors.textMuted}
-                            keyboardType="decimal-pad"
-                            value={editMiles}
-                            onChangeText={setEditMiles}
-                            autoFocus
-                          />
-                          <TextInput
-                            style={[styles.wildlifeInput, styles.customTrailNumberInput]}
-                            placeholder={`Elev. ${elevationLabel(units)}`}
-                            placeholderTextColor={colors.textMuted}
-                            keyboardType="decimal-pad"
-                            value={editElevation}
-                            onChangeText={setEditElevation}
-                          />
-                          <TouchableOpacity style={styles.wildlifeAddBtn} onPress={() => saveEditTrail(entry)} activeOpacity={0.8}>
-                            <CheckIcon color={colors.textInverse} />
-                          </TouchableOpacity>
-                        </View>
-                      </>
-                    ) : (
-                      <TouchableOpacity style={styles.trailSummaryRow} onPress={() => startEditTrail(entry)} activeOpacity={0.7}>
-                        <View style={styles.trailSummaryText}>
-                          <Text style={styles.trailSummaryName}>{entry.name}</Text>
-                          <Text style={styles.trailSummaryMeta}>
-                            {convertMiles(entry.miles, units).toFixed(1)} {distanceLabel(units)} · {Math.round(convertFeet(entry.elevationGainFt, units)).toLocaleString()} {elevationLabel(units)} gain
-                          </Text>
-                        </View>
-                        <Text style={styles.trailSummaryEdit}>Edit</Text>
-                        <TouchableOpacity onPress={() => removeTrail(entry)} hitSlop={8}>
-                          <CloseIcon color={colors.orange} />
-                        </TouchableOpacity>
-                      </TouchableOpacity>
-                    )}
-                  </View>
-                );
-              })}
-            </View>
-            </>
-          )}
-        </Accordion>
+          <ScrollView
+            ref={dayScrollRef}
+            horizontal
+            pagingEnabled
+            showsHorizontalScrollIndicator={false}
+            onMomentumScrollEnd={handleDayScrollEnd}
+            onScroll={handleDayScroll}
+            scrollEventThrottle={32}
+            style={styles.dayPager}
+          >
+            {dayNumbers.map((dayNumber) => (
+              <DayPage
+                key={dayNumber}
+                dayNumber={dayNumber}
+                dateLabel={parseLocalDate(addDays(startDate, dayNumber - 1)).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                mode={mode}
+                units={units}
+                parkTrails={parkTrails}
+                parkAnimals={parkAnimals}
+                value={dayEntries[dayNumber] ?? emptyDay()}
+                onChange={(next) => setDayEntry(dayNumber, next)}
+                width={PAGE_WIDTH}
+              />
+            ))}
+          </ScrollView>
 
-        {/* Wildlife */}
-        <Accordion
-          title="Wildlife Spotted"
-          summary={wildlifeSightings.length ? `${wildlifeSightings.length} spotted` : 'None yet'}
-          expanded={!!expanded.wildlife}
-          onToggle={() => toggleSection('wildlife')}
-        >
-          {parkAnimals.length > 0 && (
-            <View style={styles.animalChipRow}>
-              {parkAnimals.map((animal) => {
-                const active = wildlifeSightings.some((w) => w.toLowerCase() === animal.name.toLowerCase());
-                return (
-                  <TouchableOpacity
-                    key={animal.id}
-                    style={[styles.animalChip, active && styles.animalChipActive]}
-                    onPress={() => toggleAnimal(animal.name)}
-                    activeOpacity={0.8}
-                  >
-                    <Text style={[styles.animalChipText, active && styles.animalChipTextActive]}>{animal.name}</Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          )}
-          <View style={styles.wildlifeInputRow}>
-            <TextInput
-              style={styles.wildlifeInput}
-              placeholder="e.g. Elk, Moose, Bald Eagle..."
-              placeholderTextColor={colors.textMuted}
-              value={wildlifeInput}
-              onChangeText={setWildlifeInput}
-              onSubmitEditing={addWildlifeSighting}
-              returnKeyType="done"
-            />
-            <TouchableOpacity style={styles.wildlifeAddBtn} onPress={addWildlifeSighting} activeOpacity={0.8}>
-              <Text style={styles.wildlifeAddBtnText}>+</Text>
-            </TouchableOpacity>
-          </View>
-          {wildlifeSightings.length > 0 && (
-            <View style={styles.wildlifeTagRow}>
-              {wildlifeSightings.map((sighting) => (
-                <View key={sighting} style={styles.wildlifeTag}>
-                  <Text style={styles.wildlifeTagText}>{sighting}</Text>
-                  <TouchableOpacity onPress={() => removeWildlifeSighting(sighting)} hitSlop={8}>
-                    <CloseIcon color={colors.orange} />
-                  </TouchableOpacity>
-                </View>
+          {dayCount > 1 && (
+            <View style={styles.dots}>
+              {dayNumbers.map((n, i) => (
+                <View key={n} style={[styles.dot, i === pageIndex && styles.dotActive]} />
               ))}
             </View>
           )}
-        </Accordion>
-        </>
-        )}
 
-        {/* Notes */}
-        <Accordion
-          title="Notes / Memories"
-          summary={notes.trim() ? notes.trim() : 'Add notes'}
-          expanded={!!expanded.notes}
-          onToggle={() => toggleSection('notes')}
-        >
-          <View style={styles.notesBox}>
-            <TextInput
-              style={styles.notesInput}
-              placeholder="Amazing views! We saw elk and hiked to the waterfall."
-              placeholderTextColor={colors.textMuted}
-              multiline
-              maxLength={200}
-              value={notes}
-              onChangeText={setNotes}
-            />
-            <Text style={styles.charCount}>{notes.length}/200</Text>
-          </View>
-        </Accordion>
-
-        {/* Add Photos */}
-        {mode !== 'plan' && (
-        <Accordion
-          title="Add Photos"
-          summary={photos.length ? `${photos.length} of ${MAX_PHOTOS} added` : 'Add photos'}
-          expanded={!!expanded.photos}
-          onToggle={() => toggleSection('photos')}
-        >
-          <View style={styles.photoRow}>
-            {photos.map((uri) => (
-              <TouchableOpacity key={uri} style={styles.photoThumbWrap} onPress={() => removePhoto(uri)} activeOpacity={0.8}>
-                <Image source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
-                <View style={styles.photoRemoveBadge}>
-                  <CloseIcon color={colors.textInverse} />
-                </View>
-              </TouchableOpacity>
-            ))}
-            {photos.length < MAX_PHOTOS && (
-              <TouchableOpacity style={[styles.photoThumb, styles.photoAdd]} onPress={pickPhoto} activeOpacity={0.8}>
-                <Text style={styles.photoAddIcon}>+</Text>
-              </TouchableOpacity>
-            )}
-          </View>
-        </Accordion>
-        )}
-
-        <PrimaryButton
-          label={mode === 'complete' ? 'MARK AS COMPLETED' : mode === 'plan' ? 'SAVE PLAN' : editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
-          icon={<TreeIcon color={colors.textInverse} />}
-          onPress={handleSave}
-          style={styles.saveBtn}
-        />
-      </ScrollView>
+          <PrimaryButton
+            label={mode === 'complete' ? 'MARK AS COMPLETED' : mode === 'plan' ? 'SAVE PLAN' : editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
+            icon={<TreeIcon color={colors.textInverse} />}
+            onPress={handleSave}
+            style={styles.saveBtn}
+          />
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -999,4 +1362,58 @@ const styles = StyleSheet.create({
   },
 
   saveBtn: { marginHorizontal: spacing.xl },
+
+  viewpointList: { gap: spacing.md, marginTop: spacing.md },
+  viewpointRow: { gap: spacing.xs },
+  viewpointLabel: { ...typography.labelSmall, color: colors.textSecondary },
+
+  weatherRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+  weatherChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+    backgroundColor: colors.surface,
+    borderRadius: radius.full,
+    borderWidth: 2,
+    borderColor: colors.border,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+  },
+  weatherChipActive: { borderColor: colors.primary, backgroundColor: colors.primary },
+  weatherChipLabel: { ...typography.labelSmall, color: colors.textSecondary },
+  weatherChipLabelActive: { color: colors.textInverse },
+
+  ratingRow: { flexDirection: 'row', gap: spacing.sm },
+
+  // Step 2 — the day-by-day pager. `daysStepContainer` fills the remaining
+  // screen height (unlike step 1's ScrollView) so the horizontal pager has a
+  // fixed height to page within.
+  daysStepContainer: { flex: 1 },
+  daysHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: spacing.xl,
+    paddingBottom: spacing.md,
+  },
+  daysHeaderText: { flex: 1 },
+  daysHeaderTitle: { ...typography.labelBold, color: colors.textPrimary },
+  daysHeaderSubtitle: { ...typography.bodySmall, color: colors.textSecondary, marginTop: 2 },
+  editDetailsLink: { ...typography.labelSmall, color: colors.sage },
+
+  dayPager: { flex: 1, width: PAGE_WIDTH, alignSelf: 'center' },
+  dayPage: {
+    flex: 1,
+    backgroundColor: colors.surface,
+    borderRadius: radius.lg,
+    marginBottom: spacing.md,
+    overflow: 'hidden',
+    ...shadows.sm,
+  },
+  dayPageContent: { padding: spacing.lg },
+  dayPageTitle: { ...typography.h4, color: colors.textPrimary, marginBottom: spacing.md },
+
+  dots: { flexDirection: 'row', gap: spacing.xs, justifyContent: 'center', paddingVertical: spacing.md },
+  dot: { width: 6, height: 6, borderRadius: radius.full, backgroundColor: colors.border },
+  dotActive: { backgroundColor: colors.primary, width: 18 },
 });

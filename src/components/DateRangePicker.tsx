@@ -14,6 +14,9 @@ const MONTH_LABELS = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
 ];
+const MONTH_ABBREVIATIONS = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+];
 
 function toDateKey(date: Date): string {
   const y = date.getFullYear();
@@ -42,6 +45,11 @@ export default function DateRangePicker({ startDate, endDate, onChange }: Props)
     const base = startDate ? new Date(startDate) : new Date();
     return new Date(base.getFullYear(), base.getMonth(), 1);
   });
+  // Tapping the month/year label swaps the day grid for a year-stepper +
+  // month grid — jumping years one arrow tap at a time instead of clicking
+  // through every month is what makes entering an old past trip practical.
+  const [pickerMode, setPickerMode] = useState<'days' | 'months'>('days');
+  const [pickerYear, setPickerYear] = useState(() => viewMonth.getFullYear());
 
   const handleDayPress = (key: string) => {
     if (!startDate || endDate) {
@@ -66,6 +74,40 @@ export default function DateRangePicker({ startDate, endDate, onChange }: Props)
 
   const rangeEnd = endDate || startDate;
 
+  if (pickerMode === 'months') {
+    return (
+      <View>
+        <View style={styles.monthHeader}>
+          <TouchableOpacity hitSlop={10} onPress={() => setPickerYear((y) => y - 1)} style={styles.monthArrow}>
+            <ArrowIcon direction="left" />
+          </TouchableOpacity>
+          <Text style={styles.monthLabel}>{pickerYear}</Text>
+          <TouchableOpacity hitSlop={10} onPress={() => setPickerYear((y) => y + 1)} style={styles.monthArrow}>
+            <ArrowIcon direction="right" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.monthGrid}>
+          {MONTH_ABBREVIATIONS.map((label, i) => {
+            const isCurrentView = i === month && pickerYear === year;
+            return (
+              <TouchableOpacity
+                key={label}
+                style={[styles.monthCell, isCurrentView && styles.monthCellActive]}
+                onPress={() => {
+                  setViewMonth(new Date(pickerYear, i, 1));
+                  setPickerMode('days');
+                }}
+                activeOpacity={0.75}
+              >
+                <Text style={[styles.monthCellText, isCurrentView && styles.monthCellTextActive]}>{label}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+      </View>
+    );
+  }
+
   return (
     <View>
       <View style={styles.monthHeader}>
@@ -76,7 +118,15 @@ export default function DateRangePicker({ startDate, endDate, onChange }: Props)
         >
           <ArrowIcon direction="left" />
         </TouchableOpacity>
-        <Text style={styles.monthLabel}>{MONTH_LABELS[month]} {year}</Text>
+        <TouchableOpacity
+          hitSlop={10}
+          onPress={() => {
+            setPickerYear(year);
+            setPickerMode('months');
+          }}
+        >
+          <Text style={styles.monthLabel}>{MONTH_LABELS[month]} {year}</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           hitSlop={10}
           onPress={() => setViewMonth(new Date(year, month + 1, 1))}
@@ -160,4 +210,18 @@ const styles = StyleSheet.create({
   dayCellEnd: { backgroundColor: colors.primary, borderRadius: radius.full },
   dayText: { ...typography.bodySmall, color: colors.textPrimary },
   dayTextSelected: { color: colors.textInverse, fontFamily: typography.labelBold.fontFamily },
+
+  monthGrid: { flexDirection: 'row', flexWrap: 'wrap' },
+  monthCell: {
+    width: `${100 / 3}%`,
+    paddingVertical: spacing.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  monthCellActive: {
+    backgroundColor: colors.primary,
+    borderRadius: radius.lg,
+  },
+  monthCellText: { ...typography.bodySmall, color: colors.textPrimary },
+  monthCellTextActive: { color: colors.textInverse, fontFamily: typography.labelBold.fontFamily },
 });

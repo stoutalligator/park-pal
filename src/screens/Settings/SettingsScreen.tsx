@@ -22,7 +22,7 @@ const SETTINGS_ROWS = [
   {
     section: 'About',
     items: [
-      { label: 'About Park Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png'), screen: 'About' },
+      { label: 'About Parks Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png'), screen: 'About' },
       { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png'), screen: 'PrivacyPolicy' },
     ],
   },

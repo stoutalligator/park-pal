@@ -66,7 +66,14 @@ export default function ProfileScreen() {
   const [pickerVisible, setPickerVisible] = useState(false);
   const [avatarPickerVisible, setAvatarPickerVisible] = useState(false);
 
-  const recentTrips = trips.slice(0, 3);
+  const recentTrips = trips
+    .filter((t) => t.tripType === 'logged')
+    .sort((a, b) => b.startDate.localeCompare(a.startDate))
+    .slice(0, 3);
+  const plannedTrips = trips
+    .filter((t) => t.tripType === 'planned')
+    .sort((a, b) => a.startDate.localeCompare(b.startDate))
+    .slice(0, 3);
   const earnedBadges = badges.filter((b) => b.earned);
 
   const heroSource = BACKGROUND_BY_KEY[userProfile.profileBackground] ?? BACKGROUND_BY_KEY['mountain-lake'];
@@ -142,6 +149,29 @@ export default function ProfileScreen() {
           ) : (
             <TouchableOpacity onPress={() => navigation.navigate('LogTrip')} activeOpacity={0.7}>
               <Text style={styles.emptyText}>No Recent Trips, log one here</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+
+        {/* Planned Trips */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Planned Trips</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('TripsTab')}>
+              <Text style={styles.viewAll}>View All</Text>
+            </TouchableOpacity>
+          </View>
+          {plannedTrips.length > 0 ? (
+            plannedTrips.map((trip) => (
+              <TripCard
+                key={trip.id}
+                trip={trip}
+                onPress={() => navigation.navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })}
+              />
+            ))
+          ) : (
+            <TouchableOpacity onPress={() => navigation.navigate('LogTrip')} activeOpacity={0.7}>
+              <Text style={styles.emptyText}>No Planned Trips, log one here</Text>
             </TouchableOpacity>
           )}
         </View>

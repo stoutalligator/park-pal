@@ -11,14 +11,14 @@ export default function AboutScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScreenHeader title="About Park Pal" onBack={() => navigation.goBack()} />
+      <ScreenHeader title="About Parks Pal" onBack={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <Image source={require('@/assets/mascot/mascot-happy.png')} style={styles.mascot} resizeMode="contain" />
-        <Text style={styles.title}>Park Pal</Text>
+        <Text style={styles.title}>Parks Pal</Text>
         <Text style={styles.version}>v1.0.0</Text>
         <Text style={styles.motto}>COLLECT. EXPLORE. REMEMBER.</Text>
         <Text style={styles.body}>
-          Park Pal is your cozy companion for tracking every U.S. National Park you visit. Log
+          Parks Pal is your cozy companion for tracking every U.S. National Park you visit. Log
           trips, save memories, collect digital passport stamps, and watch your progress toward
           all 63 parks fill in — one adventure at a time.
         </Text>

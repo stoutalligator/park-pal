@@ -91,6 +91,11 @@ export default function UsMap({ parks, onPressPark }: Props) {
   // Scale so the map fills the available height exactly (no vertical
   // letterboxing or scrolling); width naturally overflows and is reached
   // by panning horizontally, since Alaska/the islands sit at its edges.
+  // Pinch-to-zoom is handled by the ScrollView's own native zoom (iOS only —
+  // that's the platform this ships to the store on; Android/web just keep
+  // the existing pan-only behavior, no regression there either) rather than
+  // a hand-rolled gesture-handler reimplementation, since a custom Pan
+  // gesture over the pins ended up swallowing taps meant for them.
   const scale = viewportHeight > 0 ? viewportHeight / CROPPED_HEIGHT : 0;
   const displayWidth = CROPPED_WIDTH * scale;
   const imageDisplayHeight = IMAGE_HEIGHT * scale;
@@ -112,6 +117,9 @@ export default function UsMap({ parks, onPressPark }: Props) {
           showsHorizontalScrollIndicator={false}
           style={styles.scroll}
           contentContainerStyle={{ width: displayWidth }}
+          minimumZoomScale={1}
+          maximumZoomScale={3}
+          bouncesZoom
         >
           <View style={{ width: displayWidth, height: viewportHeight, overflow: 'hidden' }}>
             <Image

@@ -11,12 +11,43 @@ import { getParkScene } from '@/data/parkImages';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 import { parseLocalDate, daysUntilLabel } from '@/utils/dates';
 import PrimaryButton from '@/components/PrimaryButton';
+import {
+  WeatherSunnyIcon,
+  WeatherPartlyCloudyIcon,
+  WeatherCloudyIcon,
+  WeatherRainyIcon,
+  WeatherStormyIcon,
+  WeatherSnowyIcon,
+} from '@/screens/LogTrip/LogTripScreen';
+import { WeatherType } from '@/types';
 
 type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
 
 function formatDate(d: string) {
   return parseLocalDate(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
+
+function formatDayDate(d: string) {
+  return parseLocalDate(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+const WEATHER_ICONS: Record<WeatherType, (color: string) => React.ReactElement> = {
+  Sunny: (c) => <WeatherSunnyIcon color={c} size={18} />,
+  PartlyCloudy: (c) => <WeatherPartlyCloudyIcon color={c} size={18} />,
+  Cloudy: (c) => <WeatherCloudyIcon color={c} size={18} />,
+  Rainy: (c) => <WeatherRainyIcon color={c} size={18} />,
+  Stormy: (c) => <WeatherStormyIcon color={c} size={18} />,
+  Snowy: (c) => <WeatherSnowyIcon color={c} size={18} />,
+};
+
+const WEATHER_LABELS: Record<WeatherType, string> = {
+  Sunny: 'Sunny',
+  PartlyCloudy: 'Partly Cloudy',
+  Cloudy: 'Cloudy',
+  Rainy: 'Rainy',
+  Stormy: 'Stormy',
+  Snowy: 'Snowy',
+};
 
 function BackArrowIcon() {
   return (
@@ -130,8 +161,9 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             </View>
           )}
 
-          {/* Activities */}
-          {trip.activities.length > 0 && (
+          {/* Activities — legacy trips only; day-by-day trips show activities
+              per-day below instead. */}
+          {!trip.days?.length && trip.activities.length > 0 && (
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>{planned ? 'Planned Activities' : 'Activities'}</Text>
               <View style={styles.tagRow}>
@@ -166,32 +198,93 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             </View>
           )}
 
-          {/* Trails Hiked */}
-          {trip.trailsHiked && trip.trailsHiked.length > 0 && (
+          {trip.days?.length ? (
+            /* Day-by-day breakdown — trips saved through the new per-day
+               flow show one section per day instead of the flat
+               activities/trails/wildlife rows above. */
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Trails Hiked</Text>
-              <View style={styles.tagRow}>
-                {trip.trailsHiked.map((t) => (
-                  <View key={t.trailId ?? t.name} style={styles.tag}>
-                    <Text style={styles.tagText}>{t.name} · {convertMiles(t.miles, units).toFixed(1)} {distanceLabel(units)}</Text>
+              <Text style={styles.sectionTitle}>Day by Day</Text>
+              {trip.days.map((day) => (
+                <View key={day.dayNumber} style={styles.dayCard}>
+                  <View style={styles.dayCardHeader}>
+                    <Text style={styles.dayCardTitle}>Day {day.dayNumber} · {formatDayDate(day.date)}</Text>
+                    {day.weather && (
+                      <View style={styles.dayWeather}>
+                        {WEATHER_ICONS[day.weather](colors.textSecondary)}
+                        <Text style={styles.dayWeatherLabel}>{WEATHER_LABELS[day.weather]}</Text>
+                      </View>
+                    )}
                   </View>
-                ))}
-              </View>
-            </View>
-          )}
 
-          {/* Wildlife */}
-          {trip.wildlifeSightings && trip.wildlifeSightings.length > 0 && (
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Wildlife Spotted</Text>
-              <View style={styles.tagRow}>
-                {trip.wildlifeSightings.map((w) => (
-                  <View key={w} style={[styles.tag, styles.tagWildlife]}>
-                    <Text style={[styles.tagText, styles.tagTextWildlife]}>{w}</Text>
-                  </View>
-                ))}
-              </View>
+                  {day.activities.length > 0 && (
+                    <View style={styles.tagRow}>
+                      {day.activities.map((a) => (
+                        <View key={a.activity} style={styles.tag}>
+                          <Text style={styles.tagText}>{a.activity}</Text>
+                          {a.viewpoint ? <Text style={styles.tagCaption}>{a.viewpoint}</Text> : null}
+                        </View>
+                      ))}
+                    </View>
+                  )}
+
+                  {day.trailsHiked.length > 0 && (
+                    <View style={[styles.tagRow, styles.dayCardRowSpaced]}>
+                      {day.trailsHiked.map((t) => (
+                        <View key={t.trailId ?? t.name} style={styles.tag}>
+                          <Text style={styles.tagText}>
+                            {t.name} · {convertMiles(t.miles, units).toFixed(1)} {distanceLabel(units)}
+                            {t.elevationGainFt ? ` · ${Math.round(convertFeet(t.elevationGainFt, units)).toLocaleString()} ${elevationLabel(units)} gain` : ''}
+                          </Text>
+                        </View>
+                      ))}
+                    </View>
+                  )}
+
+                  {day.wildlifeSightings.length > 0 && (
+                    <View style={[styles.tagRow, styles.dayCardRowSpaced]}>
+                      {day.wildlifeSightings.map((w) => (
+                        <View key={w} style={[styles.tag, styles.tagWildlife]}>
+                          <Text style={[styles.tagText, styles.tagTextWildlife]}>{w}</Text>
+                        </View>
+                      ))}
+                    </View>
+                  )}
+                </View>
+              ))}
             </View>
+          ) : (
+            <>
+              {/* Trails Hiked */}
+              {trip.trailsHiked && trip.trailsHiked.length > 0 && (
+                <View style={styles.section}>
+                  <Text style={styles.sectionTitle}>Trails Hiked</Text>
+                  <View style={styles.tagRow}>
+                    {trip.trailsHiked.map((t) => (
+                      <View key={t.trailId ?? t.name} style={styles.tag}>
+                        <Text style={styles.tagText}>
+                          {t.name} · {convertMiles(t.miles, units).toFixed(1)} {distanceLabel(units)}
+                          {t.elevationGainFt ? ` · ${Math.round(convertFeet(t.elevationGainFt, units)).toLocaleString()} ${elevationLabel(units)} gain` : ''}
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                </View>
+              )}
+
+              {/* Wildlife */}
+              {trip.wildlifeSightings && trip.wildlifeSightings.length > 0 && (
+                <View style={styles.section}>
+                  <Text style={styles.sectionTitle}>Wildlife Spotted</Text>
+                  <View style={styles.tagRow}>
+                    {trip.wildlifeSightings.map((w) => (
+                      <View key={w} style={[styles.tag, styles.tagWildlife]}>
+                        <Text style={[styles.tagText, styles.tagTextWildlife]}>{w}</Text>
+                      </View>
+                    ))}
+                  </View>
+                </View>
+              )}
+            </>
           )}
 
           {/* Stats */}
@@ -254,6 +347,21 @@ const styles = StyleSheet.create({
   tagWildlife: { backgroundColor: colors.surfaceWarm },
   tagText: { ...typography.labelSmall, color: colors.primary },
   tagTextWildlife: { color: colors.orange },
+  tagCaption: { ...typography.caption, color: colors.textSecondary, marginTop: 2 },
+
+  dayCard: {
+    backgroundColor: colors.surface,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    marginTop: spacing.md,
+    gap: spacing.sm,
+    ...shadows.sm,
+  },
+  dayCardHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  dayCardTitle: { ...typography.labelBold, color: colors.textPrimary },
+  dayCardRowSpaced: { marginTop: spacing.xs },
+  dayWeather: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs },
+  dayWeatherLabel: { ...typography.caption, color: colors.textSecondary },
   journalCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, ...shadows.sm },
   journalText: { ...typography.body, color: colors.textPrimary, lineHeight: 22 },
   photoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },

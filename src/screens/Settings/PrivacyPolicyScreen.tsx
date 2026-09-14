@@ -11,7 +11,7 @@ const SECTIONS = [
   },
   {
     title: 'How We Use It',
-    body: 'Solely to power your Park Pal passport — tracking progress, showing your trip history, and calculating stats and badges. We do not sell your data.',
+    body: 'Solely to power your Parks Pal passport — tracking progress, showing your trip history, and calculating stats and badges. We do not sell your data.',
   },
   {
     title: 'Where It Lives',

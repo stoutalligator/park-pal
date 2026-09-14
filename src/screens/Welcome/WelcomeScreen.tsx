@@ -34,6 +34,7 @@ export default function WelcomeScreen({ navigation }: Props) {
 
       <SafeAreaView style={styles.overlay}>
         <View style={styles.topContent}>
+          <Text style={styles.wordmark}>PARKS PAL</Text>
           <Text style={styles.eyebrow}>NATIONAL PARK</Text>
           <Text style={styles.title}>TRACKER</Text>
           <Text style={styles.subtitle}>{'Collect memories.\nExplore more.'}</Text>
@@ -89,6 +90,12 @@ const styles = StyleSheet.create({
   },
   topContent: {
     alignItems: 'center',
+  },
+  wordmark: {
+    ...typography.labelBold,
+    color: colors.brownDark,
+    letterSpacing: 3,
+    marginBottom: spacing.sm,
   },
   eyebrow: {
     ...typography.h5,

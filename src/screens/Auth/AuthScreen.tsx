@@ -221,7 +221,7 @@ export default function AuthScreen({ navigation }: Props) {
       return;
     }
     if (mode === 'Sign Up' && !betaKey.trim()) {
-      setErrorMessage('Park Pal is in a closed beta right now — enter your beta key to sign up.');
+      setErrorMessage('Parks Pal is in a closed beta right now — enter your beta key to sign up.');
       return;
     }
     setSubmitting(true);
@@ -311,7 +311,7 @@ export default function AuthScreen({ navigation }: Props) {
           <>
         <Text style={styles.title}>{mode === 'Log In' ? 'Welcome Back' : 'Create Your Account'}</Text>
         <Text style={styles.subtitle}>
-          {mode === 'Log In' ? 'Log in to keep tracking your adventures.' : 'Join Park Pal and start your journey.'}
+          {mode === 'Log In' ? 'Log in to keep tracking your adventures.' : 'Join Parks Pal and start your journey.'}
         </Text>
 
         <View style={styles.toggleRow}>

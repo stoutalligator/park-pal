@@ -58,7 +58,7 @@ Decision: hold off on the Apple $99/year and public store listings until the app
 ## 1. Listing Copy
 
 ### App name
-**Park Pal** (bundle already registered as `com.parkpal.app` under this name — keep as-is on both stores)
+**Parks Pal** (the internal bundle identifier stays `com.parkpal.app` — that's not user-visible and doesn't need to change; only the display name shown on the store listing and home screen is "Parks Pal")
 
 ### iOS Subtitle (30 char limit)
 `Your National Park Passport`
@@ -74,9 +74,9 @@ Decision: hold off on the Apple $99/year and public store listings until the app
 
 ### Full Description (works for both stores, ~1500 chars — well under either 4000-char cap)
 ```
-Park Pal is your cozy companion for exploring America's National Parks.
+Parks Pal is your cozy companion for exploring America's National Parks.
 
-Whether you're checking parks off your bucket list or reliving trips you've already taken, Park Pal helps you track it all:
+Whether you're checking parks off your bucket list or reliving trips you've already taken, Parks Pal helps you track it all:
 
 COLLECT
 Mark every park you've visited and watch your progress fill in toward all 63 U.S. National Parks.
@@ -89,7 +89,7 @@ Log completed trips with photos, notes, trail hikes, and wildlife sightings — 
 
 Along the way, collect digital passport stamps and earn badges for milestones like your first hike, your first camping trip, or reaching a new region.
 
-Park Pal keeps your data private and synced to your own account — no ads, no tracking, no selling your data. Just a simple, illustrated way to keep your park adventures organized.
+Parks Pal keeps your data private and synced to your own account — no ads, no tracking, no selling your data. Just a simple, illustrated way to keep your park adventures organized.
 
 COLLECT. EXPLORE. REMEMBER.
 ```

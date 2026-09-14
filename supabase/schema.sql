@@ -155,6 +155,9 @@ create table public.user_trail_completions (
   name text not null,
   miles numeric not null,
   elevation_gain_ft int not null default 0,
+  -- Which day of the trip this happened on (1-indexed from trip.start_date).
+  -- Nullable so older rows, logged before per-day tracking existed, stay valid.
+  day_number smallint,
   completed_at timestamptz not null default now()
 );
 
@@ -165,7 +168,29 @@ create table public.user_animal_sightings (
   trip_id uuid references public.trips(id) on delete cascade,
   park_id text not null references public.parks(id) on delete cascade,
   name text not null,
+  day_number smallint,
   spotted_at timestamptz not null default now()
+);
+
+-- Activities are per-day (unlike the legacy `trips.activities` text[], which
+-- is still written as a flattened aggregate for backward compatibility with
+-- badge rules) so each one can carry its own optional free-text viewpoint —
+-- "watched sunset from Clingmans Dome" rather than just "Sunset".
+create table public.trip_day_activities (
+  id uuid primary key default gen_random_uuid(),
+  trip_id uuid not null references public.trips(id) on delete cascade,
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  day_number smallint not null,
+  activity text not null,
+  viewpoint text
+);
+
+create table public.trip_day_weather (
+  trip_id uuid not null references public.trips(id) on delete cascade,
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  day_number smallint not null,
+  weather text not null,
+  primary key (trip_id, day_number)
 );
 
 -- ---------------------------------------------------------------------------
@@ -183,6 +208,8 @@ alter table public.trails enable row level security;
 alter table public.animals enable row level security;
 alter table public.user_trail_completions enable row level security;
 alter table public.user_animal_sightings enable row level security;
+alter table public.trip_day_activities enable row level security;
+alter table public.trip_day_weather enable row level security;
 
 -- Reference data: readable by anyone, no client writes (seeded via SQL only).
 create policy "parks are publicly readable" on public.parks
@@ -223,6 +250,12 @@ create policy "users manage their own trail completions" on public.user_trail_co
 create policy "users manage their own animal sightings" on public.user_animal_sightings
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+create policy "users manage their own trip day activities" on public.trip_day_activities
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+create policy "users manage their own trip day weather" on public.trip_day_weather
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
 -- ---------------------------------------------------------------------------
 -- Base privileges
 --
@@ -246,6 +279,8 @@ grant select, insert, update, delete on public.trip_photos to authenticated;
 grant select, insert, update, delete on public.user_badges to authenticated;
 grant select, insert, update, delete on public.user_trail_completions to authenticated;
 grant select, insert, update, delete on public.user_animal_sightings to authenticated;
+grant select, insert, update, delete on public.trip_day_activities to authenticated;
+grant select, insert, update, delete on public.trip_day_weather to authenticated;
 
 -- service_role is the trusted backend/admin key (used only by scripts/*.mjs,
 -- never shipped to the app) — it should have unrestricted access to

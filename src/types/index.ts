@@ -45,9 +45,30 @@ export interface TripTrailEntry {
   name: string;
   miles: number;
   elevationGainFt: number;
+  dayNumber?: number;
 }
 
 export type TripType = 'planned' | 'logged';
+
+export type WeatherType = 'Sunny' | 'PartlyCloudy' | 'Cloudy' | 'Rainy' | 'Stormy' | 'Snowy';
+
+export interface TripDayActivity {
+  activity: ActivityType;
+  viewpoint?: string;
+}
+
+// One entry per calendar day of a trip — the day-by-day breakdown of what
+// happened (or, for a planned trip, what's hoped for) where and when.
+// `date` is always derived from `trip.startDate + (dayNumber - 1)`, never
+// stored directly, so editing a trip's dates can't leave it out of sync.
+export interface TripDayEntry {
+  dayNumber: number;
+  date: string;
+  activities: TripDayActivity[];
+  trailsHiked: TripTrailEntry[];
+  wildlifeSightings: string[];
+  weather?: WeatherType;
+}
 
 export interface Trip {
   id: string;
@@ -65,6 +86,10 @@ export interface Trip {
   rating?: number;
   milesHiked?: number;
   elevationGainFt?: number;
+  /** Per-day breakdown — only present for trips saved through the day-by-day
+   * flow. Absent/empty for older trips, which fall back to the flat fields
+   * above for display. */
+  days?: TripDayEntry[];
 }
 
 export type TrailDifficulty = 'Easy' | 'Moderate' | 'Hard';
