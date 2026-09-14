@@ -19,7 +19,7 @@ type Mode = 'Log In' | 'Sign Up';
 // a web page rather than a route inside the app itself. Supabase's default
 // "Reset Password" email template can't be edited without custom SMTP, so
 // this uses that default template's built-in link, unmodified.
-const RESET_PASSWORD_URL = 'https://claude.ai/code/artifact/bdec2da6-f3d3-44fb-a399-12ab63bd9a8a';
+const RESET_PASSWORD_URL = 'https://parks-pal.com/reset-password';
 
 function BackArrowIcon() {
   return (
