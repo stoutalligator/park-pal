@@ -4,32 +4,28 @@ import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
 import { getParkById } from '@/data/parks';
 import { getParkImage } from '@/data/parkImages';
-import { parseLocalDate } from '@/utils/dates';
+import { formatDateRange, daysUntilLabel } from '@/utils/dates';
 
 interface Props {
   trip: Trip;
   onPress: () => void;
 }
 
-function formatDateRange(start: string, end: string): string {
-  const s = parseLocalDate(start);
-  const e = parseLocalDate(end);
-  const opts: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
-  return `${s.toLocaleDateString('en-US', opts)} – ${e.toLocaleDateString('en-US', { ...opts, year: 'numeric' })}`;
-}
-
 export default function TripCard({ trip, onPress }: Props) {
   const park = getParkById(trip.parkId);
+  const planned = trip.tripType === 'planned';
 
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={styles.card}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={[styles.card, planned && styles.cardPlanned]}>
       <View style={styles.imageBox}>
         <Image source={getParkImage(trip.parkId)} style={styles.parkIcon} resizeMode="cover" />
       </View>
       <View style={styles.content}>
         <Text style={styles.parkName} numberOfLines={1}>{park?.name ?? 'Unknown Park'}</Text>
         <Text style={styles.dates}>{formatDateRange(trip.startDate, trip.endDate)}</Text>
-        {trip.notes ? (
+        {planned ? (
+          <Text style={styles.daysUntil}>{daysUntilLabel(trip.startDate)}</Text>
+        ) : trip.notes ? (
           <Text style={styles.notes} numberOfLines={1}>{trip.notes}</Text>
         ) : null}
       </View>
@@ -48,6 +44,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
     gap: spacing.md,
     ...shadows.sm,
+  },
+  cardPlanned: {
+    borderLeftWidth: 3,
+    borderLeftColor: colors.sky,
   },
   imageBox: {
     width: 56,
@@ -77,6 +77,10 @@ const styles = StyleSheet.create({
   notes: {
     ...typography.caption,
     color: colors.textMuted,
+  },
+  daysUntil: {
+    ...typography.labelSmall,
+    color: colors.sky,
   },
   chevron: {
     fontSize: 22,

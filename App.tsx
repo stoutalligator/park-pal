@@ -8,6 +8,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import { AppProvider } from '@/context/AppContext';
 import RootNavigator from '@/navigation/RootNavigator';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import { ToastHost } from '@/components/Toast';
 import { colors, radius, shadows } from '@/theme';
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
             <NavigationContainer>
               <RootNavigator />
             </NavigationContainer>
+            <ToastHost />
           </AppProvider>
         </ErrorBoundary>
       </SafeAreaProvider>

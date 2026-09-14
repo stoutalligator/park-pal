@@ -11,9 +11,9 @@ import { colors } from '@/theme';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
-  const { session, authLoading } = useApp();
+  const { session, authLoading, dataLoading } = useApp();
 
-  if (authLoading) {
+  if (authLoading || dataLoading) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
         <ActivityIndicator color={colors.primary} />

@@ -33,12 +33,12 @@ const GOALS: { label: ExplorerGoal; render: (color: string) => React.ReactElemen
 ];
 
 export default function EditGoalScreen() {
-  const { userProfile, completeOnboarding } = useApp();
+  const { userProfile, updateProfile } = useApp();
   const navigation = useNavigation<any>();
   const [selectedGoal, setSelectedGoal] = useState<ExplorerGoal | undefined>(userProfile.goal);
 
   const handleSave = () => {
-    completeOnboarding({ goal: selectedGoal });
+    updateProfile({ goal: selectedGoal });
     navigation.goBack();
   };
 

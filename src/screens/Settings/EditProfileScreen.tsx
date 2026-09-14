@@ -55,13 +55,13 @@ const STYLES: { label: ExplorerStyle; render: (color: string) => React.ReactElem
 ];
 
 export default function EditProfileScreen() {
-  const { userProfile, completeOnboarding } = useApp();
+  const { userProfile, updateProfile } = useApp();
   const navigation = useNavigation<any>();
   const [name, setName] = useState(userProfile.name);
   const [selectedStyle, setSelectedStyle] = useState<ExplorerStyle | undefined>(userProfile.explorerStyle);
 
   const handleSave = () => {
-    completeOnboarding({
+    updateProfile({
       name: name.trim() || userProfile.name,
       explorerStyle: selectedStyle,
     });

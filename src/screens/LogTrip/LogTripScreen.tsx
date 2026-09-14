@@ -9,7 +9,11 @@ import { ActivityType, TripTrailEntry, TrailDifficulty, AnimalRarity } from '@/t
 import { ALL_TRAILS } from '@/data/trails';
 import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
+import DateRangePicker from '@/components/DateRangePicker';
 import { convertMiles, convertFeet, toMiles, toFeet, distanceLabel, elevationLabel } from '@/utils/units';
+import { formatDateRange } from '@/utils/dates';
+
+type FormMode = 'plan' | 'log' | 'complete';
 
 const HERO_ACTIVITY_IMAGES: number[] = [
   require('@/assets/activities/bear-hiking.png'),
@@ -44,7 +48,17 @@ function BackArrowIcon() {
 function BootIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Polygon points="4,3 11,3 11,9 19,9 19,12 22,12 22,17 4,17" fill={color} />
+      <Path
+        d="M8.5 2.5v7.8c0 .9-.4 1.7-1.1 2.3l-2.6 2c-1 .8-1.6 2-1.6 3.3v1.6c0 .8.6 1.5 1.5 1.5h14.6c.8 0 1.5-.7 1.5-1.5v-1.9c0-1.5-1-2.8-2.4-3.3l-4.9-1.7c-1-.3-1.6-1.3-1.6-2.3V2.5"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M8.5 2.5h4.4" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path d="M6.2 16.6h12.4" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path d="M9.4 6.2 12.9 7.4M9.4 9 12.9 10.2" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
     </Svg>
   );
 }
@@ -52,8 +66,23 @@ function BootIcon({ color, size = 22 }: { color: string; size?: number }) {
 function TentIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Polygon points="12,4 3,20 21,20" fill={color} />
-      <Polygon points="12,11 8.6,20 15.4,20" fill={colors.background} />
+      <Path d="M12 3.3 2.6 19.5h18.8L12 3.3z" fill="none" stroke={color} strokeWidth={1.8} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M12 3.3 8.5 19.5" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
+      <Path d="M12 3.3 15.5 19.5" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
+      <Path d="M10.2 19.5 12 12.3l1.8 7.2" fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" />
+      <Path d="M1.5 19.5h21" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+function PawIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="15.7" r="5" fill={color} />
+      <Circle cx="5.3" cy="9.6" r="2.3" fill={color} />
+      <Circle cx="10.6" cy="5.3" r="2.2" fill={color} />
+      <Circle cx="15.6" cy="5.3" r="2.2" fill={color} />
+      <Circle cx="18.7" cy="9.6" r="2.3" fill={color} />
     </Svg>
   );
 }
@@ -61,9 +90,24 @@ function TentIcon({ color, size = 22 }: { color: string; size?: number }) {
 function PaddleIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Line x1="5" y1="19" x2="19" y2="5" stroke={color} strokeWidth={2.5} strokeLinecap="round" />
-      <Circle cx="4.5" cy="19.5" r="3" fill={color} />
-      <Circle cx="19.5" cy="4.5" r="3" fill={color} />
+      <Path d="M5.2 18.8 18.8 5.2" stroke={color} strokeWidth={2.1} strokeLinecap="round" />
+      <Path
+        d="M2.3 21.7c1.7 0 3.8-.8 4.9-1.9s1.9-3.2 1.9-4.9"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M21.7 2.3c0 1.7-.8 3.8-1.9 4.9s-3.2 1.9-4.9 1.9"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Circle cx="12" cy="12" r="1.3" fill={color} />
     </Svg>
   );
 }
@@ -71,10 +115,42 @@ function PaddleIcon({ color, size = 22 }: { color: string; size?: number }) {
 function CarIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Path d="M4 14 5.6 9a2 2 0 0 1 1.9-1.4h9a2 2 0 0 1 1.9 1.4L20 14z" fill={color} />
-      <Path d="M2.5 14h19a1.5 1.5 0 0 1 1.5 1.5V17a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1.5A1.5 1.5 0 0 1 2.5 14z" fill={color} />
-      <Circle cx="7" cy="18.5" r="1.8" fill={colors.background} stroke={color} strokeWidth={1.4} />
-      <Circle cx="17" cy="18.5" r="1.8" fill={colors.background} stroke={color} strokeWidth={1.4} />
+      <Path
+        d="M4.4 14.6 5.9 9.4a2.2 2.2 0 0 1 2.1-1.6h7.9a2.2 2.2 0 0 1 2.1 1.6l1.5 5.2"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.7}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M2.7 18.9h-.9a1 1 0 0 1-1-1v-2.3a1 1 0 0 1 1-1h20.4a1 1 0 0 1 1 1v2.3a1 1 0 0 1-1 1h-.9"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.7}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M7.9 11.1h8.2" stroke={color} strokeWidth={1.5} strokeLinecap="round" />
+      <Circle cx="7" cy="18.9" r="1.9" fill="none" stroke={color} strokeWidth={1.7} />
+      <Circle cx="17" cy="18.9" r="1.9" fill="none" stroke={color} strokeWidth={1.7} />
+    </Svg>
+  );
+}
+
+function CameraIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M3 8.3A1.8 1.8 0 0 1 4.8 6.5h2.1l1-1.6a1.6 1.6 0 0 1 1.4-.8h5.4a1.6 1.6 0 0 1 1.4.8l1 1.6h2.1A1.8 1.8 0 0 1 21 8.3v9A1.8 1.8 0 0 1 19.2 19H4.8A1.8 1.8 0 0 1 3 17.3z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.7}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Circle cx="12" cy="12.8" r="3.5" fill="none" stroke={color} strokeWidth={1.7} />
+      <Circle cx="17.3" cy="9" r="0.6" fill={color} />
     </Svg>
   );
 }
@@ -82,7 +158,12 @@ function CarIcon({ color, size = 22 }: { color: string; size?: number }) {
 function StarIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Polygon points="12,2 14.9,9 22.5,9.3 16.4,14 18.5,21.3 12,17.1 5.5,21.3 7.6,14 1.5,9.3 9.1,9" fill={color} />
+      <Path
+        d="M12 2.4c.4 3.3 1.1 5.4 2.1 6.4s3.1 1.7 6.5 2.1c-3.4.4-5.5 1.1-6.5 2.1s-1.7 3.1-2.1 6.5c-.4-3.4-1.1-5.5-2.1-6.5s-3.1-1.7-6.5-2.1c3.4-.4 5.5-1.1 6.5-2.1s1.7-3.1 2.1-6.4z"
+        fill={color}
+      />
+      <Circle cx="19.3" cy="5" r="1.1" fill={color} />
+      <Circle cx="4.3" cy="16.7" r="0.9" fill={color} />
     </Svg>
   );
 }
@@ -90,11 +171,15 @@ function StarIcon({ color, size = 22 }: { color: string; size?: number }) {
 function SunriseIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Circle cx="12" cy="15" r="4.5" fill={color} />
-      <Line x1="12" y1="4" x2="12" y2="7" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="4.5" y1="9" x2="6.5" y2="10.7" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="19.5" y1="9" x2="17.5" y2="10.7" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="2" y1="20" x2="22" y2="20" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Path d="M2 18.6h20" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path d="M6 18.6a6 6 0 0 1 12 0" fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path
+        d="M12 3.4v3.1M5.6 8 7.7 10.1M18.4 8 16.3 10.1"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+      />
+      <Path d="M9.2 15.3 12 12.5l2.8 2.8" fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
     </Svg>
   );
 }
@@ -102,21 +187,25 @@ function SunriseIcon({ color, size = 22 }: { color: string; size?: number }) {
 function SunsetIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Circle cx="12" cy="11" r="4.5" fill={color} />
-      <Line x1="12" y1="20" x2="12" y2="17" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="4.5" y1="15" x2="6.5" y2="13.3" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="19.5" y1="15" x2="17.5" y2="13.3" stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <Line x1="2" y1="20" x2="22" y2="20" stroke={color} strokeWidth={2} strokeLinecap="round" />
+      <Path d="M2 18.6h20" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path d="M6 18.6a6 6 0 0 1 12 0" fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path
+        d="M12 3.4v3.1M5.6 8 7.7 10.1M18.4 8 16.3 10.1"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+      />
+      <Path d="M9.2 12.5 12 15.3l2.8-2.8" fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
     </Svg>
   );
 }
 
-function DotsIcon({ color, size = 22 }: { color: string; size?: number }) {
+function CompassIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
-      <Circle cx="5" cy="12" r="2.2" fill={color} />
-      <Circle cx="12" cy="12" r="2.2" fill={color} />
-      <Circle cx="19" cy="12" r="2.2" fill={color} />
+      <Circle cx="12" cy="12" r="9" fill="none" stroke={color} strokeWidth={1.8} />
+      <Path d="M15.3 8.7 13 13l-4.3 2.3L11 11z" fill={color} />
+      <Circle cx="12" cy="12" r="1.1" fill={color} />
     </Svg>
   );
 }
@@ -146,6 +235,40 @@ function CheckIcon({ color, size = 14 }: { color: string; size?: number }) {
   );
 }
 
+function ChevronIcon({ expanded }: { expanded: boolean }) {
+  return (
+    <Svg width={14} height={14} viewBox="0 0 14 14" style={expanded ? styles.chevronExpanded : undefined}>
+      <Path d="M3 5l4 4 4-4" fill="none" stroke={colors.textSecondary} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+interface AccordionProps {
+  title: string;
+  summary: string;
+  expanded: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}
+
+// Each field group (Park, Dates, Activities, Trails, Wildlife, Notes,
+// Photos) collapses into a one-line summary until tapped — the form used to
+// show everything at once, which made it feel long and hard to scan.
+function Accordion({ title, summary, expanded, onToggle, children }: AccordionProps) {
+  return (
+    <View style={styles.accordionCard}>
+      <TouchableOpacity style={styles.accordionHeader} onPress={onToggle} activeOpacity={0.75}>
+        <View style={styles.accordionHeaderText}>
+          <Text style={styles.accordionTitle}>{title}</Text>
+          <Text style={styles.accordionSummary} numberOfLines={1}>{summary}</Text>
+        </View>
+        <ChevronIcon expanded={expanded} />
+      </TouchableOpacity>
+      {expanded && <View style={styles.accordionBody}>{children}</View>}
+    </View>
+  );
+}
+
 const MAX_PHOTOS = 3;
 
 const DIFFICULTY_RANK: Record<TrailDifficulty, number> = { Easy: 0, Moderate: 1, Hard: 2 };
@@ -154,32 +277,28 @@ const RARITY_RANK: Record<AnimalRarity, number> = { Common: 0, Uncommon: 1, Rare
 const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactElement }[] = [
   { label: 'Hiking', render: (c) => <BootIcon color={c} /> },
   { label: 'Camping', render: (c) => <TentIcon color={c} /> },
-  {
-    label: 'Wildlife',
-    render: (c) => (
-      <Image source={require('@/assets/icons/icon-hikes.png')} style={[styles.activityIconImg, { tintColor: c }]} resizeMode="contain" />
-    ),
-  },
+  { label: 'Wildlife', render: (c) => <PawIcon color={c} /> },
   { label: 'Kayaking', render: (c) => <PaddleIcon color={c} /> },
   { label: 'Scenic Drive', render: (c) => <CarIcon color={c} /> },
-  {
-    label: 'Photography',
-    render: (c) => (
-      <Image source={require('@/assets/icons/icon-photos.png')} style={[styles.activityIconImg, { tintColor: c }]} resizeMode="contain" />
-    ),
-  },
+  { label: 'Photography', render: (c) => <CameraIcon color={c} /> },
   { label: 'Stargazing', render: (c) => <StarIcon color={c} /> },
   { label: 'Sunrise', render: (c) => <SunriseIcon color={c} /> },
   { label: 'Sunset', render: (c) => <SunsetIcon color={c} /> },
-  { label: 'Other', render: (c) => <DotsIcon color={c} /> },
+  { label: 'Other', render: (c) => <CompassIcon color={c} /> },
 ];
 
 export default function LogTripScreen() {
-  const { parks, trips, logTrip, updateTrip, userProfile } = useApp();
+  const { parks, trips, logTrip, updateTrip, completeTrip, userProfile } = useApp();
   const units = userProfile.units;
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const editingTrip = route.params?.tripId ? trips.find((t) => t.id === route.params.tripId) : undefined;
+  const completingTrip = route.params?.completeTripId ? trips.find((t) => t.id === route.params.completeTripId) : undefined;
+  const mode: FormMode = completingTrip
+    ? 'complete'
+    : editingTrip
+      ? (editingTrip.tripType === 'planned' ? 'plan' : 'log')
+      : (route.params?.initialTripType === 'planned' ? 'plan' : 'log');
   const [heroImage, setHeroImage] = useState<number>(randomHeroImage);
   const [selectedParkId, setSelectedParkId] = useState<string>(editingTrip?.parkId ?? route.params?.parkId ?? 'yellowstone');
   const [startDate, setStartDate] = useState(editingTrip?.startDate ?? '');
@@ -197,6 +316,10 @@ export default function LogTripScreen() {
   const [editingTrailKey, setEditingTrailKey] = useState<string | null>(null);
   const [editMiles, setEditMiles] = useState('');
   const [editElevation, setEditElevation] = useState('');
+  // Park and dates start open since they're required first; everything else
+  // stays tucked away until tapped, so the form doesn't read as one long list.
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({ park: true, when: true });
+  const toggleSection = (key: string) => setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
 
   useFocusEffect(
     useCallback(() => {
@@ -212,9 +335,14 @@ export default function LogTripScreen() {
   // actually changes. Keyed on the param values (not focus) so it doesn't
   // wipe an in-progress "create" form just from switching tabs and back.
   const editingTripId: string | undefined = route.params?.tripId;
+  const completeTripId: string | undefined = route.params?.completeTripId;
   const requestedParkId: string | undefined = route.params?.parkId;
   useEffect(() => {
-    const trip = editingTripId ? trips.find((t) => t.id === editingTripId) : undefined;
+    const trip = editingTripId
+      ? trips.find((t) => t.id === editingTripId)
+      : completeTripId
+        ? trips.find((t) => t.id === completeTripId)
+        : undefined;
     if (trip) {
       setSelectedParkId(trip.parkId);
       setStartDate(trip.startDate);
@@ -240,9 +368,10 @@ export default function LogTripScreen() {
     setCustomTrailElevation('');
     setEditingTrailKey(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [editingTripId, requestedParkId]);
+  }, [editingTripId, completeTripId, requestedParkId]);
 
   const selectedPark = parks.find((p) => p.id === selectedParkId);
+  const sortedParks = [...parks].sort((a, b) => a.name.localeCompare(b.name));
   const parkTrails = ALL_TRAILS.filter((t) => t.parkId === selectedParkId).sort(
     (a, b) => DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty]
   );
@@ -354,6 +483,31 @@ export default function LogTripScreen() {
       return;
     }
 
+    if (mode === 'complete' && completingTrip) {
+      const milesHiked = selectedTrails.length > 0
+        ? selectedTrails.reduce((acc, t) => acc + t.miles, 0)
+        : completingTrip.milesHiked;
+      const elevationGainFt = selectedTrails.length > 0
+        ? selectedTrails.reduce((acc, t) => acc + t.elevationGainFt, 0)
+        : completingTrip.elevationGainFt;
+      completeTrip({
+        ...completingTrip,
+        parkId: selectedParkId,
+        startDate,
+        endDate: endDate || startDate,
+        activities: selectedActivities,
+        notes,
+        photos,
+        wildlifeSightings,
+        trailsHiked: selectedTrails,
+        milesHiked,
+        elevationGainFt,
+      });
+      Alert.alert('Trip completed!', 'Your passport is growing.', [{ text: 'Awesome!' }]);
+      navigation.goBack();
+      return;
+    }
+
     if (editingTrip) {
       const milesHiked = selectedTrails.length > 0
         ? selectedTrails.reduce((acc, t) => acc + t.miles, 0)
@@ -363,6 +517,7 @@ export default function LogTripScreen() {
         : editingTrip.elevationGainFt;
       updateTrip({
         ...editingTrip,
+        tripType: mode === 'plan' ? 'planned' : 'logged',
         parkId: selectedParkId,
         startDate,
         endDate: endDate || startDate,
@@ -381,6 +536,7 @@ export default function LogTripScreen() {
 
     logTrip({
       parkId: selectedParkId,
+      tripType: mode === 'plan' ? 'planned' : 'logged',
       startDate,
       endDate: endDate || startDate,
       activities: selectedActivities,
@@ -389,7 +545,11 @@ export default function LogTripScreen() {
       wildlifeSightings,
       trailsHiked: selectedTrails,
     });
-    Alert.alert('Adventure saved!', 'Your passport is growing.', [{ text: 'Awesome!' }]);
+    Alert.alert(
+      mode === 'plan' ? 'Trip planned!' : 'Adventure saved!',
+      mode === 'plan' ? 'We’ll be ready when you are.' : 'Your passport is growing.',
+      [{ text: mode === 'plan' ? 'Nice!' : 'Awesome!' }]
+    );
     setStartDate('');
     setEndDate('');
     setNotes('');
@@ -412,7 +572,9 @@ export default function LogTripScreen() {
           <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()} hitSlop={10}>
             <BackArrowIcon />
           </TouchableOpacity>
-          <Text style={styles.screenTitle}>{editingTrip ? 'Edit Trip' : 'Log a Trip'}</Text>
+          <Text style={styles.screenTitle}>
+            {mode === 'complete' ? 'Mark as Completed' : editingTrip ? 'Edit Trip' : mode === 'plan' ? 'Plan a Trip' : 'Log a Trip'}
+          </Text>
           <View style={styles.backBtn} />
         </View>
 
@@ -422,8 +584,12 @@ export default function LogTripScreen() {
         </View>
 
         {/* Park selector */}
-        <View style={styles.field}>
-          <Text style={styles.label}>Which park?</Text>
+        <Accordion
+          title="Which park?"
+          summary={selectedPark?.name ?? 'Select a park'}
+          expanded={!!expanded.park}
+          onToggle={() => toggleSection('park')}
+        >
           <TouchableOpacity style={styles.selector} onPress={() => setShowParkPicker(!showParkPicker)}>
             <Text style={styles.selectorText}>{selectedPark?.name ?? 'Select a park'}</Text>
             <Text style={styles.selectorIcon}>{'▾'}</Text>
@@ -431,7 +597,7 @@ export default function LogTripScreen() {
           {showParkPicker && (
             <View style={styles.dropdown}>
               <ScrollView style={{ maxHeight: 200 }} nestedScrollEnabled>
-                {parks.map((p) => (
+                {sortedParks.map((p) => (
                   <TouchableOpacity
                     key={p.id}
                     style={styles.dropdownItem}
@@ -448,41 +614,32 @@ export default function LogTripScreen() {
               </ScrollView>
             </View>
           )}
-        </View>
+        </Accordion>
 
         {/* Date */}
-        <View style={styles.field}>
-          <Text style={styles.label}>When did you go?</Text>
-          <View style={styles.dateRow}>
-            <View style={styles.dateInput}>
-              <Image source={require('@/assets/icons/icon-calendar.png')} style={styles.dateIcon} resizeMode="contain" />
-              <TextInput
-                style={styles.dateText}
-                placeholder="Start date"
-                placeholderTextColor={colors.textMuted}
-                value={startDate}
-                onChangeText={setStartDate}
-                numberOfLines={1}
-              />
-            </View>
-            <Text style={styles.dateDash}>{'–'}</Text>
-            <View style={styles.dateInput}>
-              <TextInput
-                style={styles.dateText}
-                placeholder="End date"
-                placeholderTextColor={colors.textMuted}
-                value={endDate}
-                onChangeText={setEndDate}
-                numberOfLines={1}
-              />
-            </View>
-          </View>
-          <Text style={styles.dateHint}>Format: YYYY-MM-DD</Text>
-        </View>
+        <Accordion
+          title={mode === 'plan' ? 'When are you planning to go?' : 'When did you go?'}
+          summary={startDate ? formatDateRange(startDate, endDate || startDate) : 'Not set'}
+          expanded={!!expanded.when}
+          onToggle={() => toggleSection('when')}
+        >
+          <DateRangePicker
+            startDate={startDate}
+            endDate={endDate}
+            onChange={(s, e) => {
+              setStartDate(s);
+              setEndDate(e);
+            }}
+          />
+        </Accordion>
 
         {/* Activities */}
-        <View style={styles.field}>
-          <Text style={styles.label}>What did you do?</Text>
+        <Accordion
+          title={mode === 'plan' ? 'What are you hoping to do?' : 'What did you do?'}
+          summary={selectedActivities.length ? selectedActivities.join(', ') : 'None selected yet'}
+          expanded={!!expanded.activities}
+          onToggle={() => toggleSection('activities')}
+        >
           <View style={styles.activityGrid}>
             {ACTIVITIES.map(({ label, render }) => {
               const active = selectedActivities.includes(label);
@@ -500,12 +657,20 @@ export default function LogTripScreen() {
               );
             })}
           </View>
-        </View>
+        </Accordion>
 
+        {mode !== 'plan' && (
+        <>
         {/* Trails */}
-        {parkTrails.length > 0 && (
-          <View style={styles.field}>
-            <Text style={styles.label}>Which trails did you hike?</Text>
+        <Accordion
+          title="Trails"
+          summary={selectedTrails.length ? `${selectedTrails.length} selected` : 'None yet'}
+          expanded={!!expanded.trails}
+          onToggle={() => toggleSection('trails')}
+        >
+          {parkTrails.length > 0 && (
+            <>
+            <Text style={styles.sublabel}>Which trails did you hike?</Text>
             <View style={styles.trailList}>
               {parkTrails.map((trail) => {
                 const active = selectedTrails.some((t) => t.trailId === trail.id);
@@ -524,12 +689,11 @@ export default function LogTripScreen() {
                 );
               })}
             </View>
-          </View>
-        )}
+            </>
+          )}
 
-        {/* Custom trail entry */}
-        <View style={styles.field}>
-          <Text style={styles.label}>Add a trail we don't have</Text>
+          {/* Custom trail entry */}
+          <Text style={[styles.sublabel, styles.sublabelSpaced]}>Add a trail we don't have</Text>
           <TextInput
             style={[styles.wildlifeInput, styles.customTrailNameInput]}
             placeholder="Trail name"
@@ -558,12 +722,11 @@ export default function LogTripScreen() {
               <Text style={styles.wildlifeAddBtnText}>+</Text>
             </TouchableOpacity>
           </View>
-        </View>
 
-        {/* Selected trails — tap to log a partial distance */}
-        {selectedTrails.length > 0 && (
-          <View style={styles.field}>
-            <Text style={styles.label}>Your Trails</Text>
+          {/* Selected trails — tap to log a partial distance */}
+          {selectedTrails.length > 0 && (
+            <>
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Your Trails</Text>
             <View style={styles.trailSummaryList}>
               {selectedTrails.map((entry) => {
                 const editing = editingTrailKey === trailKeyOf(entry);
@@ -613,12 +776,17 @@ export default function LogTripScreen() {
                 );
               })}
             </View>
-          </View>
-        )}
+            </>
+          )}
+        </Accordion>
 
         {/* Wildlife */}
-        <View style={styles.field}>
-          <Text style={styles.label}>Wildlife Spotted</Text>
+        <Accordion
+          title="Wildlife Spotted"
+          summary={wildlifeSightings.length ? `${wildlifeSightings.length} spotted` : 'None yet'}
+          expanded={!!expanded.wildlife}
+          onToggle={() => toggleSection('wildlife')}
+        >
           {parkAnimals.length > 0 && (
             <View style={styles.animalChipRow}>
               {parkAnimals.map((animal) => {
@@ -662,11 +830,17 @@ export default function LogTripScreen() {
               ))}
             </View>
           )}
-        </View>
+        </Accordion>
+        </>
+        )}
 
         {/* Notes */}
-        <View style={styles.field}>
-          <Text style={styles.label}>Notes / Memories</Text>
+        <Accordion
+          title="Notes / Memories"
+          summary={notes.trim() ? notes.trim() : 'Add notes'}
+          expanded={!!expanded.notes}
+          onToggle={() => toggleSection('notes')}
+        >
           <View style={styles.notesBox}>
             <TextInput
               style={styles.notesInput}
@@ -679,11 +853,16 @@ export default function LogTripScreen() {
             />
             <Text style={styles.charCount}>{notes.length}/200</Text>
           </View>
-        </View>
+        </Accordion>
 
         {/* Add Photos */}
-        <View style={styles.field}>
-          <Text style={styles.label}>Add Photos</Text>
+        {mode !== 'plan' && (
+        <Accordion
+          title="Add Photos"
+          summary={photos.length ? `${photos.length} of ${MAX_PHOTOS} added` : 'Add photos'}
+          expanded={!!expanded.photos}
+          onToggle={() => toggleSection('photos')}
+        >
           <View style={styles.photoRow}>
             {photos.map((uri) => (
               <TouchableOpacity key={uri} style={styles.photoThumbWrap} onPress={() => removePhoto(uri)} activeOpacity={0.8}>
@@ -699,10 +878,11 @@ export default function LogTripScreen() {
               </TouchableOpacity>
             )}
           </View>
-        </View>
+        </Accordion>
+        )}
 
         <PrimaryButton
-          label={editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
+          label={mode === 'complete' ? 'MARK AS COMPLETED' : mode === 'plan' ? 'SAVE PLAN' : editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
           icon={<TreeIcon color={colors.textInverse} />}
           onPress={handleSave}
           style={styles.saveBtn}
@@ -723,8 +903,29 @@ const styles = StyleSheet.create({
   heroArea: { height: 190, alignItems: 'center', justifyContent: 'center', marginBottom: spacing.md },
   heroImage: { width: 220, height: 190 },
 
-  field: { paddingHorizontal: spacing.xl, marginBottom: spacing.xl },
-  label: { ...typography.labelBold, color: colors.textPrimary, marginBottom: spacing.sm },
+  accordionCard: {
+    marginHorizontal: spacing.xl,
+    marginBottom: spacing.md,
+    backgroundColor: colors.surface,
+    borderRadius: radius.lg,
+    overflow: 'hidden',
+    ...shadows.sm,
+  },
+  accordionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: spacing.lg,
+    gap: spacing.md,
+  },
+  accordionHeaderText: { flex: 1 },
+  accordionTitle: { ...typography.labelBold, color: colors.textPrimary },
+  accordionSummary: { ...typography.bodySmall, color: colors.textSecondary, marginTop: 2 },
+  accordionBody: { paddingHorizontal: spacing.lg, paddingBottom: spacing.lg },
+  chevronExpanded: { transform: [{ rotate: '180deg' }] },
+
+  sublabel: { ...typography.labelBold, color: colors.textPrimary, marginBottom: spacing.sm },
+  sublabelSpaced: { marginTop: spacing.md },
 
   selector: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, ...shadows.sm },
   selectorText: { ...typography.body, color: colors.textPrimary },
@@ -735,17 +936,10 @@ const styles = StyleSheet.create({
   dropdownText: { ...typography.body, color: colors.textPrimary },
   dropdownTextActive: { color: colors.primary, fontFamily: typography.labelBold.fontFamily },
 
-  dateRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  dateInput: { flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, borderRadius: radius.lg, paddingVertical: spacing.md, paddingHorizontal: spacing.sm, gap: 6, ...shadows.sm, minWidth: 0 },
-  dateIcon: { width: 15, height: 15 },
-  dateText: { flex: 1, minWidth: 0, ...typography.bodySmall, color: colors.textPrimary },
-  dateDash: { ...typography.body, color: colors.textMuted },
-  dateHint: { ...typography.caption, color: colors.textMuted, marginTop: spacing.xs },
 
   activityGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.md },
   activityChip: { width: '28%', alignItems: 'center', gap: spacing.xs, backgroundColor: colors.surface, borderRadius: radius.lg, borderWidth: 2, borderColor: colors.border, paddingVertical: spacing.md, ...shadows.sm },
   activityChipActive: { borderColor: colors.primary, backgroundColor: colors.primary },
-  activityIconImg: { width: 22, height: 22 },
   activityLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
   activityLabelActive: { color: colors.textInverse },
 

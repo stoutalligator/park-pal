@@ -77,6 +77,10 @@ create table public.trips (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
   park_id text not null references public.parks(id) on delete restrict,
+  -- 'planned' trips only have park/dates/activities/notes; completing one
+  -- (AppContext.completeTrip) flips this to 'logged' and fills in
+  -- photos/trails/wildlife/rating in the same row rather than a new insert.
+  trip_type text not null default 'logged' check (trip_type in ('planned', 'logged')),
   start_date date not null,
   end_date date not null,
   activities text[] not null default '{}',
@@ -260,8 +264,8 @@ values (
 )
 on conflict (id) do nothing;
 
--- Path convention: {user_id}/{trip_id}/{slot}.jpg — policies match the first
--- path segment against the requesting user's id.
+-- Path convention: {user_id}/{trip_id}/{timestamp}-{random}.jpg — policies
+-- match the first path segment against the requesting user's id.
 create policy "users upload their own trip photos"
   on storage.objects for insert
   with check (

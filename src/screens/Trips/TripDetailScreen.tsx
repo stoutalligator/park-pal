@@ -9,7 +9,8 @@ import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkById } from '@/data/parks';
 import { getParkScene } from '@/data/parkImages';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
-import { parseLocalDate } from '@/utils/dates';
+import { parseLocalDate, daysUntilLabel } from '@/utils/dates';
+import PrimaryButton from '@/components/PrimaryButton';
 
 type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
 
@@ -76,6 +77,8 @@ export default function TripDetailScreen({ route, navigation }: Props) {
 
   if (!trip || !park) return null;
 
+  const planned = trip.tripType === 'planned';
+
   const confirmDelete = () => {
     const remove = () => {
       deleteTrip(trip.id);
@@ -103,7 +106,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <View style={[styles.heroActions, { top: insets.top + 16 }]}>
             <TouchableOpacity
               style={styles.heroActionBtn}
-              onPress={() => (navigation as any).navigate('LogTrip', { tripId: trip.id })}
+              onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { tripId: trip.id } })}
             >
               <EditIcon />
             </TouchableOpacity>
@@ -117,10 +120,20 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <Text style={styles.parkName}>{park.name}</Text>
           <Text style={styles.dates}>{formatDate(trip.startDate)} – {formatDate(trip.endDate)}</Text>
 
+          {planned && (
+            <View style={styles.plannedBlock}>
+              <Text style={styles.plannedDaysUntil}>{daysUntilLabel(trip.startDate)}</Text>
+              <PrimaryButton
+                label="MARK AS COMPLETED"
+                onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { completeTripId: trip.id } })}
+              />
+            </View>
+          )}
+
           {/* Activities */}
           {trip.activities.length > 0 && (
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Activities</Text>
+              <Text style={styles.sectionTitle}>{planned ? 'Planned Activities' : 'Activities'}</Text>
               <View style={styles.tagRow}>
                 {trip.activities.map((a) => (
                   <View key={a} style={styles.tag}>
@@ -134,7 +147,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           {/* Journal */}
           {trip.notes ? (
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Journal</Text>
+              <Text style={styles.sectionTitle}>{planned ? 'Notes' : 'Journal'}</Text>
               <View style={styles.journalCard}>
                 <Text style={styles.journalText}>{trip.notes}</Text>
               </View>
@@ -227,6 +240,13 @@ const styles = StyleSheet.create({
   },
   parkName: { ...typography.h2, color: colors.textPrimary },
   dates: { ...typography.body, color: colors.textSecondary },
+  plannedBlock: {
+    backgroundColor: colors.surfaceWarm,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    gap: spacing.md,
+  },
+  plannedDaysUntil: { ...typography.labelBold, color: colors.sky, textAlign: 'center' },
   section: { gap: spacing.sm },
   sectionTitle: { ...typography.h5, color: colors.textPrimary },
   tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },

@@ -20,7 +20,6 @@ export interface Park {
   acres: number;
   status: ParkStatus;
   isFavorite: boolean;
-  visitedDates?: string[];
   /** Approximate latitude/longitude of the park, used to place its pin on the Explore map. */
   lat: number;
   lng: number;
@@ -45,9 +44,12 @@ export interface TripTrailEntry {
   elevationGainFt: number;
 }
 
+export type TripType = 'planned' | 'logged';
+
 export interface Trip {
   id: string;
   parkId: string;
+  tripType: TripType;
   startDate: string;
   endDate: string;
   activities: ActivityType[];

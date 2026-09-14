@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, spacing, shadows, typography, fontFamilies } from '@/theme';
-import { MainTabParamList, HomeStackParamList, ParksStackParamList, TripsStackParamList, ProfileStackParamList } from './types';
+import { MainTabParamList, HomeStackParamList, ParksStackParamList, LogTripStackParamList, TripsStackParamList, ProfileStackParamList } from './types';
 
 // Screens
 import HomeScreen from '@/screens/Home/HomeScreen';
@@ -12,6 +12,7 @@ import ExploreScreen from '@/screens/Explore/ExploreScreen';
 import ParkDetailScreen from '@/screens/ParkDetail/ParkDetailScreen';
 import ParkTrailsScreen from '@/screens/ParkDetail/ParkTrailsScreen';
 import ParkAnimalsScreen from '@/screens/ParkDetail/ParkAnimalsScreen';
+import TripChooserScreen from '@/screens/LogTrip/TripChooserScreen';
 import LogTripScreen from '@/screens/LogTrip/LogTripScreen';
 import TripsScreen from '@/screens/Trips/TripsScreen';
 import TripDetailScreen from '@/screens/Trips/TripDetailScreen';
@@ -30,6 +31,7 @@ import PrivacyPolicyScreen from '@/screens/Settings/PrivacyPolicyScreen';
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
 const ParksStack = createNativeStackNavigator<ParksStackParamList>();
+const LogTripStack = createNativeStackNavigator<LogTripStackParamList>();
 const TripsStack = createNativeStackNavigator<TripsStackParamList>();
 const ProfileStack = createNativeStackNavigator<ProfileStackParamList>();
 
@@ -52,6 +54,15 @@ function ParksStackNav() {
       <ParksStack.Screen name="ParkTrails" component={ParkTrailsScreen} />
       <ParksStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
     </ParksStack.Navigator>
+  );
+}
+
+function LogTripStackNav() {
+  return (
+    <LogTripStack.Navigator screenOptions={{ headerShown: false }}>
+      <LogTripStack.Screen name="TripChooser" component={TripChooserScreen} />
+      <LogTripStack.Screen name="LogTripForm" component={LogTripScreen} />
+    </LogTripStack.Navigator>
   );
 }
 
@@ -108,8 +119,12 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
         };
 
         if (isCenter) {
+          // Always jump straight to the chooser, even if LogTrip is already
+          // the focused tab with a half-filled form sitting in it — the "+"
+          // means "start something new," not "resume where I left off."
+          const onFabPress = () => navigation.navigate('LogTrip', { screen: 'TripChooser' });
           return (
-            <TouchableOpacity key={route.key} onPress={onPress} style={styles.fabWrapper} activeOpacity={0.85}>
+            <TouchableOpacity key={route.key} onPress={onFabPress} style={styles.fabWrapper} activeOpacity={0.85}>
               <View style={styles.fab}>
                 <Text style={styles.fabIcon}>+</Text>
               </View>
@@ -140,7 +155,7 @@ export default function TabNavigator() {
     >
       <Tab.Screen name="HomeTab" component={HomeStackNav} />
       <Tab.Screen name="ParksTab" component={ParksStackNav} />
-      <Tab.Screen name="LogTrip" component={LogTripScreen} />
+      <Tab.Screen name="LogTrip" component={LogTripStackNav} />
       <Tab.Screen name="TripsTab" component={TripsStackNav} />
       <Tab.Screen name="ProfileTab" component={ProfileStackNav} />
     </Tab.Navigator>

@@ -12,6 +12,7 @@ import { ALL_ANIMALS } from '@/data/animals';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
+import SecondaryButton from '@/components/SecondaryButton';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'ParkDetail'>;
 
@@ -219,8 +220,23 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
       {/* Bottom CTA */}
       <View style={[styles.footer, { paddingBottom: insets.bottom + spacing.xl }]}>
         <PrimaryButton
-          label={park.status === 'visited' ? '+ LOG ANOTHER TRIP' : '+ LOG THIS PARK'}
-          onPress={() => (navigation as any).navigate('LogTrip', { parkId: park.id })}
+          label={park.status === 'visited' ? 'LOG ANOTHER TRIP' : 'LOG A TRIP'}
+          onPress={() =>
+            (navigation as any).navigate('LogTrip', {
+              screen: 'LogTripForm',
+              params: { parkId: park.id, initialTripType: 'logged' },
+            })
+          }
+          style={styles.ctaBtn}
+        />
+        <SecondaryButton
+          label="PLAN A TRIP"
+          onPress={() =>
+            (navigation as any).navigate('LogTrip', {
+              screen: 'LogTripForm',
+              params: { parkId: park.id, initialTripType: 'planned' },
+            })
+          }
           style={styles.ctaBtn}
         />
       </View>
@@ -230,7 +246,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  scroll: { paddingBottom: 100 },
+  scroll: { paddingBottom: 160 },
 
   hero: { height: 320, position: 'relative', backgroundColor: colors.surfaceWarm },
   heroImage: { width: '100%', height: '100%' },
@@ -275,6 +291,6 @@ const styles = StyleSheet.create({
   summarySubtitle: { ...typography.bodySmall, color: colors.textSecondary },
   chevron: { fontSize: 22, color: colors.textMuted },
 
-  footer: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: spacing.xl, backgroundColor: colors.background },
+  footer: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: spacing.xl, gap: spacing.sm, backgroundColor: colors.background },
   ctaBtn: { width: '100%' },
 });

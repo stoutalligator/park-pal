@@ -1,4 +1,5 @@
 import { NavigatorScreenParams } from '@react-navigation/native';
+import { TripType } from '@/types';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -9,9 +10,19 @@ export type RootStackParamList = {
 export type MainTabParamList = {
   HomeTab: undefined;
   ParksTab: undefined;
-  LogTrip: { parkId?: string; tripId?: string } | undefined;
+  LogTrip: NavigatorScreenParams<LogTripStackParamList>;
   TripsTab: undefined;
   ProfileTab: undefined;
+};
+
+export type LogTripStackParamList = {
+  TripChooser: undefined;
+  LogTripForm: {
+    parkId?: string;
+    tripId?: string;
+    completeTripId?: string;
+    initialTripType?: TripType;
+  } | undefined;
 };
 
 export type HomeStackParamList = {
