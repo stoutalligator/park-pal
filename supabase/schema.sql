@@ -67,8 +67,10 @@ create trigger on_auth_user_created
 create table public.user_park_status (
   user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
   park_id text not null references public.parks(id) on delete cascade,
+  -- Bucket List lives on is_favorite instead — it's an independent wishlist
+  -- flag, not a status, so a park can be favorited at any status.
   status text not null default 'notVisited'
-    check (status in ('visited', 'bucketList', 'planned', 'notVisited')),
+    check (status in ('visited', 'planned', 'notVisited')),
   is_favorite boolean not null default false,
   primary key (user_id, park_id)
 );

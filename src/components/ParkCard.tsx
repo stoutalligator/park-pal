@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import Svg, { Polyline, Path } from 'react-native-svg';
+import Svg, { Polyline } from 'react-native-svg';
 import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Park } from '@/types';
 import { getParkImage } from '@/data/parkImages';
@@ -11,7 +11,6 @@ interface Props {
   onPress: () => void;
   onFavorite?: () => void;
   onToggleVisited?: () => void;
-  onToggleBucketList?: () => void;
 }
 
 function CheckIcon({ color }: { color: string }) {
@@ -22,17 +21,8 @@ function CheckIcon({ color }: { color: string }) {
   );
 }
 
-function BookmarkIcon({ color }: { color: string }) {
-  return (
-    <Svg width={14} height={14} viewBox="0 0 14 14">
-      <Path d="M3 1.5h8a.5.5 0 0 1 .5.5v11l-4.5-2.6L2.5 13V2a.5.5 0 0 1 .5-.5Z" fill="none" stroke={color} strokeWidth={1.6} strokeLinejoin="round" />
-    </Svg>
-  );
-}
-
-export default function ParkCard({ park, onPress, onFavorite, onToggleVisited, onToggleBucketList }: Props) {
+export default function ParkCard({ park, onPress, onFavorite, onToggleVisited }: Props) {
   const visited = park.status === 'visited';
-  const bucketListed = park.status === 'bucketList';
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={styles.card}>
       <View style={styles.imageBox}>
@@ -57,13 +47,6 @@ export default function ParkCard({ park, onPress, onFavorite, onToggleVisited, o
           style={[styles.actionBtn, styles.iconBtn, visited && styles.iconBtnVisitedActive]}
         >
           <CheckIcon color={visited ? colors.textInverse : colors.textMuted} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={onToggleBucketList}
-          hitSlop={10}
-          style={[styles.actionBtn, styles.iconBtn, bucketListed && styles.iconBtnBucketActive]}
-        >
-          <BookmarkIcon color={bucketListed ? colors.textInverse : colors.textMuted} />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
@@ -133,9 +116,5 @@ const styles = StyleSheet.create({
   iconBtnVisitedActive: {
     backgroundColor: colors.visited,
     borderColor: colors.visited,
-  },
-  iconBtnBucketActive: {
-    backgroundColor: colors.bucketList,
-    borderColor: colors.bucketList,
   },
 });

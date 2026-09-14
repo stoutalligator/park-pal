@@ -83,14 +83,6 @@ function CheckIcon({ color }: { color: string }) {
   );
 }
 
-function BookmarkIcon({ color }: { color: string }) {
-  return (
-    <Svg width={16} height={16} viewBox="0 0 14 14">
-      <Path d="M3 1.5h8a.5.5 0 0 1 .5.5v11l-4.5-2.6L2.5 13V2a.5.5 0 0 1 .5-.5Z" fill="none" stroke={color} strokeWidth={1.6} strokeLinejoin="round" />
-    </Svg>
-  );
-}
-
 function TreeIcon({ size = 20 }: { size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 20 20">
@@ -127,12 +119,6 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
               onPress={() => updateParkStatus(park.id, park.status === 'visited' ? 'notVisited' : 'visited')}
             >
               <CheckIcon color={park.status === 'visited' ? colors.textInverse : colors.textSecondary} />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.heroActionBtn, park.status === 'bucketList' && styles.heroActionBtnBucketActive]}
-              onPress={() => updateParkStatus(park.id, park.status === 'bucketList' ? 'notVisited' : 'bucketList')}
-            >
-              <BookmarkIcon color={park.status === 'bucketList' ? colors.textInverse : colors.textSecondary} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.heroActionBtn} onPress={() => toggleFavorite(park.id)}>
               <Image
@@ -254,7 +240,6 @@ const styles = StyleSheet.create({
   heroActions: { position: 'absolute', top: 16, right: 16, flexDirection: 'row', gap: spacing.sm },
   heroActionBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center', ...shadows.md },
   heroActionBtnVisitedActive: { backgroundColor: colors.visited },
-  heroActionBtnBucketActive: { backgroundColor: colors.bucketList },
   heartIcon: { width: 18, height: 18 },
   heartIconInactive: { opacity: 0.3 },
 

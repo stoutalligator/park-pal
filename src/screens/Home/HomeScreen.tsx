@@ -9,14 +9,14 @@ import SegmentedToggle from '@/components/SegmentedToggle';
 import { ParkStatus } from '@/types';
 import { TOTAL_PARKS } from '@/data/parks';
 
-type Filter = 'All Parks' | 'Visited' | 'Bucket List';
+type Filter = 'All Parks' | 'Visited' | 'Bucket List' | 'Planned';
 
-const FILTERS: Filter[] = ['All Parks', 'Visited', 'Bucket List'];
+const FILTERS: Filter[] = ['All Parks', 'Visited', 'Bucket List', 'Planned'];
 
-const STATUS_MAP: Record<Filter, ParkStatus | null> = {
-  'All Parks': null,
+// Bucket List filters on the independent `isFavorite` flag, not `status`.
+const STATUS_MAP: Partial<Record<Filter, ParkStatus>> = {
   Visited: 'visited',
-  'Bucket List': 'bucketList',
+  Planned: 'planned',
 };
 
 export default function HomeScreen() {
@@ -25,6 +25,7 @@ export default function HomeScreen() {
   const [filter, setFilter] = useState<Filter>('All Parks');
 
   const filteredParks = useMemo(() => {
+    if (filter === 'Bucket List') return parks.filter((p) => p.isFavorite);
     const status = STATUS_MAP[filter];
     return status ? parks.filter((p) => p.status === status) : parks;
   }, [parks, filter]);

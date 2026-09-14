@@ -453,7 +453,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const stats: UserStats = {
     totalVisited: parks.filter((p) => p.status === 'visited').length,
     totalRemaining: TOTAL_PARKS - parks.filter((p) => p.status === 'visited').length,
-    bucketListCount: parks.filter((p) => p.status === 'bucketList').length,
+    bucketListCount: parks.filter((p) => p.isFavorite).length,
     completionPercentage: Math.round(
       (parks.filter((p) => p.status === 'visited').length / TOTAL_PARKS) * 100
     ),

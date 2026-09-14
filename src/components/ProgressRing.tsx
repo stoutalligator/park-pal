@@ -7,9 +7,20 @@ interface Props {
   percentage: number;
   size?: number;
   strokeWidth?: number;
+  /** Overrides for use on a dark/colored background (e.g. the passport cover) — default to the normal light-background look. */
+  trackColor?: string;
+  fillColor?: string;
+  textColor?: string;
 }
 
-export default function ProgressRing({ percentage, size = 72, strokeWidth = 7 }: Props) {
+export default function ProgressRing({
+  percentage,
+  size = 72,
+  strokeWidth = 7,
+  trackColor = colors.border,
+  fillColor = colors.primary,
+  textColor = colors.textPrimary,
+}: Props) {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
@@ -21,7 +32,7 @@ export default function ProgressRing({ percentage, size = 72, strokeWidth = 7 }:
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke={colors.border}
+          stroke={trackColor}
           strokeWidth={strokeWidth}
           fill="none"
         />
@@ -29,7 +40,7 @@ export default function ProgressRing({ percentage, size = 72, strokeWidth = 7 }:
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke={colors.primary}
+          stroke={fillColor}
           strokeWidth={strokeWidth}
           fill="none"
           strokeDasharray={circumference}
@@ -40,7 +51,7 @@ export default function ProgressRing({ percentage, size = 72, strokeWidth = 7 }:
         />
       </Svg>
       <View style={[StyleSheet.absoluteFill, styles.center]}>
-        <Text style={styles.pct}>{percentage}%</Text>
+        <Text style={[styles.pct, { color: textColor }]}>{percentage}%</Text>
       </View>
     </View>
   );

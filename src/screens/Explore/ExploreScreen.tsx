@@ -8,14 +8,15 @@ import ParkCard from '@/components/ParkCard';
 import { ParkStatus } from '@/types';
 import { TOTAL_PARKS } from '@/data/parks';
 
-type Filter = 'All Parks' | 'Visited' | 'Bucket List' | 'Not Visited';
+type Filter = 'All Parks' | 'Visited' | 'Bucket List' | 'Planned' | 'Not Visited';
 
-const FILTERS: Filter[] = ['All Parks', 'Visited', 'Bucket List', 'Not Visited'];
+const FILTERS: Filter[] = ['All Parks', 'Visited', 'Bucket List', 'Planned', 'Not Visited'];
 
-const STATUS_MAP: Record<Filter, ParkStatus | null> = {
-  'All Parks': null,
+// Bucket List filters on the independent `isFavorite` flag, not `status` —
+// every other filter maps straight to a ParkStatus value.
+const STATUS_MAP: Partial<Record<Filter, ParkStatus>> = {
   'Visited': 'visited',
-  'Bucket List': 'bucketList',
+  'Planned': 'planned',
   'Not Visited': 'notVisited',
 };
 
@@ -27,8 +28,12 @@ export default function ExploreScreen() {
 
   const filtered = useMemo(() => {
     let list = parks;
-    const status = STATUS_MAP[filter];
-    if (status) list = list.filter((p) => p.status === status);
+    if (filter === 'Bucket List') {
+      list = list.filter((p) => p.isFavorite);
+    } else {
+      const status = STATUS_MAP[filter];
+      if (status) list = list.filter((p) => p.status === status);
+    }
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter((p) => p.name.toLowerCase().includes(q) || p.state.toLowerCase().includes(q));
@@ -78,7 +83,6 @@ export default function ExploreScreen() {
             onPress={() => navigation.navigate('ParkDetail', { parkId: park.id })}
             onFavorite={() => toggleFavorite(park.id)}
             onToggleVisited={() => updateParkStatus(park.id, park.status === 'visited' ? 'notVisited' : 'visited')}
-            onToggleBucketList={() => updateParkStatus(park.id, park.status === 'bucketList' ? 'notVisited' : 'bucketList')}
           />
         ))}
         {filtered.length === 0 && (

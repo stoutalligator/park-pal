@@ -10,6 +10,7 @@ import { ALL_TRAILS } from '@/data/trails';
 import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
 import DateRangePicker from '@/components/DateRangePicker';
+import { showToast } from '@/components/Toast';
 import { convertMiles, convertFeet, toMiles, toFeet, distanceLabel, elevationLabel } from '@/utils/units';
 import { formatDateRange } from '@/utils/dates';
 
@@ -49,16 +50,15 @@ function BootIcon({ color, size = 22 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
       <Path
-        d="M8.5 2.5v7.8c0 .9-.4 1.7-1.1 2.3l-2.6 2c-1 .8-1.6 2-1.6 3.3v1.6c0 .8.6 1.5 1.5 1.5h14.6c.8 0 1.5-.7 1.5-1.5v-1.9c0-1.5-1-2.8-2.4-3.3l-4.9-1.7c-1-.3-1.6-1.3-1.6-2.3V2.5"
+        d="M4 4H11V9L19 12Q21 12.8 21 15V17H4Z"
         fill="none"
         stroke={color}
-        strokeWidth={1.8}
+        strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <Path d="M8.5 2.5h4.4" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
-      <Path d="M6.2 16.6h12.4" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
-      <Path d="M9.4 6.2 12.9 7.4M9.4 9 12.9 10.2" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
+      <Path d="M4 14.5h17" stroke={color} strokeWidth={1.1} strokeLinecap="round" />
+      <Path d="M5.3 5.5h4M5.3 7.5h4" stroke={color} strokeWidth={1} strokeLinecap="round" />
     </Svg>
   );
 }
@@ -503,7 +503,7 @@ export default function LogTripScreen() {
         milesHiked,
         elevationGainFt,
       });
-      Alert.alert('Trip completed!', 'Your passport is growing.', [{ text: 'Awesome!' }]);
+      showToast('Trip completed! Your passport is growing.', 'success');
       navigation.goBack();
       return;
     }
@@ -529,7 +529,7 @@ export default function LogTripScreen() {
         milesHiked,
         elevationGainFt,
       });
-      Alert.alert('Trip updated!', 'Your changes have been saved.', [{ text: 'Nice!' }]);
+      showToast('Trip updated! Your changes have been saved.', 'success');
       navigation.goBack();
       return;
     }
@@ -545,23 +545,14 @@ export default function LogTripScreen() {
       wildlifeSightings,
       trailsHiked: selectedTrails,
     });
-    Alert.alert(
-      mode === 'plan' ? 'Trip planned!' : 'Adventure saved!',
-      mode === 'plan' ? 'We’ll be ready when you are.' : 'Your passport is growing.',
-      [{ text: mode === 'plan' ? 'Nice!' : 'Awesome!' }]
-    );
-    setStartDate('');
-    setEndDate('');
-    setNotes('');
-    setSelectedActivities([]);
-    setWildlifeSightings([]);
-    setWildlifeInput('');
-    setSelectedTrails([]);
-    setPhotos([]);
-    setCustomTrailName('');
-    setCustomTrailMiles('');
-    setCustomTrailElevation('');
-    setEditingTrailKey(null);
+    // Alert.alert is a no-op on web (same limitation worked around in
+    // SettingsScreen), so success feedback goes through the cross-platform
+    // toast instead — and unlike editing/completing a trip above, saving a
+    // brand-new one used to just reset the form in place with nothing after
+    // it, leaving the user stranded on a blank form instead of seeing where
+    // the trip landed.
+    showToast(mode === 'plan' ? 'Trip planned! We’ll be ready when you are.' : 'Adventure saved! Your passport is growing.', 'success');
+    (navigation as any).navigate('TripsTab', { screen: 'Trips' });
   };
 
   return (

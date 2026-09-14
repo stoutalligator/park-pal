@@ -1,4 +1,7 @@
-export type ParkStatus = 'visited' | 'bucketList' | 'planned' | 'notVisited';
+// Bucket List lives on `Park.isFavorite` instead — it's an independent
+// wishlist flag, not a lifecycle stage, so a park can be favorited at any
+// status (e.g. favorited AND planned) rather than one excluding the other.
+export type ParkStatus = 'visited' | 'planned' | 'notVisited';
 
 export type ParkRegion =
   | 'Northeast'

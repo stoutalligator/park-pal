@@ -19,7 +19,7 @@ function CheckIcon() {
 export default function WishlistScreen() {
   const { parks, updateParkStatus } = useApp();
   const navigation = useNavigation<any>();
-  const wishlist = parks.filter((p) => p.status === 'bucketList');
+  const wishlist = parks.filter((p) => p.isFavorite);
 
   const goToPark = (parkId: string) => {
     navigation.navigate('ParksTab', { screen: 'ParkDetail', params: { parkId } });

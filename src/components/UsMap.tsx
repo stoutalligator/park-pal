@@ -14,10 +14,13 @@ const STAR_POINTS = '6,1 7.2,4.4 10.8,4.5 7.9,6.6 8.9,10.1 6,8 3.1,10.1 4.1,6.6 
 
 const STATUS_BADGE: Record<ParkStatus, { bg: string; icon: 'check' | 'star' | 'none' }> = {
   visited: { bg: colors.visited, icon: 'check' },
-  bucketList: { bg: colors.bucketList, icon: 'star' },
   planned: { bg: colors.planned, icon: 'none' },
   notVisited: { bg: colors.notVisited, icon: 'none' },
 };
+// Bucket List is the independent `isFavorite` flag, not a status — a
+// not-yet-visited park (planned or not) that's favorited still gets the
+// star pin, same as the old 'bucketList' status used to render.
+const FAVORITE_BADGE = { bg: colors.bucketList, icon: 'star' as const };
 
 function StatusIcon({ icon }: { icon: 'check' | 'star' | 'none' }) {
   if (icon === 'check') {
@@ -52,7 +55,7 @@ interface PinProps {
 }
 
 function Pin({ park, x, y, onPress }: PinProps) {
-  const badge = STATUS_BADGE[park.status];
+  const badge = park.isFavorite && park.status !== 'visited' ? FAVORITE_BADGE : STATUS_BADGE[park.status];
   return (
     <TouchableOpacity
       onPress={onPress}

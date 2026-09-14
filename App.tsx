@@ -62,6 +62,14 @@ export default function App() {
     return app;
   }
 
+  // ?screenshot=1 skips the rounded phone-frame chrome below — used only to
+  // capture edge-to-edge store screenshots from the web preview, where a
+  // baked-in bezel/rounded-corner artifact would misrepresent the real
+  // native screen.
+  if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('screenshot') === '1') {
+    return app;
+  }
+
   // Constrain to a phone-sized frame on web so the layout isn't stretched full-width.
   return (
     <View style={styles.webBackdrop}>

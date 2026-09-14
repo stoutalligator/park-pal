@@ -66,7 +66,7 @@ export const BADGE_PROGRESS: Record<string, (ctx: BadgeContext) => number> = {
   coastal: ({ parks }) =>
     parks.filter((p) => COASTAL_PARK_IDS.includes(p.id) && p.status === 'visited').length,
   'memory-keeper': ({ trips }) => trips.filter((t) => t.notes.trim().length > 0).length,
-  'adventure-awaits': ({ parks }) => parks.filter((p) => p.status === 'bucketList').length,
+  'adventure-awaits': ({ parks }) => parks.filter((p) => p.isFavorite).length,
 
   'miles-25': ({ trips }) => totalMilesHiked(trips),
   'miles-100': ({ trips }) => totalMilesHiked(trips),

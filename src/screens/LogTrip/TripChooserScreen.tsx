@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import Svg, { Polygon, Rect, Line, Circle } from 'react-native-svg';
+import Svg, { Path, Rect, Line, Circle } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -8,7 +8,16 @@ import ScreenHeader from '@/components/ScreenHeader';
 function BootIcon({ color }: { color: string }) {
   return (
     <Svg width={32} height={32} viewBox="0 0 24 24">
-      <Polygon points="4,3 11,3 11,9 19,9 19,12 22,12 22,17 4,17" fill={color} />
+      <Path
+        d="M4 4H11V9L19 12Q21 12.8 21 15V17H4Z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M4 14.5h17" stroke={color} strokeWidth={1.1} strokeLinecap="round" />
+      <Path d="M5.3 5.5h4M5.3 7.5h4" stroke={color} strokeWidth={1} strokeLinecap="round" />
     </Svg>
   );
 }

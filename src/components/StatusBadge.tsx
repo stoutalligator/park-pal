@@ -6,7 +6,6 @@ import { ParkStatus } from '@/types';
 
 const CONFIG: Record<ParkStatus, { label: string; bg: string; text: string }> = {
   visited: { label: 'Visited', bg: colors.primary, text: colors.textInverse },
-  bucketList: { label: 'Bucket List', bg: colors.surfaceWarm, text: colors.orange },
   planned: { label: 'Planned', bg: colors.surfaceWarm, text: colors.sky },
   notVisited: { label: 'Not Visited', bg: colors.divider, text: colors.textMuted },
 };
