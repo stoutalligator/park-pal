@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput } from 'react-native';
-import Svg, { Path, Circle } from 'react-native-svg';
+import Svg, { Path, Circle, Rect } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, radius, typography, shadows } from '@/theme';
 import { ExplorerStyle, ExplorerGoal } from '@/types';
 import { useApp } from '@/context/AppContext';
-import { supabase } from '@/lib/supabase';
+import { supabase, supabaseUrl, supabaseAnonKey } from '@/lib/supabase';
 import PrimaryButton from '@/components/PrimaryButton';
 import SegmentedToggle from '@/components/SegmentedToggle';
 
@@ -97,21 +97,90 @@ function StarIcon({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
+function CompassIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="12" r="9" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path
+        d="M15.2 8.8 13 13l-4.2 2.2L11 11z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Circle cx="12" cy="12" r="0.9" fill={color} />
+    </Svg>
+  );
+}
+
+function CameraIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M9 5.5 7.8 7.7H4.6A1.6 1.6 0 0 0 3 9.3v8.1a1.6 1.6 0 0 0 1.6 1.6h14.8a1.6 1.6 0 0 0 1.6-1.6V9.3a1.6 1.6 0 0 0-1.6-1.6h-3.2L15 5.5z" fill="none" stroke={color} strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" />
+      <Circle cx="12" cy="13" r="3.4" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path d="M17.3 10.4h1.3" stroke={color} strokeWidth={1.3} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+function TrophyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M7.5 3.6h9v5.1a4.5 4.5 0 0 1-9 0z" fill="none" stroke={color} strokeWidth={1.6} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M7.5 5H4.8v1.6a3 3 0 0 0 3 3" fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" />
+      <Path d="M16.5 5h2.7v1.6a3 3 0 0 1-3 3" fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" />
+      <Path d="M12 13.2v3.4" stroke={color} strokeWidth={1.5} strokeLinecap="round" />
+      <Path d="M8.7 20.4a3.3 3.3 0 0 1 6.6 0z" fill="none" stroke={color} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function MapIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M9 4.4 3.6 6.2v13.4L9 17.8l6 1.8 5.4-1.8V4.4L14.6 6.2z" fill="none" stroke={color} strokeWidth={1.5} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M9 4.4v13.4M15 6.2v13.4" stroke={color} strokeWidth={1.3} strokeLinecap="round" />
+      <Path d="M12 9.4c-1.4 0-2.5 1-2.5 2.4 0 1.7 2.5 4 2.5 4s2.5-2.3 2.5-4c0-1.4-1.1-2.4-2.5-2.4z" fill="none" stroke={color} strokeWidth={1.2} strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function JournalIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Rect x="4.5" y="3.2" width="15" height="17.6" rx="1.8" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path d="M8 3.2v17.6" stroke={color} strokeWidth={1.3} strokeLinecap="round" />
+      <Path d="M11.2 8.2h5M11.2 11.4h5M11.2 14.6h3.4" stroke={color} strokeWidth={1.2} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+function MountainsIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M2.6 18.4 8.4 8.6l3.4 5-1.7 2.4z" fill="none" stroke={color} strokeWidth={1.5} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M9.6 18.4 15.6 6.2l6 12.2z" fill="none" stroke={color} strokeWidth={1.5} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M15.6 6.2v-3M15.6 3.2 19 4.3l-3.4 1.5z" fill="none" stroke={color} strokeWidth={1.3} strokeLinejoin="round" strokeLinecap="round" />
+    </Svg>
+  );
+}
+
 const STYLES: { label: ExplorerStyle; render: (color: string) => React.ReactElement }[] = [
   {
     label: 'Casual Explorer',
-    render: (c) => <Image source={require('@/assets/icons/icon-explore.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <CompassIcon color={c} />,
   },
   { label: 'Road Tripper', render: (c) => <CarIcon color={c} /> },
   { label: 'Hiker', render: (c) => <BootIcon color={c} /> },
   {
     label: 'Photographer',
-    render: (c) => <Image source={require('@/assets/icons/icon-photos.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <CameraIcon color={c} />,
   },
   { label: 'Camper', render: (c) => <TentIcon color={c} /> },
   {
     label: 'Completionist',
-    render: (c) => <Image source={require('@/assets/icons/icon-achievements.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <TrophyIcon color={c} />,
   },
 ];
 
@@ -119,15 +188,15 @@ const GOALS: { label: ExplorerGoal; render: (color: string) => React.ReactElemen
   { label: 'Visit 5 parks this year', render: (c) => <StarIcon color={c} /> },
   {
     label: 'Complete one region',
-    render: (c) => <Image source={require('@/assets/icons/icon-map.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <MapIcon color={c} />,
   },
   {
     label: 'Track past trips',
-    render: (c) => <Image source={require('@/assets/icons/icon-journal.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <JournalIcon color={c} />,
   },
   {
     label: 'Visit all 63 National Parks',
-    render: (c) => <Image source={require('@/assets/icons/icon-parks.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
+    render: (c) => <MountainsIcon color={c} />,
   },
 ];
 
@@ -137,11 +206,11 @@ export default function AuthScreen({ navigation }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [betaKey, setBetaKey] = useState('');
   const [selectedStyle, setSelectedStyle] = useState<ExplorerStyle | null>(null);
   const [selectedGoal, setSelectedGoal] = useState<ExplorerGoal | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [checkEmail, setCheckEmail] = useState(false);
   const [resetSent, setResetSent] = useState(false);
   const [sendingReset, setSendingReset] = useState(false);
 
@@ -151,23 +220,37 @@ export default function AuthScreen({ navigation }: Props) {
       setErrorMessage('Please enter an email and password.');
       return;
     }
+    if (mode === 'Sign Up' && !betaKey.trim()) {
+      setErrorMessage('Park Pal is in a closed beta right now — enter your beta key to sign up.');
+      return;
+    }
     setSubmitting(true);
     try {
       if (mode === 'Sign Up') {
-        const { data, error } = await supabase.auth.signUp({ email: email.trim(), password });
+        // Account creation is gated behind a beta key checked server-side by
+        // this Edge Function (never shipped in the app bundle), which creates
+        // the user via the admin API — then we sign in normally to get a session.
+        const res = await fetch(`${supabaseUrl}/functions/v1/beta-signup`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            apikey: supabaseAnonKey,
+            Authorization: `Bearer ${supabaseAnonKey}`,
+          },
+          body: JSON.stringify({ email: email.trim(), password, betaKey: betaKey.trim() }),
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error ?? 'Could not create your account.');
+
+        const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
         if (error) throw error;
-        if (data.session) {
-          // A session came back immediately (email confirmation is off) —
-          // RootNavigator picks up the session change and swaps to Main on
-          // its own; just write the chosen profile details onto it.
-          completeOnboarding({
-            name: name.trim() || 'Explorer',
-            explorerStyle: selectedStyle ?? undefined,
-            goal: selectedGoal ?? undefined,
-          });
-        } else {
-          setCheckEmail(true);
-        }
+        // RootNavigator picks up the session change and swaps to Main on its
+        // own; just write the chosen profile details onto it.
+        completeOnboarding({
+          name: name.trim() || 'Explorer',
+          explorerStyle: selectedStyle ?? undefined,
+          goal: selectedGoal ?? undefined,
+        });
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
         if (error) throw error;
@@ -224,21 +307,6 @@ export default function AuthScreen({ navigation }: Props) {
               style={styles.submitBtn}
             />
           </>
-        ) : checkEmail ? (
-          <>
-            <Text style={styles.title}>Check Your Email</Text>
-            <Text style={styles.subtitle}>
-              We sent a confirmation link to {email.trim()}. Confirm your account, then log in below.
-            </Text>
-            <PrimaryButton
-              label="Back to Log In"
-              onPress={() => {
-                setCheckEmail(false);
-                setMode('Log In');
-              }}
-              style={styles.submitBtn}
-            />
-          </>
         ) : (
           <>
         <Text style={styles.title}>{mode === 'Log In' ? 'Welcome Back' : 'Create Your Account'}</Text>
@@ -284,6 +352,16 @@ export default function AuthScreen({ navigation }: Props) {
             value={password}
             onChangeText={setPassword}
           />
+          {mode === 'Sign Up' && (
+            <TextInput
+              style={styles.input}
+              placeholder="Beta Key"
+              placeholderTextColor={colors.textMuted}
+              autoCapitalize="none"
+              value={betaKey}
+              onChangeText={setBetaKey}
+            />
+          )}
         </View>
 
         {mode === 'Log In' && (
