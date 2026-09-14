@@ -256,11 +256,14 @@ grant all on all tables in schema public to service_role;
 -- Storage: trip photos bucket
 -- ---------------------------------------------------------------------------
 
+-- Private (not public) — trip photos are personal, so they're served
+-- through short-lived signed URLs the owning user generates on demand
+-- (src/context/AppContext.tsx), never a permanent public link.
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
 values (
   'trip-photos',
   'trip-photos',
-  true,
+  false,
   5242880, -- 5MB
   array['image/jpeg', 'image/png', 'image/webp', 'image/heic']
 )
@@ -287,8 +290,13 @@ create policy "users delete their own trip photo files"
     and (storage.foldername(name))[1] = auth.uid()::text
   );
 
-create policy "trip photos are publicly readable"
-  on storage.objects for select using (bucket_id = 'trip-photos');
+-- Only the owning user can read their own trip photos (needed both to view
+-- them and to generate a signed URL for them) — no public/unauthenticated read.
+create policy "users view their own trip photo files"
+  on storage.objects for select using (
+    bucket_id = 'trip-photos'
+    and (storage.foldername(name))[1] = auth.uid()::text
+  );
 
 -- ---------------------------------------------------------------------------
 -- Account deletion (App Store / Play Store guideline 5.1.1(v))

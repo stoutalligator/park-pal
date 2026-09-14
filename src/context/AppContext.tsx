@@ -42,20 +42,42 @@ interface AnimalSightingRow {
 }
 
 const TRIP_PHOTOS_BUCKET = 'trip-photos';
+// The bucket is private (not `public: true`) — trip photos are personal, so
+// they're served through short-lived signed URLs the owning user generates
+// on demand, not a permanent public link anyone with it could view forever.
+const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 7; // 1 week — regenerated fresh every time trips load, so this only bounds how long a single session's URLs stay valid.
 
-function storagePathFromPublicUrl(url: string): string | null {
-  const marker = `/storage/v1/object/public/${TRIP_PHOTOS_BUCKET}/`;
+function storagePathFromSignedUrl(url: string): string | null {
+  const marker = `/storage/v1/object/sign/${TRIP_PHOTOS_BUCKET}/`;
   const index = url.indexOf(marker);
-  return index === -1 ? null : url.slice(index + marker.length);
+  if (index === -1) return null;
+  const rest = url.slice(index + marker.length);
+  const queryIndex = rest.indexOf('?');
+  return queryIndex === -1 ? rest : rest.slice(0, queryIndex);
 }
 
-function publicUrlFromStoragePath(path: string): string {
-  return supabase.storage.from(TRIP_PHOTOS_BUCKET).getPublicUrl(path).data.publicUrl;
+async function signedUrlFromStoragePath(path: string): Promise<string | null> {
+  const { data, error } = await supabase.storage.from(TRIP_PHOTOS_BUCKET).createSignedUrl(path, SIGNED_URL_TTL_SECONDS);
+  if (error || !data) return null;
+  return data.signedUrl;
 }
 
-// Reconciles a trip's desired photo list (a mix of already-uploaded public
+// Batched form of the above — one request for every path instead of one
+// round trip per photo, used when loading a whole trip list at once.
+async function signedUrlsFromStoragePaths(paths: string[]): Promise<Record<string, string>> {
+  if (paths.length === 0) return {};
+  const { data, error } = await supabase.storage.from(TRIP_PHOTOS_BUCKET).createSignedUrls(paths, SIGNED_URL_TTL_SECONDS);
+  if (error || !data) return {};
+  const map: Record<string, string> = {};
+  data.forEach((row) => {
+    if (row.signedUrl && !row.error && row.path) map[row.path] = row.signedUrl;
+  });
+  return map;
+}
+
+// Reconciles a trip's desired photo list (a mix of already-uploaded signed
 // URLs and freshly-picked local file URIs, capped at 3 by the schema) against
-// what's stored. Local URIs get uploaded; public URLs are re-linked without
+// what's stored. Local URIs get uploaded; signed URLs are re-linked without
 // re-uploading; anything dropped from the list is deleted from Storage too.
 async function syncTripPhotos(tripId: string, userId: string, photos: string[]): Promise<string[]> {
   const { data: existingRows } = await supabase
@@ -66,7 +88,7 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
   const keptPaths = new Set<string>();
   const finalPaths: string[] = [];
   for (const photo of photos.slice(0, 3)) {
-    const existingPath = storagePathFromPublicUrl(photo);
+    const existingPath = storagePathFromSignedUrl(photo);
     if (existingPath) {
       finalPaths.push(existingPath);
       keptPaths.add(existingPath);
@@ -99,7 +121,8 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
     if (insertError) throw insertError;
   }
 
-  return finalPaths.map(publicUrlFromStoragePath);
+  const urlMap = await signedUrlsFromStoragePaths(finalPaths);
+  return finalPaths.map((p) => urlMap[p]).filter((u): u is string => !!u);
 }
 
 // Shared row-building for user_trail_completions / user_animal_sightings
@@ -310,7 +333,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .from('trip_photos')
         .select('trip_id, storage_path, slot')
         .eq('user_id', session.user.id),
-    ]).then(([trailRes, animalRes, tripRes, photoRes]) => {
+    ]).then(async ([trailRes, animalRes, tripRes, photoRes]) => {
       const trailRows: TrailCompletionRow[] = trailRes.data ?? [];
       const animalRows: AnimalSightingRow[] = animalRes.data ?? [];
       const photoRows = photoRes.data ?? [];
@@ -320,6 +343,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setTrips([]);
         return;
       }
+      // One batched signed-URL request for every trip's photos, rather than
+      // one Storage round trip per photo.
+      const photoUrlMap = await signedUrlsFromStoragePaths(photoRows.map((p) => p.storage_path));
       setTrips(
         tripRes.data.map((row) => ({
           id: row.id,
@@ -332,7 +358,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           photos: photoRows
             .filter((p) => p.trip_id === row.id)
             .sort((a, b) => a.slot - b.slot)
-            .map((p) => publicUrlFromStoragePath(p.storage_path)),
+            .map((p) => photoUrlMap[p.storage_path])
+            .filter((u): u is string => !!u),
           weather: row.weather ?? undefined,
           favoriteTrail: row.favorite_trail ?? undefined,
           wildlifeSightings: animalRows.filter((a) => a.trip_id === row.id).map((a) => a.name),
@@ -582,6 +609,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [parks, persistParkStatus, session]);
 
   const updateTrip = useCallback(async (trip: Trip) => {
+    const previousTrip = trips.find((t) => t.id === trip.id);
     let photos = trip.photos;
     if (session) {
       try {
@@ -614,7 +642,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
     const updatedTrip = { ...trip, photos };
     setTrips((prev) => prev.map((t) => (t.id === trip.id ? updatedTrip : t)));
-  }, [session]);
+
+    // Editing a still-planned trip onto a different park moves the
+    // 'planned' status with it — the old park is no longer backed by
+    // anything, and the new one should pick it up (unless already visited).
+    if (previousTrip && trip.tripType === 'planned' && previousTrip.parkId !== trip.parkId) {
+      const oldPark = parks.find((p) => p.id === previousTrip.parkId);
+      const oldParkStillPlanned = trips.some(
+        (t) => t.id !== trip.id && t.parkId === previousTrip.parkId && t.tripType === 'planned'
+      );
+      if (oldPark && oldPark.status === 'planned' && !oldParkStillPlanned) {
+        updateParkStatus(previousTrip.parkId, 'notVisited');
+      }
+      const newPark = parks.find((p) => p.id === trip.parkId);
+      if (newPark && newPark.status === 'notVisited') {
+        updateParkStatus(trip.parkId, 'planned');
+      }
+    }
+  }, [session, trips, parks, updateParkStatus]);
 
   // Converts a planned trip to logged in place (same row id, not a new
   // insert) — fills in the "what actually happened" fields (photos, trails,
@@ -688,6 +733,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [parks, persistParkStatus, session]);
 
   const deleteTrip = useCallback((tripId: string) => {
+    const deletedTrip = trips.find((t) => t.id === tripId);
     setTrips((prev) => prev.filter((t) => t.id !== tripId));
     if (session) {
       // trip_photos rows cascade with the trip, but the underlying Storage
@@ -721,7 +767,20 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setTrailCompletions((prev) => prev.filter((r) => r.trip_id !== tripId));
       setAnimalSightings((prev) => prev.filter((r) => r.trip_id !== tripId));
     }
-  }, [session]);
+
+    // A park's 'planned' status exists only because a planned trip put it
+    // there — if that was the last planned trip for this park, the park
+    // shouldn't be stuck showing "Planned" with nothing behind it anymore.
+    if (deletedTrip && deletedTrip.tripType === 'planned') {
+      const park = parks.find((p) => p.id === deletedTrip.parkId);
+      const stillHasPlannedTrip = trips.some(
+        (t) => t.id !== tripId && t.parkId === deletedTrip.parkId && t.tripType === 'planned'
+      );
+      if (park && park.status === 'planned' && !stillHasPlannedTrip) {
+        updateParkStatus(deletedTrip.parkId, 'notVisited');
+      }
+    }
+  }, [session, trips, parks, updateParkStatus]);
 
   // Patches profile fields without touching onboarding_complete — used by
   // Settings screens editing an already-onboarded profile. completeOnboarding
