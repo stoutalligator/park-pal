@@ -139,7 +139,13 @@
   const submitBtn = document.getElementById('submitBtn');
 
   function showMsg(text, kind) {
-    formMsg.innerHTML = '<div class="msg ' + kind + '">' + text + '</div>';
+    // Built via textContent, not innerHTML — text can come from Supabase's
+    // own API error responses, which this page doesn't control the exact
+    // contents of, so it's never treated as trusted HTML.
+    const div = document.createElement('div');
+    div.className = 'msg ' + kind;
+    div.textContent = text;
+    formMsg.replaceChildren(div);
   }
 
   async function init() {
@@ -193,7 +199,7 @@
       }
       submitBtn.disabled = true;
       submitBtn.textContent = 'Updating…';
-      formMsg.innerHTML = '';
+      formMsg.replaceChildren();
       try {
         const res = await fetch(SUPABASE_URL + '/auth/v1/user', {
           method: 'PUT',
