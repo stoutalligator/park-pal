@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Park Pal Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --forest: #2D5016;
+    --forest-ink: #23400f;
+    --sage: #6B8C5A;
+    --cream: #EAD9B7;
+    --tan: #C9A96E;
+    --orange: #D4845A;
+    --bg: #FFFFFF;
+    --surface: #FBF8F2;
+    --text-primary: #2B2116;
+    --text-secondary: #5A5140;
+    --text-muted: #8A8270;
+    --border: #E7DFCC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+      --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+      --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220; --tan: #C9A96E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+    --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+    --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220; --tan: #C9A96E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    padding: 0 20px;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding-block: 40px 80px; }
+  nav.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  nav.top a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 700; }
+  nav.top a:hover { color: var(--forest-ink); }
+  header.hero { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .mark { width: 44px; height: 44px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center; flex: none; }
+  .mark svg { width: 24px; height: 24px; }
+  .wordmark { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 18px; color: var(--text-secondary); letter-spacing: 0.02em; }
+  h1 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 700; font-size: clamp(28px, 5vw, 38px); line-height: 1.15; margin: 18px 0 6px; text-wrap: balance; color: var(--text-primary); }
+  .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 36px; }
+  .meta strong { color: var(--text-secondary); font-weight: 700; }
+  .lede { font-size: 16.5px; line-height: 1.65; color: var(--text-secondary); max-width: 62ch; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+  section { margin-bottom: 34px; }
+  section:last-of-type { margin-bottom: 0; }
+  h2 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--forest-ink); margin: 0 0 4px; display: flex; align-items: baseline; gap: 10px; }
+  .h2-num { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; color: var(--tan); letter-spacing: 0.04em; }
+  h2 + p, h2 + ul, h2 + .table-scroll { margin-top: 14px; }
+  p { font-size: 15.5px; line-height: 1.7; color: var(--text-secondary); max-width: 62ch; margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 0; list-style: none; max-width: 62ch; }
+  ul li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 8px; }
+  ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); }
+  ul li strong { color: var(--text-primary); font-weight: 700; }
+  .table-scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 480px; margin-top: 14px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-family: 'Nunito', sans-serif; font-weight: 700; color: var(--text-muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { color: var(--text-secondary); }
+  td:first-child { color: var(--text-primary); font-weight: 700; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--forest); border-radius: 14px; padding: 18px 20px; margin-top: 14px; }
+  .callout p { margin: 0; max-width: none; }
+  .callout p + p { margin-top: 8px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  footer { margin-top: 8px; }
+  footer p { font-size: 14px; color: var(--text-muted); }
+  footer a { color: var(--forest-ink); font-weight: 700; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 460px) { .wrap { padding-block: 32px 56px; } table { min-width: 420px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <span></span>
+    <a href="/">← Park Pal</a>
+  </nav>
+  <header class="hero">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 3 3 19h18L12 3Z" fill="#FFFFFF" opacity="0.95"/>
+        <path d="M12 3 6.2 13.2 9 12l1.6 2.2L14 10l4.9 9H21L12 3Z" fill="#EAD9B7" opacity="0.9"/>
+      </svg>
+    </div>
+    <span class="wordmark">PARK PAL</span>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective <strong>September 14, 2026</strong> &middot; Applies to the Park Pal mobile app (iOS &amp; Android)</p>
+
+  <p class="lede">
+    Park Pal is a national park passport — it tracks the parks you've visited, the trips you log or plan,
+    and the badges you earn along the way. This page explains, plainly, what the app collects, why, and how
+    you stay in control of it.
+  </p>
+
+  <section>
+    <h2><span class="h2-num">01</span> What We Collect</h2>
+    <ul>
+      <li><strong>Account info</strong> — the email address you sign up with, used only to authenticate you.</li>
+      <li><strong>Park &amp; trip data</strong> — parks you mark visited, wishlisted, or planned; trip dates, activities, trail and wildlife entries, and any notes you write.</li>
+      <li><strong>Photos</strong> — images you choose to attach to a trip log, uploaded only when you add them.</li>
+      <li><strong>Profile details</strong> — your display name, explorer style, avatar, park goal, and unit preference (miles/kilometers).</li>
+    </ul>
+    <p>We don't collect location data, contacts, or anything from your device beyond what you enter into the app yourself.</p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">02</span> How We Use It</h2>
+    <p>
+      Solely to power your Park Pal passport: tracking your progress toward all 63 parks, showing your trip
+      history and stats, calculating badges, and syncing your data across your own devices. We do not sell
+      your data, and we do not use it for advertising.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">03</span> Where It Lives</h2>
+    <p>
+      Your data is stored with <strong>Supabase</strong>, our database and file-storage provider, inside a
+      project only Park Pal's backend can access. Every row is scoped to your account with row-level security,
+      and trip photos are served through short-lived private links only you can generate — no one else, signed
+      in or not, can read your trips, photos, or profile.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Stored where</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account &amp; profile</td><td>Supabase (Postgres)</td><td>Until you delete your account</td></tr>
+          <tr><td>Trips, trails, wildlife logs</td><td>Supabase (Postgres)</td><td>Until you delete the trip or account</td></tr>
+          <tr><td>Trip photos</td><td>Supabase Storage (private)</td><td>Until you delete the photo, trip, or account</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">04</span> Your Control</h2>
+    <p>
+      You can edit or delete any trip, park status, or profile detail at any time from within the app.
+      Signing out does not delete your data — it's waiting for you next time.
+    </p>
+    <div class="callout">
+      <p><strong>Deleting your account</strong> is permanent and immediate: open <strong>Settings → Delete
+      Account</strong> in the app. It removes your profile, every trip and photo, and all progress — there's
+      no recovery window, so only confirm once you're sure.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">05</span> Children's Privacy</h2>
+    <p>Park Pal is not directed at children under 13, and we do not knowingly collect data from them.</p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">06</span> Changes to This Policy</h2>
+    <p>
+      If this policy changes in a meaningful way, we'll update the effective date above and the in-app copy
+      under Settings → Privacy Policy.
+    </p>
+  </section>
+
+  <hr class="divider">
+
+  <footer>
+    <p>Questions about your data? Reach us at <a href="mailto:parkpal.support@gmail.com">parkpal.support@gmail.com</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

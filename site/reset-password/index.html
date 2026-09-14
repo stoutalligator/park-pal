@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Park Pal Password Reset</title>
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --forest: #2D5016;
+    --forest-ink: #23400f;
+    --sage: #6B8C5A;
+    --cream: #EAD9B7;
+    --tan: #C9A96E;
+    --rose: #C4847A;
+    --bg: #FFFFFF;
+    --surface: #FBF8F2;
+    --text-primary: #2B2116;
+    --text-secondary: #5A5140;
+    --text-muted: #8A8270;
+    --border: #E7DFCC;
+    --error: #B3453D;
+    --error-bg: #FBEAE8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+      --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+      --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220;
+      --error-bg: #3A2320;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+    --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+    --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220;
+    --error-bg: #3A2320;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    padding: 0 20px;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .card { width: 100%; max-width: 400px; padding-block: 48px; }
+  .mark { width: 52px; height: 52px; border-radius: 14px; background: var(--forest); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+  .mark svg { width: 28px; height: 28px; }
+  h1 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 700; font-size: 26px; text-align: center; margin: 0 0 8px; text-wrap: balance; }
+  .sub { text-align: center; color: var(--text-secondary); font-size: 15px; line-height: 1.5; margin: 0 0 32px; }
+  label { display: block; font-size: 13px; font-weight: 700; color: var(--text-secondary); margin-bottom: 6px; letter-spacing: 0.02em; }
+  .field { margin-bottom: 16px; }
+  input[type="password"] {
+    width: 100%; padding: 13px 16px; border-radius: 12px; border: 1.5px solid var(--border);
+    background: var(--surface); color: var(--text-primary); font-size: 16px; font-family: inherit;
+  }
+  input[type="password"]:focus { outline: none; border-color: var(--forest); }
+  .hint { font-size: 12.5px; color: var(--text-muted); margin-top: 6px; }
+  button {
+    width: 100%; margin-top: 8px; padding: 14px; border: none; border-radius: 999px;
+    background: var(--forest); color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+    font-size: 15.5px; letter-spacing: 0.02em; cursor: pointer;
+  }
+  button:disabled { opacity: 0.55; cursor: default; }
+  .msg { border-radius: 12px; padding: 14px 16px; font-size: 14.5px; line-height: 1.5; margin-top: 16px; }
+  .msg.error { background: var(--error-bg); color: var(--error); }
+  .msg.success { background: var(--surface); color: var(--forest-ink); border: 1px solid var(--border); }
+  .state { text-align: center; }
+  .state .icon { font-size: 40px; margin-bottom: 12px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 3 3 19h18L12 3Z" fill="#FFFFFF" opacity="0.95"/>
+      <path d="M12 3 6.2 13.2 9 12l1.6 2.2L14 10l4.9 9H21L12 3Z" fill="#EAD9B7" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <div id="loadingState" class="state">
+    <p class="sub">Checking your link…</p>
+  </div>
+
+  <div id="formState" hidden>
+    <h1>Set a new password</h1>
+    <p class="sub">Choose a new password for your Park Pal account, then head back to the app and log in.</p>
+    <form id="resetForm">
+      <div class="field">
+        <label for="pw1">New password</label>
+        <input type="password" id="pw1" autocomplete="new-password" minlength="6" required />
+        <div class="hint">At least 6 characters.</div>
+      </div>
+      <div class="field">
+        <label for="pw2">Confirm new password</label>
+        <input type="password" id="pw2" autocomplete="new-password" minlength="6" required />
+      </div>
+      <button type="submit" id="submitBtn">Update Password</button>
+      <div id="formMsg"></div>
+    </form>
+  </div>
+
+  <div id="successState" class="state" hidden>
+    <div class="icon">🌲</div>
+    <h1>Password updated</h1>
+    <p class="sub">You're all set — go back to the Park Pal app and log in with your new password.</p>
+  </div>
+
+  <div id="invalidState" class="state" hidden>
+    <div class="icon">⚠️</div>
+    <h1>This link has expired</h1>
+    <p class="sub">Password reset links only work once and expire after a while. Go back to the app and request a new one from the Log In screen.</p>
+  </div>
+</div>
+
+<script>
+  const SUPABASE_URL = 'https://fnljamltnltkltfroexm.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_Hccb-6yLA6hlfMxAlvf4pw_X4XPA6qS';
+
+  function parseHashParams() {
+    const hash = window.location.hash.startsWith('#') ? window.location.hash.slice(1) : window.location.hash;
+    return new URLSearchParams(hash);
+  }
+
+  const loadingState = document.getElementById('loadingState');
+  const formState = document.getElementById('formState');
+  const successState = document.getElementById('successState');
+  const invalidState = document.getElementById('invalidState');
+  const formMsg = document.getElementById('formMsg');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function showMsg(text, kind) {
+    formMsg.innerHTML = '<div class="msg ' + kind + '">' + text + '</div>';
+  }
+
+  async function init() {
+    const hashParams = parseHashParams();
+    const queryParams = new URLSearchParams(window.location.search);
+    const errorCode = hashParams.get('error_code') || queryParams.get('error_code');
+    const code = queryParams.get('code');
+    let accessToken = hashParams.get('access_token');
+    const type = hashParams.get('type') || queryParams.get('type');
+
+    if (errorCode) {
+      loadingState.hidden = true;
+      invalidState.hidden = false;
+      return;
+    }
+
+    if (!accessToken && code) {
+      try {
+        const res = await fetch(SUPABASE_URL + '/auth/v1/token?grant_type=pkce', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', apikey: SUPABASE_ANON_KEY },
+          body: JSON.stringify({ auth_code: code }),
+        });
+        if (!res.ok) throw new Error('exchange failed');
+        const data = await res.json();
+        accessToken = data.access_token;
+      } catch (e) {
+        accessToken = null;
+      }
+    }
+
+    loadingState.hidden = true;
+
+    if (!accessToken || (type && type !== 'recovery')) {
+      invalidState.hidden = false;
+      return;
+    }
+
+    formState.hidden = false;
+    document.getElementById('resetForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const pw1 = document.getElementById('pw1').value;
+      const pw2 = document.getElementById('pw2').value;
+      if (pw1.length < 6) {
+        showMsg('Password must be at least 6 characters.', 'error');
+        return;
+      }
+      if (pw1 !== pw2) {
+        showMsg('Passwords don’t match.', 'error');
+        return;
+      }
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Updating…';
+      formMsg.innerHTML = '';
+      try {
+        const res = await fetch(SUPABASE_URL + '/auth/v1/user', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': 'Bearer ' + accessToken,
+          },
+          body: JSON.stringify({ password: pw1 }),
+        });
+        if (!res.ok) {
+          const body = await res.json().catch(() => ({}));
+          throw new Error(body.msg || body.error_description || 'Could not update your password.');
+        }
+        formState.hidden = true;
+        successState.hidden = false;
+      } catch (err) {
+        showMsg(err.message || 'Something went wrong. Please try again.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Update Password';
+      }
+    });
+  }
+
+  init();
+</script>
+</body>
+</html>
