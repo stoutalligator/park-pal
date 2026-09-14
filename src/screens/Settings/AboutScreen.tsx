@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ScreenHeader from '@/components/ScreenHeader';
+
+const SUPPORT_EMAIL = 'parkpal.support@gmail.com';
 
 export default function AboutScreen() {
   const navigation = useNavigation<any>();
@@ -20,6 +22,12 @@ export default function AboutScreen() {
           trips, save memories, collect digital passport stamps, and watch your progress toward
           all 63 parks fill in — one adventure at a time.
         </Text>
+        <View style={styles.supportCard}>
+          <Text style={styles.supportLabel}>Need help or have feedback?</Text>
+          <TouchableOpacity onPress={() => Linking.openURL(`mailto:${SUPPORT_EMAIL}`)}>
+            <Text style={styles.supportEmail}>{SUPPORT_EMAIL}</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -42,4 +50,11 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
     ...shadows.sm,
   },
+  supportCard: {
+    marginTop: spacing.lg,
+    alignItems: 'center',
+    gap: spacing.xs,
+  },
+  supportLabel: { ...typography.bodySmall, color: colors.textSecondary },
+  supportEmail: { ...typography.labelBold, color: colors.primary },
 });
