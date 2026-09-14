@@ -504,7 +504,7 @@ export default function LogTripScreen() {
         elevationGainFt,
       });
       showToast('Trip completed! Your passport is growing.', 'success');
-      navigation.goBack();
+      (navigation as any).navigate('TripsTab', { screen: 'Trips' });
       return;
     }
 
@@ -530,7 +530,7 @@ export default function LogTripScreen() {
         elevationGainFt,
       });
       showToast('Trip updated! Your changes have been saved.', 'success');
-      navigation.goBack();
+      (navigation as any).navigate('TripsTab', { screen: 'Trips' });
       return;
     }
 
