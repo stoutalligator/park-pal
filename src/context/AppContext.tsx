@@ -7,11 +7,13 @@ import { BADGE_PROGRESS } from '@/data/badgeRules';
 import { ALL_ANIMALS } from '@/data/animals';
 import { supabase } from '@/lib/supabase';
 import { showToast } from '@/components/Toast';
+import { captureException } from '@/lib/sentry';
 
 // Logs the failure and surfaces a toast so a failed save is never silent —
 // `action` should read naturally after "Couldn't ", e.g. "save your trip".
 function reportError(action: string, error: unknown) {
   console.error(`Failed to ${action}:`, error);
+  captureException(error, { action });
   showToast(`Couldn't ${action}. Please try again.`, 'error');
 }
 
@@ -145,6 +147,7 @@ interface AppContextValue {
   updateProfileAvatar: (avatar: ProfileAvatar) => void;
   updateUnits: (units: Units) => void;
   signOut: () => Promise<void>;
+  deleteAccount: () => Promise<void>;
   isTrailCompleted: (trailId: string) => boolean;
   isAnimalSpotted: (animalId: string) => boolean;
   markTrailCompleted: (trailId: string, parkId: string, name: string) => void;
@@ -802,6 +805,36 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setUserProfile(DEFAULT_PROFILE);
   }, []);
 
+  const deleteAccount = useCallback(async () => {
+    if (!session) return;
+    // trip_photos rows cascade with the account, but the underlying Storage
+    // objects don't — remove those explicitly before the row disappears.
+    const { data: photoRows, error: photoListError } = await supabase
+      .from('trip_photos')
+      .select('storage_path')
+      .eq('user_id', session.user.id);
+    if (photoListError) {
+      reportError('delete your account', photoListError);
+      return;
+    }
+    if (photoRows?.length) {
+      const { error: removeError } = await supabase
+        .storage.from(TRIP_PHOTOS_BUCKET)
+        .remove(photoRows.map((row) => row.storage_path));
+      if (removeError) {
+        reportError('delete your account', removeError);
+        return;
+      }
+    }
+    const { error } = await supabase.rpc('delete_own_account');
+    if (error) {
+      reportError('delete your account', error);
+      return;
+    }
+    await supabase.auth.signOut();
+    setUserProfile(DEFAULT_PROFILE);
+  }, [session]);
+
   return (
     <AppContext.Provider
       value={{
@@ -825,6 +858,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         updateProfileAvatar,
         updateUnits,
         signOut,
+        deleteAccount,
         isTrailCompleted,
         isAnimalSpotted,
         markTrailCompleted,

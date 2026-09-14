@@ -287,3 +287,25 @@ create policy "users delete their own trip photo files"
 
 create policy "trip photos are publicly readable"
   on storage.objects for select using (bucket_id = 'trip-photos');
+
+-- ---------------------------------------------------------------------------
+-- Account deletion (App Store / Play Store guideline 5.1.1(v))
+-- ---------------------------------------------------------------------------
+
+-- Lets a signed-in user permanently delete their own account. security
+-- definer so it can remove the auth.users row (which every table above
+-- cascades from) even though authenticated clients have no direct grant on
+-- auth.users; it only ever targets auth.uid(), never an arbitrary id, so it's
+-- safe to grant execute to every authenticated user.
+create or replace function public.delete_own_account()
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  delete from auth.users where id = auth.uid();
+end;
+$$;
+
+grant execute on function public.delete_own_account() to authenticated;

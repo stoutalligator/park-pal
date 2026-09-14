@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { View, ActivityIndicator, Platform, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one';
 import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
 import { AppProvider } from '@/context/AppContext';
@@ -10,6 +11,13 @@ import RootNavigator from '@/navigation/RootNavigator';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ToastHost } from '@/components/Toast';
 import { colors, radius, shadows } from '@/theme';
+import { initSentry } from '@/lib/sentry';
+
+// Keep the native splash (splash-icon.png) up until fonts are ready, instead
+// of it auto-hiding on JS bundle load and leaving a blank frame while fonts
+// stream in — SplashScreen.hideAsync() is a no-op on web.
+SplashScreen.preventAutoHideAsync().catch(() => {});
+initSentry();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,6 +26,14 @@ export default function App() {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
+
+  const onFontsReady = useCallback(async () => {
+    if (fontsLoaded) await SplashScreen.hideAsync();
+  }, [fontsLoaded]);
+
+  useEffect(() => {
+    onFontsReady();
+  }, [onFontsReady]);
 
   if (!fontsLoaded) {
     return (

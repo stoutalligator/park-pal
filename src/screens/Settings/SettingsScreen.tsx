@@ -30,7 +30,7 @@ const SETTINGS_ROWS = [
 
 export default function SettingsScreen() {
   const navigation = useNavigation<any>();
-  const { session, signOut } = useApp();
+  const { session, signOut, deleteAccount } = useApp();
 
   const confirmSignOut = () => {
     // Alert.alert is a no-op on react-native-web, so fall back to
@@ -42,6 +42,28 @@ export default function SettingsScreen() {
     Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
       { text: 'Cancel', style: 'cancel' },
       { text: 'Sign Out', style: 'destructive', onPress: signOut },
+    ]);
+  };
+
+  const confirmDeleteAccount = () => {
+    const message =
+      'This permanently deletes your account, trips, photos, and progress. This cannot be undone.';
+    if (Platform.OS === 'web') {
+      if (window.confirm(`Delete your account? ${message}`)) deleteAccount();
+      return;
+    }
+    Alert.alert('Delete Account', message, [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Delete',
+        style: 'destructive',
+        onPress: () => {
+          Alert.alert('Are you absolutely sure?', 'This is your last chance to back out.', [
+            { text: 'Cancel', style: 'cancel' },
+            { text: 'Delete My Account', style: 'destructive', onPress: deleteAccount },
+          ]);
+        },
+      },
     ]);
   };
 
@@ -75,9 +97,18 @@ export default function SettingsScreen() {
         {session ? (
           <View style={styles.section}>
             <View style={styles.group}>
-              <TouchableOpacity style={styles.row} activeOpacity={0.7} onPress={confirmSignOut}>
+              <TouchableOpacity
+                style={[styles.row, styles.rowBorder]}
+                activeOpacity={0.7}
+                onPress={confirmSignOut}
+              >
                 <View style={styles.rowText}>
                   <Text style={styles.signOutLabel}>Sign Out</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.row} activeOpacity={0.7} onPress={confirmDeleteAccount}>
+                <View style={styles.rowText}>
+                  <Text style={styles.deleteLabel}>Delete Account</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -102,4 +133,5 @@ const styles = StyleSheet.create({
   rowSub: { ...typography.caption, color: colors.textSecondary },
   chevron: { fontSize: 20, color: colors.textMuted },
   signOutLabel: { ...typography.labelSemiBold, color: colors.rose, textAlign: 'center' },
+  deleteLabel: { ...typography.labelSemiBold, color: colors.textMuted, textAlign: 'center' },
 });

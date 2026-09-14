@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { colors } from '@/theme';
+import { captureException } from '@/lib/sentry';
 import EmptyState from './EmptyState';
 
 interface Props {
@@ -20,6 +21,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
 
   componentDidCatch(error: Error, info: React.ErrorInfo) {
     console.error('Unhandled error caught by ErrorBoundary:', error, info.componentStack);
+    captureException(error, { componentStack: info.componentStack ?? undefined });
   }
 
   handleReset = () => {
