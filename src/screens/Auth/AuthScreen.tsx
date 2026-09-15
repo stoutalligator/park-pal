@@ -6,7 +6,9 @@ import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, radius, typography, shadows } from '@/theme';
 import { ExplorerStyle, ExplorerGoal } from '@/types';
 import { useApp } from '@/context/AppContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { supabase } from '@/lib/supabase';
+import { PENDING_ONBOARDING_KEY } from '@/context/AppContext';
 import PrimaryButton from '@/components/PrimaryButton';
 import SegmentedToggle from '@/components/SegmentedToggle';
 
@@ -240,10 +242,20 @@ export default function AuthScreen({ navigation }: Props) {
             goal: selectedGoal ?? undefined,
           });
         } else {
-          // Email confirmation is required before a session exists — the
-          // explorer style/goal picked here can't be saved yet since there's
-          // no authenticated user; the normal onboarding flow picks it back
-          // up once they confirm and log in.
+          // Email confirmation is required before a session exists, so the
+          // explorer style/goal/name picked here can't be saved to the
+          // profile yet — stash them locally and AppContext applies them
+          // via completeOnboarding() the first time a session shows up for
+          // an account that hasn't onboarded yet (right after they confirm
+          // and log in).
+          await AsyncStorage.setItem(
+            PENDING_ONBOARDING_KEY,
+            JSON.stringify({
+              name: name.trim() || 'Explorer',
+              explorerStyle: selectedStyle ?? undefined,
+              goal: selectedGoal ?? undefined,
+            })
+          );
           setConfirmEmailSent(true);
         }
       } else {

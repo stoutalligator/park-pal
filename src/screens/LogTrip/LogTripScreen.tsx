@@ -485,7 +485,33 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
   const [editMiles, setEditMiles] = useState('');
   const [editElevation, setEditElevation] = useState('');
 
+  const pageScrollRef = useRef<ScrollView>(null);
+  const pageScrollY = useRef(0);
+  const trailCardRefs = useRef<Record<string, View | null>>({});
+
   const trailKeyOf = (entry: { trailId?: string; name: string }) => entry.trailId ?? entry.name;
+
+  // Scroll the newly-opened edit card into view — it renders down in the
+  // "Your Trails" summary list, well below the trail chips someone just
+  // tapped, so without this it can pop up entirely off-screen.
+  useEffect(() => {
+    if (!editingTrailKey) return;
+    const card = trailCardRefs.current[editingTrailKey];
+    const scroller = pageScrollRef.current;
+    if (!card || !scroller) return;
+    requestAnimationFrame(() => {
+      card.measureInWindow((_cardX, cardY, _w, cardHeight) => {
+        // ScrollView's TS types omit measureInWindow even though the
+        // underlying native component implements it.
+        (scroller as unknown as { measureInWindow: (cb: (x: number, y: number, w: number, h: number) => void) => void }).measureInWindow((_containerX: number, containerY: number, _cw: number, containerHeight: number) => {
+          const cardCenter = cardY + cardHeight / 2;
+          const viewportCenter = containerY + containerHeight / 2;
+          const targetY = Math.max(0, pageScrollY.current + (cardCenter - viewportCenter));
+          scroller.scrollTo({ y: targetY, animated: true });
+        });
+      });
+    });
+  }, [editingTrailKey]);
 
   const toggleActivity = (label: ActivityType) => {
     const exists = value.activities.some((a) => a.activity === label);
@@ -584,7 +610,14 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
 
   return (
     <View style={[styles.dayPage, { width }]}>
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.dayPageContent} nestedScrollEnabled>
+      <ScrollView
+        ref={pageScrollRef}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.dayPageContent}
+        nestedScrollEnabled
+        onScroll={(e) => { pageScrollY.current = e.nativeEvent.contentOffset.y; }}
+        scrollEventThrottle={16}
+      >
         <Text style={styles.dayPageTitle}>Day {dayNumber} · {dateLabel}</Text>
 
         <Text style={styles.sublabel}>{mode === 'plan' ? 'What are you hoping to do?' : 'What did you do?'}</Text>
@@ -695,7 +728,11 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
                   {value.trails.map((entry) => {
                     const editing = editingTrailKey === trailKeyOf(entry);
                     return (
-                      <View key={trailKeyOf(entry)} style={styles.trailSummaryCard}>
+                      <View
+                        key={trailKeyOf(entry)}
+                        ref={(node) => { trailCardRefs.current[trailKeyOf(entry)] = node; }}
+                        style={styles.trailSummaryCard}
+                      >
                         {editing ? (
                           <>
                             <Text style={styles.trailSummaryName}>{entry.name}</Text>

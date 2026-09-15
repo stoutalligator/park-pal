@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Session } from '@supabase/supabase-js';
 import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
@@ -18,6 +19,12 @@ function reportError(action: string, error: unknown) {
   captureException(error, { action });
   showToast(`Couldn't ${action}. Please try again.`, 'error');
 }
+
+// AuthScreen stashes the explorer style/goal/name picked during sign-up
+// here when email confirmation delays the session (and therefore delays
+// completeOnboarding) — see the effect below that applies it once a session
+// for a not-yet-onboarded account actually shows up.
+export const PENDING_ONBOARDING_KEY = 'parkpal.pendingOnboarding';
 
 const DEFAULT_PROFILE: UserProfile = {
   name: 'Explorer',
@@ -1006,6 +1013,25 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         });
     }
   }, [session]);
+
+  // Applies onboarding details stashed locally by AuthScreen when sign-up
+  // couldn't call completeOnboarding immediately (email confirmation was
+  // required, so there was no session yet to save them against). Runs once
+  // a session and profile are both loaded for an account that hasn't
+  // actually finished onboarding — covers both the normal "confirm, then
+  // log in" path and logging in again on the same device later.
+  useEffect(() => {
+    if (!session || !profileLoaded || userProfile.onboardingComplete) return;
+    AsyncStorage.getItem(PENDING_ONBOARDING_KEY).then((raw) => {
+      if (!raw) return;
+      AsyncStorage.removeItem(PENDING_ONBOARDING_KEY);
+      try {
+        completeOnboarding(JSON.parse(raw));
+      } catch (error) {
+        console.error('Failed to apply pending onboarding data:', error);
+      }
+    });
+  }, [session, profileLoaded, userProfile.onboardingComplete, completeOnboarding]);
 
   const updateProfileBackground = useCallback((background: ProfileBackground) => {
     setUserProfile((prev) => ({ ...prev, profileBackground: background }));

@@ -3,7 +3,16 @@ import { View, TouchableOpacity, StyleSheet, Text, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Svg, { Path } from 'react-native-svg';
 import { colors, spacing, shadows, typography, fontFamilies } from '@/theme';
+
+function PlusIcon() {
+  return (
+    <Svg width={24} height={24} viewBox="0 0 24 24">
+      <Path d="M12 5v14M5 12h14" stroke={colors.textInverse} strokeWidth={2.6} strokeLinecap="round" />
+    </Svg>
+  );
+}
 import { MainTabParamList, HomeStackParamList, ParksStackParamList, LogTripStackParamList, TripsStackParamList, ProfileStackParamList } from './types';
 
 // Screens
@@ -128,7 +137,7 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
           return (
             <TouchableOpacity key={route.key} onPress={onFabPress} style={styles.fabWrapper} activeOpacity={0.85}>
               <View style={styles.fab}>
-                <Text style={styles.fabIcon}>+</Text>
+                <PlusIcon />
               </View>
             </TouchableOpacity>
           );
@@ -209,10 +218,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     ...shadows.lg,
-  },
-  fabIcon: {
-    fontSize: 28,
-    color: colors.textInverse,
-    lineHeight: 32,
   },
 });
