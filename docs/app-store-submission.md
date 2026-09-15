@@ -18,6 +18,8 @@ The app previously gated sign-up behind a shared Beta Key (`supabase/functions/b
 
 The confirmation page itself (`site/confirmed/index.html`) is a static page matching the reset-password page's style — it just reads the redirect params GoTrue appends after verifying the link server-side and shows a success or expired-link message. No form, no API calls; the actual account confirmation already happened before the browser lands there.
 
+**Web-app browser access — also retired.** During the closed-beta / pre-Apple-Developer-access period, `npx expo export --platform web`'s output (`dist/`) was deployed to a separate Cloudflare Pages project ("park-pal-app") so the app could be used in a browser without a real iOS build. Now that builds go through EAS + a real Apple Developer account (TestFlight-bound), that workaround is unnecessary — the "park-pal-app" Cloudflare Pages project has been taken down. This is a **separate** project from "park-pal" (which serves `site/` — the homepage, privacy, support, terms, reset-password, and confirmed pages) — removing it doesn't affect any of those required URLs. The local `dist/` folder was also deleted from the repo; it was untracked build output and its ~230MB was bloating the EAS build archive for no reason once native builds took over.
+
 ---
 
 ## 0. Full Path From Here to Live (ordered)
