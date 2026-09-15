@@ -6,7 +6,7 @@ import { RootStackParamList } from '@/navigation/types';
 import { colors, spacing, radius, typography, shadows } from '@/theme';
 import { ExplorerStyle, ExplorerGoal } from '@/types';
 import { useApp } from '@/context/AppContext';
-import { supabase, supabaseUrl, supabaseAnonKey } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
 import PrimaryButton from '@/components/PrimaryButton';
 import SegmentedToggle from '@/components/SegmentedToggle';
 
@@ -206,12 +206,12 @@ export default function AuthScreen({ navigation }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [betaKey, setBetaKey] = useState('');
   const [selectedStyle, setSelectedStyle] = useState<ExplorerStyle | null>(null);
   const [selectedGoal, setSelectedGoal] = useState<ExplorerGoal | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [resetSent, setResetSent] = useState(false);
+  const [confirmEmailSent, setConfirmEmailSent] = useState(false);
   const [sendingReset, setSendingReset] = useState(false);
 
   const handleSubmit = async () => {
@@ -220,37 +220,27 @@ export default function AuthScreen({ navigation }: Props) {
       setErrorMessage('Please enter an email and password.');
       return;
     }
-    if (mode === 'Sign Up' && !betaKey.trim()) {
-      setErrorMessage('Parks Pal is in a closed beta right now — enter your beta key to sign up.');
-      return;
-    }
     setSubmitting(true);
     try {
       if (mode === 'Sign Up') {
-        // Account creation is gated behind a beta key checked server-side by
-        // this Edge Function (never shipped in the app bundle), which creates
-        // the user via the admin API — then we sign in normally to get a session.
-        const res = await fetch(`${supabaseUrl}/functions/v1/beta-signup`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            apikey: supabaseAnonKey,
-            Authorization: `Bearer ${supabaseAnonKey}`,
-          },
-          body: JSON.stringify({ email: email.trim(), password, betaKey: betaKey.trim() }),
-        });
-        const result = await res.json();
-        if (!res.ok) throw new Error(result.error ?? 'Could not create your account.');
-
-        const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+        const { data, error } = await supabase.auth.signUp({ email: email.trim(), password });
         if (error) throw error;
-        // RootNavigator picks up the session change and swaps to Main on its
-        // own; just write the chosen profile details onto it.
-        completeOnboarding({
-          name: name.trim() || 'Explorer',
-          explorerStyle: selectedStyle ?? undefined,
-          goal: selectedGoal ?? undefined,
-        });
+        if (data.session) {
+          // Email confirmation is off for this project — signUp already
+          // returned a live session, so RootNavigator swaps to Main on its
+          // own; just write the chosen profile details onto it.
+          completeOnboarding({
+            name: name.trim() || 'Explorer',
+            explorerStyle: selectedStyle ?? undefined,
+            goal: selectedGoal ?? undefined,
+          });
+        } else {
+          // Email confirmation is required before a session exists — the
+          // explorer style/goal picked here can't be saved yet since there's
+          // no authenticated user; the normal onboarding flow picks it back
+          // up once they confirm and log in.
+          setConfirmEmailSent(true);
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
         if (error) throw error;
@@ -307,6 +297,22 @@ export default function AuthScreen({ navigation }: Props) {
               style={styles.submitBtn}
             />
           </>
+        ) : confirmEmailSent ? (
+          <>
+            <Text style={styles.title}>Check Your Email</Text>
+            <Text style={styles.subtitle}>
+              We sent a confirmation link to {email.trim()}. Open it on your phone to confirm your
+              account, then come back here and log in.
+            </Text>
+            <PrimaryButton
+              label="Back to Log In"
+              onPress={() => {
+                setConfirmEmailSent(false);
+                setMode('Log In');
+              }}
+              style={styles.submitBtn}
+            />
+          </>
         ) : (
           <>
         <Text style={styles.title}>{mode === 'Log In' ? 'Welcome Back' : 'Create Your Account'}</Text>
@@ -352,16 +358,6 @@ export default function AuthScreen({ navigation }: Props) {
             value={password}
             onChangeText={setPassword}
           />
-          {mode === 'Sign Up' && (
-            <TextInput
-              style={styles.input}
-              placeholder="Beta Key"
-              placeholderTextColor={colors.textMuted}
-              autoCapitalize="none"
-              value={betaKey}
-              onChangeText={setBetaKey}
-            />
-          )}
         </View>
 
         {mode === 'Log In' && (

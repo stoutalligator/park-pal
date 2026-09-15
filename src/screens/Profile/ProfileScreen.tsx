@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BlurView } from 'expo-blur';
+import Svg, { Path, Rect, Circle } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import TripCard from '@/components/TripCard';
+import { showToast } from '@/components/Toast';
 import { ProfileBackground, ProfileAvatar } from '@/types';
 import { getBadgeImage } from '@/data/badgeImages';
+
+function LockIcon() {
+  return (
+    <Svg width={14} height={14} viewBox="0 0 24 24">
+      <Rect x={5} y={11} width={14} height={10} rx={2} fill={colors.surface} stroke={colors.brown} strokeWidth={1.8} />
+      <Path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke={colors.brown} strokeWidth={1.8} strokeLinecap="round" />
+      <Circle cx={12} cy={15.5} r={1.3} fill={colors.brown} />
+    </Svg>
+  );
+}
 
 const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: number }[] = [
   { key: 'mountain-lake', label: 'Mountain Lake', source: require('@/assets/scenes/scene-mountain-lake.png') },
@@ -22,22 +34,30 @@ const BACKGROUND_BY_KEY = Object.fromEntries(BACKGROUND_OPTIONS.map((o) => [o.ke
   number
 >;
 
-const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number }[] = [
-  { key: 'hiking', label: 'Hiking', source: require('@/assets/activities/bear-hiking.png') },
-  { key: 'camping', label: 'Camping', source: require('@/assets/activities/bear-camping.png') },
-  { key: 'wildlife-viewing', label: 'Wildlife', source: require('@/assets/activities/bear-wildlife-viewing.png') },
-  { key: 'kayaking', label: 'Kayaking', source: require('@/assets/activities/bear-kayaking.png') },
-  { key: 'scenic-drive', label: 'Scenic Drive', source: require('@/assets/activities/bear-scenic-drive.png') },
-  { key: 'photography', label: 'Photography', source: require('@/assets/activities/bear-photography.png') },
-  { key: 'backpacking', label: 'Backpacking', source: require('@/assets/activities/bear-backpacking.png') },
-  { key: 'stargazing', label: 'Stargazing', source: require('@/assets/activities/bear-stargazing.png') },
-  { key: 'fishing', label: 'Fishing', source: require('@/assets/activities/bear-fishing.png') },
-  { key: 'horseback-riding', label: 'Horseback', source: require('@/assets/activities/bear-horseback-riding.png') },
-  { key: 'nature-walk', label: 'Nature Walk', source: require('@/assets/activities/bear-nature-walk.png') },
-  { key: 'waterfall-hike', label: 'Waterfall Hike', source: require('@/assets/activities/bear-waterfall-hike.png') },
-  { key: 'picnic', label: 'Picnic', source: require('@/assets/activities/bear-picnic.png') },
-  { key: 'rock-climbing', label: 'Rock Climbing', source: require('@/assets/activities/bear-rock-climbing.png') },
-  { key: 'winter-activity', label: 'Winter', source: require('@/assets/activities/bear-winter-activity.png') },
+const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number; unlockedByBadgeId?: string }[] = [
+  { key: 'hiking', label: 'Hiking', source: require('@/assets/activities/pal-hiking.png') },
+  { key: 'camping', label: 'Camping', source: require('@/assets/activities/pal-camping.png') },
+  { key: 'wildlife-viewing', label: 'Wildlife', source: require('@/assets/activities/pal-wildlife-viewing.png') },
+  { key: 'kayaking', label: 'Kayaking', source: require('@/assets/activities/pal-kayaking.png') },
+  { key: 'scenic-drive', label: 'Scenic Drive', source: require('@/assets/activities/pal-scenic-drive.png') },
+  { key: 'photography', label: 'Photography', source: require('@/assets/activities/pal-photography.png') },
+  { key: 'backpacking', label: 'Backpacking', source: require('@/assets/activities/pal-backpacking.png') },
+  { key: 'stargazing', label: 'Stargazing', source: require('@/assets/activities/pal-stargazing.png') },
+  { key: 'fishing', label: 'Fishing', source: require('@/assets/activities/pal-fishing.png') },
+  { key: 'horseback-riding', label: 'Horseback', source: require('@/assets/activities/pal-horseback-riding.png') },
+  { key: 'nature-walk', label: 'Nature Walk', source: require('@/assets/activities/pal-nature-walk.png') },
+  { key: 'waterfall-hike', label: 'Waterfall Hike', source: require('@/assets/activities/pal-waterfall-hike.png') },
+  { key: 'picnic', label: 'Picnic', source: require('@/assets/activities/pal-picnic.png') },
+  { key: 'rock-climbing', label: 'Rock Climbing', source: require('@/assets/activities/pal-rock-climbing.png') },
+  { key: 'winter-activity', label: 'Winter', source: require('@/assets/activities/pal-winter-activity.png') },
+  // Badge-unlocked bonus pals — visually distinct from the default roster,
+  // hidden behind a lock overlay in the picker until the linked badge is earned.
+  {
+    key: 'channel-islands-fox',
+    label: 'Island Fox',
+    source: require('@/assets/activities/pal-channel-islands-fox.png'),
+    unlockedByBadgeId: 'channel-islands-fox',
+  },
 ];
 
 const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.source])) as Record<
@@ -65,6 +85,11 @@ export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const [pickerVisible, setPickerVisible] = useState(false);
   const [avatarPickerVisible, setAvatarPickerVisible] = useState(false);
+
+  const earnedBadgeIds = useMemo(
+    () => new Set(badges.filter((b) => b.earned).map((b) => b.id)),
+    [badges]
+  );
 
   const recentTrips = trips
     .filter((t) => t.tripType === 'logged')
@@ -223,22 +248,38 @@ export default function ProfileScreen() {
             onPress={() => setAvatarPickerVisible(false)}
           />
           <View style={styles.modalSheet}>
-            <Text style={styles.modalTitle}>Choose Your Bear</Text>
+            <Text style={styles.modalTitle}>Choose Your Pal</Text>
             <ScrollView contentContainerStyle={styles.avatarGrid} showsVerticalScrollIndicator={false}>
               {AVATAR_OPTIONS.map((option) => {
                 const selected = option.key === userProfile.avatar;
+                const requiredBadgeId = option.unlockedByBadgeId;
+                const locked = !!requiredBadgeId && !earnedBadgeIds.has(requiredBadgeId);
                 return (
                   <TouchableOpacity
                     key={option.key}
                     style={styles.avatarOptionCard}
                     activeOpacity={0.85}
                     onPress={() => {
+                      if (locked) {
+                        const badgeName = badges.find((b) => b.id === requiredBadgeId)?.name ?? 'a hidden badge';
+                        showToast(`Earn "${badgeName}" to unlock this pal`);
+                        return;
+                      }
                       updateProfileAvatar(option.key);
                       setAvatarPickerVisible(false);
                     }}
                   >
                     <View style={[styles.avatarOptionThumb, selected && styles.avatarOptionThumbSelected]}>
-                      <Image source={option.source} style={styles.avatarOptionImage} resizeMode="contain" />
+                      <Image
+                        source={option.source}
+                        style={[styles.avatarOptionImage, locked && styles.avatarOptionImageLocked]}
+                        resizeMode="contain"
+                      />
+                      {locked && (
+                        <View style={styles.lockBadge}>
+                          <LockIcon />
+                        </View>
+                      )}
                     </View>
                     <Text style={styles.optionLabel} numberOfLines={1}>
                       {option.label}
@@ -458,7 +499,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 3,
     borderColor: 'transparent',
+    position: 'relative',
   },
   avatarOptionThumbSelected: { borderColor: colors.primary },
   avatarOptionImage: { width: 54, height: 54 },
+  avatarOptionImageLocked: { opacity: 0.3 },
+  lockBadge: {
+    position: 'absolute',
+    bottom: -4,
+    right: -4,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: colors.tan,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: colors.surface,
+  },
 });

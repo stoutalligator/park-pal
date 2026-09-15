@@ -4,21 +4,13 @@ Copy-paste source for store listings and the privacy questionnaires. Not app doc
 
 ---
 
-## Closed Beta Plan (current — before any store spend)
+## Closed Beta Plan (retired)
 
-Decision: hold off on the Apple $99/year and public store listings until the app has actually been used by real people and the Supabase usage/cost picture is understood. In the meantime: deploy the web build to `parks-pal.com`, gate sign-up behind a shared **Beta Key**, and hand that key only to friends.
+The app previously gated sign-up behind a shared Beta Key (`supabase/functions/beta-signup`) while it was friends-and-family only. That gate has been removed — `AuthScreen.tsx` now calls `supabase.auth.signUp()` directly and the `beta-signup` Edge Function has been deleted. If a `BETA_SIGNUP_KEY` secret is still set on the Supabase project, it's inert and can be removed with `npx supabase secrets unset BETA_SIGNUP_KEY`.
 
-**How the gate works:** `supabase/functions/beta-signup/index.ts` is a Supabase Edge Function that checks the submitted beta key against a `BETA_SIGNUP_KEY` secret stored only in the function's own environment — it's never shipped in the app bundle, so it can't be read out of the deployed web JS the way a client-side check could be. If the key matches, the function creates the user via the Supabase admin API; the client then signs in normally. `AuthScreen.tsx`'s Sign Up form now has a required "Beta Key" field that calls this function instead of `supabase.auth.signUp()` directly.
-
-**Deploy steps (one-time):**
-1. `npx supabase login` — opens a browser to authenticate the CLI with your Supabase account.
-2. `npx supabase link --project-ref <your-project-ref>` — run from the repo root; the project ref is in the Supabase dashboard URL (`supabase.com/dashboard/project/<ref>`). This creates `supabase/config.toml`.
-3. `npx supabase secrets set BETA_SIGNUP_KEY=<pick-a-key>` — pick any string; this is the value you'll hand to friends.
-4. `npx supabase functions deploy beta-signup` — pushes the function live.
-5. Rebuild/redeploy the web app (`npx expo export --platform web` + push to the `site`-connected Cloudflare Pages repo, same as the earlier privacy/support pages) so the updated `AuthScreen.tsx` ships.
-6. Give the beta key to friends out of band (text, not the site itself).
-
-**Later, when ready to actually launch:** the beta-key requirement can be removed from `AuthScreen.tsx` (delete the field + go back to calling `supabase.auth.signUp()` directly) whenever it's time to open sign-ups to the public and pursue the App Store/Play Store path in section 0 below.
+**Before opening sign-ups publicly, double-check in the Supabase dashboard (Authentication → Providers → Email):**
+- Whether "Confirm email" is on. If it is, new users get a confirmation email before they can log in (the app already handles this — see `confirmEmailSent` in `AuthScreen.tsx`). If it's off, `signUp()` returns a live session immediately and users land straight in onboarding.
+- The **Site URL** / redirect URLs are set to something reasonable, since confirmation and reset-password emails link out to them.
 
 ---
 

@@ -28,21 +28,21 @@ import { formatDateRange, addDays, dayCountBetween, parseLocalDate } from '@/uti
 type FormMode = 'plan' | 'log' | 'complete';
 
 const HERO_ACTIVITY_IMAGES: number[] = [
-  require('@/assets/activities/bear-hiking.png'),
-  require('@/assets/activities/bear-camping.png'),
-  require('@/assets/activities/bear-wildlife-viewing.png'),
-  require('@/assets/activities/bear-kayaking.png'),
-  require('@/assets/activities/bear-scenic-drive.png'),
-  require('@/assets/activities/bear-photography.png'),
-  require('@/assets/activities/bear-backpacking.png'),
-  require('@/assets/activities/bear-stargazing.png'),
-  require('@/assets/activities/bear-fishing.png'),
-  require('@/assets/activities/bear-horseback-riding.png'),
-  require('@/assets/activities/bear-nature-walk.png'),
-  require('@/assets/activities/bear-waterfall-hike.png'),
-  require('@/assets/activities/bear-picnic.png'),
-  require('@/assets/activities/bear-rock-climbing.png'),
-  require('@/assets/activities/bear-winter-activity.png'),
+  require('@/assets/activities/pal-hiking.png'),
+  require('@/assets/activities/pal-camping.png'),
+  require('@/assets/activities/pal-wildlife-viewing.png'),
+  require('@/assets/activities/pal-kayaking.png'),
+  require('@/assets/activities/pal-scenic-drive.png'),
+  require('@/assets/activities/pal-photography.png'),
+  require('@/assets/activities/pal-backpacking.png'),
+  require('@/assets/activities/pal-stargazing.png'),
+  require('@/assets/activities/pal-fishing.png'),
+  require('@/assets/activities/pal-horseback-riding.png'),
+  require('@/assets/activities/pal-nature-walk.png'),
+  require('@/assets/activities/pal-waterfall-hike.png'),
+  require('@/assets/activities/pal-picnic.png'),
+  require('@/assets/activities/pal-rock-climbing.png'),
+  require('@/assets/activities/pal-winter-activity.png'),
 ];
 
 function randomHeroImage(): number {

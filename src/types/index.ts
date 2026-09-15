@@ -173,7 +173,8 @@ export type ProfileAvatar =
   | 'waterfall-hike'
   | 'picnic'
   | 'rock-climbing'
-  | 'winter-activity';
+  | 'winter-activity'
+  | 'channel-islands-fox';
 
 export type Units = 'mi' | 'km';
 

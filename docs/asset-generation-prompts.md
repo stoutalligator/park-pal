@@ -124,3 +124,129 @@ Placeholder art already generated in-repo by `svg-creator` follows these same sp
 | night-owl (secret) | Night Owl | an owl perched under a crescent moon and stars |
 | globe-trotter (secret) | Globe Trotter | a globe with two location pins, one near Alaska one near Hawaii |
 | perfect-trip (secret) | Perfect Trip | a five-star ribbon beside a camera and journal |
+
+---
+
+## Moose mascot + Park Pals roster (replacing the bear)
+
+The fixed brand mascot is being redesigned from a bear to a moose — partly a style refresh, partly to move away from the current ranger-hat-and-vest look reading too close to Smokey Bear (whose likeness is protected by its own federal statute, the Smokey Bear Act). A moose sidesteps that entirely.
+
+The moose replaces every file in `src/assets/mascot/` and stays the one consistent "face of the app" on branding surfaces (welcome, profile hero, log-trip header, empty states). The activity avatar picker (`AVATAR_OPTIONS` in `ProfileScreen.tsx`, currently 15 bear-doing-an-activity poses) is being redone as an assortment of different animals — "Park Pals" — one species per activity, so users pick a companion rather than just a pose of the same character. See the **Park Pals roster** section below for that. `badge-adventure-awaits.png` is left as-is for now — it's a plain generic bear illustration, not tied to the mascot's specific design, so there's less pressure to swap it in this pass.
+
+**Base character block — paste into every prompt in this section, unedited, so the moose stays the same character across all 8 mascot images:**
+
+> Warm, hand-drawn vintage national-park-poster illustration style. Flat color fills only, no gradients, no photorealism, no drop shadows baked into the art. Consistent medium-weight rounded outline in dark brown (#8B6340) or forest green (#2D5016). Palette limited to: forest #2D5016, sage #6B8C5A, sky #A8C5D4, tan #C9A96E, orange #D4845A, rose #C4847A, brown #8B6340, cream #F5F0E8, dark brown #5C4028. No text, no emoji, no generic vector-icon-font look.
+>
+> Character: a friendly cartoon moose mascot for a national-parks app, matching the same soft plush-toy appeal as this app's existing bear mascot art. Broad flat brown antlers, warm brown fur, lighter tan muzzle and chest patch, a small warm smile, stocky rounded toddler-like proportions (not realistic moose anatomy — cute and huggable, like a plush toy). Eyes are large, round, solid black, set close together and slightly forward on the face, each with a single small white highlight dot/glint near the upper edge — soft and big-eyed, not almond-shaped or realistic. Wears a tan flat-brim ranger hat with a forest-green band and a small pine-tree badge pin, plus a forest-green neckerchief. The hat sits back on the head / the antlers come up and out through cutouts in the brim, so both the hat and the full antler silhouette stay visible and read clearly. Keep proportions, fur color, eyes, hat, and neckerchief identical across every image in this batch.
+
+**Reference sheet (generate this one first, use it as your visual anchor/reference image for every batch below):**
+
+> [base character block] + Character turnaround sheet on a fully transparent background (no background color, no ground shadow, no scenery): three full-body poses of the moose side by side — front view, 3/4 view, and side view — standing neutrally, arms at sides, no props. This is a model sheet for maintaining consistency, not a final in-app asset.
+
+### Expressions → `src/assets/mascot/mascot-<pose>.png`
+
+**Spec per cell:** head-and-shoulders bust crop, transparent background, roughly square-ish (~94x114px final, but generate large and downscale).
+
+Generate in **two batches of 3** (mirrors the park-icons batch workflow — one wide image with multiple bordered/transparent cells side by side, then crop each cell out and resize/pad to match the existing mascot file dimensions before saving over the old bear version).
+
+**Batch 1 — happy / excited / thinking:**
+
+> [base character block] + Compose a single wide image containing 3 separate cells side by side, evenly spaced, each on its own transparent background, no dividers or borders drawn between them. Cell 1: head-and-shoulders bust of the moose smiling warmly, a calm happy expression. Cell 2: head-and-shoulders bust of the moose with a big excited open-mouth smile and bright eyes. Cell 3: head-and-shoulders bust of the moose with one eyebrow raised and hoof-equivalent touching its chin, a thoughtful expression. Identical proportions, fur color, hat, and neckerchief in all 3 cells.
+
+**Batch 2 — exploring / success / tip:**
+
+> [base character block] + Compose a single wide image containing 3 separate cells side by side, evenly spaced, each on its own transparent background, no dividers or borders drawn between them. Cell 1: head-and-shoulders bust of the moose looking off to one side with a curious, alert expression, as if spotting something in the distance. Cell 2: head-and-shoulders bust of the moose with eyes closed and a proud, satisfied smile, as if celebrating an accomplishment. Cell 3: head-and-shoulders bust of the moose with a raised eyebrow and a knowing half-smile, one hoof-equivalent raised near its face as if about to share a helpful tip. Identical proportions, fur color, hat, and neckerchief in all 3 cells.
+
+Map cells back to files in this order: Batch 1 → `mascot-happy.png`, `mascot-excited.png`, `mascot-thinking.png`. Batch 2 → `mascot-exploring.png`, `mascot-success.png`, `mascot-tip.png`.
+
+### Full-body ranger pose → `mascot-ranger-full.png`
+
+**Spec:** tall portrait crop, transparent background, standing on a small ground shadow (~241x415px final).
+
+> [base character block] + Full-body standing pose, one arm raised in a friendly wave, the other at its side. Forest-green ranger vest with a small badge over the chest, tan flat-brim hat with antlers coming through, neckerchief. Standing on a small soft ground shadow, transparent background, single subject only.
+
+### Hero/title scene → `bear-title-scene.png` (rename to `moose-title-scene.png`)
+
+**Spec:** portrait scene, opaque background, roughly 2:3 (e.g. 1024x1536).
+
+> [base character block] + Full illustrated landscape scene, portrait orientation: the moose standing on a mountain trail holding an open paper map in one hoof-equivalent, a small canvas backpack on its back, tall pine trees framing both sides of the frame, a calm lake and a snow-capped mountain peak in the background, warm golden-hour lighting. Single subject, no other animals or characters in frame.
+
+### Cropping workflow for the moose set above (same as the park-icons batch swap)
+
+1. Generate each batch image (one request per batch, per the grids above).
+2. Crop each cell out by its transparent-alpha bounding box (`Image.getbbox()` per column works well when cells are laid out in a single row with clear gaps).
+3. Pad to a square/target aspect if needed, then resize to match the existing file's original dimensions so nothing shifts in the app's layout.
+4. Save over the corresponding file path, renaming `bear-*` → `moose-*` and updating the `require(...)` paths in `ProfileScreen.tsx` (`AVATAR_OPTIONS`) and wherever `bear-title-scene.png` is referenced.
+
+---
+
+## Park Pals roster (activity avatar picker → assortment of animals)
+
+Replaces `src/assets/activities/bear-<activity>.png` (all 15 files) with a roster of different animal companions, one species per activity, instead of 15 poses of the same character. The moose above stays the one fixed mascot for branding surfaces; this roster is specifically for the picker in `AVATAR_OPTIONS`.
+
+**Shared style block — paste into every prompt below, unedited, so every animal reads as part of the same family despite being different species:**
+
+> Warm, hand-drawn vintage national-park-poster illustration style. Flat color fills only, no gradients, no photorealism, no drop shadows baked into the art. Consistent medium-weight rounded outline in dark brown (#8B6340) or forest green (#2D5016). Palette limited to: forest #2D5016, sage #6B8C5A, sky #A8C5D4, tan #C9A96E, orange #D4845A, rose #C4847A, brown #8B6340, cream #F5F0E8, dark brown #5C4028 (plus natural fur/feather tones within that same warm, muted family — no saturated or neon colors). No text, no emoji, no generic vector-icon-font look. Every animal shares the same cute character-design language: stocky rounded toddler-like proportions (not realistic animal anatomy — cute and huggable, like a plush toy), and large round solid-black eyes set close together and slightly forward on the face, each with a single small white highlight dot/glint near the upper edge. Full-body pose. Background must be fully transparent (alpha 0) outside of the character and the specific pose objects named per cell (e.g. a tent, a kayak, a rock face, a picnic blanket) — no sky, no ground plane or horizon line, no filler scenery behind the subject, and no drop shadow floating separately underneath.
+
+**Roster — species assigned per activity:**
+
+| Activity | Species | Pose |
+|---|---|---|
+| hiking | Mountain goat | walking a trail with a wooden hiking staff, small canvas backpack |
+| camping | Raccoon | sitting beside a small pitched tent and a glowing campfire |
+| wildlife-viewing | Fox | holding a pair of binoculars up, looking off to one side |
+| kayaking | River otter | sitting in a small orange kayak, paddle in hand, life vest on |
+| scenic-drive | Chipmunk | sitting in the driver's seat of a small vintage car, top down |
+| photography | Owl | holding a vintage camera up to one eye, about to take a photo |
+| backpacking | Bison | walking with a large full-size hiking backpack and rolled sleeping mat |
+| stargazing | Porcupine | lying on its back on a small blanket, looking up at a few stars |
+| fishing | Bear | standing at a riverbank holding a fishing rod, line cast into the water |
+| horseback-riding | Badger | walking and leading a small brown horse by its reins, walking beside it |
+| nature-walk | Squirrel | walking calmly on a flat path, one paw gesturing at a flower beside the trail |
+| waterfall-hike | Heron | standing at the base of a small waterfall looking up, light mist around its feet |
+| picnic | Beaver | sitting behind a small picnic blanket with a basket and an apple |
+| rock-climbing | Bighorn sheep | mid-climb on a small rock face, sure-footed pose |
+| winter-activity | Snowshoe hare | wearing a knit scarf, standing in light snow, small snowshoes on its feet |
+
+Generate in **4 batches of ~4**, same wide-grid-then-crop workflow as the moose sets — each cell in a batch is a *different* species this time, so call out each animal by name in its own cell description:
+
+**Batch 1 — hiking (mountain goat) / camping (raccoon) / wildlife-viewing (fox) / kayaking (otter):**
+
+> [shared style block] + Compose a single wide image containing 4 separate cells side by side, evenly spaced, each on its own fully transparent background (alpha 0 outside the character and its named pose object — no sky, no ground plane, no filler scenery, no separate drop shadow), no dividers or borders. Cell 1: a mountain goat with shaggy white fur, small black horns, walking a trail with a wooden hiking staff and a small canvas backpack. Cell 2: a brown-and-tan raccoon with its signature dark eye mask, sitting beside a small pitched tent and a glowing campfire. Cell 3: an orange-and-cream fox holding a pair of binoculars up, looking off to one side with a curious expression. Cell 4: a brown river otter with a lighter tan belly, sitting in a small orange kayak, paddle in hand, wearing a life vest. Each animal keeps its own natural coloring, but all four share the same big-eyed cute proportions and line-weight style.
+
+**Batch 2 — scenic-drive (chipmunk) / photography (owl) / backpacking (bison) / stargazing (porcupine):**
+
+> [shared style block] + Compose a single wide image containing 4 separate cells side by side, evenly spaced, each on its own fully transparent background (alpha 0 outside the character and its named pose object — no sky, no ground plane, no filler scenery, no separate drop shadow), no dividers or borders. Cell 1: a small brown-and-tan striped chipmunk sitting in the driver's seat of a small vintage car with the top down, one paw resting on the door. Cell 2: a tan-and-brown owl holding a vintage camera up to one eye, about to take a photo. Cell 3: a sturdy brown bison walking with a large full-size hiking backpack and a rolled sleeping mat strapped to it. Cell 4: a round brown porcupine with soft-looking tan-tipped quills, lying on its back on a small blanket, looking up at a few small stars. Each animal keeps its own natural coloring, but all four share the same big-eyed cute proportions and line-weight style.
+
+**Batch 3 — fishing (bear) / horseback-riding (badger) / nature-walk (squirrel) / waterfall-hike (heron):**
+
+> [shared style block] + Compose a single wide image containing 4 separate cells side by side, evenly spaced, each on its own fully transparent background (alpha 0 outside the character and its named pose object — no sky, no ground plane, no filler scenery, no separate drop shadow), no dividers or borders. Cell 1: a brown bear standing at a riverbank holding a fishing rod, line cast into the water. Cell 2: a gray-and-black badger walking and leading a small brown horse by its reins, walking beside it rather than riding it. Cell 3: a reddish-brown squirrel with a big fluffy tail, walking calmly on a flat nature path, one paw gesturing at a small flower beside the trail. Cell 4: a blue-gray heron standing at the base of a small waterfall, looking up at it, a light mist effect around its feet. Each animal keeps its own natural coloring, but all four share the same big-eyed cute proportions and line-weight style.
+
+**Batch 4 — picnic (beaver) / rock-climbing (bighorn sheep) / winter-activity (snowshoe hare):**
+
+> [shared style block] + Compose a single wide image containing 3 separate cells side by side, evenly spaced, each on its own fully transparent background (alpha 0 outside the character and its named pose object — no sky, no ground plane, no filler scenery, no separate drop shadow), no dividers or borders. Cell 1: a brown beaver with a flat tail, sitting behind a small picnic blanket with a basket and an apple. Cell 2: a cream-and-brown bighorn sheep with large curled horns, mid-climb on a small rock face. Cell 3: a white snowshoe hare wearing a knit scarf, standing in light snow, small snowshoes on its feet. Each animal keeps its own natural coloring, but all three share the same big-eyed cute proportions and line-weight style.
+
+Map cells back to files in this order: Batch 1 → `pal-hiking.png`, `pal-camping.png`, `pal-wildlife-viewing.png`, `pal-kayaking.png`. Batch 2 → `pal-scenic-drive.png`, `pal-photography.png`, `pal-backpacking.png`, `pal-stargazing.png`. Batch 3 → `pal-fishing.png`, `pal-horseback-riding.png`, `pal-nature-walk.png`, `pal-waterfall-hike.png`. Batch 4 → `pal-picnic.png`, `pal-rock-climbing.png`, `pal-winter-activity.png`.
+
+### Cropping workflow (same as the park-icons batch swap)
+
+1. Generate each batch image (one request per batch, per the grids above).
+2. Crop each cell out by its transparent-alpha bounding box (`Image.getbbox()` per column works well when cells are laid out in a single row with clear gaps).
+3. Pad to a square/target aspect if needed, then resize to match the existing activity-icon dimensions (~246x273px) so nothing shifts in the avatar-picker layout.
+4. Save to `src/assets/activities/pal-<activity>.png`, replacing the old `bear-<activity>.png` files, and update the `require(...)` paths in `ProfileScreen.tsx`'s `AVATAR_OPTIONS`.
+
+---
+
+## Bonus / badge-unlocked pals
+
+Beyond the default 15-activity roster, some pals are unlocked by earning a specific badge instead of being available from the start — a reward layer on top of the picker. These need their own distinct design so they read as a "get" rather than a reskin of an existing default pal.
+
+**Spec:** same as the roster above — full-body pose, fully transparent background (alpha 0 outside the character and its named pose object, no sky/ground/scenery/drop shadow), target ~240x250px to match the other `pal-*.png` files.
+
+### Channel Island Fox → `src/assets/activities/pal-channel-islands-fox.png`
+
+Unlocked by the existing `channel-islands-fox` badge ("Island Fox Friend"). Must be visibly distinct from the default `wildlife-viewing` pal, which is already a bright orange-and-cream fox holding binoculars — this one needs different coloring and a different pose/prop so the unlock feels like a real reward, not a duplicate.
+
+Real Channel Island foxes (Urocyon littoralis) are notably smaller and grayer than a typical red fox: a gray back, rusty-orange sides and legs, cream/white throat and belly, and a bushy tail with a dark tip — distinct from a standard orange fox. `src/assets/badges/badge-channel-islands-fox.png` already shows this coloring/coastal vibe for reference.
+
+> [shared style block from the Park Pals roster above] + A gray-and-tan Channel Island fox — grayer back, rusty-orange sides and legs, cream throat and belly, bushy dark-tipped tail, clearly different coloring from a standard orange fox. Standing or sitting beside a small coastal prop (a piece of driftwood, a tuft of coastal grass, or a small seashell) to tie it to a Channel Islands setting. Same big-eyed cute plush-toy proportions and line-weight style as the rest of the roster.
