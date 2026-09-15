@@ -1,0 +1,198 @@
+{
+  "parkId": "great-basin",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "National Parks Traveler", "SummitPost"],
+  "trails": [
+    {
+      "id": "great-basin-bristlecone-pine",
+      "estimatedTime": "1.5-2.5 hrs",
+      "bestSeason": "June-Oct, road/weather dependent",
+      "tags": ["High Altitude", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the upper Wheeler Peak Scenic Drive that reaches this trailhead is typically open only from about June through October depending on snowpack, so check current road status before driving up, and start early since afternoon thunderstorms are common at this elevation.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The grove here includes bristlecone pines more than 3,000 years old — among the oldest living non-clonal organisms on Earth, predating the construction of many ancient Egyptian monuments.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Bristlecone/Alpine Lakes Trailhead" },
+        { "mile": 1.4, "elevationFt": 400 },
+        { "mile": 2.8, "elevationFt": 600, "label": "Bristlecone Pine Grove" }
+      ]
+    },
+    {
+      "id": "great-basin-wheeler-peak",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "July-Sept",
+      "tags": ["High Altitude", "Exposure"],
+      "trailTip": "Start at dawn to be off the exposed summit ridge before early-afternoon thunderstorms build, since there is no shelter from lightning above treeline, and expect the trail to hold patches of snow into early summer in many years.",
+      "didYouKnow": "At 13,065 feet, Wheeler Peak is Nevada's second-highest point and the high point of the entire Snake Range, visible from over a hundred miles away across the Great Basin desert.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Summit Trailhead" },
+        { "mile": 2.0, "elevationFt": 1000 },
+        { "mile": 3.5, "elevationFt": 2000, "label": "Treeline" },
+        { "mile": 4.3, "elevationFt": 2900, "label": "Wheeler Peak Summit" }
+      ]
+    },
+    {
+      "id": "great-basin-alpine-lakes-loop",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "June-Oct",
+      "tags": ["High Altitude", "Scenic"],
+      "trailTip": "The loop stays above 10,000 feet the whole way, so acclimate for a day if you're coming from low elevation and carry layers, since weather can change quickly beneath Wheeler Peak's north face.",
+      "didYouKnow": "Both Stella and Teresa Lakes on this loop are cirque lakes carved by the same glacier that shaped the small rock glacier still visible on Wheeler Peak's northeast slope.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Bristlecone/Alpine Lakes Trailhead" },
+        { "mile": 0.8, "elevationFt": 250, "label": "Stella Lake" },
+        { "mile": 1.8, "elevationFt": 500, "label": "Teresa Lake" },
+        { "mile": 2.7, "elevationFt": 600 }
+      ]
+    },
+    {
+      "id": "great-basin-lexington-arch",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Remote", "High-Clearance Road"],
+      "trailTip": "The access road is rough dirt and often requires a high-clearance vehicle, and the trail itself is lightly maintained with limited signage, so bring a map and extra water since this corner of the park sees far fewer visitors than Wheeler Peak.",
+      "didYouKnow": "Lexington Arch is unusually made of limestone rather than the sandstone typical of most Southwest arches, and some geologists believe it may be the remnant of a collapsed cave system rather than a wind-and-water-carved arch.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Lexington Arch Trailhead" },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 3.4, "elevationFt": 1100, "label": "Lexington Arch" }
+      ]
+    },
+    {
+      "id": "great-basin-mountain-view",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round, weather permitting",
+      "tags": ["Family Friendly", "Interpretive"],
+      "trailTip": "This short, flat loop near the visitor center is a good option for stretching your legs before or after a Lehman Caves tour and has interpretive signs describing the surrounding sagebrush and pinyon-juniper habitat.",
+      "didYouKnow": "The trail's interpretive signs highlight how the pinyon-juniper woodland here has slowly expanded over the past century, a shift ecologists partly attribute to changes in wildfire frequency across the Great Basin.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near Lehman Caves Visitor Center" },
+        { "mile": 0.15, "elevationFt": 30 },
+        { "mile": 0.3, "elevationFt": 50 }
+      ]
+    },
+    {
+      "id": "great-basin-baker-lake",
+      "estimatedTime": "7-9 hrs",
+      "bestSeason": "July-Sept",
+      "tags": ["Remote", "High Altitude"],
+      "trailTip": "This is a long, quiet alternative to Wheeler Peak's more crowded trails, reached via Baker Creek Road rather than the Wheeler Peak Scenic Drive, so pack for a full day and expect to see far fewer other hikers.",
+      "didYouKnow": "Baker Lake sits in a glacial cirque below Baker Peak and is one of the least-visited alpine lakes in the park despite being nearly as scenic as the more popular Stella and Teresa Lakes.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Baker Creek Trailhead" },
+        { "mile": 4.0, "elevationFt": 1200 },
+        { "mile": 8.0, "elevationFt": 2200 },
+        { "mile": 12.0, "elevationFt": 2600, "label": "Baker Lake" }
+      ]
+    },
+    {
+      "id": "great-basin-lehman-creek",
+      "estimatedTime": "4-5 hrs one-way (shuttle recommended)",
+      "bestSeason": "June-Oct, upper trailhead road dependent",
+      "tags": ["Forested", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the upper trailhead near Wheeler Peak Campground is only reachable while the Wheeler Peak Scenic Drive is open, typically June through October depending on snowpack, so a one-way hike with a shuttled car works best; the lower trailhead near the campground of the same name is accessible year-round.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail follows Lehman Creek closely enough that hikers can usually hear running water for most of the route, a rarity in this famously arid range.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Upper Lehman Creek Campground" },
+        { "mile": 3.0, "elevationFt": 1000 },
+        { "mile": 6.9, "elevationFt": 2000, "label": "Wheeler Peak Campground" }
+      ]
+    },
+    {
+      "id": "great-basin-osceola-ditch",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Historic", "Forested"],
+      "trailTip": "The old ditch grade is gently graded and easy to follow, but shade is limited in sections, so carry water and expect a quiet, lightly-used trail compared to the park's alpine routes.",
+      "didYouKnow": "The Osceola Ditch was a 19th-century engineering effort to carry water more than 18 miles to a nearby gold-mining district — an operation that ultimately failed due to massive water loss from leakage along its route.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Osceola Ditch Trailhead" },
+        { "mile": 2.5, "elevationFt": 200 },
+        { "mile": 5.0, "elevationFt": 400 }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "great-basin-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Sagebrush valleys surrounding the park entrance",
+      "tags": ["Common", "Fast Runner"],
+      "viewingTip": "Watch from the roadside or a pullout with binoculars rather than walking toward a herd across open sagebrush, since pronghorn rely on long sightlines to spot danger and will flee well before you get close.",
+      "didYouKnow": "Pronghorn have the largest eyes relative to body size of any hoofed mammal in North America, giving them keen enough vision to spot movement over three miles away."
+    },
+    {
+      "id": "great-basin-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "June-Sept",
+      "whereToLook": "Rocky upper slopes and cliffs near Wheeler Peak",
+      "tags": ["Non-Native", "Cliff Dweller"],
+      "viewingTip": "View from the summit trail with binoculars rather than leaving the trail to approach cliffside terrain, both for your own safety on loose rock and to avoid pushing goats off already narrow ledges.",
+      "didYouKnow": "Mountain goats are not native to the Great Basin; the animals seen near Wheeler Peak today descend from a population introduced onto other Nevada mountains decades ago that later expanded into the park on its own."
+    },
+    {
+      "id": "great-basin-marmot",
+      "scientificName": "Marmota flaviventris",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Sept",
+      "whereToLook": "Rocky outcrops near Stella and Teresa Lakes",
+      "tags": ["Common", "Do Not Feed"],
+      "viewingTip": "Enjoy marmots sunning on rocks from a normal trail distance and never feed them; human food causes digestive problems and can draw marmots dangerously close to trails and parking areas.",
+      "didYouKnow": "Yellow-bellied marmots spend up to 80 percent of their lives underground, including roughly eight months each year in hibernation."
+    },
+    {
+      "id": "great-basin-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning, riding thermals",
+      "bestSeason": "Year-round",
+      "whereToLook": "High desert ridges and open sagebrush country at lower elevations",
+      "tags": ["Cliff Nester", "Uncommon"],
+      "viewingTip": "Scan ridgelines with binoculars from a distance, and if you notice a nest on a cliff face, keep well back and avoid lingering, since golden eagles can abandon eggs or young if repeatedly disturbed during nesting season.",
+      "didYouKnow": "A golden eagle's eyesight is estimated to be roughly four to eight times sharper than a human's, letting it spot a jackrabbit from over a mile away."
+    },
+    {
+      "id": "great-basin-big-eared-bat",
+      "scientificName": "Corynorhinus townsendii",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "Year-round; maternity roosts active May-Aug",
+      "whereToLook": "Lehman Caves and other cave entrances at dusk",
+      "tags": ["Cave Roosting", "Sensitive to Disturbance"],
+      "viewingTip": "Watch for bats emerging at dusk from a distance outside the cave entrance rather than lingering inside near a roost, and always follow posted decontamination steps for cave visits, since disturbance and introduced fungal spores both threaten roosting bats.",
+      "didYouKnow": "As of 2026, Lehman Caves remains free of white-nose syndrome, the fungal disease that has devastated bat populations elsewhere in North America, thanks in part to strict gear-decontamination protocols for every cave tour."
+    },
+    {
+      "id": "great-basin-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Sagebrush flats and forested foothills throughout the park",
+      "tags": ["Common"],
+      "viewingTip": "Watch from the road or trail with binoculars, especially around dawn and dusk when deer are most active, and give a wide berth to any doe that appears to be with a hidden fawn.",
+      "didYouKnow": "Mule deer are named for their oversized ears, which rotate independently and give them exceptionally sensitive directional hearing to detect approaching predators."
+    },
+    {
+      "id": "great-basin-pika",
+      "scientificName": "Ochotona princeps",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "June-Sept",
+      "whereToLook": "Talus slopes near Wheeler Peak and the Alpine Lakes Loop",
+      "tags": ["Uncommon", "Climate Sensitive"],
+      "viewingTip": "Sit quietly near a talus slope and scan with binoculars rather than climbing onto the rocks to look for one, since pikas are easily stressed by close approach and heat, and disturbing their rockpile habitat can damage the very cover they depend on.",
+      "didYouKnow": "Pikas do not hibernate; instead they spend all summer gathering and drying 'hay piles' of alpine plants stashed under rocks to survive on through the winter."
+    },
+    {
+      "id": "great-basin-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "Forested canyons on the lower slopes of the Snake Range",
+      "tags": ["Rare", "Give Space"],
+      "viewingTip": "Sightings are uncommon here, but if you see one, keep at least 100 yards of distance and observe with binoculars rather than approaching, and store food and trash securely at all park campgrounds.",
+      "didYouKnow": "Black bears are only occasional visitors to Great Basin National Park, moving through forested canyons rather than maintaining a large resident population, which makes any sighting here relatively notable."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "parkId": "voyageurs",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Recreation.gov", "Voyageurs Conservancy", "NPS Voyageurs trail maps", "dwhike.com"],
+  "trails": [
+    {
+      "id": "voyageurs-oberholtzer",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Oct (also groomed for winter skiing/snowshoeing)",
+      "tags": ["Boardwalk", "Beginner Friendly", "Drive-To Access"],
+      "trailTip": "Unlike most Voyageurs trails, this one starts right at the Rainy Lake Visitor Center parking lot — no boat needed — making it a good option if lake conditions or a rental haven't been arranged yet.",
+      "didYouKnow": "The trail is named for Ernest Oberholtzer, a conservationist whose advocacy helped preserve the border-lakes wilderness that later became Voyageurs National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1100, "label": "Rainy Lake Visitor Center" },
+        { "mile": 0.8, "elevationFt": 1150 },
+        { "mile": 1.6, "elevationFt": 1200, "label": "Overlook" },
+        { "mile": 2.2, "elevationFt": 1100, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "voyageurs-blind-ash-bay",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Drive-To Access", "Forest Trail"],
+      "trailTip": "This trail begins near the Ash River Visitor Center and can be hiked without a boat, but insect repellent is a must — the forest sections get buggy with mosquitoes in early summer.",
+      "didYouKnow": "The trail follows the Kabetogama Peninsula shoreline, part of the largest roadless landmass in Minnesota.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1100, "label": "Ash River Trailhead" },
+        { "mile": 1.2, "elevationFt": 1200 },
+        { "mile": 2.5, "elevationFt": 1250, "label": "Blind Ash Bay overlook" }
+      ]
+    },
+    {
+      "id": "voyageurs-cruiser-lake",
+      "estimatedTime": "1-2 days (backcountry)",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Boat Access Only", "Backcountry", "Reservation Required"],
+      "trailTip": "As of September 2026, per NPS.gov and Recreation.gov, the Cruiser Lake Trail system on the Kabetogama Peninsula is reachable only by boat, canoe, or water taxi from Rainy Lake or Kabetogama Lake, and any overnight stay at its interior campsites requires a paid Recreation.gov reservation made in advance — there is no first-come, first-served backcountry camping here.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail links a chain of remote interior lakes — including Shoepack, Brown, Cruiser, Beast, and Peary — with no motorized boat access, making them some of the quietest paddling in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1150, "label": "Boat/canoe put-in" },
+        { "mile": 2.5, "elevationFt": 1350 },
+        { "mile": 5.0, "elevationFt": 1550, "label": "Cruiser Lake" },
+        { "mile": 7.5, "elevationFt": 1450 },
+        { "mile": 9.5, "elevationFt": 1150, "label": "Trail end" }
+      ]
+    },
+    {
+      "id": "voyageurs-kab-ash",
+      "estimatedTime": "1-2 days (backcountry, one-way)",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Boat Access Only", "Access Closure", "Long Distance"],
+      "trailTip": "As of the 2024 NPS.gov trail map update, the Salmi Road access point for the Kab-Ash Trail was closed — confirm current trailhead access with a park visitor center before setting out, or reach the trail via one of the park's ranger-led boat tours instead.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "At 14.5 miles, the Kab-Ash Trail is the longest hiking-only route in the park, connecting the Ash River area to Lake Kabetogama across the interior of the peninsula.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1100, "label": "Ash River end" },
+        { "mile": 4, "elevationFt": 1350 },
+        { "mile": 8, "elevationFt": 1600, "label": "Height of land" },
+        { "mile": 11, "elevationFt": 1400 },
+        { "mile": 14.5, "elevationFt": 1100, "label": "Kabetogama end" }
+      ]
+    },
+    {
+      "id": "voyageurs-locator-lake",
+      "estimatedTime": "1-1.5 hrs one-way",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Boat Access Only", "Canoe Launch"],
+      "trailTip": "Cross Kabetogama Lake by boat, canoe, or water taxi to the Locator Lake trailhead near Mallard Point — the trail itself is a short, well-marked walk to a canoe rack on Locator Lake for those continuing into the Chain of Lakes.",
+      "didYouKnow": "Locator Lake is the gateway to the park's roadless 'Chain of Lakes,' a string of quiet interior lakes with no motorized boat access.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1150, "label": "Trailhead dock" },
+        { "mile": 1.0, "elevationFt": 1220 },
+        { "mile": 2.0, "elevationFt": 1300, "label": "Locator Lake" }
+      ]
+    },
+    {
+      "id": "voyageurs-echo-bay",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Drive-To Access", "Forest Trail"],
+      "trailTip": "Echo Bay is one of the few Voyageurs trails reachable directly by car, with a trailhead about 3.5 miles north of the Kabetogama Lake Visitor Center — a good pick if you don't have a boat lined up.",
+      "didYouKnow": "The trail loops through boreal forest typical of the Kabetogama area, with sections used as cross-country ski trails in winter.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1100, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 1300, "label": "Echo Bay overlook" },
+        { "mile": 3.9, "elevationFt": 1100, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "voyageurs-anderson-bay",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Boat Access Only", "Remote", "Scenic Overlook"],
+      "trailTip": "Anderson Bay is remote — plan on roughly 20 miles of travel by watercraft from the Rainy Lake side to reach the trailhead, so check the weather and lake conditions carefully before heading out.",
+      "didYouKnow": "The trail's exposed granite cliffs rise about 80 feet above Rainy Lake, among the most photographed viewpoints in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1080, "label": "Boat dock" },
+        { "mile": 0.9, "elevationFt": 1180, "label": "Granite cliff overlook" },
+        { "mile": 1.9, "elevationFt": 1080, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "voyageurs-beast-lake",
+      "estimatedTime": "2-3 hrs one-way (backcountry)",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Boat Access Only", "Backcountry", "Reservation Required"],
+      "trailTip": "Beast Lake is one of the interior Chain of Lakes, reached only after boating to the Locator Lake or Cruiser Lake trail system — any overnight stay at its backcountry campsite requires a paid Recreation.gov reservation made in advance.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Beast Lake sits within the roadless interior of the Kabetogama Peninsula, part of a chain of small lakes with no motorized boat access.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1150, "label": "Trail junction from Cruiser Lake system" },
+        { "mile": 2.3, "elevationFt": 1350 },
+        { "mile": 4.6, "elevationFt": 1200, "label": "Beast Lake" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "voyageurs-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-Round (howling most vocal in late summer/fall)",
+      "whereToLook": "Interior forests of the Kabetogama Peninsula; listen for howls near backcountry campsites",
+      "tags": ["Elusive", "Den Site"],
+      "viewingTip": "Wolves are rarely seen and easily disturbed — never approach a den or rendezvous site if you find tracks or scat nearby, and enjoy a chance howl or distant sighting through binoculars rather than trying to close the distance.",
+      "didYouKnow": "Voyageurs' wolf packs are part of a long-studied, healthy population, with individual wolves sometimes traveling over 30 miles in a single night."
+    },
+    {
+      "id": "voyageurs-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sep (nesting season)",
+      "whereToLook": "Tall shoreline pines along Rainy and Kabetogama lakes",
+      "tags": ["Nesting", "Common Sight"],
+      "viewingTip": "Give nest trees a wide berth, especially in spring — a spotting scope or zoom lens from a boat well offshore lets you watch without risking flushing an incubating adult off the nest.",
+      "didYouKnow": "Voyageurs has one of the highest densities of nesting bald eagles in the Midwest, thanks to its abundant fish and undeveloped shoreline."
+    },
+    {
+      "id": "voyageurs-beaver",
+      "scientificName": "Castor canadensis",
+      "bestTimeOfDay": "Dusk / Dawn",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Quiet bays and small streams with dam and lodge structures visible from shore",
+      "tags": ["Nocturnal", "Common Sight"],
+      "viewingTip": "Sit quietly near a lodge at dusk and watch with binoculars rather than paddling directly up to it — beavers slap their tails and dive at the first sign of a close approach.",
+      "didYouKnow": "A beaver's lodge often has an underwater entrance, and the animals can hold their breath for up to 15 minutes while working on dam repairs."
+    },
+    {
+      "id": "voyageurs-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Forest edges and berry patches near shorelines",
+      "tags": ["Common Sight", "Food Storage Required"],
+      "viewingTip": "Store all food and scented items on the bear pole provided at backcountry campsites, and if you spot a bear, watch from a safe distance with binoculars rather than approaching for a photo — a fed bear becomes a dangerous bear.",
+      "didYouKnow": "Black bears here are strong swimmers and are known to swim between the park's islands in search of food."
+    },
+    {
+      "id": "voyageurs-common-loon",
+      "scientificName": "Gavia immer",
+      "bestTimeOfDay": "Morning, Evening",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Open water throughout Rainy and Kabetogama lakes",
+      "tags": ["Nesting", "Iconic Call"],
+      "viewingTip": "Loon nests sit low right at the waterline on shore, so keep boats and canoes well away from shoreline vegetation in early summer, and enjoy their calls and dives from a distance rather than paddling in for a closer look.",
+      "didYouKnow": "A loon's bones are denser than most birds', helping it dive over 100 feet deep in pursuit of fish."
+    },
+    {
+      "id": "voyageurs-river-otter",
+      "scientificName": "Lontra canadensis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Rocky shorelines and narrows between lakes",
+      "tags": ["Playful", "Common Sight"],
+      "viewingTip": "Watch a family group play and fish from a stationary boat or the shore with binoculars — otters are curious but will quickly move off if a boat follows too closely.",
+      "didYouKnow": "River otters have a fast metabolism for their size, so they hunt frequently, often devoting several hours a day to catching fish and crayfish."
+    },
+    {
+      "id": "voyageurs-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct (rut)",
+      "whereToLook": "Willow wetlands and shallow bays where moose feed on aquatic plants",
+      "tags": ["Rutting Season", "Uncommon Sighting"],
+      "viewingTip": "During the fall rut, bull moose can be unpredictable and aggressive — view any moose from at least 75 yards using binoculars, especially a cow with a calf, and never position a canoe between a bull and a potential mate.",
+      "didYouKnow": "Moose can stay submerged for up to 30 seconds while feeding on aquatic plants along the lake bottom."
+    },
+    {
+      "id": "voyageurs-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sep (nesting season)",
+      "whereToLook": "Nesting platforms and dead snags on rocky islands throughout the lakes",
+      "tags": ["Nesting", "Common Sight"],
+      "viewingTip": "Watch nesting platforms from a boat at a distance with binoculars rather than approaching the island closely — ospreys will dive at intruders near an active nest, a stress response best avoided.",
+      "didYouKnow": "Ospreys have a reversible outer toe and barbed foot pads that let them grip slippery fish firmly in flight."
+    }
+  ]
+}

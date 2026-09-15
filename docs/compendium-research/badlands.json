@@ -1,0 +1,200 @@
+{
+  "parkId": "badlands",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "National Parks Traveler", "Earthtrekkers", "Park Ranger John"],
+  "trails": [
+    {
+      "id": "badlands-notch",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct (avoid ice/snow on the log ladder in winter)",
+      "tags": ["Ladder Climb", "Exposure", "Trail Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the Notch Trail's log ladder section is closed until further notice for safety repairs, with the closure extending to all areas within 100 feet of the trail — check the park's current alerts page before heading out.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail's final overlook frames the White River Valley, one of the few spots in the park where hikers can see all the way to the river that carved the badlands formations over millions of years.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.6, "elevationFt": 180, "label": "Log ladder" },
+        { "mile": 0.9, "elevationFt": 280, "label": "Cliff ledge" },
+        { "mile": 1.5, "elevationFt": 300, "label": "The Notch overlook" }
+      ]
+    },
+    {
+      "id": "badlands-door",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round; cooler in spring and fall",
+      "tags": ["Boardwalk", "Family-Friendly"],
+      "trailTip": "The first quarter mile is an accessible boardwalk; beyond it the route is marked by yellow posts over uneven badlands terrain, so sturdy shoes help.",
+      "didYouKnow": "\"The Door\" is a natural break in the badlands wall that early visitors used as a passage between the upper prairie and the eroded formations below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead / boardwalk start" },
+        { "mile": 0.25, "elevationFt": 40, "label": "End of boardwalk" },
+        { "mile": 0.75, "elevationFt": 100, "label": "Turnaround point" }
+      ]
+    },
+    {
+      "id": "badlands-castle",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Apr-Jun, Sep-Oct (no shade — avoid midsummer heat)",
+      "tags": ["No Shade", "Exposed", "Long Distance"],
+      "trailTip": "There is no shade or reliable water anywhere on this trail, so carry more water than feels necessary and start early to beat the heat.",
+      "didYouKnow": "Castle Trail is the longest in the park and links the Door/Window/Notch trailhead to the Fossil Exhibit Trail, making a one-way hike with a shuttle a popular option.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Door/Window Trailhead" },
+        { "mile": 3, "elevationFt": 150 },
+        { "mile": 5, "elevationFt": 300, "label": "Medicine Root Trail junction" },
+        { "mile": 8, "elevationFt": 400, "label": "High point" },
+        { "mile": 10, "elevationFt": 350, "label": "Fossil Exhibit Trailhead" }
+      ]
+    },
+    {
+      "id": "badlands-saddle-pass",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Apr-Oct; avoid after rain",
+      "tags": ["Steep", "Slick When Wet"],
+      "trailTip": "The trail's bentonite clay surface turns extremely slick and nearly unclimbable when wet, so skip it after rain or during snowmelt.",
+      "didYouKnow": "Despite being the shortest trail in the park, Saddle Pass is the steepest, climbing straight up the badlands wall to connect the Castle and Medicine Root trails.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Base of badlands wall" },
+        { "mile": 0.1, "elevationFt": 100 },
+        { "mile": 0.2, "elevationFt": 180 },
+        { "mile": 0.25, "elevationFt": 200, "label": "Top / Castle Trail junction" }
+      ]
+    },
+    {
+      "id": "badlands-fossil-exhibit",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Accessible", "Family-Friendly"],
+      "trailTip": "A fully wheelchair-accessible boardwalk loop with interpretive fossil replicas — a good option in bad weather or with young kids.",
+      "didYouKnow": "The fossil casts along the boardwalk replicate real specimens of ancient mammals, such as the saber-toothed Hoplophoneus, that once roamed this area.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.125, "elevationFt": 5 },
+        { "mile": 0.25, "elevationFt": 0, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "badlands-medicine-root",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Apr-Jun, Sep-Oct",
+      "tags": ["No Shade", "Prairie", "Wildlife Viewing"],
+      "trailTip": "This loop crosses open mixed-grass prairie with zero shade and can be combined with the Castle Trail for a longer loop — bring more water than you think you'll need.",
+      "didYouKnow": "Medicine Root is named for American licorice (Glycyrrhiza lepidota), a prairie plant historically used medicinally by Lakota people and common along this route.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 100 },
+        { "mile": 2.5, "elevationFt": 200, "label": "High prairie point" },
+        { "mile": 4, "elevationFt": 120, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "badlands-cliff-shelf",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round; spring for wildflowers",
+      "tags": ["Boardwalk", "Shaded"],
+      "trailTip": "This short loop climbs through a slump formation with junipers and a small pond — one of the few shaded, green spots in the park.",
+      "didYouKnow": "Cliff Shelf formed when a large chunk of the badlands wall slumped downward as one piece, trapping enough moisture to support junipers unusual for the surrounding dry formations.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 150, "label": "Overlook" },
+        { "mile": 0.5, "elevationFt": 200, "label": "Loop high point" }
+      ]
+    },
+    {
+      "id": "badlands-window-trail",
+      "estimatedTime": "10 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Family-Friendly"],
+      "trailTip": "A very short boardwalk to a natural opening in the badlands wall — pairs well with the Door and Notch trails, which share the same trailhead.",
+      "didYouKnow": "The \"window\" is a natural erosional opening in the badlands wall that frames a view of the formations beyond without any climbing required.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.125, "elevationFt": 20, "label": "The Window" },
+        { "mile": 0.25, "elevationFt": 0, "label": "Return" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "badlands-bighorn-sheep",
+      "scientificName": "Ovis canadensis",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Nov-Dec (rut) for most activity; visible year-round",
+      "whereToLook": "Steep buttes along the Pinnacles and Sage Creek Rim Road overlooks",
+      "tags": ["Rut Season", "Cliff Dweller"],
+      "viewingTip": "Scan the upper ledges of the buttes with binoculars from road pullouts, and give rutting rams extra distance in fall — a startled animal on that terrain risks a dangerous fall.",
+      "didYouKnow": "Badlands' bighorn population was reintroduced after the original herd was extirpated by the early 1900s; today's sheep descend from Colorado stock reintroduced starting in 1964."
+    },
+    {
+      "id": "badlands-black-footed-ferret",
+      "scientificName": "Mustela nigripes",
+      "bestTimeOfDay": "Night (nocturnal)",
+      "bestSeason": "Year-round, though sightings are exceptionally rare",
+      "whereToLook": "Prairie dog towns in the Sage Creek Wilderness Area and Conata Basin",
+      "tags": ["Nocturnal", "Endangered", "Burrow Dweller"],
+      "viewingTip": "Watch prairie dog towns at dusk with binoculars or a red-filtered spotlight from a distance, and never approach or shine a light directly into a burrow — ferrets are extremely sensitive to disturbance.",
+      "didYouKnow": "Black-footed ferrets were believed extinct until a small wild population was rediscovered in Wyoming in 1981; Badlands' population comes from a captive-breeding reintroduction program begun in the 1990s."
+    },
+    {
+      "id": "badlands-bison",
+      "scientificName": "Bison bison",
+      "bestTimeOfDay": "Morning and evening",
+      "bestSeason": "Jul-Sep (rut) for most active behavior",
+      "whereToLook": "Sage Creek Wilderness Area and Sage Creek Rim Road",
+      "tags": ["Rut Season", "Roadside Wildlife"],
+      "viewingTip": "View bison from your vehicle or a pullout at least 100 yards away with binoculars or a zoom lens — bison can charge with no warning, especially bulls during the summer rut, so never approach on foot for a photo.",
+      "didYouKnow": "Badlands' bison herd, roaming the Sage Creek Wilderness Area, helped anchor one of the first prairie ecosystem restoration efforts in the National Park System."
+    },
+    {
+      "id": "badlands-prairie-rattlesnake",
+      "scientificName": "Crotalus viridis",
+      "bestTimeOfDay": "Warm afternoons in spring/fall; early morning in summer heat",
+      "bestSeason": "Apr-Oct (dormant in winter)",
+      "whereToLook": "Rocky outcrops and grassland edges along the Castle and Medicine Root trails",
+      "tags": ["Venomous", "Camouflaged"],
+      "viewingTip": "Watch the trail and rocks ahead as you walk and give any rattlesnake you spot several feet of space to move away on its own — never try to move, corner, or handle it, even if it seems sluggish.",
+      "didYouKnow": "Prairie rattlesnakes help control the park's rodent population and are part of why Badlands' prairie dog towns stay in ecological balance."
+    },
+    {
+      "id": "badlands-swift-fox",
+      "scientificName": "Vulpes velox",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round; kits most visible in early summer",
+      "whereToLook": "Open grasslands near Sage Creek and Roberts Prairie Dog Town",
+      "tags": ["Nocturnal", "Den Dweller"],
+      "viewingTip": "Scan open grassland at dawn or dusk with binoculars from a road or overlook; if you spot a den, view and photograph it from well back rather than walking closer — swift foxes will abandon a den site if disturbed.",
+      "didYouKnow": "One of North America's smallest wild canids, the swift fox nearly disappeared from South Dakota by the mid-1900s and has slowly recovered through regional reintroduction efforts."
+    },
+    {
+      "id": "badlands-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday thermals",
+      "bestSeason": "Year-round; most visible in winter when prey is exposed",
+      "whereToLook": "Circling over buttes along the Badlands Loop Road and Pinnacles overlook",
+      "tags": ["Cliff Nester", "Raptor"],
+      "viewingTip": "Watch for eagles riding thermals above the buttes with binoculars from established overlooks, and keep well back from any cliff-face nest so nesting pairs aren't disturbed.",
+      "didYouKnow": "Golden eagles are powerful enough to prey on young pronghorn and small mule deer, in addition to their usual diet of prairie dogs and rabbits."
+    },
+    {
+      "id": "badlands-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round; Nov rut",
+      "whereToLook": "Grasslands and drainages throughout the park, common near the Door/Window/Notch trailhead",
+      "tags": ["Common", "Roadside Wildlife"],
+      "viewingTip": "Mule deer are easy to view from park roads and pullouts with binoculars — during the fall rut, keep extra distance from bucks, which can be unpredictable.",
+      "didYouKnow": "Mule deer get their name from their oversized, mule-like ears, which rotate independently to pinpoint sound."
+    },
+    {
+      "id": "badlands-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn, dusk, and night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Prairie grasslands and near prairie dog towns throughout the park",
+      "tags": ["Common", "Vocal"],
+      "viewingTip": "Look and listen for coyotes near prairie dog towns at dawn or dusk, watching from a distance with binoculars — never feed a coyote, which quickly teaches it to approach people and often leads to the animal being euthanized.",
+      "didYouKnow": "Badlands' coyotes prey heavily on the park's prairie dogs, making them one of the most important predators in keeping that population in check."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "parkId": "north-cascades",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (North Cascades National Park Service Complex)", "WDFW", "Cascades Wolverine Project", "Washington Trails Association (WTA)"],
+  "trails": [
+    {
+      "id": "north-cascades-cascade-pass",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Late Jul-Sep",
+      "tags": ["Alpine Pass", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS North Cascades, no permit is needed for this day hike itself, but overnight camping beyond the pass requires a wilderness permit picked up in person at the Marblemount Wilderness Information Center — the unpaved Cascade River Road to the trailhead can also wash out after storms, so check current road conditions before driving out.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Cascade Pass was used for centuries by Native peoples, including the Skagit and Chelan, as a trade route across the Cascade crest long before it became a hiking trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3600, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 4200 },
+        { "mile": 2.5, "elevationFt": 4800 },
+        { "mile": 3.7, "elevationFt": 5400, "label": "Cascade Pass" }
+      ]
+    },
+    {
+      "id": "north-cascades-thunder-knob",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Family Friendly", "Lake Views"],
+      "trailTip": "A good easier option along SR-20 when other trails are still snowed in — the viewpoint looks straight down onto Diablo Lake's turquoise water.",
+      "didYouKnow": "Diablo Lake's striking turquoise color comes from 'glacial flour' — finely ground rock sediment carried down from glaciers upstream.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1200, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 1600 },
+        { "mile": 1.8, "elevationFt": 1835, "label": "Thunder Knob Viewpoint" }
+      ]
+    },
+    {
+      "id": "north-cascades-maple-pass-loop",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Late Jul-Oct",
+      "tags": ["Alpine Loop", "Larches"],
+      "trailTip": "This loop is very popular in late September/early October when the alpine larches turn gold, so arrive early to find parking at the Rainy Pass trailhead.",
+      "didYouKnow": "Maple Pass Loop is one of the most reliable places in Washington to see subalpine larches — one of the only conifers that turns gold and drops its needles each fall.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4800, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 5600 },
+        { "mile": 3.0, "elevationFt": 6600, "label": "Maple Pass" },
+        { "mile": 5.0, "elevationFt": 6100, "label": "Heather Pass" },
+        { "mile": 7.2, "elevationFt": 4800, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "north-cascades-blue-lake",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Jul-Oct",
+      "tags": ["Alpine Lake", "Wildflowers"],
+      "trailTip": "A relatively short, well-graded climb to a vivid alpine lake beneath Liberty Bell and the Early Winters Spires — go early for calm water and the best reflection.",
+      "didYouKnow": "The jagged peaks reflected in Blue Lake — Liberty Bell and the Early Winters Spires — are among the most-climbed alpine rock spires in the North Cascades.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6100, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 6700 },
+        { "mile": 2.2, "elevationFt": 7100, "label": "Blue Lake" }
+      ]
+    },
+    {
+      "id": "north-cascades-trail-of-cedars",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round (snow possible in winter)",
+      "tags": ["Easy Loop", "Old Growth"],
+      "trailTip": "A quick, flat loop through old-growth cedar and Douglas-fir near Newhalem — a good stretch-the-legs stop along SR-20.",
+      "didYouKnow": "Some of the western redcedars along this short loop are estimated to be several hundred years old, having survived in this valley's wetter microclimate.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 500, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 510 },
+        { "mile": 0.3, "elevationFt": 500, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "north-cascades-sourdough-mountain",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Late Jul-Sep",
+      "tags": ["Steep", "Fire Lookout"],
+      "trailTip": "This is one of the steepest maintained trails in the park with almost no switchback relief, so budget a full day, carry extra water, and start early to avoid afternoon heat on the exposed upper slopes.",
+      "didYouKnow": "The lookout atop Sourdough Mountain is one of the oldest active fire lookouts in the North Cascades, staffed seasonally since the 1930s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1200, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 3500 },
+        { "mile": 6.0, "elevationFt": 5200 },
+        { "mile": 10.9, "elevationFt": 6106, "label": "Sourdough Mountain Lookout" }
+      ]
+    },
+    {
+      "id": "north-cascades-diablo-lake",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Lake Views", "Forested"],
+      "trailTip": "The trail hugs Diablo Lake's shoreline through second-growth forest; pair it with the Diablo Lake Boat Tour if you'd like to see the reservoir's upper reaches without hiking the full distance.",
+      "didYouKnow": "Diablo Lake is a reservoir created by Diablo Dam, one of three dams on the Skagit River that together supply a significant share of Seattle's hydroelectric power.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 900, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 1400 },
+        { "mile": 6.0, "elevationFt": 2000 },
+        { "mile": 7.6, "elevationFt": 2400, "label": "Trail End" }
+      ]
+    },
+    {
+      "id": "north-cascades-hidden-lake-lookout",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Late Jul-Sep",
+      "tags": ["Steep", "Glacier Views", "Fire Lookout"],
+      "trailTip": "Snow can linger on the upper switchbacks well into July even in an average year, so check current trip reports before attempting this hike early season, since the final stretch to the lookout crosses steep, exposed terrain.",
+      "didYouKnow": "The lookout at trail's end offers a close-up view of Eldorado Peak's glaciers and is one of the most dramatic panoramas reachable by day hike in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3600, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 5200 },
+        { "mile": 5.5, "elevationFt": 6300 },
+        { "mile": 8.0, "elevationFt": 6890, "label": "Hidden Lake Lookout" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "north-cascades-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Remote valleys and drainages away from developed trails; sightings are rare",
+      "tags": ["Rare Sighting", "Elusive"],
+      "viewingTip": "As of September 2026, per WDFW, wolf packs remain sparse and recovering in the North Cascades, so most encounters are tracks or howls rather than direct sightings — if you do see one, watch from a distance with binoculars and never approach or attempt to call it in.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Gray wolves were extirpated from Washington by the 1930s and only began naturally recolonizing the North Cascades from British Columbia in the early 2000s."
+    },
+    {
+      "id": "north-cascades-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep (rut Nov-Dec)",
+      "whereToLook": "Rocky slopes near Cascade Pass and Sahale Arm",
+      "tags": ["Cliff Dweller", "Rut Season"],
+      "viewingTip": "View goats on distant cliffs and talus with binoculars; give them extra room during the November-December rut, and never approach one seeking trailside minerals, since it can be surprisingly persistent around hikers.",
+      "didYouKnow": "North Cascades mountain goats are known to seek out mineral licks near trails, which is part of why hikers are asked to urinate well away from trails — it can draw goats into unsafe proximity with people."
+    },
+    {
+      "id": "north-cascades-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Berry patches in subalpine meadows near Cascade Pass and Maple Pass",
+      "tags": ["Forager", "Give Space"],
+      "viewingTip": "Watch foraging bears from a safe distance with binoculars, make noise while hiking to avoid surprising one on the trail, and store food properly at camp rather than leaving it accessible.",
+      "didYouKnow": "North Cascades has one of the highest densities of black bears in Washington, thanks to abundant huckleberry meadows at mid-to-high elevation."
+    },
+    {
+      "id": "north-cascades-cascade-fox",
+      "scientificName": "Vulpes vulpes cascadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "High-elevation meadows and talus, rarely seen",
+      "tags": ["Rare Sighting", "High Elevation"],
+      "viewingTip": "This subspecies is elusive and found only at high elevation, so if you spot one, observe from a distance with binoculars and never leave out food to try to draw it closer.",
+      "didYouKnow": "The Cascade red fox is a distinct high-elevation subspecies found only in the Washington Cascades, genetically separate from lowland red fox populations."
+    },
+    {
+      "id": "north-cascades-pika",
+      "scientificName": "Ochotona princeps",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Talus slopes near Cascade Pass",
+      "tags": ["Talus Dweller", "Climate Sensitive"],
+      "viewingTip": "Watch quietly from the trail with binoculars — pikas overheat quickly, so avoid lingering right at the edge of a talus field long enough to keep one from returning to its haypile.",
+      "didYouKnow": "Pikas are highly sensitive to heat and can die from overexposure at temperatures many other mammals tolerate easily, making them an early indicator species for climate change in alpine habitat."
+    },
+    {
+      "id": "north-cascades-hoary-marmot",
+      "scientificName": "Marmota caligata",
+      "bestTimeOfDay": "Mid-morning",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Meadows and rockslides near Cascade Pass and Maple Pass",
+      "tags": ["Burrower", "Whistler"],
+      "viewingTip": "Enjoy their whistled alarm calls from the trail with binoculars rather than approaching burrow entrances too closely.",
+      "didYouKnow": "Hoary marmots spend up to 80% of the year hibernating, waking for only a few active summer months at these high elevations."
+    },
+    {
+      "id": "north-cascades-wolverine",
+      "scientificName": "Gulo gulo",
+      "bestTimeOfDay": "Anytime; mostly solitary and elusive",
+      "bestSeason": "Year-round",
+      "whereToLook": "Remote high-elevation basins; extremely rarely seen",
+      "tags": ["Rare Sighting", "Elusive"],
+      "viewingTip": "As of September 2026, per the Cascades Wolverine Project, biologists estimate roughly 30-40 wolverines across the North Cascades ecoregion, so sightings are exceptionally rare — if you're lucky enough to see one, stay put, watch with binoculars, and never approach or attempt to follow it.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Wolverines need deep, persistent spring snowpack to den and raise young, which makes the North Cascades one of the few remaining strongholds for the species in the contiguous U.S."
+    },
+    {
+      "id": "north-cascades-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday (soaring on thermals)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Soaring above high passes like Cascade Pass and Rainy Pass",
+      "tags": ["Cliff Nester", "Soaring"],
+      "viewingTip": "Scan ridgelines and thermals with binoculars from a pass or overlook — keep well back from any cliff nest site, since golden eagles can abandon a nest if disturbed during incubation.",
+      "didYouKnow": "Golden eagles can spot prey from over a mile away thanks to eyesight roughly four to eight times sharper than a human's."
+    }
+  ]
+}

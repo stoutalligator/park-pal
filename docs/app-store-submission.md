@@ -45,23 +45,48 @@ The confirmation page itself (`site/confirmed/index.html`) is a static page matc
 12. Set Support URL → `https://parks-pal.com/support` and Privacy Policy URL → `https://parks-pal.com/privacy` in both consoles.
 
 **Final checks before hitting submit**
-13. Confirm the Supabase SQL migrations in `supabase/schema.sql` have actually been run against the live project (trip_type column, delete_own_account function) — the file has them, but confirm the live DB does too.
+13. ~~Confirm the Supabase SQL migrations in `supabase/schema.sql` have actually been run against the live project~~ — **confirmed live.** `delete_own_account` verified working for real (deleted a test account, confirmed it's gone from Authentication → Users in the dashboard).
 14. Walk the account-deletion flow once for real on the TestFlight build, since Apple reviewers specifically test this.
-15. **Sentry auth token — decided: deferred.** The first `eas build` failed because `@sentry/react-native`'s Xcode build phase tries to auto-upload source maps/dSYMs and has no auth token to do it with. Fix applied: set `SENTRY_DISABLE_AUTO_UPLOAD=true` as an EAS environment variable (both `preview` and `production`) to skip that step. Crash reporting itself still works — you just won't get symbolicated stack traces in Sentry until a real `SENTRY_AUTH_TOKEN` is set up later. Custom SMTP (for branded auth emails) is still an open, undecided item.
+15. **Sentry auth token — decided: deferred.** The first `eas build` failed because `@sentry/react-native`'s Xcode build phase tries to auto-upload source maps/dSYMs and has no auth token to do it with. Fix applied: set `SENTRY_DISABLE_AUTO_UPLOAD=true` as an EAS environment variable (both `preview` and `production`) to skip that step. Crash reporting itself still works — you just won't get symbolicated stack traces in Sentry until a real `SENTRY_AUTH_TOKEN` is set up later. Custom SMTP (for branded auth emails) — **decided: not needed right now.** Supabase's default email sending works fine for the current volume; revisit only if branding the auth emails becomes a priority later or default sending's rate limits become a real problem.
 
 **Submit**
 16. In App Store Connect, select the TestFlight-tested build, complete the submission questionnaire (export compliance — already answered via `ITSAppUsesNonExemptEncryption: false` in `app.json`), and submit for review. Typical review time: 1–3 days.
 17. In Play Console, promote the tested build from internal testing to production (or go through Google's closed/open testing track first if you want more real-world testers before a full release). Review time: usually a few hours to 1 day.
 
+**Demo account (App Store Connect → "Sign-In Required" / TestFlight Beta App Review → Sign-In Information):**
+A pre-confirmed reviewer account exists so reviewers can skip the email-confirmation step entirely — created via the Supabase admin API (`email_confirm: true`) using the support inbox:
+- Email: `parkpal.support@gmail.com`
+- Password: `ParksPalReview2026!`
+
 **App Review notes (paste into App Store Connect → App Review Information → Notes):**
-> Creating an account requires confirming your email address — after signing up, check the email inbox you used and click the confirmation link before logging in. This is standard email/password sign-up with no other access restrictions; no demo account or special credentials are needed.
+> A demo account is provided (see Sign-In Information) that's already confirmed and ready to log in with — no email confirmation step needed for it. If you'd rather create your own account instead, note that new sign-ups do require confirming an email address before you can log in, since that's a standard part of the app's account flow.
+
+**TestFlight external testing — Beta App Review fields:**
+
+Beta App Description ("What to Test"):
+```
+Parks Pal is a national park tracker — log trips, track which of the 63 U.S. National Parks you've visited, collect digital passport stamps, and earn badges.
+
+Please test:
+- Signing up for an account (requires confirming your email)
+- Marking parks as visited/planned on the map
+- Logging or planning a trip, including adding trail hikes and wildlife sightings
+- Viewing your Profile (badges, avatar picker, stats)
+- Deleting your account from Settings
+
+A demo account is provided below if you'd rather skip the signup/email-confirmation step.
+```
+
+Feedback Email: `parkpal.support@gmail.com`
+
+Contact Information: developer's real name, phone, and email (this is Apple's private way to reach the developer — separate from the public-facing Feedback Email above).
 
 ---
 
 ## 1. Listing Copy
 
 ### App name
-**Parks Pal** (the internal bundle identifiers — `com.parks-pal.app` on iOS, `com.parkspal.app` on Android — aren't user-visible and don't need to change; only the display name shown on the store listing and home screen is "Parks Pal")
+**Parks Pal - Park Tracker** (App Store Connect's "Name" field, 30-char limit — "Parks Pal" alone was already taken by another developer, so this tweak clears that collision). This is the App Store listing name only; the internal bundle identifiers (`com.parks-pal.app` iOS, `com.parkspal.app` Android) aren't user-visible and don't need to match, and the in-app/home-screen display name stays "Parks Pal" (`app.json`'s `expo.name` is separate from the store listing name and doesn't need to change).
 
 ### iOS Subtitle (30 char limit)
 `Your National Park Passport`
@@ -99,6 +124,15 @@ COLLECT. EXPLORE. REMEMBER.
 
 ### Category
 Primary: **Travel**. Secondary (iOS only, optional): **Lifestyle**
+
+### Marketing URL (optional)
+`https://parks-pal.com` — the homepage; fine to leave blank instead since it's currently just a links page.
+
+### Version
+`1.0.0` — keep in sync with `app.json`'s `expo.version`.
+
+### Copyright
+`2026 John Fiester` — Apple's convention is `[year] [legal name]`; since the account is enrolled as an Individual, this is the developer's own legal name, not "Parks Pal."
 
 ---
 

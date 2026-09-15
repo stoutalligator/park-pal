@@ -1,0 +1,199 @@
+{
+  "parkId": "glacier",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (glac)", "NPS Glacier trail status pages", "NPS 2026 summer operations news releases", "AllTrails"],
+  "trails": [
+    {
+      "id": "glacier-highline",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Early Jul-Sep",
+      "tags": ["Exposure", "Seasonal Closure", "Alpine"],
+      "trailTip": "As of September 2026, per NPS.gov, the Highline Trail from Logan Pass typically stays closed by lingering snow into early-to-mid July even after Going-to-the-Sun Road fully opens, so check the park's current trail status page before planning a Logan Pass start.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail's first mile hugs a ledge above the Going-to-the-Sun Road with a fixed cable handhold bolted into the cliff, added after early visitors found the exposure too intimidating.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6646, "label": "Logan Pass" },
+        { "mile": 3, "elevationFt": 6900 },
+        { "mile": 7.6, "elevationFt": 7476, "label": "Granite Park Chalet spur" },
+        { "mile": 11.8, "elevationFt": 6900, "label": "The Loop" }
+      ]
+    },
+    {
+      "id": "glacier-hidden-lake",
+      "estimatedTime": "1.5-2.5 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Boardwalk", "Seasonal Closure", "Wildlife Viewing"],
+      "trailTip": "As of September 2026, per NPS.gov, the trail beyond Hidden Lake Overlook is periodically closed to protect bears and other wildlife feeding in the area, especially in late summer — the boardwalk and overlook segment from Logan Pass typically stays open even when the descent to the lakeshore is closed.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The overlook sits directly on the Continental Divide, and on a clear day you can see peaks in both Glacier and Canada's Waterton Lakes National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6646, "label": "Logan Pass" },
+        { "mile": 1.3, "elevationFt": 7106, "label": "Hidden Lake Overlook" },
+        { "mile": 2.7, "elevationFt": 6350, "label": "Hidden Lake shore" }
+      ]
+    },
+    {
+      "id": "glacier-avalanche-lake",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Waterfalls", "Family Friendly"],
+      "trailTip": "The trail follows Avalanche Creek's cedar-lined gorge before climbing to the lake basin — arrive early since this is one of the busiest trailhead parking areas in the park by mid-morning.",
+      "didYouKnow": "Avalanche Lake sits in a glacially carved cirque fed by several waterfalls tumbling off the Sperry Glacier's remnant ice above.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3180, "label": "Trail of the Cedars trailhead" },
+        { "mile": 1, "elevationFt": 3500, "label": "Avalanche Gorge" },
+        { "mile": 2.3, "elevationFt": 3910, "label": "Avalanche Lake" }
+      ]
+    },
+    {
+      "id": "glacier-grinnell-glacier",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Bear Country", "Exposure"],
+      "trailTip": "The Many Glacier valley has some of the park's highest grizzly activity, so hike in a group, make noise, and carry bear spray; a concessioner boat shuttle across Swiftcurrent and Josephine lakes can shorten the round trip by several miles if you'd rather skip the flat valley approach.",
+      "didYouKnow": "The turquoise color of Grinnell Glacier's meltwater lake comes from finely ground \"glacial flour\" rock particles suspended in the water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4900, "label": "Many Glacier trailhead" },
+        { "mile": 3.5, "elevationFt": 5600 },
+        { "mile": 7, "elevationFt": 6300 },
+        { "mile": 10.6, "elevationFt": 6600, "label": "Grinnell Glacier overlook" }
+      ]
+    },
+    {
+      "id": "glacier-trail-of-cedars",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "May-Oct",
+      "tags": ["Accessible", "Family Friendly"],
+      "trailTip": "A flat, wheelchair-accessible boardwalk loop through old-growth cedar and hemlock — a good option for a short leg-stretch on the drive along Going-to-the-Sun Road.",
+      "didYouKnow": "This pocket of cedar-hemlock rainforest exists because moist Pacific air funnels up the McDonald Creek valley, creating a microclimate very different from the drier forests elsewhere in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3180, "label": "Trailhead" },
+        { "mile": 0.45, "elevationFt": 3200 },
+        { "mile": 0.9, "elevationFt": 3180 }
+      ]
+    },
+    {
+      "id": "glacier-iceberg-lake",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Bear Country", "Alpine Lake"],
+      "trailTip": "This trail passes through dense berry-producing shrubs that draw grizzlies in late summer, so hike with a group, make noise on blind corners, and carry bear spray; icebergs can persist on the lake into August in a heavy snow year.",
+      "didYouKnow": "Iceberg Lake sits in such a deep, shaded cirque that chunks of winter ice can survive floating on its surface well into summer.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5100, "label": "Many Glacier trailhead" },
+        { "mile": 3, "elevationFt": 5700 },
+        { "mile": 6, "elevationFt": 6100 },
+        { "mile": 9.6, "elevationFt": 6300, "label": "Iceberg Lake" }
+      ]
+    },
+    {
+      "id": "glacier-siyeh-pass",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Alpine", "Seasonal Closure", "Exposure"],
+      "trailTip": "As of September 2026, per NPS.gov, this high traverse from the Siyeh Bend trailhead along Going-to-the-Sun Road typically isn't fully snow-free until mid-to-late July, and lingering snowfields near the pass can make footing hazardous even after the road opens for the season.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail crosses Siyeh Pass at over 8,000 feet, one of the highest maintained trail crossings in the park, with views into both the St. Mary and Baring Creek valleys.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5900, "label": "Siyeh Bend trailhead" },
+        { "mile": 4, "elevationFt": 7200 },
+        { "mile": 5.9, "elevationFt": 8260, "label": "Siyeh Pass" },
+        { "mile": 10.3, "elevationFt": 5500, "label": "Sunrift Gorge" }
+      ]
+    },
+    {
+      "id": "glacier-running-eagle-falls",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "May-Oct",
+      "tags": ["Accessible", "Family Friendly"],
+      "trailTip": "A short, mostly flat walk near Two Medicine to a unique waterfall where two streams appear to merge mid-fall — an easy stop for all ages and abilities.",
+      "didYouKnow": "Running Eagle Falls is nicknamed \"Trick Falls\" because in high water an upper falls appears to emerge from partway up the cliff, fed by an underground channel through the limestone.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5000, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 5020, "label": "Falls overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "glacier-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Apr-Nov (active); heaviest feeding Aug-Oct",
+      "whereToLook": "High alpine meadows and berry patches near Many Glacier, Two Medicine, and the Highline Trail",
+      "tags": ["Bear Country"],
+      "viewingTip": "Keep at least 100 yards between yourself and any grizzly, view and photograph with binoculars or a zoom lens, carry bear spray and know how to use it, and never approach a bear feeding on berries or a carcass.",
+      "didYouKnow": "Glacier's grizzlies can pack on several pounds a day during late-summer hyperphagia, gorging on huckleberries before den-up in November."
+    },
+    {
+      "id": "glacier-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Rocky slopes and ledges along the Highline Trail and Logan Pass",
+      "tags": ["Cliff Dweller"],
+      "viewingTip": "Goats at Logan Pass are used to people and may approach you seeking salt from sweat or urine — back away if one approaches, never let a goat lick your skin or gear, and never urinate near the trail, since habituated goats have become aggressive enough to be a real safety issue here.",
+      "didYouKnow": "Mountain goats aren't true goats but are more closely related to antelope, and their split, rubbery hooves act almost like suction cups on wet rock."
+    },
+    {
+      "id": "glacier-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Remote forested valleys away from main trail corridors",
+      "tags": ["Elusive", "Den Sensitive"],
+      "viewingTip": "Sightings are rare and brief — enjoy them through binoculars from wherever you are and never approach a den or rendezvous site if you locate one, since disturbance can cause a pack to abandon pups.",
+      "didYouKnow": "Wolves recolonized Glacier naturally from Canada in the 1980s, decades before the more famous reintroduction to Yellowstone."
+    },
+    {
+      "id": "glacier-bighorn-sheep",
+      "scientificName": "Ovis canadensis",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "May-Sep (lambing in late May-Jun)",
+      "whereToLook": "Rocky slopes near Logan Pass and Grinnell Point",
+      "tags": ["Cliff Dweller", "Lambing Season"],
+      "viewingTip": "Use binoculars to watch from a distance, and give extra space in late spring and early summer when ewes are with newborn lambs on steep terrain that leaves little room to safely move away from people.",
+      "didYouKnow": "Bighorn rams' curled horns can weigh up to 30 pounds, more than all the bones in their body combined."
+    },
+    {
+      "id": "glacier-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "May-Oct; rut peaks Sep-Oct",
+      "whereToLook": "Willow-lined wetlands, including Fishercap Lake near Many Glacier",
+      "tags": ["Rutting Season"],
+      "viewingTip": "Stay at least 25 yards away and give considerably more room during the fall rut — moose are responsible for more close-encounter injuries in the park than bears, and a moose with pinned-back ears or raised hackles needs you to retreat immediately.",
+      "didYouKnow": "Moose are strong swimmers and will dive completely underwater to reach aquatic plants at the bottom of shallow lakes like Fishercap."
+    },
+    {
+      "id": "glacier-hoary-marmot",
+      "scientificName": "Marmota caligata",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Rockslides and talus along the Highline and Grinnell Glacier trails",
+      "tags": ["Common"],
+      "viewingTip": "Watch and photograph marmots from the trail rather than approaching a rockslide colony, and never feed them — human food disrupts their fat reserves needed for an eight-month hibernation.",
+      "didYouKnow": "Hoary marmots are named for their frosted, silver-gray fur and are sometimes called \"whistlers\" for their sharp alarm calls, which lent their name to Whistler, British Columbia."
+    },
+    {
+      "id": "glacier-wolverine",
+      "scientificName": "Gulo gulo",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Year-round; females den Feb-Apr",
+      "whereToLook": "Remote high-alpine basins, rarely seen by day hikers",
+      "tags": ["Elusive", "Den Sensitive"],
+      "viewingTip": "A wolverine sighting is a rare privilege — watch from as far away as your optics allow and never try to approach or track one toward a snow den, since female wolverines are extremely sensitive to disturbance while raising kits.",
+      "didYouKnow": "Glacier is a stronghold for wolverine research in the Lower 48; females dig natal dens into deep spring snowpack that can persist into early summer."
+    },
+    {
+      "id": "glacier-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Sep-Oct (fall migration)",
+      "whereToLook": "Mountain passes such as Mount Brown Lookout and Lincoln Pass during fall migration",
+      "tags": ["Migratory"],
+      "viewingTip": "Watch migrating eagles ride ridge thermals from an overlook with binoculars — the birds pass at a distance naturally, so there's no need to approach a perch or nesting cliff to get a good look.",
+      "didYouKnow": "Glacier's high passes funnel one of the largest golden eagle migrations in the Lower 48 each autumn, drawing citizen-science hawk counts at established lookout points."
+    }
+  ]
+}

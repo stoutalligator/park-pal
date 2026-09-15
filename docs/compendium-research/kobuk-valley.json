@@ -1,0 +1,194 @@
+{
+  "parkId": "kobuk-valley",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "National Geographic Maps", "Alaska Alpine Adventures", "Travel Alaska"],
+  "trails": [
+    {
+      "id": "kobuk-valley-great-dunes-route",
+      "estimatedTime": "Full day (6-8 hrs, cross-country pace)",
+      "bestSeason": "Jun-Aug (main ice-free travel window)",
+      "tags": ["Unmarked Route", "Navigation Skill Required", "No Cell Service"],
+      "trailTip": "As of September 2026, per NPS.gov, Kobuk Valley has no maintained trails, roads, or campgrounds of any kind — this is an unmarked cross-country route across loose sand that requires GPS navigation, wilderness travel experience, and full self-sufficiency, since there is no cell service and rescue can take days to reach you.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Great Kobuk Sand Dunes rise up to 100 feet and are the largest active dune field in the Arctic, formed from glacial outwash ground down after the last ice age.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 150, "label": "Riverbank landing" },
+        { "mile": 3, "elevationFt": 350 },
+        { "mile": 6, "elevationFt": 450, "label": "High dune crest" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-salmon-river-route",
+      "estimatedTime": "1-2 days",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "River Route", "Navigation Skill Required"],
+      "trailTip": "This route follows the wild Salmon River corridor with no marked path or bridges — expect to ford channels, so scout crossings carefully and turn back if water is high or fast after rain.",
+      "didYouKnow": "The Salmon River is a designated Wild River, kept free of development to preserve its natural character.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 400, "label": "Put-in point" },
+        { "mile": 5, "elevationFt": 500 },
+        { "mile": 10, "elevationFt": 600, "label": "Route endpoint" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-onion-portage-route",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Aug-Sep (fall caribou migration)",
+      "tags": ["Unmarked Route", "Cultural Site", "Navigation Skill Required"],
+      "trailTip": "Onion Portage is a traditional caribou-crossing site still used by local subsistence hunters during the fall migration — travel quietly, keep your distance from any hunting camps you encounter, and never interfere with subsistence activity.",
+      "didYouKnow": "Archaeological digs at Onion Portage uncovered evidence of human occupation stretching back roughly 9,000 years, one of the most important archaeological sites in the Arctic.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Riverbank" },
+        { "mile": 1.5, "elevationFt": 350, "label": "Overlook bluff" },
+        { "mile": 3, "elevationFt": 400, "label": "Route endpoint" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-little-dunes-route",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "Navigation Skill Required"],
+      "trailTip": "A shorter alternative to the Great Kobuk Sand Dunes for parties with less time or experience with cross-country dune travel, though the same navigation and self-rescue skills still apply.",
+      "didYouKnow": "The Little Kobuk Dunes sit closer to the river than the Great Dunes, making them a more accessible sample of the park's Saharan-style dune fields.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 150, "label": "Riverbank" },
+        { "mile": 1, "elevationFt": 250 },
+        { "mile": 2, "elevationFt": 300, "label": "Dune crest" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-kavet-creek-route",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "Tundra", "Navigation Skill Required"],
+      "trailTip": "This tundra-and-boreal-forest route has no cairns or markers of any kind — carry a topographic map and GPS, and expect slow, tussock-heavy walking that takes far longer than the mileage suggests.",
+      "didYouKnow": "Boreal forest here grows right up against Arctic tundra, making Kavet Creek a good place to see the transition between the two biomes in a single walk.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Riverbank" },
+        { "mile": 2, "elevationFt": 400 },
+        { "mile": 4, "elevationFt": 500, "label": "Route endpoint" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-tagraq-hill-route",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "Overlook", "Navigation Skill Required"],
+      "trailTip": "The climb to Tagraq Hill is unmarked and steeper than the mileage implies — budget extra time for route-finding through brush on the lower slopes before the terrain opens up near the top.",
+      "didYouKnow": "From the summit, hikers get one of the only elevated views of the Great Kobuk Sand Dunes against the surrounding boreal forest and river valley.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Riverbank" },
+        { "mile": 2, "elevationFt": 500 },
+        { "mile": 4, "elevationFt": 750, "label": "Tagraq Hill summit" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-hunt-river-route",
+      "estimatedTime": "1-2 days",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "River Route", "Navigation Skill Required"],
+      "trailTip": "This remote tributary route requires wading and route-finding through braided channels with no trail tread — a satellite communicator is strongly recommended since this area sees very few other visitors.",
+      "didYouKnow": "The Hunt River drains into the Kobuk River, and its valley is one of the quietest, least-visited corners of an already remote park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Put-in point" },
+        { "mile": 4, "elevationFt": 400 },
+        { "mile": 8, "elevationFt": 500, "label": "Route endpoint" }
+      ]
+    },
+    {
+      "id": "kobuk-valley-baldwin-peninsula-route",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Unmarked Route", "Tundra", "Navigation Skill Required"],
+      "trailTip": "This overlook route crosses open tundra with no path to follow — tussocks and wet ground slow travel considerably, so plan for a much slower pace than the same mileage on a maintained trail.",
+      "didYouKnow": "The view from this route takes in the wide, braided Kobuk River valley, a landscape shaped by thousands of years of seasonal flooding.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 200, "label": "Riverbank" },
+        { "mile": 2.5, "elevationFt": 400 },
+        { "mile": 5, "elevationFt": 600, "label": "Overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "kobuk-valley-caribou",
+      "scientificName": "Rangifer tarandus granti",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Aug-Sep fall migration",
+      "whereToLook": "Onion Portage and other Kobuk River crossing points",
+      "tags": ["Migratory", "Cultural Significance"],
+      "viewingTip": "Watch migrating caribou from a bluff or riverbank with binoculars rather than moving toward the herd or a river crossing — approaching can scatter the animals and also interferes with the subsistence hunters who depend on this migration.",
+      "didYouKnow": "The Western Arctic Caribou Herd, which crosses the Kobuk River at Onion Portage, has historically numbered in the hundreds of thousands, one of the largest caribou herds in North America."
+    },
+    {
+      "id": "kobuk-valley-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Jun-Sep (active season)",
+      "whereToLook": "Tundra and riverbanks throughout the park",
+      "tags": ["Bear Country", "No Cell Service"],
+      "viewingTip": "Carry bear spray, make noise while traveling through brush, and keep at least 100 yards from any bear you spot — in this remote, roadless park a bear encounter has no quick backup, so avoid surprising one at all costs.",
+      "didYouKnow": "Kobuk Valley's grizzlies range across the same open tundra as the caribou herds they sometimes prey on during the fall migration."
+    },
+    {
+      "id": "kobuk-valley-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep rut",
+      "whereToLook": "Boreal forest lowlands along the Kobuk River",
+      "tags": ["Rutting Season", "Wetland Browser"],
+      "viewingTip": "Keep at least 25 yards from moose at all times and give bulls extra space during the September rut, when they can act unpredictably and aggressively toward anything nearby, including people.",
+      "didYouKnow": "Moose in this region often wade into oxbow lakes and sloughs to feed on submerged aquatic plants, sometimes fully submerging their heads."
+    },
+    {
+      "id": "kobuk-valley-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "River valleys and tundra, following caribou herds",
+      "tags": ["Elusive", "Den Sensitive"],
+      "viewingTip": "If you spot a wolf or find a den site, observe from a distance with binoculars and move on without lingering — never approach a den, and never attempt to call or bait wolves closer for a better look.",
+      "didYouKnow": "Wolf packs in the Kobuk region often shadow the Western Arctic Caribou Herd's migration, timing their own movements to the herd's."
+    },
+    {
+      "id": "kobuk-valley-arctic-grayling",
+      "scientificName": "Thymallus arcticus",
+      "bestTimeOfDay": "Evening",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Clear tributary rivers including the Salmon and Kobuk Rivers",
+      "tags": ["Sport Fish"],
+      "viewingTip": "If fishing, practice catch-and-release with wet hands and minimal handling time to keep grayling healthy, and simply watch fish holding in clear pools from the bank if you're not angling.",
+      "didYouKnow": "Arctic grayling are identifiable by their oversized, sail-like dorsal fin, which is especially vivid on breeding males."
+    },
+    {
+      "id": "kobuk-valley-beaver",
+      "scientificName": "Castor canadensis",
+      "bestTimeOfDay": "Dusk / Dawn",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Sloughs and slow side-channels along the Kobuk River",
+      "tags": ["Crepuscular", "Lodge Builder"],
+      "viewingTip": "Watch beaver activity from the water or bank at a distance rather than approaching a lodge or dam closely, since disturbance can cause beavers to abandon an otherwise productive site.",
+      "didYouKnow": "Beaver dams here help create the wetland habitat that many of the park's waterfowl and fish depend on."
+    },
+    {
+      "id": "kobuk-valley-arctic-fox",
+      "scientificName": "Vulpes lagopus",
+      "bestTimeOfDay": "Daytime (winter); dawn/dusk (summer)",
+      "bestSeason": "Year-round (most visible in winter coat)",
+      "whereToLook": "Open tundra away from the river corridor",
+      "tags": ["Den Sensitive", "Color-Changing Coat"],
+      "viewingTip": "If you find an arctic fox den, view it from well away and keep your visit brief — repeated visits or lingering near a den can cause adults to abandon pups.",
+      "didYouKnow": "Arctic foxes molt between a brown-gray summer coat and a pure white winter coat, one of the most dramatic seasonal color changes of any mammal."
+    },
+    {
+      "id": "kobuk-valley-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "May-Aug nesting",
+      "whereToLook": "Bluffs above the Kobuk River",
+      "tags": ["Cliff Nester", "Nesting Season"],
+      "viewingTip": "Watch nest sites from the riverbank or a boat with binoculars rather than climbing toward a bluff nest — golden eagles are highly sensitive to disturbance during incubation and will abandon a nest if approached too closely.",
+      "didYouKnow": "Golden eagles nesting along Arctic rivers like the Kobuk time their egg-laying to the return of migratory ground squirrels and other prey each spring."
+    }
+  ]
+}

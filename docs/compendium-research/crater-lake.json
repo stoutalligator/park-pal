@@ -1,0 +1,201 @@
+{
+  "parkId": "crater-lake",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "NPS Cleetwood Cove Trail and Marina Rehabilitation page", "Crater Lake Institute", "AllTrails"],
+  "trails": [
+    {
+      "id": "crater-lake-garfield-peak",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Jul-Oct; typically snowbound the rest of the year",
+      "tags": ["Rim Trail", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per the Crater Lake Institute, this rim trail is usually snow-covered from around October through late June, with exact opening dates varying year to year — check current conditions before hiking outside summer.",
+      "didYouKnow": "From the summit, the trail offers one of the best full views of Wizard Island rising from the caldera lake below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Crater Lake Lodge" },
+        { "mile": 1.0, "elevationFt": 400 },
+        { "mile": 1.7, "elevationFt": 1010, "label": "Garfield Peak summit" },
+        { "mile": 3.4, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "crater-lake-cleetwood-cove",
+      "estimatedTime": "1.5-2 hrs when open",
+      "bestSeason": "Normally Jun-Sep; closed for rehabilitation as of 2026",
+      "tags": ["Trail Closed", "Construction"],
+      "trailTip": "As of September 2026, per NPS.gov, Cleetwood Cove Trail — the only legal access to the lakeshore — is closed for a multi-year trail and marina rehabilitation project spanning the 2026, 2027, and 2028 seasons, and boat tours are paused during that time; do not attempt to hike down to the water while it's closed.",
+      "didYouKnow": "Even when open, this is the only trail in the park that reaches the lake's edge, since the caldera's other walls are too steep to descend safely.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 700, "label": "Rim trailhead" },
+        { "mile": 0.5, "elevationFt": 500 },
+        { "mile": 1.1, "elevationFt": 0, "label": "Lakeshore" },
+        { "mile": 2.2, "elevationFt": 700, "label": "Return to rim" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "crater-lake-watchman-peak",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Mid/late Jul-Oct; typically snowbound the rest of the year",
+      "tags": ["Fire Lookout", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per trail-condition reports cited by the Crater Lake Institute, this trail is usually covered in snow from October into early-to-mid July and typically doesn't open until mid-to-late July — check current conditions before planning a summer trip.",
+      "didYouKnow": "The historic fire lookout at the summit is still staffed by rangers during peak fire season and offers one of the best sunset views over the caldera.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Watchman Overlook" },
+        { "mile": 0.4, "elevationFt": 200 },
+        { "mile": 0.8, "elevationFt": 420, "label": "Watchman Peak lookout" },
+        { "mile": 1.6, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "crater-lake-plaikni-falls",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Family-Friendly"],
+      "trailTip": "This gentle forest trail is snow-free later into fall than the high rim trails, making it a reliable option on cooler shoulder-season days.",
+      "didYouKnow": "Plaikni Falls is fed by snowmelt seeping from the base of Mount Scott rather than a visible surface stream for most of its route.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 130, "label": "Plaikni Falls" },
+        { "mile": 2.0, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "crater-lake-mount-scott",
+      "estimatedTime": "3-3.5 hrs",
+      "bestSeason": "Late Jul-Oct; typically snowbound the rest of the year",
+      "tags": ["Highest Point", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per the Crater Lake Institute, Mount Scott's trail is usually buried in snow from October into late July and typically opens later in the season than the park's other rim trails — check current conditions before attempting the summit.",
+      "didYouKnow": "At 8,929 feet, Mount Scott is the highest point in the park and hosts a staffed fire lookout at its summit.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 2.2, "elevationFt": 1250, "label": "Mount Scott summit" },
+        { "mile": 4.4, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "crater-lake-annie-creek",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Canyon Loop"],
+      "trailTip": "The trail descends and re-climbs a steep volcanic canyon on a mix of dirt path and footbridges — footing can be loose in a few spots, so trekking poles help on the return climb.",
+      "didYouKnow": "Annie Creek Canyon was carved by meltwater cutting down through loose pumice and ash left by Mount Mazama's eruption roughly 7,700 years ago.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Mazama Village" },
+        { "mile": 0.8, "elevationFt": 0, "label": "Canyon floor" },
+        { "mile": 1.7, "elevationFt": 300, "label": "Return" }
+      ]
+    },
+    {
+      "id": "crater-lake-godfrey-glen",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Family-Friendly", "Old-Growth"],
+      "trailTip": "This mostly flat loop stays back from the canyon's unfenced edges in a few viewpoints, so keep an eye on kids at the overlooks.",
+      "didYouKnow": "The trail loops through old-growth forest above Munson Creek Canyon, showing off pumice cliffs left by Mount Mazama's eruption.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 100, "label": "Canyon overlook" },
+        { "mile": 1.1, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "crater-lake-boundary-springs",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Headwaters", "Remote"],
+      "trailTip": "This trail sits at lower elevation than the rim trails, so it's often hikeable earlier and later in the season, but it can still be muddy right after snowmelt.",
+      "didYouKnow": "Boundary Springs marks the headwaters of the Rogue River, which flows more than 200 miles to the Pacific Ocean.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Highway 138 trailhead" },
+        { "mile": 1.2, "elevationFt": 200 },
+        { "mile": 2.5, "elevationFt": 300, "label": "Boundary Springs" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "crater-lake-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct; denning through winter",
+      "whereToLook": "Forested slopes surrounding the caldera rim, away from developed areas",
+      "tags": ["Forest", "Denning"],
+      "viewingTip": "If you see one, stop, stay calm, and watch from a distance with binoculars rather than moving closer — never leave food unattended, since a bear that gets human food loses its wariness of people.",
+      "didYouKnow": "Crater Lake's black bears range widely between elevations, following ripening berries up and down the mountain through the summer and fall."
+    },
+    {
+      "id": "crater-lake-nutcracker",
+      "scientificName": "Nucifraga columbiana",
+      "bestTimeOfDay": "Any",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rim overlooks, picnic areas, and whitebark pine stands",
+      "tags": ["Bold", "Common"],
+      "viewingTip": "Enjoy this bold, curious bird from a normal viewing distance with binoculars — never feed it, since food-conditioned nutcrackers become aggressive around picnic tables and lose their natural foraging behavior.",
+      "didYouKnow": "Clark's Nutcrackers cache tens of thousands of whitebark pine seeds each fall and remember the locations of most of them months later, making them essential to the tree's reproduction."
+    },
+    {
+      "id": "crater-lake-pika",
+      "scientificName": "Ochotona princeps",
+      "bestTimeOfDay": "Cooler morning and evening hours",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Rockslides and talus fields near the caldera rim",
+      "tags": ["Alpine", "Heat-Sensitive"],
+      "viewingTip": "Sit quietly near a talus field and scan with binoculars for movement — pikas are sensitive to heat and stress, so avoid lingering right at a rockpile's edge or clambering over the rocks to get closer.",
+      "didYouKnow": "Pikas don't hibernate; they spend all summer gathering and drying 'hay piles' of vegetation to survive on under the snow through winter."
+    },
+    {
+      "id": "crater-lake-rubber-boa",
+      "scientificName": "Charina bottae",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Most active May-Sep",
+      "whereToLook": "Under logs and forest debris in cooler, moist forest areas",
+      "tags": ["Docile", "Secretive"],
+      "viewingTip": "If you find one, observe it briefly in place and leave it undisturbed rather than picking it up — even docile species are safest and least stressed when left where they're found.",
+      "didYouKnow": "The rubber boa has a blunt tail that looks almost like a second head, which it uses to confuse predators while its real head stays hidden."
+    },
+    {
+      "id": "crater-lake-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Rut peaks Sep-Oct",
+      "whereToLook": "Meadows and forest edges bordering the caldera, particularly on the park's lower-elevation slopes",
+      "tags": ["Rutting Season", "Meadow"],
+      "viewingTip": "During the fall rut, view bugling bulls from a road pullout or trail with binoculars and keep well back — a rutting bull is on edge and can charge if it feels crowded or challenged.",
+      "didYouKnow": "A bull elk's bugle can carry more than a mile through open forest during the fall rut."
+    },
+    {
+      "id": "crater-lake-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round; most visible Jun-Oct",
+      "whereToLook": "Meadows and forest edges around the caldera and Mazama Village",
+      "tags": ["Common"],
+      "viewingTip": "Watch from the roadside or trail with binoculars rather than approaching for a photo — deer that become used to people close by are more likely to be struck by vehicles.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears, which help them detect predators in the region's dense forest."
+    },
+    {
+      "id": "crater-lake-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Rivers and creeks below the rim, including near Annie Creek and the Rogue River headwaters",
+      "tags": ["Fish Hunter"],
+      "viewingTip": "Watch from the bank or a bridge with binoculars as it hunts — ospreys hover and dive for fish on their own and don't need or benefit from anyone trying to flush fish toward them.",
+      "didYouKnow": "Ospreys have a reversible outer toe and barbed foot pads that let them grip slippery fish firmly in flight."
+    },
+    {
+      "id": "crater-lake-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Any",
+      "bestSeason": "Nesting season is roughly Mar-Aug",
+      "whereToLook": "Caldera cliff faces, viewable from rim overlooks and Garfield Peak",
+      "tags": ["Cliff Nester", "Fastest Animal"],
+      "viewingTip": "Scan the cliff faces from a rim overlook with binoculars or a spotting scope rather than trying to get closer to a nesting ledge, which risks flushing an incubating adult from eggs or chicks.",
+      "didYouKnow": "Peregrine falcons can exceed 200 mph in a hunting dive, making them the fastest animal on Earth."
+    }
+  ]
+}

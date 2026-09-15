@@ -1,0 +1,201 @@
+{
+  "parkId": "national-park-samoa",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (National Park of American Samoa)", "NOAA National Marine Sanctuary of American Samoa", "National Geographic"],
+  "trails": [
+    {
+      "id": "national-park-samoa-mount-alava",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Year-round (drier May-Sep)",
+      "tags": ["Ridge Views", "Permission Required"],
+      "trailTip": "As of September 2026, per the NPS American Samoa visitor guide, some approaches to this ridge cross village- and family-owned land, so ask permission at the village end of the road before hiking past any gate — a small fee is sometimes requested.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The summit ridge was once linked to Pago Pago Harbor by an aerial tramway until it was dismantled in 1980 after a fatal collision with a Navy aircraft.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Vatia Trailhead" },
+        { "mile": 1.0, "elevationFt": 500 },
+        { "mile": 2.0, "elevationFt": 1000 },
+        { "mile": 3.0, "elevationFt": 1500 },
+        { "mile": 3.5, "elevationFt": 1610, "label": "Mount Alava Summit" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-lower-sauma-ridge",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round (drier May-Sep)",
+      "tags": ["Coastal Views", "Rainforest"],
+      "trailTip": "A shorter, less-trafficked alternative to the full Alava ridge with good coastal overlooks — bring plenty of water since shade is inconsistent and tropical humidity is high year-round.",
+      "didYouKnow": "The trail passes through tropical rainforest that gets over 200 inches of rain a year, among the wettest forest types protected anywhere in the U.S. park system.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 100, "label": "Trailhead" },
+        { "mile": 0.9, "elevationFt": 500 },
+        { "mile": 1.75, "elevationFt": 800, "label": "Ridge Viewpoint" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-tuafanua",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Year-round (drier May-Sep)",
+      "tags": ["Steep Descent", "Waterfall", "Permission Required"],
+      "trailTip": "As of September 2026, per the NPS American Samoa visitor guide, this trail begins in Vatia village, so check in with local residents before starting and stay on the marked path down to the coast.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail descends through dense rainforest to a remote, undeveloped waterfall and coastline rarely visited by anyone outside Vatia village.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 800, "label": "Vatia Trailhead" },
+        { "mile": 0.9, "elevationFt": 400 },
+        { "mile": 1.8, "elevationFt": 0, "label": "Tuafanua Waterfall / Coast" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-pola-island",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Easy Walk", "Coastal Views"],
+      "trailTip": "A short, family-friendly walk to a viewpoint over Pola Island's sea stack and seabird cliffs — bring binoculars to scan the cliffs for nesting seabirds without needing to get closer.",
+      "didYouKnow": "Pola Island is a designated seabird sanctuary and one of the tallest sea stacks in the South Pacific, rising directly from the ocean just offshore.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 100, "label": "Pola Island Overlook" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-wwii-heritage",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic", "Easy Walk"],
+      "trailTip": "An easy coastal walk past WWII-era gun emplacements built to defend Tutuila — interpretive signs cover the history, so allow extra time to read them.",
+      "didYouKnow": "American Samoa hosted more U.S. Marines per capita than almost any other Pacific location early in WWII, and several coastal defense guns from that era remain along this trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.75, "elevationFt": 100, "label": "Gun Emplacements" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-vatia",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round (drier May-Sep)",
+      "tags": ["Ridge Views", "Permission Required"],
+      "trailTip": "As of September 2026, per the NPS American Samoa visitor guide, portions of this ridge trail cross land near Vatia village, so ask locally before hiking and be respectful of any posted boundaries.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The overlook takes in Vatia village nestled between two dramatic volcanic sea stacks, Pola Island and Cockscomb.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Vatia Trailhead" },
+        { "mile": 1.0, "elevationFt": 500 },
+        { "mile": 2.0, "elevationFt": 900, "label": "Vatia Overlook" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-ofu-beach",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round (calmer seas May-Sep)",
+      "tags": ["Snorkeling", "Remote Access"],
+      "trailTip": "As of September 2026, per NPS, Ofu is reached only by small plane or boat from Tutuila with no regular ferry service, so confirm current transport before planning a visit — once there, snorkel over the fringing reef with a mask and fins rather than walking on coral.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Ofu Beach is frequently ranked among the most pristine, least-visited beaches in the entire U.S. National Park System.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 10 },
+        { "mile": 1.0, "elevationFt": 20, "label": "Beach End" }
+      ]
+    },
+    {
+      "id": "national-park-samoa-craggy-point",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round (drier May-Sep)",
+      "tags": ["Remote", "Coastal"],
+      "trailTip": "As of September 2026, per NPS, reaching Ta'u island requires a small plane or boat from Tutuila with limited, irregular schedules, so confirm transport well in advance — the trail itself crosses rugged, unshaded coastal terrain, so bring more water than you think you'll need.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Ta'u is home to Lata Mountain, the highest point in American Samoa, and this trail traces some of the most rugged, undeveloped coastline in the entire national park system.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 2.0, "elevationFt": 500 },
+        { "mile": 2.5, "elevationFt": 600, "label": "Craggy Point" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "national-park-samoa-flying-fox",
+      "scientificName": "Pteropus samoensis",
+      "bestTimeOfDay": "Day and dusk (unusually diurnal for a bat)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rainforest canopy near Vatia and along the Mount Alava ridge",
+      "tags": ["Canopy Dweller", "Pollinator"],
+      "viewingTip": "Watch from a clearing or ridge trail with binoculars as they glide between fruiting trees — never disturb a roosting colony, since flushed bats waste energy they need for foraging.",
+      "didYouKnow": "Unlike most bats, Samoan flying foxes are often active during the day and are key pollinators and seed dispersers for many of the rainforest's native fruit trees."
+    },
+    {
+      "id": "national-park-samoa-pacific-boa",
+      "scientificName": "Candoia bibroni",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Lowland forest leaf litter and low branches",
+      "tags": ["Nocturnal", "Rare Sighting"],
+      "viewingTip": "This nonvenomous, docile snake is easily overlooked in leaf litter — observe it in place with a flashlight and give it room to move on rather than picking it up or handling it.",
+      "didYouKnow": "The Pacific boa is the only snake species native to the Samoan archipelago and poses no danger to people."
+    },
+    {
+      "id": "national-park-samoa-spinner-dolphin",
+      "scientificName": "Stenella longirostris",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Offshore waters around Tutuila, often visible from boat trips or high coastal viewpoints",
+      "tags": ["Pod Animal", "Boat Viewing"],
+      "viewingTip": "Watch pods leap and spin from shore or a boat kept at a respectful distance — never chase or attempt to swim toward a pod, which disrupts their rest and feeding.",
+      "didYouKnow": "Spinner dolphins get their name from their acrobatic leaps, during which they can rotate up to seven times in a single jump."
+    },
+    {
+      "id": "national-park-samoa-fruit-dove",
+      "scientificName": "Ptilinopus perousii",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Fruiting trees in the rainforest canopy along the Mount Alava and Tuafanua trails",
+      "tags": ["Canopy Dweller", "Colorful"],
+      "viewingTip": "Scan fruiting trees with binoculars rather than trying to approach — this shy, brightly colored dove typically flushes quickly when approached too closely.",
+      "didYouKnow": "The many-colored fruit dove is one of the most vividly patterned birds in the Pacific, with a mix of green, orange, yellow, and purple plumage."
+    },
+    {
+      "id": "national-park-samoa-hawksbill-turtle",
+      "scientificName": "Eretmochelys imbricata",
+      "bestTimeOfDay": "Day (snorkeling); night (nesting)",
+      "bestSeason": "Nesting occurs year-round in low numbers",
+      "whereToLook": "Coral reefs off Ofu Beach; occasional nests on Ofu's beach",
+      "tags": ["Critically Endangered", "Nesting Beach"],
+      "viewingTip": "As of September 2026, per NPS, fewer than 10 turtles nest on Ofu's beach in a typical year, so if you find a nest or hatchlings, observe from well back and never touch, dig, or use flash photography — report it to park staff instead of approaching.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Hawksbill turtles get their name from their narrow, hawk-like beak, which they use to pick sponges and invertebrates out of reef crevices."
+    },
+    {
+      "id": "national-park-samoa-giant-clam",
+      "scientificName": "Tridacna spp.",
+      "bestTimeOfDay": "Day (snorkeling)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Shallow coral reef flats around Ofu and Tutuila",
+      "tags": ["Reef Dweller", "Slow Growing"],
+      "viewingTip": "View giant clams while snorkeling by floating above them with a mask and fins — never touch, stand on, or pry at a clam or the surrounding coral, which can be damaged for years by a single contact.",
+      "didYouKnow": "Some giant clam species can live for over a century and are among the longest-lived animals on any coral reef."
+    },
+    {
+      "id": "national-park-samoa-parrotfish",
+      "scientificName": "Scarus spp.",
+      "bestTimeOfDay": "Day (snorkeling)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Coral reef flats around Ofu Beach",
+      "tags": ["Reef Dweller", "Colorful"],
+      "viewingTip": "Snorkel quietly above the reef to watch parrotfish graze on algae — keep fins clear of the coral itself and never chase a fish for a closer photo.",
+      "didYouKnow": "Parrotfish bite and grind coral to feed on the algae inside it, and much of the white sand on Pacific beaches like Ofu is actually parrotfish waste."
+    },
+    {
+      "id": "national-park-samoa-white-tern",
+      "scientificName": "Gygis alba",
+      "bestTimeOfDay": "Day",
+      "bestSeason": "Year-round nesting",
+      "whereToLook": "Coastal trees near Pola Island and Tutuila's shoreline",
+      "tags": ["Coastal Nester", "Tree Nester"],
+      "viewingTip": "White terns lay their single egg directly on a bare tree branch with no nest — view nesting trees from the ground with binoculars and avoid climbing or shaking nearby branches, since eggs can roll off easily if disturbed.",
+      "didYouKnow": "White terns are one of very few birds that lay their egg balanced on a bare branch instead of building a nest at all."
+    }
+  ]
+}

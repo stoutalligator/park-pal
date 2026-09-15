@@ -1,0 +1,412 @@
+{
+  "parkId": "joshua-tree",
+  "researchedOn": "2026-09-15",
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "DesertUSA"
+  ],
+  "trails": [
+    {
+      "id": "joshua-tree-hidden-valley",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Easy Loop",
+        "Rock Scrambling",
+        "Shade Sparse"
+      ],
+      "trailTip": "This easy loop through a boulder-ringed valley gets very hot in summer, so hike it early morning October through April and carry at least a liter of water even for this short trail.",
+      "didYouKnow": "Hidden Valley is named for a local legend that 19th-century cattle rustlers used the boulder-enclosed valley to hide stolen cattle.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 100,
+          "label": "Hidden Valley overlook"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-ryan-mountain",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Steep Climb",
+        "Panoramic Summit",
+        "Exposed"
+      ],
+      "trailTip": "The steady, fully exposed climb to Ryan Mountain's 5,456-foot summit is best done early in the day, since there is no shade along the route.",
+      "didYouKnow": "From the summit, on a clear day you can see much of the park's high and low desert regions along with several surrounding mountain ranges.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 525
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 1050,
+          "label": "Ryan Mountain summit"
+        },
+        {
+          "mile": 2.25,
+          "elevationFt": 525
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-barker-dam",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Historic Water Tank",
+        "Petroglyphs",
+        "Easy Loop"
+      ],
+      "trailTip": "View the petroglyph panel near the dam from the marked overlook without touching the rock art, since skin oils accelerate its fading; the dam itself was built by early cattlemen to collect scarce rainwater.",
+      "didYouKnow": "Some of the petroglyphs near the dam were etched by the Serrano, Cahuilla, and Chemehuevi peoples long before ranchers arrived in the area.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.33,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.65,
+          "elevationFt": 100,
+          "label": "Barker Dam"
+        },
+        {
+          "mile": 0.98,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-lost-palms-oasis",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Nov-Mar",
+      "tags": [
+        "Palm Oasis",
+        "Remote",
+        "Exposed"
+      ],
+      "trailTip": "Carry plenty of water for this longer round trip to the park's largest California fan palm oasis, and start early to avoid the midday heat, which is dangerous April through October.",
+      "didYouKnow": "The oasis marks one of the few reliable year-round water sources in the park, drawing bighorn sheep and migratory birds.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 275
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 550,
+          "label": "Lost Palms Oasis"
+        },
+        {
+          "mile": 5.4,
+          "elevationFt": 275
+        },
+        {
+          "mile": 7.2,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-skull-rock",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Easy Loop",
+        "Roadside Landmark"
+      ],
+      "trailTip": "This short, mostly flat loop near the main park road is popular, so arrive early for parking and to see the namesake boulder without crowds.",
+      "didYouKnow": "Skull Rock's eye-socket-like hollows were carved over thousands of years by rainwater erosion, a process called weathering.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.42,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.85,
+          "elevationFt": 100,
+          "label": "Skull Rock"
+        },
+        {
+          "mile": 1.27,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.7,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-49-palms-oasis",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Palm Oasis",
+        "Exposed Ridge",
+        "Wildlife Viewing"
+      ],
+      "trailTip": "The exposed ridge before the oasis has no shade, so carry water and avoid midday in summer; if you spot desert bighorn sheep near the palms, stay back and let them move on their own.",
+      "didYouKnow": "49 Palms Oasis is one of the best places in the park to see migratory songbirds resting among the fan palms.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 150
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 300,
+          "label": "49 Palms Oasis"
+        },
+        {
+          "mile": 2.25,
+          "elevationFt": 150
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-mastodon-peak",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": [
+        "Historic Mine",
+        "Rock Scramble",
+        "Summit Views"
+      ],
+      "trailTip": "Stay outside the fenced-off Mastodon Mine shaft entrance for safety, and watch your footing on the short rock scramble to the summit.",
+      "didYouKnow": "The Mastodon Mine operated intermittently from the 1920s through the 1970s, producing a modest amount of gold.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 400,
+          "label": "Mastodon Peak"
+        },
+        {
+          "mile": 2.25,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "joshua-tree-cholla-cactus-garden",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round (cooler mornings preferred in summer)",
+      "tags": [
+        "Cactus Garden",
+        "Accessible",
+        "No Touching"
+      ],
+      "trailTip": "Stay strictly on the paved path — teddy bear cholla segments detach at the slightest brush and their barbed spines are notoriously difficult to remove.",
+      "didYouKnow": "Despite the friendly nickname, this cholla's barbed spines can jump onto skin or clothing with the lightest touch, which is why it's also called 'jumping cholla.'",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.06,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.13,
+          "elevationFt": 10,
+          "label": "Cholla Garden loop"
+        },
+        {
+          "mile": 0.19,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "joshua-tree-desert-tortoise",
+      "scientificName": "Gopherus agassizii",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jun (most active); largely dormant the rest of the year",
+      "whereToLook": "Low desert scrub in the western and southern park, especially after spring rains",
+      "tags": [
+        "Threatened Species",
+        "Burrow Dweller"
+      ],
+      "viewingTip": "If you spot a desert tortoise, observe quietly from several feet away with binoculars or a zoom lens and never pick one up — a startled tortoise may empty its bladder, losing water reserves that can be fatal in the desert.",
+      "didYouKnow": "Desert tortoises spend as much as 95% of their lives underground in burrows to escape extreme desert temperatures."
+    },
+    {
+      "id": "joshua-tree-roadrunner",
+      "scientificName": "Geococcyx californianus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open desert flats and trailsides throughout the park",
+      "tags": [
+        "Ground Bird",
+        "Common Sighting"
+      ],
+      "viewingTip": "Roadrunners are often seen darting across trails in daylight — watch quietly from a distance with binoculars rather than chasing or cornering one for a closer look.",
+      "didYouKnow": "Roadrunners can sprint up to 20 mph and are one of the few animals known to prey on rattlesnakes."
+    },
+    {
+      "id": "joshua-tree-chuckwalla",
+      "scientificName": "Sauromalus ater",
+      "bestTimeOfDay": "Midday (basking)",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Rocky outcrops and boulder piles, especially in the Wonderland of Rocks",
+      "tags": [
+        "Rock Dweller",
+        "Defensive Wedging"
+      ],
+      "viewingTip": "Watch chuckwallas bask on rocks from a short distance with binoculars; if disturbed they wedge themselves into crevices and inflate their bodies, so never try to pull one out.",
+      "didYouKnow": "When threatened, a chuckwalla inflates its lungs to wedge itself so tightly into a rock crevice that predators can't pull it free."
+    },
+    {
+      "id": "joshua-tree-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Year-round; lambing season Jan-Jun",
+      "whereToLook": "Little San Bernardino Mountains and steep rocky terrain near the park's southern boundary",
+      "tags": [
+        "Lambing Season",
+        "Steep Terrain"
+      ],
+      "viewingTip": "Bighorn sheep are easily stressed by close approach, especially ewes with lambs in spring — view from at least 50 yards away with binoculars or a spotting scope and never move toward a group to get closer.",
+      "didYouKnow": "Desert bighorn sheep can go for extended periods without drinking water, obtaining much of their moisture from the plants they eat."
+    },
+    {
+      "id": "joshua-tree-jackrabbit",
+      "scientificName": "Lepus californicus",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Desert scrub throughout the park, most active at dusk",
+      "tags": [
+        "Crepuscular",
+        "Common"
+      ],
+      "viewingTip": "Watch quietly from a distance at dusk with binoculars; jackrabbits rely on stillness and speed to evade predators, so sudden movement will send them bolting.",
+      "didYouKnow": "A black-tailed jackrabbit's oversized ears help radiate body heat, acting like a built-in desert cooling system."
+    },
+    {
+      "id": "joshua-tree-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Throughout the park, including near campgrounds and washes",
+      "tags": [
+        "Common",
+        "Habituation Risk"
+      ],
+      "viewingTip": "Enjoy coyote sightings from a distance and never feed them — food-conditioned coyotes lose their natural wariness of people, which is dangerous for both coyotes and visitors.",
+      "didYouKnow": "Joshua Tree's coyotes get much of their water from cactus fruit and small prey rather than open water sources."
+    },
+    {
+      "id": "joshua-tree-mojave-rattlesnake",
+      "scientificName": "Crotalus scutulatus",
+      "bestTimeOfDay": "Dusk / Night (warm months)",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Desert scrub and rocky areas, most active in warmer months",
+      "tags": [
+        "Venomous",
+        "Give Space"
+      ],
+      "viewingTip": "If you encounter a Mojave rattlesnake, stop, back away slowly, and give it a wide berth — it isn't aggressive if left alone, but its venom is medically significant, so never attempt to move, handle, or provoke it.",
+      "didYouKnow": "The Mojave rattlesnake's venom can include a potent neurotoxic component in addition to typical tissue-damaging venom, making it one of the more medically significant rattlesnakes in the region."
+    },
+    {
+      "id": "joshua-tree-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round; nesting Jan-Jul",
+      "whereToLook": "Rocky outcrops and cliffs throughout the park",
+      "tags": [
+        "Cliff Nester",
+        "Nesting Season"
+      ],
+      "viewingTip": "Watch nesting golden eagles from a distance with binoculars or a spotting scope, especially January through July, and avoid climbing or lingering near any cliff where you notice a nest, since disturbance can cause adults to abandon eggs or chicks.",
+      "didYouKnow": "Golden eagles can spot prey such as jackrabbits from over a mile away thanks to extraordinarily sharp eyesight."
+    }
+  ]
+}

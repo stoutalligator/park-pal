@@ -1,0 +1,201 @@
+{
+  "parkId": "theodore-roosevelt",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "National Park Field Guide"],
+  "trails": [
+    {
+      "id": "theodore-roosevelt-wind-canyon",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Sunset Spot"],
+      "trailTip": "Loose, sandy footing near the overlook edge can be slippery — keep back from the unfenced drop-off, especially with kids.",
+      "didYouKnow": "The canyon's wind-sculpted walls overlook a sweeping bend of the Little Missouri River, a popular sunset viewpoint in the South Unit.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 0.4, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-petrified-forest",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Remote", "No Reliable Water", "Bison Range"],
+      "trailTip": "This backcountry route crosses open range where bison and other wildlife roam freely — carry plenty of water, and give any bison encountered a very wide detour rather than pushing past on the trail.",
+      "didYouKnow": "The petrified wood scattered along this trail comes from an ancient forest buried roughly 55 million years ago, later exposed as the surrounding badlands eroded.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 150 },
+        { "mile": 5.0, "elevationFt": 300, "label": "Petrified stumps area" },
+        { "mile": 7.5, "elevationFt": 350 },
+        { "mile": 10.0, "elevationFt": 400 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-buck-hill",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Panoramic Views"],
+      "trailTip": "Short but steep and rocky in spots — sturdy shoes make the quick climb easier than it looks from the pullout.",
+      "didYouKnow": "At 2,855 feet, Buck Hill is one of the highest points accessible by a short trail in the South Unit, with views stretching across the badlands.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 100, "label": "Summit" },
+        { "mile": 0.2, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-caprock-coulee",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Badlands", "Bison Range"],
+      "trailTip": "The loop crosses open coulees where bison are frequently encountered right on the trail — if one is blocking the path, wait it out or backtrack rather than trying to squeeze by.",
+      "didYouKnow": "The trail's caprock formations are hardened layers of rock that erode more slowly than the surrounding badlands, leaving them perched above the softer terrain.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 200 },
+        { "mile": 3.0, "elevationFt": 350 },
+        { "mile": 4.3, "elevationFt": 400 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-painted-canyon",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Badlands"],
+      "trailTip": "A good short leg-stretcher right off the interstate — combine it with the visitor center overlook for the classic first view of the badlands.",
+      "didYouKnow": "The canyon's banded colors come from layers of ancient sediment, lignite, and volcanic ash exposed by erosion over millions of years.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 100, "label": "Canyon floor" },
+        { "mile": 0.9, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-ekblom",
+      "estimatedTime": "2.5-3.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Remote", "Badlands"],
+      "trailTip": "This North Unit trail sees far fewer visitors than South Unit routes — tell someone your plan, since cell service is unreliable in this area.",
+      "didYouKnow": "The Ekblom Trail connects to the North Unit's other backcountry routes, offering a quieter way to explore the same badlands terrain as the more popular Caprock Coulee loop.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 3.0, "elevationFt": 300 },
+        { "mile": 5.0, "elevationFt": 400 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-achenbach",
+      "estimatedTime": "1-2 days (backpack)",
+      "bestSeason": "May-Sep",
+      "tags": ["Remote", "River Crossing", "No Reliable Water"],
+      "trailTip": "This loop fords the Little Missouri River at least once, so water levels and current should be checked at the visitor center before setting out; it's best done as an overnight backpack rather than a single-day push.",
+      "didYouKnow": "The Achenbach Trail is the longest and most rugged maintained trail in the park, looping through the North Unit's most remote badlands terrain.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 5.0, "elevationFt": 500 },
+        { "mile": 10.0, "elevationFt": 900 },
+        { "mile": 14.0, "elevationFt": 1200, "label": "River ford" },
+        { "mile": 18.0, "elevationFt": 1500 }
+      ]
+    },
+    {
+      "id": "theodore-roosevelt-coal-vein",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Geology"],
+      "trailTip": "An easy, interpretive loop — good option for a quick stop with kids or in hot midday sun since it's short and mostly open.",
+      "didYouKnow": "The trail passes the site of a lignite coal seam that burned underground for years starting in 1951, baking the surrounding clay into the reddish 'scoria' rock common throughout the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 80, "label": "Burned coal vein site" },
+        { "mile": 0.8, "elevationFt": 0 }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "theodore-roosevelt-bison",
+      "scientificName": "Bison bison",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open grasslands and along park roads in both units",
+      "tags": ["Dangerous", "Roams Freely"],
+      "viewingTip": "As of September 2026, per NPS.gov, stay at least 100 feet (about two bus lengths) from bison at all times, and view from inside your vehicle if one is within 100 feet of the road — never approach on foot for a photo, since bison can weigh up to 2,000 pounds, run up to 35 mph, and have injured visitors who got too close.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Bison were reintroduced to the park in 1956 after having been eliminated from the region by the late 1800s; they now roam both the North and South Units."
+    },
+    {
+      "id": "theodore-roosevelt-wild-horse",
+      "scientificName": "Equus ferus caballus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "South Unit grasslands and badlands overlooks",
+      "tags": ["Roams Freely"],
+      "viewingTip": "As of September 2026, per NPS.gov, keep at least 50 yards from the herd and never approach, touch, or feed them — these horses are unmanaged and can behave unpredictably despite their domesticated ancestry; watch from the road or an overlook with binoculars instead.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The park's roughly 200 feral horses, found only in the South Unit, descend from ranch stock that roamed the area before the park was established."
+    },
+    {
+      "id": "theodore-roosevelt-bighorn-sheep",
+      "scientificName": "Ovis canadensis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec",
+      "whereToLook": "Steep, rugged terrain in the North Unit",
+      "tags": ["Rutting Season"],
+      "viewingTip": "During the fall rut, rams can be aggressive toward each other and easily disturbed by close approach — view any sighting from a pullout with binoculars rather than climbing toward them for a better angle.",
+      "didYouKnow": "Bighorn sheep were reintroduced to the North Unit's badlands in the 1950s after the native population had been extirpated by the early 1900s."
+    },
+    {
+      "id": "theodore-roosevelt-prairie-dog",
+      "scientificName": "Cynomys ludovicianus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Prairie dog towns visible from park roads in both units",
+      "tags": ["Colonial", "Common"],
+      "viewingTip": "Watch a town's activity from the roadside or a pullout rather than walking into it — approaching burrows can flush the colony underground and feeding them (common but against park rules) makes them dependent on handouts.",
+      "didYouKnow": "A prairie dog town uses distinct alarm calls that can vary depending on the size, shape, and even color of an approaching predator."
+    },
+    {
+      "id": "theodore-roosevelt-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct",
+      "whereToLook": "Meadows and river bottoms in the North Unit",
+      "tags": ["Rutting Season"],
+      "viewingTip": "During the fall rut, bugling bulls can be aggressive and unpredictable — stay well back and enjoy the display with binoculars rather than moving closer to a herd or a bugling bull.",
+      "didYouKnow": "Elk were reintroduced to the North Unit in 1985 after the original population had disappeared from the area decades earlier."
+    },
+    {
+      "id": "theodore-roosevelt-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open grasslands throughout both units",
+      "tags": ["Common"],
+      "viewingTip": "Watch from the road or trail with binoculars and never feed or call one closer — coyotes that lose their fear of people are more likely to become a safety concern.",
+      "didYouKnow": "Coyotes here often trail bison herds, taking advantage of insects and small mammals stirred up by the larger animals' grazing."
+    },
+    {
+      "id": "theodore-roosevelt-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Wooded draws and coulees in both units",
+      "tags": ["Common"],
+      "viewingTip": "In late spring, watch for fawns bedded alone in tall grass or brush — this is normal, not abandonment, so observe from a distance and never approach or touch one.",
+      "didYouKnow": "Mule deer in the badlands rely on wooded draws and coulees for shade and cover, moving into more open grassland to feed at dawn and dusk."
+    },
+    {
+      "id": "theodore-roosevelt-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jul",
+      "whereToLook": "Badlands buttes and cliff faces in both units",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Golden eagles nest on butte ledges in the park — watch and photograph from a distance with a zoom lens or spotting scope rather than climbing toward a nest site, which can cause adults to abandon eggs or chicks.",
+      "didYouKnow": "Golden eagles are among the fastest birds in a dive, capable of reaching speeds over 150 mph when stooping on prey."
+    }
+  ]
+}

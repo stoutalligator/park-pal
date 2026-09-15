@@ -1,0 +1,197 @@
+{
+  "parkId": "guadalupe-mountains",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "NationalParkEntry", "Visit Guadalupe Mountains"],
+  "trails": [
+    {
+      "id": "guadalupe-mountains-peak",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Oct-Apr (avoid summer heat)",
+      "tags": ["Exposure", "No Water", "High Wind"],
+      "trailTip": "No permit is needed for a day hike (only for the summit backcountry campsite overnight), but as of September 2026, per NPS.gov, there is no water source anywhere on the trail and the exposed upper switchbacks see sustained winds strong enough to knock hikers off balance, so carry at least a gallon of water and check the forecast before starting.",
+      "didYouKnow": "At 8,751 feet, Guadalupe Peak is the highest point in Texas, and a stainless-steel monument at the summit commemorates the Butterfield Overland Mail stagecoach route below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 2.0, "elevationFt": 1200 },
+        { "mile": 3.5, "elevationFt": 2100, "label": "Guadalupe Peak Campground" },
+        { "mile": 4.2, "elevationFt": 3000, "label": "Summit" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-devils-hall",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Rock Scramble", "Flash Flood Risk"],
+      "trailTip": "As of September 2026, per NPS.gov, the route follows a dry wash and narrow canyon that can flood suddenly during summer monsoon storms, so avoid the trail during or after heavy rain and check current conditions at the visitor center; sturdy footwear helps on the natural rock \"stairway.\"",
+      "didYouKnow": "The trail's namesake \"Devil's Hall\" is a narrow, sheer-walled passage naturally carved through limestone by centuries of flash flooding.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 1.2, "elevationFt": 250 },
+        { "mile": 2.0, "elevationFt": 500, "label": "Hikers Staircase" },
+        { "mile": 2.1, "elevationFt": 600, "label": "Devil's Hall" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-mckittrick",
+      "estimatedTime": "3-5 hrs",
+      "bestSeason": "Late Oct-early Nov (peak foliage)",
+      "tags": ["Day-Use Only", "Gate Hours"],
+      "trailTip": "As of September 2026, per NPS.gov, McKittrick Canyon is day-use only with the entrance gate open 8am-5pm (no overnight parking) and no advance reservation is required, but the lot fills fast during peak fall color in late October and early November, so arrive early.",
+      "didYouKnow": "McKittrick Canyon's bigtooth maples put on one of the most vivid fall color displays in Texas, a rarity in a desert mountain range.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.3, "elevationFt": 250, "label": "Pratt Cabin" },
+        { "mile": 4.0, "elevationFt": 500, "label": "Grotto" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-smith-spring",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Desert Oasis"],
+      "trailTip": "Bring water even though the loop is short, since there's little shade on the return leg; the spring itself is a sensitive wildlife water source, so stay on the boardwalk rather than wading in.",
+      "didYouKnow": "Smith Spring is one of only a handful of reliable, year-round water sources in the park, creating a rare pocket of lush vegetation amid the surrounding desert.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Frijole Ranch Trailhead" },
+        { "mile": 1.2, "elevationFt": 300, "label": "Smith Spring" },
+        { "mile": 2.3, "elevationFt": 400, "label": "Loop Return" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-el-capitan",
+      "estimatedTime": "6-7 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["No Water", "Exposure"],
+      "trailTip": "As of September 2026, per NPS.gov, there is no water or shade along this entire route beneath El Capitan's cliff face, so plan for extreme sun exposure and carry more water than feels necessary, especially in warmer months.",
+      "didYouKnow": "El Capitan's 1,000-foot limestone cliff face was once a critical navigation landmark for stagecoach and, later, aircraft crossing the region.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 3.0, "elevationFt": 300 },
+        { "mile": 5.6, "elevationFt": 700, "label": "El Capitan Base" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-permian-reef",
+      "estimatedTime": "6-7 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Steep", "Geology"],
+      "trailTip": "Carry a printed copy of the park's geology trail guide (cell service is unreliable) and start early, since the steady climb offers little shade until the higher forested sections.",
+      "didYouKnow": "This trail climbs through one of the best-exposed cross-sections of a fossilized Permian-age reef anywhere in the world, predating the Guadalupe Mountains themselves by over 250 million years.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "McKittrick Canyon Trailhead" },
+        { "mile": 2.0, "elevationFt": 800 },
+        { "mile": 4.2, "elevationFt": 2000, "label": "Reef Overlook" }
+      ]
+    },
+    {
+      "id": "guadalupe-mountains-tejas",
+      "estimatedTime": "7-9 hrs (or overnight)",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Backcountry", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a free backcountry permit (available same-day at the Pine Springs or Dog Canyon visitor centers) is required for any overnight camping along this route; day hikers need no permit but should still carry ample water across the exposed high country.",
+      "didYouKnow": "The Tejas Trail crosses the high-elevation \"bowl\" country of the range, a relict pocket of Douglas-fir and ponderosa forest left over from a cooler climate.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 4.0, "elevationFt": 1400 },
+        { "mile": 7.0, "elevationFt": 2000, "label": "Tejas Campsite" },
+        { "mile": 11.8, "elevationFt": 2000, "label": "Dog Canyon" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "guadalupe-mountains-frijole",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Site"],
+      "trailTip": "Stop at the restored Frijole Ranch House (open seasonally) for park history exhibits before or after the loop, and watch footing near old irrigation ditches.",
+      "didYouKnow": "The Frijole Ranch buildings date to the 1870s-1880s and served as one of the first permanent homesteads in this stretch of the Guadalupe Mountains.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Frijole Ranch Trailhead" },
+        { "mile": 1.6, "elevationFt": 200 },
+        { "mile": 3.2, "elevationFt": 300, "label": "Loop Return" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "guadalupe-mountains-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct (rut)",
+      "whereToLook": "High-country meadows near Bowl Trail and Tejas Trail",
+      "tags": ["Rut Season", "Reintroduced"],
+      "viewingTip": "Keep at least 50 yards of distance during the fall rut, when bulls are territorial and can charge if approached; watch and listen for bugling from a distance with binoculars rather than moving toward a herd.",
+      "didYouKnow": "Elk are not native to this specific range; they were reintroduced in the 1920s-1940s after the original Merriam's elk subspecies was extirpated."
+    },
+    {
+      "id": "guadalupe-mountains-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Canyons and desert washes throughout the park",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Observe from a distance with binoculars, particularly around fawns in early summer, and never approach or feed deer that wander near campgrounds.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears and bound with a distinctive stiff-legged \"stotting\" gait when startled."
+    },
+    {
+      "id": "guadalupe-mountains-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rugged backcountry canyons, rarely near trails",
+      "tags": ["Elusive", "Give Space"],
+      "viewingTip": "Sightings are extremely rare; if you do encounter one, back away slowly while facing it, make yourself look large, and never run or crouch down, but do not seek one out or try to approach for a photo.",
+      "didYouKnow": "Mountain lions are the park's apex predator, and their presence is usually confirmed only through tracks or trail-camera images rather than direct sightings."
+    },
+    {
+      "id": "guadalupe-mountains-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday (thermals)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Cliffs and ridgelines near Guadalupe Peak and El Capitan",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Scan the ridgelines with binoculars from below rather than approaching cliff edges where nests may be tucked into ledges, and give any nesting site a wide, undisturbed berth if spotted.",
+      "didYouKnow": "Golden eagles here can reach speeds over 150 mph in a hunting dive and build massive stick nests that are reused and expanded over many years."
+    },
+    {
+      "id": "guadalupe-mountains-horned-lizard",
+      "scientificName": "Phrynosoma cornutum",
+      "bestTimeOfDay": "Midday (warm hours)",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Sandy, sparsely vegetated lower desert trails",
+      "tags": ["Camouflaged"],
+      "viewingTip": "Watch your step on sandy trail sections and observe without picking it up; handling stresses the lizard and can trigger its defensive blood-squirting response.",
+      "didYouKnow": "The Texas horned lizard can shoot a thin stream of blood from its eyes as a startling defense against predators like coyotes and foxes."
+    },
+    {
+      "id": "guadalupe-mountains-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "High forested canyons like McKittrick and the Bowl",
+      "tags": ["Rare Sighting"],
+      "viewingTip": "If seen, keep at least 100 yards away and use binoculars or a zoom lens; store all food and scented items properly at camp, since a food-conditioned bear becomes dangerous to both people and itself.",
+      "didYouKnow": "Black bears recolonized the Guadalupe Mountains naturally in the 1980s and 1990s, likely dispersing north from Mexico's Sierra del Carmen range."
+    },
+    {
+      "id": "guadalupe-mountains-ringtail",
+      "scientificName": "Bassariscus astutus",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky canyon walls near campgrounds after dark",
+      "tags": ["Nocturnal", "Elusive"],
+      "viewingTip": "Look for eyeshine along canyon walls with a flashlight from a distance and never leave food out to draw one closer to camp; enjoying a brief glimpse is the goal, not a lingering encounter.",
+      "didYouKnow": "Despite the nickname \"ringtail cat,\" this animal is actually a relative of raccoons, and its tail is nearly as long as its body."
+    },
+    {
+      "id": "guadalupe-mountains-javelina",
+      "scientificName": "Pecari tajacu",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Year-round",
+      "whereToLook": "Lower desert washes and near Pine Springs",
+      "tags": ["Herd Animal", "Give Space"],
+      "viewingTip": "View herds from a distance with binoculars; javelinas have poor eyesight but can act defensively if startled or cornered, so never approach for a closer look and keep pets leashed and away.",
+      "didYouKnow": "Javelinas (collared peccaries) are not wild pigs but a separate species native to the Americas, and they travel in tight-knit herds of up to a dozen animals."
+    }
+  ]
+}

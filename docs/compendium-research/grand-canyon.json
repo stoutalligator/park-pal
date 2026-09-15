@@ -1,0 +1,226 @@
+{
+  "parkId": "grand-canyon",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Grand Canyon Conservancy", "National Parks Traveler", "KNAU/Arizona Public Radio"],
+  "trails": [
+    {
+      "id": "grand-canyon-bright-angel",
+      "estimatedTime": "3-6 hrs round trip to Havasupai Gardens",
+      "bestSeason": "Year-round; avoid midday June-Sept",
+      "tags": ["Below Rim", "Exposure", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, Bright Angel Trail is closed below its junction with the Tonto Trail (below Havasupai Gardens) after an August 29, 2026 flash flood destroyed the inner-canyon water pipeline, so day hikers should plan to turn around at or above Havasupai Gardens; the park also urges avoiding the Inner Canyon between 10 a.m. and 4 p.m. and carrying more water than feels necessary.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Bright Angel Trail follows an ancient route used by the Havasupai people for centuries before it was widened into a toll trail by prospector Ralph Cameron in the early 1900s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "South Rim Trailhead" },
+        { "mile": 1.5, "elevationFt": 1131, "label": "Mile-and-a-Half Resthouse" },
+        { "mile": 3.0, "elevationFt": 2112, "label": "Three-Mile Resthouse" },
+        { "mile": 4.6, "elevationFt": 3060, "label": "Havasupai Gardens (current turnaround)" }
+      ]
+    },
+    {
+      "id": "grand-canyon-rim-trail",
+      "estimatedTime": "Flexible, 1-6 hrs depending on segment",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Family Friendly", "Shuttle Access"],
+      "trailTip": "Ride the free South Rim shuttle to hike one direction and ride back, since the trail is mostly paved and accessible but exposed to sun with few shade breaks.",
+      "didYouKnow": "The Rim Trail links nearly every major South Rim viewpoint, from Hermits Rest to the South Kaibab Trailhead, without ever dropping below the canyon rim.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Hermits Rest" },
+        { "mile": 5.0, "elevationFt": 80 },
+        { "mile": 9.0, "elevationFt": 150 },
+        { "mile": 13.0, "elevationFt": 200, "label": "South Kaibab Trailhead" }
+      ]
+    },
+    {
+      "id": "grand-canyon-south-kaibab",
+      "estimatedTime": "1.5-2.5 hrs round trip",
+      "bestSeason": "Year-round; avoid midday June-Sept",
+      "tags": ["Below Rim", "Exposure", "No Water"],
+      "trailTip": "Ooh Aah Point sits well above Cedar Ridge and the Tip-Off, so as of September 2026 this short segment remains open even though the South Kaibab Trail is closed below the Tip-Off after the August 2026 flash flood; there is no water anywhere on this trail, so carry it all in.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "South Kaibab was built in the 1920s along an exposed ridgeline specifically so mule trains would not have to pay tolls charged on the privately-run Bright Angel Trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "South Kaibab Trailhead" },
+        { "mile": 0.9, "elevationFt": 500 },
+        { "mile": 1.8, "elevationFt": 760, "label": "Ooh Aah Point" }
+      ]
+    },
+    {
+      "id": "grand-canyon-hermit-trail",
+      "estimatedTime": "4-6 hrs round trip",
+      "bestSeason": "Oct-Apr; avoid midday June-Sept",
+      "tags": ["Unmaintained", "Exposure", "No Water"],
+      "trailTip": "Hermit Trail is unmaintained and rocky with no reliable water source, so overnight camping below the rim here requires a backcountry permit and sturdy ankle support is a must for the loose footing.",
+      "didYouKnow": "Hermit Trail was built by the Santa Fe Railway in 1911-1912 as a free alternative to the toll-charging Bright Angel Trail, complete with a now-vanished tourist camp at Hermit Creek.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Hermits Rest Trailhead" },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 3.0, "elevationFt": 1200, "label": "Santa Maria Spring" },
+        { "mile": 5.0, "elevationFt": 1600, "label": "Dripping Springs junction" }
+      ]
+    },
+    {
+      "id": "grand-canyon-shoshone-point",
+      "estimatedTime": "1-1.5 hrs round trip",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Uncrowded"],
+      "trailTip": "The unmarked pullout for this trail is easy to miss between Yaki Point and Grandview Point, and the payoff is an unfenced overlook, so keep kids close near the rim's edge.",
+      "didYouKnow": "Shoshone Point has no guardrails and is one of the only South Rim overlooks that can be reserved for private group events through the park's special-use permit office.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead pullout" },
+        { "mile": 1.0, "elevationFt": 60 },
+        { "mile": 2.0, "elevationFt": 100, "label": "Shoshone Point overlook" }
+      ]
+    },
+    {
+      "id": "grand-canyon-north-kaibab",
+      "estimatedTime": "Multi-day; not a day-hike destination past Roaring Springs",
+      "bestSeason": "Mid-May to mid-Oct, North Rim only",
+      "tags": ["Below Rim", "Seasonal Closure", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, the entire North Kaibab Trail is closed until further notice following the August 29, 2026 flash flood, and a separate closure begins October 15, 2026 between Redwall Bridge and Cottonwood Campground for waterline repair work; the trail is also only accessible when the North Rim itself is open, roughly mid-May through mid-November depending on weather, and overnight stays below the rim require a backcountry permit.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "North Kaibab is the only maintained trail descending from the North Rim, and at full length it drops nearly 6,000 feet to the Colorado River — deeper than the depth of the Grand Canyon at many South Rim overlooks.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North Kaibab Trailhead" },
+        { "mile": 4.7, "elevationFt": 2260, "label": "Roaring Springs" },
+        { "mile": 7.1, "elevationFt": 3050, "label": "Cottonwood Campground" },
+        { "mile": 14.2, "elevationFt": 5850, "label": "Colorado River / Phantom Ranch" }
+      ]
+    },
+    {
+      "id": "grand-canyon-widforss",
+      "estimatedTime": "5-6 hrs round trip",
+      "bestSeason": "Mid-May to mid-Oct, North Rim only",
+      "tags": ["Forested", "Uncrowded", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, this North Rim trail is only reachable while North Rim facilities and roads are open for the season, typically mid-May through mid-November weather permitting, so confirm current North Rim access before planning a trip.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail is named for Gunnar Widforss, a Swedish landscape painter known as 'the painter of the National Parks' who died and is buried at the Grand Canyon.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Widforss Trailhead" },
+        { "mile": 5.0, "elevationFt": 150 },
+        { "mile": 9.8, "elevationFt": 200, "label": "Widforss Point overlook" }
+      ]
+    },
+    {
+      "id": "grand-canyon-cape-final",
+      "estimatedTime": "2-2.5 hrs round trip",
+      "bestSeason": "Mid-May to mid-Oct, North Rim only",
+      "tags": ["Family Friendly", "Forested", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, this trail is only accessible during the North Rim's seasonal opening, typically mid-May through mid-November weather permitting; the walk is flat and shaded, making it one of the easier North Rim viewpoints to reach.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Cape Final is one of the few North Rim overlooks reached by an old, unpaved fire road rather than a built trail, giving it a quieter, more remote feel than nearby viewpoints.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead off Cape Royal Road" },
+        { "mile": 2.0, "elevationFt": 60 },
+        { "mile": 4.0, "elevationFt": 100, "label": "Cape Final overlook" }
+      ]
+    },
+    {
+      "id": "grand-canyon-grandview-trail",
+      "estimatedTime": "4-5 hrs round trip",
+      "bestSeason": "Oct-Apr; avoid midday June-Sept",
+      "tags": ["Unmaintained", "Exposure", "Permit Required"],
+      "trailTip": "Grandview is unmaintained, exposed cobblestone in places, and has no water, so day hikers should turn around well before Horseshoe Mesa and anyone camping overnight at the mining ruins needs a backcountry permit.",
+      "didYouKnow": "The trail was built in the 1890s by miner Pete Berry to haul copper ore out of the Last Chance Mine on Horseshoe Mesa, and its cobblestone switchbacks are original 19th-century construction.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Grandview Point Trailhead" },
+        { "mile": 1.5, "elevationFt": 1000 },
+        { "mile": 3.2, "elevationFt": 2200, "label": "Coconino Saddle" },
+        { "mile": 6.4, "elevationFt": 2500, "label": "Horseshoe Mesa" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "grand-canyon-california-condor",
+      "scientificName": "Gymnogyps californianus",
+      "bestTimeOfDay": "Midday, riding thermals",
+      "bestSeason": "Year-round",
+      "whereToLook": "South Rim viewpoints near Grand Canyon Village, especially Bright Angel Lodge and Mather Point",
+      "tags": ["Endangered", "Cliff Roosting"],
+      "viewingTip": "Watch from a rim viewpoint with binoculars rather than approaching a perched bird; condors sometimes land near people out of curiosity, and rangers ask visitors to back away and never feed them, since a condor that loses its wariness of humans is at far greater risk from lead poisoning and collisions.",
+      "didYouKnow": "Every wild California condor descends from just 27 birds left on Earth in 1987, and each one at the Grand Canyon wears numbered wing tags so biologists can track it individually."
+    },
+    {
+      "id": "grand-canyon-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Aug-Nov rut, otherwise year-round",
+      "whereToLook": "Steep inner-canyon slopes visible from Bright Angel and South Kaibab trails",
+      "tags": ["Rut Season", "Cliff Dweller"],
+      "viewingTip": "Use binoculars or a zoom lens from the trail rather than scrambling off-path toward them, and give rutting rams extra distance in fall since males can be unpredictable while competing for mates.",
+      "didYouKnow": "Desert bighorn can go without drinking water for days, getting much of their moisture from the barrel cacti and other desert plants they browse."
+    },
+    {
+      "id": "grand-canyon-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Sept-Oct rut",
+      "whereToLook": "Grand Canyon Village and South Rim campgrounds",
+      "tags": ["Rut Season", "Habituated"],
+      "viewingTip": "South Rim elk are used to people, but that makes them more dangerous, not less — stay at least 75 feet back at all times, and give bugling bulls in the fall rut a much wider berth since they can charge with little warning.",
+      "didYouKnow": "The South Rim's elk are not native to the canyon; they descend from Rocky Mountain elk transplanted to northern Arizona in the early 1900s after native Merriam's elk were hunted to extinction."
+    },
+    {
+      "id": "grand-canyon-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn, dusk, and night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forested plateau areas back from the rim; rarely seen",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "A sighting is extremely unlikely, but if one occurs, keep distance, make yourself look large, and never run; enjoy any glimpse through binoculars rather than moving closer to get a better look.",
+      "didYouKnow": "Grand Canyon's mountain lion population has never been intensively hunted or trapped, making the park an important source population for lions throughout northern Arizona."
+    },
+    {
+      "id": "grand-canyon-rock-squirrel",
+      "scientificName": "Otospermophilus variegatus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rim trails, overlooks, and picnic areas",
+      "tags": ["Habituated", "Do Not Feed"],
+      "viewingTip": "Never feed or hand-feed rock squirrels — they are the single most common cause of wildlife-related injuries in the park because visitor feeding makes them bite; watch from a normal walking distance and keep food packed away.",
+      "didYouKnow": "Rock squirrels beg so persistently at overlooks because decades of visitors sneaking them snacks have taught generations of squirrels that people mean food."
+    },
+    {
+      "id": "grand-canyon-ringtail",
+      "scientificName": "Bassariscus astutus",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Inner canyon rock crevices and old cabins near Phantom Ranch",
+      "tags": ["Nocturnal", "Elusive"],
+      "viewingTip": "Sightings are rare and usually happen by chance around dim campground lighting at night; if one appears, stay still and watch from several feet away rather than approaching, and never leave food out to try to draw one in.",
+      "didYouKnow": "Despite the name, ringtails are not cats — they're related to raccoons, and their oversized eyes and semi-retractable claws make them extraordinary night climbers on sheer canyon rock."
+    },
+    {
+      "id": "grand-canyon-raven",
+      "scientificName": "Corvus corax",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Every South Rim overlook and picnic area",
+      "tags": ["Common", "Do Not Feed"],
+      "viewingTip": "Keep food sealed and don't toss scraps — ravens that learn to associate people with food become bold enough to steal directly from packs and picnic tables, which is bad for both visitors and the birds.",
+      "didYouKnow": "Ravens at the Grand Canyon have been seen working in pairs, with one bird distracting a hiker while the other raids an unattended backpack."
+    },
+    {
+      "id": "grand-canyon-desert-tortoise",
+      "scientificName": "Gopherus morafkai",
+      "bestTimeOfDay": "Morning, after rain",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Lower desert scrub near the Colorado River corridor",
+      "tags": ["Protected Species", "Do Not Handle"],
+      "viewingTip": "Never pick up a desert tortoise — if startled, it may reflexively empty its bladder, losing water reserves it needs to survive the next several months of drought — so simply step back and photograph it from where you stand.",
+      "didYouKnow": "A desert tortoise can store enough water in its bladder to survive up to a year without drinking again, which is exactly why handling one is so harmful."
+    },
+    {
+      "id": "grand-canyon-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Early morning and evening",
+      "bestSeason": "Year-round",
+      "whereToLook": "Grassy plateau near the South Entrance and Tusayan",
+      "tags": ["Common", "Fast Runner"],
+      "viewingTip": "Watch from your vehicle or the roadside with binoculars; pronghorn are easily spooked by anyone approaching on foot across open grassland, and slow, distant observation lets you watch natural behavior without disturbing the herd.",
+      "didYouKnow": "Pronghorn are the fastest land animal in North America, capable of sustained speeds over 55 mph — likely an adaptation to outrun cheetah-like predators that vanished from the continent 10,000 years ago."
+    }
+  ]
+}

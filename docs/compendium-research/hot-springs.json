@@ -1,0 +1,197 @@
+{
+  "parkId": "hot-springs",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Hot Springs National Park Arkansas (hotsprings.org)"],
+  "trails": [
+    {
+      "id": "hot-springs-mountain",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Paved Sections", "Overlook"],
+      "trailTip": "The trail's upper section connects to paved Hot Springs Mountain Drive near the observation tower, so budget extra time (and a small admission fee) if you want to ride the elevator up for panoramic Ouachita views.",
+      "didYouKnow": "The Hot Springs Mountain Tower sits atop the highest point in the park and has offered panoramic views of the Ouachita Mountains since 1983.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 150 },
+        { "mile": 1.0, "elevationFt": 300, "label": "Overlook" },
+        { "mile": 1.7, "elevationFt": 400, "label": "Hot Springs Mountain Tower" }
+      ]
+    },
+    {
+      "id": "hot-springs-sunset",
+      "estimatedTime": "5-7 hrs",
+      "bestSeason": "Oct-Apr (cooler temps)",
+      "tags": ["Remote", "Point-to-Point", "Closed to Bikes"],
+      "trailTip": "This point-to-point route is usually split into three shorter sections (West Mountain, Sugarloaf Mountain, and Stonebridge Road) and is closed to mountain bikes, so plan a car shuttle or hike a single segment as an out-and-back.",
+      "didYouKnow": "At over 10 miles one-way, the Sunset Trail is the longest continuous trail in the smallest national park in the system.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "West Mountain Trailhead" },
+        { "mile": 2.8, "elevationFt": 400, "label": "West Mountain segment end" },
+        { "mile": 5.4, "elevationFt": 700, "label": "Sugarloaf Mountain" },
+        { "mile": 8.0, "elevationFt": 950 },
+        { "mile": 10.6, "elevationFt": 1200, "label": "Stonebridge Road end" }
+      ]
+    },
+    {
+      "id": "hot-springs-gulpha-gorge",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Creekside", "Family-Friendly"],
+      "trailTip": "Starting right at Gulpha Gorge Campground makes this an easy add-on hike for campers; footing can get slick near creek crossings after rain.",
+      "didYouKnow": "Gulpha Gorge Campground sits atop the same geothermal aquifer that feeds the park's famous hot springs.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near campground" },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 2.0, "elevationFt": 200 },
+        { "mile": 3.0, "elevationFt": 300, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "hot-springs-dogwood",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Mar-May (peak dogwood bloom)",
+      "tags": ["Wildflowers", "Easy Loop"],
+      "trailTip": "Visit in spring to catch the trail's namesake dogwood blooms lighting up the hardwood understory.",
+      "didYouKnow": "Hot Springs National Park's forest lies in the Ouachita Mountains, one of the few major east-west mountain ranges in North America.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.2, "elevationFt": 150 },
+        { "mile": 2.5, "elevationFt": 250, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "hot-springs-peak",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Steady Climb", "Downtown Access"],
+      "trailTip": "Peak Trail is the most direct route from downtown Bathhouse Row to the mountaintop, making it easy to combine with a stroll along the historic row.",
+      "didYouKnow": "You can walk directly from a historic bathhouse to a mountain summit trailhead in Hot Springs — a rarity among national parks.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Downtown trailhead" },
+        { "mile": 0.8, "elevationFt": 300 },
+        { "mile": 1.5, "elevationFt": 500, "label": "Summit area" }
+      ]
+    },
+    {
+      "id": "hot-springs-north-mountain",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Views", "Easy Access"],
+      "trailTip": "This short loop near Bathhouse Row is a good option when you only have an hour but still want a forested overlook of downtown.",
+      "didYouKnow": "North Mountain's overlooks give one of the best views of the historic Bathhouse Row streetscape below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 150 },
+        { "mile": 1.5, "elevationFt": 300, "label": "Overlook" }
+      ]
+    },
+    {
+      "id": "hot-springs-goat-rock",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Connector Trail", "Views"],
+      "trailTip": "Goat Rock functions mainly as a connector between other park trails, so check a trail map before starting to plan your full route.",
+      "didYouKnow": "Many of Hot Springs' trails, including this one, were built or improved by the Civilian Conservation Corps in the 1930s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 2.0, "elevationFt": 350, "label": "Goat Rock overlook" }
+      ]
+    },
+    {
+      "id": "hot-springs-floral-trail",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Mar-May (wildflowers)",
+      "tags": ["Wildflowers", "Short Loop"],
+      "trailTip": "A good pick for a quick wildflower walk below Hot Springs Mountain without committing to a full summit hike.",
+      "didYouKnow": "Hot Springs National Park protects thermal water estimated to have fallen as rain roughly 4,000 years ago before slowly percolating back to the surface.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.7, "elevationFt": 100, "label": "Loop end" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "hot-springs-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round (fawns May-Jun)",
+      "whereToLook": "Forest edges along Gulpha Gorge and West Mountain trails",
+      "tags": ["Common", "Forest Edge"],
+      "viewingTip": "Watch quietly from a distance with binoculars, especially near dawn, and give any doe with fawns a wide berth rather than approaching for a closer look.",
+      "didYouKnow": "White-tailed deer raise the white fur on the underside of their tail as a flash warning when alarmed, which is how they got their name."
+    },
+    {
+      "id": "hot-springs-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Early Morning",
+      "bestSeason": "Mar-May (spring gobbling season)",
+      "whereToLook": "Wooded slopes and trail edges throughout the park",
+      "tags": ["Ground Forager"],
+      "viewingTip": "Listen for gobbling at first light in spring and observe from the trail with binoculars rather than following a flock off-path.",
+      "didYouKnow": "Wild turkeys can run up to 25 mph and are strong short-distance fliers despite their size."
+    },
+    {
+      "id": "hot-springs-box-turtle",
+      "scientificName": "Terrapene carolina",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Leaf litter along shaded sections of the Dogwood and Gulpha Gorge trails",
+      "tags": ["Slow-Moving", "Common"],
+      "viewingTip": "Enjoy a sighting from where you stand — box turtles can live 50+ years, and picking one up to move or 'help' it (unless it's in the road) does more harm than good.",
+      "didYouKnow": "A box turtle's hinged plastron lets it close its shell almost completely, one of the only turtles in North America able to do so."
+    },
+    {
+      "id": "hot-springs-barred-owl",
+      "scientificName": "Strix varia",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Mature forest along the North Mountain and Sunset trails",
+      "tags": ["Nocturnal", "Vocal"],
+      "viewingTip": "Listen for its 'who-cooks-for-you' call at dusk and rely on your ears or a red-filtered flashlight — resist playing owl calls or recordings to lure it closer.",
+      "didYouKnow": "The barred owl's classic call is often phonetically remembered as 'Who cooks for you, who cooks for you all?'"
+    },
+    {
+      "id": "hot-springs-copperhead",
+      "scientificName": "Agkistrodon contortrix",
+      "bestTimeOfDay": "Dusk / Warm Evenings",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Leaf litter and rocky sections of forested trails",
+      "tags": ["Venomous", "Camouflaged"],
+      "viewingTip": "Give copperheads several feet of space and watch where you step on leaf-covered trail sections — they rely on camouflage rather than fleeing, so never reach toward or attempt to move one.",
+      "didYouKnow": "A copperhead's banded pattern resembles a stack of Hershey's Kisses, which helps it disappear against dry leaves."
+    },
+    {
+      "id": "hot-springs-gray-fox",
+      "scientificName": "Urocyon cinereoargenteus",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forested slopes throughout the park",
+      "tags": ["Nocturnal", "Elusive"],
+      "viewingTip": "Gray foxes are shy and rarely seen in daylight; a quiet dusk walk with binoculars is a better bet than trying to approach a den area.",
+      "didYouKnow": "The gray fox is one of the few canids that can climb trees, using curved claws to escape predators or reach fruit."
+    },
+    {
+      "id": "hot-springs-eastern-fence-lizard",
+      "scientificName": "Sceloporus undulatus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Sunny rocks and logs along the Hot Springs Mountain and West Mountain trails",
+      "tags": ["Basking", "Common"],
+      "viewingTip": "Approach slowly and observe from a few feet away with the naked eye or binoculars — sudden movement will send it darting for cover.",
+      "didYouKnow": "Males do 'push-up' displays to show off the blue patches on their throat and belly to rivals and potential mates."
+    },
+    {
+      "id": "hot-springs-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Surrounding hills, occasionally heard from park trails",
+      "tags": ["Vocal", "Elusive"],
+      "viewingTip": "You're far more likely to hear a coyote's yips and howls at night than to see one — enjoy the chorus from camp and never leave out food that could habituate them to people.",
+      "didYouKnow": "A coyote's nighttime chorus can sound like a much larger group than it really is because of how its yips echo through the hills."
+    }
+  ]
+}

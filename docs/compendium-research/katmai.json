@@ -1,0 +1,199 @@
+{
+  "parkId": "katmai",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Earthtrekkers", "AllTrails", "npshistory.com"],
+  "trails": [
+    {
+      "id": "katmai-brooks-falls",
+      "estimatedTime": "1-2 hrs",
+      "bestSeason": "Jun-Sep (Brooks Camp's operating season)",
+      "tags": ["Boardwalk", "Bear Viewing", "Mandatory Orientation"],
+      "trailTip": "As of September 2026, per NPS.gov, every visitor must complete an NPS bear orientation ('bear school') at the Brooks Camp visitor center before walking this boardwalk, and the Falls and Riffles viewing platforms close nightly from 10pm-7am from June 15 through August 15.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The elevated Falls Platform has a strict capacity limit, and during the peak July sockeye run rangers run a waitlist system so every visitor gets a turn.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Brooks Camp / Lodge" },
+        { "mile": 0.4, "elevationFt": 20 },
+        { "mile": 0.9, "elevationFt": 40, "label": "Corridor to platforms" },
+        { "mile": 1.2, "elevationFt": 50, "label": "Brooks Falls Platform" }
+      ]
+    },
+    {
+      "id": "katmai-dumpling-mountain",
+      "estimatedTime": "3-5 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Steep", "Bear Country", "Panoramic Views"],
+      "trailTip": "Carry bear spray and make noise on blind corners — this trail climbs away from the Brooks River corridor into dense alder where bears are frequently encountered.",
+      "didYouKnow": "The overlook bench at about 1.5 miles is a common turnaround point offering a view over Naknek Lake without the full summit push.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
+        { "mile": 1.5, "elevationFt": 800, "label": "First overlook" },
+        { "mile": 3.0, "elevationFt": 1700 },
+        { "mile": 4.5, "elevationFt": 2450, "label": "Dumpling Mountain summit" }
+      ]
+    },
+    {
+      "id": "katmai-valley-ten-thousand-smokes",
+      "estimatedTime": "3-4 hrs, plus round-trip shuttle bus time",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["Volcanic Ash", "Shuttle Access", "Exposed"],
+      "trailTip": "As of September 2026, per NPS.gov, the only ground access to this trailhead is the concessioner-run shuttle bus from Brooks Camp, which runs on a seasonal schedule and fills up, so reserve a seat in advance; the ranger-led hike into the ash-filled valley departs from the Robert Griggs Visitor Center.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The valley was buried up to 700 feet deep in ash after the 1912 Novarupta eruption, the largest volcanic eruption of the 20th century.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1400, "label": "Griggs Visitor Center overlook" },
+        { "mile": 1.0, "elevationFt": 1550 },
+        { "mile": 2.0, "elevationFt": 1750, "label": "Valley floor" },
+        { "mile": 3.5, "elevationFt": 1900, "label": "Ukak River confluence" }
+      ]
+    },
+    {
+      "id": "katmai-ukak-falls",
+      "estimatedTime": "1-2 hrs",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["Ash Valley", "Waterfall"],
+      "trailTip": "This spur continues past the main Ten Thousand Smokes overlook into loose volcanic ash and pumice, so wear sturdy boots with good ankle support.",
+      "didYouKnow": "Ukak Falls tumbles through a gorge cut into the ash-flow deposit rather than solid bedrock.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1900, "label": "Trail junction" },
+        { "mile": 0.7, "elevationFt": 2000 },
+        { "mile": 1.5, "elevationFt": 2100, "label": "Ukak Falls overlook" }
+      ]
+    },
+    {
+      "id": "katmai-river-lake",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Forest Walk", "Bear Country"],
+      "trailTip": "This flat connector between Brooks Camp's waterways sees frequent bear traffic, so travel in a group and check with rangers about recent sightings before setting out.",
+      "didYouKnow": "The trail links Naknek Lake and the Brooks River, tracing part of the same route bears use to move between fishing spots.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
+        { "mile": 0.7, "elevationFt": 80 },
+        { "mile": 1.5, "elevationFt": 100, "label": "Lake outlet" }
+      ]
+    },
+    {
+      "id": "katmai-margot-creek",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Tundra", "Remote"],
+      "trailTip": "This unmarked route sees far fewer visitors than the main Brooks Camp trails, so check in with rangers about your plan and carry a map, compass, and bear spray.",
+      "didYouKnow": "Margot Creek's open tundra makes it a good spot to look for caribou sign well away from the crowds at Brooks Falls.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 60, "label": "Brooks Camp area" },
+        { "mile": 1.2, "elevationFt": 200 },
+        { "mile": 2.5, "elevationFt": 360, "label": "Margot Creek overlook" }
+      ]
+    },
+    {
+      "id": "katmai-brooks-camp-nature",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Interpretive", "Family Friendly"],
+      "trailTip": "A gentle loop near the visitor center — a good warm-up walk while waiting for your mandatory bear orientation session.",
+      "didYouKnow": "Interpretive signs along the loop cover the area's roughly 9,000 years of human history, including ancestral Alutiiq and Sugpiaq use of the Brooks River fishery.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 40, "label": "Visitor Center" },
+        { "mile": 0.25, "elevationFt": 55 },
+        { "mile": 0.5, "elevationFt": 60, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "katmai-fures-cabin",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Historic", "Lakeside", "Remote"],
+      "trailTip": "This out-and-back follows the Naknek Lake shoreline to a preserved 1920s trapper's cabin — plan for a full day and pack extra food since there's no water treatment available at the cabin.",
+      "didYouKnow": "The cabin belonged to trapper Roy Fure, who lived along Naknek Lake into the 1980s; it's one of the last standing structures from Katmai's trapping era.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
+        { "mile": 3.0, "elevationFt": 150 },
+        { "mile": 6.5, "elevationFt": 250, "label": "Fure's Cabin" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "katmai-brown-bear",
+      "scientificName": "Ursus arctos",
+      "bestTimeOfDay": "Morning / Late Afternoon",
+      "bestSeason": "Jul (peak sockeye run at Brooks Falls)",
+      "whereToLook": "Brooks Falls viewing platforms and the Brooks River corridor",
+      "tags": ["Salmon Run", "Mandatory Orientation", "Seasonal Peak"],
+      "viewingTip": "As of September 2026, per NPS.gov, view bears only from the Falls, Riffles, North, or South platforms after completing the required bear orientation, stay at least 50 yards away from any bear, and never carry food onto the platforms or trails.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Individual bears at Brooks Falls are identified and tracked by park biologists, and their weight gains are celebrated each October in the public online 'Fat Bear Week' bracket."
+    },
+    {
+      "id": "katmai-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jul-Sep (salmon run)",
+      "whereToLook": "Tall trees along the Brooks River and the Naknek Lake shoreline",
+      "tags": ["Salmon Run", "Treetop Nester"],
+      "viewingTip": "Scan the tall spruce along the riverbank with binoculars rather than approaching a perched or feeding eagle — crowding one often causes it to flush and lose a meal to competing bears.",
+      "didYouKnow": "Bald eagles gather at Brooks River specifically to scavenge salmon scraps left behind by feeding bears."
+    },
+    {
+      "id": "katmai-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct rut",
+      "whereToLook": "Willow and birch lowlands away from Brooks Camp",
+      "tags": ["Rutting Season", "Wetland Browser"],
+      "viewingTip": "Give a moose at least 25 yards of space at all times, and during the September-October rut increase that distance further, since bulls can be unpredictable — never position yourself between a cow and calf.",
+      "didYouKnow": "Katmai's moose are among the largest in North America, with bulls sometimes exceeding 1,500 pounds."
+    },
+    {
+      "id": "katmai-red-fox",
+      "scientificName": "Vulpes vulpes",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forest edges near Brooks Camp and the ash valley",
+      "tags": ["Opportunistic Forager"],
+      "viewingTip": "Never feed or leave food scraps out for foxes near camp — human-food-conditioned foxes lose their wariness of people and are often euthanized for public safety, so keep all food in bear-resistant storage.",
+      "didYouKnow": "Red foxes at Brooks Camp have learned to trail bears and eagles hoping to scavenge leftover salmon."
+    },
+    {
+      "id": "katmai-sockeye-salmon",
+      "scientificName": "Oncorhynchus nerka",
+      "bestTimeOfDay": "Midday (best light for viewing at the falls)",
+      "bestSeason": "Late Jun-Aug (peak run)",
+      "whereToLook": "Brooks Falls and the Brooks River",
+      "tags": ["Seasonal Peak", "Spawning Run"],
+      "viewingTip": "Watch the run from the designated viewing platforms rather than wading into the river — staying out of the water keeps spawning fish undisturbed and keeps you out of prime bear fishing water.",
+      "didYouKnow": "Roughly a million sockeye salmon pass through the Brooks River system in a typical season on their way to spawn in Naknek Lake's tributaries."
+    },
+    {
+      "id": "katmai-arctic-tern",
+      "scientificName": "Sterna paradisaea",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Jun-Jul nesting",
+      "whereToLook": "Gravel bars and open ground near Brooks Camp",
+      "tags": ["Ground Nester", "Dive Bombs"],
+      "viewingTip": "Give any nesting tern colony a wide berth — if the birds start diving and calling loudly at you, you're too close to a nest, and you should back away immediately rather than push closer for a photo.",
+      "didYouKnow": "Arctic terns fly the longest annual migration of any animal, traveling from pole to pole each year."
+    },
+    {
+      "id": "katmai-caribou",
+      "scientificName": "Rangifer tarandus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Spring/fall migration",
+      "whereToLook": "Open tundra valleys away from Brooks Camp, including near Margot Creek",
+      "tags": ["Migratory", "Tundra"],
+      "viewingTip": "Watch migrating caribou from a ridge or open vantage with binoculars rather than moving toward the herd, which can cause them to change course and waste critical energy reserves.",
+      "didYouKnow": "Katmai's caribou belong to the Northern Alaska Peninsula herd, which has fluctuated from a few thousand to more than 20,000 animals across recorded history."
+    },
+    {
+      "id": "katmai-wolverine",
+      "scientificName": "Gulo gulo",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round (rarely seen)",
+      "whereToLook": "Remote backcountry away from Brooks Camp",
+      "tags": ["Elusive", "Low Density"],
+      "viewingTip": "Wolverines are wide-ranging and easily disturbed — if you spot one, stay put and observe with binoculars rather than following, since chasing a sighting can push this low-density species out of an area entirely.",
+      "didYouKnow": "A single wolverine may patrol a home range of over 100 square miles in Katmai's backcountry."
+    }
+  ]
+}

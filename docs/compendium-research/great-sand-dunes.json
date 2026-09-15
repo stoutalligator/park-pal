@@ -1,0 +1,196 @@
+{
+  "parkId": "great-sand-dunes",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Colorado Public Radio", "mycoloradoparks.com"],
+  "trails": [
+    {
+      "id": "great-sand-dunes-high-dune",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Sept-May; avoid midday June-Aug",
+      "tags": ["No Trail Markers", "Sand Sink"],
+      "trailTip": "There is no marked trail on the dunes themselves, so pick a ridgeline and note landmarks to find your way back; sand surface temperatures can exceed 150°F on summer afternoons, so save this hike for morning, evening, or cooler months and wear closed shoes.",
+      "didYouKnow": "Climbing High Dune is deceptively strenuous because loose sand gives way underfoot with every step, so the round trip typically takes far longer than the short mileage suggests.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Main Dunes Parking Area" },
+        { "mile": 1.0, "elevationFt": 350 },
+        { "mile": 2.5, "elevationFt": 650, "label": "High Dune Summit" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-star-dune",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Sept-May; avoid midday June-Aug",
+      "tags": ["No Trail Markers", "Sand Sink", "Exposure"],
+      "trailTip": "This is a long, shadeless slog through soft sand with no marked route, so carry more water than you think you'll need, start early to avoid scorching afternoon sand temperatures, and turn back if a thunderstorm builds since the open dunefield offers zero lightning shelter.",
+      "didYouKnow": "At roughly 750 feet of prominence, Star Dune is considered the tallest dune in North America, built up where wind patterns converge from multiple directions to pile sand into a star-shaped peak.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Main Dunes Parking Area" },
+        { "mile": 2.0, "elevationFt": 400 },
+        { "mile": 4.0, "elevationFt": 600 },
+        { "mile": 6.0, "elevationFt": 750, "label": "Star Dune Summit" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-mosca-pass",
+      "estimatedTime": "2.5-3.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Forested", "Creek Crossing"],
+      "trailTip": "The trail follows a small creek up into aspen and conifer forest, a cooler alternative to hiking the open dunes, and can be muddy or have minor creek crossings in early season snowmelt.",
+      "didYouKnow": "Mosca Pass was once a route used by Ute travelers and later by settlers moving between the San Luis Valley and the plains to the east, long before the park's dunes-focused trails existed.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Montville/Mosca Pass Trailhead" },
+        { "mile": 1.5, "elevationFt": 700 },
+        { "mile": 3.5, "elevationFt": 1400, "label": "Mosca Pass" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-montville",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round, weather permitting",
+      "tags": ["Family Friendly", "Interpretive"],
+      "trailTip": "This short interpretive loop is a good low-effort option near the visitor center and gains just enough elevation for a nice view back over the dunefield without the soft-sand slog of the dunes themselves.",
+      "didYouKnow": "The trail passes the site of the former town of Montville, a short-lived 1930s settlement built to serve early visitors before the National Monument (the park's original designation) was established.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Montville Trailhead" },
+        { "mile": 0.25, "elevationFt": 60 },
+        { "mile": 0.5, "elevationFt": 100 }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-medano-lake",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "July-Sept",
+      "tags": ["High Clearance Road", "Remote"],
+      "trailTip": "Reaching the trailhead requires a high-clearance, 4-wheel-drive vehicle along Medano Pass Primitive Road, and the trail itself climbs into alpine terrain where afternoon thunderstorms are common, so plan an early start.",
+      "didYouKnow": "Medano Lake sits in an alpine basin beneath the Sangre de Cristo peaks and is one of the few named lakes accessible within the park's mountainous eastern section, in sharp visual contrast to the dunefield below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Medano Pass Trailhead" },
+        { "mile": 2.0, "elevationFt": 700 },
+        { "mile": 4.0, "elevationFt": 1500 },
+        { "mile": 6.0, "elevationFt": 2000, "label": "Medano Lake" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-zapata-falls",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "May-Oct",
+      "tags": ["Creek Crossing", "Family Friendly"],
+      "trailTip": "The final approach to the falls requires wading a short, cold creek through a narrow rock gorge, so wear shoes you don't mind getting wet and use caution on slick rocks, especially during high spring runoff.",
+      "didYouKnow": "Zapata Falls sits just outside the main park boundary on adjacent National Forest land, but is managed as a popular companion stop to a Great Sand Dunes visit.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Zapata Falls Trailhead" },
+        { "mile": 0.3, "elevationFt": 150 },
+        { "mile": 0.6, "elevationFt": 200, "label": "Zapata Falls" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-dunes-overlook",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Forested", "Scenic"],
+      "trailTip": "This shaded trail offers sweeping views across the dunefield without the effort of hiking the sand itself, making it a good cooler-weather or midday alternative in summer.",
+      "didYouKnow": "The overlook here gives one of the best perspectives on how the dunefield is boxed in by the Sangre de Cristo Mountains, a geography that helped trap the windblown sand into the tallest dunes in North America.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Piñon Flats Trailhead" },
+        { "mile": 0.7, "elevationFt": 250 },
+        { "mile": 1.4, "elevationFt": 400, "label": "Dunes Overlook" }
+      ]
+    },
+    {
+      "id": "great-sand-dunes-sand-ramp",
+      "estimatedTime": "6-7 hrs one-way",
+      "bestSeason": "May-Oct",
+      "tags": ["Remote", "Creek Crossing", "Exposure"],
+      "trailTip": "This long trail traces the boundary between dunes and mountains with little shade for much of its length, so carry ample water, and note that Medano Creek crossings along the route may be dry by late summer in low-snowpack years.",
+      "didYouKnow": "The Sand Ramp Trail connects several backcountry campsites and offers one of the only ways to experience the dunefield's edge on foot without committing to a full dune ascent.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Point of No Return Trailhead" },
+        { "mile": 4.0, "elevationFt": 300 },
+        { "mile": 8.0, "elevationFt": 600 },
+        { "mile": 11.0, "elevationFt": 800, "label": "Sand Creek Trail junction" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "great-sand-dunes-kangaroo-rat",
+      "scientificName": "Dipodomys ordii",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round, most active in warmer months",
+      "whereToLook": "Burrows at the base of the dunes, visible mainly by tracks after dark",
+      "tags": ["Nocturnal", "Burrowing"],
+      "viewingTip": "Look for their distinctive tracks and burrow openings in the sand during the day rather than trying to dig one out or shine a light directly into a burrow; a red-filtered flashlight at dusk lets you watch surface activity without disturbing them as much as white light does.",
+      "didYouKnow": "Ord's kangaroo rats never need to drink water — they metabolize all the moisture they need from the dry seeds they eat, an adaptation that lets them thrive on the driest parts of the dunefield."
+    },
+    {
+      "id": "great-sand-dunes-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Grasslands surrounding the dunefield, especially near the park entrance road",
+      "tags": ["Common", "Fast Runner"],
+      "viewingTip": "Watch from the roadside or a pullout with binoculars rather than approaching on foot across open grassland, since pronghorn depend on long, open sightlines and will move off well before you get close.",
+      "didYouKnow": "Pronghorn evolved their remarkable speed to outrun now-extinct American cheetahs, making them far faster than any predator they currently share the San Luis Valley with today."
+    },
+    {
+      "id": "great-sand-dunes-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Sept-Oct rut",
+      "whereToLook": "Forested foothills of the Sangre de Cristo Mountains bordering the dunefield",
+      "tags": ["Rut Season", "Uncommon"],
+      "viewingTip": "Watch and listen for bugling from a distance with binoculars during the fall rut, and keep well back from any bull, since rutting elk can be aggressive toward anyone who approaches too closely.",
+      "didYouKnow": "Elk generally avoid the open dunefield itself, sticking instead to the forested mountain slopes where they can browse and find cover, so most sightings happen well above the sand."
+    },
+    {
+      "id": "great-sand-dunes-tiger-beetle",
+      "scientificName": "Cicindela theatina",
+      "bestTimeOfDay": "Warm daylight hours",
+      "bestSeason": "May-Sept",
+      "whereToLook": "Open sand surfaces throughout the dunefield",
+      "tags": ["Endemic", "Ground Dweller"],
+      "viewingTip": "Watch these fast-moving beetles from where you stand rather than chasing or trying to catch one for a closer look; they are extremely quick and easily overheat if repeatedly flushed into flight on hot sand.",
+      "didYouKnow": "The Great Sand Dunes tiger beetle is found nowhere else on Earth, having evolved in isolation on this single dunefield, and its pale coloring helps it blend almost perfectly with the surrounding sand."
+    },
+    {
+      "id": "great-sand-dunes-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "Foothill forests bordering the dunefield, rarely on the open sand",
+      "tags": ["Rare", "Give Space"],
+      "viewingTip": "Keep at least 100 yards of distance and view with binoculars if one is spotted along a forested trail, and store all food and scented items securely at campsites, since bears here range down from the mountains in search of natural forage.",
+      "didYouKnow": "Black bears occasionally leave distinctive tracks crossing the dunefield at night while moving between foothill forest patches, though they rarely linger on the open sand during the heat of the day."
+    },
+    {
+      "id": "great-sand-dunes-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Grasslands and scrub surrounding the dunefield",
+      "tags": ["Common"],
+      "viewingTip": "Observe from the road or trail with binoculars, particularly around dawn and dusk, and give extra space to any doe that seems to be guarding a bedded fawn nearby.",
+      "didYouKnow": "Mule deer here often bed down in the sparse grasses right at the edge of the dunefield, using the open sightlines to watch for coyotes while staying close to forage."
+    },
+    {
+      "id": "great-sand-dunes-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning, riding thermals",
+      "bestSeason": "Year-round",
+      "whereToLook": "Foothills and ridgelines of the Sangre de Cristo range",
+      "tags": ["Cliff Nester", "Uncommon"],
+      "viewingTip": "Scan the foothill ridgelines with binoculars from a distance, and if a nest is spotted on a cliff, avoid lingering nearby, since golden eagles can be disturbed off a nest by prolonged close observation.",
+      "didYouKnow": "Golden eagles here often hunt over the grasslands bordering the dunes, using rising thermals off the mountain slopes to soar and scan for prairie dogs and other small mammals below."
+    },
+    {
+      "id": "great-sand-dunes-bighorn-sheep",
+      "scientificName": "Ovis canadensis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec rut, otherwise summer high country",
+      "whereToLook": "High rocky terrain of the Sangre de Cristo Mountains bordering the park",
+      "tags": ["Rut Season", "Rare"],
+      "viewingTip": "View from a distance with binoculars or a spotting scope from established trails rather than scrambling toward them on steep terrain, and give rutting rams in late fall extra space, since males can be unpredictable while competing for mates.",
+      "didYouKnow": "Bighorn sheep here stay almost entirely in the high mountains bordering the park and are rarely if ever seen on the dunefield itself, making a sighting a genuinely uncommon highlight of a mountain hike."
+    }
+  ]
+}

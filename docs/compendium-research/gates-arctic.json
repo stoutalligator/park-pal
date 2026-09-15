@@ -1,0 +1,202 @@
+{
+  "parkId": "gates-arctic",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (gaar)", "NPS Backcountry Trip Plan - GAAR", "Alaska Public Lands Information Centers"],
+  "trails": [
+    {
+      "id": "gates-arctic-arrigetch-peaks",
+      "estimatedTime": "3-5 days round trip",
+      "bestSeason": "Late Jun-early Sep",
+      "tags": ["No Maintained Trail", "River Fords", "Fly-In Access", "Advanced Navigation"],
+      "trailTip": "This is a cross-country tundra and creek-bottom route with no trail, signage, or bridges — a topo map, compass or GPS, and river-fording experience are required, and most visitors fly in by air taxi from Bettles or Coldfoot to the Circle Lake or Takahula Lake area first.",
+      "didYouKnow": "The Arrigetch Peaks' granite spires are sacred to local Iñupiat and Nunamiut people; the name roughly translates to \"fingers of the hand outstretched.\"",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Lakeshore put-in" },
+        { "mile": 3, "elevationFt": 600 },
+        { "mile": 7, "elevationFt": 1400, "label": "Arrigetch Creek valley" },
+        { "mile": 10, "elevationFt": 2100 },
+        { "mile": 12, "elevationFt": 2500, "label": "Base of the spires" }
+      ]
+    },
+    {
+      "id": "gates-arctic-anaktuvuk-pass",
+      "estimatedTime": "2-3 days round trip",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["No Maintained Trail", "Tundra Travel", "Cultural Route"],
+      "trailTip": "Follow the same low-elevation pass corridor the Nunamiut have used for generations to cross the Brooks Range — expect tussock tundra, no cell coverage, and to plan your own route since there is no marked path.",
+      "didYouKnow": "Anaktuvuk Pass is still home to the Nunamiut, the last nomadic Iñupiat caribou-hunting people in North America, and the village sits within the pass itself.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2200, "label": "Anaktuvuk Pass village" },
+        { "mile": 3, "elevationFt": 2600 },
+        { "mile": 6, "elevationFt": 3000, "label": "Pass summit" },
+        { "mile": 8, "elevationFt": 2700 }
+      ]
+    },
+    {
+      "id": "gates-arctic-alatna-river",
+      "estimatedTime": "5-8 days (packraft/float route)",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["Wild & Scenic River", "Packrafting", "No Maintained Trail"],
+      "trailTip": "Most travelers cover this corridor by packraft or canoe rather than walking it end to end; anyone hiking sections along the gravel bars should still watch for braided channel crossings and sweepers, and carry a satellite communicator since there is no cell service anywhere in the park.",
+      "didYouKnow": "The Alatna is a federally designated Wild and Scenic River that drains the western Arrigetch Peaks before joining the Koyukuk River.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 700, "label": "Circle Lake put-in" },
+        { "mile": 5, "elevationFt": 1200, "label": "High portage" },
+        { "mile": 10, "elevationFt": 900 },
+        { "mile": 15, "elevationFt": 700, "label": "Takahula Lake" }
+      ]
+    },
+    {
+      "id": "gates-arctic-circle-lake",
+      "estimatedTime": "1-2 days round trip",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["No Maintained Trail", "Tundra Travel", "Fly-In Access"],
+      "trailTip": "A cross-country tundra walk from the Circle Lake air-taxi drop point; the open tundra makes route-finding easier than in brushy valleys, but sudden weather changes and grizzly encounters are both real considerations at this elevation.",
+      "didYouKnow": "Circle Lake is a common float-plane access point precisely because its open shoreline offers one of the few reliable landing spots deep in the central Brooks Range.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1800, "label": "Circle Lake" },
+        { "mile": 2, "elevationFt": 2400 },
+        { "mile": 4, "elevationFt": 2900 },
+        { "mile": 6, "elevationFt": 3000, "label": "Alpine lake basin" }
+      ]
+    },
+    {
+      "id": "gates-arctic-summit-lake",
+      "estimatedTime": "2-3 days round trip",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["No Maintained Trail", "Tundra Travel", "Advanced Navigation"],
+      "trailTip": "This unmarked route climbs through the park's northern valleys toward the Arctic Divide; carry topo maps and be prepared to reroute around brush and creek fords that a map alone won't show.",
+      "didYouKnow": "Routes like this one cross the Arctic Divide, the line separating rivers that flow north to the Arctic Ocean from those flowing south to the Yukon.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1500, "label": "Valley floor" },
+        { "mile": 4, "elevationFt": 2100 },
+        { "mile": 7, "elevationFt": 2400 },
+        { "mile": 10, "elevationFt": 2500, "label": "Summit Lake" }
+      ]
+    },
+    {
+      "id": "gates-arctic-noatak-river",
+      "estimatedTime": "7-14 days (packraft/float route)",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["Wild & Scenic River", "Packrafting", "No Maintained Trail"],
+      "trailTip": "The Noatak corridor is almost always traveled by packraft or canoe rather than on foot end-to-end; anyone hiking gravel bars or side valleys should still carry bear-proof food storage and expect zero resupply options for the entire route.",
+      "didYouKnow": "The Noatak River drains one of the largest untouched river basins in North America and is a designated Wild and Scenic River for its entire length within the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1200, "label": "Headwaters put-in" },
+        { "mile": 7, "elevationFt": 1700, "label": "High portage" },
+        { "mile": 14, "elevationFt": 1400 },
+        { "mile": 20, "elevationFt": 1200, "label": "Lower river corridor" }
+      ]
+    },
+    {
+      "id": "gates-arctic-mount-igikpak",
+      "estimatedTime": "4-6 days round trip",
+      "bestSeason": "Late Jun-Aug",
+      "tags": ["No Maintained Trail", "Glacier Travel", "Advanced Navigation"],
+      "trailTip": "Approaching the park's tallest peak means cross-country travel over talus, brush, and potentially glaciated terrain near the summit — this route is for experienced mountaineers with glacier-travel skills, not a casual backcountry hike.",
+      "didYouKnow": "At 8,276 feet, Mount Igikpak is the highest peak in the central Brooks Range and holds one of the range's few remaining glaciers.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1800, "label": "Valley approach" },
+        { "mile": 5, "elevationFt": 3200 },
+        { "mile": 10, "elevationFt": 4800 },
+        { "mile": 15, "elevationFt": 5800, "label": "Upper glacier basin" }
+      ]
+    },
+    {
+      "id": "gates-arctic-walker-lake",
+      "estimatedTime": "2-4 days round trip",
+      "bestSeason": "Jun-early Sep",
+      "tags": ["No Maintained Trail", "Fly-In Access", "Tundra Travel"],
+      "trailTip": "Most visitors fly directly onto Walker Lake and day-hike the surrounding tundra ridges from camp rather than walking a set route in; carry a bear-resistant canister since this is an established camping area with routine bear activity.",
+      "didYouKnow": "Walker Lake sits at the southern boundary of the park and marks the transition from the alpine Brooks Range to the boreal forest of interior Alaska.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 800, "label": "Walker Lake shore" },
+        { "mile": 3, "elevationFt": 1300 },
+        { "mile": 6, "elevationFt": 1500 },
+        { "mile": 10, "elevationFt": 1600, "label": "Ridge overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "gates-arctic-caribou",
+      "scientificName": "Rangifer tarandus",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Apr-May and Aug-Sep (migration)",
+      "whereToLook": "River valleys and mountain passes such as Anaktuvuk Pass, along Western Arctic Herd migration corridors",
+      "tags": ["Migratory Herd", "Tundra"],
+      "viewingTip": "Watch migrating herds from a distance with binoculars or a spotting scope and avoid positioning yourself in a narrow pass or river crossing where your presence could split or redirect the herd.",
+      "didYouKnow": "The Western Arctic Herd that passes through the park has historically numbered in the hundreds of thousands, one of the largest caribou herds in the world."
+    },
+    {
+      "id": "gates-arctic-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Open tundra slopes, river bars, and berry patches throughout the Brooks Range",
+      "tags": ["Bear Country"],
+      "viewingTip": "Keep at least 300 feet (about 100 yards) between yourself and any grizzly, travel in a group while making noise to avoid surprise encounters, carry bear spray, and never approach a berry patch, carcass, or suspected den site a bear is using.",
+      "didYouKnow": "Brooks Range grizzlies have one of the lowest population densities and slowest reproductive rates of any grizzly population in North America, a consequence of the short arctic growing season."
+    },
+    {
+      "id": "gates-arctic-dall-sheep",
+      "scientificName": "Ovis dalli",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Steep rocky slopes and cliff bands throughout the Brooks Range",
+      "tags": ["Cliff Dweller"],
+      "viewingTip": "Glass distant slopes with binoculars or a spotting scope rather than climbing toward a band of sheep, especially in late spring and early summer when ewes have young lambs on steep terrain.",
+      "didYouKnow": "Dall sheep are the only wild, pure-white sheep species in the world and rely on remote cliffs to escape wolves and bears."
+    },
+    {
+      "id": "gates-arctic-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Remote river valleys and tundra throughout the park",
+      "tags": ["Elusive", "Den Sensitive"],
+      "viewingTip": "If you spot a wolf or a den site, observe from far off with binoculars and move away rather than lingering — packs here are among the least human-habituated in North America and disturbance at a den can cause abandonment.",
+      "didYouKnow": "Gates of the Arctic protects some of the last wolf populations in North America that have never been hunted, trapped, or persecuted by humans in the area they occupy."
+    },
+    {
+      "id": "gates-arctic-ground-squirrel",
+      "scientificName": "Urocitellus parryii",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Jun-Aug",
+      "whereToLook": "Well-drained tundra slopes and esker ridges throughout the park",
+      "tags": ["Burrowing", "Common"],
+      "viewingTip": "Watch and photograph squirrels from a comfortable distance with a zoom lens rather than approaching a burrow entrance, and never feed them — human food can make wildlife sick and bolder around people.",
+      "didYouKnow": "Arctic ground squirrels hibernate up to eight months a year and can supercool their body temperature below freezing without freezing solid, the most extreme mammalian hibernation known."
+    },
+    {
+      "id": "gates-arctic-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Jun-Sep (rut peaks late Sep)",
+      "whereToLook": "Willow thickets in remote river valleys",
+      "tags": ["Rutting Season"],
+      "viewingTip": "Give moose at least 25 yards of space and much more during the fall rut, when bulls can be unpredictable and aggressive — use binoculars rather than closing the distance for a photo.",
+      "didYouKnow": "Moose in interior Alaska are among the largest in the world, with bulls sometimes exceeding 1,600 pounds."
+    },
+    {
+      "id": "gates-arctic-arctic-fox",
+      "scientificName": "Vulpes lagopus",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Open tundra, often trailing larger predators for scraps",
+      "tags": ["Den Sensitive"],
+      "viewingTip": "Enjoy sightings from a distance and never feed a fox or leave food scraps behind — foxes that lose their fear of people around camps are more likely to be killed by other predators or hit by aircraft, and never approach a den to see pups.",
+      "didYouKnow": "Arctic fox fur changes from brown-gray in summer to pure white in winter, one of the most complete seasonal camouflage changes of any mammal."
+    },
+    {
+      "id": "gates-arctic-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Jun-Aug (nesting)",
+      "whereToLook": "Remote cliffs throughout the Brooks Range",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Scan cliff bands with binoculars from below rather than climbing toward a nest ledge, and keep well back from any nest site you spot so incubating or brooding adults aren't flushed off eggs or chicks.",
+      "didYouKnow": "Golden eagles nesting in the Brooks Range migrate remarkable distances each fall, with some tracked individuals wintering as far south as the Mexican border."
+    }
+  ]
+}

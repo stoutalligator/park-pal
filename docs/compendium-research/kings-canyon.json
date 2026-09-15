@@ -1,0 +1,198 @@
+{
+  "parkId": "kings-canyon",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Recreation.gov", "Campflare"],
+  "trails": [
+    {
+      "id": "kings-canyon-zumwalt-meadow",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "May-Oct (Kings Canyon Scenic Byway closes seasonally)",
+      "tags": ["Meadow", "Family Friendly", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the Kings Canyon Scenic Byway (Highway 180) that accesses this trailhead closes for winter, typically from mid-November through late April depending on snowpack, so confirm current road status before planning a visit outside summer.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The meadow sits at the base of towering granite walls including Grand Sentinel and North Dome, among the tallest canyon walls in the Sierra Nevada.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5000, "label": "Trailhead" },
+        { "mile": 0.75, "elevationFt": 5020, "label": "Meadow boardwalk" },
+        { "mile": 1.5, "elevationFt": 5000, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "kings-canyon-mist-falls",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Waterfall", "Canyon Floor"],
+      "trailTip": "Peak snowmelt in late spring makes Mist Falls dramatically fuller but also soaks the canyon-floor trail with heavy spray, so bring a light rain layer even on a sunny day.",
+      "didYouKnow": "Mist Falls is one of the largest waterfalls in the Sierra Nevada by volume, fed by the South Fork Kings River.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5040, "label": "Road's End" },
+        { "mile": 2.5, "elevationFt": 5250 },
+        { "mile": 5.5, "elevationFt": 5550 },
+        { "mile": 8.0, "elevationFt": 5840, "label": "Mist Falls" }
+      ]
+    },
+    {
+      "id": "kings-canyon-general-grant",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round (weather permitting)",
+      "tags": ["Paved", "Sequoia Grove", "Family Friendly"],
+      "trailTip": "This paved loop is accessible in most weather, but Grant Grove sits at higher elevation than the valley floor, so expect snow on the ground in winter months.",
+      "didYouKnow": "The General Grant Tree was declared the 'Nation's Christmas Tree' in 1926 and is the only living object designated a national shrine.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6580, "label": "Parking area" },
+        { "mile": 0.3, "elevationFt": 6600, "label": "General Grant Tree" },
+        { "mile": 0.6, "elevationFt": 6580, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "kings-canyon-rae-lakes-loop",
+      "estimatedTime": "4-6 days",
+      "bestSeason": "Jul-Sep (high passes hold snow into early summer)",
+      "tags": ["Permit Required", "Bear Canister Required", "Multi-Day"],
+      "trailTip": "As of September 2026, per NPS.gov, this loop requires a Sequoia & Kings Canyon Wilderness Permit — reserved on Recreation.gov during the May 22-September 26, 2026 quota season for a $15 group fee plus $5 per person, or self-issued free outside that window — plus a hard-sided bear canister for every overnight party, with permits picked up in person at the Road's End Permit Station.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Total mileage and elevation gain vary by a few miles depending on the exact trailhead used, since the loop can be started from Road's End or the Copper Creek/Bubbs Creek approach.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5040, "label": "Road's End" },
+        { "mile": 12, "elevationFt": 8500 },
+        { "mile": 20, "elevationFt": 11740, "label": "Glen Pass" },
+        { "mile": 30, "elevationFt": 9200, "label": "Rae Lakes basin" },
+        { "mile": 41.4, "elevationFt": 5040, "label": "Road's End" }
+      ]
+    },
+    {
+      "id": "kings-canyon-don-cecil",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Historic", "Fire Lookout", "Steep"],
+      "trailTip": "This is one of the steepest maintained trails in the park, gaining roughly 500 feet per mile, so start early to avoid the worst afternoon heat on the exposed switchbacks.",
+      "didYouKnow": "The trail climbs to the historic Lookout Peak fire lookout site, offering one of the best panoramic views of Kings Canyon itself.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2200, "label": "Canyon floor trailhead" },
+        { "mile": 4, "elevationFt": 4200 },
+        { "mile": 8, "elevationFt": 6200, "label": "Lookout Peak" }
+      ]
+    },
+    {
+      "id": "kings-canyon-buena-vista-peak",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Granite Summit", "Views"],
+      "trailTip": "A short but real climb over open granite slabs — sun protection is worth it since there's little shade on the summit approach.",
+      "didYouKnow": "The summit gives a rare view across both the Kings Canyon high country and the Sequoia National Forest to the west.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7600, "label": "Trailhead" },
+        { "mile": 0.95, "elevationFt": 8100, "label": "Buena Vista Peak" },
+        { "mile": 1.9, "elevationFt": 7600, "label": "Trailhead return" }
+      ]
+    },
+    {
+      "id": "kings-canyon-panoramic-point",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "May-Oct (access road may close for winter)",
+      "tags": ["Paved", "Short Climb", "Views"],
+      "trailTip": "The short paved path from the parking area gains just enough elevation for a wide view of the Monarch Divide — a good option if time or mobility is limited.",
+      "didYouKnow": "On a clear day, the view from Panoramic Point extends to the Sierra Crest, including a distant look at the Black Divide.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7420, "label": "Parking area" },
+        { "mile": 0.15, "elevationFt": 7500 },
+        { "mile": 0.3, "elevationFt": 7520, "label": "Panoramic Point" }
+      ]
+    },
+    {
+      "id": "kings-canyon-lookout-peak",
+      "estimatedTime": "7-9 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Remote", "Fire Lookout", "Steep"],
+      "trailTip": "This is a longer, quieter alternative approach to the same Lookout Peak site as the Don Cecil Trail — carry more water than you think you'll need, since reliable sources are limited along the ridge.",
+      "didYouKnow": "The former lookout tower atop the peak was used for wildfire detection across the Kings Canyon backcountry for much of the 20th century.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2200, "label": "Trailhead" },
+        { "mile": 5, "elevationFt": 4500 },
+        { "mile": 10.6, "elevationFt": 6200, "label": "Lookout Peak" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "kings-canyon-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov (active season)",
+      "whereToLook": "Forested canyon slopes and meadows",
+      "tags": ["Bear Country"],
+      "viewingTip": "Store all food and scented items in a bear canister or the metal boxes provided at trailheads, and if a bear approaches camp, make noise and hold your ground from a distance rather than running.",
+      "didYouKnow": "Nearly all of Kings Canyon's bears are black bears, but many have brown or cinnamon-colored coats, which is why coat color alone isn't a reliable way to identify the species."
+    },
+    {
+      "id": "kings-canyon-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Zumwalt Meadow and canyon-floor trails",
+      "tags": ["Common"],
+      "viewingTip": "Watch grazing deer from the trail or meadow boardwalk rather than moving closer for a photo — does with fawns in late spring are especially prone to bolting if approached.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears, which rotate independently to pinpoint sound."
+    },
+    {
+      "id": "kings-canyon-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Mar-Jul nesting",
+      "whereToLook": "High granite cliffs above the canyon",
+      "tags": ["Cliff Nester", "Nesting Season"],
+      "viewingTip": "Watch nesting falcons from a distance with binoculars or a spotting scope rather than climbing toward a cliff ledge — peregrines will abandon a nest site if repeatedly disturbed during spring incubation.",
+      "didYouKnow": "A diving peregrine falcon is the fastest animal on Earth, reaching speeds over 200 mph."
+    },
+    {
+      "id": "kings-canyon-marmot",
+      "scientificName": "Marmota flaviventris",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "May-Sep (hibernates in winter)",
+      "whereToLook": "Granite boulder fields in the high country",
+      "tags": ["Common", "High Country"],
+      "viewingTip": "Enjoy marmots sunning on boulders from a respectful distance — feeding them, even 'just a little,' makes them aggressive toward the next hiker and can make them sick.",
+      "didYouKnow": "Yellow-bellied marmots spend up to 80% of their lives hibernating underground."
+    },
+    {
+      "id": "kings-canyon-pika",
+      "scientificName": "Ochotona princeps",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Talus slopes in the park's alpine zones",
+      "tags": ["Climate Sensitive", "Talus Dweller"],
+      "viewingTip": "Pikas are extremely heat-sensitive, so observe them from the trail rather than climbing into talus fields, which also protects fragile alpine vegetation.",
+      "didYouKnow": "Pikas don't hibernate — instead they spend summer gathering 'haypiles' of dried vegetation to survive the winter under the snow."
+    },
+    {
+      "id": "kings-canyon-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Remote high country, rarely seen",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "If you encounter a mountain lion, keep a safe distance, do not run, make yourself look large, and give the animal a clear path to leave — never approach for a closer look or photo.",
+      "didYouKnow": "Mountain lions in the Sierra Nevada can range across territories of 100 square miles or more."
+    },
+    {
+      "id": "kings-canyon-douglas-squirrel",
+      "scientificName": "Tamiasciurus douglasii",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Giant sequoia groves including Grant Grove",
+      "tags": ["Common", "Sequoia Grove"],
+      "viewingTip": "Watch these energetic squirrels from a distance in the sequoia groves — never offer food, which is both illegal in the park and unhealthy for the animal.",
+      "didYouKnow": "Douglas squirrels help giant sequoias reproduce by harvesting and opening cones, releasing seeds onto the forest floor."
+    },
+    {
+      "id": "kings-canyon-bighorn-sheep",
+      "scientificName": "Ovis canadensis sierrae",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec rut; otherwise summer high country",
+      "whereToLook": "Remote alpine cliffs and ridgelines",
+      "tags": ["Endangered", "Cliff Dweller"],
+      "viewingTip": "Sierra Nevada bighorn sheep are federally endangered and found only in a handful of remote high-elevation herds — if you spot one, view it through binoculars from well outside its escape terrain and never approach, especially near steep cliffs where a startled sheep could fall.",
+      "didYouKnow": "Sierra Nevada bighorn sheep declined to fewer than 100 animals by the 1990s before a reintroduction and protection program brought them back from the brink."
+    }
+  ]
+}

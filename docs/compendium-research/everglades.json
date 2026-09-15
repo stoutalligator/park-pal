@@ -1,0 +1,217 @@
+{
+  "parkId": "everglades",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Florida Hikes", "AllTrails", "Recreation.gov"],
+  "trails": [
+    {
+      "id": "everglades-anhinga",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Dec-Apr",
+      "tags": ["Boardwalk", "Alligator Viewing", "Wheelchair Accessible"],
+      "trailTip": "Alligators often rest right beside or under the boardwalk in the dry season — stay on the boardwalk, keep a respectful distance, and never feed them; it's illegal and dangerous.",
+      "didYouKnow": "The boardwalk sits atop a natural alligator hole that stays wet even during the driest months, concentrating wildlife nearby.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 5, "label": "Alligator Overlook" },
+        { "mile": 0.8, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-shark-valley",
+      "estimatedTime": "3 hrs (bike) / full day (walk)",
+      "bestSeason": "Dec-Apr",
+      "tags": ["Paved Loop", "Tram Tour Available", "Long Distance"],
+      "trailTip": "Most visitors bike or take the tram rather than walk the full 15 miles; there's no shade on the loop, so bring sun protection and plenty of water regardless of how you cover it.",
+      "didYouKnow": "Despite its name, no sharks live in Shark Valley — it's named for the sawgrass slough that drains toward the historic Shark River.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 7.5, "elevationFt": 10, "label": "Observation Tower" },
+        { "mile": 15.0, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-pa-hay-okee",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Wheelchair Accessible"],
+      "trailTip": "The elevated boardwalk offers one of the best sunrise or sunset views of the sawgrass prairie in the park, with little foot traffic to compete for the view.",
+      "didYouKnow": "Pa-hay-okee means 'grassy waters' in Seminole, the same phrase behind the Everglades' nickname, the 'River of Grass.'",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 5, "label": "Overlook" },
+        { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-gumbo-limbo",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Shaded", "Hardwood Hammock"],
+      "trailTip": "This shaded hammock loop is a good midday option when other, more exposed trails feel hot.",
+      "didYouKnow": "The trail is named for the gumbo limbo tree, nicknamed the 'tourist tree' for its reddish, peeling bark.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-west-lake",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Mangrove Forest"],
+      "trailTip": "Mosquitoes can be intense here, especially in wet season (roughly May-Oct), so bring repellent.",
+      "didYouKnow": "The boardwalk winds through one of the largest mangrove forests in the Western Hemisphere.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 5, "label": "West Lake Overlook" },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-mahogany-hammock",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Hardwood Hammock"],
+      "trailTip": "Keep an eye out for barred owls and tree snails in the dense canopy along this shaded loop.",
+      "didYouKnow": "The hammock shelters the largest living mahogany tree in the United States.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-pinelands",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Pine Rockland", "Fire-Adapted Habitat"],
+      "trailTip": "You may notice charred bark on some pines — prescribed burns here mimic the natural fire cycle this habitat depends on.",
+      "didYouKnow": "Pine rockland habitat depends on periodic fire to clear underbrush and let pine seedlings take root.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-long-pine-key",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Nov-Apr",
+      "tags": ["Pine Rockland", "Exposed", "Bicycle Friendly"],
+      "trailTip": "The open pineland offers little shade, so this trail is best hiked or biked in cooler months and earlier in the day.",
+      "didYouKnow": "The pine rockland here is one of the most fire-dependent and imperiled habitats in Florida.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 10 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "everglades-coastal-prairie",
+      "estimatedTime": "1 day round trip (day hike) / overnight backcountry trip",
+      "bestSeason": "Nov-Apr",
+      "tags": ["Backcountry", "Permit Required", "Remote"],
+      "trailTip": "As of September 2026, per NPS.gov, an overnight backcountry permit from the Flamingo area (reservable on recreation.gov up to 90 days ahead) is required to camp at the Coastal Prairie site, though a day hike without camping only needs the standard park entrance fee.",
+      "didYouKnow": "The trail follows an old cotton-plantation-era road bed through a landscape shaped by salt spray and periodic hurricanes.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Clubhouse Beach Trailhead" },
+        { "mile": 3.5, "elevationFt": 5 },
+        { "mile": 7.5, "elevationFt": 0, "label": "Coastal Prairie Campsite" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "everglades-alligator",
+      "scientificName": "Alligator mississippiensis",
+      "bestTimeOfDay": "Morning / Midday",
+      "bestSeason": "Dec-Apr",
+      "whereToLook": "Anhinga Trail boardwalk and Shark Valley canals",
+      "tags": ["Common Sighting", "Dry Season Concentration"],
+      "viewingTip": "Stay on the boardwalk and view alligators from several feet above the water — never feed them (it's illegal and makes them dangerously bold around people) and keep small children and pets well back from the water's edge at all times.",
+      "didYouKnow": "Alligators concentrate in deeper 'gator holes' during the winter dry season, which is also when they're easiest for visitors to spot."
+    },
+    {
+      "id": "everglades-crocodile",
+      "scientificName": "Crocodylus acutus",
+      "bestTimeOfDay": "Early Morning",
+      "bestSeason": "Apr-Jul (nesting)",
+      "whereToLook": "Brackish coastal waters near the Flamingo marina",
+      "tags": ["Nesting Species", "Protected Species"],
+      "viewingTip": "American crocodiles are shier than alligators and nest in coastal sand or marl mounds each spring — watch from the Flamingo marina or a boat with binoculars, and never approach a nesting mound or a basking crocodile for a closer photo.",
+      "didYouKnow": "Everglades National Park is one of the only places on Earth where American alligators and American crocodiles live side by side."
+    },
+    {
+      "id": "everglades-florida-panther",
+      "scientificName": "Puma concolor coryi",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Pine rockland and hardwood hammock edges near Long Pine Key, most often only as tracks",
+      "tags": ["Endangered Species", "Elusive"],
+      "viewingTip": "A Florida panther sighting is extremely rare and usually just tracks in soft ground — if you're fortunate enough to see one, stay in your vehicle or keep well back, make noise to avoid surprising it, and never approach, corner, or try to follow one of the fewer than 200 individuals left in the wild.",
+      "didYouKnow": "The Florida panther is the official state animal, and its population has slowly rebounded from fewer than 30 individuals in the 1990s."
+    },
+    {
+      "id": "everglades-roseate-spoonbill",
+      "scientificName": "Platalea ajaja",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Apr",
+      "whereToLook": "Coastal marshes near Eco Pond and Mrazek Pond",
+      "tags": ["Wading Bird"],
+      "viewingTip": "Spoonbills feed by sweeping their bills through shallow water — watch from a pond overlook or road shoulder with binoculars rather than wading in to get closer, since flushing a feeding flock wastes energy the birds need for the season.",
+      "didYouKnow": "A roseate spoonbill's pink color comes from pigments in the crustaceans it eats, much like a flamingo's."
+    },
+    {
+      "id": "everglades-manatee",
+      "scientificName": "Trichechus manatus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Nov-Mar",
+      "whereToLook": "Flamingo marina and canals near the coast",
+      "tags": ["Protected Species"],
+      "viewingTip": "Watch manatees surface to breathe from a dock or the marina, approaching slowly and quietly if you're in a boat — touching, feeding, or chasing a manatee is illegal and can separate calves from mothers or injure the animal.",
+      "didYouKnow": "Manatees have no natural predators as adults but are frequently injured by boat strikes, which is why speed zones protect them near the coast."
+    },
+    {
+      "id": "everglades-wood-stork",
+      "scientificName": "Mycteria americana",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Dec-Apr",
+      "whereToLook": "Cypress domes and wading-bird rookeries near Pa-hay-okee and Mrazek Pond",
+      "tags": ["Nesting Colony", "Endangered Species"],
+      "viewingTip": "Wood storks nest colonially in cypress domes — view any rookery from a boardwalk or established overlook with binoculars rather than walking off-trail toward the trees, since flushing nesting adults can expose eggs and chicks to sun and predators.",
+      "didYouKnow": "Wood storks time their nesting to the Everglades' dry season, when shrinking water levels concentrate fish into easy-to-catch pools."
+    },
+    {
+      "id": "everglades-anhinga",
+      "scientificName": "Anhinga anhinga",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Perched with wings spread to dry along the Anhinga Trail boardwalk",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Anhingas often perch at arm's length from the boardwalk railing — enjoy the close view on the bird's own terms, but never reach out, corner it, or crowd around a single bird, since these are wild animals habituated to the boardwalk, not tame ones.",
+      "didYouKnow": "Anhingas lack the oil glands most waterbirds use to waterproof their feathers, which is why they must spread their wings to dry after diving."
+    },
+    {
+      "id": "everglades-burmese-python",
+      "scientificName": "Python bivittatus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Roadsides and levees, especially near Long Pine Key, at dawn or after rain",
+      "tags": ["Invasive Species"],
+      "viewingTip": "Burmese pythons are a destructive invasive species, but they should still only be reported to park staff or the official python removal program rather than approached or handled by visitors — large constrictors can injure someone who tries to grab or corner them.",
+      "didYouKnow": "Burmese pythons, likely introduced through the exotic pet trade, have caused steep declines in the park's rabbit, raccoon, and deer populations."
+    },
+    {
+      "id": "everglades-snail-kite",
+      "scientificName": "Rostrhamus sociabilis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Sawgrass marshes near Shark Valley and the Pa-hay-okee overlook, hunting apple snails",
+      "tags": ["Endangered Species"],
+      "viewingTip": "Snail kites hunt low over open marsh for apple snails — watch their distinctive flight with binoculars from the road or a boardwalk rather than wading into the marsh to get closer, which disturbs both the birds and the wetland habitat.",
+      "didYouKnow": "The snail kite's hooked bill is precisely shaped to extract apple snails from their shells, a food source it depends on almost exclusively."
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "parkId": "haleakala",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Recreation.gov", "AllTrails", "Hawaii Guide"],
+  "trails": [
+    {
+      "id": "haleakala-sliding-sands",
+      "estimatedTime": "4-6 hrs (partial), full crossing longer",
+      "bestSeason": "Year-round (weather dependent)",
+      "tags": ["High Altitude", "No Water", "Permit Required (Summit Access)"],
+      "trailTip": "As of September 2026, per NPS.gov and Recreation.gov, entering the Summit District between 3-7am (to catch sunrise from the crater rim) requires a $1 vehicle reservation booked in advance; the trail itself starts above 9,700 feet with no water or shade, so budget extra time for altitude and carry more water than a similar sea-level hike.",
+      "didYouKnow": "The trail's Hawaiian name, Keonehe'ehe'e, means \"sliding sands,\" describing the loose cinder slope that makes the descent easy but the climb back out strenuous.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 9740, "label": "Summit Visitor Center" },
+        { "mile": 2.5, "elevationFt": 8500 },
+        { "mile": 5.5, "elevationFt": 7000, "label": "Crater Floor" },
+        { "mile": 11.0, "elevationFt": 6940, "label": "Kapalaoa Cabin Area" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "haleakala-pipiwai",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Bamboo Forest", "Stream Crossing"],
+      "trailTip": "Flash flooding can close stream crossings with little warning after heavy rain in the Kipahulu district, so check current conditions at the visitor center and turn back if water is rising quickly.",
+      "didYouKnow": "The trail passes through a dense, otherworldly bamboo forest before reaching Waimoku Falls, a 400-foot cascade at the trail's end.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kipahulu Trailhead" },
+        { "mile": 1.0, "elevationFt": 300, "label": "Banyan Tree" },
+        { "mile": 1.6, "elevationFt": 500, "label": "Bamboo Forest" },
+        { "mile": 2.0, "elevationFt": 800, "label": "Waimoku Falls" }
+      ]
+    },
+    {
+      "id": "haleakala-halemauu",
+      "estimatedTime": "5-6 hrs (to valley floor and back)",
+      "bestSeason": "Year-round (weather dependent)",
+      "tags": ["Exposure", "High Altitude"],
+      "trailTip": "The switchbacks along the crater wall are cut into a steep cliff face with minimal guardrails and frequent high wind or fog, so turn back if visibility drops and avoid the edge in wet conditions.",
+      "didYouKnow": "Halemau'u means \"house of the fern,\" and the trailhead sits in a grassy plateau before dropping dramatically through cloud forest and cliff switchbacks into the crater.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 8000, "label": "Halemauu Trailhead" },
+        { "mile": 1.5, "elevationFt": 7300, "label": "Crater Wall Switchbacks" },
+        { "mile": 3.7, "elevationFt": 6600, "label": "Crater Floor" }
+      ]
+    },
+    {
+      "id": "haleakala-hosmer-grove",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Birding"],
+      "trailTip": "Arrive early morning for the best chance at native forest birds, and stay on the loop path since surrounding understory is being actively restored with native plantings.",
+      "didYouKnow": "Hosmer Grove was planted in 1910 as an experimental timber plantation of non-native conifers, but the surrounding native shrubland now hosts several endangered Hawaiian honeycreepers.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 100, "label": "Loop Return" }
+      ]
+    },
+    {
+      "id": "haleakala-kuloa-point",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Coastal", "No Swimming Advisory"],
+      "trailTip": "Swimming in the Pools of 'Ohe'o is periodically closed after heavy rain due to flash-flood risk and strong currents; check posted signage before entering the water.",
+      "didYouKnow": "The Pools of 'Ohe'o (once nicknamed the \"Seven Sacred Pools\") are a series of stream pools cascading toward the ocean near Kipahulu.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 30, "label": "Loop Return" }
+      ]
+    },
+    {
+      "id": "haleakala-supply-trail",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Year-round (weather dependent)",
+      "tags": ["High Altitude", "Remote"],
+      "trailTip": "This connector sees far less traffic than Sliding Sands or Halemauu, so carry a map or GPS track, tell someone your plan, and expect no cell service across the crater floor.",
+      "didYouKnow": "The Supply Trail was historically used to pack supplies to the crater's backcountry cabins by mule before modern trail networks were established.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6600, "label": "Crater Floor Junction" },
+        { "mile": 2.0, "elevationFt": 7200 },
+        { "mile": 4.2, "elevationFt": 8100, "label": "Halemauu Trail Junction" }
+      ]
+    },
+    {
+      "id": "haleakala-skyline-trail",
+      "estimatedTime": "4-6 hrs (one-way, requires shuttle/car spot)",
+      "bestSeason": "Year-round (weather dependent, road access seasonal)",
+      "tags": ["Exposure", "High Wind", "Remote"],
+      "trailTip": "This exposed rift-zone descent has no shade, water, or reliable phone service, and high summit winds can be dangerous underfoot on the loose cinder, so check the forecast and road status before attempting it.",
+      "didYouKnow": "The Skyline Trail follows Haleakala's southwest rift zone, the same volcanic feature responsible for the mountain's most recent lava flows roughly two centuries ago.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 9740, "label": "Summit Area" },
+        { "mile": 3.0, "elevationFt": 8000 },
+        { "mile": 6.0, "elevationFt": 6500 },
+        { "mile": 8.2, "elevationFt": 6040, "label": "Skyline Cabin Area" }
+      ]
+    },
+    {
+      "id": "haleakala-waikamoi",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Guided Only"],
+      "trailTip": "Access to the Waikamoi Preserve boardwalk is limited to ranger-guided hikes offered on a set schedule, so check current dates at the Haleakala visitor center rather than expecting walk-up access.",
+      "didYouKnow": "The Waikamoi Preserve protects one of the last intact native cloud forests on Maui, home to several Hawaiian honeycreeper species found nowhere else on Earth.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6800, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 6850, "label": "Boardwalk" },
+        { "mile": 0.5, "elevationFt": 6900, "label": "Loop Return" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "haleakala-nene",
+      "scientificName": "Branta sandvicensis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round (nesting Oct-Mar)",
+      "whereToLook": "Summit area parking lots and Hosmer Grove",
+      "tags": ["Endangered", "Nesting Season", "No Feeding"],
+      "viewingTip": "Never feed nene, even though they can appear tame around parking areas, since roadside feeding leads to vehicle strikes; during nesting season give any pair or goslings a wide berth and view from your car or a distance with binoculars.",
+      "didYouKnow": "The nene is Hawaii's state bird and the world's rarest goose; the entire population descends from fewer than 30 birds that survived a mid-20th-century population crash."
+    },
+    {
+      "id": "haleakala-petrel",
+      "scientificName": "Pterodroma sandwichensis",
+      "bestTimeOfDay": "Night (returns to burrows after dark)",
+      "bestSeason": "Mar-Oct (nesting)",
+      "whereToLook": "Burrows in crater walls, rarely seen in flight near dusk",
+      "tags": ["Endangered", "Burrow Nester", "Do Not Approach"],
+      "viewingTip": "Never approach, shine lights directly into, or linger near a burrow; if you hear their eerie calls at night, enjoy them from the trail rather than searching out the burrow itself, since disturbance and introduced predators are major threats to this species.",
+      "didYouKnow": "The Hawaiian petrel nests only in high-elevation burrows on a few Hawaiian mountains and spends most of its life far out over the open Pacific."
+    },
+    {
+      "id": "haleakala-kamehameha-butterfly",
+      "scientificName": "Vanessa tameamea",
+      "bestTimeOfDay": "Midday (warm, sunny hours)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Native forest edges near Hosmer Grove and Kipahulu",
+      "tags": ["Native Species"],
+      "viewingTip": "Watch quietly from a short distance with a zoom lens rather than trying to catch or handle it; its host plants (native mamaki) should be left undisturbed.",
+      "didYouKnow": "Named for King Kamehameha, this is one of only two butterfly species native to the Hawaiian Islands."
+    },
+    {
+      "id": "haleakala-pueo",
+      "scientificName": "Asio flammeus sandwichensis",
+      "bestTimeOfDay": "Day (unusual for an owl)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open grasslands near the summit road",
+      "tags": ["Ground Nester", "Nesting Season Caution"],
+      "viewingTip": "Scan open grassland with binoculars from the road rather than walking into the grass, since pueo nest on the ground and can be flushed off eggs or chicks by someone walking too close.",
+      "didYouKnow": "Unlike most owls, the pueo is active during daylight hours and is considered a sacred ancestor guardian ('aumakua) in Hawaiian culture."
+    },
+    {
+      "id": "haleakala-axis-deer",
+      "scientificName": "Axis axis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Lower park slopes and adjacent ranchland",
+      "tags": ["Introduced Species"],
+      "viewingTip": "View from a distance with binoculars; these deer are not native and are actively managed, but they should still never be fed or approached.",
+      "didYouKnow": "Axis deer were introduced to Maui in the 1860s as a gift and have since become an invasive species that damages native vegetation."
+    },
+    {
+      "id": "haleakala-monarch-butterfly",
+      "scientificName": "Danaus plexippus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Year-round",
+      "whereToLook": "Flowering shrubs near the summit visitor areas",
+      "tags": ["Introduced Species"],
+      "viewingTip": "Photograph with a zoom lens rather than handling; monarchs are delicate and easily injured by touch.",
+      "didYouKnow": "Monarch butterflies are not native to Hawaii but became established after their host milkweed plants were introduced in the 1800s."
+    },
+    {
+      "id": "haleakala-house-finch",
+      "scientificName": "Haemorhous mexicanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Near the visitor center and picnic areas",
+      "tags": ["Introduced Species", "Common Sighting"],
+      "viewingTip": "Enjoy from a normal viewing distance and never offer food, since human food and crumbs habituate birds to unsafe begging behavior around parking areas.",
+      "didYouKnow": "House finches were introduced to Hawaii in the 1870s and are now one of the most common songbirds across the islands."
+    },
+    {
+      "id": "haleakala-feral-goat",
+      "scientificName": "Capra hircus",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Year-round",
+      "whereToLook": "Outer volcano slopes below the crater rim",
+      "tags": ["Introduced Species"],
+      "viewingTip": "View from a distance with binoculars; feral goats are an invasive species under active park management and should not be fed or approached.",
+      "didYouKnow": "Feral goats, descended from animals introduced in the late 1700s, have historically caused major damage to Haleakala's native silversword and shrubland habitat."
+    }
+  ]
+}

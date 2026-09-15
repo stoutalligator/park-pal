@@ -1,0 +1,197 @@
+{
+  "parkId": "cuyahoga-valley",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "NPS Cuyahoga Valley Hiking page", "NPS Observing Bald Eagles in Cuyahoga Valley", "AllTrails"],
+  "trails": [
+    {
+      "id": "cuyahoga-valley-brandywine-gorge",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round; spring offers the highest water flow over the falls",
+      "tags": ["Waterfall", "Rocky Footing"],
+      "trailTip": "The overlook platforms keep you back from the gorge edge — stay on the platform and marked trail rather than scrambling down toward the falls, since the shale slopes are unstable and slick when wet.",
+      "didYouKnow": "Brandywine Falls drops 65 feet, making it the tallest waterfall in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 120, "label": "Falls overlook" },
+        { "mile": 1.0, "elevationFt": 220, "label": "Gorge rim" },
+        { "mile": 1.4, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-ledges",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Sandstone Cliffs", "Family-Friendly"],
+      "trailTip": "The path winds beneath overhangs and past narrow rock crevices — sturdy shoes help on the uneven, sometimes damp sandstone underfoot.",
+      "didYouKnow": "The sandstone ledges were quarried in the 1800s, and old chisel marks are still visible on some of the rock faces along the trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 1.6, "elevationFt": 180, "label": "Ledges Overlook" },
+        { "mile": 2.2, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-towpath",
+      "estimatedTime": "Varies by segment; full length is a multi-hour or multi-day trip",
+      "bestSeason": "Year-round; flattest, most accessible trail in the park",
+      "tags": ["Flat", "Historic Canal", "Accessible"],
+      "trailTip": "The crushed-limestone surface is flat and wheelchair- and stroller-friendly, but it's shared with cyclists — stay to the right and listen for bell signals when passing.",
+      "didYouKnow": "The Towpath Trail follows the original path where mules once walked to tow canal boats along the 19th-century Ohio & Erie Canal.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Northern trailhead" },
+        { "mile": 10.0, "elevationFt": 50 },
+        { "mile": 20.5, "elevationFt": 100, "label": "Southern trailhead" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-blue-hen-falls",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round; spring and after rain give the strongest flow",
+      "tags": ["Waterfall", "Slippery Rocks"],
+      "trailTip": "The short spur down to the falls' base gets slick with mist and mud — wear shoes with good tread and give the ledge above the falls extra space in wet weather.",
+      "didYouKnow": "Blue Hen Falls is one of the park's most photographed waterfalls despite requiring only a short walk from the trailhead.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 0, "label": "Blue Hen Falls" },
+        { "mile": 1.6, "elevationFt": 250, "label": "Return" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-buckeye-loop",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Rolling Terrain", "Meadow"],
+      "trailTip": "This loop combines several connector trails near Boston Mills, so carry a park trail map — junctions aren't always obvious even though the tread is well maintained.",
+      "didYouKnow": "This section is part of the larger 1,400-mile Buckeye Trail, which loops all the way around the state of Ohio.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boston Mills trailhead" },
+        { "mile": 2.0, "elevationFt": 300 },
+        { "mile": 3.5, "elevationFt": 500, "label": "High meadow" },
+        { "mile": 5.0, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-wetmore",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Connector", "Forest Loop"],
+      "trailTip": "Wetmore links directly into the Buckeye Trail network near Boston, so double-check trail blazes at junctions to stay on the loop you intend.",
+      "didYouKnow": "The Wetmore Trail passes through second-growth forest that has reclaimed what was farmland just a century ago.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 150 },
+        { "mile": 2.6, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-salt-run",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Rolling Terrain", "Old Farmland"],
+      "trailTip": "The trail crosses several old farm fields now reverting to meadow — watch footing where the path narrows through brush after wet weather.",
+      "didYouKnow": "Remnants of old fence lines and foundation stones from former farms are still visible along parts of the Salt Run corridor.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kendall Lake trailhead" },
+        { "mile": 2.0, "elevationFt": 200 },
+        { "mile": 3.9, "elevationFt": 350, "label": "Highest point" }
+      ]
+    },
+    {
+      "id": "cuyahoga-valley-plateau",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Sandstone Ledges", "Forest Loop"],
+      "trailTip": "This loop near Kendall Lake connects easily with the Ledges area — bring a map since several trails intersect nearby.",
+      "didYouKnow": "The Plateau Trail passes several smaller, less-visited sandstone ledge formations similar to the more famous ones on the main Ledges Trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kendall Lake trailhead" },
+        { "mile": 1.6, "elevationFt": 200 },
+        { "mile": 3.2, "elevationFt": 300, "label": "Highest point" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "cuyahoga-valley-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Rut peaks Oct-Nov",
+      "whereToLook": "Forest edges and meadows throughout the valley",
+      "tags": ["Common", "Rutting Season"],
+      "viewingTip": "During the fall rut, watch bucks from a distance with binoculars — a rutting buck is more on edge than usual and should never be approached or crowded for a photo.",
+      "didYouKnow": "Cuyahoga Valley has one of the densest deer populations of any unit in the National Park System, largely due to a lack of natural predators in the surrounding developed landscape."
+    },
+    {
+      "id": "cuyahoga-valley-great-blue-heron",
+      "scientificName": "Ardea herodias",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nesting season is roughly Mar-Jun",
+      "whereToLook": "A large rookery visible from the Towpath Trail near Bath Road",
+      "tags": ["Rookery", "Cliff/Tree Nester"],
+      "viewingTip": "View the rookery from the marked Towpath overlook with binoculars or a spotting scope rather than approaching the nest trees, since a colony disturbed during nesting season can abandon eggs or chicks.",
+      "didYouKnow": "The Bath Road heronry has grown to become one of the largest great blue heron rookeries in Ohio, with dozens of nests crowded into a stand of dead trees."
+    },
+    {
+      "id": "cuyahoga-valley-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round; more vocal Jan-Feb during breeding season",
+      "whereToLook": "Meadows and forest edges throughout the park",
+      "tags": ["Nocturnal", "Common"],
+      "viewingTip": "If you hear howling at dusk, stay put and listen rather than trying to approach — coyotes are naturally wary of people and are best experienced by ear.",
+      "didYouKnow": "Coyotes reestablished themselves in the Cuyahoga Valley on their own over the past several decades as the region's forest cover recovered."
+    },
+    {
+      "id": "cuyahoga-valley-river-otter",
+      "scientificName": "Lontra canadensis",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "The Cuyahoga River and adjacent wetlands, including near Beaver Marsh",
+      "tags": ["Reintroduced", "Waterway"],
+      "viewingTip": "Watch quietly from the bank or a boardwalk with binoculars — otters are playful but skittish, and will disappear underwater quickly if you approach or make noise.",
+      "didYouKnow": "River otters were reintroduced to Ohio in the 1980s after being wiped out by pollution and habitat loss, and the Cuyahoga River's cleanup helped make their return here possible."
+    },
+    {
+      "id": "cuyahoga-valley-beaver",
+      "scientificName": "Castor canadensis",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "Year-round; most active building in fall before winter",
+      "whereToLook": "Beaver Marsh and other wetland areas along the Towpath Trail",
+      "tags": ["Wetland Engineer"],
+      "viewingTip": "Watch dams and lodges from the boardwalk with binoculars around dusk, and never approach a lodge closely — a disturbed beaver may slap its tail on the water and dive, cutting the sighting short.",
+      "didYouKnow": "Beaver Marsh got its name because beavers moved into a former junkyard site and, through decades of dam-building, transformed it into the wetland that exists today."
+    },
+    {
+      "id": "cuyahoga-valley-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nesting season is roughly Jan-Jul",
+      "whereToLook": "Along the Cuyahoga River, including a long-active nest near Pinery Narrows north of Station Road Bridge",
+      "tags": ["Nest Closure", "River Hunter"],
+      "viewingTip": "As of September 2026, per NPS.gov, a stretch of the old railroad right-of-way near the Pinery Narrows nest is closed to foot traffic during the nesting season — view eagles from the open Towpath Trail or a permitted overlook with binoculars and respect any posted closure signs.",
+      "didYouKnow": "The same pair of bald eagles has returned to nest in the Cuyahoga Valley nearly every year since 2007, having raised more than a dozen eaglets there.",
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "cuyahoga-valley-red-fox",
+      "scientificName": "Vulpes vulpes",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Denning season is roughly Mar-May",
+      "whereToLook": "Meadows and forest edges throughout the valley",
+      "tags": ["Denning Season", "Common"],
+      "viewingTip": "If you locate a den by tracks or scat nearby, view it from well back with binoculars and move on — lingering near an active den can cause a vixen to abandon it or relocate her kits.",
+      "didYouKnow": "Red fox kits are born blind and helpless but are already exploring outside the den entrance within about a month."
+    },
+    {
+      "id": "cuyahoga-valley-wood-duck",
+      "scientificName": "Aix sponsa",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nesting season is roughly Mar-Jun",
+      "whereToLook": "Beaver Marsh and other quiet wetlands along the Towpath Trail",
+      "tags": ["Cavity Nester", "Wetland"],
+      "viewingTip": "Scan nest boxes and shoreline snags from the boardwalk with binoculars — wood ducks are easily startled off the water, so keep noise down and stay on the trail rather than pushing into the marsh edge.",
+      "didYouKnow": "Wood duck chicks leap from tree cavity nests up to 50 feet above ground within a day of hatching and bounce off the forest floor largely unharmed."
+    }
+  ]
+}

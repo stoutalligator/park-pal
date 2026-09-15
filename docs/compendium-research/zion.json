@@ -1,0 +1,227 @@
+{
+  "parkId": "zion",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "St George Utah News", "National Parks Traveler", "Bearfoot Theory"],
+  "trails": [
+    {
+      "id": "zion-narrows",
+      "estimatedTime": "5-8 hrs",
+      "bestSeason": "Late May-Oct (flow and temperature dependent)",
+      "tags": ["River Wading", "Flash Flood Risk"],
+      "trailTip": "No permit is needed for the bottom-up day hike from the Temple of Sinawava (you can go as far as Big Spring), but always check the current Flash Flood Potential rating at a visitor center first and turn back at any sign of rising, muddy water.",
+      "didYouKnow": "The Narrows follows the Virgin River through a gorge that in places is only 20-30 feet wide with walls up to 2,000 feet tall.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Temple of Sinawava" },
+        { "mile": 2.5, "elevationFt": 120 },
+        { "mile": 5.0, "elevationFt": 220 },
+        { "mile": 9.4, "elevationFt": 334, "label": "Big Spring turnaround" }
+      ]
+    },
+    {
+      "id": "zion-angels-landing",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Year-round (chains can ice over in winter)",
+      "tags": ["Chains", "Exposure", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS, a lottery permit from Recreation.gov is required for the final chain section from Scout Lookout to the summit — apply in the seasonal lottery (e.g., spring window Feb 13-25 for Mar-May dates) or the day-before lottery (12:01 a.m.-3 p.m. Mountain Time); the approach to Scout Lookout itself needs no permit.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Angels Landing permit pilot program began in 2022 after the park was issuing over 200,000 hikers a year onto the narrow chained section.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "The Grotto" },
+        { "mile": 2.0, "elevationFt": 1000, "label": "Walter's Wiggles" },
+        { "mile": 2.4, "elevationFt": 1200, "label": "Scout Lookout" },
+        { "mile": 2.7, "elevationFt": 1488, "label": "Angels Landing summit" }
+      ]
+    },
+    {
+      "id": "zion-emerald-pools",
+      "estimatedTime": "1.5-2.5 hrs",
+      "bestSeason": "Year-round (waterfalls best after spring runoff or rain)",
+      "tags": ["Family Friendly", "Slippery Rock"],
+      "trailTip": "The rock near the pools and behind the waterfall spray is often slick even when dry-looking — the Upper Pool viewpoint especially rewards slow, careful footing.",
+      "didYouKnow": "The three Emerald Pools sit at different elevations and are connected by a short but sometimes-closed connector trail depending on rockfall conditions.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Zion Lodge" },
+        { "mile": 0.6, "elevationFt": 150, "label": "Lower Pool" },
+        { "mile": 1.2, "elevationFt": 280, "label": "Middle Pool" },
+        { "mile": 1.5, "elevationFt": 350, "label": "Upper Pool" }
+      ]
+    },
+    {
+      "id": "zion-riverside-walk",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Family Friendly"],
+      "trailTip": "This paved path is fully accessible and is the easiest way to see the canyon narrows without wading — it ends where the maintained trail stops and the river hike begins.",
+      "didYouKnow": "The Riverside Walk was built along an old wagon road bed used before Zion Canyon's scenic drive existed.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Temple of Sinawava" },
+        { "mile": 1.1, "elevationFt": 40 },
+        { "mile": 2.2, "elevationFt": 57, "label": "Narrows entrance" }
+      ]
+    },
+    {
+      "id": "zion-canyon-overlook",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Exposure", "Overlook"],
+      "trailTip": "The small trailhead lot just east of the Zion-Mount Carmel Tunnel fills quickly — some sections along the route hug an unguarded drop-off, so keep kids close.",
+      "didYouKnow": "The overlook gives one of the only views looking back down into lower Zion Canyon from above, framing the Towers of the Virgin.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 120 },
+        { "mile": 1.0, "elevationFt": 163, "label": "Overlook" }
+      ]
+    },
+    {
+      "id": "zion-west-rim",
+      "estimatedTime": "8-10 hrs (or 1-2 day backpack)",
+      "bestSeason": "Late spring-fall (Lava Point access road closes in winter)",
+      "tags": ["Permit Required", "Exposure"],
+      "trailTip": "As of September 2026, per NPS, day hiking the West Rim Trail requires no permit, but an overnight Wilderness Permit is required to camp at any of its 9 designated sites between Lava Point and the Grotto.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Most thru-hikers arrange a shuttle to the Lava Point trailhead and hike downhill into the canyon, finishing near Angels Landing.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Lava Point" },
+        { "mile": 5.0, "elevationFt": 800 },
+        { "mile": 10.0, "elevationFt": 2200, "label": "West Rim viewpoint" },
+        { "mile": 14.2, "elevationFt": 3600, "label": "Scout Lookout / The Grotto" }
+      ]
+    },
+    {
+      "id": "zion-observation-point",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Overlook", "Trail Rerouted"],
+      "trailTip": "As of September 2026, per NPS, the classic Weeping Rock route to Observation Point remains closed due to rockfall damage — the only current access is via the East Mesa Trail, which is actually an easier approach than the old route.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "At 6,507 feet, Observation Point looks down on Angels Landing from nearly 700 feet above it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "East Mesa Trailhead" },
+        { "mile": 3.0, "elevationFt": 900 },
+        { "mile": 6.0, "elevationFt": 1800 },
+        { "mile": 8.0, "elevationFt": 2148, "label": "Observation Point" }
+      ]
+    },
+    {
+      "id": "zion-watchman-trail",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Year-round (very hot midday in summer)",
+      "tags": ["Sunset Viewpoint"],
+      "trailTip": "The trail has almost no shade — hike early morning or in the two hours before sunset in summer, and carry more water than for a typical 3-mile hike.",
+      "didYouKnow": "The Watchman formation is not named for a person but for its resemblance to a lookout tower standing guard over the canyon mouth.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 1.5, "elevationFt": 350 },
+        { "mile": 2.7, "elevationFt": 550 },
+        { "mile": 3.3, "elevationFt": 610, "label": "Overlook" }
+      ]
+    },
+    {
+      "id": "zion-kolob-arch",
+      "estimatedTime": "7-9 hrs (or overnight backpack)",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Permit Required", "Backcountry"],
+      "trailTip": "As of September 2026, per NPS, day hiking to Kolob Arch requires no permit, but overnight camping along La Verkin Creek is limited to designated sites and requires a Wilderness Permit reserved through Recreation.gov or the visitor center wilderness desk.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Kolob Arch's exact span has been re-measured over the years and is now generally cited around 287 feet, making it one of the longest freestanding natural arches on Earth.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Lee Pass Trailhead" },
+        { "mile": 5.0, "elevationFt": 400 },
+        { "mile": 6.5, "elevationFt": 700, "label": "La Verkin Creek junction" },
+        { "mile": 7.0, "elevationFt": 800, "label": "Kolob Arch viewpoint" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "zion-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec rut",
+      "whereToLook": "Steep canyon walls near the East Entrance and Route 9 switchbacks",
+      "tags": ["Rut"],
+      "viewingTip": "View from pullouts with binoculars — during the fall rut, rams are focused on each other and easily stressed by close approach, so keep vehicles and viewing distance well back from the road shoulder.",
+      "didYouKnow": "Desert bighorn were reintroduced to Zion in the 1970s after being extirpated from the area decades earlier."
+    },
+    {
+      "id": "zion-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Zion Canyon floor near the Grotto and Zion Lodge",
+      "tags": [],
+      "viewingTip": "Deer here are habituated to people but still wild — watch from a few car-lengths away and never feed them, even when they approach picnic areas.",
+      "didYouKnow": "Mule deer get their name from their oversized, mule-like ears, which rotate independently to pinpoint sound."
+    },
+    {
+      "id": "zion-california-condor",
+      "scientificName": "Gymnogyps californianus",
+      "bestTimeOfDay": "Midday (thermals)",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "High cliffs and thermals above Angels Landing and Zion Canyon",
+      "tags": ["Endangered", "Cliff Nester"],
+      "viewingTip": "Scan the sky with binoculars for their wing tags and huge wingspan rather than approaching any cliffside roost — condors are critically endangered and extremely sensitive to disturbance near nest and roost sites.",
+      "didYouKnow": "Every wild California condor wears numbered wing tags as part of an intensive recovery program that began with fewer than 30 birds left in the world in the 1980s."
+    },
+    {
+      "id": "zion-canyon-treefrog",
+      "scientificName": "Hyla arenicolor",
+      "bestTimeOfDay": "Evening",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Seasonal pools and seeps near the Narrows and Emerald Pools",
+      "tags": [],
+      "viewingTip": "Look, don't touch — handling can transfer oils and pathogens harmful to amphibians, so photograph them in place rather than picking them up.",
+      "didYouKnow": "Its mottled gray-brown skin is so well camouflaged against sandstone that its call is often the only clue it's nearby."
+    },
+    {
+      "id": "zion-collared-lizard",
+      "scientificName": "Crotaphytus collaris",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Sunny slickrock along the Canyon Overlook and Watchman trails",
+      "tags": [],
+      "viewingTip": "Enjoy from a few feet away with a zoom lens — cornering or grabbing one to get a photo stresses the animal and can cause it to drop its tail.",
+      "didYouKnow": "Collared lizards can run on their hind legs alone when sprinting after prey."
+    },
+    {
+      "id": "zion-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "High plateaus above the main canyon",
+      "tags": [],
+      "viewingTip": "Sightings are rare and usually brief — if you see one, do not approach; back away slowly, make yourself look large, and give it a clear escape route.",
+      "didYouKnow": "Mountain lions in Zion's plateau country roam huge territories and are rarely seen despite being one of the park's top predators."
+    },
+    {
+      "id": "zion-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Canyon floor near the Virgin River and campgrounds",
+      "tags": [],
+      "viewingTip": "Watch from a distance and never feed them — turkeys that associate people with food can become aggressive around picnic areas.",
+      "didYouKnow": "Wild turkeys can fly in short bursts up to 55 mph despite their bulky appearance."
+    },
+    {
+      "id": "zion-ringtail",
+      "scientificName": "Bassariscus astutus",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Canyon walls and rock crevices near campgrounds after dark",
+      "tags": ["Nocturnal"],
+      "viewingTip": "If you spot one at night, use a red-filtered flashlight and keep your distance rather than approaching its crevice or den — ringtails are shy and easily driven off from good denning spots.",
+      "didYouKnow": "Despite the name, ringtails are not cats but relatives of raccoons, with ankles that rotate 180 degrees for climbing sheer rock."
+    },
+    {
+      "id": "zion-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday (thermals)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Canyon rim thermals above the main canyon",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Watch soaring eagles from canyon-floor overlooks with binoculars rather than trying to get closer to a rim nest site.",
+      "didYouKnow": "Golden eagles can spot a rabbit from over a mile away thanks to eyesight roughly four to eight times sharper than a human's."
+    }
+  ]
+}

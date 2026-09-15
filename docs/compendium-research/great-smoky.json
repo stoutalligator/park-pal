@@ -1,0 +1,227 @@
+{
+  "parkId": "great-smoky",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Smokies Life", "Friends of the Smokies", "Recreation.gov"],
+  "trails": [
+    {
+      "id": "great-smoky-charlies-bunion",
+      "estimatedTime": "7-8 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Exposure", "Ridgeline", "Permit Required"],
+      "trailTip": "As of September 2026, NPS.gov confirms a $5/day, $15/week, or $40/year parking tag must be displayed on any vehicle parked over 15 minutes at the Newfound Gap trailhead, in addition to hiking most of the Appalachian Trail; bring sturdy boots for the rocky, exposed final approach.",
+      "didYouKnow": "The knob was named after a hiking companion of horticulturalist Charlies (Charlie) Conner slipped near the summit in the 1920s, and the trail follows the Appalachian Trail for most of its length.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Newfound Gap Trailhead" },
+        { "mile": 1.7, "elevationFt": 300 },
+        { "mile": 2.7, "elevationFt": 600, "label": "Icewater Spring Shelter" },
+        { "mile": 3.6, "elevationFt": 900 },
+        { "mile": 4.0, "elevationFt": 1640, "label": "Charlies Bunion" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-laurel-falls",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a parking tag ($5/day, $15/week, or $40/year) is required at the trailhead lot, which fills quickly on weekends; the pavement is uneven and can be slick near the falls.",
+      "didYouKnow": "Laurel Falls is named for the mountain laurel that blooms along the trail each spring, and its paved surface (built in 1963) makes it one of the most heavily used trails in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 150 },
+        { "mile": 1.3, "elevationFt": 315, "label": "Laurel Falls" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-clingmans-dome",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Apr-Nov (road closed Dec 1-Mar 31)",
+      "tags": ["Paved", "Steep", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, Clingmans Dome Road (and the trail's access) closes annually December 1 through March 31 and whenever winter weather requires; the steep half-mile ascent to the tower can be short of breath at 6,643 feet even for fit hikers.",
+      "didYouKnow": "The observation tower sits atop Kuwohi, the highest point in the Smokies and third-highest peak east of the Mississippi; on a clear day views extend over 100 miles.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 332, "label": "Observation Tower" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-alum-cave",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Exposure", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a parking tag is required at the trailhead lot, which is one of the busiest in the park; use caution at Arch Rock's stone stairway and the exposed bluff overhang when wet or icy.",
+      "didYouKnow": "The trail passes through Arch Rock, a natural tunnel carved by centuries of freeze-thaw weathering, and the \"cave\" itself is actually a large concave bluff, not a true cave.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.4, "elevationFt": 400, "label": "Arch Rock" },
+        { "mile": 2.3, "elevationFt": 1200, "label": "Alum Cave Bluffs" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-rainbow-falls",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Rocky Footing", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a parking tag is required at the Cherokee Orchard trailhead; the trail's stream crossings and rocky footing get slick after rain, so trekking poles help on the steady climb.",
+      "didYouKnow": "At 80 feet, Rainbow Falls is the tallest single-drop waterfall in the park, and it earns its name from the rainbow that forms in its mist on sunny afternoons.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Cherokee Orchard Trailhead" },
+        { "mile": 1.5, "elevationFt": 500 },
+        { "mile": 2.7, "elevationFt": 1500, "label": "Rainbow Falls" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-trillium-gap",
+      "estimatedTime": "6-7 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Steep", "Llama Traffic", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a parking tag is required at the Cherokee Orchard/Rainbow Falls trailhead area; yield to the llama trains that resupply LeConte Lodge several days a week on the upper trail.",
+      "didYouKnow": "The trail passes directly behind Grotto Falls, letting hikers walk through a natural rock overhang without getting wet, and it's the only Mount LeConte route llamas can navigate.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 500, "label": "Grotto Falls" },
+        { "mile": 4.0, "elevationFt": 2400 },
+        { "mile": 6.7, "elevationFt": 3600, "label": "Mount LeConte" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-chimney-tops",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Steep", "Permit Required", "Permanent Closure"],
+      "trailTip": "As of September 2026, per NPS.gov and Friends of the Smokies, the final quarter-mile onto the rocky pinnacles has been permanently closed since the 2016 wildfire to protect regenerating vegetation, so plan to turn around at the new observation area; a parking tag is required at the trailhead.",
+      "didYouKnow": "The trail was named for the twin rock \"chimneys\" that once had a smoke-like haze visible from the valley below, and the November 2016 wildfire that damaged much of the summit was traced back to this area.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 700 },
+        { "mile": 1.9, "elevationFt": 1400, "label": "Observation Area (pinnacles closed beyond)" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-abrams-falls",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Rocky Footing", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, the Cades Cove Loop Road parking area requires a tag; avoid wading or swimming below the falls, where a strong undertow has caused multiple drownings.",
+      "didYouKnow": "Despite its modest 20-foot height, Abrams Falls moves an unusually large volume of water, which is why the pool below it is so dangerous.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 340, "label": "Abrams Falls" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-andrews-bald",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "May-Oct (peak bloom Jun)",
+      "tags": ["Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a parking tag is required at the Clingmans Dome lot; the bald is at its best in mid-to-late June when the catawba rhododendron and flame azalea bloom.",
+      "didYouKnow": "Andrews Bald is one of the park's few remaining grassy \"balds,\" open, treeless summits whose origin (Cherokee burning, grazing, or natural causes) is still debated by ecologists.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Clingmans Dome Trailhead" },
+        { "mile": 1.2, "elevationFt": 400 },
+        { "mile": 1.8, "elevationFt": 900, "label": "Andrews Bald" }
+      ],
+      "lastVerified": "2026-09-15"
+    }
+  ],
+  "animals": [
+    {
+      "id": "great-smoky-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "Cades Cove fields and forest edges, Cataloochee Valley",
+      "tags": ["Common Sighting", "Roadside"],
+      "viewingTip": "View from your vehicle or at least 50 yards away using binoculars or a zoom lens; never approach a bear that has noticed you or is near a roadside, and never leave food or trash accessible.",
+      "didYouKnow": "The park is home to roughly 1,900 black bears, about two per square mile, one of the densest populations anywhere in the East."
+    },
+    {
+      "id": "great-smoky-synchronous-fireflies",
+      "scientificName": "Photinus carolinus",
+      "bestTimeOfDay": "Dusk (approx. 9-10pm)",
+      "bestSeason": "Late May-early Jun",
+      "whereToLook": "Elkmont Historic District",
+      "tags": ["Seasonal Event", "Permit Required"],
+      "viewingTip": "As of September 2026, per NPS.gov, the 2026 Elkmont viewing event (May 20-27) required a separate $1 lottery entry on Recreation.gov plus a $29 vehicle reservation fee for the small number of passes issued; use only a red-filtered flashlight, stay on the trail, and never catch or handle the fireflies to avoid disrupting their mating flashes.",
+      "didYouKnow": "Photinus carolinus is one of only a few firefly species in North America that flash in synchronized unison, a display that peaks for about two weeks each late spring.",
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "great-smoky-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct (rut)",
+      "whereToLook": "Cataloochee Valley open meadows",
+      "tags": ["Rut Season", "Reintroduced"],
+      "viewingTip": "Stay at least 50 yards away, especially during the fall rut when bulls are aggressive and unpredictable; watch from the meadow's edge with binoculars rather than walking out into the open field toward the herd.",
+      "didYouKnow": "Elk were extirpated from the region by the mid-1800s and reintroduced to Cataloochee Valley starting in 2001; the herd has since expanded into other areas of the park."
+    },
+    {
+      "id": "great-smoky-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Cades Cove open fields",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Watch from a pull-off with binoculars rather than approaching grazing deer, and give extra space to does with fawns in late spring.",
+      "didYouKnow": "Cades Cove's deer are unusually habituated to vehicle traffic, which is why they're often seen grazing just feet from the loop road."
+    },
+    {
+      "id": "great-smoky-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round (gobbling peaks Apr-May)",
+      "whereToLook": "Cades Cove and Cataloochee roadside fields",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Observe from the road shoulder with binoculars; give displaying toms extra space in spring rather than walking into a field to get closer.",
+      "didYouKnow": "Wild turkeys can run up to 25 mph and fly in short bursts over 50 mph despite their bulky build."
+    },
+    {
+      "id": "great-smoky-river-otter",
+      "scientificName": "Lontra canadensis",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Abrams Creek and larger park streams",
+      "tags": ["Rare Sighting", "Reintroduced"],
+      "viewingTip": "Scan quiet stretches of water from the bank with binoculars and stay still; otters are shy and will vanish if approached too closely.",
+      "didYouKnow": "River otters had disappeared from the Smokies by the 1900s due to trapping and pollution and were reintroduced in the 1980s and 1990s."
+    },
+    {
+      "id": "great-smoky-black-throated-blue-warbler",
+      "scientificName": "Setophaga caerulescens",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Aug",
+      "whereToLook": "High-elevation forest understory, e.g. along Clingmans Dome Road",
+      "tags": ["Songbird"],
+      "viewingTip": "Listen for its buzzy \"I-am-so-lazy\" song and scan the mid-story with binoculars rather than pishing repeatedly or playing calls to draw it in.",
+      "didYouKnow": "The park's spruce-fir high country hosts one of the densest breeding populations of this warbler in its entire range."
+    },
+    {
+      "id": "great-smoky-timber-rattlesnake",
+      "scientificName": "Crotalus horridus",
+      "bestTimeOfDay": "Midday (basking)",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Sunny, rocky ridgelines and outcrops",
+      "tags": ["Venomous", "Give Space"],
+      "viewingTip": "If you spot one basking on rocks or a trail, stop and give it a wide berth of at least 6 feet to pass safely; never attempt to move, corner, or handle it, and back away slowly if it rattles.",
+      "didYouKnow": "Timber rattlesnakes are ambush hunters that may stay coiled in the same spot for days waiting for prey, and they're protected within the park."
+    },
+    {
+      "id": "great-smoky-bobcat",
+      "scientificName": "Lynx rufus",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forest edges near Cades Cove and low-elevation trails",
+      "tags": ["Elusive", "Nocturnal"],
+      "viewingTip": "Look for fresh tracks or scat along trail edges rather than trying to seek out a den; sightings are rare and usually brief, so keep binoculars ready and stay quiet.",
+      "didYouKnow": "Bobcats are so elusive that most park visitors never see one despite a healthy population throughout the Smokies."
+    }
+  ]
+}

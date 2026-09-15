@@ -1,0 +1,207 @@
+{
+  "parkId": "isle-royale",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Isle Royale Wolf-Moose Project (Michigan Technological University)"],
+  "trails": [
+    {
+      "id": "isle-royale-greenstone-ridge",
+      "estimatedTime": "3-5 days",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Backcountry Permit Required", "Multi-Day", "Seasonal Closure"],
+      "trailTip": "This point-to-point traverse of the island from Windigo to Rock Harbor takes most hikers 3-5 days; a free overnight permit is required and is obtained at the Windigo or Rock Harbor ranger station on arrival, and the park itself is only reachable by ferry or seaplane and is open mid-April through October 31 each year (as of September 2026, per NPS.gov).",
+      "didYouKnow": "The trail follows a ridge of ancient volcanic bedrock and passes near Mount Desor, one of the highest points on the island.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
+        { "mile": 10, "elevationFt": 900 },
+        { "mile": 20, "elevationFt": 1900, "label": "Mount Desor area" },
+        { "mile": 30, "elevationFt": 2500 },
+        { "mile": 40, "elevationFt": 3000, "label": "Lookout Louise / Rock Harbor end" }
+      ]
+    },
+    {
+      "id": "isle-royale-stoll",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Coastal", "Historic Mine Pits", "Seasonal Closure"],
+      "trailTip": "An easy, well-marked day hike from Rock Harbor past 1890s copper prospecting pits and Lake Superior overlooks; the park itself is accessible only by boat or seaplane and open mid-April through October 31 each year (as of September 2026, per NPS.gov).",
+      "didYouKnow": "The trail passes remnants of 1890s copper prospecting pits, though large-scale mining on the island never proved profitable.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
+        { "mile": 1.5, "elevationFt": 100 },
+        { "mile": 3, "elevationFt": 160 },
+        { "mile": 4.2, "elevationFt": 200, "label": "Scoville Point area" }
+      ]
+    },
+    {
+      "id": "isle-royale-scoville-point",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Coastal", "Rocky Peninsula", "Seasonal Closure"],
+      "trailTip": "This rocky peninsula walk near Rock Harbor offers wide Lake Superior views; the park is only reachable by boat or seaplane and open mid-April through October 31 each year (as of September 2026, per NPS.gov).",
+      "didYouKnow": "Scoville Point marks one of the easternmost tips of the island, with views across Lake Superior toward Canada on clear days.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
+        { "mile": 1.5, "elevationFt": 70 },
+        { "mile": 3, "elevationFt": 120 },
+        { "mile": 4.2, "elevationFt": 150, "label": "Scoville Point" }
+      ]
+    },
+    {
+      "id": "isle-royale-lookout-louise",
+      "estimatedTime": "2-4 hrs",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Overlook", "Remote Access", "Seasonal Closure"],
+      "trailTip": "The climb to this sweeping overlook of the Canadian shoreline is remote and lightly trafficked; carry a map, since the park is boat/seaplane access only and open mid-April through October 31 each year (as of September 2026, per NPS.gov).",
+      "didYouKnow": "On clear days, the overlook offers views across Lake Superior into Canada, more than 20 miles away.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 3, "elevationFt": 320 },
+        { "mile": 4, "elevationFt": 400, "label": "Lookout Louise" }
+      ]
+    },
+    {
+      "id": "isle-royale-windigo-nature",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Easy Loop", "Beaver Ponds", "Seasonal Closure"],
+      "trailTip": "This easy loop near the Windigo entrance passes beaver ponds where moose sign is common; the park is only open mid-April through October 31 each year and reached solely by boat or seaplane (as of September 2026, per NPS.gov).",
+      "didYouKnow": "Windigo, the trail's namesake, comes from an Ojibwe legend about a cannibalistic winter spirit.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
+        { "mile": 0.6, "elevationFt": 60 },
+        { "mile": 1.2, "elevationFt": 100, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "isle-royale-rock-harbor",
+      "estimatedTime": "1 day",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Backcountry Camping", "Coastal Forest", "Seasonal Closure"],
+      "trailTip": "This coastal forest route to the Daisy Farm campground requires a free overnight permit if you're staying over, obtained at the Rock Harbor ranger station; the park is boat/seaplane access only and open mid-April through October 31 each year (as of September 2026, per NPS.gov).",
+      "didYouKnow": "The trail parallels the route many hikers use to reach the eastern trailhead of the Greenstone Ridge Trail.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
+        { "mile": 3.5, "elevationFt": 180 },
+        { "mile": 7.1, "elevationFt": 300, "label": "Daisy Farm" }
+      ]
+    },
+    {
+      "id": "isle-royale-huginnin-cove",
+      "estimatedTime": "1-2 days",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Backcountry Permit Required", "Remote Loop", "Seasonal Closure"],
+      "trailTip": "This remote loop to a secluded northwest-shore campsite requires a free overnight permit from the Windigo ranger station, and the park itself is open mid-April through October 31 each year, reachable only by boat or seaplane (as of September 2026, per NPS.gov).",
+      "didYouKnow": "Huginnin Cove's campsite sits on the island's rugged northwest shore, one of the quieter, less-visited corners of the park.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
+        { "mile": 4.8, "elevationFt": 350, "label": "Huginnin Cove campsite" },
+        { "mile": 9.7, "elevationFt": 500, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "isle-royale-feldtmann-lake",
+      "estimatedTime": "2-3 days",
+      "bestSeason": "Mid-Jun to Sep",
+      "tags": ["Backcountry Permit Required", "Multi-Day", "Seasonal Closure"],
+      "trailTip": "This long route through the island's rugged west end requires a free overnight permit from the Windigo ranger station, and the park is open mid-April through October 31 each year, reachable only by boat or seaplane (as of September 2026, per NPS.gov).",
+      "didYouKnow": "The route passes through prime moose habitat and skirts Feldtmann Lake, one of the largest inland lakes on the island.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
+        { "mile": 4, "elevationFt": 300 },
+        { "mile": 8, "elevationFt": 700, "label": "Feldtmann Lake" },
+        { "mile": 16, "elevationFt": 1200, "label": "Loop return" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "isle-royale-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round (sightings are exceptionally rare)",
+      "whereToLook": "Interior forests and ridgelines island-wide; almost never observed directly",
+      "tags": ["Research Population", "Extremely Elusive"],
+      "viewingTip": "Isle Royale's wolves are the subject of the world's longest-running predator-prey study; a direct sighting is very unlikely, so if you notice tracks, scat, or hear a distant howl, give the area plenty of space, never attempt to call or approach, and let binoculars or a spotting scope do the work if you're ever lucky enough to see one at a distance.",
+      "didYouKnow": "The Isle Royale Wolf-Moose Project, run by Michigan Technological University with the National Park Service, is the longest continuous study of a predator-prey system in the world, running since 1958."
+    },
+    {
+      "id": "isle-royale-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Early morning / Dusk",
+      "bestSeason": "May-Sep, plus the fall rut (Sep-Oct)",
+      "whereToLook": "Inland ponds near Windigo and along interior trails, where moose browse aquatic plants",
+      "tags": ["Aquatic Feeder", "Rut Season"],
+      "viewingTip": "Watch feeding moose from a distance with binoculars, especially at inland ponds near Windigo, and give bulls a wide berth during the fall rut (September-October) when they can be unpredictable.",
+      "didYouKnow": "Isle Royale's moose likely reached the island by swimming or crossing lake ice from the mainland in the early 1900s, and their population swings with the island's wolves form the basis of the famous long-term study."
+    },
+    {
+      "id": "isle-royale-common-loon",
+      "scientificName": "Gavia immer",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "May-Sep (nesting May-Jul)",
+      "whereToLook": "Quiet inland lakes such as Lake Richie and Chickenbone Lake",
+      "tags": ["Nesting", "Inland Lakes"],
+      "viewingTip": "Observe nesting loons from a canoe or shoreline at a distance with binoculars, and avoid lingering near shoreline nests, since a flushed adult may abandon its eggs.",
+      "didYouKnow": "Loon chicks often ride on a parent's back during their first few weeks to avoid predators and conserve body heat."
+    },
+    {
+      "id": "isle-royale-red-fox",
+      "scientificName": "Vulpes vulpes",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Near the Rock Harbor and Windigo developed areas, denning in rocky outcrops",
+      "tags": ["Den Sites", "Habituation Risk"],
+      "viewingTip": "Admire foxes from a distance with binoculars or a zoom lens and never feed them — Isle Royale foxes have become food-conditioned around campgrounds in the past, which is unhealthy for the animal and unsafe for visitors; stay well back from any den site.",
+      "didYouKnow": "Isle Royale's red foxes are frequently seen near campgrounds, but the National Park Service asks visitors never to feed them so they stay wild and healthy."
+    },
+    {
+      "id": "isle-royale-beaver",
+      "scientificName": "Castor canadensis",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Interior ponds, dams, and lodges along inland waterways",
+      "tags": ["Dam Builder", "Crepuscular"],
+      "viewingTip": "Sit quietly at the edge of an inland pond around dusk with binoculars to watch beavers at work without disturbing the lodge.",
+      "didYouKnow": "Beaver activity on Isle Royale has reshaped many of the island's interior waterways, creating ponds favored by both moose and loons."
+    },
+    {
+      "id": "isle-royale-snowshoe-hare",
+      "scientificName": "Lepus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Dense boreal forest understory along interior trails",
+      "tags": ["Camouflage", "Prey Species"],
+      "viewingTip": "Look quietly along shaded trailside brush at dawn or dusk; hares tend to freeze rather than flee at first, so a slow pace and binoculars will spot far more than a quick walk-through.",
+      "didYouKnow": "Snowshoe hares molt from brown to white each winter, though shorter, less snowy winters have sometimes left them mismatched against bare ground."
+    },
+    {
+      "id": "isle-royale-mink",
+      "scientificName": "Neogale vison",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky shoreline and harbor edges near Rock Harbor and Windigo",
+      "tags": ["Shoreline Forager"],
+      "viewingTip": "Scan rocky shorelines quietly with binoculars near dawn — mink move quickly and rarely linger, so watching from a stationary spot works better than following one.",
+      "didYouKnow": "Mink are strong swimmers that hunt both on land and in the shallows for fish, crayfish, and eggs."
+    },
+    {
+      "id": "isle-royale-merlin",
+      "scientificName": "Falco columbarius",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Sep (nesting)",
+      "whereToLook": "Open rock outcrops and forest edges island-wide",
+      "tags": ["Outcrop Nester", "Nesting Season"],
+      "viewingTip": "Watch from a distance with binoculars as merlins hunt over open rock barrens, and avoid lingering near any suspected nest site in early summer so the adults aren't flushed off eggs or chicks.",
+      "didYouKnow": "Merlins are small, fast falcons that chase down small birds in swift, direct pursuit flights rather than soaring like larger raptors."
+    }
+  ]
+}

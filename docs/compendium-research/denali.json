@@ -1,0 +1,407 @@
+{
+  "parkId": "denali",
+  "researchedOn": "2026-09-15",
+  "sources": [
+    "NPS.gov",
+    "Alaska Beacon",
+    "Anchorage Daily News",
+    "AllTrails",
+    "Komoot",
+    "Alaska Road Trip"
+  ],
+  "trails": [
+    {
+      "id": "denali-savage-river",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": [
+        "River Crossing",
+        "Bear Country"
+      ],
+      "trailTip": "This loop is accessible by private vehicle to the Savage River check station year-round road conditions permitting, and it's a reliable spot for Dall sheep on the surrounding slopes — carry bear spray and make noise on blind corners near the willow brush.",
+      "didYouKnow": "Savage River marks the point beyond which private vehicles cannot continue on the Denali Park Road without a permit.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1,
+          "elevationFt": 100,
+          "label": "Savage River canyon"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 50
+        },
+        {
+          "mile": 2,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "denali-horseshoe-lake",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Sep",
+      "tags": [
+        "Steep Switchbacks",
+        "Beaver Ponds"
+      ],
+      "trailTip": "A short but steep switchback descent leads down to the lake, so save some energy for the climb back out; look for beaver activity along the shoreline in early morning or evening.",
+      "didYouKnow": "The oxbow-shaped lake was left behind when the Nenana River shifted course, and it remains a favorite feeding spot for resident beavers.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.53,
+          "elevationFt": 125
+        },
+        {
+          "mile": 1.05,
+          "elevationFt": 250,
+          "label": "Horseshoe Lake overlook"
+        },
+        {
+          "mile": 1.58,
+          "elevationFt": 125
+        },
+        {
+          "mile": 2.1,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "denali-mount-healy",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": [
+        "Bear Country",
+        "Exposed Ridge"
+      ],
+      "trailTip": "The trail climbs above treeline into open bear habitat, so carry bear spray, make noise, and hike in a group; the ridge stays windy even on calm days down at the visitor center.",
+      "didYouKnow": "On clear days the overlook offers one of the few frontcountry views of Denali's summit without needing to ride a park bus.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.35,
+          "elevationFt": 850
+        },
+        {
+          "mile": 2.7,
+          "elevationFt": 1700,
+          "label": "Mount Healy Overlook"
+        },
+        {
+          "mile": 4.05,
+          "elevationFt": 850
+        },
+        {
+          "mile": 5.4,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    },
+    {
+      "id": "denali-triple-lakes",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": [
+        "Bear Country",
+        "Long Distance"
+      ],
+      "trailTip": "This is the longest maintained trail near the entrance area and sees far fewer hikers than Mount Healy — carry bear spray, let someone know your plan, and start early to allow a full day.",
+      "didYouKnow": "The trail links three small kettle lakes carved by retreating glaciers thousands of years ago.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 2.38,
+          "elevationFt": 400,
+          "label": "First lake"
+        },
+        {
+          "mile": 5.23,
+          "elevationFt": 880,
+          "label": "Second lake"
+        },
+        {
+          "mile": 7.6,
+          "elevationFt": 1280,
+          "label": "Third lake"
+        },
+        {
+          "mile": 9.5,
+          "elevationFt": 1600,
+          "label": "Trail end"
+        }
+      ]
+    },
+    {
+      "id": "denali-eielson-alpine",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Jun-early Sep",
+      "tags": [
+        "Steep Climb",
+        "Bear Country",
+        "Currently Hard to Reach"
+      ],
+      "trailTip": "As of September 2026, per NPS.gov and Alaska Beacon reporting, the Denali Park Road is still closed to vehicles at Mile 43 (Pretty Rocks landslide) and park buses are not running to Eielson (Mile 66) for the rest of this season, so reaching this trailhead currently means biking or hiking roughly 23 extra miles beyond the closure — check nps.gov/dena for updated shuttle status before planning a trip.",
+      "didYouKnow": "The trail climbs Thorofare Ridge for one of the closest frontcountry views of Denali's summit, on the rare days the mountain isn't hidden in its own weather.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Eielson Visitor Center"
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 500
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 1000,
+          "label": "Thorofare Ridge"
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 400
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        }
+      ]
+    },
+    {
+      "id": "denali-savage-alpine",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": [
+        "Exposed Ridge",
+        "Bear Country"
+      ],
+      "trailTip": "Best hiked from Mountain Vista to Savage River (net downhill) if you can arrange a pickup; the ridge is fully exposed, so check the forecast for wind and lightning before starting.",
+      "didYouKnow": "The trail connects the Savage River and Mountain Vista areas, gaining nearly 1,500 feet across roughly four miles of open alpine ridge.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.64,
+          "elevationFt": 600,
+          "label": "Ridge crest"
+        },
+        {
+          "mile": 2.87,
+          "elevationFt": 1050,
+          "label": "Alpine tundra section"
+        },
+        {
+          "mile": 4.1,
+          "elevationFt": 1500,
+          "label": "Trail end"
+        }
+      ]
+    },
+    {
+      "id": "denali-mckinley-bar",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": [
+        "Currently Hard to Reach",
+        "River Gravel Bar"
+      ],
+      "trailTip": "As of September 2026, per Alaska Beacon and NPS reporting, park buses are not yet running to Wonder Lake (Mile 85) this season because of the ongoing Mile 43 landslide closure, so this trailhead is currently reachable only by biking or hiking the closed road corridor — check nps.gov/dena for updated shuttle status before planning a trip.",
+      "didYouKnow": "The mile-wide gravel bar at trail's end was a historic starting point for some of the earliest Denali summit expeditions.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Wonder Lake Trailhead"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 150
+        },
+        {
+          "mile": 2,
+          "elevationFt": 300,
+          "label": "McKinley River Bar"
+        },
+        {
+          "mile": 3,
+          "elevationFt": 100
+        },
+        {
+          "mile": 4,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        }
+      ]
+    },
+    {
+      "id": "denali-primrose-ridge",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": [
+        "Off-Trail Route",
+        "Bear Country",
+        "Wildflowers"
+      ],
+      "trailTip": "There's no maintained tread here — this is a cross-country tundra route, so bring navigation tools, expect wet tussocks underfoot, and carry bear spray since visibility can be limited in the low brush lower on the slope.",
+      "didYouKnow": "This off-trail route is a favorite for July wildflower displays, when the ridge blooms with alpine forget-me-nots, Alaska's state flower.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.25,
+          "elevationFt": 900
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 1800,
+          "label": "Primrose Ridge high point"
+        },
+        {
+          "mile": 3.75,
+          "elevationFt": 900
+        },
+        {
+          "mile": 5,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "denali-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Early Morning / Evening",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Open tundra slopes visible from the park road, especially near Sable Pass and Highway Pass",
+      "tags": [
+        "Dangerous Wildlife",
+        "Denning Species"
+      ],
+      "viewingTip": "Grizzlies here are wild and can be dangerous — view only from inside a vehicle or park bus, or from at least 300 yards away with binoculars or a spotting scope; never approach, follow, or move closer for a photo, and give an especially wide berth to any bear digging near a den site or guarding a carcass.",
+      "didYouKnow": "Denali's grizzlies dig their own dens each fall, often on steep slopes where snow accumulation is minimal, and can hibernate for up to seven months."
+    },
+    {
+      "id": "denali-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Willow thickets along the Savage and Teklanika rivers",
+      "tags": [
+        "Rut Season",
+        "Large Mammal"
+      ],
+      "viewingTip": "Watch from a safe distance with binoculars along riverside willow flats; bull moose become unpredictable and can charge during the fall rut (roughly September-October), and cows with calves are fiercely protective in early summer, so keep at least 25 yards back and retreat further if a moose lays its ears back or its hackles rise.",
+      "didYouKnow": "Denali moose are among the largest in North America, with bulls sometimes topping 1,600 pounds."
+    },
+    {
+      "id": "denali-caribou",
+      "scientificName": "Rangifer tarandus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Aug",
+      "whereToLook": "Open tundra along the park road, especially near Stony Overlook",
+      "tags": [
+        "Migratory Herd"
+      ],
+      "viewingTip": "Caribou move through open tundra in loose groups — use binoculars from the road or a pullout and let them pass on their own path rather than moving toward a herd or trying to cut off its route.",
+      "didYouKnow": "Denali's caribou are part of the Denali Herd, one of the few caribou populations that migrates entirely within a single national park."
+    },
+    {
+      "id": "denali-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Early Morning",
+      "bestSeason": "May-Aug",
+      "whereToLook": "Open tundra valleys, occasionally crossing the park road near Sable Pass",
+      "tags": [
+        "Dangerous Wildlife",
+        "Denning Species"
+      ],
+      "viewingTip": "Wolves den in the backcountry each spring — if you spot a den site or pups, view only from a great distance with a spotting scope and leave the area promptly rather than lingering, since disturbance can cause a pack to abandon a den; never attempt to call, howl at, or approach a wolf to draw it closer.",
+      "didYouKnow": "Denali has hosted one of the longest continuous wolf studies in North America, tracking multiple packs since the 1930s."
+    },
+    {
+      "id": "denali-dall-sheep",
+      "scientificName": "Ovis dalli",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Aug",
+      "whereToLook": "Steep rocky slopes above the park road near Igloo Mountain and Cathedral Mountain",
+      "tags": [
+        "Cliff Dweller"
+      ],
+      "viewingTip": "Dall sheep are easiest to pick out as white dots on distant slopes — bring binoculars or a spotting scope rather than hiking up talus toward them, since approaching pushes them onto riskier terrain and burns energy they need for the short summer season.",
+      "didYouKnow": "Dall sheep are the only wild white sheep in North America and were part of the original reason Denali was established as a park in 1917."
+    },
+    {
+      "id": "denali-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Aug",
+      "whereToLook": "Cliff nests visible from the park road, especially near Polychrome Pass",
+      "tags": [
+        "Cliff Nester"
+      ],
+      "viewingTip": "Golden eagles nest on cliff ledges visible from road pullouts — use a spotting scope or zoom lens rather than climbing toward a nest site, and keep well back through the spring nesting season so adults don't abandon eggs or chicks.",
+      "didYouKnow": "Denali has one of the highest densities of nesting golden eagles in North America."
+    },
+    {
+      "id": "denali-arctic-ground-squirrel",
+      "scientificName": "Urocitellus parryii",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Roadside burrows throughout the tundra, especially near pullouts",
+      "tags": [
+        "Burrow Dweller"
+      ],
+      "viewingTip": "These squirrels are easy to watch right from roadside pullouts — enjoy them at a comfortable distance and never feed them, since human food and close approach habituate them to traffic and make them easy prey for foxes and raptors near the road.",
+      "didYouKnow": "Arctic ground squirrels can lower their body temperature below freezing during hibernation, the coldest body temperature recorded in any mammal."
+    },
+    {
+      "id": "denali-wolverine",
+      "scientificName": "Gulo gulo",
+      "bestTimeOfDay": "Early Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Remote tundra basins away from the road, most often glimpsed from a distance",
+      "tags": [
+        "Elusive",
+        "Wide-Ranging"
+      ],
+      "viewingTip": "A wolverine sighting is rare and usually brief — if you see one crossing open tundra, watch through binoculars from where you are rather than moving to follow it, since these animals range over huge territories and are easily displaced by pursuit.",
+      "didYouKnow": "A single wolverine may range across several hundred square miles of Denali's backcountry in a year."
+    }
+  ]
+}

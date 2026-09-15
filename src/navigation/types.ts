@@ -30,6 +30,8 @@ export type HomeStackParamList = {
   ParkDetail: { parkId: string };
   ParkTrails: { parkId: string };
   ParkAnimals: { parkId: string };
+  TrailDetail: { trailId: string };
+  AnimalDetail: { animalId: string };
 };
 
 export type ParksStackParamList = {
@@ -37,6 +39,8 @@ export type ParksStackParamList = {
   ParkDetail: { parkId: string };
   ParkTrails: { parkId: string };
   ParkAnimals: { parkId: string };
+  TrailDetail: { trailId: string };
+  AnimalDetail: { animalId: string };
 };
 
 export type TripsStackParamList = {

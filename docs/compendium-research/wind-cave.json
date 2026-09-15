@@ -1,0 +1,196 @@
+{
+  "parkId": "wind-cave",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Recreation.gov", "Black Hills Parks & Forests Association"],
+  "trails": [
+    {
+      "id": "wind-cave-rankin-ridge",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Fire Lookout", "Panoramic Views"],
+      "trailTip": "The fire lookout tower at the top is staffed only seasonally and isn't always open to visitors — check with the visitor center for current tower hours before you go.",
+      "didYouKnow": "At about 5,013 feet, Rankin Ridge is the highest point in Wind Cave National Park, with views stretching across the prairie to the Black Hills.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4793, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 5013, "label": "Fire lookout tower" },
+        { "mile": 1.0, "elevationFt": 4793, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "wind-cave-centennial",
+      "estimatedTime": "2-3 hrs (segment)",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Prairie", "Reservation Required"],
+      "trailTip": "As of September 2026, per NPS.gov, overnight backcountry camping anywhere off the Centennial Trail within Wind Cave requires a free permit obtained in person at the visitor center — no permit is needed for a day hike on this segment.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Centennial Trail runs 111 miles across the Black Hills, and this segment through Wind Cave is one of the few parts that crosses open mixed-grass prairie rather than forest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4000, "label": "North trailhead" },
+        { "mile": 2.5, "elevationFt": 4300 },
+        { "mile": 5.0, "elevationFt": 4400, "label": "South trailhead" }
+      ]
+    },
+    {
+      "id": "wind-cave-elk-mountain",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Family Friendly", "Campground Loop"],
+      "trailTip": "This easy loop starts right at the Elk Mountain Campground, making it a convenient stretch-your-legs option for campers before or after a cave tour.",
+      "didYouKnow": "Despite the name, the trail passes through ponderosa pine forest more often frequented by white-tailed deer than elk, which favor the open prairie.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4000, "label": "Campground trailhead" },
+        { "mile": 0.5, "elevationFt": 4100, "label": "Overlook" },
+        { "mile": 1.0, "elevationFt": 4000, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "wind-cave-lookout-point",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Prairie", "Connector Trail"],
+      "trailTip": "This trail connects to the Centennial Trail, so pick up a park map before heading out to avoid an unplanned longer loop.",
+      "didYouKnow": "The open prairie along this trail is part of one of the largest remaining mixed-grass prairie ecosystems in the country.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4000, "label": "Trailhead" },
+        { "mile": 1.6, "elevationFt": 4250, "label": "Lookout Point" },
+        { "mile": 3.2, "elevationFt": 4000, "label": "Trail end" }
+      ]
+    },
+    {
+      "id": "wind-cave-canyon",
+      "estimatedTime": "1.5-2 hrs round trip",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Flat", "Birdwatching"],
+      "trailTip": "This dry canyon is a good spot to look and listen for cliff-nesting birds — bring binoculars and view any nest sites from the canyon floor rather than climbing toward the walls.",
+      "didYouKnow": "The canyon has no flowing water most of the year, carved instead by rare but intense flash floods over thousands of years.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3820, "label": "Trailhead off Hwy 385" },
+        { "mile": 1.8, "elevationFt": 3880, "label": "Canyon narrows" },
+        { "mile": 3.6, "elevationFt": 3920, "label": "Trail end" }
+      ]
+    },
+    {
+      "id": "wind-cave-highland-creek",
+      "estimatedTime": "4-5 hrs (day) or overnight",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Backcountry", "Reservation Required"],
+      "trailTip": "As of September 2026, per NPS.gov, a free backcountry camping permit — available at the visitor center — is required for any overnight stay along this trail, even though no permit is needed for a day hike.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "At 7.1 miles, this is the longest surface trail in the park, crossing both open prairie and forested draws along Highland Creek.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3900, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 4200 },
+        { "mile": 4.5, "elevationFt": 4450, "label": "Highland Creek crossing" },
+        { "mile": 7.1, "elevationFt": 4600, "label": "Trail end" }
+      ]
+    },
+    {
+      "id": "wind-cave-boland-ridge",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Ridge Climb", "Panoramic Views"],
+      "trailTip": "There's little shade on this exposed ridge climb, so carry extra water and start early on warm days.",
+      "didYouKnow": "The ridge offers one of the widest views in the park of the transition zone where prairie grasslands meet Black Hills forest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4050, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 4350 },
+        { "mile": 2.6, "elevationFt": 4550, "label": "Boland Ridge summit" }
+      ]
+    },
+    {
+      "id": "wind-cave-cold-brook-canyon",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Remote", "Limestone Canyon"],
+      "trailTip": "This trail sees far fewer visitors than those near the visitor center — let someone know your plan, since the route is less clearly marked than the park's more popular trails.",
+      "didYouKnow": "The canyon's limestone walls are part of the same cave-forming rock layer that riddles the underground passages of Wind Cave itself.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3700, "label": "Trailhead" },
+        { "mile": 1.2, "elevationFt": 3850 },
+        { "mile": 2.4, "elevationFt": 4000, "label": "Trail end" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "wind-cave-bison",
+      "scientificName": "Bison bison",
+      "bestTimeOfDay": "Morning, Evening",
+      "bestSeason": "Jul-Sep (rut)",
+      "whereToLook": "Open prairie along US Highway 385 and the park's scenic drives",
+      "tags": ["Rutting Season", "Common Sight"],
+      "viewingTip": "View bison from your vehicle or from at least 100 yards away on foot — they can run over 30 mph and become especially unpredictable during the summer rut, so never approach for a photo no matter how calm a herd looks.",
+      "didYouKnow": "Wind Cave's bison herd descends from animals reintroduced in 1913, making it one of the oldest continuously managed public bison herds in the country."
+    },
+    {
+      "id": "wind-cave-prairie-dog",
+      "scientificName": "Cynomys ludovicianus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Apr-Oct (dormant in colder months)",
+      "whereToLook": "Prairie dog towns visible from park roads, especially near the visitor center",
+      "tags": ["Common Sight", "Burrowing"],
+      "viewingTip": "Watch from the roadside or a pullout rather than walking into a town — burrows can twist an ankle, and prairie dogs will dive underground the moment you get too close, cutting off their natural behavior.",
+      "didYouKnow": "Prairie dog towns support an entire ecosystem, providing burrows for burrowing owls and prey for badgers, coyotes, and black-footed ferrets."
+    },
+    {
+      "id": "wind-cave-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct (rut)",
+      "whereToLook": "Ponderosa pine forest edges bordering the prairie",
+      "tags": ["Rutting Season", "Give Space"],
+      "viewingTip": "During the fall rut, bull elk can be aggressive and unpredictable — stay at least 100 yards away and never position yourself between a bull and its herd, viewing the bugling display through binoculars instead.",
+      "didYouKnow": "A bull elk's bugle can carry over a mile across open prairie and forest, a key part of the fall rutting display."
+    },
+    {
+      "id": "wind-cave-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Open grassland along the park's main roads",
+      "tags": ["Common Sight", "Fastest Land Mammal"],
+      "viewingTip": "Pull off the road fully before stopping to watch a herd, and use binoculars rather than approaching on foot — pronghorn rely on keen eyesight and will bolt at the first sign of an approaching person.",
+      "didYouKnow": "Pronghorn evolved their speed to outrun a now-extinct American cheetah, making them far faster than any predator they face today."
+    },
+    {
+      "id": "wind-cave-big-eared-bat",
+      "scientificName": "Corynorhinus townsendii",
+      "bestTimeOfDay": "Night (rarely visible to visitors)",
+      "bestSeason": "Year-Round (hibernates in winter)",
+      "whereToLook": "Roosts deep within Wind Cave's passages, not typically visible on standard tours",
+      "tags": ["Cave Roost", "Sensitive to Disturbance"],
+      "viewingTip": "Never touch cave walls or formations on a tour, and follow all ranger instructions about decontaminating gear — roosting bat colonies are extremely sensitive to disturbance, and human-introduced fungus has devastated bat populations elsewhere.",
+      "didYouKnow": "Townsend's big-eared bats can wrap their large ears around their bodies while roosting, possibly to conserve heat during hibernation."
+    },
+    {
+      "id": "wind-cave-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Prairie edges throughout the park",
+      "tags": ["Common Sight", "Opportunistic"],
+      "viewingTip": "Never feed a coyote — a fed coyote quickly loses its wariness of people, which puts both the animal and future visitors at risk; watch from a distance with binoculars instead.",
+      "didYouKnow": "Coyotes here hunt prairie dogs as a major food source, helping keep prairie dog town populations in balance."
+    },
+    {
+      "id": "wind-cave-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Soaring over prairie and ridge thermals, especially near Rankin Ridge",
+      "tags": ["Cliff Nester", "Uncommon Sighting"],
+      "viewingTip": "Watch soaring eagles with binoculars from a distance rather than approaching a cliffside nest site if you spot one — golden eagles will abandon a nest if repeatedly disturbed during nesting season.",
+      "didYouKnow": "Golden eagles can spot a rabbit from nearly two miles away thanks to eyesight several times sharper than a human's."
+    },
+    {
+      "id": "wind-cave-cave-cricket",
+      "scientificName": "Ceuthophilus spp.",
+      "bestTimeOfDay": "Anytime (year-round cave resident)",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Near cave entrances and twilight zones on any cave tour",
+      "tags": ["Cave Dweller", "Common Sight"],
+      "viewingTip": "Look but don't touch — cave crickets are harmless and a normal part of the cave ecosystem, and handling any cave-dwelling species risks introducing contaminants harmful to more sensitive species like bats.",
+      "didYouKnow": "Cave crickets have no wings and use extremely long antennae, sometimes longer than their bodies, to feel their way through total darkness."
+    }
+  ]
+}

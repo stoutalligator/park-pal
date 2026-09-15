@@ -1,0 +1,213 @@
+{
+  "parkId": "yellowstone",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Yellowstone.co (Bear Management Areas)", "National Parks Traveler", "Cowboy State Daily"],
+  "trails": [
+    {
+      "id": "yellowstone-old-faithful",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round (full boardwalk loop best Apr-Nov; limited winter access via guided snowcoach/ski)",
+      "tags": ["Boardwalk", "Geothermal Hazard"],
+      "trailTip": "Stay on the boardwalk at all times — the ground around geysers and hot springs is a thin, unstable crust over scalding water, and stepping off it causes real, severe burns most years.",
+      "didYouKnow": "Old Faithful is not the park's biggest geyser, but it's the most predictable, erupting every 44 to 125 minutes.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.4, "elevationFt": 20 },
+        { "mile": 0.9, "elevationFt": 40, "label": "Geyser Hill" },
+        { "mile": 1.5, "elevationFt": 50, "label": "Loop Return" }
+      ]
+    },
+    {
+      "id": "yellowstone-fairy-falls",
+      "estimatedTime": "2.5-3.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Waterfall", "Overlook"],
+      "trailTip": "Stop at the short Grand Prismatic Overlook spur near the start — it's the best above-water view of the spring and adds only about a mile round trip.",
+      "didYouKnow": "At 200 feet, Fairy Falls is one of the tallest waterfalls in Yellowstone, fed by Spray and Iron Springs Creek.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 100, "label": "Grand Prismatic Overlook spur" },
+        { "mile": 2.7, "elevationFt": 180 },
+        { "mile": 3.0, "elevationFt": 200, "label": "Fairy Falls" }
+      ]
+    },
+    {
+      "id": "yellowstone-mount-washburn",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jul-Sep (snow lingers on the upper trail into early summer)",
+      "tags": ["Summit", "Wildlife"],
+      "trailTip": "Afternoon thunderstorms build quickly on this exposed ridge — start early and be off the summit lookout before storms roll in.",
+      "didYouKnow": "The fire lookout on the summit is staffed in summer and is one of the best places in the park to spot bighorn sheep along the trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Dunraven Pass Trailhead" },
+        { "mile": 2.0, "elevationFt": 500 },
+        { "mile": 4.0, "elevationFt": 1000 },
+        { "mile": 6.2, "elevationFt": 1400, "label": "Summit Lookout" }
+      ]
+    },
+    {
+      "id": "yellowstone-lamar-valley",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "May-Oct (also popular in winter for wolf-watching by road)",
+      "tags": ["Wildlife Viewing", "Bear Country"],
+      "trailTip": "This is prime grizzly and wolf habitat — carry bear spray, hike in a group, and use a spotting scope from a distance rather than closing in on animals in the open grassland.",
+      "didYouKnow": "Lamar Valley is nicknamed the 'Serengeti of North America' for the density of bison, wolves, and pronghorn visible from a single overlook.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 100 },
+        { "mile": 2.8, "elevationFt": 250 },
+        { "mile": 4.0, "elevationFt": 300, "label": "Turnaround" }
+      ]
+    },
+    {
+      "id": "yellowstone-grand-prismatic-overlook",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Overlook", "Popular"],
+      "trailTip": "The small trailhead parking lot at Fairy Falls fills by mid-morning in summer — arrive early or plan to walk in from an overflow area.",
+      "didYouKnow": "Grand Prismatic Spring's rainbow colors come from heat-loving pigmented bacteria that ring the pool, shifting color by season and water temperature.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 200 },
+        { "mile": 1.1, "elevationFt": 350 },
+        { "mile": 1.6, "elevationFt": 400, "label": "Overlook" }
+      ]
+    },
+    {
+      "id": "yellowstone-storm-point",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Jul-Sep (regularly closed in spring/early summer)",
+      "tags": ["Bear Country", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS, Storm Point is frequently closed in spring and early summer for bear activity — check current status at the Fishing Bridge Visitor Center before hiking.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The trail passes through a marmot colony along the lakeshore boulders before looping back through lodgepole forest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Indian Pond Trailhead" },
+        { "mile": 1.0, "elevationFt": 60 },
+        { "mile": 1.6, "elevationFt": 100, "label": "Storm Point" },
+        { "mile": 2.3, "elevationFt": 40, "label": "Loop Return" }
+      ]
+    },
+    {
+      "id": "yellowstone-pelican-valley",
+      "estimatedTime": "3.5-4.5 hrs",
+      "bestSeason": "Jul 4-Nov 10, day use only (closed entirely Apr 1-Jul 3)",
+      "tags": ["Bear Country", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS, Pelican Valley (Bear Management Area I) is closed to all entry April 1 through July 3, then open for day use only between 9 a.m. and 7 p.m. from July 4 through November 10 to protect grizzly bears — no off-trail travel or overnight camping is permitted.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Pelican Valley has one of the highest concentrations of grizzly bears in the lower 48 states, which is exactly why its access hours are so tightly restricted.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 100 },
+        { "mile": 4.2, "elevationFt": 200, "label": "Pelican Creek" },
+        { "mile": 6.4, "elevationFt": 150, "label": "Turnaround" }
+      ]
+    },
+    {
+      "id": "yellowstone-bunsen-peak",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Summit", "Views"],
+      "trailTip": "The trail is fully exposed to sun and wind above treeline — bring more water than you think you'll need and start early in summer.",
+      "didYouKnow": "Bunsen Peak is the eroded core of an ancient volcano, named after the physicist Robert Bunsen for his studies of geyser mechanics.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 500 },
+        { "mile": 3.0, "elevationFt": 1000 },
+        { "mile": 4.2, "elevationFt": 1300, "label": "Summit" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "yellowstone-gray-wolf",
+      "scientificName": "Canis lupus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round (easiest to spot against snow, Nov-Mar)",
+      "whereToLook": "Lamar Valley and Slough Creek pullouts",
+      "tags": ["Pack Animal", "Den Site"],
+      "viewingTip": "View only from established roadside pullouts using a spotting scope — stay at least 100 yards away, and never approach a den or rendezvous site, which park biologists deliberately keep unpublicized for this reason.",
+      "didYouKnow": "Wolves were reintroduced to Yellowstone in 1995 after being eliminated from the park by the 1920s, and their return reshaped elk behavior and even river-bank vegetation."
+    },
+    {
+      "id": "yellowstone-bison",
+      "scientificName": "Bison bison",
+      "bestTimeOfDay": "Any time of day",
+      "bestSeason": "Year-round (rut in late Jul-Aug)",
+      "whereToLook": "Lamar and Hayden valleys, roadside meadows",
+      "tags": ["Roadside", "Rut"],
+      "viewingTip": "Stay at least 25 yards away at all times and use a zoom lens for photos — bison injure more visitors than any other animal in the park, most often when people approach for a picture.",
+      "didYouKnow": "An adult bison can sprint up to 35 mph, three times faster than a human, despite weighing over 1,000 pounds."
+    },
+    {
+      "id": "yellowstone-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov (active outside denning season)",
+      "whereToLook": "Hayden Valley and Dunraven Pass meadows",
+      "tags": ["Bear Country", "Den Site"],
+      "viewingTip": "Keep at least 100 yards away, carry bear spray, and view through binoculars or a scope rather than closing the distance — give extra space in spring when sows are out with new cubs.",
+      "didYouKnow": "Yellowstone grizzlies can range over hundreds of square miles and dig up whitebark pine caches and army cutworm moths as key late-summer food sources."
+    },
+    {
+      "id": "yellowstone-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct rut",
+      "whereToLook": "Mammoth Hot Springs terraces and open valleys",
+      "tags": ["Rut"],
+      "viewingTip": "During the fall rut, bulls are aggressive and unpredictable — stay at least 25 yards back and watch from a distance with binoculars rather than approaching for a closer photo.",
+      "didYouKnow": "A bull elk's bugle can carry over a mile across open valleys during the September rut."
+    },
+    {
+      "id": "yellowstone-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Aug nesting season",
+      "whereToLook": "Yellowstone River canyon rim and lake shorelines",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "View nests only from established overlooks with binoculars or a scope — don't linger at the cliff edge near an active nest, since flushing a nesting adult can expose eggs or chicks to weather and predators.",
+      "didYouKnow": "Bald eagle nests can weigh over a ton after years of the same pair adding sticks to the same tree."
+    },
+    {
+      "id": "yellowstone-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "May-Jun fawning season",
+      "whereToLook": "Lamar and Hayden valley grasslands",
+      "tags": [],
+      "viewingTip": "Watch from the road with binoculars — during fawning season in late spring, fawns lie hidden and motionless in grass, so stay on established paths and don't walk through open meadows looking for them.",
+      "didYouKnow": "Pronghorn are the fastest land mammal in North America, capable of sustained speeds near 55 mph."
+    },
+    {
+      "id": "yellowstone-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Aug nesting season",
+      "whereToLook": "Cliffs of the Yellowstone River canyon near Artist Point",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Scan canyon cliff ledges with binoculars from established overlooks rather than scrambling toward the rim for a closer look at a nest.",
+      "didYouKnow": "Ospreys dive feet-first into water to catch fish, aided by reversible outer toes that help them grip slippery prey."
+    },
+    {
+      "id": "yellowstone-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "May-Jun calving season",
+      "whereToLook": "Willow wetlands near park rivers",
+      "tags": ["Rut"],
+      "viewingTip": "Give moose a wide berth, especially cows with calves — they can be more dangerous at close range than bears when surprised, so watch from a distance with binoculars.",
+      "didYouKnow": "Yellowstone's moose population has declined sharply since the 1988 fires reduced the mature willow and subalpine fir habitat they depend on."
+    },
+    {
+      "id": "yellowstone-trumpeter-swan",
+      "scientificName": "Cygnus buccinator",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Aug nesting season",
+      "whereToLook": "Quiet park lakes and slow river stretches",
+      "tags": ["Ground Nester"],
+      "viewingTip": "Stay well back from nesting pairs on quiet ponds and rivers and view with a spotting scope from shore — approaching by foot or boat can cause a nesting pair to abandon the site.",
+      "didYouKnow": "Trumpeter swans are North America's heaviest native waterfowl and were once nearly extinct in the Lower 48 before protection efforts in the Yellowstone region helped them recover."
+    }
+  ]
+}

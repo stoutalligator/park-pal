@@ -1,0 +1,195 @@
+{
+  "parkId": "mammoth-cave",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Bat Conservation International", "National Parks Traveler"],
+  "trails": [
+    {
+      "id": "mammoth-cave-green-river-bluffs",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Rolling Terrain"],
+      "trailTip": "Footing gets slick after rain on the bluff sections above the river, so trekking poles help on the descents; carry your own water since there are no fill stations along the route.",
+      "didYouKnow": "The bluffs offer some of the best views in the park of the Green River, the waterway responsible for carving much of the cave system below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 200 },
+        { "mile": 4.0, "elevationFt": 350 },
+        { "mile": 5.9, "elevationFt": 400, "label": "Bluff overlook" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-cedar-sink",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Karst Feature", "Steep Steps"],
+      "trailTip": "The descent into the sinkhole is on wooden stairs that can be slippery when wet or leaf-covered, so take the steps slowly, especially on the way back up.",
+      "didYouKnow": "Cedar Sink formed when the roof of an underground cave passage collapsed, exposing a stream that briefly surfaces before disappearing underground again.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 100, "label": "Sinkhole floor" },
+        { "mile": 1.7, "elevationFt": 300, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-sand-cave",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Short Walk", "Historic Site"],
+      "trailTip": "The shelter cave itself is fenced off from entry to protect the site and visitors, since this is where a famous 1925 cave rescue attempt ended in tragedy — view it from the overlook rather than trying to go inside.",
+      "didYouKnow": "Sand Cave is the site of the 1925 death of Floyd Collins, whose entrapment here became a national media sensation.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 550, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 590, "label": "Sand Cave overlook" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-echo-river-spring",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Flat", "Riverside"],
+      "trailTip": "A gentle out-and-back along the Green River to where cave water resurfaces — good for an easy add-on after a cave tour, with no significant elevation change.",
+      "didYouKnow": "Echo River, one of the cave system's underground rivers, resurfaces here after flowing unseen beneath the ridge above.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 425, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 420 },
+        { "mile": 1.0, "elevationFt": 425, "label": "Echo River Spring" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-heritage",
+      "estimatedTime": "30-40 min",
+      "bestSeason": "Year-round",
+      "tags": ["Interpretive", "Family-Friendly"],
+      "trailTip": "A short loop with interpretive signs near the historic entrance — a good option if you have limited time before or after a scheduled cave tour.",
+      "didYouKnow": "The historic entrance on this loop was used by 19th-century saltpeter miners and later by early cave tour guides, including enslaved guide Stephen Bishop.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 620, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 650 },
+        { "mile": 0.75, "elevationFt": 620, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-first-creek",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Backcountry", "Quiet"],
+      "trailTip": "One of the less-traveled loops in the park's surface backcountry, so let someone know your route and expected return time since cell coverage is patchy here.",
+      "didYouKnow": "This trail crosses a landscape riddled with sinkholes, a telltale sign of the karst cave system honeycombing the ground beneath it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 500, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 700 },
+        { "mile": 4.5, "elevationFt": 850, "label": "High point" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-sal-hollow",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Backcountry", "Remote", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, overnight camping anywhere in the park's backcountry, including along Sal Hollow, requires a free backcountry permit obtained in advance from the park; day hiking itself needs no permit.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Sal Hollow is one of the longest above-ground trails in the park, traversing hardwood ridges far from the cave tour routes.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 750 },
+        { "mile": 6.0, "elevationFt": 850 },
+        { "mile": 8.7, "elevationFt": 900, "label": "High ridge" }
+      ]
+    },
+    {
+      "id": "mammoth-cave-mammoth-dome-sink",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Short Walk", "Karst Feature"],
+      "trailTip": "A quick walk to view another collapsed sinkhole from above; stay on the marked path since the sinkhole edges can be unstable.",
+      "didYouKnow": "This sinkhole formed above the same passage system that includes Mammoth Dome, one of the tallest vertical shafts in the cave.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 580, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 640, "label": "Sinkhole overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "mammoth-cave-gray-bat",
+      "scientificName": "Myotis grisescens",
+      "bestTimeOfDay": "Dusk (emergence)",
+      "bestSeason": "Apr-Oct (active season)",
+      "whereToLook": "Roosts within cave passages; not viewable from surface trails",
+      "tags": ["Cave Roost", "Endangered", "Do Not Enter Closed Caves"],
+      "viewingTip": "As of September 2026, per the National Park Service, gray bats are federally endangered and hit hard by white-nose syndrome; never enter closed caves or disturb a roost, and only view bats on a ranger-led tour where staff manage distance and decontamination protocols.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Gray bats roost almost exclusively in caves year-round, making them especially vulnerable to disturbance and to cave-dwelling diseases like white-nose syndrome."
+    },
+    {
+      "id": "mammoth-cave-box-turtle",
+      "scientificName": "Terrapene carolina",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Forest floor along surface hiking trails",
+      "tags": ["Common", "Slow-Moving"],
+      "viewingTip": "If you see one crossing a trail, watch or step around it rather than picking it up — handling stresses the turtle and can spread pathogens between individuals.",
+      "didYouKnow": "Eastern box turtles can live 50 years or more and often use the same small home range for their entire lives."
+    },
+    {
+      "id": "mammoth-cave-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Woodlands throughout the park's surface trails",
+      "tags": ["Common"],
+      "viewingTip": "Watch from the trail with binoculars; during the fall rut, keep extra distance from bucks, which can behave unpredictably around perceived rivals.",
+      "didYouKnow": "White-tailed deer communicate alarm by flashing the white underside of their tail as they flee, which is how they got their name."
+    },
+    {
+      "id": "mammoth-cave-cave-salamander",
+      "scientificName": "Eurycea lucifuga",
+      "bestTimeOfDay": "Evening",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Damp rock near cave entrances and spring outlets",
+      "tags": ["Cave-Adjacent", "Moisture-Dependent"],
+      "viewingTip": "Look, don't touch — their skin is highly permeable and sensitive to oils, sunscreen, and insect repellent on human hands.",
+      "didYouKnow": "Despite the name, cave salamanders spend most of their time in twilight zones near cave mouths rather than deep underground."
+    },
+    {
+      "id": "mammoth-cave-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Ridge trails and forest edges",
+      "tags": ["Common", "Ground Forager"],
+      "viewingTip": "Observe foraging flocks quietly from the trail; during spring nesting season give any hen with poults extra space rather than approaching for a closer look.",
+      "didYouKnow": "Wild turkeys were once nearly eliminated from Kentucky by overhunting and habitat loss before successful 20th-century reintroduction efforts."
+    },
+    {
+      "id": "mammoth-cave-eastern-woodrat",
+      "scientificName": "Neotoma floridana",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky areas near cave entrances",
+      "tags": ["Nocturnal", "Cave-Adjacent"],
+      "viewingTip": "Rarely seen due to nocturnal habits; if you spot one at dusk near an entrance, observe quietly without shining a light directly at it for long periods.",
+      "didYouKnow": "Eastern woodrats, also called packrats, build large stick nests and are known for collecting shiny or unusual objects they find."
+    },
+    {
+      "id": "mammoth-cave-northern-cavefish",
+      "scientificName": "Amblyopsis spelaea",
+      "bestTimeOfDay": "N/A (underground)",
+      "bestSeason": "Visible only on ranger-led cave tours with river access",
+      "whereToLook": "Underground streams within the cave system",
+      "tags": ["Cave-Dwelling", "Endangered", "Guided Access Only"],
+      "viewingTip": "Only view cavefish from a boardwalk or boat on an official ranger-led tour, and never touch the water — this blind, pigmentless species is federally threatened and highly sensitive to contamination.",
+      "didYouKnow": "Northern cavefish are completely blind and lack pigment, having adapted over generations to a permanently lightless existence."
+    },
+    {
+      "id": "mammoth-cave-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open fields and forest edges on the park's surface",
+      "tags": ["Common"],
+      "viewingTip": "Enjoy distant howls or sightings from a trail or overlook; never approach or feed a coyote, which leads to dangerous habituation around people.",
+      "didYouKnow": "Coyotes expanded into Kentucky over the last century as wolves and larger predators were extirpated from the region."
+    }
+  ]
+}

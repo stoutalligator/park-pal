@@ -1,0 +1,194 @@
+{
+  "parkId": "biscayne",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "National Parks Traveler", "NOAA Marine Debris Program", "AllTrails"],
+  "trails": [
+    {
+      "id": "biscayne-spite-highway",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Nov-Apr (cooler, fewer mosquitoes); boat access only",
+      "tags": ["Boat Access Only", "Mosquitoes"],
+      "trailTip": "This trail follows an old overgrown roadbed on Elliott Key and is reachable only by private boat or the park's seasonal ferry — bring strong insect repellent, since mosquitoes can be intense even in cooler months.",
+      "didYouKnow": "Spite Highway got its name from a 1960s road-clearing project by developers hoping to subdivide the island, halted when the area became parkland — the cleared swath remains as this trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Elliott Key Harbor trailhead" },
+        { "mile": 3.5, "elevationFt": 15, "label": "Midpoint" },
+        { "mile": 7, "elevationFt": 20, "label": "Trail's end" }
+      ]
+    },
+    {
+      "id": "biscayne-jetty",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Family-Friendly"],
+      "trailTip": "A short, flat, paved path from the visitor center to a rock jetty with open bay views — a good easy option for visitors without a boat.",
+      "didYouKnow": "This is one of the only trails in the park accessible without a boat, since over 95% of Biscayne National Park is open water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.25, "elevationFt": 8 },
+        { "mile": 0.5, "elevationFt": 10, "label": "Jetty overlook" }
+      ]
+    },
+    {
+      "id": "biscayne-convoy-point",
+      "estimatedTime": "10 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Accessible"],
+      "trailTip": "A wheelchair-accessible boardwalk over the mangroves right behind the visitor center, good for a quick look at mangrove habitat without a boat trip.",
+      "didYouKnow": "The mangroves visible from this boardwalk are a nursery habitat for juvenile fish, sharks, and spiny lobsters before they move out to the reef.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.15, "elevationFt": 5, "label": "Boardwalk overlook" },
+        { "mile": 0.3, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "biscayne-boca-chita",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round; boat access only",
+      "tags": ["Boat Access Only", "Historic Lighthouse"],
+      "trailTip": "As of September 2026, per NPS.gov, camping and docking fees at Boca Chita are waived from May 1 through September 30 each year, and sites are first-come, first-served with no advance reservation — pack out everything, since there is no trash service on the island.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The ornamental lighthouse at Boca Chita was built in the 1930s by Mark Honeywell as a decorative feature for his private retreat and has never functioned as an official aid to navigation.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boca Chita Harbor" },
+        { "mile": 0.5, "elevationFt": 10, "label": "Lighthouse" },
+        { "mile": 1.0, "elevationFt": 0, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "biscayne-adams-key",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round; day-use only, boat access",
+      "tags": ["Boat Access Only", "Day Use Only"],
+      "trailTip": "Adams Key is day-use only with no overnight camping — a quiet, short nature walk through what was once a private resort island.",
+      "didYouKnow": "Adams Key was once home to the Cocolobo Cay Club, a private retreat that hosted several U.S. presidents before the island became parkland.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Adams Key dock" },
+        { "mile": 0.25, "elevationFt": 5 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "biscayne-mangrove-nature",
+      "estimatedTime": "10 min",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Family-Friendly"],
+      "trailTip": "A very short boardwalk loop through red mangroves — good for spotting small fish and crabs in the shallow water beneath the walkway.",
+      "didYouKnow": "Red mangroves' arching prop roots filter salt and help trap sediment, slowly building new land at the water's edge.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 5, "label": "Mangrove overlook" },
+        { "mile": 0.2, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "biscayne-sands-key",
+      "estimatedTime": "15 min",
+      "bestSeason": "Year-round; boat access only",
+      "tags": ["Boat Access Only", "Remote"],
+      "trailTip": "A quiet, little-visited path on a small mangrove-fringed key — bring your own drinking water, as there are no facilities on the island.",
+      "didYouKnow": "Sands Key sits within one of the park's undeveloped barrier-island beach areas used by nesting loggerhead sea turtles each summer.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Sands Key dock" },
+        { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.4, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "biscayne-totten-key",
+      "estimatedTime": "45 min - 1 hr",
+      "bestSeason": "Year-round; boat access only",
+      "tags": ["Boat Access Only", "Remote"],
+      "trailTip": "The park's largest key has one of the least-visited trails in the park — tell someone your plan before heading out, since cell service is unreliable and boat traffic to this key is light.",
+      "didYouKnow": "Totten Key was historically farmed for key limes and pineapples before the land was acquired for the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Totten Key dock" },
+        { "mile": 0.75, "elevationFt": 10, "label": "Midpoint" },
+        { "mile": 1.5, "elevationFt": 5, "label": "Trail's end" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "biscayne-american-crocodile",
+      "scientificName": "Crocodylus acutus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round; more visible in cooler months while basking",
+      "whereToLook": "Mangrove-lined shallows near Convoy Point and the park's canals",
+      "tags": ["Endangered", "Ambush Predator"],
+      "viewingTip": "View any crocodile from a boat or the shoreline with binoculars or a zoom lens, and never approach, feed, or try to get closer for a photo — this is a federally protected, potentially dangerous animal, and disturbing it is both unsafe and illegal.",
+      "didYouKnow": "Biscayne is near the northern edge of the American crocodile's U.S. range and one of only a handful of parks where the species can be reliably found."
+    },
+    {
+      "id": "biscayne-manatee",
+      "scientificName": "Trichechus manatus",
+      "bestTimeOfDay": "Midday, when sunlight helps spot them near the surface",
+      "bestSeason": "Nov-Apr (manatees concentrate in warmer, shallow water)",
+      "whereToLook": "Shallow seagrass flats and channels near the visitor center and canals",
+      "tags": ["Seasonal", "Slow-Moving"],
+      "viewingTip": "Watch quietly from a boat or shoreline with polarized sunglasses and binoculars, keep idle speed and distance in any boat near a surfacing manatee, and never touch or try to swim toward one, even though they appear slow and approachable.",
+      "didYouKnow": "Manatees must surface to breathe every few minutes and can be spotted by watching for the ripple of a snout or tail breaking the surface."
+    },
+    {
+      "id": "biscayne-loggerhead-turtle",
+      "scientificName": "Caretta caretta",
+      "bestTimeOfDay": "Night (nesting females); daytime for feeding turtles offshore",
+      "bestSeason": "May-Oct (nesting season on the park's outer keys)",
+      "whereToLook": "Undeveloped beaches on Elliott Key and other barrier islands",
+      "tags": ["Nesting Season", "Protected"],
+      "viewingTip": "View any turtle from a distance and never use flashlights or flash photography near a nesting female or hatchlings on a barrier-island beach — light disorients them and can lead them away from the water.",
+      "didYouKnow": "A female loggerhead returns to nest on the same general stretch of beach where she herself hatched, sometimes decades earlier."
+    },
+    {
+      "id": "biscayne-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round; Dec-Apr nesting",
+      "whereToLook": "Nests atop channel markers and dead snags throughout the bay",
+      "tags": ["Structure Nester", "Fish Hunter"],
+      "viewingTip": "Watch nesting platforms from a boat at a comfortable distance with binoculars rather than motoring close for a photo, especially during winter nesting season when a disturbed adult may abandon the nest.",
+      "didYouKnow": "Ospreys plunge feet-first into the water to catch fish and can be seen carrying prey aligned head-first in flight to reduce wind drag."
+    },
+    {
+      "id": "biscayne-rainbow-parrotfish",
+      "scientificName": "Scarus guacamaia",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Seagrass beds and patch reefs accessible by snorkeling tours",
+      "tags": ["Reef Fish", "Common"],
+      "viewingTip": "Observe parrotfish while snorkeling by keeping a relaxed distance and letting them graze undisturbed — avoid chasing or cornering fish for a closer look, which stresses them and can damage the surrounding reef.",
+      "didYouKnow": "Parrotfish bite and grind coral to feed on the algae inside it, and their digested coral waste is a major natural source of the white sand found on nearby beaches."
+    },
+    {
+      "id": "biscayne-bottlenose-dolphin",
+      "scientificName": "Tursiops truncatus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open bay channels, often visible from tour boats",
+      "tags": ["Common", "Playful"],
+      "viewingTip": "Watch dolphins from a boat at idle speed and a respectful distance, letting them approach if they choose rather than pursuing or trying to swim with them, per federal marine mammal protection guidelines.",
+      "didYouKnow": "Bottlenose dolphins in Biscayne Bay have been documented using cooperative feeding strategies, herding fish into shallow mud banks together."
+    },
+    {
+      "id": "biscayne-spotted-eagle-ray",
+      "scientificName": "Aetobatus narinari",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Sandy flats and seagrass beds visible from boats or while snorkeling",
+      "tags": ["Graceful Swimmer", "Uncommon"],
+      "viewingTip": "Watch eagle rays glide over the seagrass from a boat or while snorkeling at a distance, using a mask and fins rather than free-diving down toward one for a closer look.",
+      "didYouKnow": "Spotted eagle rays can leap fully out of the water, a behavior thought to help them shake off parasites or possibly communicate."
+    },
+    {
+      "id": "biscayne-green-sea-turtle",
+      "scientificName": "Chelonia mydas",
+      "bestTimeOfDay": "Daytime for feeding turtles; night for nesting females",
+      "bestSeason": "May-Oct (nesting season)",
+      "whereToLook": "Seagrass meadows throughout the bay, and outer key beaches during nesting season",
+      "tags": ["Nesting Season", "Protected"],
+      "viewingTip": "Watch feeding turtles from a boat or while snorkeling without chasing or touching them, and on a nesting beach at night keep well back, skip flash photography and white light, and let a nesting female or emerging hatchlings finish undisturbed.",
+      "didYouKnow": "Green sea turtles are named for the color of their body fat, not their shell — a result of their mostly plant-based diet of seagrass and algae."
+    }
+  ]
+}

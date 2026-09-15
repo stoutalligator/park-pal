@@ -1,0 +1,220 @@
+{
+  "parkId": "new-river-gorge",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (New River Gorge National Park & Preserve)", "New River Alliance of Climbers", "West Virginia DNR"],
+  "trails": [
+    {
+      "id": "new-river-gorge-long-point",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round; best fall foliage Oct",
+      "tags": ["Overlook", "Family Friendly"],
+      "trailTip": "Time your hike for late afternoon light on the New River Gorge Bridge, and note the final overlook has no guardrail, so keep kids and pets close to the edge.",
+      "didYouKnow": "Long Point frames one of the most photographed views of the New River Gorge Bridge, once the longest steel single-span arch bridge in the world.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1400, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 1500 },
+        { "mile": 1.6, "elevationFt": 1600, "label": "Long Point Overlook" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-endless-wall",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Cliff Views", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS New River Gorge and the New River Alliance of Climbers, some cliff-face climbing routes along Endless Wall are voluntarily closed roughly February through July to protect nesting peregrine falcons — the hiking trail itself stays open, but stay back from the cliff edge and respect any posted closure signs.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Endless Wall's sandstone cliffs offer some of the best rock climbing in the eastern U.S. and were part of the peregrine falcon recovery program's release sites in the Gorge.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1300, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 1450 },
+        { "mile": 2.0, "elevationFt": 1550, "label": "Diamond Point Junction Area" },
+        { "mile": 2.4, "elevationFt": 1550, "label": "Endless Wall Overlook" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-kaymoor",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Steep", "Historic Ruins"],
+      "trailTip": "The trail includes a long staircase (roughly 800 steps) down to the old coal mine ruins, so pace yourself on the return climb and bring water even for this shorter hike.",
+      "didYouKnow": "Kaymoor was once one of the most productive coal mines in the New River Gorge, and the trail passes the ruins of its coke ovens and mine structures.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1500, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 1100 },
+        { "mile": 1.4, "elevationFt": 700, "label": "Coke Ovens" },
+        { "mile": 2.0, "elevationFt": 600, "label": "Mine Ruins / River" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-grandview-rim",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round; best fall foliage Oct",
+      "tags": ["Rim Walk", "Overlook"],
+      "trailTip": "Stick to the marked overlooks along the rim — the cliff edges are unfenced in several spots, so keep a firm hold on kids' hands near the viewpoints.",
+      "didYouKnow": "Grandview's overlooks sit above one of the river's most dramatic horseshoe bends, formed as the New River — one of the oldest rivers in the world — cuts through ancient rock.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2500, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 2600 },
+        { "mile": 3.2, "elevationFt": 2650, "label": "Turkey Spur Overlook" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-castle-rock",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Easy Loop", "Rock Formations"],
+      "trailTip": "A short, easy loop good for families — stick to the trail around the sandstone boulders rather than climbing on them, since the rock can be slick when damp.",
+      "didYouKnow": "The sandstone boulders along this trail formed from the same resistant Nuttall Sandstone layer that caps many of the Gorge's climbing cliffs.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1600, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 1700, "label": "Castle Rock" },
+        { "mile": 1.0, "elevationFt": 1600, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-diamond-point",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Easy Walk", "Bridge Views", "Boardwalk"],
+      "trailTip": "This short boardwalk loop is wheelchair- and stroller-friendly and offers one of the easiest classic views of the New River Gorge Bridge in the park.",
+      "didYouKnow": "The New River Gorge Bridge visible from this overlook rises 876 feet above the river, making it one of the highest bridges in the United States.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1600, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 1630, "label": "Bridge Overlook" },
+        { "mile": 0.5, "elevationFt": 1600, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-fern-creek",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Easy Walk", "Creekside"],
+      "trailTip": "A quiet, shaded creekside walk near Fayetteville that's a good low-key option after a busier hike elsewhere in the park.",
+      "didYouKnow": "Fern Creek's shaded, moist ravine supports a noticeably different, ferny understory than the drier rim trails just above it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1550, "label": "Trailhead" },
+        { "mile": 0.45, "elevationFt": 1650, "label": "Creek Crossing" },
+        { "mile": 0.9, "elevationFt": 1750, "label": "Trail End" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-thurmond-minden",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Rail Trail", "Historic"],
+      "trailTip": "This flat former rail bed follows the river past the historic town of Thurmond — bring a bike if you'd rather ride than walk the full 5 miles.",
+      "didYouKnow": "Thurmond was once one of the busiest rail towns on the C&O Railway, shipping more freight revenue in the early 1900s than Cincinnati and Richmond combined.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1400, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 1500 },
+        { "mile": 5.0, "elevationFt": 1600, "label": "Trail End" }
+      ]
+    },
+    {
+      "id": "new-river-gorge-cunard-arrowhead",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round; spring wildflowers Apr-May",
+      "tags": ["Riverside", "Wildflowers"],
+      "trailTip": "This gentle riverside trail through hemlock forest is a good spring wildflower walk — watch your footing on tree roots near the river's edge.",
+      "didYouKnow": "The hemlocks along this trail are part of a forest type increasingly threatened across Appalachia by the invasive hemlock woolly adelgid.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1450, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 1500 },
+        { "mile": 2.7, "elevationFt": 1550, "label": "Arrowhead Trailhead" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "new-river-gorge-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov (active); hyperphagia Aug-Oct",
+      "whereToLook": "Forested slopes throughout the gorge, especially near berry patches",
+      "tags": ["Forager", "Give Space"],
+      "viewingTip": "If you see a bear, stop, watch from a distance with binoculars, and back away slowly rather than approaching — never leave food out, since a bear that learns to associate people with food becomes a safety problem for both.",
+      "didYouKnow": "New River Gorge's black bear population has grown enough in recent decades that sightings near trailheads and campgrounds are now fairly routine in late summer and fall."
+    },
+    {
+      "id": "new-river-gorge-timber-rattlesnake",
+      "scientificName": "Crotalus horridus",
+      "bestTimeOfDay": "Warm afternoons",
+      "bestSeason": "Apr-Oct (basking); denning Nov-Mar",
+      "whereToLook": "Sunny sandstone outcrops along the rim trails",
+      "tags": ["Venomous", "Give Space"],
+      "viewingTip": "If you spot one basking on a rock, admire it from several feet away and never try to move, handle, or corner it — timber rattlesnakes generally only strike defensively, so simply giving it a wide berth on the trail is all that's needed.",
+      "didYouKnow": "Timber rattlesnakes can live 20-30 years and often return to the same rocky den site to overwinter year after year."
+    },
+    {
+      "id": "new-river-gorge-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Over the New River below the gorge bridge, especially near calmer stretches",
+      "tags": ["Fish Hunter", "River Bird"],
+      "viewingTip": "Watch from a riverside overlook or boat with binoculars as ospreys hover and dive for fish — keep your distance from any nest platform or snag they're using.",
+      "didYouKnow": "Ospreys have a reversible outer toe and barbed foot pads that let them grip slippery fish firmly in flight."
+    },
+    {
+      "id": "new-river-gorge-river-otter",
+      "scientificName": "Lontra canadensis",
+      "bestTimeOfDay": "Morning / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Quieter stretches of the New River and its tributary creeks",
+      "tags": ["Reintroduced", "Rare Sighting"],
+      "viewingTip": "Otters are shy and easily spooked, so watch quietly from the bank with binoculars rather than approaching the water's edge where you see one — never try to follow or corner a family group.",
+      "didYouKnow": "River otters were reintroduced to West Virginia starting in the 1980s after being trapped out of much of the state, and the New River Gorge population is a conservation success story."
+    },
+    {
+      "id": "new-river-gorge-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Year-round; gobbling peaks Apr-May",
+      "whereToLook": "Forest edges and old fields throughout the gorge",
+      "tags": ["Common", "Ground Forager"],
+      "viewingTip": "Watch flocks from the trail with binoculars and never approach or try to feed them — wild turkeys that lose their wariness of people are more vulnerable to predators and vehicles.",
+      "didYouKnow": "Wild turkeys can run up to 25 mph and fly in short, powerful bursts despite their bulky appearance."
+    },
+    {
+      "id": "new-river-gorge-copperhead",
+      "scientificName": "Agkistrodon contortrix",
+      "bestTimeOfDay": "Warm afternoons/evenings",
+      "bestSeason": "Apr-Oct (active); denning Nov-Mar",
+      "whereToLook": "Rock ledges and leaf litter above the gorge rim",
+      "tags": ["Venomous", "Give Space"],
+      "viewingTip": "Copperheads rely on camouflage and rarely strike unless stepped on or grabbed, so watch where you place your hands and feet on rocky trails and simply step around one if you see it, giving it plenty of room.",
+      "didYouKnow": "A copperhead's banded, leaf-litter pattern makes it one of the best-camouflaged snakes in Appalachian forests, which is why most bites happen when someone accidentally steps too close."
+    },
+    {
+      "id": "new-river-gorge-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Feb-Jul nesting",
+      "whereToLook": "Sandstone cliffs along Endless Wall and other climbing areas",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS New River Gorge and the New River Alliance of Climbers, nesting-season cliff closures (roughly February-July) are used as needed to protect active nests — view from a rim overlook with binoculars rather than approaching the cliff edge or nest ledges.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Peregrine falcons were reintroduced to the New River Gorge through a 'hacking' program after being wiped out east of the Mississippi by DDT, and the species was removed from the U.S. endangered species list in 1999."
+    },
+    {
+      "id": "new-river-gorge-belted-kingfisher",
+      "scientificName": "Megaceryle alcyon",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Perched on snags and wires along the New River",
+      "tags": ["River Bird", "Common"],
+      "viewingTip": "Watch from the riverbank with binoculars as it hovers and dives for fish — avoid lingering near a bank burrow, since kingfishers nest in tunnels dug into dirt banks.",
+      "didYouKnow": "Belted kingfishers dig nesting burrows several feet deep into vertical riverbanks, using their bills as tools."
+    },
+    {
+      "id": "new-river-gorge-black-vulture",
+      "scientificName": "Coragyps atratus",
+      "bestTimeOfDay": "Midday (soaring on thermals)",
+      "bestSeason": "Year-round",
+      "whereToLook": "Soaring above the gorge rim, especially near overlooks",
+      "tags": ["Scavenger", "Common"],
+      "viewingTip": "Watch from an overlook with binoculars as vultures ride thermals along the rim — never approach a roost site, since black vultures can be defensive if crowded.",
+      "didYouKnow": "Unlike turkey vultures, black vultures have a poor sense of smell and instead often follow turkey vultures to locate carrion."
+    }
+  ]
+}

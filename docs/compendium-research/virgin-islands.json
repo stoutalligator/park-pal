@@ -1,0 +1,198 @@
+{
+  "parkId": "virgin-islands",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "DOI.gov", "explorestj.com", "Matador Network", "seestjohn.com"],
+  "trails": [
+    {
+      "id": "virgin-islands-reef-bay",
+      "estimatedTime": "2-3 hrs one-way (4-5 hrs round trip)",
+      "bestSeason": "Dec-Apr (cooler, drier hiking conditions)",
+      "tags": ["Petroglyphs", "Historic Ruins", "Steep Return Climb"],
+      "trailTip": "The hike down to Reef Bay Beach is easy, but the return climb back up roughly 900 feet is strenuous in tropical heat — bring at least two liters of water per person, or reserve a spot on the NPS's weekly guided hike, which ends with a boat ride back to Cruz Bay instead of the climb.",
+      "didYouKnow": "The Taino petroglyphs along a side spur near a freshwater pool are believed to be several hundred years old and may represent figures from Taino cosmology.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 900, "label": "Reef Bay Trailhead" },
+        { "mile": 0.5, "elevationFt": 650 },
+        { "mile": 1.0, "elevationFt": 400, "label": "Petroglyph spur junction" },
+        { "mile": 1.6, "elevationFt": 150 },
+        { "mile": 2.2, "elevationFt": 0, "label": "Reef Bay Beach" }
+      ]
+    },
+    {
+      "id": "virgin-islands-ram-head",
+      "estimatedTime": "1.5-2 hrs round trip",
+      "bestSeason": "Nov-Apr (avoid midday sun in summer)",
+      "tags": ["Exposure", "Coastal Cliffs", "No Shade"],
+      "trailTip": "This trail is fully exposed to sun and wind with no shade or water source along the way — start early or late in the day, wear sun protection, and stay back from the crumbling cliff edge at the point.",
+      "didYouKnow": "Ram Head sits atop ancient volcanic rock and was reportedly used as a lookout point to spot approaching ships during the colonial era.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Salt Pond Bay Trailhead" },
+        { "mile": 0.7, "elevationFt": 100 },
+        { "mile": 1.3, "elevationFt": 180 },
+        { "mile": 2.0, "elevationFt": 200, "label": "Ram Head overlook" }
+      ]
+    },
+    {
+      "id": "virgin-islands-annaberg",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-Round",
+      "tags": ["Historic Ruins", "Paved Path", "Family Friendly"],
+      "trailTip": "The paved, wheelchair-accessible loop passes interpretive signs explaining the estate's 18th-century sugar and rum production — free ranger-led tours run seasonally, so check the visitor center schedule.",
+      "didYouKnow": "Annaberg was one of more than two dozen sugar plantations on St. John, and its windmill tower is one of the best-preserved on the island.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Parking area" },
+        { "mile": 0.15, "elevationFt": 10, "label": "Windmill ruins" },
+        { "mile": 0.3, "elevationFt": 20, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "virgin-islands-lind-point",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-Round",
+      "tags": ["Forest Shade", "Beach Access"],
+      "trailTip": "Apply reef-safe sunscreen before you arrive at Honeymoon Beach — applying it on the sand can wash residue directly onto the coral reef just offshore.",
+      "didYouKnow": "The trail passes the ruins of a small 18th-century Danish lookout near Lind Point, built to watch for smugglers.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Cruz Bay Trailhead" },
+        { "mile": 0.5, "elevationFt": 250, "label": "Lind Point overlook" },
+        { "mile": 1.1, "elevationFt": 0, "label": "Honeymoon Beach" }
+      ]
+    },
+    {
+      "id": "virgin-islands-caneel-hill",
+      "estimatedTime": "1.5-2 hrs round trip",
+      "bestSeason": "Nov-Apr",
+      "tags": ["Steep Climb", "Panoramic Views"],
+      "trailTip": "The climb is short but steep and rooty — trekking poles help on the loose, dry-forest footing, and the summit view is clearest during the less-hazy winter months.",
+      "didYouKnow": "At 719 feet, Caneel Hill is the highest point near Cruz Bay and offers views across Pillsbury Sound to the British Virgin Islands.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near Cruz Bay" },
+        { "mile": 0.8, "elevationFt": 350 },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 2.2, "elevationFt": 719, "label": "Caneel Hill summit" }
+      ]
+    },
+    {
+      "id": "virgin-islands-francis-bay",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-Round",
+      "tags": ["Flat", "Mangroves", "Birdwatching"],
+      "trailTip": "Bring binoculars — the boardwalk over the salt pond is one of the best birdwatching spots on St. John, especially for herons and egrets at dawn.",
+      "didYouKnow": "Francis Bay's salt pond and mangroves once bordered another sugar estate, and the trail still passes its plantation ruins.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 20, "label": "Salt pond boardwalk" },
+        { "mile": 0.5, "elevationFt": 5, "label": "Francis Bay Beach" }
+      ]
+    },
+    {
+      "id": "virgin-islands-yawzi-point",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-Round",
+      "tags": ["Coastal", "Snorkeling Access"],
+      "trailTip": "The trail is short but rocky and can be slick after rain — sturdy shoes work better than sandals for the final scramble to the point.",
+      "didYouKnow": "Yawzi Point takes its name from 'yaws,' a tropical disease once treated at a nearby quarantine site.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Lameshur Bay Trailhead" },
+        { "mile": 0.25, "elevationFt": 80 },
+        { "mile": 0.5, "elevationFt": 100, "label": "Yawzi Point" }
+      ]
+    },
+    {
+      "id": "virgin-islands-bordeaux-mountain",
+      "estimatedTime": "1.5-2 hrs round trip",
+      "bestSeason": "Nov-Apr",
+      "tags": ["Remote", "Panoramic Views"],
+      "trailTip": "This trail sees far fewer visitors than the north shore trails — let someone know your plan and carry more water than you think you'll need, since cell service is unreliable along much of the route.",
+      "didYouKnow": "At around 1,277 feet, Bordeaux Mountain is the highest point on St. John, though this trail approaches a lower shoulder of the peak rather than the true summit.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 700, "label": "Trailhead off Centerline Road" },
+        { "mile": 0.8, "elevationFt": 900 },
+        { "mile": 1.4, "elevationFt": 1100 },
+        { "mile": 2.0, "elevationFt": 1200, "label": "Overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "virgin-islands-hawksbill-turtle",
+      "scientificName": "Eretmochelys imbricata",
+      "bestTimeOfDay": "Daytime (snorkeling); nesting occurs at night",
+      "bestSeason": "Jun-Nov (typical nesting season)",
+      "whereToLook": "Reefs at Trunk Bay and Salt Pond Bay while snorkeling",
+      "tags": ["Reef Species", "Nesting Beach"],
+      "viewingTip": "Look for hawksbills while snorkeling over Trunk Bay's or Salt Pond Bay's reefs rather than searching nesting beaches after dark — sea turtles are federally protected, and approaching a nesting female or her nest is both illegal and harmful, so watch from a respectful distance with a mask and fins instead.",
+      "didYouKnow": "Hawksbills get their name from their narrow, beak-like mouths, which they use to pick sponges out of tight reef crevices."
+    },
+    {
+      "id": "virgin-islands-brown-pelican",
+      "scientificName": "Pelecanus occidentalis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Diving for fish just offshore at Cruz Bay and Caneel Bay",
+      "tags": ["Coastal", "Common Sight"],
+      "viewingTip": "Watch pelicans fold their wings and dive from a boat, dock, or beach rather than paddling a kayak into their fishing path — binoculars bring the dramatic plunge-dive into view without crowding their feeding area.",
+      "didYouKnow": "A pelican's dive can be spotted from over 60 feet in the air, and air sacs beneath its skin cushion the impact when it hits the water."
+    },
+    {
+      "id": "virgin-islands-bananaquit",
+      "scientificName": "Coereba flaveola",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Flowering shrubs and picnic areas near Trunk Bay and Cinnamon Bay",
+      "tags": ["Common Sight", "Songbird"],
+      "viewingTip": "Bananaquits are bold around people, but resist the urge to offer food or sugar water — human food harms their health and habituates them to unsafe behavior around visitors.",
+      "didYouKnow": "Bananaquits build a distinctive domed, enclosed nest with a side entrance, unlike the open cup nests of most songbirds."
+    },
+    {
+      "id": "virgin-islands-reef-squid",
+      "scientificName": "Sepioteuthis sepioidea",
+      "bestTimeOfDay": "Daytime, Dusk",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Shallow seagrass and reef edges at Trunk Bay and Waterlemon Cay while snorkeling",
+      "tags": ["Reef Species", "Snorkeling"],
+      "viewingTip": "Hold still and watch from a few feet away — reef squid often hover in small groups and will flash color patterns if approached too closely, so give them room to continue their natural behavior undisturbed.",
+      "didYouKnow": "Reef squid can rapidly shift the color and pattern of their skin using pigment cells called chromatophores, both to camouflage and to communicate with each other."
+    },
+    {
+      "id": "virgin-islands-mongoose",
+      "scientificName": "Herpestes javanicus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Darting across trails and roadsides throughout the park",
+      "tags": ["Invasive Species", "Common Sight"],
+      "viewingTip": "Mongooses are an introduced species originally brought in to control rats in sugarcane fields — watch them from a distance, but never feed them, since human food increases conflicts with native wildlife and ground-nesting birds.",
+      "didYouKnow": "Mongooses were introduced to the Caribbean in the 1800s to control rats, but being active by day while rats are active at night meant the two rarely crossed paths — instead mongooses became a major threat to native ground-nesting birds and reptiles."
+    },
+    {
+      "id": "virgin-islands-hermit-crab",
+      "scientificName": "Coenobita clypeatus",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Beach edges and leaf litter along the Lind Point and Cinnamon Bay trails",
+      "tags": ["Common Sight", "Nocturnal"],
+      "viewingTip": "Let hermit crabs choose their own path across the trail rather than picking them up to inspect their shell — handling stresses them and can cause them to abandon a shell they need for protection.",
+      "didYouKnow": "As a hermit crab grows, it must find and move into a larger empty shell, sometimes lining up by size in a 'vacancy chain' to trade shells with one another."
+    },
+    {
+      "id": "virgin-islands-brown-booby",
+      "scientificName": "Sula leucogaster",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Diving for fish off rocky offshore cays like Congo Cay, best viewed from a boat",
+      "tags": ["Seabird", "Nesting Cay"],
+      "viewingTip": "View nesting boobies from a boat well offshore rather than landing on the small cays where they breed — binoculars or a spotting scope give a clear view of their dives without disturbing the colony.",
+      "didYouKnow": "Brown boobies get their name from the Spanish word 'bobo,' meaning foolish, because early sailors found the birds easy to catch due to their lack of fear of humans on nesting islands."
+    },
+    {
+      "id": "virgin-islands-donkey",
+      "scientificName": "Equus africanus asinus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-Round",
+      "whereToLook": "Roadsides and trails throughout St. John, especially Centerline Road",
+      "tags": ["Invasive Species", "Roadside Sighting"],
+      "viewingTip": "Feral donkeys may approach vehicles expecting food — never feed or pet them, since it encourages dangerous roadside crowding and can harm their diet; slow down and give them room to move off the road on their own.",
+      "didYouKnow": "St. John's wild donkeys descend from animals brought by Danish colonists in the 1700s to work the island's sugar plantations."
+    }
+  ]
+}

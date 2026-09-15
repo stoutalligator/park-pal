@@ -1,0 +1,203 @@
+{
+  "parkId": "olympic",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (Olympic National Park)", "Washington Trails Association (WTA)", "NPS spotted owl monitoring reports"],
+  "trails": [
+    {
+      "id": "olympic-hoh-river",
+      "estimatedTime": "8-10 hrs or overnight",
+      "bestSeason": "Year-round (rainiest Oct-Apr); best trail conditions Jun-Sep",
+      "tags": ["Rainforest", "Long Approach"],
+      "trailTip": "As of September 2026, per NPS, the Hoh entrance station sees 1-2 hour wait times on busy summer days between 9am-5pm, so arrive before 9am or after 5pm and check nps.gov/olym for current road/parking conditions before you go.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Hoh Rain Forest receives up to 170 inches of rain a year, making it one of the wettest places in the contiguous United States.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 600, "label": "Trailhead" },
+        { "mile": 5.0, "elevationFt": 1000 },
+        { "mile": 10.0, "elevationFt": 2000 },
+        { "mile": 17.3, "elevationFt": 4200, "label": "Blue Glacier Overlook" }
+      ]
+    },
+    {
+      "id": "olympic-hurricane-hill",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Paved", "Panoramic Views"],
+      "trailTip": "This paved trail is popular and can be crowded midday in summer, and snow can linger on the pavement into July, so check current conditions and bring traction devices in early season.",
+      "didYouKnow": "On a clear day, Hurricane Hill's summit offers views spanning from the Olympic Range to Vancouver Island across the Strait of Juan de Fuca.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5200, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 5500 },
+        { "mile": 1.6, "elevationFt": 5757, "label": "Hurricane Hill Summit" }
+      ]
+    },
+    {
+      "id": "olympic-sol-duc-falls",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Waterfall", "Family Friendly"],
+      "trailTip": "A short, well-graded forest walk suitable for most fitness levels — the falls are especially powerful in spring during snowmelt.",
+      "didYouKnow": "Sol Duc Falls splits the river into three separate channels that plunge into a narrow, mossy canyon.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1900, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 2000 },
+        { "mile": 1.6, "elevationFt": 2100, "label": "Sol Duc Falls" }
+      ]
+    },
+    {
+      "id": "olympic-hall-of-mosses",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Easy Loop", "Old Growth"],
+      "trailTip": "Stay on the boardwalk and marked path to protect the shallow root systems of the moss-draped bigleaf maples, which are easily damaged by foot traffic.",
+      "didYouKnow": "The bigleaf maples in the Hall of Mosses can support hundreds of pounds of epiphytic moss and fern growth on their branches without harming the tree.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 600, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 650 },
+        { "mile": 0.8, "elevationFt": 700, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "olympic-ozette-triangle",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Year-round; check tide tables for coastal segment",
+      "tags": ["Boardwalk", "Tide Dependent"],
+      "trailTip": "As of September 2026, per NPS, the coastal leg between Sand Point and Cape Alava should be timed around a falling or low tide, since sections are impassable at high tide, so check the current tide table before starting.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Ozette Triangle passes ancient petroglyphs at Wedding Rocks, carved by ancestors of the Makah people.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 20, "label": "Cape Alava (Coast)" },
+        { "mile": 6.3, "elevationFt": 20, "label": "Sand Point (Coast)" },
+        { "mile": 9.4, "elevationFt": 20, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "olympic-marymere-falls",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Waterfall", "Family Friendly"],
+      "trailTip": "A short, shaded walk near Lake Crescent to a 90-foot waterfall — footing can be slick on the final approach, especially after rain.",
+      "didYouKnow": "Marymere Falls drops about 90 feet through an old-growth forest of Douglas-fir and western hemlock, some of which are centuries old.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 600, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 750 },
+        { "mile": 0.9, "elevationFt": 800, "label": "Marymere Falls" }
+      ]
+    },
+    {
+      "id": "olympic-high-divide-loop",
+      "estimatedTime": "Full day or overnight (8-10 hrs)",
+      "bestSeason": "Late Jul-Sep",
+      "tags": ["Alpine Loop", "Permit Required", "Wildlife"],
+      "trailTip": "As of September 2026, per NPS, overnight camping along this loop requires a wilderness permit reserved in advance through recreation.gov, and snow can linger on the high sections into July, so check current trail conditions before attempting the full loop.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The High Divide offers one of the best panoramic views of Mount Olympus and its glaciers reachable without technical climbing.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 1900, "label": "Trailhead" },
+        { "mile": 5.0, "elevationFt": 4000 },
+        { "mile": 9.0, "elevationFt": 5474, "label": "High Divide" },
+        { "mile": 14.0, "elevationFt": 4200 },
+        { "mile": 19.3, "elevationFt": 1900, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "olympic-quinault-rainforest",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round (rainiest Oct-Apr)",
+      "tags": ["Rainforest", "Old Growth"],
+      "trailTip": "This loop near Lake Quinault passes some of the park's largest trees — stay on the trail to protect the shallow, moisture-dependent root systems of the old-growth giants.",
+      "didYouKnow": "The Quinault Rain Forest is home to some of the largest known Sitka spruce and western hemlock trees in the world.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 200, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 400 },
+        { "mile": 4.0, "elevationFt": 500, "label": "Loop close" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "olympic-roosevelt-elk",
+      "scientificName": "Cervus canadensis roosevelti",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round; rut Sep-Oct",
+      "whereToLook": "Rainforest valleys like the Hoh and Quinault",
+      "tags": ["Rut Season", "Common"],
+      "viewingTip": "During the September-October rut, bulls are more aggressive and unpredictable, so view herds from well off the trail with binoculars and never approach, especially between a cow and her calf.",
+      "didYouKnow": "Olympic's Roosevelt elk are the largest of the elk subspecies and were the reason the park's predecessor, Mount Olympus National Monument, was created in 1909 to protect them."
+    },
+    {
+      "id": "olympic-marmot",
+      "scientificName": "Marmota olympus",
+      "bestTimeOfDay": "Mid-morning",
+      "bestSeason": "Jun-Sep (hibernates most of the year)",
+      "whereToLook": "Subalpine meadows near Hurricane Ridge and High Divide",
+      "tags": ["Endemic", "Burrower"],
+      "viewingTip": "Watch and listen for their whistled alarm calls from the trail with binoculars — this species exists nowhere else on Earth, so give burrow areas plenty of space rather than approaching for a closer look.",
+      "didYouKnow": "The Olympic marmot is found nowhere else in the world and spends roughly 80% of its life hibernating underground."
+    },
+    {
+      "id": "olympic-banana-slug",
+      "scientificName": "Ariolimax columbianus",
+      "bestTimeOfDay": "Anytime, especially after rain",
+      "bestSeason": "Year-round",
+      "whereToLook": "Damp forest floor throughout the Hoh and Quinault rainforests",
+      "tags": ["Decomposer", "Common"],
+      "viewingTip": "Look for them on the forest floor and leaf litter after rain — enjoy a close look without picking them up, since their protective mucus coating is disturbed by handling.",
+      "didYouKnow": "Banana slugs are important decomposers that help recycle fallen leaves, moss, and even animal droppings back into rainforest soil."
+    },
+    {
+      "id": "olympic-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round; nesting Jan-Aug",
+      "whereToLook": "Coastal bluffs and river mouths along the park's outer coast",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS, nesting bald eagles along Olympic's coast are most sensitive from January through August, so view nests from a distance with binoculars or a spotting scope and never linger beneath an active nest tree.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Bald eagles build some of the largest tree nests of any North American bird, adding to the same nest year after year until it can weigh over a ton."
+    },
+    {
+      "id": "olympic-sea-otter",
+      "scientificName": "Enhydra lutris",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Kelp beds off the park's wilderness coast, often visible from headland viewpoints",
+      "tags": ["Kelp Dweller", "Reintroduced"],
+      "viewingTip": "Scan kelp beds from a coastal viewpoint with binoculars or a spotting scope — sea otters rest by wrapping themselves in kelp, so avoid boating close enough to disturb a raft of resting animals.",
+      "didYouKnow": "Sea otters were hunted to local extinction along Washington's coast by the early 1900s and were successfully reintroduced near Olympic's coast starting in 1969-1970."
+    },
+    {
+      "id": "olympic-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "Forests and subalpine meadows throughout the park",
+      "tags": ["Forager", "Give Space"],
+      "viewingTip": "Watch foraging bears from a distance with binoculars, store food and scented items properly at camp, and never approach for a photo.",
+      "didYouKnow": "Olympic's black bears are geographically isolated from mainland Washington populations, having been separated on the peninsula since the last ice age."
+    },
+    {
+      "id": "olympic-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep (rut Nov-Dec)",
+      "whereToLook": "High peaks near Hurricane Ridge; largely removed from other areas by relocation",
+      "tags": ["Non-Native", "Cliff Dweller"],
+      "viewingTip": "As of September 2026, per NPS, most mountain goats have been relocated out of Olympic as part of an ongoing removal program due to their non-native status and past aggressive encounters with hikers, so view any remaining goats from a distance with binoculars and never approach one that seems habituated to people.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Mountain goats are not native to the Olympic Peninsula — they were introduced in the 1920s for hunting and later found to damage native alpine plant communities, prompting an NPS relocation and removal program."
+    },
+    {
+      "id": "olympic-spotted-owl",
+      "scientificName": "Strix occidentalis caurina",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round; nesting Mar-Jun",
+      "whereToLook": "Old-growth forest in the Hoh and Queets valleys; increasingly rare",
+      "tags": ["Threatened", "Old Growth"],
+      "viewingTip": "As of September 2026, per NPS monitoring data, spotted owl numbers on the peninsula have fallen sharply due to competition from invasive barred owls, so this is now a very rare sighting — if you hear or see one, keep well back, stay quiet, and never use recorded calls to try to draw it in.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Northern spotted owl numbers on the Olympic Peninsula fell by more than 80% between 1995 and 2017, driven largely by competition from the invasive barred owl rather than habitat loss alone."
+    }
+  ]
+}

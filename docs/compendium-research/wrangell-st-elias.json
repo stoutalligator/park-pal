@@ -1,0 +1,198 @@
+{
+  "parkId": "wrangell-st-elias",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Earthtrekkers", "Backpacker Magazine", "Indigo Alpine Guides"],
+  "trails": [
+    {
+      "id": "wrangell-st-elias-root-glacier",
+      "estimatedTime": "2-4 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Glacier Travel", "Guide Recommended"],
+      "trailTip": "The maintained trail ends at the toe of the glacier — hidden crevasses and slick ice make traveling further onto Root Glacier without microspikes and, ideally, a local guide genuinely dangerous, not just uncomfortable.",
+      "didYouKnow": "Root Glacier is a tributary of the much larger Kennicott Glacier, and both are actively retreating, visibly reshaping the valley year to year.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kennecott Mill Town" },
+        { "mile": 2.0, "elevationFt": 100 },
+        { "mile": 4.0, "elevationFt": 200, "label": "Glacier overlook" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-bonanza-mine",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jul-early Sep (snow-free window)",
+      "tags": ["Alpine", "Strenuous"],
+      "trailTip": "There's no water treatment or facilities along the route — carry all the water you'll need or a filter, and start early since the exposed upper switchbacks offer no shelter from afternoon weather.",
+      "didYouKnow": "The Bonanza Mine ruins sit at roughly 5,865 feet, marking one of the richest copper deposits ever discovered, which financed the Kennecott mill complex below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kennecott Mill Town" },
+        { "mile": 2.0, "elevationFt": 1200 },
+        { "mile": 4.0, "elevationFt": 2600 },
+        { "mile": 4.5, "elevationFt": 3800, "label": "Bonanza Mine ruins" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-erie-lake",
+      "estimatedTime": "6-7 hrs",
+      "bestSeason": "Jul-early Sep",
+      "tags": ["Alpine", "Unmaintained"],
+      "trailTip": "The route becomes faint above treeline — carry a topo map or GPS track rather than relying on cairns or tread, and expect route-finding across talus near the lake.",
+      "didYouKnow": "Erie Lake sits in a glacially carved cirque high above the Kennecott valley, fed by snowmelt that keeps it ice-covered well into summer.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 1400 },
+        { "mile": 5.5, "elevationFt": 2400 },
+        { "mile": 7.0, "elevationFt": 3000, "label": "Erie Lake" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-nugget-creek",
+      "estimatedTime": "1-2 day trip",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Permit Required", "Backcountry"],
+      "trailTip": "As of September 2026, per NPS/Recreation.gov, the Nugget Creek public-use cabin requires an advance reservation to occupy overnight, though the trail itself is open for day use without any permit.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The cabin is a converted historic structure and one of only a handful of maintained backcountry shelters in a park with almost no other overnight infrastructure.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 7.0, "elevationFt": 300 },
+        { "mile": 14.0, "elevationFt": 500, "label": "Nugget Creek Cabin" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-silk-stocking",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Historic Site"],
+      "trailTip": "Many of Kennecott's mill buildings are structurally fragile — admire the historic townsite from marked paths and stay out of any structure not explicitly open for a ranger-led tour.",
+      "didYouKnow": "Kennecott's copper mill operated from 1911 to 1938 and was abandoned almost overnight when the ore ran out, leaving buildings largely as workers left them.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Kennecott townsite" },
+        { "mile": 0.4, "elevationFt": 30 },
+        { "mile": 0.75, "elevationFt": 50, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-donoho-basin",
+      "estimatedTime": "8-10 hrs (or overnight)",
+      "bestSeason": "Jul-early Sep",
+      "tags": ["Alpine", "Bear Country"],
+      "trailTip": "This is unmaintained above the lower mile, in prime grizzly habitat — make noise while moving through brush, carry bear spray, and be ready to navigate by map once the tread disappears.",
+      "didYouKnow": "Donoho Basin offers close-up views of the Root Glacier icefall from above, a perspective most visitors only see from the valley floor.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 5.0, "elevationFt": 1400 },
+        { "mile": 9.0, "elevationFt": 2400 },
+        { "mile": 12.0, "elevationFt": 3000, "label": "Donoho Basin" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-goat-trail",
+      "estimatedTime": "3-5 day traverse",
+      "bestSeason": "Late Jun-early Sep",
+      "tags": ["Route Finding", "Remote"],
+      "trailTip": "This is a multi-day wilderness traverse, not a maintained trail — most of the route has no defined tread, requires confident off-trail navigation across tundra and talus, and most parties fly in or out via a backcountry air taxi rather than walking a loop.",
+      "didYouKnow": "The Goat Trail follows a route originally used by prospectors and, before them, Ahtna people traveling between the coast and interior.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Air taxi drop-off" },
+        { "mile": 10.0, "elevationFt": 1500 },
+        { "mile": 20.0, "elevationFt": 2500 },
+        { "mile": 30.0, "elevationFt": 3000, "label": "Route end" }
+      ]
+    },
+    {
+      "id": "wrangell-st-elias-crystalline-hills",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Views"],
+      "trailTip": "The climb is short but steep and rocky underfoot — trekking poles help on the loose sections near the top.",
+      "didYouKnow": "The overlook takes in both the Kennicott and Root Glaciers at once, along with the peaks of the Wrangell Mountains beyond.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "McCarthy" },
+        { "mile": 1.7, "elevationFt": 500 },
+        { "mile": 3.5, "elevationFt": 900, "label": "Overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "wrangell-st-elias-dall-sheep",
+      "scientificName": "Ovis dalli",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov rut",
+      "whereToLook": "Steep mountain slopes visible from the McCarthy Road and higher trails",
+      "tags": ["Rut"],
+      "viewingTip": "Glass distant slopes with binoculars or a spotting scope from the road or trail rather than climbing toward a band of sheep — during the fall rut, rams are focused on each other and easily disturbed by close approach.",
+      "didYouKnow": "Dall sheep are the only wild white sheep in North America and rely on the sharp contrast against dark rock to spot predators from a distance."
+    },
+    {
+      "id": "wrangell-st-elias-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct (active outside denning season)",
+      "whereToLook": "River valleys and open tundra throughout the park's backcountry",
+      "tags": ["Bear Country", "Den Site"],
+      "viewingTip": "Carry bear spray, make noise while hiking in brush or near rushing water, and view any bear from at least 100 yards with binoculars — never approach a den or a sow with cubs.",
+      "didYouKnow": "Wrangell-St. Elias is the largest national park in the U.S. — larger than Switzerland — giving its grizzlies some of the most contiguous wild habitat left in North America."
+    },
+    {
+      "id": "wrangell-st-elias-caribou",
+      "scientificName": "Rangifer tarandus",
+      "bestTimeOfDay": "Any time of day",
+      "bestSeason": "May-Jun calving season",
+      "whereToLook": "Open tundra and valley migration routes",
+      "tags": ["Rut"],
+      "viewingTip": "View migrating herds from a distance with binoculars or a scope, and give extra space during the May-June calving season when cows with newborn calves are especially easily stressed by human presence.",
+      "didYouKnow": "Caribou in this region can migrate well over a hundred miles between seasonal ranges, one of the longest land migrations in North America."
+    },
+    {
+      "id": "wrangell-st-elias-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec rut",
+      "whereToLook": "Steep rocky slopes near Kennecott",
+      "tags": ["Rut"],
+      "viewingTip": "Watch from below with binoculars or a scope rather than climbing toward a goat on a cliff face — startled goats can dislodge rock onto themselves or hikers below.",
+      "didYouKnow": "Mountain goats have specialized rubbery hoof pads that grip bare rock, letting them stand on slopes far steeper than they look able to climb."
+    },
+    {
+      "id": "wrangell-st-elias-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Jul nesting season",
+      "whereToLook": "Cottonwoods along the park's glacial rivers",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Watch nesting pairs from the riverbank with binoculars rather than approaching the nest tree — give the area a wide berth during the April-July nesting window.",
+      "didYouKnow": "Bald eagles here often nest in the tallest cottonwoods along braided glacial rivers, giving them a clear line of sight for hunting salmon and waterfowl."
+    },
+    {
+      "id": "wrangell-st-elias-lynx",
+      "scientificName": "Lynx canadensis",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Boreal forest along river drainages",
+      "tags": ["Nocturnal"],
+      "viewingTip": "Lynx are almost never seen directly — look for tracks or sign in snow rather than seeking out a den, and never approach or linger near one if you find it.",
+      "didYouKnow": "Lynx populations rise and fall in multi-year cycles tied closely to snowshoe hare abundance, their primary prey."
+    },
+    {
+      "id": "wrangell-st-elias-beaver",
+      "scientificName": "Castor canadensis",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Slow-moving rivers and wetlands",
+      "tags": [],
+      "viewingTip": "Watch lodges and dams from shore at dusk with binoculars — approaching or disturbing a lodge can cause beavers to abandon an otherwise good site.",
+      "didYouKnow": "Beaver dams throughout the park's lowlands create wetland habitat that in turn supports moose, waterfowl, and fish."
+    },
+    {
+      "id": "wrangell-st-elias-arctic-ground-squirrel",
+      "scientificName": "Urocitellus parryii",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "May-Sep (hibernates in winter)",
+      "whereToLook": "Alpine meadows and tundra along high trails",
+      "tags": [],
+      "viewingTip": "Enjoy watching them from a normal trail distance, but never feed them — human food disrupts the fat reserves they need to survive up to eight months of hibernation.",
+      "didYouKnow": "Arctic ground squirrels can lower their body temperature below freezing during hibernation, the most extreme cold tolerance known in any mammal."
+    }
+  ]
+}

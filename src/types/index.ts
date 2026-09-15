@@ -114,6 +114,43 @@ export interface Animal {
   rarity: AnimalRarity;
 }
 
+/** One sampled point along a trail's stylized (non-GPS) elevation profile. */
+export interface ElevationPoint {
+  mile: number;
+  elevationFt: number;
+  label?: string;
+}
+
+/**
+ * Researched enrichment data for a Trail, keyed by Trail.id — a superset staged
+ * separately from the base Trail shape (see docs/compendium-research and the
+ * compendium-research skill) rather than merged into it, so list screens that
+ * only need the base shape are unaffected.
+ */
+export interface TrailDetail {
+  id: string;
+  estimatedTime: string;
+  bestSeason: string;
+  tags: string[];
+  trailTip: string;
+  didYouKnow: string;
+  elevationProfile: ElevationPoint[];
+  lastVerified?: string;
+}
+
+/** Researched enrichment data for an Animal, keyed by Animal.id — same staging pattern as TrailDetail. */
+export interface AnimalDetail {
+  id: string;
+  scientificName: string;
+  bestTimeOfDay: string;
+  bestSeason: string;
+  whereToLook: string;
+  tags: string[];
+  viewingTip: string;
+  didYouKnow: string;
+  lastVerified?: string;
+}
+
 export type BadgeCategory = 'parks' | 'activity' | 'region' | 'memory' | 'special' | 'distance' | 'secret';
 
 export interface Badge {

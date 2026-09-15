@@ -38,9 +38,9 @@ function CompletionToggle({ completed, onToggle }: { completed: boolean; onToggl
   );
 }
 
-function TrailListCard({ trail, completed, units, onToggleCompleted }: { trail: Trail; completed: boolean; units: Units; onToggleCompleted: () => void }) {
+function TrailListCard({ trail, completed, units, onToggleCompleted, onPress }: { trail: Trail; completed: boolean; units: Units; onToggleCompleted: () => void; onPress: () => void }) {
   return (
-    <View style={styles.itemCard}>
+    <TouchableOpacity style={styles.itemCard} onPress={onPress} activeOpacity={0.8}>
       <View style={styles.itemTitleRow}>
         <Text style={[styles.itemName, styles.itemNameFlex]}>{trail.name}</Text>
         <CompletionToggle completed={completed} onToggle={onToggleCompleted} />
@@ -53,7 +53,7 @@ function TrailListCard({ trail, completed, units, onToggleCompleted }: { trail: 
           <Text style={styles.pillText}>{trail.difficulty}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -116,6 +116,7 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
                 ? unmarkTrailCompleted(trail.id)
                 : markTrailCompleted(trail.id, trail.parkId, trail.name)
             }
+            onPress={() => navigation.navigate('TrailDetail', { trailId: trail.id })}
           />
         ))}
       </ScrollView>

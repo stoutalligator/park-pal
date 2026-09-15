@@ -1,0 +1,197 @@
+{
+  "parkId": "indiana-dunes",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "U.S. Fish & Wildlife Service"],
+  "trails": [
+    {
+      "id": "indiana-dunes-mount-baldy",
+      "estimatedTime": "1-1.5 hrs (ranger-led)",
+      "bestSeason": "Jun-Sep (ranger program season)",
+      "tags": ["Access Restricted", "Ranger-Led Only"],
+      "trailTip": "As of September 2026, per NPS.gov, Mount Baldy's summit and dune face remain closed to unguided hiking due to unstable, collapsing sand — the only way to reach the top is a scheduled ranger-led hike; the lower beach access route reopened to unguided visitors in June 2026.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Mount Baldy is a 'live' dune that migrates inland several feet a year, burying trees as it moves — a process visible in the park's 'ghost forest.'",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 1.5, "elevationFt": 130, "label": "Summit (ranger-led access only)" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-west-beach",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Interpretive", "Dune Ecology"],
+      "trailTip": "Interpretive signs along the loop explain how dune plant communities change with distance from the lake, from bare sand to mature oak forest — reported loop length varies by source depending on which West Beach trail segments are combined, so check the trailhead map for your route.",
+      "didYouKnow": "The dune succession visible here helped inspire early 20th-century ecologist Henry Cowles' pioneering studies of plant succession.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 100 },
+        { "mile": 1.7, "elevationFt": 200, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-cowles-bog",
+      "estimatedTime": "2.5-3.5 hrs",
+      "bestSeason": "Apr-Jun (wildflowers), Sep-Oct",
+      "tags": ["Wetlands", "National Natural Landmark"],
+      "trailTip": "The trail crosses a mix of wetland boardwalk, forest, and dune before reaching Lake Michigan — wear waterproof footwear for wet sections.",
+      "didYouKnow": "Cowles Bog is a National Natural Landmark named for Henry Cowles, whose research here helped found the science of ecology.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 80 },
+        { "mile": 3.0, "elevationFt": 150 },
+        { "mile": 4.7, "elevationFt": 200, "label": "Lake Michigan overlook" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-great-marsh",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Apr-May, Sep-Oct (migration)",
+      "tags": ["Boardwalk", "Birding"],
+      "trailTip": "Bring binoculars — this flat boardwalk through a restored wetland is one of the park's best birding spots, especially during spring and fall migration.",
+      "didYouKnow": "The Great Marsh was once slated for drainage and development before restoration returned it to one of the largest interdunal wetlands on the Great Lakes.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 5 },
+        { "mile": 1.2, "elevationFt": 5, "label": "Boardwalk end" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-dune-ridge",
+      "estimatedTime": "30-40 min",
+      "bestSeason": "Year-round",
+      "tags": ["Short Loop", "Oak Savanna"],
+      "trailTip": "A good low-key option for families — the loop climbs just enough to show off oak savanna and dune-ridge scenery without a long commitment.",
+      "didYouKnow": "Indiana Dunes protects one of the most biodiverse national parks in the system, packing over 1,100 plant species into a small footprint.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.8, "elevationFt": 100, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-tolleston-dunes",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Remote", "Stable Dunes"],
+      "trailTip": "These older, more vegetated dune ridges see far fewer visitors than the lakefront trails — reported loop lengths vary across maps and sources, so confirm distance at the trailhead kiosk before setting out.",
+      "didYouKnow": "Tolleston Dunes are among the oldest dune ridges in the park, formed thousands of years before the active dunes along today's shoreline.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 80 },
+        { "mile": 1.6, "elevationFt": 150, "label": "Loop end" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-heron-rookery",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Mar-May (wildflowers)",
+      "tags": ["Riverside", "Wildflowers"],
+      "trailTip": "This out-and-back trail along the Little Calumet River is one of the best spring wildflower walks in the park, though it can be muddy after rain.",
+      "didYouKnow": "The trail is named for a great blue heron rookery once found nearby along the river corridor.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.7, "elevationFt": 30 },
+        { "mile": 3.4, "elevationFt": 50, "label": "Trail end" }
+      ]
+    },
+    {
+      "id": "indiana-dunes-inland-marsh",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Wetlands", "Quiet"],
+      "trailTip": "This loop through wetland and dune-ridge habitat is one of the quieter trails in the park — good footwear helps since sections can be sandy or damp.",
+      "didYouKnow": "Inland Marsh sits in a low area between old dune ridges, making it a haven for wetland-adapted plants and amphibians.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 60 },
+        { "mile": 2.6, "elevationFt": 100, "label": "Loop end" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "indiana-dunes-karner-blue",
+      "scientificName": "Plebejus melissa samuelis",
+      "bestTimeOfDay": "Midday (sunny, warm)",
+      "bestSeason": "Late May-Jun and Jul-Aug (two broods)",
+      "whereToLook": "Oak savanna where wild lupine grows, near West Beach and Tolleston Dunes",
+      "tags": ["Endangered", "Host-Plant Specialist"],
+      "viewingTip": "Watch or photograph from the trail with a zoom lens — this federally endangered butterfly depends entirely on wild lupine, so stay on trail rather than stepping into lupine patches to get closer.",
+      "didYouKnow": "Karner blue caterpillars feed exclusively on wild lupine leaves, making the species' survival entirely tied to that one plant."
+    },
+    {
+      "id": "indiana-dunes-sandhill-crane",
+      "scientificName": "Antigone canadensis",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Mar-Apr and Oct-Nov (migration)",
+      "whereToLook": "Great Marsh and Inland Marsh during migration",
+      "tags": ["Migratory", "Marsh"],
+      "viewingTip": "Scan the marshes with binoculars or a spotting scope during migration — cranes are easily flushed from feeding and roosting areas, so keep well back from any group you spot.",
+      "didYouKnow": "Sandhill cranes can live more than 20 years and often return to the same migratory stopover sites year after year."
+    },
+    {
+      "id": "indiana-dunes-massasauga",
+      "scientificName": "Sistrurus catenatus",
+      "bestTimeOfDay": "Morning / Dusk",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Wetland edges near Great Marsh and Cowles Bog",
+      "tags": ["Venomous", "Threatened", "Secretive"],
+      "viewingTip": "As of 2026, the Eastern massasauga remains listed as a federally threatened species per the U.S. Fish and Wildlife Service — if you spot one, admire it from several feet away and never attempt to move, handle, or corner it; it will avoid you if given the space.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Eastern massasauga is one of the smallest rattlesnakes in North America and relies on wetland habitat that has shrunk dramatically across its range."
+    },
+    {
+      "id": "indiana-dunes-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forest and dune-ridge trails throughout the park",
+      "tags": ["Common"],
+      "viewingTip": "Watch quietly from the trail with binoculars, especially around dawn, and give does with fawns extra space in late spring.",
+      "didYouKnow": "White-tailed deer can leap fences and obstacles up to 8 feet high in a single bound."
+    },
+    {
+      "id": "indiana-dunes-great-egret",
+      "scientificName": "Ardea alba",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Great Marsh and other wetland trails",
+      "tags": ["Wading Bird"],
+      "viewingTip": "Watch from the boardwalk or shoreline with binoculars — egrets hunt by standing motionless, and approaching too closely will flush them from good fishing spots.",
+      "didYouKnow": "Great egrets were hunted nearly to extinction in the early 1900s for their breeding plumes, used in the hat trade."
+    },
+    {
+      "id": "indiana-dunes-red-fox",
+      "scientificName": "Vulpes vulpes",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round (kits Mar-May)",
+      "whereToLook": "Dune grasses and oak savanna; look for tracks rather than dens",
+      "tags": ["Den Sites"],
+      "viewingTip": "If you spot fox tracks or a den entrance in the dune grass, observe from a distance with binoculars and move on — resist lingering near a den, especially in spring when kits may be inside.",
+      "didYouKnow": "Red fox kits are born blind and stay in the den for about a month before venturing outside."
+    },
+    {
+      "id": "indiana-dunes-blandings-turtle",
+      "scientificName": "Emydoidea blandingii",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Jun (nesting season)",
+      "whereToLook": "Wetlands near Great Marsh and Inland Marsh",
+      "tags": ["Rare", "Wetland"],
+      "viewingTip": "Blanding's turtle is a species of conservation concern in Indiana — watch from a distance and never handle one, especially a female crossing a trail to nest; let her pass undisturbed.",
+      "didYouKnow": "You can recognize a Blanding's turtle by its bright yellow throat and chin, visible even from a distance."
+    },
+    {
+      "id": "indiana-dunes-monarch-butterfly",
+      "scientificName": "Danaus plexippus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Late Aug-Sep (fall migration)",
+      "whereToLook": "Dune ridges and open meadows along the lakeshore",
+      "tags": ["Migratory"],
+      "viewingTip": "Watch and photograph monarchs nectaring on fall wildflowers rather than netting or handling them — they need to conserve energy for their journey to Mexico.",
+      "didYouKnow": "Migrating monarchs from this region can travel over 2,000 miles to overwintering sites in central Mexico."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "parkId": "capitol-reef",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "National Parks Traveler", "Visit Utah"],
+  "trails": [
+    {
+      "id": "capitol-reef-hickman-bridge",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Popular", "Natural Bridge", "Family Friendly"],
+      "trailTip": "Start early in summer — this trail has little shade and is one of the park's most popular, so the small trailhead lot fills quickly.",
+      "didYouKnow": "Hickman Bridge is a true natural bridge carved by flowing water, not an arch, spanning 133 feet.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.9, "elevationFt": 400, "label": "Hickman Bridge" },
+        { "mile": 1.8, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "capitol-reef-cassidy-arch",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Slickrock", "Exposure", "Arch"],
+      "trailTip": "Cairns mark the route across open slickrock, with real exposure near the arch itself — watch your footing and stay back from the unfenced edge above the span.",
+      "didYouKnow": "The trail and arch are named for outlaw Butch Cassidy, said to have used the area's canyons as a hideout.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Grand Wash trailhead" },
+        { "mile": 1.5, "elevationFt": 400 },
+        { "mile": 2.5, "elevationFt": 670, "label": "Cassidy Arch overlook" },
+        { "mile": 3.4, "elevationFt": 600 }
+      ]
+    },
+    {
+      "id": "capitol-reef-capitol-gorge",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Year-round; avoid if flash flood risk is present",
+      "tags": ["Flash Flood Risk", "Historic Inscriptions", "Flat"],
+      "trailTip": "Never enter this narrow-walled wash if rain is forecast anywhere upstream — per NPS guidance, flash floods here can arrive with little warning even from storms many miles away.",
+      "didYouKnow": "The Pioneer Register along this walk preserves names carved into the canyon wall by Mormon settlers and other travelers dating back to the 1870s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1, "elevationFt": 60, "label": "Pioneer Register" },
+        { "mile": 2, "elevationFt": 100 }
+      ]
+    },
+    {
+      "id": "capitol-reef-chimney-rock",
+      "estimatedTime": "2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Loop", "Rock Formation", "Exposed"],
+      "trailTip": "The initial climb is steep and exposed to sun and wind — bring layers even in cooler months since the ridge offers little shelter.",
+      "didYouKnow": "Chimney Rock is a resistant sandstone spire capped by darker Moenkopi shale, left standing as softer rock eroded away around it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 400, "label": "Chimney Rock viewpoint" },
+        { "mile": 2, "elevationFt": 660, "label": "Loop high point" },
+        { "mile": 3.6, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "capitol-reef-cohab-canyon",
+      "estimatedTime": "2 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Switchbacks", "Hidden Canyon", "Views of Fruita"],
+      "trailTip": "The steep switchback start is the toughest part of the hike — pace yourself there and the trail eases once you're inside the canyon.",
+      "didYouKnow": "Cohab Canyon's name references 'cohabitation' — polygamist Mormon settlers reportedly hid here from federal marshals.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near campground" },
+        { "mile": 0.5, "elevationFt": 400, "label": "Canyon rim" },
+        { "mile": 1.7, "elevationFt": 800, "label": "Overlook spur" },
+        { "mile": 3.4, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "capitol-reef-navajo-knobs",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Mar-Nov",
+      "tags": ["Strenuous", "Exposure", "Summit Views"],
+      "trailTip": "This is the park's most demanding maintained day hike — carry at least 3 liters of water and start early to avoid exposed slickrock in full summer heat.",
+      "didYouKnow": "Navajo Knobs offers a rare 360-degree view taking in the Waterpocket Fold, the Henry Mountains, and Capitol Dome.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Hickman Bridge trailhead" },
+        { "mile": 3, "elevationFt": 900 },
+        { "mile": 6, "elevationFt": 1500 },
+        { "mile": 9.4, "elevationFt": 2000, "label": "Navajo Knobs summit" }
+      ]
+    },
+    {
+      "id": "capitol-reef-grand-wash",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round; avoid if flash flood risk is present",
+      "tags": ["Flash Flood Risk", "Narrows", "Flat"],
+      "trailTip": "Check the weather and ask a ranger about current wash conditions before hiking — this route follows a narrow drainage where flash floods, even from distant storms, are a real hazard.",
+      "didYouKnow": "Grand Wash narrows to as little as 20 feet wide between towering sandstone walls at its tightest point.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.2, "elevationFt": 150, "label": "Narrows" },
+        { "mile": 4.4, "elevationFt": 200 }
+      ]
+    },
+    {
+      "id": "capitol-reef-sulphur-creek",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Apr-Oct; avoid if flash flood risk is present",
+      "tags": ["Unmaintained Route", "Water Crossings", "Flash Flood Risk"],
+      "trailTip": "This route involves wading and scrambling through the creek itself with no maintained tread — check current conditions at the visitor center and never start if rain is forecast anywhere in the drainage.",
+      "didYouKnow": "Sulphur Creek passes three small waterfalls and slot sections not found on the park's maintained trail system, though it isn't an official maintained trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Chimney Rock trailhead" },
+        { "mile": 2, "elevationFt": 200 },
+        { "mile": 4, "elevationFt": 350, "label": "Waterfalls" },
+        { "mile": 5.8, "elevationFt": -400, "label": "Visitor Center exit (net descent)" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "capitol-reef-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Historic Fruita orchards and along the Fremont River",
+      "tags": ["Common", "Orchard Grazer"],
+      "viewingTip": "Deer graze right in the historic orchards — enjoy watching from the orchard paths but don't approach closely or offer them fallen fruit.",
+      "didYouKnow": "Deer are drawn to Fruita's century-old orchards, which the park still maintains and lets visitors pick from in season."
+    },
+    {
+      "id": "capitol-reef-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Steep canyon walls within the Waterpocket Fold",
+      "tags": ["Canyon Cliffs", "Uncommon"],
+      "viewingTip": "Spot bighorn on distant canyon walls with binoculars rather than trying to close the distance over loose talus.",
+      "didYouKnow": "Desert bighorn were reintroduced to Capitol Reef after being extirpated in the early 20th century."
+    },
+    {
+      "id": "capitol-reef-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jul (nesting)",
+      "whereToLook": "Sandstone cliffs above the Fremont River",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "Watch nesting cliffs from below with binoculars or a spotting scope rather than climbing toward a ledge for a closer look.",
+      "didYouKnow": "A stooping peregrine falcon is the fastest animal on Earth, exceeding 200 mph."
+    },
+    {
+      "id": "capitol-reef-collared-lizard",
+      "scientificName": "Crotaphytus collaris",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Sunny slickrock near trailheads",
+      "tags": ["Common", "Basking"],
+      "viewingTip": "Photograph basking lizards with a zoom lens from a few feet away instead of cornering them for a closer shot.",
+      "didYouKnow": "Male collared lizards turn vivid green and blue during breeding season to attract mates."
+    },
+    {
+      "id": "capitol-reef-ringtail",
+      "scientificName": "Bassariscus astutus",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky canyon walls and near historic Fruita buildings after dark",
+      "tags": ["Nocturnal", "Rare"],
+      "viewingTip": "Ringtails are almost entirely nocturnal and rarely seen — if you spot one at night, keep a headlamp dim and don't try to approach or feed it.",
+      "didYouKnow": "Despite the nickname 'ringtail cat,' ringtails are actually related to raccoons, not cats."
+    },
+    {
+      "id": "capitol-reef-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Thermals above the reef's sandstone cliffs",
+      "tags": ["Soaring Raptor", "Cliff Nester"],
+      "viewingTip": "Scan cliff faces and the sky with binoculars from pullouts rather than approaching a cliff base where a nest might be.",
+      "didYouKnow": "Golden eagles build massive stick nests they reuse and add to for years, sometimes weighing hundreds of pounds."
+    },
+    {
+      "id": "capitol-reef-porcupine",
+      "scientificName": "Erethizon dorsatum",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Cottonwoods in the historic orchard area",
+      "tags": ["Nocturnal", "Uncommon"],
+      "viewingTip": "If you spot one resting in a tree, view it from the ground with binoculars — never touch or try to move a porcupine, since their barbed quills detach and work deeper into flesh once embedded.",
+      "didYouKnow": "Porcupine quills have microscopic barbs that make them work deeper into flesh once embedded, so hikers and pets should keep well clear."
+    },
+    {
+      "id": "capitol-reef-rock-squirrel",
+      "scientificName": "Otospermophilus variegatus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Around the historic orchard and campground area",
+      "tags": ["Common", "Bold Around People"],
+      "viewingTip": "Rock squirrels are used to people and will approach on their own — don't feed them, since human food and close contact make them aggressive beggars and can spread disease.",
+      "didYouKnow": "Rock squirrels are excellent climbers and often raid low branches in the historic orchards."
+    }
+  ]
+}

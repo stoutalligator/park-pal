@@ -1,0 +1,224 @@
+{
+  "parkId": "grand-teton",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Grand Teton National Park Foundation", "Jackson Hole News & Guide", "WyoFile"],
+  "trails": [
+    {
+      "id": "grand-teton-jenny-lake",
+      "estimatedTime": "3.5-4.5 hrs",
+      "bestSeason": "June-Sept",
+      "tags": ["Bear Country", "Boat Shuttle Option"],
+      "trailTip": "This is prime grizzly and black bear habitat, so carry bear spray where you can reach it quickly, hike in a group, and make noise on blind corners; a boat shuttle across Jenny Lake can cut the loop roughly in half if you only want to see Hidden Falls and Inspiration Point.",
+      "didYouKnow": "Jenny Lake was carved by a glacier and is named for a Shoshone woman who helped guide some of the first American survey expeditions through the Tetons in the 1870s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Trailhead" },
+        { "mile": 2.5, "elevationFt": 100 },
+        { "mile": 5.0, "elevationFt": 180, "label": "String Lake junction" },
+        { "mile": 7.1, "elevationFt": 200 }
+      ]
+    },
+    {
+      "id": "grand-teton-hidden-falls",
+      "estimatedTime": "1.5-2 hrs from boat dock",
+      "bestSeason": "June-Sept",
+      "tags": ["Bear Country", "Popular"],
+      "trailTip": "This is the park's busiest trail and also active bear habitat, so keep food packed away at the overlook, carry bear spray, and expect crowded switchbacks near Inspiration Point in midsummer.",
+      "didYouKnow": "Inspiration Point sits roughly 400 feet above Jenny Lake and offers one of the few spots in the park where you can see both the lake and the sheer granite face of the Cathedral Group at once.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
+        { "mile": 0.5, "elevationFt": 150, "label": "Hidden Falls" },
+        { "mile": 1.0, "elevationFt": 420 },
+        { "mile": 2.0, "elevationFt": 550, "label": "Inspiration Point" }
+      ]
+    },
+    {
+      "id": "grand-teton-taggart-lake",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "June-Oct",
+      "tags": ["Family Friendly", "Bear Country"],
+      "trailTip": "The trail crosses open regrowth forest from a 1985 wildfire with limited shade, so carry water and sun protection, and still carry bear spray since black bears frequent the willow flats near the lake.",
+      "didYouKnow": "Much of the forest along this trail regrew after the 1985 Beaver Creek Fire, and the young lodgepole pines you walk through are a textbook example of how the species depends on fire to release seeds from its cones.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Taggart Lake Trailhead" },
+        { "mile": 1.5, "elevationFt": 250 },
+        { "mile": 3.0, "elevationFt": 400, "label": "Taggart Lake" }
+      ]
+    },
+    {
+      "id": "grand-teton-cascade-canyon",
+      "estimatedTime": "5-7 hrs from boat dock",
+      "bestSeason": "July-Sept",
+      "tags": ["Bear Country", "Exposure"],
+      "trailTip": "Cascade Canyon sees frequent grizzly activity, especially near the willow flats and forks junction, so hike with a group, carry bear spray, and check current bear-activity notices posted at the Jenny Lake ranger station before starting.",
+      "didYouKnow": "The canyon splits at its head into the North and South Forks, framing Grand Teton on one side and the remote backcountry of Lake Solitude and Hurricane Pass on the other.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
+        { "mile": 2.0, "elevationFt": 550, "label": "Inspiration Point" },
+        { "mile": 5.0, "elevationFt": 900 },
+        { "mile": 9.0, "elevationFt": 1100, "label": "Cascade Canyon Forks" }
+      ]
+    },
+    {
+      "id": "grand-teton-string-lake",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "June-Sept",
+      "tags": ["Family Friendly", "Swimming"],
+      "trailTip": "The shallow, warm water makes this a popular swimming stop for families, but the parking lot fills early on summer mornings, so arrive before 9 a.m. or plan to walk in from Jenny Lake.",
+      "didYouKnow": "String Lake is unusually shallow and slow-moving because it is really a wide, calm channel connecting Jenny Lake and Leigh Lake rather than a lake with its own separate basin.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "String Lake Trailhead" },
+        { "mile": 1.7, "elevationFt": 100 },
+        { "mile": 3.4, "elevationFt": 150 }
+      ]
+    },
+    {
+      "id": "grand-teton-lake-solitude",
+      "estimatedTime": "8-10 hrs from boat dock",
+      "bestSeason": "Late July-Sept",
+      "tags": ["Bear Country", "Permit Required"],
+      "trailTip": "As of September 2026, per NPS.gov, overnight camping anywhere in the Cascade Canyon corridor toward Lake Solitude requires a backcountry permit and an approved bear-resistant canister for all food and scented items; day hikers should still carry bear spray and expect snow lingering on the upper trail into July in many years.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Lake Solitude sits in a glacial cirque at nearly 9,000 feet and is often still partly frozen well into summer, feeding the North Fork of Cascade Canyon below it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
+        { "mile": 9.0, "elevationFt": 1100, "label": "Cascade Canyon Forks" },
+        { "mile": 13.0, "elevationFt": 2100 },
+        { "mile": 15.0, "elevationFt": 2500, "label": "Lake Solitude" }
+      ]
+    },
+    {
+      "id": "grand-teton-death-canyon",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "July-Sept",
+      "tags": ["Bear Country", "Access Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the Death Canyon Road and Trailhead are closed to all traffic, including hikers on foot, for a multi-year rehabilitation project expected to run through June 2027, so the trail is not currently reachable from its usual trailhead; check the park's road construction page for detour or reopening updates before planning a trip.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Despite its ominous name, Death Canyon's origin story is uncertain — the most common account traces it to an 1899 survey party member who went missing near the canyon and was never found.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Death Canyon Trailhead" },
+        { "mile": 2.0, "elevationFt": 500 },
+        { "mile": 4.3, "elevationFt": 1100, "label": "Patrol Cabin" },
+        { "mile": 8.6, "elevationFt": 1700 }
+      ]
+    },
+    {
+      "id": "grand-teton-leigh-lake",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "June-Sept",
+      "tags": ["Family Friendly", "Bear Country"],
+      "trailTip": "The flat, wide trail hugs the lakeshore with Mount Moran in view nearly the whole way, but it's still bear country, so keep any snacks packed away and make noise through the forested sections.",
+      "didYouKnow": "Leigh Lake is named for Beaver Dick Leigh, a mountain man and guide whose wife Jenny — for whom neighboring Jenny Lake is named — died along with their children in an 1876 smallpox outbreak.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Leigh Lake Trailhead" },
+        { "mile": 2.0, "elevationFt": 30 },
+        { "mile": 3.7, "elevationFt": 50 }
+      ]
+    },
+    {
+      "id": "grand-teton-static-peak",
+      "estimatedTime": "8-9 hrs",
+      "bestSeason": "Late July-Sept",
+      "tags": ["Bear Country", "Exposure", "Snow Fields"],
+      "trailTip": "Snow can linger on the upper switchbacks into midsummer, so an ice axe and traction may be needed even in July in heavier snow years; carry bear spray through the lower forested sections, which see regular grizzly activity.",
+      "didYouKnow": "At just over 10,700 feet, Static Peak Divide is the highest point reached by any maintained trail in Grand Teton National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Death Canyon Trailhead" },
+        { "mile": 4.0, "elevationFt": 1700 },
+        { "mile": 8.0, "elevationFt": 3800 },
+        { "mile": 15.5, "elevationFt": 5200, "label": "Static Peak Divide" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "grand-teton-moose",
+      "scientificName": "Alces alces shirasi",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Sept-Oct rut, otherwise year-round",
+      "whereToLook": "Willow flats near Jenny Lake, String Lake, and the Snake River",
+      "tags": ["Rut Season", "Wetland"],
+      "viewingTip": "Watch from at least 25 yards with binoculars or a zoom lens, and give bulls in the fall rut much more space than that, since moose can charge with little warning and are involved in more visitor injuries in this region than any other large mammal.",
+      "didYouKnow": "Shiras moose, the subspecies found here, are the smallest moose in North America, yet an adult bull can still weigh over 1,000 pounds."
+    },
+    {
+      "id": "grand-teton-grizzly",
+      "scientificName": "Ursus arctos horribilis",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Apr-Nov, most active in late summer/fall hyperphagia",
+      "whereToLook": "Cascade Canyon, Death Canyon, and berry patches in aspen groves and avalanche chutes",
+      "tags": ["Bear Country", "Give Space"],
+      "viewingTip": "View any grizzly from at least 100 yards using binoculars or a spotting scope, never approach for a photo, and check the visitor center or park website for current bear-activity closures before hiking, especially in late summer and fall when bears are feeding heavily to prepare for winter.",
+      "didYouKnow": "Grizzlies in the Tetons can consume up to 20,000 calories a day during fall hyperphagia, gorging on huckleberries, whitebark pine seeds, and army cutworm moths to build fat reserves for hibernation."
+    },
+    {
+      "id": "grand-teton-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Sagebrush flats near Antelope Flats and the park's eastern boundary",
+      "tags": ["Common", "Fast Runner"],
+      "viewingTip": "Observe from pullouts along the road with binoculars rather than walking into open sagebrush toward a herd, since pronghorn are easily startled and rely on wide-open sightlines to detect predators.",
+      "didYouKnow": "The Path of the Pronghorn, partly protected by the park, is one of the longest documented land-mammal migrations in the continental U.S., stretching roughly 150 miles to and from the Upper Green River Basin."
+    },
+    {
+      "id": "grand-teton-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Feb-July nesting, otherwise year-round",
+      "whereToLook": "Cottonwoods along the Snake River, including Oxbow Bend",
+      "tags": ["Cliff/Tree Nester", "Riverine"],
+      "viewingTip": "Scan riverside cottonwoods with binoculars from pullouts rather than approaching a nest tree, especially during the February-through-July nesting season when disturbance can cause adults to abandon eggs or young.",
+      "didYouKnow": "Bald eagles were nearly wiped out in the Lower 48 by DDT and habitat loss; the Snake River corridor's recovery is now considered one of the strongholds for nesting eagles in Wyoming."
+    },
+    {
+      "id": "grand-teton-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Sept-Oct rut",
+      "whereToLook": "Open meadows throughout the park in summer; National Elk Refuge in winter",
+      "tags": ["Rut Season", "Common"],
+      "viewingTip": "Watch bugling bulls from the road or a pullout with binoculars, staying at least 100 yards back during the fall rut, since bulls are highly aggressive toward perceived threats while competing for a harem.",
+      "didYouKnow": "The nearby National Elk Refuge hosts one of the largest elk wintering herds on Earth, with several thousand animals gathering there each winter after summering in the park's high country."
+    },
+    {
+      "id": "grand-teton-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Apr-Nov, especially late summer berry season",
+      "whereToLook": "Aspen groves and berry patches, including near Taggart Lake and Moose-Wilson Road",
+      "tags": ["Bear Country", "Give Space"],
+      "viewingTip": "Stay at least 100 yards away and view from your vehicle or with binoculars along Moose-Wilson Road, a well-known black bear feeding area, and never stop traffic or approach on foot to get a closer photo.",
+      "didYouKnow": "Grand Teton's black bears range in color from black to cinnamon-brown, making coat color alone an unreliable way to tell them apart from the park's grizzlies."
+    },
+    {
+      "id": "grand-teton-osprey",
+      "scientificName": "Pandion haliaetus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Sept",
+      "whereToLook": "Snake River oxbows and Oxbow Bend",
+      "tags": ["Cliff/Tree Nester", "Fish Hunter"],
+      "viewingTip": "Watch dives and nest activity from a distance with binoculars or a spotting scope from the riverbank rather than approaching a nest platform or snag directly, since ospreys can abandon a nest if repeatedly disturbed.",
+      "didYouKnow": "Ospreys have a reversible outer toe and barbed foot pads that let them grip slippery fish firmly enough to carry them head-first through the air to reduce drag."
+    },
+    {
+      "id": "grand-teton-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Sagebrush flats throughout the valley",
+      "tags": ["Common", "Do Not Feed"],
+      "viewingTip": "Watch from a distance with binoculars and never feed a coyote — habituated coyotes that lose their fear of people are frequently involved in conflicts and are often euthanized as a result.",
+      "didYouKnow": "Coyotes in the Tetons will sometimes follow foraging badgers, since the badger's digging flushes out rodents that the coyote can then chase down."
+    },
+    {
+      "id": "grand-teton-trumpeter-swan",
+      "scientificName": "Cygnus buccinator",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round, nests Apr-Aug",
+      "whereToLook": "Oxbow Bend and other quiet ponds along the Snake River",
+      "tags": ["Rare", "Wetland Nester"],
+      "viewingTip": "View nesting swans from the shoreline or a pullout with binoculars, keeping well back from the nest itself, since trumpeter swans are highly sensitive to disturbance during incubation and may abandon a nest if repeatedly approached.",
+      "didYouKnow": "Trumpeter swans are the heaviest native waterfowl in North America, and the small population that winters in the Greater Yellowstone area was once feared to be the species' last refuge before conservation efforts helped it rebound elsewhere."
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "parkId": "channel-islands",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "NPS Santa Rosa Island Hiking Guide", "NPS Santa Cruz Island Hiking Guide", "AllTrails", "Backpacker Magazine"],
+  "trails": [
+    {
+      "id": "channel-islands-cavern-point",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round; Dec-Mar is best for gray whale sightings from the bluffs",
+      "tags": ["Coastal Bluff", "Whale Watching"],
+      "trailTip": "Stay on the established path along the bluff edge — the cliffs are undercut in places — and bring binoculars to scan for migrating gray whales offshore instead of leaning out over the rim.",
+      "didYouKnow": "Cavern Point Loop is the most-hiked trail in the park because it starts right at the Scorpion Anchorage pier where the Island Packers ferry lands.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Scorpion Anchorage" },
+        { "mile": 0.4, "elevationFt": 120 },
+        { "mile": 0.75, "elevationFt": 200, "label": "Cavern Point overlook" },
+        { "mile": 1.1, "elevationFt": 90 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Loop back to anchorage" }
+      ]
+    },
+    {
+      "id": "channel-islands-inspiration-point",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round; calmest boat landings are typically Apr-Oct",
+      "tags": ["Sea Cliff", "Seabird Nesting"],
+      "trailTip": "This East Anacapa trail follows a flat marine terrace after an initial staircase climb from the landing cove — watch for nesting western gulls right beside the path in early summer and go around them rather than crowding in for a photo.",
+      "didYouKnow": "Reaching any trail on Anacapa Island means climbing a steep 157-step staircase from the boat landing cove — it's the only way onto the island.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Landing cove staircase" },
+        { "mile": 0.3, "elevationFt": 150, "label": "Top of staircase" },
+        { "mile": 0.75, "elevationFt": 160, "label": "Inspiration Point" },
+        { "mile": 1.5, "elevationFt": 0, "label": "Return to landing" }
+      ]
+    },
+    {
+      "id": "channel-islands-potato-harbor",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Coastal Bluff", "Exposure"],
+      "trailTip": "Follow the marked bluff-top path from the Cavern Point junction and keep back from the crumbling cliff edge above the cove — the drop is sheer and unfenced.",
+      "didYouKnow": "The horseshoe-shaped cove was named for its resemblance, seen from above, to a hollowed-out potato.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Scorpion Anchorage" },
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 2.0, "elevationFt": 350 },
+        { "mile": 2.5, "elevationFt": 400, "label": "Potato Harbor overlook" },
+        { "mile": 5.0, "elevationFt": 0, "label": "Return to anchorage" }
+      ]
+    },
+    {
+      "id": "channel-islands-cherry-canyon",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round; can be muddy after winter rain",
+      "tags": ["Canyon Descent"],
+      "trailTip": "The descent to Prisoners Harbor loses elevation gradually through island scrub — carry more water than you think you'll need, since there's no shade or water source along the way.",
+      "didYouKnow": "Prisoners Harbor was a working ranch and shipping point for Santa Cruz Island long before the island became parkland.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 500, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 300 },
+        { "mile": 2.5, "elevationFt": 100 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Prisoners Harbor" }
+      ]
+    },
+    {
+      "id": "channel-islands-water-canyon",
+      "estimatedTime": "3-3.5 hrs",
+      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a wildfire burned roughly 18,000 acres (about 40% of the island) in May-June 2026, and some backcountry areas in the island's southeastern quadrant remain closed for the rest of the 2026 season.",
+      "tags": ["Beach Access", "Fire Recovery"],
+      "trailTip": "As of September 2026, per NPS.gov, confirm Santa Rosa Island's current access status before you go — post-fire recovery work is ongoing and some areas are still closed.",
+      "didYouKnow": "Water Canyon Beach is one of the longest stretches of undeveloped white-sand beach in Southern California.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Water Canyon Campground" },
+        { "mile": 2.0, "elevationFt": 200 },
+        { "mile": 4.0, "elevationFt": 400 },
+        { "mile": 6.0, "elevationFt": 500, "label": "Upper canyon" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "channel-islands-torrey-pines",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
+      "tags": ["Rare Grove", "Fire Recovery"],
+      "trailTip": "As of September 2026, per NPS.gov, check Santa Rosa Island's current conditions page before planning this hike, since post-fire closures are still in effect in parts of the island.",
+      "didYouKnow": "This grove is one of only two natural populations of Torrey pine on Earth — the other is near San Diego, over 175 miles away.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 300 },
+        { "mile": 3.0, "elevationFt": 400, "label": "Torrey pine grove" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "channel-islands-lobo-canyon",
+      "estimatedTime": "3.5-4 hrs",
+      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
+      "tags": ["Canyon", "Fire Recovery"],
+      "trailTip": "As of September 2026, per NPS.gov, confirm current access before setting out — this route crosses backcountry terrain on Santa Rosa Island that may still be affected by the 2026 fire closures.",
+      "didYouKnow": "Lobo Canyon's colorful, wind-carved sandstone walls are one of the most photographed features on Santa Rosa Island.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 400, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 550 },
+        { "mile": 4.0, "elevationFt": 600 },
+        { "mile": 6.0, "elevationFt": 0, "label": "Canyon mouth / beach" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "channel-islands-signal-peak",
+      "estimatedTime": "7-8 hrs",
+      "bestSeason": "Fall-Spring; avoid summer heat with no shade or water sources",
+      "tags": ["Strenuous", "Full-Day", "No Water Sources"],
+      "trailTip": "Carry all the water you'll need for the full day — there are no reliable water sources along the route to the island's highest point.",
+      "didYouKnow": "At 2,450 feet, Signal Peak is the highest point in Channel Islands National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Scorpion Anchorage" },
+        { "mile": 4.0, "elevationFt": 800 },
+        { "mile": 8.0, "elevationFt": 2000, "label": "Signal Peak summit" },
+        { "mile": 16.0, "elevationFt": 0, "label": "Return to anchorage" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "channel-islands-island-fox",
+      "scientificName": "Urocyon littoralis",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Near campgrounds, trailheads, and open scrub on Santa Cruz and Santa Rosa Islands",
+      "tags": ["Endemic", "Recovered Species"],
+      "viewingTip": "If one crosses your path, stay still and watch quietly from a distance with binoculars — never offer food, since foxes that learn to approach hikers for scraps lose their natural wariness and are far more likely to be struck by vehicles.",
+      "didYouKnow": "The island fox was on the brink of extinction in the late 1990s and, after a captive-breeding and reintroduction program, became the fastest mammal recovery in Endangered Species Act history — it was delisted in 2016."
+    },
+    {
+      "id": "channel-islands-sea-lion",
+      "scientificName": "Zalophus californianus",
+      "bestTimeOfDay": "Any",
+      "bestSeason": "Pupping and breeding season runs roughly May-Jul at some haul-outs",
+      "whereToLook": "Rocky ledges and coves around Anacapa and San Miguel Islands",
+      "tags": ["Haul-Out", "Marine Mammal"],
+      "viewingTip": "View hauled-out sea lions from at least 50 feet away using binoculars or a zoom lens — approaching closer can startle a mother into abandoning a pup on the rocks.",
+      "didYouKnow": "San Miguel Island hosts one of the largest and most diverse pinniped haul-outs in the world, with several seal and sea lion species breeding side by side."
+    },
+    {
+      "id": "channel-islands-scrub-jay",
+      "scientificName": "Aphelocoma insularis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Oak and pine woodlands around Scorpion Ranch and the Santa Cruz Island interior",
+      "tags": ["Endemic", "Island Specialist"],
+      "viewingTip": "Scan the oak canopy and listen for its harsh, scolding call — a pair of binoculars will show off its noticeably larger size and deeper blue color compared to mainland scrub-jays without needing to approach the trees they're feeding in.",
+      "didYouKnow": "The Island Scrub-Jay lives only on Santa Cruz Island, making it the only bird species in the U.S. restricted to a single island."
+    },
+    {
+      "id": "channel-islands-gray-whale",
+      "scientificName": "Eschrichtius robustus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Dec-Mar southbound migration; Mar-May northbound migration",
+      "whereToLook": "Open water visible from Cavern Point, Potato Harbor, and other bluff-top overlooks",
+      "tags": ["Migration", "Offshore"],
+      "viewingTip": "Scan the horizon with binoculars for a blow or fluke — whales are viewed from shore or a boat at a legal distance and should never be approached by watercraft.",
+      "didYouKnow": "Gray whales migrate roughly 10,000-12,000 miles round trip between Arctic feeding grounds and Baja California breeding lagoons, passing directly by the islands."
+    },
+    {
+      "id": "channel-islands-garibaldi",
+      "scientificName": "Hypsypops rubicundus",
+      "bestTimeOfDay": "Midday, when light penetrates the kelp forest",
+      "bestSeason": "Best visibility Jun-Oct",
+      "whereToLook": "Kelp forests and rocky reefs around Anacapa and Santa Cruz Islands",
+      "tags": ["Kelp Forest", "State Fish"],
+      "viewingTip": "Snorkel or dive slowly and let the fish approach on its own — garibaldi are naturally curious and territorial, so there's no need to chase or corner one for a closer look.",
+      "didYouKnow": "The garibaldi is California's official state marine fish, and it's illegal to take or harass one anywhere in California waters."
+    },
+    {
+      "id": "channel-islands-harbor-seal",
+      "scientificName": "Phoca vitulina",
+      "bestTimeOfDay": "Low tide",
+      "bestSeason": "Pupping season is roughly Feb-Apr",
+      "whereToLook": "Rocky beaches and tidal ledges throughout the islands",
+      "tags": ["Haul-Out", "Pupping Season"],
+      "viewingTip": "Watch from a bluff or boat with binoculars and keep well back from haul-out sites, especially in spring — a mother that's disturbed may abandon a pup left resting alone on the rocks.",
+      "didYouKnow": "Harbor seal pups can swim within hours of birth but spend much of their first weeks hauled out resting beside their mothers."
+    },
+    {
+      "id": "channel-islands-brown-pelican",
+      "scientificName": "Pelecanus occidentalis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nesting season is roughly Apr-Aug",
+      "whereToLook": "Sea cliffs on Anacapa Island's West End, and shorelines throughout the park",
+      "tags": ["Cliff Nester", "Conservation Success"],
+      "viewingTip": "Watch nesting cliffs from a boat or a designated overlook with binoculars and keep well back from the nest ledges — pelicans that flush from a nest can expose eggs or chicks to gulls and sun.",
+      "didYouKnow": "Anacapa Island hosts the largest breeding colony of California Brown Pelicans in the western United States, a major recovery story after the species nearly vanished here due to DDT pollution."
+    },
+    {
+      "id": "channel-islands-night-lizard",
+      "scientificName": "Xantusia riversiana",
+      "bestTimeOfDay": "Look under natural cover during the day; they are secretive rather than truly nocturnal",
+      "bestSeason": "Year-round; most active in warmer months",
+      "whereToLook": "Under driftwood, rocks, and dense vegetation on San Clemente, Santa Barbara, and San Nicolas Islands",
+      "tags": ["Endemic", "Secretive"],
+      "viewingTip": "If you flip a log or rock to look, set it back exactly as you found it afterward — this species shelters under the same surface debris for cover from predators and drying out.",
+      "didYouKnow": "The Island Night Lizard gives birth to live young instead of laying eggs, an adaptation shared by several other Channel Islands reptiles."
+    }
+  ]
+}

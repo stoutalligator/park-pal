@@ -1,0 +1,189 @@
+{
+  "parkId": "gateway-arch",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (jeff)", "Gateway Arch National Park Superintendent's Compendium for 2026", "National Park Service history archives"],
+  "trails": [
+    {
+      "id": "gateway-arch-riverfront",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Accessible", "Riverfront"],
+      "trailTip": "This flat, paved path along the Mississippi is stroller- and wheelchair-friendly, but it can flood and close temporarily after heavy rain upstream — check current park alerts before visiting if the river has been running high.",
+      "didYouKnow": "The Riverfront Trail runs directly below the Arch's east leg, offering one of the few vantage points where you can see the monument's full 630-foot height reflected in the Mississippi.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North end" },
+        { "mile": 1, "elevationFt": 10 },
+        { "mile": 2, "elevationFt": 20, "label": "South end" }
+      ]
+    },
+    {
+      "id": "gateway-arch-kiener-plaza",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Urban", "Accessible", "Historic"],
+      "trailTip": "A short, level downtown walk connecting the Arch grounds to Kiener Plaza — pleasant any time of day, though it crosses active city streets so use marked crosswalks.",
+      "didYouKnow": "Kiener Plaza is named for Olympic gymnast Walter Kiener and has served as a downtown gathering space since the 1960s, around the same time the Arch was completed.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Arch grounds" },
+        { "mile": 0.5, "elevationFt": 5, "label": "Kiener Plaza" }
+      ]
+    },
+    {
+      "id": "gateway-arch-grounds-loop",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Loop", "Accessible", "Skyline Views"],
+      "trailTip": "A flat, paved loop around the Arch's base with some of the best close-up photo angles of the monument — arrive near sunrise or sunset for softer light and thinner crowds.",
+      "didYouKnow": "The Gateway Arch is the tallest man-made monument in the Western Hemisphere at 630 feet, and its footprint forms a perfect catenary curve.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North leg" },
+        { "mile": 0.5, "elevationFt": 10 },
+        { "mile": 1, "elevationFt": 0, "label": "South leg" }
+      ]
+    },
+    {
+      "id": "gateway-arch-luther-ely-smith",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Landscaped", "Historic", "Accessible"],
+      "trailTip": "A short landscaped walk linking the Old Courthouse to the Arch grounds — an easy add-on if you're visiting both sites in one trip.",
+      "didYouKnow": "The square is named for the St. Louis civic leader who championed creating the riverfront memorial in the 1930s, decades before the Arch itself was built.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Old Courthouse" },
+        { "mile": 0.4, "elevationFt": 5, "label": "Arch grounds" }
+      ]
+    },
+    {
+      "id": "gateway-arch-eads-bridge",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Historic", "Riverfront"],
+      "trailTip": "A flat riverfront walk to the historic Eads Bridge; the bridge's pedestrian level offers a good elevated view back toward the Arch, though the approach ramps have some incline.",
+      "didYouKnow": "Opened in 1874, the Eads Bridge was the first bridge to cross the Mississippi River at St. Louis and one of the first large-scale uses of steel (rather than iron) in American bridge construction.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Riverfront" },
+        { "mile": 1, "elevationFt": 10, "label": "Eads Bridge approach" },
+        { "mile": 1.5, "elevationFt": 10 }
+      ]
+    },
+    {
+      "id": "gateway-arch-chouteaus-landing",
+      "estimatedTime": "30-40 min",
+      "bestSeason": "Year-round",
+      "tags": ["Riverfront", "Quiet"],
+      "trailTip": "A quieter riverside stretch south of the main Arch grounds with far fewer visitors — good for an unhurried walk, though lighting and amenities are sparser after dark.",
+      "didYouKnow": "The area is named for Auguste Chouteau, a co-founder of St. Louis in 1764, whose original landing site was along this stretch of riverfront.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Arch grounds south end" },
+        { "mile": 1, "elevationFt": 10, "label": "Landing site" }
+      ]
+    },
+    {
+      "id": "gateway-arch-leonor-sullivan",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Paved", "Riverfront", "Accessible"],
+      "trailTip": "A long, flat paved promenade along the Mississippi popular with runners and cyclists as well as walkers — it can flood after major rain events upstream, so check current conditions if the river is high.",
+      "didYouKnow": "The riverwalk is named for Leonor K. Sullivan, a longtime U.S. Representative from St. Louis who championed federal support for the riverfront and the Arch grounds.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North end" },
+        { "mile": 1.25, "elevationFt": 5 },
+        { "mile": 2.5, "elevationFt": 10, "label": "South end" }
+      ]
+    },
+    {
+      "id": "gateway-arch-old-courthouse-loop",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic", "Urban", "Accessible"],
+      "trailTip": "A brief loop around the 1839 Old Courthouse — pair it with a stop inside, which is free and staffed by NPS rangers with exhibits on the building's history.",
+      "didYouKnow": "The Old Courthouse was the site of the first two trials of Dred Scott v. Sandford in 1847 and 1850, a case that helped set the stage for the Civil War.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Courthouse entrance" },
+        { "mile": 0.3, "elevationFt": 5 }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "gateway-arch-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jul (nesting)",
+      "whereToLook": "High on the Arch itself, visible from the grounds below",
+      "tags": ["Cliff Nester", "Urban Nester"],
+      "viewingTip": "Watch from the grounds with binoculars rather than trying to get closer — the Arch's exterior isn't publicly accessible near the nest anyway, and that distance is exactly what lets the falcons nest undisturbed in the middle of a city.",
+      "didYouKnow": "The Arch is one of the tallest urban peregrine falcon nest sites in the country, part of a decades-long recovery for a species that was nearly wiped out east of the Rockies by DDT."
+    },
+    {
+      "id": "gateway-arch-mallard",
+      "scientificName": "Anas platyrhynchos",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Along the Mississippi riverfront and nearby ponds",
+      "tags": ["Common", "Riverfront"],
+      "viewingTip": "Enjoy watching mallards from the paths without feeding them — bread and other human food harm waterfowl digestion and draw unnaturally large, aggressive flocks to busy walkways.",
+      "didYouKnow": "Mallards are the ancestor of nearly all domestic duck breeds except the Muscovy duck."
+    },
+    {
+      "id": "gateway-arch-gray-squirrel",
+      "scientificName": "Sciurus carolinensis",
+      "bestTimeOfDay": "Morning / Afternoon",
+      "bestSeason": "Year-round",
+      "whereToLook": "Lawns and trees throughout the Arch grounds",
+      "tags": ["Common", "Urban"],
+      "viewingTip": "Watch squirrels forage naturally rather than hand-feeding them; a fed squirrel loses its wariness of people and is more likely to bite or be hit crossing busy park roads.",
+      "didYouKnow": "Eastern gray squirrels bury far more nuts than they ever retrieve, making them one of the region's most effective (if accidental) tree planters."
+    },
+    {
+      "id": "gateway-arch-great-blue-heron",
+      "scientificName": "Ardea herodias",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Spring-Fall",
+      "whereToLook": "Along the Mississippi riverbank near the grounds",
+      "tags": ["Uncommon", "Riverfront"],
+      "viewingTip": "Watch from the paved riverfront paths with binoculars rather than approaching the water's edge where a heron is fishing, which will simply flush the bird before you get a good look.",
+      "didYouKnow": "Despite their size, great blue herons weigh only 5-6 pounds thanks to hollow bones, an adaptation shared with all flying birds."
+    },
+    {
+      "id": "gateway-arch-monarch-butterfly",
+      "scientificName": "Danaus plexippus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Aug-Oct (fall migration)",
+      "whereToLook": "Native plantings in the Explorers' Garden near the visitor center",
+      "tags": ["Migratory", "Seasonal"],
+      "viewingTip": "Observe and photograph monarchs on the milkweed and nectar plantings without handling them — resting migrants need every bit of stored energy for the journey south to Mexico.",
+      "didYouKnow": "Monarchs that pass through St. Louis in fall may be flying all the way to overwintering sites in the oyamel fir forests of central Mexico, a multi-generational round trip."
+    },
+    {
+      "id": "gateway-arch-red-tailed-hawk",
+      "scientificName": "Buteo jamaicensis",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Year-round",
+      "whereToLook": "Soaring above the Arch grounds and riverfront",
+      "tags": ["Uncommon", "Urban Raptor"],
+      "viewingTip": "Enjoy watching hawks soar and hunt from a distance with binoculars — resist any urge to approach if one is seen perched low with prey, since that's exactly when it's most easily flushed.",
+      "didYouKnow": "Red-tailed hawks are highly adaptable to cities, often nesting on tall buildings or bridge structures that mimic the cliff ledges they'd use in the wild."
+    },
+    {
+      "id": "gateway-arch-canada-goose",
+      "scientificName": "Branta canadensis",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Riverfront lawns along the Mississippi",
+      "tags": ["Common", "Riverfront"],
+      "viewingTip": "Give nesting or goslings-with-parents groups plenty of room and never feed geese — fed, habituated geese become more aggressive toward visitors and their droppings concentrate on lawns people use.",
+      "didYouKnow": "Many Canada geese found in St. Louis parks today are non-migratory year-round residents rather than the long-distance migrants the species is famous for."
+    },
+    {
+      "id": "gateway-arch-common-carp",
+      "scientificName": "Cyprinus carpio",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Year-round",
+      "whereToLook": "Shallow water along the Mississippi riverbank",
+      "tags": ["Common", "Riverfront"],
+      "viewingTip": "Watch carp cruising the shallows from the bank or a bridge rather than wading in after them — the riverbank here can be steep, muddy, and swift-flowing.",
+      "didYouKnow": "Common carp are not native to North America; they were introduced from Europe and Asia in the 1800s and are now widespread throughout the Mississippi River system."
+    }
+  ]
+}

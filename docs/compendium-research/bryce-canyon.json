@@ -1,0 +1,208 @@
+{
+  "parkId": "bryce-canyon",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Wildland Trekking", "Outdoor Status", "St. George News / KUTV / Fox 13 Utah news coverage"],
+  "trails": [
+    {
+      "id": "bryce-canyon-navajo-loop",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct (Wall Street spur closed roughly Nov-Apr)",
+      "tags": ["Switchbacks", "Seasonal Closure", "Iconic Hoodoos"],
+      "trailTip": "The Wall Street switchback section closes seasonally each winter for ice and freeze-thaw rockfall risk, and has also seen intermittent stabilization-work closures — as of September 2026, per NPS.gov and local news coverage, confirm current trail status before combining it with Queens Garden.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Wall Street's narrow slot is shaded enough that two Douglas firs growing at its base have stretched over 200 feet tall reaching for sunlight.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Sunset Point trailhead" },
+        { "mile": 0.3, "elevationFt": -250 },
+        { "mile": 0.6, "elevationFt": -500, "label": "Wall Street slot" },
+        { "mile": 0.9, "elevationFt": -350 },
+        { "mile": 1.3, "elevationFt": 0, "label": "Loop closes at rim" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-queens-garden",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Below Rim", "Beginner Friendly"],
+      "trailTip": "This is the gentlest below-rim trail in the park, but the sandy switchbacks still climb back roughly 320 feet to Sunrise Point, so sturdy shoes with good tread help.",
+      "didYouKnow": "A short spur partway down leads to the trail's namesake hoodoo, said to resemble Queen Victoria's silhouette.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Sunrise Point trailhead" },
+        { "mile": 0.6, "elevationFt": -200 },
+        { "mile": 0.9, "elevationFt": -320, "label": "Queen Victoria spur" },
+        { "mile": 1.4, "elevationFt": -150 },
+        { "mile": 1.8, "elevationFt": 0, "label": "Return to rim" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-fairyland-loop",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Long Loop", "Less Crowded", "Rolling Elevation"],
+      "trailTip": "Carry more water than you'd expect for the mileage — this loop has repeated below-rim ups and downs with little shade and far fewer hikers around than Navajo/Queens Garden.",
+      "didYouKnow": "Fairyland Loop passes just as many hoodoo formations as Navajo Loop, including a view of Tower Bridge, but sees a fraction of the foot traffic.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Fairyland Point" },
+        { "mile": 2, "elevationFt": -600 },
+        { "mile": 4, "elevationFt": -1000, "label": "Low point near Tower Bridge junction" },
+        { "mile": 6, "elevationFt": -400 },
+        { "mile": 8, "elevationFt": 0, "label": "Return to rim" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-rim-trail",
+      "estimatedTime": "2-3 hrs end to end",
+      "bestSeason": "Year-round, weather permitting",
+      "tags": ["Paved", "Overlooks", "Segment-Friendly"],
+      "trailTip": "You don't have to hike it end to end — the paved sections between Fairyland, Sunrise, Sunset, Inspiration, and Bryce Points work well as short standalone walks between overlooks.",
+      "didYouKnow": "The Rim Trail links several of the park's most-photographed overlooks without ever dropping below the canyon rim.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Fairyland Point" },
+        { "mile": 2, "elevationFt": 150 },
+        { "mile": 3.5, "elevationFt": 250, "label": "Inspiration Point" },
+        { "mile": 5.5, "elevationFt": 350, "label": "Bryce Point" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-peekaboo-loop",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Shared Horse Trail", "Wall of Windows", "Strenuous"],
+      "trailTip": "This is one of the park's only shared hiker/horse trails, used by the concessioner's guided mule and horse rides — yield the right-of-way to stock trains and expect some manure on the tread.",
+      "didYouKnow": "The trail's 'Wall of Windows' formation has multiple natural openings eroded clean through a single hoodoo wall.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Bryce Point" },
+        { "mile": 1.5, "elevationFt": -700 },
+        { "mile": 3, "elevationFt": -1500, "label": "Wall of Windows" },
+        { "mile": 4.5, "elevationFt": -800 },
+        { "mile": 5.5, "elevationFt": 0, "label": "Return to rim" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-tower-bridge",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Spur Trail", "Rock Formation"],
+      "trailTip": "Most hikers reach Tower Bridge via a spur off the Fairyland Loop trailhead near North Campground rather than a dedicated lot, so budget extra time to find parking.",
+      "didYouKnow": "Tower Bridge is named for its resemblance to London's Tower Bridge, with two hoodoo towers linked by a thin stone span.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1, "elevationFt": -400 },
+        { "mile": 1.5, "elevationFt": -800, "label": "Tower Bridge overlook" },
+        { "mile": 2.2, "elevationFt": -400 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "bryce-canyon-mossy-cave",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Family Friendly", "Waterfall", "Ice Cave"],
+      "trailTip": "The 'cave' is a small alcove that can grow icicles in winter, and the waterfall along the way is fed by a historic irrigation ditch rather than a natural spring, so flow varies with local water use.",
+      "didYouKnow": "The waterfall here is fed by a Mormon pioneer-era irrigation canal rerouted from the Sevier River in the 1890s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 150, "label": "Waterfall / cave" },
+        { "mile": 0.8, "elevationFt": 200 }
+      ]
+    },
+    {
+      "id": "bryce-canyon-under-the-rim",
+      "estimatedTime": "2-3 days",
+      "bestSeason": "May-Oct",
+      "tags": ["Backcountry", "Permit Required", "Multi-Day"],
+      "trailTip": "Day hiking any section needs no permit, but overnight stays at the trail's seven designated campsites require a backcountry permit (about $5/person, reservable on Recreation.gov for peak season) — as of September 2026, per NPS.gov.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "At nearly 23 miles, this is the longest maintained trail in the park, connecting Bryce Point to Rainbow Point far to the south.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Bryce Point" },
+        { "mile": 8, "elevationFt": -600 },
+        { "mile": 14, "elevationFt": 200 },
+        { "mile": 20, "elevationFt": -300 },
+        { "mile": 22.9, "elevationFt": 100, "label": "Rainbow Point" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "bryce-canyon-prairie-dog",
+      "scientificName": "Cynomys parvidens",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Apr-Oct (hibernates in winter)",
+      "whereToLook": "Meadows near the visitor center and Sunset Campground",
+      "tags": ["Federally Threatened", "Burrow Colonies"],
+      "viewingTip": "Utah prairie dogs are federally protected — watch active burrow colonies from a respectful distance with binoculars and never approach or feed them.",
+      "didYouKnow": "Bryce Canyon protects one of the last strongholds of the Utah prairie dog, a species found nowhere else in the world."
+    },
+    {
+      "id": "bryce-canyon-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forest edges and meadows throughout the park, especially near Sunset Campground",
+      "tags": ["Common", "Crepuscular"],
+      "viewingTip": "Deer are common enough to view from pullouts — use binoculars rather than approaching; a deer that stops feeding to watch you is already too close.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears, which rotate independently to pinpoint sound."
+    },
+    {
+      "id": "bryce-canyon-pronghorn",
+      "scientificName": "Antilocapra americana",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Summer",
+      "whereToLook": "Open plateau grasslands in the park's southern reaches",
+      "tags": ["Rare Sighting", "Grassland"],
+      "viewingTip": "Pronghorn are skittish and fast — scan open grassland with binoculars from the road rather than trying to close the distance on foot.",
+      "didYouKnow": "Pronghorn are the fastest land animal in North America, capable of sustained speeds over 55 mph."
+    },
+    {
+      "id": "bryce-canyon-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jul (nesting)",
+      "whereToLook": "Cliff faces below Inspiration Point and Bryce Point",
+      "tags": ["Cliff Nester", "Fastest Bird"],
+      "viewingTip": "Peregrines nest on ledges below the rim each spring — view active sites only from established overlooks with binoculars or a spotting scope, never by scrambling toward a ledge for a closer look.",
+      "didYouKnow": "Peregrines are the fastest animal on Earth, reaching over 200 mph in a hunting stoop."
+    },
+    {
+      "id": "bryce-canyon-great-horned-owl",
+      "scientificName": "Bubo virginianus",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Ponderosa pine stands along the rim",
+      "tags": ["Nocturnal", "Roosts in Pines"],
+      "viewingTip": "Listen for deep hooting at dusk and scan pine branches with binoculars rather than shining a bright light straight at a roosting bird.",
+      "didYouKnow": "Great horned owls have no true horns — the head tufts are feathers called plumicorns, likely used for camouflage and signaling."
+    },
+    {
+      "id": "bryce-canyon-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Forested plateau away from developed areas; rarely seen",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "Sightings are extremely rare — if one does appear, keep your distance, make yourself look large, and never approach or try to feed it.",
+      "didYouKnow": "Mountain lions are also called cougars, pumas, and panthers depending on region, all the same species."
+    },
+    {
+      "id": "bryce-canyon-golden-mantled-squirrel",
+      "scientificName": "Callospermophilus lateralis",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Apr-Oct (hibernates in winter)",
+      "whereToLook": "Overlooks and picnic areas along the rim",
+      "tags": ["Common", "Ground Squirrel"],
+      "viewingTip": "These squirrels are bold and easy to view up close naturally — resist feeding them human food, which is illegal in the park and harmful to their health.",
+      "didYouKnow": "Often mistaken for chipmunks, golden-mantled ground squirrels lack the facial stripes chipmunks have."
+    },
+    {
+      "id": "bryce-canyon-clarks-nutcracker",
+      "scientificName": "Nucifraga columbiana",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Ponderosa pines near rim overlooks",
+      "tags": ["Common", "Seed Caching"],
+      "viewingTip": "Watch and photograph these bold birds with a zoom lens from a bench or overlook rather than tossing food to draw them closer.",
+      "didYouKnow": "A single Clark's nutcracker can cache tens of thousands of pine seeds each fall and remember most of the locations months later."
+    }
+  ]
+}

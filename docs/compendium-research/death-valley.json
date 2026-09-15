@@ -1,0 +1,210 @@
+{
+  "parkId": "death-valley",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "National Parks Traveler", "KOLO 8 News Now", "Tripadvisor Death Valley Forum"],
+  "trails": [
+    {
+      "id": "death-valley-golden-canyon",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Badlands", "Exposed", "Flash Flood Risk"],
+      "trailTip": "As of September 2026, per NPS.gov, Badwater Road (which this trailhead sits on) still has loose gravel and rough shoulders from past flood damage, so check current road conditions before driving in, carry at least a gallon of water per person, and avoid this exposed, shade-free canyon in summer afternoon heat.",
+      "didYouKnow": "The canyon's golden color comes from oxidized volcanic ash and mudstone laid down in an ancient lakebed roughly five million years ago.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.75, "elevationFt": 200 },
+        { "mile": 1.5, "elevationFt": 400, "label": "Red Cathedral" },
+        { "mile": 2.25, "elevationFt": 180 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-mosaic-canyon",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Narrows", "Polished Rock", "Scrambling"],
+      "trailTip": "The lower narrows can be slick when wet, and a short hands-on scramble is needed to continue past the first polished section — shoes with good grip help more than hiking poles here.",
+      "didYouKnow": "The canyon's smooth, marble-like walls are actually breccia and dolomite polished by countless flash floods, not true marble.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 150, "label": "Polished Narrows" },
+        { "mile": 1.75, "elevationFt": 500, "label": "Upper Canyon" },
+        { "mile": 2.6, "elevationFt": 200 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-badwater-basin",
+      "estimatedTime": "20-40 min",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Flat", "Extreme Heat", "No Shade"],
+      "trailTip": "There is zero shade on the salt flat and afternoon temperatures regularly top 120°F in summer, so visit early morning or in cooler months and carry more water than you think you'll need.",
+      "didYouKnow": "At 282 feet below sea level, Badwater Basin is the lowest point in North America — yet Telescope Peak, visible from the salt flat, rises more than two miles above it.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boardwalk" },
+        { "mile": 0.5, "elevationFt": 5, "label": "Salt Flat" },
+        { "mile": 1.0, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-telescope-peak",
+      "estimatedTime": "8-10 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["High Altitude", "Long Day Hike", "Snow Possible"],
+      "trailTip": "Snow and ice can linger on the upper switchbacks into early summer, so check current conditions and bring traction devices before July, and start at first light to finish before afternoon winds pick up on the exposed summit ridge.",
+      "didYouKnow": "On a clear day the summit offers one of the greatest vertical-relief views in the Lower 48 — Mount Whitney, the highest point in the contiguous U.S., is visible in the same panorama as Badwater Basin, the lowest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Mahogany Flat Trailhead" },
+        { "mile": 3, "elevationFt": 1200 },
+        { "mile": 5, "elevationFt": 2000, "label": "Arcane Meadows" },
+        { "mile": 7, "elevationFt": 3000, "label": "Summit" },
+        { "mile": 10, "elevationFt": 1500 },
+        { "mile": 14, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-natural-bridge",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Easy Access", "Rough Access Road"],
+      "trailTip": "As of September 2026, per NPS.gov's Death Valley conditions page, the unpaved access road off Badwater Road still shows flood-damage washboarding and soft shoulders, so drive slowly and check current road status before heading out.",
+      "didYouKnow": "The bridge is a dry waterfall remnant, carved when the shoreline of ancient Lake Manly stood far higher than today's valley floor.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 150, "label": "Natural Bridge" },
+        { "mile": 0.7, "elevationFt": 200, "label": "Canyon Dryfall" },
+        { "mile": 1.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-sidewinder-canyon",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Unmarked Route", "Scrambling", "High-Clearance Access"],
+      "trailTip": "There's no maintained trail once you're in the wash — route-finding and short scrambles are needed to reach the narrow slot alcoves, and a high-clearance vehicle is recommended for the final approach road off Badwater Road.",
+      "didYouKnow": "The canyon's narrow slot alcoves were carved by flash floods draining off the Black Mountains, and several require careful scrambling just to peer inside.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.2, "elevationFt": 250, "label": "First Alcove" },
+        { "mile": 2.5, "elevationFt": 500, "label": "Slot Alcoves" },
+        { "mile": 2.9, "elevationFt": 800 },
+        { "mile": 4.5, "elevationFt": 300 },
+        { "mile": 5.8, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-ubehebe-crater",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Loose Gravel", "Windy", "Volcanic Feature"],
+      "trailTip": "Wind gusts on the exposed rim can be strong enough to affect footing, and the loose cinder slope down into the crater is much harder to climb back out of than it looks — most visitors are better off staying on the rim loop.",
+      "didYouKnow": "The half-mile-wide crater formed within the last few thousand years when rising magma met groundwater in a violent steam explosion.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 300, "label": "Rim High Point" },
+        { "mile": 1.1, "elevationFt": 150 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "death-valley-wildrose-peak",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Remote Trailhead", "Pinyon-Juniper Forest", "Long Climb"],
+      "trailTip": "The trailhead sits at the end of a long, sometimes rough dirt road past the historic charcoal kilns — a high-clearance vehicle is recommended, and snow can linger near the summit into late spring.",
+      "didYouKnow": "The trailhead sits beside ten beehive-shaped charcoal kilns built in 1877 to fuel nearby silver-lead ore smelters.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Charcoal Kilns Trailhead" },
+        { "mile": 2, "elevationFt": 900 },
+        { "mile": 3.4, "elevationFt": 1600, "label": "Saddle" },
+        { "mile": 4.2, "elevationFt": 2200, "label": "Summit" },
+        { "mile": 6, "elevationFt": 1000 },
+        { "mile": 8.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "death-valley-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Early Morning",
+      "bestSeason": "Aug-Oct",
+      "whereToLook": "Steep canyon walls near Titus Canyon and the Panamint Range",
+      "tags": ["Rut Season", "Cliff Dweller"],
+      "viewingTip": "Use binoculars or a spotting scope from canyon floors — desert bighorn are most visible at dawn near steep talus, and during the fall rut (roughly August-October) rams can be unpredictable, so keep well back and never approach animals on narrow ledges.",
+      "didYouKnow": "Desert bighorn can go for days without drinking water, getting much of what they need from the plants they browse."
+    },
+    {
+      "id": "death-valley-roadrunner",
+      "scientificName": "Geococcyx californianus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Valley-floor washes and campground edges",
+      "tags": ["Ground Forager"],
+      "viewingTip": "Watch quietly from a distance as it dashes after lizards and insects — never toss food scraps to lure it closer, since human food habituates roadrunners and makes them bolder around traffic and campsites.",
+      "didYouKnow": "Roadrunners can sprint up to 20 mph and rarely fly, preferring to outrun predators and prey alike."
+    },
+    {
+      "id": "death-valley-kit-fox",
+      "scientificName": "Vulpes macrotis",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open desert flats near dunes and washes, especially around dusk",
+      "tags": ["Nocturnal", "Burrow Dweller"],
+      "viewingTip": "Scan open flats at dusk with binoculars or a red-lens flashlight; kit foxes den in shallow burrows, so admire any den entrance from a distance rather than approaching it or shining a light directly inside.",
+      "didYouKnow": "Kit foxes have oversized ears that radiate body heat, helping them stay cool in one of the hottest places on Earth."
+    },
+    {
+      "id": "death-valley-desert-tortoise",
+      "scientificName": "Gopherus agassizii",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-May",
+      "whereToLook": "Lower desert scrub and creosote flats, mostly below 3,000 ft",
+      "tags": ["Threatened Species", "Burrow Dweller"],
+      "viewingTip": "Desert tortoises are federally threatened — if you spot one, observe from several feet away with binoculars and never pick it up or move it; handling can cause a tortoise to void its stored water, which can be fatal in this climate.",
+      "didYouKnow": "A desert tortoise can store enough water in its bladder to survive nearly a year without rainfall."
+    },
+    {
+      "id": "death-valley-sidewinder",
+      "scientificName": "Crotalus cerastes",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Sandy dune fields, especially Mesquite Flat, after dusk",
+      "tags": ["Venomous", "Nocturnal"],
+      "viewingTip": "Look for its distinctive J-shaped tracks in the dunes at dusk and use a flashlight to spot it from several feet away — sidewinders are venomous, so never attempt to touch, corner, or move one; simply step back and let it pass.",
+      "didYouKnow": "The sidewinder's unusual sideways motion minimizes the amount of its body touching the scorching sand at any moment."
+    },
+    {
+      "id": "death-valley-coyote",
+      "scientificName": "Canis latrans",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Valley-floor roadsides and washes",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Watch from your vehicle or a distance with binoculars — coyotes here are still wild, and roadside feeding elsewhere in the park has made some individuals dangerously bold, so never offer food.",
+      "didYouKnow": "Death Valley coyotes have been documented digging their own shallow wells in dry washes to reach subsurface moisture."
+    },
+    {
+      "id": "death-valley-chuckwalla",
+      "scientificName": "Sauromalus ater",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Jun",
+      "whereToLook": "Rocky slopes and boulder fields near canyon mouths",
+      "tags": ["Basking", "Rock Crevice Dweller"],
+      "viewingTip": "Scan sunny boulder piles in late morning with binoculars; chuckwallas inflate themselves inside rock crevices when threatened, so admire that defense from a distance rather than trying to pull one out.",
+      "didYouKnow": "When startled, a chuckwalla wedges into a crack and inflates its lungs, making it nearly impossible for a predator to pull it free."
+    },
+    {
+      "id": "death-valley-raven",
+      "scientificName": "Corvus corax",
+      "bestTimeOfDay": "All day",
+      "bestSeason": "Year-round",
+      "whereToLook": "Parking areas and overlooks near Badwater Basin and Furnace Creek",
+      "tags": ["Scavenger", "Bold Around People"],
+      "viewingTip": "Ravens here readily approach parking areas — enjoy their intelligence and acrobatics from a bench or overlook, but never hand-feed them or leave food unattended, since it teaches them to raid packs and vehicles.",
+      "didYouKnow": "Common ravens are among the most intelligent birds known, capable of solving multi-step puzzles to reach food."
+    }
+  ]
+}

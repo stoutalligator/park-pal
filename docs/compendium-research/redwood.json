@@ -1,0 +1,201 @@
+{
+  "parkId": "redwood",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (redw)", "Redwood Parks Conservancy", "AllTrails", "Earthtrekkers"],
+  "trails": [
+    {
+      "id": "redwood-tall-trees-grove",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Year-round; check permit availability before you go",
+      "tags": ["Permit Required", "Steep Descent"],
+      "trailTip": "As of September 2026, per NPS.gov, a free access permit is required to drive the gated road to the Tall Trees trailhead and hike this trail — reserve online up to 180 days ahead or within 24 hours of your visit, since only 50 permits are issued per day.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The grove was once home to the 'Libbey Tree,' long considered the world's tallest known tree, before taller redwoods were discovered elsewhere in the park in the 2000s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead gate" },
+        { "mile": 1.0, "elevationFt": 400 },
+        { "mile": 2.0, "elevationFt": 800, "label": "Tall Trees Grove" },
+        { "mile": 3.0, "elevationFt": 400 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Back at Trailhead" }
+      ]
+    },
+    {
+      "id": "redwood-fern-canyon",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "May-Oct, when seasonal footbridges are typically in place; creek crossings can be difficult in winter",
+      "tags": ["Creek Crossings", "Iconic"],
+      "trailTip": "Seasonal footbridges are usually removed for the wet season, so expect to rock-hop or wade the creek outside summer and early fall — check current conditions before visiting.",
+      "didYouKnow": "Fern Canyon's 50-foot fern-draped walls were used as a prehistoric jungle setting in 'The Lost World: Jurassic Park.'",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 50, "label": "Upper canyon" },
+        { "mile": 1.0, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "redwood-lady-bird-johnson-grove",
+      "estimatedTime": "45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Old Growth", "Family Friendly"],
+      "trailTip": "This paved loop is manageable for most fitness levels, but parking at the small trailhead lot fills quickly on summer days.",
+      "didYouKnow": "This grove was dedicated in 1969 by Lady Bird Johnson herself to mark the creation of Redwood National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 200, "label": "Dedication site" },
+        { "mile": 1.4, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "redwood-boy-scout-tree",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Year-round; can be very muddy in winter",
+      "tags": ["Old Growth", "Muddy in Winter"],
+      "trailTip": "The trail can turn to standing mud after rain — waterproof boots make a real difference on this one.",
+      "didYouKnow": "The trail ends at Fern Falls, a quiet 15-foot waterfall tucked into a fern-lined alcove.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.4, "elevationFt": 200 },
+        { "mile": 2.8, "elevationFt": 400, "label": "Boy Scout Tree / Fern Falls" },
+        { "mile": 4.2, "elevationFt": 200 },
+        { "mile": 5.6, "elevationFt": 0, "label": "Back at Trailhead" }
+      ]
+    },
+    {
+      "id": "redwood-coastal-demartin",
+      "estimatedTime": "5-6 hrs one-way; a shuttle or second vehicle is recommended",
+      "bestSeason": "Apr-Oct for the best weather; usable year-round",
+      "tags": ["Point-to-Point", "Coastal Bluffs", "Shuttle Recommended"],
+      "trailTip": "This is a one-way point-to-point hike between the DeMartin and Klamath trailheads — arrange a shuttle or two vehicles, since there's no loop back.",
+      "didYouKnow": "This stretch of the Coastal Trail runs along bluffs above Damnation Creek, one of the few places old-growth redwoods grow almost to the ocean's edge.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "DeMartin Trailhead" },
+        { "mile": 3.0, "elevationFt": 500 },
+        { "mile": 6.0, "elevationFt": 900, "label": "Damnation Creek junction" },
+        { "mile": 9.0, "elevationFt": 1200 },
+        { "mile": 11.0, "elevationFt": 600, "label": "Klamath Trailhead" }
+      ]
+    },
+    {
+      "id": "redwood-james-irvine",
+      "estimatedTime": "6-7 hrs",
+      "bestSeason": "Year-round; creek crossings easier in summer and fall",
+      "tags": ["Old Growth", "Long Day Hike"],
+      "trailTip": "Most hikers combine this with the Fern Canyon and Miners Ridge trails to form a full loop from the Prairie Creek Visitor Center — start early, since it's a full day out.",
+      "didYouKnow": "The James Irvine Trail passes through some of the tallest and densest old-growth redwood groves left on Earth, within Prairie Creek Redwoods State Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Prairie Creek Visitor Center" },
+        { "mile": 4.5, "elevationFt": 400, "label": "Fern Canyon junction" },
+        { "mile": 8.0, "elevationFt": 650, "label": "Miners Ridge" },
+        { "mile": 12.0, "elevationFt": 0, "label": "Back at Visitor Center" }
+      ]
+    },
+    {
+      "id": "redwood-trillium-falls",
+      "estimatedTime": "1.5 hrs",
+      "bestSeason": "Year-round; the falls run strongest in winter and spring",
+      "tags": ["Waterfall", "Old Growth"],
+      "trailTip": "Trillium Falls flows best after winter rains and can slow to a trickle by late summer — an easy family loop either way.",
+      "didYouKnow": "The trail passes through both old-growth redwoods and a section of second-growth forest, letting hikers compare the two side by side.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.2, "elevationFt": 350, "label": "Trillium Falls" },
+        { "mile": 2.6, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "redwood-yurok-loop",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Coastal Bluffs", "Family Friendly"],
+      "trailTip": "This short loop connects easily to the Coastal Trail and Hidden Beach for a longer add-on if you want more than a quick walk.",
+      "didYouKnow": "The loop is named for the Yurok Tribe, whose traditional territory includes this stretch of coastline near the Klamath River mouth.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 100, "label": "Coastal overlook" },
+        { "mile": 1.0, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "redwood-roosevelt-elk",
+      "scientificName": "Cervus canadensis roosevelti",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Sep-Oct rut is most dramatic; visible year-round",
+      "whereToLook": "Elk Meadow near Prairie Creek and along the Gold Bluffs Beach road",
+      "tags": ["Rut Season", "Common"],
+      "viewingTip": "View elk from a pullout or your vehicle with binoculars, staying at least 100 feet away — bulls become unpredictable and can charge during the fall rut, and cows with calves in spring will defend them if approached.",
+      "didYouKnow": "Roosevelt elk are the largest of the four elk subspecies in North America, with mature bulls weighing up to 1,100 pounds."
+    },
+    {
+      "id": "redwood-banana-slug",
+      "scientificName": "Ariolimax columbianus",
+      "bestTimeOfDay": "Anytime, especially after rain",
+      "bestSeason": "Year-round; most active in wet months",
+      "whereToLook": "Damp forest floor along any old-growth trail",
+      "tags": ["Common", "Decomposer"],
+      "viewingTip": "Watch your step and enjoy them from where you stand — banana slugs move slowly enough to observe closely without needing to pick one up.",
+      "didYouKnow": "Banana slugs can grow nearly 10 inches long and play an important role recycling nutrients on the redwood forest floor."
+    },
+    {
+      "id": "redwood-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Spring-fall; dens in winter",
+      "whereToLook": "Forest understory and berry patches away from developed areas",
+      "tags": ["Elusive", "Food Storage"],
+      "viewingTip": "Keep at least 100 yards away, store all food and scented items properly, and never leave anything out that could habituate a bear to people.",
+      "didYouKnow": "Redwood's black bears forage heavily on berries and banana slugs, helping disperse seeds throughout the forest."
+    },
+    {
+      "id": "redwood-marbled-murrelet",
+      "scientificName": "Brachyramphus marmoratus",
+      "bestTimeOfDay": "Dawn (pre-sunrise flights)",
+      "bestSeason": "Apr-Aug nesting season",
+      "whereToLook": "Old-growth canopy near Lady Bird Johnson Grove and other undisturbed groves",
+      "tags": ["Threatened Species", "Canopy Nester"],
+      "viewingTip": "Listen for their distinctive 'keer' call at dawn rather than scanning the canopy for a nest — murrelets nest on wide mossy branches high in old-growth redwoods, and lingering beneath a suspected nest tree risks flushing an incubating adult.",
+      "didYouKnow": "The marbled murrelet's habit of nesting in redwood canopies wasn't confirmed by scientists until 1974, making it one of the last North American birds to have its nest discovered."
+    },
+    {
+      "id": "redwood-spotted-owl",
+      "scientificName": "Strix occidentalis caurina",
+      "bestTimeOfDay": "Night / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Dense old-growth stands; rarely seen by casual visitors",
+      "tags": ["Threatened Species", "Elusive"],
+      "viewingTip": "If you hear one calling at dusk, enjoy it from the trail rather than searching off-trail for a roost — this federally threatened species is highly sensitive to disturbance near nest sites.",
+      "didYouKnow": "Competition from the invasive barred owl is now considered a bigger threat to northern spotted owls in this region than habitat loss."
+    },
+    {
+      "id": "redwood-black-tailed-deer",
+      "scientificName": "Odocoileus hemionus columbianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Meadows and forest edges throughout the park",
+      "tags": ["Common"],
+      "viewingTip": "Watch from a respectful distance with binoculars, especially does with fawns in late spring, and never approach to feed them.",
+      "didYouKnow": "Black-tailed deer are a coastal subspecies of mule deer, named for the dark upper surface of their tail."
+    },
+    {
+      "id": "redwood-tidepool-sculpin",
+      "scientificName": "Oligocottus maculosus",
+      "bestTimeOfDay": "Low tide",
+      "bestSeason": "Year-round; check tide tables before visiting",
+      "whereToLook": "Rocky tidepools along the coastal bluffs",
+      "tags": ["Tidepool", "Uncommon"],
+      "viewingTip": "Look into pools without touching or removing anything, walk carefully on wet rocks, and gently return any rock you lift back to its original position to protect the tidepool community.",
+      "didYouKnow": "Tidepool sculpins can survive brief exposure to air between tides by trapping water in their gill chambers."
+    },
+    {
+      "id": "redwood-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Feb-Jul nesting season",
+      "whereToLook": "Coastal cliffs along the park's shoreline",
+      "tags": ["Cliff Nester"],
+      "viewingTip": "View from established coastal overlooks with binoculars rather than approaching cliff edges near a suspected nest — nesting peregrines are easily flushed off eggs or chicks by close approach, so keep well back from any cliff where you notice repeated stooping or calling.",
+      "didYouKnow": "Peregrine falcons can reach dive speeds over 200 mph, making them the fastest animal on Earth, and were removed from the U.S. endangered species list in 1999 after recovering from DDT-related declines."
+    }
+  ]
+}

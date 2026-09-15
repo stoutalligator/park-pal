@@ -1,0 +1,196 @@
+{
+  "parkId": "dry-tortugas",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Audubon", "AllTrails", "npshistory.com"],
+  "trails": [
+    {
+      "id": "dry-tortugas-fort-jefferson",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Fort", "Flat", "Paved"],
+      "trailTip": "The walk circles the entire fort on a paved surface with little shade, so bring sun protection and water even for this short loop; ferry and seaplane schedules limit island time, so plan the walk around your boat's departure.",
+      "didYouKnow": "Fort Jefferson is built from more than 16 million bricks, making it one of the largest masonry structures in the Americas.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Fort Entrance" },
+        { "mile": 0.35, "elevationFt": 5, "label": "Bastion Overlook" },
+        { "mile": 0.7, "elevationFt": 0, "label": "Fort Entrance" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-garden-key",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Coastal Vegetation", "Bird Migration"],
+      "trailTip": "Spring migration (roughly April-May) can bring a surprising variety of exhausted songbirds resting in the scrub here — give them space to recover rather than approaching for a closer look.",
+      "didYouKnow": "Garden Key's scrubby coastal vegetation provides a crucial rest stop for migratory songbirds crossing the Gulf of Mexico each spring and fall.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 5 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-moat-wall",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Ocean Views", "Uneven Surface"],
+      "trailTip": "The wall surface is uneven brick and can be slick when wet with sea spray, so watch your footing, especially with kids.",
+      "didYouKnow": "The moat wall was designed to protect the fort's foundation from both cannon fire and storm surge.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Fort Entrance" },
+        { "mile": 0.25, "elevationFt": 10, "label": "Moat Wall" },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-coaling-dock",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Ruins", "Easy"],
+      "trailTip": "The dock ruins are fragile masonry, so admire them without climbing on what remains of the structure.",
+      "didYouKnow": "The coaling dock once refueled steam-powered Navy ships making the long, remote crossing toward Cuba and Central America.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 5, "label": "Coaling Dock Ruins" },
+        { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-bush-key",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Typically Oct-Jan (closed roughly Feb-Sep for nesting)",
+      "tags": ["Seasonal Closure", "Tidal Sandbar"],
+      "trailTip": "As of September 2026, per NPS.gov, the sandbar and Bush Key remain closed to protect nesting sooty terns and brown noddies, a closure that typically runs from roughly February through September — check nps.gov/drto for the current reopening status before planning to cross.",
+      "didYouKnow": "The sandbar linking Garden and Bush Keys shifts with storms and currents, and sometimes disappears entirely.",
+      "lastVerified": "2026-09-15",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Sandbar Start" },
+        { "mile": 0.5, "elevationFt": 5 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Bush Key" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-loggerhead-key",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Lighthouse", "Boat Access Only"],
+      "trailTip": "Loggerhead Key isn't served by the main ferry landing, so you'll need a private boat, kayak, or the ferry's snorkel excursion add-on to reach it.",
+      "didYouKnow": "Loggerhead Key's lighthouse, built in 1858, still helps ships navigate the reefs that gave the Tortugas their treacherous reputation.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boat Landing" },
+        { "mile": 0.25, "elevationFt": 5, "label": "Lighthouse" },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-south-swim-beach",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "Year-round",
+      "tags": ["Swimming Beach", "Snorkeling Access"],
+      "trailTip": "This is the park's main swimming and snorkeling beach — bring reef-safe sunscreen and avoid standing on coral when entering the water.",
+      "didYouKnow": "The clear water here sits above one of the healthier coral reef systems remaining in the greater Florida Keys region.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 5 },
+        { "mile": 0.3, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    },
+    {
+      "id": "dry-tortugas-seaplane-ramp",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Year-round",
+      "tags": ["Historic Site", "Easy"],
+      "trailTip": "There's no shade at the ramp, so this short walk is best combined with the longer perimeter loop rather than visited alone in the midday sun.",
+      "didYouKnow": "The ramp once served Pan American seaplanes ferrying passengers to the remote fort in the 1930s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 5, "label": "Seaplane Ramp" },
+        { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "dry-tortugas-sooty-tern",
+      "scientificName": "Onychoprion fuscatus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Feb-Sep (nesting)",
+      "whereToLook": "Bush Key's dense nesting colony, viewable from Garden Key's shoreline and moat wall",
+      "tags": ["Nesting Colony", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, Bush Key remains closed to protect nesting sooty terns and brown noddies (a closure that typically runs roughly February through September); view and photograph the colony with binoculars or a zoom lens from the Garden Key shoreline or moat wall instead of crossing onto the closed sandbar.",
+      "didYouKnow": "Bush Key hosts the only significant sooty tern breeding colony in the continental United States, with tens of thousands of birds nesting each season.",
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "dry-tortugas-loggerhead-turtle",
+      "scientificName": "Caretta caretta",
+      "bestTimeOfDay": "Night (nesting) / Day (snorkeling)",
+      "bestSeason": "May-Oct",
+      "whereToLook": "Nesting beaches on Garden and Loggerhead Keys, and surrounding reefs while snorkeling",
+      "tags": ["Nesting Beach", "Protected Species"],
+      "viewingTip": "Sea turtle nests are marked and protected on park beaches — never approach a nesting female or emerging hatchlings, avoid flashlights or flash photography near a nest at night, and observe any marked nest site from a distance.",
+      "didYouKnow": "Loggerheads can take 20-30 years to reach breeding age, and females return to nest on the same general stretch of coastline where they hatched."
+    },
+    {
+      "id": "dry-tortugas-frigatebird",
+      "scientificName": "Fregata magnificens",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round (nesting on Long Key)",
+      "whereToLook": "Soaring above the fort and nesting on Long Key, which is closed to public access",
+      "tags": ["Nesting Colony"],
+      "viewingTip": "Frigatebirds nest on Long Key, which stays closed to protect the colony — watch males inflate their striking red throat pouches from a boat or the fort walls with binoculars rather than attempting to land on or approach the key.",
+      "didYouKnow": "Long Key holds the only nesting colony of magnificent frigatebirds in the continental United States."
+    },
+    {
+      "id": "dry-tortugas-goliath-grouper",
+      "scientificName": "Epinephelus itajara",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Shaded pilings and wrecks around Fort Jefferson while snorkeling",
+      "tags": ["Protected Species"],
+      "viewingTip": "These massive, curious fish often approach snorkelers on their own — let them come to you and keep your hands to yourself rather than touching or chasing one, since goliath grouper are a protected species that can be harmed by repeated human contact.",
+      "didYouKnow": "Goliath grouper can grow to over 800 pounds and were once so overfished the species is still recovering under federal protection."
+    },
+    {
+      "id": "dry-tortugas-green-sea-turtle",
+      "scientificName": "Chelonia mydas",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Jun-Sep (nesting)",
+      "whereToLook": "Seagrass beds around the moat wall and surrounding reefs",
+      "tags": ["Seagrass Grazer"],
+      "viewingTip": "Snorkel quietly and watch turtles graze seagrass from several feet away — chasing, riding, or touching a sea turtle is illegal and stressful for the animal, so let it surface and dive on its own schedule.",
+      "didYouKnow": "Green sea turtles are the only sea turtle species that is primarily herbivorous as an adult, grazing seagrass meadows much like an underwater lawnmower."
+    },
+    {
+      "id": "dry-tortugas-brown-pelican",
+      "scientificName": "Pelecanus occidentalis",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Diving for fish near the moat wall and docks",
+      "tags": ["Common Sighting"],
+      "viewingTip": "Watch pelicans dive from the moat wall or dock with binoculars or a zoom lens, and never feed them table scraps or bait — handouts encourage risky begging behavior around boats and fishing lines.",
+      "didYouKnow": "Brown pelicans plunge-dive from as high as 60 feet, folding their wings at the last moment to spear fish underwater."
+    },
+    {
+      "id": "dry-tortugas-nurse-shark",
+      "scientificName": "Ginglymostoma cirratum",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Resting on the sandy bottom near pilings and the swim beach while snorkeling",
+      "tags": ["Bottom Dweller"],
+      "viewingTip": "Nurse sharks often rest motionless on the bottom — admire them from a few feet away while snorkeling and never grab, ride, or poke one, since even a normally docile nurse shark can bite defensively if harassed.",
+      "didYouKnow": "Nurse sharks can pump water over their gills while stationary, letting them rest on the seafloor rather than needing to swim constantly."
+    },
+    {
+      "id": "dry-tortugas-brown-noddy",
+      "scientificName": "Anous stolidus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Feb-Sep (nesting)",
+      "whereToLook": "Nesting alongside sooty terns on Bush Key",
+      "tags": ["Nesting Colony", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, brown noddies nest alongside sooty terns on Bush Key, which stays closed to visitors through the nesting season (typically February-September); view the colony with binoculars from Garden Key's shoreline rather than crossing the closed sandbar.",
+      "didYouKnow": "Brown noddies build their nests low in shrubs rather than on open ground, unlike most of the terns nesting nearby.",
+      "lastVerified": "2026-09-15"
+    }
+  ]
+}

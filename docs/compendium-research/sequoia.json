@@ -1,0 +1,198 @@
+{
+  "parkId": "sequoia",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Sequoia & Kings Canyon trail conditions page"],
+  "trails": [
+    {
+      "id": "sequoia-congress",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Paved", "Family Friendly", "Giant Sequoias"],
+      "trailTip": "Weekend and holiday visits require riding the free shuttle or arriving very early, since the Giant Forest Museum parking area fills quickly in summer.",
+      "didYouKnow": "The loop passes the General Sherman Tree, the largest tree on Earth by volume, along with several other named giant sequoias.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "General Sherman Tree" },
+        { "mile": 1.0, "elevationFt": 120 },
+        { "mile": 2.0, "elevationFt": 180 },
+        { "mile": 2.9, "elevationFt": 200, "label": "Loop closure" }
+      ]
+    },
+    {
+      "id": "sequoia-moro-rock",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "May-Oct",
+      "tags": ["Exposure", "Stairs", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the Moro Rock staircase closes whenever ice or snow makes the granite steps unsafe, typically from late fall through spring — check current conditions before driving up.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The roughly 400-step granite staircase was built in the 1930s and climbs a dome that offers a 360-degree view of the Great Western Divide.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 180 },
+        { "mile": 0.5, "elevationFt": 300, "label": "Summit" }
+      ]
+    },
+    {
+      "id": "sequoia-tokopah-falls",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "May-Sep",
+      "tags": ["Waterfall", "Rocky Footing"],
+      "trailTip": "Flow is most dramatic during May and June snowmelt and can slow to a trickle by late summer, so time an early-season visit if the falls themselves are the goal.",
+      "didYouKnow": "Tokopah Falls tumbles roughly 1,200 feet down a granite canyon wall carved by glaciers, similar in character to Yosemite's high country.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 1.9, "elevationFt": 600, "label": "Falls overlook" }
+      ]
+    },
+    {
+      "id": "sequoia-crescent-meadow",
+      "estimatedTime": "45 min - 1 hr",
+      "bestSeason": "May-Oct",
+      "tags": ["Family Friendly", "Wildflowers"],
+      "trailTip": "The meadow's edges are boggy well into early summer — stay on the boardwalk sections to protect the fragile meadow soil.",
+      "didYouKnow": "John Muir called Crescent Meadow the 'gem of the Sierra' after visiting in the 1870s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 150 },
+        { "mile": 1.6, "elevationFt": 200, "label": "Loop closure" }
+      ]
+    },
+    {
+      "id": "sequoia-alta-peak",
+      "estimatedTime": "8-10 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Exposure", "High Altitude", "Long Day"],
+      "trailTip": "Snow can linger on the upper switchbacks into July, and afternoon thunderstorms are common in summer, so start at dawn and turn back if lightning threatens.",
+      "didYouKnow": "At just under 11,200 feet, Alta Peak's summit gives one of the best views in the park of the Great Western Divide and the Kaweah watershed.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Wolverton Trailhead" },
+        { "mile": 3.5, "elevationFt": 1200 },
+        { "mile": 6.0, "elevationFt": 2600 },
+        { "mile": 6.9, "elevationFt": 4000, "label": "Alta Peak summit" }
+      ]
+    },
+    {
+      "id": "sequoia-heather-lake",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Jun-Oct",
+      "tags": ["Forested", "Subalpine Lake"],
+      "trailTip": "The trail can stay snowy and hard to follow into June at higher elevations — check current trail conditions before an early-season attempt.",
+      "didYouKnow": "Heather Lake sits in a granite bowl within the Tokopah watershed and is one of several lakes reached via the Lakes Trail system.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Wolverton Trailhead" },
+        { "mile": 2.0, "elevationFt": 700 },
+        { "mile": 3.5, "elevationFt": 1400 },
+        { "mile": 4.3, "elevationFt": 2000, "label": "Heather Lake" }
+      ]
+    },
+    {
+      "id": "sequoia-marble-falls",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Mar-Jun",
+      "tags": ["Exposure", "No Shade", "Waterfall"],
+      "trailTip": "This low-elevation trail gets very hot in summer with little shade — it's best hiked in spring when the falls also carry the most water.",
+      "didYouKnow": "Marble Falls cascades over a formation of marble, a metamorphic rock unusual among the mostly granite peaks of the surrounding Sierra.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Potwisha Trailhead" },
+        { "mile": 2.0, "elevationFt": 600 },
+        { "mile": 3.0, "elevationFt": 1100 },
+        { "mile": 3.7, "elevationFt": 1700, "label": "Marble Falls" }
+      ]
+    },
+    {
+      "id": "sequoia-little-baldy",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "May-Oct",
+      "tags": ["Granite Dome", "Panoramic Views"],
+      "trailTip": "The exposed granite summit can be windy and offers little shelter — bring a layer even on a warm day.",
+      "didYouKnow": "From the summit, hikers can see both the Great Western Divide and, on clear days, the San Joaquin Valley to the west.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 1.7, "elevationFt": 700, "label": "Little Baldy summit" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "sequoia-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Meadow edges and berry-producing shrubs throughout the park",
+      "tags": ["Food-Conditioned Risk"],
+      "viewingTip": "Stay at least 50 yards away and never leave food or scented items unattended — bears here can be food-conditioned, and a fed bear often has to be relocated or, in repeat cases, euthanized.",
+      "didYouKnow": "Sequoia's black bears come in color phases ranging from black to cinnamon-brown, so coat color alone doesn't distinguish them from grizzlies, which no longer live in California."
+    },
+    {
+      "id": "sequoia-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Crescent Meadow and other meadow edges",
+      "tags": ["Common"],
+      "viewingTip": "In late spring and early summer, give does extra space — fawns often lie motionless and hidden nearby, and a doe may act defensively if she feels her fawn is threatened.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears, which can rotate independently to track sound."
+    },
+    {
+      "id": "sequoia-bighorn-sheep",
+      "scientificName": "Ovis canadensis sierrae",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "High alpine terrain above 10,000 feet in the park's eastern reaches",
+      "tags": ["Endangered", "High Alpine"],
+      "viewingTip": "This is a federally endangered subspecies found only in a handful of Sierra herds — view any sighting through binoculars or a spotting scope from a trail or ridge, and never approach for a closer look.",
+      "didYouKnow": "Sierra Nevada bighorn sheep numbered under 100 individuals in the 1990s; recovery efforts have since grown the population, but it remains one of the rarest large mammals in North America."
+    },
+    {
+      "id": "sequoia-pacific-fisher",
+      "scientificName": "Pekania pennanti",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Mixed-conifer and giant sequoia groves at mid-elevation",
+      "tags": ["Elusive", "Den Sensitive"],
+      "viewingTip": "Fishers den in large tree cavities and are extremely sensitive to disturbance — if you spot one, watch quietly from a distance rather than following it toward a den tree.",
+      "didYouKnow": "The Sierra Nevada fisher population is genetically isolated and was proposed for federal listing due to its small, fragmented range."
+    },
+    {
+      "id": "sequoia-stellers-jay",
+      "scientificName": "Cyanocitta stelleri",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Campgrounds and trailheads throughout the park",
+      "tags": ["Bold", "Campground Visitor"],
+      "viewingTip": "These jays are naturally curious around people, but resist the urge to toss them food — human food habituates them and can make them aggressive at picnic areas.",
+      "didYouKnow": "Steller's jays are excellent mimics and can imitate the call of a red-tailed hawk to scare other birds away from a food source."
+    },
+    {
+      "id": "sequoia-douglas-squirrel",
+      "scientificName": "Tamiasciurus douglasii",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Giant sequoia groves, especially near cone-drop piles",
+      "tags": ["Common"],
+      "viewingTip": "Watch these active little squirrels forage from a bench or the trail rather than offering food — a wild diet keeps them healthy and their natural behavior intact.",
+      "didYouKnow": "Douglas squirrels harvest and cache thousands of sequoia cones each year, and their gnawing helps release seeds — making them an important part of sequoia regeneration."
+    },
+    {
+      "id": "sequoia-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Foothill chaparral and lower-elevation forest",
+      "tags": ["Elusive", "Rarely Seen"],
+      "viewingTip": "Sightings are rare; if one occurs, keep your distance, pick up small children, and never run — back away slowly while giving the animal a clear path to leave.",
+      "didYouKnow": "Mountain lions in the Sierra foothills maintain some of the largest home ranges of any big cat in North America, often covering 100 square miles or more."
+    },
+    {
+      "id": "sequoia-clarks-nutcracker",
+      "scientificName": "Nucifraga columbiana",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "High-elevation groves and rocky overlooks near Alta Peak and Little Baldy",
+      "tags": ["High Elevation", "Bold"],
+      "viewingTip": "Enjoy this bold, gray bird at a normal trail distance and skip the temptation to hand out snacks — nutcrackers that rely on human food cache fewer of the pine seeds forests depend on.",
+      "didYouKnow": "A single Clark's nutcracker can cache tens of thousands of pine seeds each fall and reliably relocate them months later by memory."
+    }
+  ]
+}

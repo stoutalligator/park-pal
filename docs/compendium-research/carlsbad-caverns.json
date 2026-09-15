@@ -1,0 +1,201 @@
+{
+  "parkId": "carlsbad-caverns",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Recreation.gov", "AllTrails", "National Parks Traveler", "KFOX/KRQE news coverage"],
+  "trails": [
+    {
+      "id": "carlsbad-caverns-natural-entrance",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Year-round (cave stays around 56°F)",
+      "tags": ["Timed Entry Required", "Steep Switchbacks", "Self-Guided"],
+      "trailTip": "A timed-entry cave reservation, plus the separate entrance fee, is required to enter the cavern year-round and is bookable up to 30 days ahead on Recreation.gov — as of September 2026, per NPS.gov, you will not be admitted without a confirmed reservation.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "This paved switchback trail descends about 750 feet through the cave's original natural opening, the same route early explorers used before an elevator existed.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Natural Entrance" },
+        { "mile": 0.6, "elevationFt": -400 },
+        { "mile": 1.25, "elevationFt": -750, "label": "Big Room level" }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-big-room",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Timed Entry Required", "Paved Loop", "Self-Guided"],
+      "trailTip": "The same timed-entry cave reservation required for the Natural Entrance also covers the Big Room; visitors who don't want the steep descent have historically been able to reach this loop by elevator from the visitor center — as of September 2026, per NPS.gov, confirm current elevator availability before planning around it, since the park has had recent staffing- and equipment-related service disruptions.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Big Room is one of the largest single cave chambers in North America, large enough to hold several football fields.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Big Room entrance" },
+        { "mile": 0.6, "elevationFt": 50, "label": "Bottomless Pit" },
+        { "mile": 1.25, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-chihuahuan-desert",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Year-round, best in cooler hours during summer",
+      "tags": ["Surface Trail", "No Reservation Needed", "Family Friendly"],
+      "trailTip": "Unlike the cave trails, this surface loop needs no cave reservation — a good option if timed-entry slots are full, but watch for reptiles and cactus and stay on the path.",
+      "didYouKnow": "This loop showcases the same Chihuahuan Desert scrub found across the surface above the cave, home to lechuguilla and sotol plants found almost nowhere else in the U.S.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 40 },
+        { "mile": 0.5, "elevationFt": 0 }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-rattlesnake-canyon",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-Apr (avoid summer heat)",
+      "tags": ["Backcountry", "No Reliable Water", "Rattlesnakes"],
+      "trailTip": "This is true desert backcountry with no maintained tread past the trailhead sign, no shade, and no water — carry a map, at least 3 liters of water, and watch where you step and sit given the canyon's namesake.",
+      "didYouKnow": "Rattlesnake Canyon is named for the western diamondback and rock rattlesnakes that share this rugged desert terrain, not for any unusual abundance of them.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead off Desert Loop Drive" },
+        { "mile": 2, "elevationFt": -300 },
+        { "mile": 4, "elevationFt": -600 },
+        { "mile": 6, "elevationFt": -700, "label": "Canyon floor turnaround" }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-old-guano-road",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Historic Route", "Backcountry", "No Shade"],
+      "trailTip": "There is no shade or water along this old road, so treat it like any other desert backcountry hike and carry enough water for the full round trip.",
+      "didYouKnow": "In the early 1900s, bat guano mined from the cavern was hauled out along a version of this route to be sold as fertilizer.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 400 },
+        { "mile": 2.5, "elevationFt": 750, "label": "Ridge high point" },
+        { "mile": 3.5, "elevationFt": 600 }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-slaughter-canyon",
+      "estimatedTime": "45 min - 1 hr for the surface approach",
+      "bestSeason": "Year-round for the surface trail; the cave itself requires a ranger-guided tour",
+      "tags": ["Ranger-Guided Tour Suspended", "Steep Approach"],
+      "trailTip": "As of September 2026, per NPS.gov and local news coverage, the ranger-guided Slaughter Canyon Cave tour remains suspended indefinitely due to staffing shortages; the steep half-mile surface approach trail to the cave entrance is still hikeable, but the cave itself cannot currently be entered — confirm current tour status before planning a visit around it.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Unlike the main cavern, Slaughter Canyon Cave has no artificial lighting or paved trail, so past tours required every visitor to carry their own flashlight.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 350 },
+        { "mile": 0.5, "elevationFt": 500, "label": "Cave entrance" }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-guadalupe-ridge",
+      "estimatedTime": "5-6 hrs one-way",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Backcountry Permit", "Long Ridge Route", "No Reliable Water"],
+      "trailTip": "Overnight camping along this route requires a free backcountry permit obtained in person at the visitor center on the day of your trip, with no advance reservations — as of September 2026, per NPS.gov — and there is no reliable water anywhere on the ridge.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "This trail is one segment of the larger 100-mile Guadalupe Ridge Trail, which connects Carlsbad Caverns to Guadalupe Mountains National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 3, "elevationFt": 500 },
+        { "mile": 5.5, "elevationFt": 900 },
+        { "mile": 8, "elevationFt": 1200, "label": "Ridge high point" }
+      ]
+    },
+    {
+      "id": "carlsbad-caverns-yucca-canyon",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Steep Backcountry", "No Shade", "Route-Finding"],
+      "trailTip": "This unmaintained backcountry route gains roughly 2,000 feet in 3.5 miles with no shade — treat it as a route rather than a maintained trail and carry a map or GPS track.",
+      "didYouKnow": "Yucca Canyon climbs into the same Guadalupe Mountains upthrust that also holds Guadalupe Peak, Texas's highest point, just across the state line.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 900 },
+        { "mile": 2.5, "elevationFt": 1600 },
+        { "mile": 3.5, "elevationFt": 2000, "label": "Ridge top" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "carlsbad-caverns-free-tailed-bat",
+      "scientificName": "Tadarida brasiliensis",
+      "bestTimeOfDay": "Dusk",
+      "bestSeason": "Late May-Oct (evening Bat Flight Program)",
+      "whereToLook": "Bat Flight Amphitheater at the Natural Entrance",
+      "tags": ["Seasonal Program", "Mass Emergence"],
+      "viewingTip": "Watch the evening bat flight from the amphitheater seating with your own eyes or binoculars — no flash photography, calling, or lights are allowed, since bright light and noise disturb the emerging colony.",
+      "didYouKnow": "On a good summer night, several hundred thousand Brazilian free-tailed bats can spiral out of the cave entrance in a matter of minutes."
+    },
+    {
+      "id": "carlsbad-caverns-cave-swallow",
+      "scientificName": "Petrochelidon fulva",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Apr-Oct (migratory)",
+      "whereToLook": "Near the Natural Entrance sinkhole",
+      "tags": ["Migratory", "Cave Nester"],
+      "viewingTip": "Watch nesting swallows from the Natural Entrance overlook with binoculars rather than leaning over the rail toward the nests below.",
+      "didYouKnow": "Cave swallows build mud nests on the cave's entrance walls and were once far less common in the U.S. before expanding their range north from Mexico."
+    },
+    {
+      "id": "carlsbad-caverns-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Desert scrub near the park entrance road",
+      "tags": ["Common", "Crepuscular"],
+      "viewingTip": "Deer are often visible right from the entrance road — pull well off the road to view them with binoculars rather than stopping in the travel lane.",
+      "didYouKnow": "Desert-adapted mule deer here get much of their water from the moisture in the plants they eat."
+    },
+    {
+      "id": "carlsbad-caverns-ringtail",
+      "scientificName": "Bassariscus astutus",
+      "bestTimeOfDay": "Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky areas near cave entrances after dark",
+      "tags": ["Nocturnal", "Rare"],
+      "viewingTip": "Ringtails are shy and nocturnal — if one appears near a picnic area at night, admire it from where you are and never offer it food.",
+      "didYouKnow": "Ringtails have a tail nearly as long as their body, used for balance when navigating narrow rock ledges."
+    },
+    {
+      "id": "carlsbad-caverns-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Thermals above the park's desert canyons",
+      "tags": ["Soaring Raptor"],
+      "viewingTip": "Scan canyon rims and the sky with binoculars from overlooks rather than approaching a cliff where a nest might be.",
+      "didYouKnow": "Golden eagles here hunt jackrabbits and other desert prey, riding canyon updrafts to soar with little wingbeat effort."
+    },
+    {
+      "id": "carlsbad-caverns-desert-cottontail",
+      "scientificName": "Sylvilagus audubonii",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Scrub near the visitor center and campground area",
+      "tags": ["Common"],
+      "viewingTip": "Cottontails are easy to see near developed areas — watch quietly from a short distance rather than chasing one for a closer photo.",
+      "didYouKnow": "Desert cottontails can survive largely without drinking free water, getting most of their moisture from cactus and other desert plants."
+    },
+    {
+      "id": "carlsbad-caverns-rock-rattlesnake",
+      "scientificName": "Crotalus lepidus",
+      "bestTimeOfDay": "Dusk / warm evenings",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Rocky outcrops in the surface desert",
+      "tags": ["Venomous", "Give Space"],
+      "viewingTip": "This venomous snake blends well with rocky terrain — if you spot one, step back and go around rather than trying to move it or get a close-up photo.",
+      "didYouKnow": "Rock rattlesnakes are one of the smaller North American rattlesnake species, often under two feet long."
+    },
+    {
+      "id": "carlsbad-caverns-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Spring-Fall",
+      "whereToLook": "Higher, wooded terrain toward the Guadalupe Mountains",
+      "tags": ["Rare", "Wanders from Highlands"],
+      "viewingTip": "Sightings here are uncommon and typically at a distance — if you see one, keep well back, never offer food, and store any food securely rather than leaving it accessible.",
+      "didYouKnow": "Black bears occasionally wander down from the forested Guadalupe highlands into the park's lower desert terrain in search of food."
+    }
+  ]
+}

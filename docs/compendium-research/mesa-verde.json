@@ -1,0 +1,193 @@
+{
+  "parkId": "mesa-verde",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Recreation.gov", "Mesa Verde Foundation", "AllTrails"],
+  "trails": [
+    {
+      "id": "mesa-verde-petroglyph-point",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Rock Scramble", "Cultural Site"],
+      "trailTip": "A free, self-guided permit-free trail, but the narrow ledge sections require some scrambling — pick up the interpretive brochure at the trailhead to identify the petroglyph panel rather than touching the rock art itself.",
+      "didYouKnow": "The petroglyph panel along this trail is believed to have been carved by Ancestral Puebloans and later reinterpreted by Ute artists.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6970, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 6900, "label": "Petroglyph panel" },
+        { "mile": 2.4, "elevationFt": 6970, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mesa-verde-cliff-palace",
+      "estimatedTime": "1 hr (guided tour)",
+      "bestSeason": "May-Oct (Permit Required)",
+      "tags": ["Ranger-Guided", "Permit Required", "Ladders"],
+      "trailTip": "As of September 2026, per NPS.gov and Recreation.gov, Cliff Palace can only be visited on a timed, ranger-led tour booked through Recreation.gov, released 14 days in advance and capped at 50 people per tour — there is no walk-up or unguided access to the dwelling itself.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Cliff Palace is the largest cliff dwelling in North America, with roughly 150 rooms and 23 kivas built into a natural sandstone alcove.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7000, "label": "Overlook/trailhead" },
+        { "mile": 0.1, "elevationFt": 6920, "label": "Cliff Palace" },
+        { "mile": 0.25, "elevationFt": 7000, "label": "Back to overlook" }
+      ]
+    },
+    {
+      "id": "mesa-verde-balcony-house",
+      "estimatedTime": "1 hr (guided tour)",
+      "bestSeason": "May-Oct (Permit Required)",
+      "tags": ["Ranger-Guided", "Permit Required", "Ladders", "Tight Tunnel"],
+      "trailTip": "As of September 2026, per NPS.gov and Recreation.gov, Balcony House requires a ranger-led tour ticket booked in advance through Recreation.gov (capped at 35 people) and visitors must arrive 15 minutes early for a mandatory safety briefing before climbing a 32-foot entry ladder and crawling through a narrow exit tunnel.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Balcony House's original access required residents to climb hand-and-toe holds carved directly into the cliff face, since no ladders existed at the time it was inhabited.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6960, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 6880, "label": "Balcony House" },
+        { "mile": 0.6, "elevationFt": 6960, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mesa-verde-spruce-canyon",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Canyon Descent", "Unpaved"],
+      "trailTip": "The trail drops steeply from the museum into the canyon and climbs back out, so save some energy for the return; check at the museum whether the trail is open, since it can close after heavy rain or snow.",
+      "didYouKnow": "Spruce Canyon's cooler, moister microclimate supports Douglas fir and other trees uncommon elsewhere on the sun-baked mesa top.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6960, "label": "Trailhead (museum)" },
+        { "mile": 1.0, "elevationFt": 6600, "label": "Canyon floor" },
+        { "mile": 2.4, "elevationFt": 6960, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mesa-verde-point-lookout",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Mesa-Top", "Exposed"],
+      "trailTip": "The trail is exposed to sun and wind along the mesa edge, so bring water and sun protection even on a short hike; watch your footing near the unfenced overlook edges.",
+      "didYouKnow": "Point Lookout was historically used as a lookout by both Ancestral Puebloans and, later, the park's early rangers watching for wildfire smoke.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7000, "label": "Trailhead" },
+        { "mile": 1.1, "elevationFt": 7425, "label": "Point Lookout summit" },
+        { "mile": 2.2, "elevationFt": 7000, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mesa-verde-soda-canyon-overlook",
+      "estimatedTime": "40-50 min",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Easy", "Overlook"],
+      "trailTip": "A flat, family-friendly walk to a fenced overlook of Balcony House across the canyon — a good option if you weren't able to reserve a guided tour ticket.",
+      "didYouKnow": "From this overlook you can see Balcony House tucked into the opposite cliff face without needing a permit or guided tour.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7060, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 7060, "label": "Overlook" }
+      ]
+    },
+    {
+      "id": "mesa-verde-knife-edge",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Easy", "Sunset Viewpoint"],
+      "trailTip": "Follows the roadbed of the park's original 1914 entrance road; popular at sunset for views over the Montezuma Valley, so bring a headlamp for the walk back if you stay late.",
+      "didYouKnow": "This trail traces the original road built to bring the park's first automobile tourists up onto the mesa.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 6700, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 6750, "label": "Overlook" },
+        { "mile": 2.0, "elevationFt": 6700, "label": "Back to trailhead" }
+      ]
+    },
+    {
+      "id": "mesa-verde-square-tower-overlook",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Apr-Nov",
+      "tags": ["Easy", "Overlook"],
+      "trailTip": "A very short paved walk suitable for nearly any visitor — a quick stop to see the dwelling without needing a reserved tour ticket.",
+      "didYouKnow": "Square Tower House contains the tallest standing structure in Mesa Verde, rising about four stories from the canyon floor.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 7050, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 7050, "label": "Overlook" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "mesa-verde-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Pinyon-juniper woodland throughout the mesa top",
+      "tags": ["Common"],
+      "viewingTip": "Deer here are accustomed to roads and pullouts, but keep to your vehicle or the trail and never feed them, since human food causes serious digestive problems.",
+      "didYouKnow": "Mule deer get their name from their large, mule-like ears, which rotate independently to pinpoint sound."
+    },
+    {
+      "id": "mesa-verde-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Mesa-top woodlands near park roads",
+      "tags": ["Common", "Cultural History"],
+      "viewingTip": "Watch foraging flocks from a distance; during spring nesting, give hens with poults extra room rather than crowding in for photos.",
+      "didYouKnow": "Ancestral Puebloans at Mesa Verde raised domesticated turkeys for feathers and food, and wild descendants still roam the mesa today."
+    },
+    {
+      "id": "mesa-verde-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round, nesting Feb-Jul",
+      "whereToLook": "Canyon cliff walls near overlooks",
+      "tags": ["Cliff Nester", "Seasonal Sensitivity"],
+      "viewingTip": "Scan cliff faces with binoculars from designated overlooks; during nesting season keep well back from any cliff edge near an active nest so the pair isn't flushed from incubation.",
+      "didYouKnow": "Golden eagles can spot prey such as rabbits from over a mile away thanks to extraordinarily sharp eyesight."
+    },
+    {
+      "id": "mesa-verde-collared-lizard",
+      "scientificName": "Crotaphytus collaris",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Sunny sandstone outcrops near the cliff dwellings",
+      "tags": ["Common", "Basking"],
+      "viewingTip": "Watch from a short distance without cornering it against a rock face — these lizards can sprint on their hind legs alone when startled.",
+      "didYouKnow": "Collared lizards are capable of running bipedally at speed, using only their hind legs, when fleeing danger."
+    },
+    {
+      "id": "mesa-verde-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Nov",
+      "whereToLook": "Oak brush and scrub on the mesa's forested slopes",
+      "tags": ["Rare Sighting"],
+      "viewingTip": "If you spot a bear, stay in your vehicle or keep well back and never leave food or trash accessible — a food-conditioned bear in the park is often relocated or destroyed for public safety.",
+      "didYouKnow": "Bears at Mesa Verde rely heavily on Gambel oak acorns each fall, and a poor acorn crop can push them closer to developed areas."
+    },
+    {
+      "id": "mesa-verde-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round, rarely seen",
+      "whereToLook": "Remote canyon country away from developed areas",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "Sightings are rare and usually brief; if you do see one, do not approach or run — back away slowly while making yourself look large, per NPS guidance.",
+      "didYouKnow": "Mountain lions in this region primarily hunt mule deer, and Mesa Verde's healthy deer population helps sustain a small, resident lion population."
+    },
+    {
+      "id": "mesa-verde-canyon-towhee",
+      "scientificName": "Melozone fusca",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Ground level in pinyon-juniper woodland",
+      "tags": ["Common", "Ground Forager"],
+      "viewingTip": "Watch quietly from the trail as it forages in leaf litter; a still observer with binoculars will see far more than someone approaching for a closer look.",
+      "didYouKnow": "Canyon towhees spend most of their time on the ground, scratching through leaf litter with both feet at once to find seeds and insects."
+    },
+    {
+      "id": "mesa-verde-gopher-snake",
+      "scientificName": "Pituophis catenifer",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Oct",
+      "whereToLook": "Sunny trail surfaces and rock edges",
+      "tags": ["Non-Venomous", "Mimic"],
+      "viewingTip": "If you see one sunning on a trail, walk around it and let it move off on its own — gopher snakes sometimes mimic rattlesnakes by hissing and vibrating their tail, but handling or provoking any snake risks a bite.",
+      "didYouKnow": "Gopher snakes are frequently mistaken for rattlesnakes because they flatten their heads and vibrate their tails in dry leaves to bluff predators."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "parkId": "congaree",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "NPS Congaree Trail Guide", "Friends of Congaree Swamp", "Backpacker Magazine"],
+  "trails": [
+    {
+      "id": "congaree-boardwalk-loop",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round",
+      "tags": ["Boardwalk", "Construction"],
+      "trailTip": "As of September 2026, per NPS.gov, a multi-year project replacing low-lying boardwalk sections (B, D, and F) with a higher, sturdier deck began in January 2026 and was expected to finish by summer 2026 — check the park's current conditions page for any remaining rolling detours before you go.",
+      "didYouKnow": "The boardwalk winds through one of the tallest and most intact old-growth bottomland hardwood forests left in North America.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 1.2, "elevationFt": 5, "label": "Low Boardwalk" },
+        { "mile": 2.4, "elevationFt": 0, "label": "Return to Visitor Center" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-weston-lake",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round; driest and most reliably open Sep-Nov",
+      "tags": ["Old-Growth", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, low sections of this loop flood roughly ten times a year and can close without notice after heavy rain — check current conditions before setting out.",
+      "didYouKnow": "Weston Lake is an oxbow lake, a former bend of the Congaree River that was cut off and left behind as the river shifted course.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boardwalk junction" },
+        { "mile": 2.0, "elevationFt": 15 },
+        { "mile": 3.5, "elevationFt": 20, "label": "Weston Lake overlook" },
+        { "mile": 4.6, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-oakridge",
+      "estimatedTime": "3-3.5 hrs",
+      "bestSeason": "Year-round; driest Sep-Nov",
+      "tags": ["Backcountry", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, this backcountry loop crosses low floodplain that can flood after heavy rain — check current conditions and wear waterproof boots even in dry weather.",
+      "didYouKnow": "Oakridge Trail passes through stands of loblolly pine and mixed hardwood that were never logged, some among the tallest trees in the eastern U.S.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 20 },
+        { "mile": 4.5, "elevationFt": 30, "label": "High ground section" },
+        { "mile": 6.6, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-river-trail",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Year-round; driest Sep-Nov",
+      "tags": ["Backcountry", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, this is the longest and most flood-prone trail in the park — check current conditions before attempting it and be ready to turn back if the floodplain is inundated.",
+      "didYouKnow": "The trail follows the Congaree River for miles through cypress-tupelo sloughs that can look completely different from one season to the next depending on water levels.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 15 },
+        { "mile": 6.0, "elevationFt": 20 },
+        { "mile": 10.0, "elevationFt": 0, "label": "Loop closure" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-kingsnake",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Year-round; driest Sep-Nov",
+      "tags": ["Connector", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, this connector crosses cypress sloughs that flood after heavy rain — check current conditions, since sections can be impassable without notice.",
+      "didYouKnow": "Despite the name, the trail is more about scenery than snakes — it's named for the Eastern kingsnake, a nonvenomous species known for preying on venomous snakes.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2.5, "elevationFt": 15 },
+        { "mile": 4.9, "elevationFt": 0, "label": "Junction" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-sims-trail",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Year-round; driest Sep-Nov",
+      "tags": ["Connector", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, this low-lying connector floods along with the rest of the non-elevated boardwalk system — check current conditions before relying on it as a loop shortcut.",
+      "didYouKnow": "Sims Trail follows an old fire road and is one of the few trails in the park wide enough for two hikers to walk side by side the whole way.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Boardwalk junction" },
+        { "mile": 1.5, "elevationFt": 10 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Visitor Center" }
+      ],
+      "lastVerified": "2026-09-15"
+    },
+    {
+      "id": "congaree-bluff-trail",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Year-round",
+      "tags": ["Upland Forest", "Flood-Free"],
+      "trailTip": "This loop stays on the bluff above the floodplain, making it one of the few trails in the park that reliably stays open and dry even after heavy rain.",
+      "didYouKnow": "The Bluff Trail runs through drier upland forest rather than floodplain, so its tree mix — more oak and pine — looks noticeably different from the boardwalk's bottomland hardwoods.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.9, "elevationFt": 30, "label": "Bluff high point" },
+        { "mile": 1.7, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "congaree-fork-swamp",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Year-round; driest Sep-Nov",
+      "tags": ["Remote", "Seasonal Flooding"],
+      "trailTip": "As of September 2026, per NPS.gov, this remote loop crosses cypress-tupelo swamp that floods after heavy rain — check current conditions, since this is one of the least-trafficked and least-monitored trails in the park.",
+      "didYouKnow": "Fork Swamp is a favorite of birders for its dense population of prothonotary warblers, which nest in cavities over standing water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 15, "label": "Trailhead" },
+        { "mile": 1.4, "elevationFt": 10 },
+        { "mile": 2.8, "elevationFt": 0, "label": "Return" }
+      ],
+      "lastVerified": "2026-09-15"
+    }
+  ],
+  "animals": [
+    {
+      "id": "congaree-barred-owl",
+      "scientificName": "Strix varia",
+      "bestTimeOfDay": "Dusk / Night",
+      "bestSeason": "Year-round; most vocal Feb-Apr during breeding season",
+      "whereToLook": "Dense old-growth canopy along the Boardwalk Loop and Weston Lake Loop",
+      "tags": ["Old-Growth Canopy"],
+      "viewingTip": "Listen for its 'who-cooks-for-you' call at dusk and scan the canopy with binoculars rather than using a recorded call to draw it in, which can stress a territorial pair during nesting season.",
+      "didYouKnow": "Barred owls thrive in Congaree's tall, cavity-rich old growth, which offers far more nesting hollows than younger managed forest."
+    },
+    {
+      "id": "congaree-white-tailed-deer",
+      "scientificName": "Odocoileus virginianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Rut peaks Oct-Nov",
+      "whereToLook": "Floodplain forest edges throughout the park",
+      "tags": ["Common", "Rutting Season"],
+      "viewingTip": "During the fall rut, watch from a distance with binoculars and give bucks extra space — a rutting buck is more agitated and less predictable than usual, and crowding it can trigger a defensive charge.",
+      "didYouKnow": "Congaree's deer regularly wade through standing floodwater to reach forage, something rarely seen in upland deer populations."
+    },
+    {
+      "id": "congaree-river-otter",
+      "scientificName": "Lontra canadensis",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Cedar Creek and the Congaree River, especially from the Cedar Creek canoe trail",
+      "tags": ["Waterway", "Elusive"],
+      "viewingTip": "Paddle or watch quietly from the bank with binoculars — otters are naturally curious but will vanish quickly if you move or speak loudly, so patience works better than trying to get close.",
+      "didYouKnow": "River otters use the same latrine sites repeatedly, so a patch of matted grass and tracks along a creek bank is often a good sign one is active nearby."
+    },
+    {
+      "id": "congaree-wild-turkey",
+      "scientificName": "Meleagris gallopavo",
+      "bestTimeOfDay": "Early morning",
+      "bestSeason": "Gobbling activity peaks Mar-May",
+      "whereToLook": "Forest floor along the Bluff Trail and Sims Trail",
+      "tags": ["Ground Forager"],
+      "viewingTip": "Stay still and quiet if you spot a flock — turkeys are wary and will move off into cover on their own if you don't approach or try to follow them.",
+      "didYouKnow": "Wild turkeys can fly in short bursts up to 55 mph, despite spending most of their time foraging on the ground."
+    },
+    {
+      "id": "congaree-cottonmouth",
+      "scientificName": "Agkistrodon piscivorus",
+      "bestTimeOfDay": "Warm afternoons",
+      "bestSeason": "Most active Apr-Oct",
+      "whereToLook": "Sloughs and still water near the boardwalk and Weston Lake",
+      "tags": ["Venomous", "Aquatic"],
+      "viewingTip": "If you see one basking or swimming, give it several feet of space and let it move off on its own — never attempt to handle, corner, or move a cottonmouth, since defensive bites almost always happen when a snake is provoked.",
+      "didYouKnow": "Despite their reputation, cottonmouths rarely act aggressively toward people and will usually retreat or stand their ground rather than pursue a hiker."
+    },
+    {
+      "id": "congaree-pileated-woodpecker",
+      "scientificName": "Dryocopus pileatus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Old-growth trees throughout the boardwalk and backcountry trails",
+      "tags": ["Old-Growth Canopy"],
+      "viewingTip": "Listen for its loud, irregular drumming and follow the sound with binoculars rather than approaching the tree directly, which can flush the bird before you get a good look.",
+      "didYouKnow": "The rectangular excavation holes pileated woodpeckers leave in dead wood are so distinctive that other species, from owls to flying squirrels, later move in and use them as nest cavities."
+    },
+    {
+      "id": "congaree-bobcat",
+      "scientificName": "Lynx rufus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Dense understory away from the main boardwalk, especially near Oakridge and Fork Swamp",
+      "tags": ["Elusive", "Nocturnal"],
+      "viewingTip": "Bobcats are rarely seen and quick to disappear into cover — if you spot one, stay put and watch with binoculars rather than following it off-trail.",
+      "didYouKnow": "Bobcat sightings in Congaree are usually a fresh track in mud rather than the animal itself, since they're largely nocturnal and avoid open trails during the day."
+    },
+    {
+      "id": "congaree-yellow-bellied-slider",
+      "scientificName": "Trachemys scripta scripta",
+      "bestTimeOfDay": "Midday, while basking",
+      "bestSeason": "Most visible Mar-Oct",
+      "whereToLook": "Logs and snags in Weston Lake and other still water",
+      "tags": ["Basking", "Common"],
+      "viewingTip": "View basking turtles from the boardwalk or shore with binoculars — approaching the water's edge will send them diving off their log before you get a good look.",
+      "didYouKnow": "Yellow-bellied sliders often stack up several turtles deep on a single favored basking log."
+    }
+  ]
+}

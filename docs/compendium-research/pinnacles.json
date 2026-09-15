@@ -1,0 +1,208 @@
+{
+  "parkId": "pinnacles",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (pinn)", "pinnacles.org (Friends of Pinnacles)", "AllTrails", "10Adventures", "National Parks Traveler"],
+  "trails": [
+    {
+      "id": "pinnacles-high-peaks",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-May; avoid summer, when temperatures regularly exceed 100°F",
+      "tags": ["Exposure", "Carved Steps", "Heat Danger"],
+      "trailTip": "Start at dawn in warmer months — this loop has almost no shade, and Pinnacles regularly issues summer heat advisories urging visitors off exposed trails by mid-morning.",
+      "didYouKnow": "The narrow carved steps and handrails through the High Peaks were built by the Civilian Conservation Corps in the 1930s.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.3, "elevationFt": 600 },
+        { "mile": 2.5, "elevationFt": 1500, "label": "High Peaks narrows" },
+        { "mile": 3.8, "elevationFt": 900 },
+        { "mile": 5.3, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "pinnacles-bear-gulch-cave",
+      "estimatedTime": "1.5-2 hrs",
+      "bestSeason": "Varies with bat activity — check current cave status before hiking",
+      "tags": ["Talus Cave", "Seasonal Closure", "Bring a Flashlight"],
+      "trailTip": "As of September 2026, per NPS.gov's cave status page, Bear Gulch Cave's upper section closes mid-May through mid-July to protect a Townsend's big-eared bat maternity colony, with the lower cave typically reopening after that; check nps.gov/pinn's current conditions page before you go.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Bear Gulch Cave is a talus cave — formed by giant boulders wedged into a narrow canyon, not carved by flowing water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 300, "label": "Cave entrance" },
+        { "mile": 1.4, "elevationFt": 550, "label": "Bear Gulch Reservoir" },
+        { "mile": 2.2, "elevationFt": 0, "label": "Loop Complete via Rim Trail" }
+      ]
+    },
+    {
+      "id": "pinnacles-condor-gulch",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Oct-May",
+      "tags": ["Condor Viewing", "Exposure"],
+      "trailTip": "The overlook about 1.7 miles up is a reliable spot to scan for condors riding morning thermals — bring binoculars rather than trying to get closer, since these are a closely monitored, critically endangered reintroduced population.",
+      "didYouKnow": "Condor Gulch is named for the California condors reintroduced to Pinnacles starting in 2003, after the species had vanished entirely from the wild by 1987.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.7, "elevationFt": 800, "label": "Condor Gulch Overlook" },
+        { "mile": 2.9, "elevationFt": 1140, "label": "High Peaks junction" },
+        { "mile": 4.7, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "pinnacles-balconies-cave",
+      "estimatedTime": "1.5 hrs",
+      "bestSeason": "Oct-May; avoid after heavy rain",
+      "tags": ["Talus Cave", "Seasonal Closure", "Bring a Flashlight"],
+      "trailTip": "As of September 2026, per NPS.gov, Balconies Cave can close temporarily for high water after storms or to protect roosting bats — check the park's current cave status page before hiking, and bring a flashlight for the pitch-dark scramble sections.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Balconies Cave requires scrambling through sections so narrow and dark that a flashlight is essential even at midday.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "West Fork Trailhead" },
+        { "mile": 1.0, "elevationFt": 150, "label": "Cave entrance" },
+        { "mile": 1.6, "elevationFt": 200 },
+        { "mile": 2.4, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "pinnacles-moses-spring",
+      "estimatedTime": "1.5 hrs",
+      "bestSeason": "Oct-May",
+      "tags": ["Cave Access", "Reservoir"],
+      "trailTip": "This loop connects to Bear Gulch Cave — check the cave's seasonal status before counting on going through it, since Moses Spring alone makes an easy substitute when the cave is closed.",
+      "didYouKnow": "Bear Gulch Reservoir, reached via this trail, was built in 1911-1912 and is one of the oldest reservoirs in California still holding water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 300, "label": "Bear Gulch Reservoir" },
+        { "mile": 2.2, "elevationFt": 0, "label": "Loop Complete" }
+      ]
+    },
+    {
+      "id": "pinnacles-old-pinnacles",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Oct-May; hot and exposed in summer",
+      "tags": ["Chaparral", "Connector Trail"],
+      "trailTip": "This gently graded trail from the east side is a good warm-weather alternative to the steeper High Peaks routes, but still carry plenty of water since there's no shade for long stretches.",
+      "didYouKnow": "This trail follows Chalone Creek, one of the park's few reliable water sources for wildlife in the dry chaparral.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Old Pinnacles Trailhead" },
+        { "mile": 2.1, "elevationFt": 300, "label": "Balconies Cave junction" },
+        { "mile": 4.3, "elevationFt": 0, "label": "Trail End" }
+      ]
+    },
+    {
+      "id": "pinnacles-north-chalone-peak",
+      "estimatedTime": "4.5-5.5 hrs",
+      "bestSeason": "Oct-May",
+      "tags": ["Summit", "Strenuous", "Heat Danger"],
+      "trailTip": "This is the longest, most exposed trail in the park — start very early in warm months and carry more water than you think you'll need.",
+      "didYouKnow": "The old fire lookout tower at the North Chalone Peak summit offers views stretching to Monterey Bay on clear days.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near Bear Gulch" },
+        { "mile": 2.0, "elevationFt": 700 },
+        { "mile": 3.5, "elevationFt": 1400, "label": "Chalone Peak Trail junction" },
+        { "mile": 4.5, "elevationFt": 2040, "label": "North Chalone Peak Summit" },
+        { "mile": 7.0, "elevationFt": 900 },
+        { "mile": 9.0, "elevationFt": 0, "label": "Back at Trailhead" }
+      ]
+    },
+    {
+      "id": "pinnacles-juniper-canyon",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Oct-May",
+      "tags": ["Exposure", "Chaparral", "Steep"],
+      "trailTip": "This west-side approach to the High Peaks climbs quickly with little shade — a good early-morning option to beat both the heat and the crowds coming from the east entrance.",
+      "didYouKnow": "Juniper Canyon is one of two main western approaches into the High Peaks, climbing through a woodland of gray pine and juniper.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Chaparral Trailhead" },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 2.8, "elevationFt": 1100, "label": "High Peaks junction" },
+        { "mile": 4.3, "elevationFt": 1215, "label": "Trail End" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "pinnacles-california-condor",
+      "scientificName": "Gymnogyps californianus",
+      "bestTimeOfDay": "Morning and late afternoon, when thermals let condors soar",
+      "bestSeason": "Year-round",
+      "whereToLook": "High Peaks overlooks and the Balconies Cliffs viewpoint",
+      "tags": ["Critically Endangered", "Reintroduced Population", "Wing-Tagged"],
+      "viewingTip": "As of September 2026, per NPS's official condor viewing guidance, watch from High Peaks or Balconies Cliffs with binoculars or a spotting scope — never approach, feed, or leave out any food or trash, since lead poisoning and trash ingestion are the leading threats to this recovering population. If you see a perched bird, note its wing-tag numbers from a distance and report the sighting to a ranger or visitor center rather than moving closer to read them.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Every wild California condor alive today, including the ones at Pinnacles, descends from a captive-breeding program that began in 1987 with just 27 birds left on Earth."
+    },
+    {
+      "id": "pinnacles-big-eared-bat",
+      "scientificName": "Corynorhinus townsendii",
+      "bestTimeOfDay": "Dusk (emergence)",
+      "bestSeason": "Year-round roosting; maternity colony mid-May-mid-July",
+      "whereToLook": "Bear Gulch and Balconies talus caves",
+      "tags": ["Cave Roosting", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov's cave status page, the caves' upper sections close seasonally to protect maternity roosts — respect posted cave closures rather than entering, and watch for bats emerging near cave entrances at dusk from outside any closed area.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "This species can fold its long ears back like a ram's horns while resting, then unfurl them almost instantly when alert."
+    },
+    {
+      "id": "pinnacles-prairie-falcon",
+      "scientificName": "Falco mexicanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jan-Jul nesting season",
+      "whereToLook": "Cliff ledges near the High Peaks and Balconies rock formations",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per Pinnacles' raptor advisories (nps.gov/pinn and pinnacles.org), voluntary climbing and close-approach closures near nesting cliffs typically run January through July and are lifted by early summer once chicks fledge — view nesting falcons from a distance with binoculars and respect posted closures during that window.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Prairie falcons can dive at well over 100 mph when stooping on prey, rivaling their more famous relative, the peregrine."
+    },
+    {
+      "id": "pinnacles-bobcat",
+      "scientificName": "Lynx rufus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Chaparral edges throughout the park, especially near Bear Gulch",
+      "tags": ["Elusive", "Chaparral"],
+      "viewingTip": "View any sighting from the trail with binoculars or a zoom lens — never approach or attempt to feed a bobcat, even one that seems unbothered by people.",
+      "didYouKnow": "Bobcats are named for their short, 'bobbed' tail, which is typically only 4-7 inches long."
+    },
+    {
+      "id": "pinnacles-horned-lizard",
+      "scientificName": "Phrynosoma blainvillii",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Apr-Sep",
+      "whereToLook": "Sunny, sandy slopes and rocky outcrops",
+      "tags": ["Camouflaged", "Special Status Species"],
+      "viewingTip": "This coast horned lizard is a California species of special concern — observe without touching or digging one out of the sand it burrows into for camouflage.",
+      "didYouKnow": "Like other horned lizards, this species can squirt blood from its eyes as a last-resort defense against predators."
+    },
+    {
+      "id": "pinnacles-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round, very rarely observed",
+      "whereToLook": "Chaparral and rocky terrain throughout the park",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "Give any sighting wide space, don't run, and back away slowly rather than approaching for a closer look or photo.",
+      "didYouKnow": "Pinnacles' rugged rock formations and dense chaparral give mountain lions excellent cover, which is why sightings remain rare despite a resident population."
+    },
+    {
+      "id": "pinnacles-acorn-woodpecker",
+      "scientificName": "Melanerpes formicivorus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round; nesting spring",
+      "whereToLook": "Oak woodlands near the visitor center and campground",
+      "tags": ["Common", "Cavity Nester"],
+      "viewingTip": "Watch their granary trees from a distance with binoculars rather than approaching nest cavities, especially during spring nesting season.",
+      "didYouKnow": "Acorn woodpeckers drill thousands of holes into a single 'granary tree' and store one acorn in each, defending the cache as a group."
+    },
+    {
+      "id": "pinnacles-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jan-Jul nesting; present year-round",
+      "whereToLook": "Soaring above the High Peaks and Balconies cliffs",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per Pinnacles' raptor advisories (nps.gov/pinn), some cliff areas close to climbing and close approach roughly January through July to protect nesting golden eagles alongside falcons — view from a distance with binoculars year-round and respect posted closures during nesting season.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Golden eagles at Pinnacles sometimes compete with California condors over carrion, despite the condor's much larger size."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "parkId": "lake-clark",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "Alaska Dept. of Fish and Game", "NPS ParkPlanning (Chinitna Bay Bear Viewing)", "AllTrails"],
+  "trails": [
+    {
+      "id": "lake-clark-tanalian-falls",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Fly-In Access Only", "Bear Country"],
+      "trailTip": "This is one of the only maintained, signed trails in the park, reached by floatplane or boat to Port Alsworth — there is no road access anywhere in Lake Clark, so budget travel time and cost for a bush flight before you ever reach the trailhead.",
+      "didYouKnow": "Port Alsworth, the trail's starting point, is a small floatplane-access community that also serves as the park's headquarters.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
+        { "mile": 1.5, "elevationFt": 350 },
+        { "mile": 3.0, "elevationFt": 500 },
+        { "mile": 4.0, "elevationFt": 650, "label": "Tanalian Falls" }
+      ]
+    },
+    {
+      "id": "lake-clark-tanalian-mountain",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Fly-In Access Only", "Steep", "No Cell Service"],
+      "trailTip": "The maintained trail ends partway up; the final push above treeline is a use-path over loose rock with no markers, so carry a map/GPS and turn back in poor visibility since there is no rescue infrastructure nearby.",
+      "didYouKnow": "On a clear day the summit offers views of Lake Clark, Six-Mile Lake, and the volcanic peaks of the Chigmit Mountains.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
+        { "mile": 2.0, "elevationFt": 900 },
+        { "mile": 4.0, "elevationFt": 2200, "label": "Treeline" },
+        { "mile": 6.5, "elevationFt": 3650, "label": "Summit" }
+      ]
+    },
+    {
+      "id": "lake-clark-kontrashibuna-lake",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Fly-In Access Only", "Bear Country"],
+      "trailTip": "A rougher, less-maintained continuation past the Tanalian trails — expect muddy, root-crossed tread and make noise around bends, since dense brush near the lake limits sightlines for bears.",
+      "didYouKnow": "Kontrashibuna Lake's strikingly clear turquoise color comes from fine glacial sediment ('rock flour') suspended in the water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
+        { "mile": 1.8, "elevationFt": 400 },
+        { "mile": 3.5, "elevationFt": 550, "label": "Kontrashibuna Lake" }
+      ]
+    },
+    {
+      "id": "lake-clark-silver-salmon-beach",
+      "estimatedTime": "1-2 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Fly-In Access Only", "Bear Country", "No Maintained Trail"],
+      "trailTip": "This is a tidal beach walk, not a built trail — it's only accessible by chartered floatplane onto the beach itself, and coordinating with a guide is strongly recommended since this is one of the park's most concentrated brown bear areas.",
+      "didYouKnow": "Silver Salmon Creek is renowned for brown bears that dig for clams directly on the open tidal flats at low tide.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Beach landing" },
+        { "mile": 1.0, "elevationFt": 20 },
+        { "mile": 2.0, "elevationFt": 50, "label": "Creek mouth" }
+      ]
+    },
+    {
+      "id": "lake-clark-portage",
+      "estimatedTime": "1-2 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Fly-In Access Only", "No Maintained Trail"],
+      "trailTip": "A historic portage route between interior lakes rather than a graded trail — used mainly by paddlers moving between water bodies, so most visitors will only walk it as part of a longer canoe/kayak trip.",
+      "didYouKnow": "Portage routes like this one were long used by the Dena'ina people to travel between the region's interconnected lake systems without a boat capable of open water.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Put-in" },
+        { "mile": 0.8, "elevationFt": 400 },
+        { "mile": 1.5, "elevationFt": 500, "label": "Take-out" }
+      ]
+    },
+    {
+      "id": "lake-clark-crescent-lake",
+      "estimatedTime": "4-6 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Fly-In Access Only", "No Maintained Trail", "Remote"],
+      "trailTip": "An unmaintained backcountry route to a remote lake beneath the Chigmit volcanoes — this is true off-trail wilderness travel, so bring navigation tools and file a trip plan since there is no cell coverage and rescue could take days.",
+      "didYouKnow": "Crescent Lake sits in the shadow of Mount Iliamna, one of two active volcanoes visible from within the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 300, "label": "Air/boat drop-off" },
+        { "mile": 2.0, "elevationFt": 700 },
+        { "mile": 4.0, "elevationFt": 1100, "label": "Crescent Lake" }
+      ]
+    },
+    {
+      "id": "lake-clark-telaquana-route",
+      "estimatedTime": "Multi-day",
+      "bestSeason": "Jun-Aug",
+      "tags": ["No Maintained Trail", "Remote", "Route-Finding Required"],
+      "trailTip": "This historic cross-country travel corridor has no tread, bridges, or markers for most of its length — it is a multi-day wilderness route for experienced backcountry travelers, not a day hike, and river crossings can be dangerous at high water.",
+      "didYouKnow": "The Telaquana Route follows a traditional Dena'ina travel corridor connecting Lake Clark to the Telaquana Lake area, long used for seasonal subsistence travel.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 400, "label": "Starting drainage" },
+        { "mile": 10, "elevationFt": 1200 },
+        { "mile": 20, "elevationFt": 1800 },
+        { "mile": 30, "elevationFt": 2100, "label": "Telaquana Lake area" }
+      ]
+    },
+    {
+      "id": "lake-clark-chinitna-bay-route",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jun-Aug",
+      "tags": ["Fly-In Access Only", "Bear Country", "No Maintained Trail"],
+      "trailTip": "As of September 2026, per NPS.gov, all bear viewing on NPS land at Chinitna Bay is confined to two designated viewing areas capped at 15 people each — stick to these marked areas and follow your guide's lead rather than wandering the flats independently.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Chinitna Bay's tidal salt marsh can host 20 or more brown bears grazing sedge grass at once, one of the densest concentrations of viewable bears in the state.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Beach landing" },
+        { "mile": 1.0, "elevationFt": 10 },
+        { "mile": 2.0, "elevationFt": 20, "label": "Designated viewing area" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "lake-clark-brown-bear",
+      "scientificName": "Ursus arctos",
+      "bestTimeOfDay": "Morning / Evening (low tide for beach feeding)",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Silver Salmon Creek tidal flats and Chinitna Bay salt marsh",
+      "tags": ["Coastal Forager", "Designated Viewing Area"],
+      "viewingTip": "As of September 2026, per NPS.gov, view bears only from the designated viewing areas at Chinitna Bay or from a guide-led position at Silver Salmon Creek, using binoculars or a zoom lens to keep distance — never approach a feeding or fishing bear to get closer.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Bears here are famous for digging razor clams directly out of the tidal sand at low tide, a foraging behavior rarely seen elsewhere."
+    },
+    {
+      "id": "lake-clark-moose",
+      "scientificName": "Alces alces",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Lowland willow flats and wetlands near Port Alsworth",
+      "tags": ["Browser", "Wetland"],
+      "viewingTip": "Scan willow-choked wetlands from a distance with binoculars, especially at dawn, and give a cow with calves a wide berth rather than moving closer for a photo.",
+      "didYouKnow": "Alaska moose are the largest subspecies of moose in the world, with bulls sometimes exceeding 1,500 pounds."
+    },
+    {
+      "id": "lake-clark-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Any daylight hours",
+      "bestSeason": "Year-round, peak Jun-Sep",
+      "whereToLook": "Lakeshores and river mouths near salmon runs",
+      "tags": ["Cliff/Tree Nester", "Fish Hunter"],
+      "viewingTip": "Watch nest trees along the shoreline through binoculars or a spotting scope rather than approaching the base of a nest tree, which can flush an incubating adult.",
+      "didYouKnow": "Bald eagles congregate in large numbers along Lake Clark's rivers during salmon spawning season, sometimes dozens at a single stretch."
+    },
+    {
+      "id": "lake-clark-dall-sheep",
+      "scientificName": "Ovis dalli",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Rocky slopes of the Chigmit Mountains",
+      "tags": ["Cliff Dweller", "High Elevation"],
+      "viewingTip": "Spot sheep on distant scree slopes with a spotting scope; their pure white coats stand out against rock, so there's no need to close the distance to see them well.",
+      "didYouKnow": "Dall sheep rely on nearly vertical terrain to escape predators like wolves and bears, which rarely follow them onto the steepest slopes."
+    },
+    {
+      "id": "lake-clark-beluga-whale",
+      "scientificName": "Delphinapterus leucas",
+      "bestTimeOfDay": "Any daylight hours, tide-dependent",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Cook Inlet waters near the park's coastline",
+      "tags": ["Marine Mammal", "Tide-Dependent"],
+      "viewingTip": "Watch for surfacing belugas from shore or a boat with binoculars; Cook Inlet's population is small and endangered, so keep watercraft well clear rather than motoring toward a pod.",
+      "didYouKnow": "The Cook Inlet beluga whale population is genetically distinct and federally endangered, numbering only a few hundred individuals."
+    },
+    {
+      "id": "lake-clark-red-fox",
+      "scientificName": "Vulpes vulpes",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Den sites near lakeshores and open meadows",
+      "tags": ["Den Dweller", "Opportunist"],
+      "viewingTip": "If you spot a den, watch active fox behavior from well back with binoculars and never linger near the den entrance — repeated disturbance can cause a vixen to abandon a litter.",
+      "didYouKnow": "Red foxes in this region often shadow bears and eagles at salmon streams, scavenging scraps left behind."
+    },
+    {
+      "id": "lake-clark-caribou",
+      "scientificName": "Rangifer tarandus",
+      "bestTimeOfDay": "Any daylight hours",
+      "bestSeason": "Migration peaks May-Jun and Sep",
+      "whereToLook": "Mountain valleys along traditional migration corridors",
+      "tags": ["Migratory", "Herd Animal"],
+      "viewingTip": "Watch migrating herds from a ridge or valley overlook with binoculars rather than moving toward the animals, which can split or stress a moving herd.",
+      "didYouKnow": "Some caribou herds that pass near Lake Clark migrate hundreds of miles seasonally between calving grounds and wintering areas."
+    },
+    {
+      "id": "lake-clark-wolverine",
+      "scientificName": "Gulo gulo",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round, sightings rare",
+      "whereToLook": "Remote backcountry drainages and alpine terrain",
+      "tags": ["Elusive", "Wide-Ranging"],
+      "viewingTip": "A wolverine sighting is a matter of luck more than location; if you see one, stay still and observe from a distance with binoculars rather than trying to follow it.",
+      "didYouKnow": "Wolverines can range over hundreds of square miles, giving individual animals huge, thinly overlapping territories."
+    }
+  ]
+}

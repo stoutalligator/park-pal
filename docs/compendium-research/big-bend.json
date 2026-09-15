@@ -1,0 +1,206 @@
+{
+  "parkId": "big-bend",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "Earthtrekkers", "SummitPost", "Big Bend Chat"],
+  "trails": [
+    {
+      "id": "big-bend-window",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Oct-Apr (avoid extreme summer heat in the basin)",
+      "tags": ["Exposed", "Rock Scramble"],
+      "trailTip": "The final stretch is a slick-rock scramble down to the pour-off itself — use caution near the edge, especially when wet, since it's a sheer drop into the canyon below.",
+      "didYouKnow": "The \"Window\" is a pour-off in the Chisos Basin rim where all basin rainfall drains, framing a view straight out to the desert floor far below.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Chisos Basin Trailhead" },
+        { "mile": 1.5, "elevationFt": -250 },
+        { "mile": 3, "elevationFt": -500 },
+        { "mile": 4.5, "elevationFt": -700 },
+        { "mile": 5.3, "elevationFt": -800, "label": "The Window pour-off" }
+      ]
+    },
+    {
+      "id": "big-bend-south-rim",
+      "estimatedTime": "6-9 hrs",
+      "bestSeason": "Oct-Apr; can still be hot in the high country in summer",
+      "tags": ["Exposed Ridge", "Long Distance"],
+      "trailTip": "As of September 2026, per NPS.gov, day hikes on this loop do not require a permit, but camping overnight at a South Rim backcountry campsite requires a free backcountry use permit obtained in person at park headquarters.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The South Rim offers sweeping views over the Chihuahuan Desert into Mexico and is often called one of the most rewarding vistas in the entire National Park System.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Chisos Basin Trailhead" },
+        { "mile": 3, "elevationFt": 800 },
+        { "mile": 6, "elevationFt": 1600, "label": "South Rim" },
+        { "mile": 9, "elevationFt": 1900, "label": "Boot Canyon junction" },
+        { "mile": 12.6, "elevationFt": 2000, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "big-bend-santa-elena",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Oct-Apr; the Terlingua Creek crossing can be impassable after rain",
+      "tags": ["River Crossing", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the trail's initial Terlingua Creek crossing can be knee-deep or impassable after rain, so check current conditions at the visitor center before starting.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The canyon walls here rise over 1,500 feet straight up from the Rio Grande, and the trail runs directly along the U.S.-Mexico border for its entire length.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead / creek crossing" },
+        { "mile": 0.5, "elevationFt": 150, "label": "Switchbacks into canyon" },
+        { "mile": 0.85, "elevationFt": 250, "label": "Canyon overlook / trail's end" },
+        { "mile": 1.7, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "big-bend-lost-mine",
+      "estimatedTime": "3 hrs",
+      "bestSeason": "Year-round; best Oct-Apr for cooler temps",
+      "tags": ["Panoramic Views", "Popular"],
+      "trailTip": "One of the most popular day hikes in the park — arrive early to find parking at the small Panther Pass trailhead lot.",
+      "didYouKnow": "The first mile alone climbs to a saddle with views rivaling the full hike, making it a popular shorter turnaround for those short on time.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Panther Pass Trailhead" },
+        { "mile": 1, "elevationFt": 400, "label": "Saddle viewpoint" },
+        { "mile": 2.4, "elevationFt": 1100, "label": "Lost Mine Peak overlook" },
+        { "mile": 4.8, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "big-bend-hot-springs-historic",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "Year-round; Rio Grande water levels affect the springs' depth",
+      "tags": ["Historic Site", "River Access"],
+      "trailTip": "The trail passes an old bathhouse foundation and ends at a warm spring pool along the Rio Grande — the unpaved access road is rough, so check current road conditions before driving in.",
+      "didYouKnow": "The springs were the site of a small early-1900s resort where visitors soaked in 105°F water believed to have healing properties.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 30 },
+        { "mile": 1.0, "elevationFt": 50, "label": "Hot Springs pool" }
+      ]
+    },
+    {
+      "id": "big-bend-emory-peak",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Oct-Apr; afternoon thunderstorms common in summer at elevation",
+      "tags": ["Summit", "Exposed Scramble"],
+      "trailTip": "The final approach to the true summit requires a short, exposed rock scramble near the top — not recommended in wet or icy conditions.",
+      "didYouKnow": "At 7,825 feet, Emory Peak is the highest point in Big Bend and the second-highest in Texas outside the Guadalupe Mountains.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Chisos Basin Trailhead" },
+        { "mile": 3.5, "elevationFt": 900, "label": "South Rim Trail junction" },
+        { "mile": 4.8, "elevationFt": 2000 },
+        { "mile": 5.25, "elevationFt": 2500, "label": "Emory Peak summit" },
+        { "mile": 10.5, "elevationFt": 0, "label": "Return to trailhead" }
+      ]
+    },
+    {
+      "id": "big-bend-boquillas-canyon",
+      "estimatedTime": "45 min",
+      "bestSeason": "Oct-Apr for comfortable temps",
+      "tags": ["River Access", "Border Trail"],
+      "trailTip": "The trail follows the Rio Grande into a narrowing limestone canyon; a sand dune partway along can be soft walking, and swimming isn't recommended due to unpredictable currents.",
+      "didYouKnow": "Boquillas Canyon is the deepest and longest of Big Bend's three major river canyons, with walls rising over 1,200 feet.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 80, "label": "Dune crossing" },
+        { "mile": 0.7, "elevationFt": 100, "label": "Canyon narrows / trail's end" },
+        { "mile": 1.4, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "big-bend-chimneys",
+      "estimatedTime": "2.5-3 hrs",
+      "bestSeason": "Oct-Apr",
+      "tags": ["Desert Scrub", "Historic Pictographs"],
+      "trailTip": "A flat desert walk to a cluster of rock \"chimney\" formations with faint Native American pictographs at the base — view and photograph the rock art without touching it, since oils from skin accelerate its fading.",
+      "didYouKnow": "The volcanic rock chimneys were used historically as a landmark and shelter by both Native peoples and early ranchers in the area.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 2, "elevationFt": 150 },
+        { "mile": 2.4, "elevationFt": 250, "label": "The Chimneys" },
+        { "mile": 4.8, "elevationFt": 0, "label": "Return" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "big-bend-roadrunner",
+      "scientificName": "Geococcyx californianus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round",
+      "whereToLook": "Desert flats near park roads and the Rio Grande Village area",
+      "tags": ["Common", "Ground Bird"],
+      "viewingTip": "Watch roadsides and open desert scrub with binoculars — roadrunners are often spotted dashing across trails and are easiest to see by their motion rather than by approaching.",
+      "didYouKnow": "Despite rarely flying, roadrunners can sprint up to 20 mph and are one of the few predators known to kill rattlesnakes."
+    },
+    {
+      "id": "big-bend-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round; most active spring-fall",
+      "whereToLook": "Chisos Mountains high country, especially around the Chisos Basin and Boot Canyon",
+      "tags": ["Chisos Mountains", "Food Storage Required"],
+      "viewingTip": "View bears from a distance with binoculars and never leave food or scented items unattended in the Basin — store everything in the provided bear-proof lockers, since a fed bear often has to be relocated or euthanized.",
+      "didYouKnow": "Big Bend's black bears recolonized the Chisos Mountains naturally from Mexico in the 1980s after the original population had been wiped out decades earlier."
+    },
+    {
+      "id": "big-bend-javelina",
+      "scientificName": "Pecari tajacu",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round",
+      "whereToLook": "Desert scrub near campgrounds and washes throughout the lowlands",
+      "tags": ["Herd Animal", "Common"],
+      "viewingTip": "Javelina herds are often encountered near campgrounds — admire them from a distance with binoculars and never feed them, since javelinas that associate people with food can become aggressive toward the next visitor.",
+      "didYouKnow": "Despite resembling wild pigs, javelinas are peccaries, a separate family, and rely heavily on smell since their eyesight is quite poor."
+    },
+    {
+      "id": "big-bend-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn, dusk, and night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Chisos Mountains backcountry trails, rarely near developed areas",
+      "tags": ["Elusive", "Apex Predator"],
+      "viewingTip": "Sightings are rare and brief — if you see one, keep your distance, pick up small children, and back away slowly rather than approaching for a closer look or photo.",
+      "didYouKnow": "Big Bend has one of the healthiest mountain lion populations in Texas, though most visitors who see one only glimpse it for a few seconds crossing a trail."
+    },
+    {
+      "id": "big-bend-colima-warbler",
+      "scientificName": "Leiothlypis crissalis",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Late Apr-Aug (only present in the Chisos during breeding season)",
+      "whereToLook": "Boot Canyon and the Pinnacles/Boot Canyon Trail in the high Chisos Mountains",
+      "tags": ["Endemic", "Seasonal Migrant"],
+      "viewingTip": "This species breeds nowhere else in the U.S. outside the Chisos — scan the oak-maple canopy of Boot Canyon with binoculars and follow its song rather than approaching a singing bird too closely, since flushing a nesting pair from cover wastes energy they need for raising chicks.",
+      "didYouKnow": "Birders travel from across the country specifically to see the Colima Warbler, since the strenuous hike into Boot Canyon is the only reliable way to find one within U.S. borders."
+    },
+    {
+      "id": "big-bend-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Feb-May (nesting)",
+      "whereToLook": "Cliffs near the South Rim and East Rim, viewable from a distance along the rim trails",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, the park closes a portion of the East Rim Trail (and campsites ER-4 through ER-9) from February 1 through May 31 to protect nesting peregrines, with technical climbing prohibited within a quarter mile of known eyries during that window — view any falcon you spot from the open rim trail with binoculars rather than approaching cliff edges near a nest.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Peregrine falcons are the fastest animals on Earth, reaching over 200 mph in a hunting dive, and Big Bend's canyon cliffs provide ideal nesting ledges."
+    },
+    {
+      "id": "big-bend-tarantula",
+      "scientificName": "Aphonopelma spp.",
+      "bestTimeOfDay": "Evening, especially after rain",
+      "bestSeason": "Sep-Oct (annual mating migration)",
+      "whereToLook": "Paved and gravel roads throughout the park during the fall migration",
+      "tags": ["Seasonal Migration", "Common"],
+      "viewingTip": "During the fall mating migration, watch for tarantulas crossing roads at dusk from your vehicle at a safe speed, and observe any tarantula on the ground from a couple feet away rather than picking it up — they're not aggressive, but a defensive bite or irritating hairs are best avoided.",
+      "didYouKnow": "The tarantulas seen wandering in fall are almost all males searching for mates; females spend most of their decades-long lives in a single burrow."
+    },
+    {
+      "id": "big-bend-gray-fox",
+      "scientificName": "Urocyon cinereoargenteus",
+      "bestTimeOfDay": "Dusk and night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Desert washes and brushy areas near lower-elevation campgrounds",
+      "tags": ["Nocturnal", "Elusive"],
+      "viewingTip": "Look for gray foxes at dusk along desert washes with a red-filtered flashlight or binoculars from a distance — never leave out food to draw one in for a closer look, since this makes foxes bolder around campsites and puts them at risk.",
+      "didYouKnow": "Gray foxes are one of the few canid species that can climb trees, using curved claws to escape predators or reach fruit."
+    }
+  ]
+}

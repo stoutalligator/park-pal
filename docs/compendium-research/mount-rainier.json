@@ -1,0 +1,208 @@
+{
+  "parkId": "mount-rainier",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (Mount Rainier National Park)", "WSDOT.wa.gov", "USGS", "Washington Trails Association (WTA)"],
+  "trails": [
+    {
+      "id": "mount-rainier-skyline",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Late Jul-Oct",
+      "tags": ["Wildflowers", "Volcano Views", "Steep"],
+      "trailTip": "Snow can linger on the upper loop into July even in a normal year, so check the park's trail-conditions page before attempting the full loop early season; the view of Rainier from Panorama Point is best on a clear morning before afternoon clouds build.",
+      "didYouKnow": "The Skyline Trail's Paradise meadows sit in one of the snowiest recorded spots on Earth, averaging over 640 inches of snow a year.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5400, "label": "Paradise Trailhead" },
+        { "mile": 1.2, "elevationFt": 6000 },
+        { "mile": 2.2, "elevationFt": 6800, "label": "Panorama Point" },
+        { "mile": 2.8, "elevationFt": 7100, "label": "High Point / Glacier Vista" },
+        { "mile": 4.0, "elevationFt": 6200 },
+        { "mile": 5.5, "elevationFt": 5400, "label": "Paradise (loop close)" }
+      ]
+    },
+    {
+      "id": "mount-rainier-naches-peak",
+      "estimatedTime": "1.5-2.5 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Wildflowers", "Family Friendly"],
+      "trailTip": "Hike the loop counter-clockwise from Tipsoo Lake for the best sequence of wildflower meadows and Mount Rainier views; a short section briefly leaves the national park into adjacent national forest land.",
+      "didYouKnow": "Naches Peak Loop is one of the few trails in the park that crosses jurisdictions, dipping from Mount Rainier National Park into the Okanogan-Wenatchee National Forest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 5400, "label": "Tipsoo Lake Trailhead" },
+        { "mile": 1.0, "elevationFt": 5700 },
+        { "mile": 1.8, "elevationFt": 6000, "label": "Naches Peak Saddle" },
+        { "mile": 2.6, "elevationFt": 5700 },
+        { "mile": 3.5, "elevationFt": 5400, "label": "Tipsoo Lake (loop close)" }
+      ]
+    },
+    {
+      "id": "mount-rainier-tolmie-peak",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Fire Lookout", "Access Closed"],
+      "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, so the Mowich Lake / Carbon River corridor that serves this trailhead has no public vehicle, bike, or foot access from that route — reaching Tolmie Peak currently requires a multi-day backcountry approach via the Wonderland Trail, so confirm current access at nps.gov/mora before planning a trip.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The lookout atop Tolmie Peak was built in 1933 and looks out over Eunice Lake with an unusually close view of Mount Rainier's Mowich Face.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4900, "label": "Mowich Lake Trailhead" },
+        { "mile": 1.0, "elevationFt": 5000 },
+        { "mile": 2.5, "elevationFt": 5200, "label": "Eunice Lake" },
+        { "mile": 3.25, "elevationFt": 5939, "label": "Tolmie Peak Lookout" }
+      ]
+    },
+    {
+      "id": "mount-rainier-comet-falls",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Jul-Oct",
+      "tags": ["Steep", "Waterfall"],
+      "trailTip": "The trail crosses Van Trump Creek on a footbridge and can stay snow-covered or icy into early July in many years, so trekking poles and traction help on the steep switchbacks below the falls.",
+      "didYouKnow": "At roughly 320 feet, Comet Falls is one of the tallest waterfalls in Mount Rainier National Park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 3600, "label": "Trailhead" },
+        { "mile": 0.9, "elevationFt": 4000, "label": "Van Trump Creek Crossing" },
+        { "mile": 1.6, "elevationFt": 4500 },
+        { "mile": 1.9, "elevationFt": 4900, "label": "Comet Falls" }
+      ]
+    },
+    {
+      "id": "mount-rainier-trail-of-shadows",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "May-Oct (year-round when snow-free)",
+      "tags": ["Easy Loop", "Interpretive"],
+      "trailTip": "An easy, flat loop past historic mineral springs — a good option for young kids or to stretch your legs near the Longmire Museum.",
+      "didYouKnow": "The mineral springs along this trail are what first drew James Longmire to build a wilderness resort here in 1884, decades before the park was established.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2700, "label": "Trailhead" },
+        { "mile": 0.35, "elevationFt": 2710, "label": "Mineral Springs" },
+        { "mile": 0.7, "elevationFt": 2700, "label": "Loop close" }
+      ]
+    },
+    {
+      "id": "mount-rainier-spray-park",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Wildflowers", "Access Closed"],
+      "trailTip": "As of September 2026, per WSDOT, the trailhead near Mowich Lake has no public vehicle access because the SR 165 Fairfax Bridge is permanently closed — check nps.gov/mora for current approach options before planning this hike.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Spray Park's wildflower meadows sit near Spray Falls and are among the most extensive subalpine meadow displays in the park.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 4900, "label": "Mowich Lake Trailhead" },
+        { "mile": 1.5, "elevationFt": 5000, "label": "Spray Falls" },
+        { "mile": 3.0, "elevationFt": 5800 },
+        { "mile": 4.0, "elevationFt": 6400, "label": "Spray Park Meadow" }
+      ]
+    },
+    {
+      "id": "mount-rainier-summerland",
+      "estimatedTime": "5-6 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Wildflowers", "Wildlife", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS Mount Rainier alerts, the White River/Sunrise approach and nearby Wonderland Trail segments have been subject to temporary wildfire-related closures in late summer, so check current conditions at nps.gov/mora before heading out this time of year.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Summerland's meadows are a reliable place to spot mountain goats grazing on the slopes above Meany Crest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2400, "label": "White River Trailhead" },
+        { "mile": 2.0, "elevationFt": 3600 },
+        { "mile": 3.5, "elevationFt": 5000 },
+        { "mile": 4.2, "elevationFt": 5900, "label": "Summerland" }
+      ]
+    },
+    {
+      "id": "mount-rainier-carbon-river",
+      "estimatedTime": "4-5 hrs",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Rainforest", "Access Closed", "Glacier"],
+      "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, cutting off the standard Carbon River entrance road — the trail is now reachable only via a long approach on the Wonderland Trail, so confirm current access at nps.gov/mora before planning this hike.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "At roughly 3,600 feet, the Carbon Glacier's terminus is the lowest-elevation glacier point in the contiguous United States, thanks to the deep, shaded valley and heavy Cascade snowfall.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 2100, "label": "Carbon River Trailhead" },
+        { "mile": 2.0, "elevationFt": 2300 },
+        { "mile": 4.0, "elevationFt": 2500, "label": "Ipsut Creek" },
+        { "mile": 6.0, "elevationFt": 2700 },
+        { "mile": 8.0, "elevationFt": 2800, "label": "Carbon Glacier Viewpoint" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "mount-rainier-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Apr-Oct (active); hyperphagia Aug-Oct",
+      "whereToLook": "Berry-rich subalpine meadows near Paradise, Sunrise, and Grand Park",
+      "tags": ["Forager", "Give Space"],
+      "viewingTip": "Watch a foraging bear from a distance with binoculars and never approach for a photo — give it a clear escape route and back away slowly if it notices you.",
+      "didYouKnow": "Mount Rainier's black bears feed heavily on huckleberries in late summer, sometimes eating over 20,000 berries a day to prepare for winter denning."
+    },
+    {
+      "id": "mount-rainier-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep (rut Nov-Dec)",
+      "whereToLook": "Rocky slopes above Summerland, Spray Park, and Klapatche Park",
+      "tags": ["Cliff Dweller", "Rut Season"],
+      "viewingTip": "Scan distant cliff bands and talus slopes with binoculars rather than approaching; during the November-December rut, give goats extra distance since bucks are more easily provoked.",
+      "didYouKnow": "Mountain goats aren't true goats — they're more closely related to antelope, and their soft-padded, split hooves grip near-vertical rock."
+    },
+    {
+      "id": "mount-rainier-hoary-marmot",
+      "scientificName": "Marmota caligata",
+      "bestTimeOfDay": "Mid-morning",
+      "bestSeason": "Jun-Sep (hibernates Oct-May)",
+      "whereToLook": "Rockslides and talus near Paradise, Sunrise, and Spray Park",
+      "tags": ["Burrower", "Whistler"],
+      "viewingTip": "Listen for their sharp warning whistle and watch from the trail with binoculars rather than approaching burrow entrances — a marmot that stops feeding to watch you is already too disturbed.",
+      "didYouKnow": "The hoary marmot's shrill alarm call has earned it the nickname 'whistling marmot' among Cascades hikers."
+    },
+    {
+      "id": "mount-rainier-douglas-squirrel",
+      "scientificName": "Tamiasciurus douglasii",
+      "bestTimeOfDay": "Anytime, active by day",
+      "bestSeason": "Year-round",
+      "whereToLook": "Old-growth conifer forest along lower-elevation trails like Trail of the Shadows and Carbon River",
+      "tags": ["Common", "Vocal"],
+      "viewingTip": "Enjoy their scolding chatter from a distance and never offer food — a fed squirrel loses its natural wariness and often ends up injured near roads and trails.",
+      "didYouKnow": "Douglas squirrels cache thousands of conifer cones each fall in piles called middens, some used by generations of squirrels for decades."
+    },
+    {
+      "id": "mount-rainier-pika",
+      "scientificName": "Ochotona princeps",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Jun-Sep",
+      "whereToLook": "Talus slopes near Paradise and Sunrise",
+      "tags": ["Talus Dweller", "Climate Sensitive"],
+      "viewingTip": "Sit quietly near a talus field and scan with binoculars for movement — pikas overheat easily, so never linger long enough to keep one from returning to its haypile.",
+      "didYouKnow": "Pikas don't hibernate; instead they spend summer gathering 'haypiles' of dried vegetation to survive on under the snow all winter."
+    },
+    {
+      "id": "mount-rainier-black-tailed-deer",
+      "scientificName": "Odocoileus hemionus columbianus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "Year-round; rut Nov",
+      "whereToLook": "Forest edges and meadows throughout the park, including Longmire and Ohanapecosh",
+      "tags": ["Common", "Rut Season"],
+      "viewingTip": "View from the road or trail with binoculars, especially during the November rut when bucks are more on edge — never approach for a closer photo.",
+      "didYouKnow": "Columbian black-tailed deer are a subspecies of mule deer found only along the Pacific Coast from California to British Columbia."
+    },
+    {
+      "id": "mount-rainier-mountain-lion",
+      "scientificName": "Puma concolor",
+      "bestTimeOfDay": "Dawn / Dusk / Night",
+      "bestSeason": "Year-round",
+      "whereToLook": "Dense forest at lower and mid elevations; rarely seen",
+      "tags": ["Elusive", "Give Space"],
+      "viewingTip": "Sightings are extremely rare; if you encounter one, keep children and pets close, make yourself look large, and back away slowly instead of running — never approach or try to photograph it up close.",
+      "didYouKnow": "Despite roaming the entire park, mountain lions are so elusive that many rangers who've worked at Rainier for decades have never seen one in the wild."
+    },
+    {
+      "id": "mount-rainier-gray-jay",
+      "scientificName": "Perisoreus canadensis",
+      "bestTimeOfDay": "Anytime, active by day",
+      "bestSeason": "Year-round",
+      "whereToLook": "High-elevation trailheads and campgrounds like Paradise and Sunrise",
+      "tags": ["Bold", "Common"],
+      "viewingTip": "Gray jays are famously bold around hikers, but resist the urge to hand-feed them — human food harms their health and habituates them to approaching people for handouts.",
+      "didYouKnow": "Also called the 'camp robber,' the gray jay caches thousands of food items each year, gluing morsels to tree bark with sticky saliva for winter."
+    }
+  ]
+}

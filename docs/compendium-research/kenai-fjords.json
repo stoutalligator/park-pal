@@ -1,0 +1,195 @@
+{
+  "parkId": "kenai-fjords",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "AllTrails", "NOAA Fisheries", "Lita of the Pack"],
+  "trails": [
+    {
+      "id": "kenai-fjords-harding-icefield",
+      "estimatedTime": "6-8 hrs",
+      "bestSeason": "Jul-Sep (often snow-covered into July)",
+      "tags": ["Steep", "Bear Country", "Exposed"],
+      "trailTip": "As of September 2026, per NPS.gov, this trail commonly holds snow into July even in a normal year, and rangers recommend checking current conditions at the Exit Glacier Nature Center before starting, since traction devices or an earlier turnaround may be needed on the upper switchbacks.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "The Harding Icefield feeds nearly 40 glaciers and is one of only four remaining icefields in the United States.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 450, "label": "Exit Glacier Nature Center" },
+        { "mile": 2.0, "elevationFt": 1600, "label": "Marmot Meadows" },
+        { "mile": 4.1, "elevationFt": 3950, "label": "Icefield overlook" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-exit-glacier",
+      "estimatedTime": "30-45 min",
+      "bestSeason": "May-Sep (rest of year requires ski or snowshoe travel)",
+      "tags": ["Glacier View", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, the Exit Glacier Road closes to vehicles for the winter, typically from around late October through April, after which the glacier is reached only by skiing, snowshoeing, or walking the unplowed road.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Exit Glacier has retreated more than half a mile since the early 1990s, and markers along the access road date each historic ice-edge position.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 350, "label": "Nature Center" },
+        { "mile": 0.5, "elevationFt": 420 },
+        { "mile": 1.0, "elevationFt": 450, "label": "Glacier viewpoint" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-glacier-overlook",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "May-Sep",
+      "tags": ["Forest", "Glacier View"],
+      "trailTip": "This loop climbs just high enough above the valley floor for a wider view of Exit Glacier than the paved path below, so bring a light layer since it's noticeably cooler near the ice.",
+      "didYouKnow": "The cottonwood and alder forest along this loop is itself a living record of glacial retreat, having grown in over just the past several decades of exposed ground.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 400, "label": "Nature Center" },
+        { "mile": 1.0, "elevationFt": 650, "label": "Overlook" },
+        { "mile": 2.0, "elevationFt": 450, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-marmot-meadows",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Alpine", "Steep"],
+      "trailTip": "This is the alpine meadow section of the Harding Icefield route — treat it as a turnaround option on a shorter timeline, and watch for hoary marmots sunning on the rock outcrops that give the meadow its name.",
+      "didYouKnow": "The meadow blooms with lupine, fireweed, and monkeyflower for a brief window each July before the short growing season closes back down.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
+        { "mile": 2.0, "elevationFt": 1600, "label": "Marmot Meadows" },
+        { "mile": 4.0, "elevationFt": 2350, "label": "Upper meadow" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-coastal-tonsina",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "May-Sep",
+      "tags": ["Coastal", "Tide-Dependent"],
+      "trailTip": "Check a tide table before heading out — the final stretch to Tonsina Point crosses beach sections that are impassable at high tide.",
+      "didYouKnow": "This trail is part of the longer Coastal Trail toward Caines Head State Recreation Area, a route historically used to move between Seward-area coastal communities.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Lowell Point trailhead" },
+        { "mile": 2.0, "elevationFt": 120, "label": "Forest high point" },
+        { "mile": 4.0, "elevationFt": 20, "label": "Tonsina Point" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-saddle-trail",
+      "estimatedTime": "2 hrs",
+      "bestSeason": "Jul-Sep",
+      "tags": ["Steep", "Connector"],
+      "trailTip": "This steep connector gains the bulk of its elevation in a short distance, so budget extra time and water even though the mileage looks short on a map.",
+      "didYouKnow": "The Saddle Trail links the lower Exit Glacier trail network to the exposed alpine terrain of the Harding Icefield route.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 1200 },
+        { "mile": 2.0, "elevationFt": 1950, "label": "Saddle" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-exit-glacier-nature",
+      "estimatedTime": "15-20 min",
+      "bestSeason": "May-Sep",
+      "tags": ["Accessible", "Family Friendly"],
+      "trailTip": "A short, mostly level loop right from the nature center — a good option for travelers with limited mobility or time who still want a glacier view.",
+      "didYouKnow": "Interpretive panels along this loop explain how retreating ice reveals a predictable sequence of plant life, from bare rock to alder thicket to mature spruce forest.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 350, "label": "Nature Center" },
+        { "mile": 0.25, "elevationFt": 365 },
+        { "mile": 0.5, "elevationFt": 370, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "kenai-fjords-resurrection-river",
+      "estimatedTime": "2-3 days one-way",
+      "bestSeason": "Jun-Sep",
+      "tags": ["Backcountry", "Remote", "Multi-Day"],
+      "trailTip": "This remote route toward the Chugach National Forest typically requires fording the Resurrection River, so check current water levels with rangers and be prepared for an unbridged crossing.",
+      "didYouKnow": "The trail follows an old mining-era route and, via a connecting Forest Service trail system, links all the way to Hope, Alaska on the far side of the Kenai Peninsula.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 450, "label": "Exit Glacier trailhead" },
+        { "mile": 8.0, "elevationFt": 1100, "label": "Mid-valley" },
+        { "mile": 16.0, "elevationFt": 1750, "label": "Forest boundary" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "kenai-fjords-humpback-whale",
+      "scientificName": "Megaptera novaeangliae",
+      "bestTimeOfDay": "Morning (calmer water)",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Resurrection Bay and the outer coast fjords, typically from a tour boat",
+      "tags": ["Federally Protected", "Seasonal Peak"],
+      "viewingTip": "Federal regulations require vessels to stay at least 100 yards from humpback whales and to never approach a whale head-on or cut off its path — let the whale set the distance and use binoculars or a zoom lens for a closer look.",
+      "didYouKnow": "Individual humpbacks are identified by the unique pattern on the underside of their tail flukes, cataloged by researchers across the North Pacific."
+    },
+    {
+      "id": "kenai-fjords-orca",
+      "scientificName": "Orcinus orca",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Deep fjord channels, often near seal or sea lion haulouts",
+      "tags": ["Federally Protected", "Elusive"],
+      "viewingTip": "Keep at least 200 yards from orcas per NOAA guidance and never position a boat between a pod and open water — resident and transient pods behave differently, so let a guide identify which type you're watching before assuming what's normal for them.",
+      "didYouKnow": "Kenai Fjords hosts both fish-eating resident orcas and marine-mammal-hunting transient orcas, which rarely interact despite overlapping ranges."
+    },
+    {
+      "id": "kenai-fjords-sea-lion",
+      "scientificName": "Eumetopias jubatus",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Jul pupping season",
+      "whereToLook": "Rocky haulouts near the Chiswell Islands",
+      "tags": ["Haulout", "Sensitive Pupping Season"],
+      "viewingTip": "View haulouts from a boat at a distance rather than approaching by kayak — Steller sea lions can stampede off rocks when startled, which is especially dangerous for pups during the May-July pupping season.",
+      "didYouKnow": "The western population of Steller sea lions seen in Kenai Fjords is listed as endangered under the Endangered Species Act."
+    },
+    {
+      "id": "kenai-fjords-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec rut",
+      "whereToLook": "Steep cliffs above the fjords, visible from tour boats",
+      "tags": ["Cliff Dweller", "Rutting Season"],
+      "viewingTip": "Scan the high cliff bands with binoculars or a spotting scope rather than trying to close the distance on foot — footing near goat habitat is often loose rock, and animals disturbed during the fall rut can be pushed onto more dangerous terrain.",
+      "didYouKnow": "Mountain goats' split, rubbery hooves let them grip near-vertical rock that would stop most other large mammals."
+    },
+    {
+      "id": "kenai-fjords-puffin",
+      "scientificName": "Fratercula corniculata",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "May-Aug nesting",
+      "whereToLook": "Cliffside burrow colonies on coastal islands, best seen by boat",
+      "tags": ["Cliff Nester", "Burrow Nester"],
+      "viewingTip": "View nesting colonies from a boat rather than landing on seabird islands — horned puffins nest in burrows that collapse easily underfoot, and adults will abandon chicks if repeatedly flushed off the colony.",
+      "didYouKnow": "Horned puffins can hold a dozen or more small fish crosswise in their bill at once thanks to backward-pointing spines on their tongue and palate."
+    },
+    {
+      "id": "kenai-fjords-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn / Dusk",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Forested slopes near the Exit Glacier trails",
+      "tags": ["Bear Country"],
+      "viewingTip": "Make noise while hiking to avoid surprising a bear at close range, keep at least 50 yards of distance if one is sighted, and never leave food or trash unattended on the trail.",
+      "didYouKnow": "Black bears here feed heavily on salmon in late summer, and their coats can range from black to cinnamon-brown, which sometimes causes confusion with brown bears."
+    },
+    {
+      "id": "kenai-fjords-dall-porpoise",
+      "scientificName": "Phocoenoides dalli",
+      "bestTimeOfDay": "Daytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Open fjord waters, often bow-riding tour boats",
+      "tags": ["Fast Swimmer"],
+      "viewingTip": "Enjoy porpoises that approach a boat on their own terms — never steer toward or chase a pod, since repeated pursuit can disrupt their feeding and travel.",
+      "didYouKnow": "Dall's porpoises are among the fastest small cetaceans, capable of bursts over 30 mph that throw up a distinctive rooster-tail spray."
+    },
+    {
+      "id": "kenai-fjords-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Year-round; nesting Apr-Jul",
+      "whereToLook": "Tall trees and rocky points along the coastline",
+      "tags": ["Treetop Nester", "Nesting Season"],
+      "viewingTip": "Keep well back from any nest tree during the April-July nesting season and use binoculars rather than approaching — repeated disturbance near a nest can cause adults to abandon eggs or chicks.",
+      "didYouKnow": "Kenai Fjords has one of the highest densities of nesting bald eagles along the Kenai Peninsula coastline."
+    }
+  ]
+}

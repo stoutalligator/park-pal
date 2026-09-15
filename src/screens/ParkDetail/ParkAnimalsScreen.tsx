@@ -32,9 +32,9 @@ function CheckBadge({ completed }: { completed: boolean }) {
   );
 }
 
-function AnimalListCard({ animal, spotted }: { animal: Animal; spotted: boolean }) {
+function AnimalListCard({ animal, spotted, onPress }: { animal: Animal; spotted: boolean; onPress: () => void }) {
   return (
-    <View style={styles.itemCard}>
+    <TouchableOpacity style={styles.itemCard} onPress={onPress} activeOpacity={0.8}>
       <View style={styles.itemTitleRow}>
         <Text style={[styles.itemName, styles.itemNameFlex]}>{animal.name}</Text>
         <CheckBadge completed={spotted} />
@@ -45,7 +45,7 @@ function AnimalListCard({ animal, spotted }: { animal: Animal; spotted: boolean 
           <Text style={styles.pillText}>{animal.rarity}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -97,7 +97,12 @@ export default function ParkAnimalsScreen({ route, navigation }: Props) {
       <Text style={styles.progressText}>{spottedCount} of {allAnimals.length} spotted</Text>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {animals.map((animal) => (
-          <AnimalListCard key={animal.id} animal={animal} spotted={isAnimalSpotted(animal.id)} />
+          <AnimalListCard
+            key={animal.id}
+            animal={animal}
+            spotted={isAnimalSpotted(animal.id)}
+            onPress={() => navigation.navigate('AnimalDetail', { animalId: animal.id })}
+          />
         ))}
       </ScrollView>
     </SafeAreaView>

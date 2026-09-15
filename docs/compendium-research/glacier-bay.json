@@ -1,0 +1,195 @@
+{
+  "parkId": "glacier-bay",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov (glba)", "NPS Whale Waters vessel regulation updates", "NOAA Fisheries Alaska marine mammal viewing guidelines"],
+  "trails": [
+    {
+      "id": "glacier-bay-forest",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Rainforest", "Family Friendly"],
+      "trailTip": "A short, easy loop through coastal spruce-hemlock rainforest near Glacier Bay Lodge — a good option right off the boat or floatplane while getting oriented at Bartlett Cove.",
+      "didYouKnow": "The forest here is still relatively young by rainforest standards, having grown in the roughly 200 years since glacial ice retreated from Bartlett Cove.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead near lodge" },
+        { "mile": 0.5, "elevationFt": 120 },
+        { "mile": 1, "elevationFt": 20 }
+      ]
+    },
+    {
+      "id": "glacier-bay-tlingit",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Cultural", "Interpretive"],
+      "trailTip": "This interpretive path connects Bartlett Cove landmarks tied to the Huna Tlingit, the original inhabitants of Glacier Bay — read the waysides for context before or after visiting the nearby Tribal House.",
+      "didYouKnow": "The Huna Tlingit lived in the Glacier Bay area for generations before a rapidly advancing glacier forced their ancestors to relocate in the 1700s, a history now honored at the Xunaa Shuká Hít tribal house near the trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 10, "label": "Bartlett Cove dock" },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 1, "elevationFt": 15, "label": "Tribal house area" }
+      ]
+    },
+    {
+      "id": "glacier-bay-bartlett-river",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Bear Country", "Tidal Estuary"],
+      "trailTip": "The trail ends at a tidal river estuary that's excellent for wildlife but also prime bear habitat — travel in a group, make noise, and carry bear spray, and check a tide table since the estuary crossing is easiest near low tide.",
+      "didYouKnow": "The estuary at the trail's end is a key feeding area where brown bears fish for salmon and Bonaparte's gulls gather to feed on outmigrating smolt.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 120 },
+        { "mile": 3, "elevationFt": 20, "label": "Bartlett River estuary" }
+      ]
+    },
+    {
+      "id": "glacier-bay-point-gustavus",
+      "estimatedTime": "2-3 hrs",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Coastal", "Tidal"],
+      "trailTip": "This walk follows a wide tidal beach, so time it around a falling or low tide for the easiest footing, and watch for bear tracks in the sand since brown bears regularly forage this stretch of shoreline.",
+      "didYouKnow": "Point Gustavus sits at the mouth of Glacier Bay, where tidal currents from the bay meet Icy Strait and often concentrate feeding seabirds.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 10, "label": "Trailhead" },
+        { "mile": 2, "elevationFt": 20 },
+        { "mile": 4, "elevationFt": 30, "label": "Point Gustavus" }
+      ]
+    },
+    {
+      "id": "glacier-bay-bartlett-lake",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Bear Country", "Forested"],
+      "trailTip": "A quiet forested route to a backcountry lake through classic brown bear habitat — carry bear spray, make noise on blind corners, and store food properly if you plan to linger at the lake.",
+      "didYouKnow": "Bartlett Lake is one of the few maintained-trail destinations in a park where most of the interior is accessible only by boat or floatplane.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 30, "label": "Trailhead" },
+        { "mile": 2, "elevationFt": 200 },
+        { "mile": 4, "elevationFt": 330, "label": "Bartlett Lake" }
+      ]
+    },
+    {
+      "id": "glacier-bay-bartlett-cove-loop",
+      "estimatedTime": "45 min-1 hr",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Family Friendly", "Rainforest"],
+      "trailTip": "An easy forest loop right near park headquarters and the lodge — a relaxed way to fill time before or after a day-boat tour into the bay.",
+      "didYouKnow": "Bartlett Cove is the only spot in the park connected to Alaska's road and ferry system, making it the gateway for nearly every visitor before they head into the bay itself.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 10, "label": "Headquarters" },
+        { "mile": 0.8, "elevationFt": 60 },
+        { "mile": 1.5, "elevationFt": 10 }
+      ]
+    },
+    {
+      "id": "glacier-bay-rainforest-trail",
+      "estimatedTime": "20-30 min",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Rainforest", "Interpretive"],
+      "trailTip": "A short interpretive loop through coastal spruce forest with waysides on rainforest ecology — well suited to visitors with limited time between boat departures.",
+      "didYouKnow": "Glacier Bay's coastal rainforest receives well over 70 inches of precipitation a year, feeding the moss- and lichen-draped understory along this loop.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 15, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 65 },
+        { "mile": 1, "elevationFt": 15 }
+      ]
+    },
+    {
+      "id": "glacier-bay-forest-loop-extension",
+      "estimatedTime": "2.5-3.5 hrs",
+      "bestSeason": "Late May-Sep",
+      "tags": ["Bear Country", "Tidal Beach"],
+      "trailTip": "This route extends the Bartlett River Trail out to a quiet tidal beach — plan around the tide for an easier beach walk and stay alert for bears using the same estuary and shoreline corridor.",
+      "didYouKnow": "The beach at the route's end looks out toward Pleasant Island and is one of the quieter shoreline stretches accessible without a boat charter.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
+        { "mile": 2, "elevationFt": 120 },
+        { "mile": 4, "elevationFt": 10, "label": "Tidal beach" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "glacier-bay-humpback-whale",
+      "scientificName": "Megaptera novaeangliae",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Jun-Sep; peak Jul-Aug",
+      "whereToLook": "Lower Bay and Icy Strait feeding grounds, typically seen from tour boats",
+      "tags": ["Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, federal regulations require vessels in park waters to stay at least 100 yards from humpback whales, with tighter \"whale waters\" speed and course restrictions enforced seasonally in known feeding areas — watch with binoculars or a zoom lens and let the whale set the distance, never motoring closer for a better view.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Some of Glacier Bay's humpbacks use cooperative \"bubble-net\" feeding, where a group blows a ring of bubbles to corral schooling fish before lunging through the surface together."
+    },
+    {
+      "id": "glacier-bay-brown-bear",
+      "scientificName": "Ursus arctos",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Late May-Sep",
+      "whereToLook": "Salmon streams and shoreline near Bartlett River, Bartlett Cove, and Point Gustavus",
+      "tags": ["Bear Country"],
+      "viewingTip": "Keep at least 100 yards between yourself and any brown bear, travel in a group making noise on trails with limited sightlines, carry bear spray, and never approach a bear fishing a salmon stream for a closer photo.",
+      "didYouKnow": "Glacier Bay's coastal brown bears can grow larger than interior grizzlies of the same species thanks to a calorie-rich diet of salmon and other marine foods."
+    },
+    {
+      "id": "glacier-bay-sea-otter",
+      "scientificName": "Enhydra lutris",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Calm coastal waters and kelp beds throughout the bay",
+      "tags": ["Common"],
+      "viewingTip": "View rafts of otters from a boat or shoreline with binoculars rather than paddling directly toward them — a startled raft that scatters burns energy otters need for insulation, since unlike seals they rely on dense fur rather than blubber for warmth.",
+      "didYouKnow": "Sea otters have the densest fur of any mammal, with up to a million hairs per square inch, and were hunted to near-extinction in this region before 20th-century protections allowed their return to Glacier Bay."
+    },
+    {
+      "id": "glacier-bay-orca",
+      "scientificName": "Orcinus orca",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "May-Sep",
+      "whereToLook": "Deep channels throughout the bay, typically seen from tour boats",
+      "tags": ["Uncommon"],
+      "viewingTip": "Watch from a boat at a respectful distance and never alter course to close in on a pod — orcas here range widely and a brief, distant sighting is common even for experienced boat crews.",
+      "didYouKnow": "Both fish-eating \"resident\" and marine-mammal-hunting \"transient\" orca ecotypes pass through Southeast Alaska waters, though they don't interbreed or associate with each other."
+    },
+    {
+      "id": "glacier-bay-bald-eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "bestTimeOfDay": "Morning / Evening",
+      "bestSeason": "Year-round",
+      "whereToLook": "Coastal forest edges throughout the park, especially near river mouths",
+      "tags": ["Common", "Cliff Nester"],
+      "viewingTip": "Scan tall shoreline trees with binoculars for nests rather than approaching a nest tree directly, especially in spring and early summer when adults are incubating or brooding young.",
+      "didYouKnow": "Southeast Alaska has one of the highest concentrations of nesting bald eagles anywhere in the world, and Glacier Bay's long, food-rich coastline supports many pairs."
+    },
+    {
+      "id": "glacier-bay-mountain-goat",
+      "scientificName": "Oreamnos americanus",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "May-Sep; kids born late May-Jun",
+      "whereToLook": "Steep slopes above the bay's fjords",
+      "tags": ["Cliff Dweller", "Kidding Season"],
+      "viewingTip": "View goats from a boat or overlook with binoculars or a spotting scope rather than climbing toward them, and give extra distance in late spring when nannies have young kids on narrow, exposed ledges.",
+      "didYouKnow": "Mountain goats colonized Glacier Bay's steep, newly exposed terrain remarkably quickly after the glaciers that once covered the fjords retreated."
+    },
+    {
+      "id": "glacier-bay-harbor-seal",
+      "scientificName": "Phoca vitulina",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "May-Aug; pupping peaks Jun",
+      "whereToLook": "Hauled out on floating ice near tidewater glaciers, especially Johns Hopkins Inlet",
+      "tags": ["Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, vessels must stay at least a quarter mile from seals hauled out on ice, and Johns Hopkins Inlet is closed to most vessel traffic from May 1 through June 30 to protect nursing pups — watch from a distance with binoculars and never approach an ice floe with hauled-out seals for a closer look.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Johns Hopkins Inlet hosts one of the largest harbor seal aggregations in Alaska, with mothers and pups relying on floating ice as a safe platform away from predators."
+    },
+    {
+      "id": "glacier-bay-steller-sea-lion",
+      "scientificName": "Eumetopias jubatus",
+      "bestTimeOfDay": "Anytime",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rocky haul-outs near the bay's mouth, including South Marble Island",
+      "tags": ["Uncommon"],
+      "viewingTip": "View haul-outs from a boat at a distance with binoculars rather than approaching by kayak — a mass flush off the rocks wastes enormous energy and can injure pups in the scramble.",
+      "didYouKnow": "Steller sea lions are the largest of the eared seals, with mature bulls weighing over 2,000 pounds, and the species is listed as endangered in the western half of its Alaska range."
+    }
+  ]
+}

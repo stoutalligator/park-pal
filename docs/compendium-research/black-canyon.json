@@ -1,0 +1,198 @@
+{
+  "parkId": "black-canyon",
+  "researchedOn": "2026-09-15",
+  "sources": ["NPS.gov", "10Adventures", "AllTrails", "More Than Just Parks", "National Parks Traveler"],
+  "trails": [
+    {
+      "id": "black-canyon-warner-point",
+      "estimatedTime": "1 hr",
+      "bestSeason": "Apr-Oct; South Rim Road beyond the visitor center closes in winter",
+      "tags": ["Rim Walk", "Scenic Overlook", "Seasonal Closure"],
+      "trailTip": "As of September 2026, per NPS.gov, South Rim Road closes to vehicles beyond the visitor center around mid-November and typically stays closed into late April, so reaching the Warner Point trailhead in winter requires walking, skiing, or snowshoeing the closed road.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Warner Point overlooks the deepest and narrowest section of the canyon, where the walls plunge nearly 2,700 feet to the Gunnison River.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "High Point Trailhead" },
+        { "mile": 0.75, "elevationFt": 150 },
+        { "mile": 1.5, "elevationFt": 200, "label": "Warner Point overlook" }
+      ]
+    },
+    {
+      "id": "black-canyon-oak-flat",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Below Rim", "Loop"],
+      "trailTip": "This loop dips just below the canyon rim into a Gambel oak forest — footing includes some rocky, uneven sections, so wear sturdy shoes.",
+      "didYouKnow": "Oak Flat is one of the only maintained trails that goes below the canyon rim without requiring a wilderness permit, making it a good introduction to the canyon's terrain.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "South Rim Visitor Center" },
+        { "mile": 1, "elevationFt": 400, "label": "Low point of loop" },
+        { "mile": 2, "elevationFt": 0, "label": "Loop return" }
+      ]
+    },
+    {
+      "id": "black-canyon-chasm-view",
+      "estimatedTime": "10-15 min",
+      "bestSeason": "Apr-Oct",
+      "tags": ["Rim Walk", "Family-Friendly"],
+      "trailTip": "A short walk to the canyon's narrowest point, where the rims are less than 1,300 feet apart — hold onto kids near the unfenced edge.",
+      "didYouKnow": "Chasm View looks across the canyon's narrowest gap, and it's possible to see (and sometimes hear) hikers on the opposite North Rim trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 50, "label": "Chasm View overlook" },
+        { "mile": 0.3, "elevationFt": 0, "label": "Return" }
+      ]
+    },
+    {
+      "id": "black-canyon-uplands",
+      "estimatedTime": "2-2.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["North Rim", "Pinyon-Juniper"],
+      "trailTip": "A quieter, rolling trail through pinyon-juniper woodland on the less-visited North Rim — carry water, since there's no shade relief for long stretches.",
+      "didYouKnow": "The North Rim sees a fraction of the visitors the South Rim does, making the Uplands Trail one of the best options in the park for solitude.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North Rim Trailhead" },
+        { "mile": 2.25, "elevationFt": 350, "label": "High point" },
+        { "mile": 4.5, "elevationFt": 100, "label": "Trail's end" }
+      ]
+    },
+    {
+      "id": "black-canyon-gunnison-route",
+      "estimatedTime": "4-6 hrs round trip",
+      "bestSeason": "May-Oct; permits released in two Recreation.gov windows",
+      "tags": ["Permit Required", "Inner Canyon", "Burn Area Hazard"],
+      "trailTip": "As of September 2026, per NPS.gov, this South Rim inner-canyon route requires a Wilderness Use Permit reserved on Recreation.gov (the April 1 window opens May-July dates, the July 1 window opens August-October dates; off-season permits are available in person at the South Rim Visitor Center), and hikers should expect hazardous burned-area conditions — steep unstable slopes, loose rock, and burned vegetation — left by the 2025 South Rim Fire.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Considered the easiest of the inner canyon routes, the Gunnison Route is still a steep, unmaintained 1,800-foot descent that typically requires hands as well as feet on the way back up.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "South Rim Trailhead" },
+        { "mile": 0.75, "elevationFt": 900 },
+        { "mile": 1.5, "elevationFt": 1800, "label": "Gunnison River" }
+      ]
+    },
+    {
+      "id": "black-canyon-north-vista",
+      "estimatedTime": "3.5-4.5 hrs",
+      "bestSeason": "Apr-Oct",
+      "tags": ["North Rim", "Long Distance"],
+      "trailTip": "This North Rim trail to Exclamation Point and Green Mountain has no shade for much of its length — start early in warmer months and carry more water than usual.",
+      "didYouKnow": "Exclamation Point, just over a mile in, is considered one of the best canyon overlooks in the park and a worthwhile shorter turnaround if you don't have time for the full trail.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North Rim Trailhead" },
+        { "mile": 1.4, "elevationFt": 200, "label": "Exclamation Point" },
+        { "mile": 5, "elevationFt": 800 },
+        { "mile": 7, "elevationFt": 1000, "label": "Green Mountain summit" }
+      ]
+    },
+    {
+      "id": "black-canyon-rim-rock",
+      "estimatedTime": "30 min",
+      "bestSeason": "Apr-Oct",
+      "tags": ["South Rim", "Family-Friendly"],
+      "trailTip": "An easy walk near the South Rim Visitor Center connecting several overlooks — a good option for a quick look at the canyon without committing to a longer hike.",
+      "didYouKnow": "This trail links several of the South Rim's most accessible overlooks, making it possible to see multiple canyon views without driving between pullouts.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.5, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 1.0, "elevationFt": 0, "label": "Trail's end" }
+      ]
+    },
+    {
+      "id": "black-canyon-sob-draw",
+      "estimatedTime": "4-6 hrs round trip",
+      "bestSeason": "May-Oct",
+      "tags": ["Permit Required", "Inner Canyon", "North Rim"],
+      "trailTip": "As of September 2026, per NPS.gov, this North Rim inner-canyon route requires a free Wilderness Use Permit, available first-come, first-served the evening before or morning of your hike at the North Rim Ranger Station, with roughly 15 permits issued per day and a mandatory ranger safety briefing.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "SOB Draw is one of only a couple of access points into the canyon from the North Rim, and its name is a fair warning about the steep, loose terrain involved.",
+      "elevationProfile": [
+        { "mile": 0, "elevationFt": 0, "label": "North Rim Trailhead" },
+        { "mile": 0.75, "elevationFt": 900 },
+        { "mile": 1.5, "elevationFt": 1700, "label": "Gunnison River" }
+      ]
+    }
+  ],
+  "animals": [
+    {
+      "id": "black-canyon-peregrine-falcon",
+      "scientificName": "Falco peregrinus",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Mar-Jul (nesting)",
+      "whereToLook": "Sheer cliff walls throughout the canyon, especially near Painted Wall and Serpent Point",
+      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "viewingTip": "As of September 2026, per NPS.gov, the park closes specific climbing routes near known peregrine eyries — including areas around Painted Wall and Serpent Point on the North Rim, and routes upstream of Echo Canyon on the South Rim — from roughly March 15 through July 15 each year; view nesting falcons from established overlooks with binoculars rather than climbing near a cliff face during this window.",
+      "lastVerified": "2026-09-15",
+      "didYouKnow": "Painted Wall, Colorado's tallest cliff at over 2,250 feet, is prime peregrine nesting habitat and one of the best places in the park to watch them hunt."
+    },
+    {
+      "id": "black-canyon-golden-eagle",
+      "scientificName": "Aquila chrysaetos",
+      "bestTimeOfDay": "Midday thermals",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rim thermals throughout the park, especially near overlooks on both rims",
+      "tags": ["Raptor", "Cliff Nester"],
+      "viewingTip": "Scan the rim thermals with binoculars from established overlooks, and keep well back from any cliff-face nest, since golden eagles will abandon a nest site if repeatedly disturbed.",
+      "didYouKnow": "Golden eagles can spot prey from over a mile away and are capable of taking down animals as large as young deer."
+    },
+    {
+      "id": "black-canyon-mule-deer",
+      "scientificName": "Odocoileus hemionus",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Year-round; Nov rut",
+      "whereToLook": "Pinyon-juniper woodlands along both rims",
+      "tags": ["Common", "Roadside Wildlife"],
+      "viewingTip": "Mule deer are commonly seen from park roads and overlooks — watch from a pullout with binoculars, and give extra space to bucks during the fall rut when they're more unpredictable.",
+      "didYouKnow": "Mule deer can jump all four feet off the ground simultaneously in a bounding gait called \"stotting,\" useful for navigating the park's rocky terrain."
+    },
+    {
+      "id": "black-canyon-black-bear",
+      "scientificName": "Ursus americanus",
+      "bestTimeOfDay": "Dawn, dusk, and late-summer daytime",
+      "bestSeason": "Jul-Sep (peak oak brush foraging)",
+      "whereToLook": "Gambel oak brush along both rims, especially near campgrounds",
+      "tags": ["Food Storage Required", "Seasonal Forager"],
+      "viewingTip": "View any bear from a safe distance with binoculars and store all food and scented items in the bear-proof lockers provided at campgrounds — a bear that gets human food often has to be relocated or destroyed.",
+      "didYouKnow": "Black bears fatten up on Gambel oak acorns each late summer and fall, sometimes traveling long distances between the park's rims to find a good acorn crop."
+    },
+    {
+      "id": "black-canyon-bighorn-sheep",
+      "scientificName": "Ovis canadensis nelsoni",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Nov-Dec (rut); visible year-round",
+      "whereToLook": "Steep canyon walls, most reliably viewed from East Portal Road",
+      "tags": ["Rut Season", "Cliff Dweller"],
+      "viewingTip": "Scan the canyon walls from East Portal Road pullouts with binoculars, and give rutting rams extra distance in fall — a startled sheep on that terrain risks a serious fall, not just a spoiled photo.",
+      "didYouKnow": "Black Canyon's bighorn sheep were reintroduced in the 1980s and now use the canyon's sheer walls as natural protection from predators."
+    },
+    {
+      "id": "black-canyon-elk",
+      "scientificName": "Cervus canadensis",
+      "bestTimeOfDay": "Dawn and dusk",
+      "bestSeason": "Sep-Oct (rut)",
+      "whereToLook": "Open meadows along both the North and South Rim",
+      "tags": ["Rut Season", "Meadow Grazer"],
+      "viewingTip": "Watch rim meadows at dawn or dusk with binoculars, and stay well back from bulls during the fall rut, when they're aggressive and unpredictable and should never be approached for a photo.",
+      "didYouKnow": "Bull elk bugles during the September-October rut can carry for over a mile across the canyon's open rim country."
+    },
+    {
+      "id": "black-canyon-red-tailed-hawk",
+      "scientificName": "Buteo jamaicensis",
+      "bestTimeOfDay": "Midday",
+      "bestSeason": "Year-round",
+      "whereToLook": "Rim thermals and open pinyon-juniper woodland along park roads",
+      "tags": ["Common", "Raptor"],
+      "viewingTip": "Look up along the rim roads for hawks riding thermals or perched on snags, watching with binoculars rather than approaching a perched bird too closely.",
+      "didYouKnow": "Red-tailed hawks' piercing scream is so recognizable it's used as the generic \"eagle cry\" sound effect in countless movies, regardless of what bird is actually on screen."
+    },
+    {
+      "id": "black-canyon-gunnison-sage-grouse",
+      "scientificName": "Centrocercus minimus",
+      "bestTimeOfDay": "Dawn (spring lek displays)",
+      "bestSeason": "Mar-May (lek/mating display season)",
+      "whereToLook": "Sagebrush habitat in the Gunnison Basin near the park, not typically within the canyon itself",
+      "tags": ["Endangered", "Lek Display"],
+      "viewingTip": "This species isn't reliably seen inside the canyon itself — nearby Gunnison Basin viewing sites run guided, distance-controlled lek tours each spring, and observers should always stay in a vehicle or designated viewing area rather than approaching a display ground, since disturbance can cause grouse to abandon a lek entirely.",
+      "didYouKnow": "First described as a distinct species in 2000, the Gunnison sage-grouse is one of the most endangered birds in North America, with the vast majority of its population found only in the Gunnison Basin."
+    }
+  ]
+}
