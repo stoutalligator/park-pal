@@ -232,7 +232,17 @@ export default function AuthScreen({ navigation }: Props) {
           options: { emailRedirectTo: CONFIRM_EMAIL_URL },
         });
         if (error) throw error;
-        if (data.session) {
+        if (data.user && data.user.identities && data.user.identities.length === 0) {
+          // Supabase deliberately returns a normal-looking response (no
+          // error) for an email that's already registered, to avoid letting
+          // signup be used to enumerate which emails have accounts — the
+          // empty `identities` array is the one documented signal that
+          // distinguishes this from a genuine new signup. Without this
+          // check the user would silently land on the "check your email"
+          // screen and wait forever for a confirmation email that's never
+          // sent, since there's nothing left to confirm.
+          setErrorMessage('An account with that email already exists. Try logging in instead.');
+        } else if (data.session) {
           // Email confirmation is off for this project — signUp already
           // returned a live session, so RootNavigator swaps to Main on its
           // own; just write the chosen profile details onto it.
