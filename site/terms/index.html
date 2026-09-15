@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parks Pal Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --forest: #2D5016;
+    --forest-ink: #23400f;
+    --sage: #6B8C5A;
+    --cream: #EAD9B7;
+    --tan: #C9A96E;
+    --orange: #D4845A;
+    --bg: #FFFFFF;
+    --surface: #FBF8F2;
+    --text-primary: #2B2116;
+    --text-secondary: #5A5140;
+    --text-muted: #8A8270;
+    --border: #E7DFCC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+      --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+      --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220; --tan: #C9A96E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1B1811; --surface: #242019; --text-primary: #F3EEE2;
+    --text-secondary: #C7BFAB; --text-muted: #8E8672; --border: #38321F;
+    --forest: #7FA35C; --forest-ink: #9FC17E; --cream: #3A3220; --tan: #C9A96E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    padding: 0 20px;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding-block: 40px 80px; }
+  nav.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  nav.top a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 700; }
+  nav.top a:hover { color: var(--forest-ink); }
+  header.hero { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .mark { width: 44px; height: 44px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center; flex: none; }
+  .mark svg { width: 24px; height: 24px; }
+  .wordmark { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 18px; color: var(--text-secondary); letter-spacing: 0.02em; }
+  h1 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 700; font-size: clamp(28px, 5vw, 38px); line-height: 1.15; margin: 18px 0 6px; text-wrap: balance; color: var(--text-primary); }
+  .meta { font-size: 14px; color: var(--text-muted); margin-bottom: 36px; }
+  .meta strong { color: var(--text-secondary); font-weight: 700; }
+  .lede { font-size: 16.5px; line-height: 1.65; color: var(--text-secondary); max-width: 62ch; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+  section { margin-bottom: 34px; }
+  section:last-of-type { margin-bottom: 0; }
+  h2 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--forest-ink); margin: 0 0 4px; display: flex; align-items: baseline; gap: 10px; }
+  .h2-num { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; color: var(--tan); letter-spacing: 0.04em; }
+  h2 + p, h2 + ul, h2 + .table-scroll { margin-top: 14px; }
+  p { font-size: 15.5px; line-height: 1.7; color: var(--text-secondary); max-width: 62ch; margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 0; list-style: none; max-width: 62ch; }
+  ul li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 8px; }
+  ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); }
+  ul li strong { color: var(--text-primary); font-weight: 700; }
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--forest); border-radius: 14px; padding: 18px 20px; margin-top: 14px; }
+  .callout p { margin: 0; max-width: none; }
+  .callout p + p { margin-top: 8px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  footer { margin-top: 8px; }
+  footer p { font-size: 14px; color: var(--text-muted); }
+  footer a { color: var(--forest-ink); font-weight: 700; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 460px) { .wrap { padding-block: 32px 56px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <span></span>
+    <a href="/">← Parks Pal</a>
+  </nav>
+  <header class="hero">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 3 3 19h18L12 3Z" fill="#FFFFFF" opacity="0.95"/>
+        <path d="M12 3 6.2 13.2 9 12l1.6 2.2L14 10l4.9 9H21L12 3Z" fill="#EAD9B7" opacity="0.9"/>
+      </svg>
+    </div>
+    <span class="wordmark">PARKS PAL</span>
+  </header>
+
+  <h1>Terms of Service</h1>
+  <p class="meta">Effective <strong>September 14, 2026</strong> &middot; Applies to the Parks Pal mobile app (iOS &amp; Android)</p>
+
+  <p class="lede">
+    These are the terms for using Parks Pal. They're meant to be plain and short, not a wall of legal
+    boilerplate — but by using the app, you're agreeing to them.
+  </p>
+
+  <section>
+    <h2><span class="h2-num">01</span> Using Parks Pal</h2>
+    <p>
+      Parks Pal is provided for your personal, non-commercial use tracking your own national park visits,
+      trips, and progress. You're responsible for the accuracy of anything you enter into the app — trip
+      notes, trail logs, wildlife sightings, and photos.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">02</span> Not Directed at Children</h2>
+    <p>Parks Pal is not directed at children under 13, and we do not knowingly collect data from them.</p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">03</span> Park &amp; Trail Information</h2>
+    <p>
+      Park, trail, and wildlife information in the app is provided for reference only and may be
+      incomplete, outdated, or inaccurate. Conditions at national parks change — always verify current
+      trail status, closures, weather, and safety information with official park sources before you go.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">04</span> No Warranty</h2>
+    <p>
+      Parks Pal is provided "as is," without warranties of any kind, express or implied. We don't
+      guarantee the app will be uninterrupted or error-free, or that data you enter will never be lost —
+      back up anything irreplaceable, like photos, separately.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">05</span> Limitation of Liability</h2>
+    <p>
+      To the fullest extent permitted by law, Parks Pal and its developer aren't liable for any injury,
+      loss, or damage arising from your use of the app — including reliance on park or trail information,
+      or from technical issues, data loss, or service interruptions.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">06</span> Your Account</h2>
+    <div class="callout">
+      <p>
+        You're responsible for keeping your login credentials secure. You can delete your account and
+        everything in it at any time from <strong>Settings → Delete Account</strong> in the app — it's
+        immediate and permanent.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="h2-num">07</span> Changes to These Terms</h2>
+    <p>
+      If these terms change in a meaningful way, we'll update the effective date above and the in-app
+      copy under Settings → Terms of Service.
+    </p>
+  </section>
+
+  <hr class="divider">
+
+  <footer>
+    <p>Questions? Reach us at <a href="mailto:parkpal.support@gmail.com">parkpal.support@gmail.com</a>. See also our <a href="/privacy">Privacy Policy</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

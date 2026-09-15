@@ -21,6 +21,10 @@ const SECTIONS = [
     title: 'Your Control',
     body: 'You can edit or delete any trip, park status, or profile detail at any time from within the app. Signing out does not delete your data — to permanently delete your account and everything in it, use Delete Account in Settings.',
   },
+  {
+    title: "Children's Privacy",
+    body: 'Parks Pal is not directed at children under 13, and we do not knowingly collect data from them.',
+  },
 ];
 
 export default function PrivacyPolicyScreen() {

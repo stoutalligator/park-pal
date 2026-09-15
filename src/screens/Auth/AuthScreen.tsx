@@ -14,12 +14,13 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Auth'>;
 
 type Mode = 'Log In' | 'Sign Up';
 
-// Hosted page users land on from the reset email to actually set a new
-// password — the app has no deep-link scheme configured, so this has to be
-// a web page rather than a route inside the app itself. Supabase's default
-// "Reset Password" email template can't be edited without custom SMTP, so
-// this uses that default template's built-in link, unmodified.
+// Hosted pages users land on after tapping a link in an auth email — the app
+// has no deep-link scheme configured, so these are web pages rather than
+// routes inside the app itself. Both work with Supabase's default email
+// templates (no custom SMTP needed) since the templates' links are built
+// from whatever redirect URL is passed at call time.
 const RESET_PASSWORD_URL = 'https://parks-pal.com/reset-password';
+const CONFIRM_EMAIL_URL = 'https://parks-pal.com/confirmed';
 
 function BackArrowIcon() {
   return (
@@ -223,7 +224,11 @@ export default function AuthScreen({ navigation }: Props) {
     setSubmitting(true);
     try {
       if (mode === 'Sign Up') {
-        const { data, error } = await supabase.auth.signUp({ email: email.trim(), password });
+        const { data, error } = await supabase.auth.signUp({
+          email: email.trim(),
+          password,
+          options: { emailRedirectTo: CONFIRM_EMAIL_URL },
+        });
         if (error) throw error;
         if (data.session) {
           // Email confirmation is off for this project — signUp already

@@ -8,9 +8,15 @@ Copy-paste source for store listings and the privacy questionnaires. Not app doc
 
 The app previously gated sign-up behind a shared Beta Key (`supabase/functions/beta-signup`) while it was friends-and-family only. That gate has been removed — `AuthScreen.tsx` now calls `supabase.auth.signUp()` directly and the `beta-signup` Edge Function has been deleted. If a `BETA_SIGNUP_KEY` secret is still set on the Supabase project, it's inert and can be removed with `npx supabase secrets unset BETA_SIGNUP_KEY`.
 
-**Before opening sign-ups publicly, double-check in the Supabase dashboard (Authentication → Providers → Email):**
-- Whether "Confirm email" is on. If it is, new users get a confirmation email before they can log in (the app already handles this — see `confirmEmailSent` in `AuthScreen.tsx`). If it's off, `signUp()` returns a live session immediately and users land straight in onboarding.
-- The **Site URL** / redirect URLs are set to something reasonable, since confirmation and reset-password emails link out to them.
+**Status: "Confirm email" is now ON** (turned on in the Supabase dashboard to prevent a flood of unconfirmed/fake signups). New users get a confirmation email before they can log in — the app already handles this (`confirmEmailSent` in `AuthScreen.tsx`), showing a "Check Your Email" screen instead of logging them straight in.
+
+**Required Supabase dashboard config (Authentication → URL Configuration):**
+- **Site URL**: `https://parks-pal.com` — done.
+- **Redirect URLs allowlist** must include both hosted pages the app links out to, or Supabase will reject the redirect and the link will silently fail:
+  - `https://parks-pal.com/reset-password` (password reset — should already be added)
+  - `https://parks-pal.com/confirmed` (signup email confirmation — new, add this one)
+
+The confirmation page itself (`site/confirmed/index.html`) is a static page matching the reset-password page's style — it just reads the redirect params GoTrue appends after verifying the link server-side and shows a success or expired-link message. No form, no API calls; the actual account confirmation already happened before the browser lands there.
 
 ---
 
@@ -31,7 +37,7 @@ The app previously gated sign-up behind a shared Beta Key (`supabase/functions/b
 8. Once happy, `eas build --platform android --profile production` (`.aab`) + `eas submit --platform android --latest` to get it into Play Console's internal testing track.
 
 **Store listing setup (can happen anytime after accounts exist, in parallel with testing)**
-9. In App Store Connect: create the app record (bundle ID `com.parkpal.app` already matches `app.json`), fill in listing copy, keywords, category, age rating, and the App Privacy questionnaire — all drafted in sections 1–4 below.
+9. In App Store Connect: create the app record (bundle ID `com.parks-pal.app` — matches `app.json`'s `ios.bundleIdentifier`), fill in listing copy, keywords, category, age rating, and the App Privacy questionnaire — all drafted in sections 1–4 below.
 10. In Play Console: create the app, fill in the Data Safety form and content rating questionnaire, store listing text — also drafted below.
 11. Take the actual screenshots (section 6 below is not done yet) and upload them to both consoles.
 12. Set Support URL → `https://parks-pal.com/support` and Privacy Policy URL → `https://parks-pal.com/privacy` in both consoles.
@@ -39,18 +45,21 @@ The app previously gated sign-up behind a shared Beta Key (`supabase/functions/b
 **Final checks before hitting submit**
 13. Confirm the Supabase SQL migrations in `supabase/schema.sql` have actually been run against the live project (trip_type column, delete_own_account function) — the file has them, but confirm the live DB does too.
 14. Walk the account-deletion flow once for real on the TestFlight build, since Apple reviewers specifically test this.
-15. Decide the Sentry auth token / custom SMTP items now, since "first real production build" is now — or explicitly keep deferring them, that's fine too, just a conscious choice at this point rather than a default.
+15. **Sentry auth token — decided: deferred.** The first `eas build` failed because `@sentry/react-native`'s Xcode build phase tries to auto-upload source maps/dSYMs and has no auth token to do it with. Fix applied: set `SENTRY_DISABLE_AUTO_UPLOAD=true` as an EAS environment variable (both `preview` and `production`) to skip that step. Crash reporting itself still works — you just won't get symbolicated stack traces in Sentry until a real `SENTRY_AUTH_TOKEN` is set up later. Custom SMTP (for branded auth emails) is still an open, undecided item.
 
 **Submit**
 16. In App Store Connect, select the TestFlight-tested build, complete the submission questionnaire (export compliance — already answered via `ITSAppUsesNonExemptEncryption: false` in `app.json`), and submit for review. Typical review time: 1–3 days.
 17. In Play Console, promote the tested build from internal testing to production (or go through Google's closed/open testing track first if you want more real-world testers before a full release). Review time: usually a few hours to 1 day.
+
+**App Review notes (paste into App Store Connect → App Review Information → Notes):**
+> Creating an account requires confirming your email address — after signing up, check the email inbox you used and click the confirmation link before logging in. This is standard email/password sign-up with no other access restrictions; no demo account or special credentials are needed.
 
 ---
 
 ## 1. Listing Copy
 
 ### App name
-**Parks Pal** (the internal bundle identifier stays `com.parkpal.app` — that's not user-visible and doesn't need to change; only the display name shown on the store listing and home screen is "Parks Pal")
+**Parks Pal** (the internal bundle identifiers — `com.parks-pal.app` on iOS, `com.parkspal.app` on Android — aren't user-visible and don't need to change; only the display name shown on the store listing and home screen is "Parks Pal")
 
 ### iOS Subtitle (30 char limit)
 `Your National Park Passport`
@@ -132,6 +141,9 @@ Everything else (Location, Financial Info, Health & Fitness, Contacts, Browsing 
 
 Privacy Policy URL for both stores: **https://parks-pal.com/privacy**
 Support URL for both stores: **https://parks-pal.com/support**
+Terms of Service URL: **https://parks-pal.com/terms** (also mirrored in-app at Settings → Terms of Service)
+
+**App Store Connect EULA field:** optional — leave blank to use Apple's standard EULA, or paste the Terms of Service page's text in if you want Parks Pal's own terms (covering the "as-is"/liability-limitation language and the trail-info disclaimer) to be the actual binding agreement instead of Apple's default. Not required for submission either way.
 
 ---
 

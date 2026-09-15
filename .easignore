@@ -1,0 +1,31 @@
+# .easignore fully replaces .gitignore for EAS Build's project archive, so
+# everything .gitignore excludes needs to be repeated here explicitly.
+node_modules/
+.expo/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.DS_Store
+*.tgz
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.env
+.env.local
+.tmp-screenshots/
+
+# Not needed to build the app — docs, local dev tooling, the marketing
+# website, and Supabase backend config are irrelevant to compiling the
+# Expo/React Native app itself.
+.git/
+docs/
+.claude/
+site/
+supabase/
+scripts/
+*.tmp.js

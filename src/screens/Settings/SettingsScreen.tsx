@@ -24,6 +24,7 @@ const SETTINGS_ROWS = [
     items: [
       { label: 'About Parks Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png'), screen: 'About' },
       { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png'), screen: 'PrivacyPolicy' },
+      { label: 'Terms of Service', sub: '', icon: require('@/assets/icons/icon-journal.png'), screen: 'Terms' },
     ],
   },
 ];

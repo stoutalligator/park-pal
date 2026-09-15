@@ -8,20 +8,23 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.parkpal.app",
+      "bundleIdentifier": "com.parks-pal.app",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.parkpal.app",
+      "package": "com.parkspal.app",
       "adaptiveIcon": {
         "backgroundColor": "#EAD9B7",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -51,6 +54,12 @@
           "project": "react-native"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f1fe6f6e-ddbb-43bb-a475-bf532f9f154f"
+      }
+    },
+    "owner": "stoutalligator"
   }
 }

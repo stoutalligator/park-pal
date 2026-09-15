@@ -27,6 +27,7 @@ import EditGoalScreen from '@/screens/Settings/EditGoalScreen';
 import UnitsScreen from '@/screens/Settings/UnitsScreen';
 import AboutScreen from '@/screens/Settings/AboutScreen';
 import PrivacyPolicyScreen from '@/screens/Settings/PrivacyPolicyScreen';
+import TermsOfServiceScreen from '@/screens/Settings/TermsOfServiceScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
@@ -89,6 +90,7 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Units" component={UnitsScreen} />
       <ProfileStack.Screen name="About" component={AboutScreen} />
       <ProfileStack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} />
+      <ProfileStack.Screen name="Terms" component={TermsOfServiceScreen} />
     </ProfileStack.Navigator>
   );
 }

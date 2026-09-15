@@ -56,4 +56,5 @@ export type ProfileStackParamList = {
   Units: undefined;
   About: undefined;
   PrivacyPolicy: undefined;
+  Terms: undefined;
 };
