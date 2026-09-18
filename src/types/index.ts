@@ -79,6 +79,9 @@ export interface Trip {
   activities: ActivityType[];
   notes: string;
   photos: string[];
+  /** Optional caption per photo, index-aligned with `photos` (missing or
+   * empty = no caption). */
+  photoCaptions?: string[];
   weather?: string;
   favoriteTrail?: string;
   wildlifeSightings?: string[];

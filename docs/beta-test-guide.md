@@ -42,7 +42,7 @@ This is the one we can't check ourselves — **if you've been to a park, please 
 - **Log a trip** (the + button): try a one-day trip and a multi-day trip. Was the day-by-day step understandable?
 - **Plan a trip** for a future date, then **mark it completed** later.
 - Add **activities, trails hiked, wildlife spotted, weather, notes, and a rating**. Was picking trails/animals from the park's list easy? Did it miss ones you wanted?
-- Add **photos** (up to 3 per trip). Do they show up right after saving?
+- Add **photos** (up to 3 per trip). Do they show up right after saving? Tap a photo in the form to write a short **caption** (80 characters); the small X removes it. Do captions show under the photos in the Photo Album, and do they survive editing the trip?
 - **Edit** and **delete** a trip. Does everything you entered come back correctly?
 - Did trip **miles and elevation totals** add up sensibly?
 - **Switch units** (Settings → Units, miles ↔ kilometers) and check distances everywhere.

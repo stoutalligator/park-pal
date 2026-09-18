@@ -165,7 +165,14 @@ async function signedUrlsFromStoragePaths(paths: string[]): Promise<Record<strin
 // URLs and freshly-picked local file URIs, capped at 3 by the schema) against
 // what's stored. Local URIs get uploaded; signed URLs are re-linked without
 // re-uploading; anything dropped from the list is deleted from Storage too.
-async function syncTripPhotos(tripId: string, userId: string, photos: string[]): Promise<string[]> {
+// `captions` is index-aligned with `photos`; the result keeps each caption
+// attached to its own photo, even if one photo's link can't be produced.
+async function syncTripPhotos(
+  tripId: string,
+  userId: string,
+  photos: string[],
+  captions: string[] = []
+): Promise<{ photos: string[]; photoCaptions: string[] }> {
   const { data: existingRows } = await supabase
     .from('trip_photos')
     .select('storage_path')
@@ -173,10 +180,13 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
 
   const keptPaths = new Set<string>();
   const finalPaths: string[] = [];
-  for (const photo of photos.slice(0, 3)) {
+  const finalCaptions: string[] = [];
+  for (const [index, photo] of photos.slice(0, 3).entries()) {
+    const caption = (captions[index] ?? '').trim();
     const existingPath = storagePathFromSignedUrl(photo);
     if (existingPath) {
       finalPaths.push(existingPath);
+      finalCaptions.push(caption);
       keptPaths.add(existingPath);
       continue;
     }
@@ -188,6 +198,7 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
       .upload(path, arrayBuffer, { contentType: 'image/jpeg' });
     if (uploadError) throw uploadError;
     finalPaths.push(path);
+    finalCaptions.push(caption);
   }
 
   const orphanedPaths = (existingRows ?? [])
@@ -203,12 +214,20 @@ async function syncTripPhotos(tripId: string, userId: string, photos: string[]):
   if (finalPaths.length) {
     const { error: insertError } = await supabase
       .from('trip_photos')
-      .insert(finalPaths.map((storage_path, slot) => ({ trip_id: tripId, storage_path, slot })));
+      .insert(
+        finalPaths.map((storage_path, slot) => ({
+          trip_id: tripId,
+          storage_path,
+          slot,
+          caption: finalCaptions[slot] || null,
+        }))
+      );
     if (insertError) throw insertError;
   }
 
   const urlMap = await signedUrlsFromStoragePaths(finalPaths);
-  return finalPaths.map((p) => urlMap[p]).filter((u): u is string => !!u);
+  const shown = finalPaths.map((path, i) => ({ url: urlMap[path], caption: finalCaptions[i] })).filter((p) => !!p.url);
+  return { photos: shown.map((p) => p.url), photoCaptions: shown.map((p) => p.caption) };
 }
 
 // Shared row-building for user_trail_completions / user_animal_sightings /
@@ -635,7 +654,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .order('start_date', { ascending: false }),
       supabase
         .from('trip_photos')
-        .select('trip_id, storage_path, slot')
+        .select('trip_id, storage_path, slot, caption')
         .eq('user_id', userId),
       loadPendingTrips(userId),
     ])).then(async ([trailRes, animalRes, dayActivityRes, dayWeatherRes, tripRes, photoRes, loadedPendingTrips]) => {
@@ -682,6 +701,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           const tripAnimalRows = animalRows.filter((a) => a.trip_id === row.id);
           const tripDayActivityRows = dayActivityRows.filter((a) => a.trip_id === row.id);
           const tripDayWeatherRows = dayWeatherRows.filter((w) => w.trip_id === row.id);
+          // Keep only photos whose link could be produced, so each caption
+          // stays attached to the photo it was written for.
+          const tripPhotos = photoRows
+            .filter((p) => p.trip_id === row.id)
+            .sort((a, b) => a.slot - b.slot)
+            .filter((p) => !!photoUrlMap[p.storage_path]);
           // A trip only has `days` if it was saved through the per-day flow —
           // legacy trips (nothing tagged with a day_number) get none, so
           // TripDetailScreen falls back to the flat fields below unchanged.
@@ -719,11 +744,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             endDate: row.end_date,
             activities: row.activities as ActivityType[],
             notes: row.notes,
-            photos: photoRows
-              .filter((p) => p.trip_id === row.id)
-              .sort((a, b) => a.slot - b.slot)
-              .map((p) => photoUrlMap[p.storage_path])
-              .filter((u): u is string => !!u),
+            photos: tripPhotos.map((p) => photoUrlMap[p.storage_path]),
+            photoCaptions: tripPhotos.map((p) => p.caption ?? ''),
             weather: row.weather ?? undefined,
             favoriteTrail: row.favorite_trail ?? undefined,
             wildlifeSightings: tripAnimalRows.map((a) => a.name),
@@ -991,8 +1013,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (upsertError) throw upsertError;
 
     let photos = trip.photos;
+    let photoCaptions = trip.photoCaptions;
     if (photos.length || opts.isEdit) {
-      photos = await syncTripPhotos(trip.id, activeSession.user.id, photos);
+      const synced = await syncTripPhotos(trip.id, activeSession.user.id, photos, photoCaptions);
+      photos = synced.photos;
+      photoCaptions = synced.photoCaptions;
     }
 
     const days = trip.days;
@@ -1027,7 +1052,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    return { ...trip, photos };
+    return { ...trip, photos, photoCaptions };
   }, [animals]);
 
   // Removes a trip server-side, including its photo files (Storage objects

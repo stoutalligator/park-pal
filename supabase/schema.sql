@@ -104,6 +104,8 @@ create table public.trip_photos (
   user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
   storage_path text not null,
   slot smallint not null check (slot between 0 and 2),
+  -- Optional short line written under the photo in the album (empty = null).
+  caption text check (char_length(caption) <= 80),
   created_at timestamptz not null default now(),
   unique (trip_id, slot)
 );

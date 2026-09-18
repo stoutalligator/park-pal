@@ -54,6 +54,7 @@ export default function TripPhotoAlbumScreen({ route, navigation }: Props) {
               variant="page"
               tapeColor={tapeColorForIndex(slot)}
               rotate={SLOT_ROTATIONS[slot]}
+              caption={trip.photoCaptions?.[slot]}
             />
           );
         })}

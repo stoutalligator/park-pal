@@ -18,6 +18,7 @@ import {
   Units,
 } from '@/types';
 import PrimaryButton from '@/components/PrimaryButton';
+import PhotoCaptionSheet from '@/components/PhotoCaptionSheet';
 import DateRangePicker from '@/components/DateRangePicker';
 import { showToast } from '@/components/Toast';
 import { convertMiles, convertFeet, toMiles, toFeet, distanceLabel, elevationLabel } from '@/utils/units';
@@ -878,6 +879,9 @@ export default function LogTripScreen() {
   const [notes, setNotes] = useState(editingTrip?.notes ?? '');
   const [showParkPicker, setShowParkPicker] = useState(false);
   const [photos, setPhotos] = useState<string[]>(editingTrip?.photos ?? []);
+  // Index-aligned with `photos`; a missing entry just means no caption.
+  const [photoCaptions, setPhotoCaptions] = useState<string[]>(editingTrip?.photoCaptions ?? []);
+  const [captionIndex, setCaptionIndex] = useState<number | null>(null);
   const [rating, setRating] = useState<number>(editingTrip?.rating ?? completingTrip?.rating ?? 0);
   const [saving, setSaving] = useState(false);
   // Step 1 ("details") collects everything trip-wide — park, dates, notes,
@@ -924,6 +928,7 @@ export default function LogTripScreen() {
       setEndDate(trip.endDate);
       setNotes(trip.notes);
       setPhotos(trip.photos ?? []);
+      setPhotoCaptions(trip.photoCaptions ?? []);
       setRating(trip.rating ?? 0);
     } else {
       setSelectedParkId(requestedParkId ?? 'yellowstone');
@@ -931,6 +936,7 @@ export default function LogTripScreen() {
       setEndDate('');
       setNotes('');
       setPhotos([]);
+      setPhotoCaptions([]);
       setRating(0);
     }
     setDayEntries(buildDayEntriesMap(trip));
@@ -967,10 +973,18 @@ export default function LogTripScreen() {
     });
     if (result.canceled) return;
     setPhotos((prev) => [...prev, result.assets[0].uri].slice(0, MAX_PHOTOS));
+    setPhotoCaptions([...photos.map((_, i) => photoCaptions[i] ?? ''), ''].slice(0, MAX_PHOTOS));
   };
 
-  const removePhoto = (uri: string) => {
-    setPhotos((prev) => prev.filter((p) => p !== uri));
+  const removePhoto = (index: number) => {
+    setPhotos((prev) => prev.filter((_, i) => i !== index));
+    setPhotoCaptions(photos.map((_, i) => photoCaptions[i] ?? '').filter((_, i) => i !== index));
+  };
+
+  const saveCaption = (caption: string) => {
+    if (captionIndex === null) return;
+    setPhotoCaptions(photos.map((_, i) => (i === captionIndex ? caption : photoCaptions[i] ?? '')));
+    setCaptionIndex(null);
   };
 
   const canProceedToDays = !!selectedParkId && !!startDate;
@@ -1030,6 +1044,7 @@ export default function LogTripScreen() {
           activities: [],
           notes,
           photos,
+          photoCaptions: photos.map((_, i) => photoCaptions[i] ?? ''),
           wildlifeSightings: [],
           trailsHiked: [],
           milesHiked: undefined,
@@ -1055,6 +1070,7 @@ export default function LogTripScreen() {
           activities: [],
           notes,
           photos,
+          photoCaptions: photos.map((_, i) => photoCaptions[i] ?? ''),
           wildlifeSightings: [],
           trailsHiked: [],
           milesHiked: undefined,
@@ -1076,6 +1092,7 @@ export default function LogTripScreen() {
         activities: [],
         notes,
         photos,
+        photoCaptions: photos.map((_, i) => photoCaptions[i] ?? ''),
         wildlifeSightings: [],
         trailsHiked: [],
         rating: rating || undefined,
@@ -1216,13 +1233,20 @@ export default function LogTripScreen() {
               onToggle={() => toggleSection('photos')}
             >
               <View style={styles.photoRow}>
-                {photos.map((uri) => (
-                  <TouchableOpacity key={uri} style={styles.photoThumbWrap} onPress={() => removePhoto(uri)} activeOpacity={0.8}>
-                    <Image source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
-                    <View style={styles.photoRemoveBadge}>
-                      <CloseIcon color={colors.textInverse} />
+                {photos.map((uri, i) => (
+                  <View key={uri} style={styles.photoItem}>
+                    <View style={styles.photoThumbWrap}>
+                      <TouchableOpacity onPress={() => setCaptionIndex(i)} activeOpacity={0.8}>
+                        <Image source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
+                      </TouchableOpacity>
+                      <TouchableOpacity style={styles.photoRemoveBadge} onPress={() => removePhoto(i)} hitSlop={8}>
+                        <CloseIcon color={colors.textInverse} />
+                      </TouchableOpacity>
                     </View>
-                  </TouchableOpacity>
+                    <Text style={styles.photoCaptionText} numberOfLines={1}>
+                      {photoCaptions[i] || 'Add caption'}
+                    </Text>
+                  </View>
                 ))}
                 {photos.length < MAX_PHOTOS && (
                   <TouchableOpacity style={[styles.photoThumb, styles.photoAdd]} onPress={pickPhoto} activeOpacity={0.8}>
@@ -1296,6 +1320,14 @@ export default function LogTripScreen() {
           />
         </View>
       )}
+
+      <PhotoCaptionSheet
+        visible={captionIndex !== null}
+        uri={captionIndex !== null ? photos[captionIndex] ?? null : null}
+        caption={captionIndex !== null ? photoCaptions[captionIndex] ?? '' : ''}
+        onSave={saveCaption}
+        onClose={() => setCaptionIndex(null)}
+      />
     </SafeAreaView>
   );
 }
@@ -1398,6 +1430,8 @@ const styles = StyleSheet.create({
   charCount: { ...typography.caption, color: colors.textMuted, textAlign: 'right', marginTop: spacing.xs },
 
   photoRow: { flexDirection: 'row', gap: spacing.md },
+  photoItem: { width: 72, gap: spacing.xs },
+  photoCaptionText: { ...typography.caption, color: colors.textMuted, textAlign: 'center' },
   photoThumbWrap: { width: 72, height: 72 },
   photoThumb: { width: 72, height: 72, borderRadius: radius.md, backgroundColor: colors.surfaceWarm },
   photoAdd: { alignItems: 'center', justifyContent: 'center', borderWidth: 2, borderColor: colors.border, borderStyle: 'dashed' },

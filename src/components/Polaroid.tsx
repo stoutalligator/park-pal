@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, StyleSheet, ImageStyle, StyleProp } from 'react-native';
-import { colors, radius, shadows } from '@/theme';
+import { View, Text, Image, StyleSheet, ImageStyle, StyleProp } from 'react-native';
+import { colors, radius, shadows, typography } from '@/theme';
 
 // A little washi-tape variety across stacks/photos so the album doesn't feel
 // monochrome — cycles deterministically by index rather than randomly, so a
@@ -17,11 +17,27 @@ interface Props {
   rotate?: number;
   variant?: 'stack' | 'page';
   style?: StyleProp<ImageStyle>;
+  // Written in the bottom strip, like a note under the photo. Callers only
+  // pass it where the frame is large enough to read it.
+  caption?: string;
+  // Makes the bottom strip tall enough for a two-line caption on small frames.
+  // A row of photos should all pass the same value, so the frames stay the
+  // same height whether or not each one has a caption.
+  roomForCaption?: boolean;
 }
 
-export default function Polaroid({ uri, size, tapeColor = colors.tan, rotate = 0, variant = 'page', style }: Props) {
+export default function Polaroid({
+  uri,
+  size,
+  tapeColor = colors.tan,
+  rotate = 0,
+  variant = 'page',
+  style,
+  caption,
+  roomForCaption = false,
+}: Props) {
   const framePad = variant === 'stack' ? size * 0.05 : size * 0.045;
-  const bottomStrip = variant === 'stack' ? size * 0.14 : size * 0.16;
+  const bottomStrip = roomForCaption ? size * 0.27 : variant === 'stack' ? size * 0.14 : size * 0.16;
   const tapeWidth = size * 0.42;
   const tapeHeight = tapeWidth * 0.34;
 
@@ -53,6 +69,19 @@ export default function Polaroid({ uri, size, tapeColor = colors.tan, rotate = 0
           },
         ]}
       />
+      {caption ? (
+        <View
+          pointerEvents="none"
+          style={[styles.captionArea, { height: bottomStrip + framePad, paddingHorizontal: framePad * 1.5 }]}
+        >
+          <Text
+            style={[styles.caption, { fontSize: Math.max(10, size * 0.05), lineHeight: Math.max(13, size * 0.062) }]}
+            numberOfLines={2}
+          >
+            {caption}
+          </Text>
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -69,6 +98,15 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     opacity: 0.88,
   },
+  captionArea: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  caption: { ...typography.labelSemiBold, color: colors.brownDark, textAlign: 'center' },
   photo: {
     width: '100%',
     aspectRatio: 1,

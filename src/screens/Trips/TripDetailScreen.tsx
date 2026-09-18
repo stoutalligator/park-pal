@@ -117,6 +117,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
   // A trip saved on this device that hasn't reached the server yet can still
   // be edited, completed or deleted — those changes just join what's waiting.
   const pending = isTripPending(trip.id);
+  const hasPhotoCaptions = !!trip.photoCaptions?.some((c) => !!c);
 
   const confirmDelete = () => {
     const remove = () => {
@@ -206,7 +207,15 @@ export default function TripDetailScreen({ route, navigation }: Props) {
                     activeOpacity={0.85}
                     onPress={() => (navigation as any).navigate('TripPhotoAlbum', { tripId: trip.id })}
                   >
-                    <Polaroid uri={uri} size={PHOTO_SIZE} variant="stack" tapeColor={tapeColorForIndex(i)} rotate={i % 2 === 0 ? -4 : 4} />
+                    <Polaroid
+                      uri={uri}
+                      size={PHOTO_SIZE}
+                      variant="stack"
+                      tapeColor={tapeColorForIndex(i)}
+                      rotate={i % 2 === 0 ? -4 : 4}
+                      caption={trip.photoCaptions?.[i]}
+                      roomForCaption={hasPhotoCaptions}
+                    />
                   </TouchableOpacity>
                 ))}
               </View>
