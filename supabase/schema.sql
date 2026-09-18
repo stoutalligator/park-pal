@@ -222,6 +222,33 @@ create table public.trip_day_weather (
   primary key (trip_id, day_number)
 );
 
+-- "This looks wrong" reports on a trail or animal, submitted from the detail
+-- screens and pulled weekly (scripts/pull-reports.mjs) to feed the research
+-- review. Users can only insert; nobody but service_role can read them back.
+-- entry_id is deliberately not a foreign key: a report about an entry should
+-- survive that entry being renamed or removed from the catalog.
+create table public.content_reports (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  entry_type text not null check (entry_type in ('trail', 'animal')),
+  entry_id text not null,
+  entry_name text not null,
+  park_id text not null references public.parks(id) on delete cascade,
+  reason text not null check (reason in (
+    'distance_elevation', 'closed_or_permit', 'difficulty', 'wrong_park',
+    'not_found_here', 'rarity', 'tip_wrong', 'other'
+  )),
+  note text check (char_length(note) <= 500),
+  platform text,
+  status text not null default 'new' check (status in ('new', 'triaged', 'confirmed', 'dismissed', 'resolved')),
+  created_at timestamptz not null default now()
+);
+
+-- One open report per user, entry and reason — repeat taps can't spam the queue.
+create unique index content_reports_one_open_per_reason
+  on public.content_reports (user_id, entry_type, entry_id, reason)
+  where status = 'new';
+
 -- ---------------------------------------------------------------------------
 -- Row Level Security
 -- ---------------------------------------------------------------------------
@@ -241,6 +268,7 @@ alter table public.user_trail_completions enable row level security;
 alter table public.user_animal_sightings enable row level security;
 alter table public.trip_day_activities enable row level security;
 alter table public.trip_day_weather enable row level security;
+alter table public.content_reports enable row level security;
 
 -- Reference data: readable by anyone, no client writes (seeded via SQL only).
 create policy "parks are publicly readable" on public.parks
@@ -291,6 +319,10 @@ create policy "users manage their own trip day activities" on public.trip_day_ac
 create policy "users manage their own trip day weather" on public.trip_day_weather
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+-- Insert-only: no select/update/delete policy, so reports can't be read back by users.
+create policy "users can submit content reports" on public.content_reports
+  for insert with check (auth.uid() = user_id);
+
 -- ---------------------------------------------------------------------------
 -- Base privileges
 --
@@ -318,6 +350,7 @@ grant select, insert, update, delete on public.user_trail_completions to authent
 grant select, insert, update, delete on public.user_animal_sightings to authenticated;
 grant select, insert, update, delete on public.trip_day_activities to authenticated;
 grant select, insert, update, delete on public.trip_day_weather to authenticated;
+grant insert on public.content_reports to authenticated;
 
 -- service_role is the trusted backend/admin key (used only by scripts/*.mjs,
 -- never shipped to the app) — it should have unrestricted access to

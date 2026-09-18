@@ -33,6 +33,8 @@ This is the one we can't check ourselves — **if you've been to a park, please 
 - Are the **viewing tips** sensible and safe (keep distance, don't approach)?
 - Any **iconic animals missing**?
 
+**Found something wrong?** Tap the small flag icon in the top-right of any trail or animal page, pick what's off, and send it — reports go straight to our weekly data review. Also check the small **"Verified <month>"** note at the bottom of each page: it shows when permit and closure info was last checked, and warns you when it may be out of date.
+
 **Park info** — description, state, year established, acreage, and location on the map.
 
 ## 3. Logging and managing trips
@@ -57,6 +59,7 @@ This is the one we can't check ourselves — **if you've been to a park, please 
 - Mark a park as **visited**, add it to your **bucket list**, and check the **map** and progress ring update.
 - Check **Passport**, **Collection** (badges), **Stats**, and **Bucket List**.
 - Do **badges** unlock when you'd expect? Are the descriptions clear? (Log a trip with a spotted Island Fox at Channel Islands, Atlantic Puffin at Acadia, Gray Wolf at Yellowstone, California Condor at Pinnacles, or Manatee at Everglades to unlock the bonus pals.)
+- Mark **Angels Landing** (Zion) or **Half Dome** (Yosemite) as completed to unlock bonus profile backgrounds (Profile → the photo icon on the header). Locked ones show a lock and tell you what to earn.
 - Change your **profile avatar and background**. Do locked pals explain how to unlock them?
 
 ## 6. Navigation and general feel

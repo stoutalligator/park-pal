@@ -193,7 +193,14 @@ export type ExplorerGoal =
   | 'Track past trips'
   | 'Visit all 63 National Parks';
 
-export type ProfileBackground = 'mountain-lake' | 'forest' | 'arches' | 'mountain-gate' | 'night-camping';
+export type ProfileBackground =
+  | 'mountain-lake'
+  | 'forest'
+  | 'arches'
+  | 'mountain-gate'
+  | 'night-camping'
+  | 'angels-landing'
+  | 'half-dome';
 
 export type ProfileAvatar =
   | 'hiking'
@@ -218,6 +225,27 @@ export type ProfileAvatar =
   | 'everglades-manatee';
 
 export type Units = 'mi' | 'km';
+
+export type ContentEntryType = 'trail' | 'animal';
+
+export type ContentReportReason =
+  | 'distance_elevation'
+  | 'closed_or_permit'
+  | 'difficulty'
+  | 'wrong_park'
+  | 'not_found_here'
+  | 'rarity'
+  | 'tip_wrong'
+  | 'other';
+
+export interface ContentReportInput {
+  entryType: ContentEntryType;
+  entryId: string;
+  entryName: string;
+  parkId: string;
+  reason: ContentReportReason;
+  note?: string;
+}
 
 export interface UserProfile {
   name: string;

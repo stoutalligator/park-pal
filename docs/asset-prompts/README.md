@@ -10,13 +10,14 @@ Prompts for generating illustrated art outside the repo (Midjourney, DALL-E, etc
 | [badges.md](badges.md) | Achievement stickers (the badge catalog) | `src/assets/badges/` |
 | [park-pals.md](park-pals.md) | Default 15-animal activity avatar roster | `src/assets/activities/pal-<activity>.png` |
 | [unlockable-pals.md](unlockable-pals.md) | Badge-unlocked bonus pals — a badge sticker + pal avatar pair (Island Fox, Puffin, ...) | `src/assets/badges/` + `src/assets/activities/` |
+| [profile-backgrounds.md](profile-backgrounds.md) | Profile hero backgrounds, plus trail-unlocked background + badge pairs. **Different, painterly style** from the rest | `src/assets/scenes/` |
 | [moose-mascot.md](moose-mascot.md) | Brand mascot expressions, full-body pose, title scene | `src/assets/mascot/` |
 | [app-icon-splash.md](app-icon-splash.md) | App Store icon, splash, Android adaptive icon, favicon | `assets/` (project root) |
 | [rarity-scenes.md](rarity-scenes.md) | 3 shared animal-detail hero banners (concept, not wired yet) | `src/assets/animals/` |
 
 ## Conventions shared by every file
 
-- **Palette:** forest #2D5016, sage #6B8C5A, sky #A8C5D4, tan #C9A96E, orange #D4845A, rose #C4847A, brown #8B6340, cream #F5F0E8, dark brown #5C4028.
-- **Look:** hand-drawn vintage national-park-poster / field-journal style, flat color fills, medium-weight rounded outline (#8B6340 or #2D5016), no gradients, no photorealism, no baked-in text or emoji.
+- **Palette (again, not for profile backgrounds):** forest #2D5016, sage #6B8C5A, sky #A8C5D4, tan #C9A96E, orange #D4845A, rose #C4847A, brown #8B6340, cream #F5F0E8, dark brown #5C4028.
+- **Look (everything except profile backgrounds, which are painterly — see profile-backgrounds.md):** hand-drawn vintage national-park-poster / field-journal style, flat color fills, medium-weight rounded outline (#8B6340 or #2D5016), no gradients, no photorealism, no baked-in text or emoji.
 - **Blocks are pasted unedited:** the style/character blocks are what keep a batch consistent — change only the subject.
 - **Batch-then-crop:** cell-grid prompts produce one wide image; crop each cell by its alpha bounding box, pad to the target aspect, and resize to match the existing file so app layouts don't shift.

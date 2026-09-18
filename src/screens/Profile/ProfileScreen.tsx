@@ -21,12 +21,25 @@ function LockIcon() {
   );
 }
 
-const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: number }[] = [
+const BACKGROUND_OPTIONS: { key: ProfileBackground; label: string; source: number; unlockedByBadgeId?: string }[] = [
   { key: 'mountain-lake', label: 'Mountain Lake', source: require('@/assets/scenes/scene-mountain-lake.png') },
   { key: 'forest', label: 'Redwood Forest', source: require('@/assets/scenes/scene-forest.png') },
   { key: 'arches', label: 'Desert Arch', source: require('@/assets/scenes/scene-arches.png') },
   { key: 'mountain-gate', label: 'Trailhead', source: require('@/assets/scenes/scene-mountain-gate.png') },
   { key: 'night-camping', label: 'Starry Camp', source: require('@/assets/scenes/scene-night-camping.png') },
+  // Trail-unlocked backgrounds — locked in the picker until the linked badge is earned.
+  {
+    key: 'angels-landing',
+    label: 'Angels Landing',
+    source: require('@/assets/scenes/scene-angels-landing.png'),
+    unlockedByBadgeId: 'near-death',
+  },
+  {
+    key: 'half-dome',
+    label: 'Half Dome',
+    source: require('@/assets/scenes/scene-half-dome.png'),
+    unlockedByBadgeId: 'half-dome',
+  },
 ];
 
 const BACKGROUND_BY_KEY = Object.fromEntries(BACKGROUND_OPTIONS.map((o) => [o.key, o.source])) as Record<
@@ -329,17 +342,34 @@ export default function ProfileScreen() {
             <ScrollView contentContainerStyle={styles.modalGrid} showsVerticalScrollIndicator={false}>
               {BACKGROUND_OPTIONS.map((option) => {
                 const selected = option.key === userProfile.profileBackground;
+                const requiredBadgeId = option.unlockedByBadgeId;
+                const locked = !!requiredBadgeId && !earnedBadgeIds.has(requiredBadgeId);
                 return (
                   <TouchableOpacity
                     key={option.key}
                     style={styles.optionCard}
                     activeOpacity={0.85}
                     onPress={() => {
+                      if (locked) {
+                        const badgeName = badges.find((b) => b.id === requiredBadgeId)?.name ?? 'a hidden badge';
+                        showToast(`Earn "${badgeName}" to unlock this background`);
+                        return;
+                      }
                       updateProfileBackground(option.key);
                       setPickerVisible(false);
                     }}
                   >
-                    <Image source={option.source} style={[styles.optionThumb, selected && styles.optionThumbSelected]} />
+                    <View style={styles.optionThumbWrap}>
+                      <Image
+                        source={option.source}
+                        style={[styles.optionThumb, selected && styles.optionThumbSelected, locked && styles.optionThumbLocked]}
+                      />
+                      {locked && (
+                        <View style={styles.lockBadge}>
+                          <LockIcon />
+                        </View>
+                      )}
+                    </View>
                     <Text style={styles.optionLabel} numberOfLines={1}>
                       {option.label}
                     </Text>
@@ -504,7 +534,9 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'transparent',
   },
+  optionThumbWrap: { width: 96, height: 96, position: 'relative' },
   optionThumbSelected: { borderColor: colors.primary },
+  optionThumbLocked: { opacity: 0.35 },
   optionLabel: { ...typography.caption, color: colors.textSecondary, textAlign: 'center' },
 
   avatarGrid: {

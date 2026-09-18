@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Image } from 'react-native';
 import Svg, { Polyline, Rect, Line, Circle } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -8,6 +8,8 @@ import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { TrailDifficulty } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 import ElevationProfileChart from '@/components/ElevationProfileChart';
+import VerifiedNote from '@/components/VerifiedNote';
+import ReportSheet, { ReportFlagButton } from '@/components/ReportSheet';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'TrailDetail'>;
@@ -58,6 +60,7 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
   const { trailId } = route.params;
   const { parks, trails, trailDetails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
   const units = userProfile.units;
+  const [reportVisible, setReportVisible] = useState(false);
 
   const trail = trails.find((t) => t.id === trailId);
   const detail = trailDetails[trailId];
@@ -76,7 +79,11 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScreenHeader title={trail.name} onBack={() => navigation.goBack()} />
+      <ScreenHeader
+        title={trail.name}
+        onBack={() => navigation.goBack()}
+        right={<ReportFlagButton onPress={() => setReportVisible(true)} />}
+      />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.titleRow}>
           <View style={styles.titleTextWrap}>
@@ -155,12 +162,18 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
                 <Text style={styles.calloutTextFact}>{detail.didYouKnow}</Text>
               </View>
             </View>
-            {detail.lastVerified ? (
-              <Text style={styles.verifiedNote}>Trail conditions last checked {detail.lastVerified}</Text>
-            ) : null}
+            <VerifiedNote lastVerified={detail.lastVerified} tags={detail.tags} />
           </>
         )}
       </ScrollView>
+      <ReportSheet
+        visible={reportVisible}
+        onClose={() => setReportVisible(false)}
+        entryType="trail"
+        entryId={trail.id}
+        entryName={trail.name}
+        parkId={trail.parkId}
+      />
     </SafeAreaView>
   );
 }
@@ -201,7 +214,6 @@ const styles = StyleSheet.create({
   seasonBubble: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs, backgroundColor: colors.cream, borderRadius: radius.full, paddingVertical: spacing.xs, paddingHorizontal: spacing.md, alignSelf: 'center' },
   seasonBubbleText: { ...typography.bodySmall, color: colors.brownDark },
   seasonBubbleValue: { ...typography.labelBold, color: colors.brownDark, fontSize: 13 },
-  verifiedNote: { ...typography.caption, color: colors.textMuted },
 
   checkBadge: { width: 32, height: 32, borderRadius: 16, backgroundColor: colors.surfaceWarm, borderWidth: 2, borderColor: colors.border, alignItems: 'center', justifyContent: 'center', marginTop: spacing.xs },
   checkBadgeCompleted: { backgroundColor: colors.primary, borderColor: colors.primary },

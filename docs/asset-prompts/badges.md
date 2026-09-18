@@ -45,6 +45,7 @@ Badges tied to an unlockable Park Pal (Island Fox, Puffin, and future ones) have
 | yellowstone-wolf | Wolf Watcher | a gray wolf howling at a crescent moon (see unlockable-pals.md) |
 | pinnacles-condor | Condor Companion | a California condor soaring above volcanic spires (see unlockable-pals.md) |
 | everglades-manatee | Seeking Sea Cows | a Florida manatee gliding past seagrass and mangrove roots (see unlockable-pals.md) |
+| half-dome | Cable Climber | Half Dome's granite face with its cables (see profile-backgrounds.md) |
 | near-death | Near Death | a chain-link handhold on a narrow cliffside trail |
 | night-owl (secret) | Night Owl | an owl perched under a crescent moon and stars |
 | globe-trotter (secret) | Globe Trotter | a globe with two location pins, one near Alaska one near Hawaii |

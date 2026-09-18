@@ -35,6 +35,7 @@ const BADGE_IMAGES: Record<string, number> = {
   'yellowstone-wolf': require('@/assets/badges/badge-yellowstone-wolf.png'),
   'pinnacles-condor': require('@/assets/badges/badge-pinnacles-condor.png'),
   'everglades-manatee': require('@/assets/badges/badge-everglades-manatee.png'),
+  'half-dome': require('@/assets/badges/badge-half-dome.png'),
   'near-death': require('@/assets/badges/badge-near-death.png'),
   'night-owl': require('@/assets/badges/badge-night-owl.png'),
   'globe-trotter': require('@/assets/badges/badge-globe-trotter.png'),

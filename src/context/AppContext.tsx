@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import * as Crypto from 'expo-crypto';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail } from '@/types';
+import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
@@ -254,6 +255,7 @@ interface AppContextValue {
   markTrailCompleted: (trailId: string, parkId: string, name: string) => void;
   unmarkTrailCompleted: (trailId: string) => void;
   isTripPending: (tripId: string) => boolean;
+  submitContentReport: (report: ContentReportInput) => Promise<boolean>;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -671,6 +673,30 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         });
     }
   }, [session]);
+
+  // A user flagging a trail/animal as wrong. Resolves true when the report is
+  // stored — including when the same report is already open (the unique index
+  // rejects the duplicate, which is fine from the user's point of view).
+  const submitContentReport = useCallback(
+    async (report: ContentReportInput): Promise<boolean> => {
+      if (!session) return false;
+      const { error } = await supabase.from('content_reports').insert({
+        entry_type: report.entryType,
+        entry_id: report.entryId,
+        entry_name: report.entryName,
+        park_id: report.parkId,
+        reason: report.reason,
+        note: report.note?.trim() ? report.note.trim() : null,
+        platform: Platform.OS,
+      });
+      if (error && error.code !== '23505') {
+        reportError('send your report', error);
+        return false;
+      }
+      return true;
+    },
+    [session]
+  );
 
   // Same reasoning as the badges useMemo above — stats represent things that
   // actually happened, so a merely-planned trip must not count toward them.
@@ -1282,6 +1308,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         markTrailCompleted,
         unmarkTrailCompleted,
         isTripPending,
+        submitContentReport,
       }}
     >
       {children}

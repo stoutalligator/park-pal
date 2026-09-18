@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-native';
 import Svg, { Polyline } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -7,6 +7,8 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { AnimalRarity } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
+import VerifiedNote from '@/components/VerifiedNote';
+import ReportSheet, { ReportFlagButton } from '@/components/ReportSheet';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'AnimalDetail'>;
 
@@ -40,6 +42,7 @@ function SpottedBadge({ spotted }: { spotted: boolean }) {
 export default function AnimalDetailScreen({ route, navigation }: Props) {
   const { animalId } = route.params;
   const { parks, animals, animalDetails, isAnimalSpotted } = useApp();
+  const [reportVisible, setReportVisible] = useState(false);
 
   const animal = animals.find((a) => a.id === animalId);
   const detail = animalDetails[animalId];
@@ -58,7 +61,11 @@ export default function AnimalDetailScreen({ route, navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScreenHeader title={animal.name} onBack={() => navigation.goBack()} />
+      <ScreenHeader
+        title={animal.name}
+        onBack={() => navigation.goBack()}
+        right={<ReportFlagButton onPress={() => setReportVisible(true)} />}
+      />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.hero}>
           <Image source={RARITY_HERO[animal.rarity]} style={styles.heroImage} resizeMode="cover" />
@@ -122,12 +129,18 @@ export default function AnimalDetailScreen({ route, navigation }: Props) {
                 <Text style={styles.calloutTextFact}>{detail.didYouKnow}</Text>
               </View>
             </View>
-            {detail.lastVerified ? (
-              <Text style={styles.verifiedNote}>Viewing guidance last checked {detail.lastVerified}</Text>
-            ) : null}
+            <VerifiedNote lastVerified={detail.lastVerified} tags={detail.tags} />
           </>
         )}
       </ScrollView>
+      <ReportSheet
+        visible={reportVisible}
+        onClose={() => setReportVisible(false)}
+        entryType="animal"
+        entryId={animal.id}
+        entryName={animal.name}
+        parkId={animal.parkId}
+      />
     </SafeAreaView>
   );
 }
@@ -172,8 +185,6 @@ const styles = StyleSheet.create({
   calloutLabelFact: { ...typography.labelSmall, color: colors.sage, fontSize: 10, letterSpacing: 0.4 },
   calloutTextTip: { ...typography.bodySmall, color: colors.brownDark, lineHeight: 19 },
   calloutTextFact: { ...typography.bodySmall, color: colors.textPrimary, lineHeight: 19 },
-
-  verifiedNote: { ...typography.caption, color: colors.textMuted },
 
   checkBadge: { width: 32, height: 32, borderRadius: 16, backgroundColor: colors.surfaceWarm, borderWidth: 2, borderColor: colors.border, alignItems: 'center', justifyContent: 'center', marginTop: spacing.xs },
   checkBadgeCompleted: { backgroundColor: colors.primary, borderColor: colors.primary },

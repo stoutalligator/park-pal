@@ -89,6 +89,7 @@ export const BADGE_PROGRESS: Record<string, (ctx: BadgeContext) => number> = {
   'yellowstone-wolf': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('yellowstone-gray-wolf') ? 1 : 0),
   'pinnacles-condor': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('pinnacles-california-condor') ? 1 : 0),
   'everglades-manatee': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('everglades-manatee') ? 1 : 0),
+  'half-dome': ({ completedTrailIds }) => (completedTrailIds.includes('yosemite-half-dome') ? 1 : 0),
   'near-death': ({ completedTrailIds }) => (completedTrailIds.includes('zion-angels-landing') ? 1 : 0),
 
   // Secret badges
