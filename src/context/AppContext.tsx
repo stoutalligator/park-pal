@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import NetInfo from '@react-native-community/netinfo';
+import * as Crypto from 'expo-crypto';
 import type { Session } from '@supabase/supabase-js';
 import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
@@ -10,6 +12,7 @@ import { ALL_ANIMALS } from '@/data/animals';
 import { TRAIL_DETAILS } from '@/data/trailDetails';
 import { ANIMAL_DETAILS } from '@/data/animalDetails';
 import { fetchContentBundle } from '@/data/contentService';
+import { loadPendingTrips, savePendingTrips } from '@/data/offlineTrips';
 import { addDays } from '@/utils/dates';
 import { supabase } from '@/lib/supabase';
 import { showToast } from '@/components/Toast';
@@ -250,6 +253,7 @@ interface AppContextValue {
   isAnimalSpotted: (animalId: string) => boolean;
   markTrailCompleted: (trailId: string, parkId: string, name: string) => void;
   unmarkTrailCompleted: (trailId: string) => void;
+  isTripPending: (tripId: string) => boolean;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -273,6 +277,17 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [tripsLoaded, setTripsLoaded] = useState(false);
   const dataLoading = !!session && !(parksLoaded && profileLoaded && badgesLoaded && tripsLoaded);
 
+  // Trips created while offline (or while a Supabase write failed) — the
+  // full trip objects, mirrored to AsyncStorage, so this is the single
+  // source of truth for "still needs to sync" rather than a separate id set
+  // that could drift out of sync with the persisted queue.
+  const [pendingTrips, setPendingTrips] = useState<Trip[]>([]);
+  const isTripPending = useCallback(
+    (tripId: string) => pendingTrips.some((t) => t.id === tripId),
+    [pendingTrips]
+  );
+  const syncInFlightRef = useRef(false);
+
   // Trail/animal reference content — public, not per-user, so this loads
   // once on mount independent of session/auth, unlike the data above.
   const [trails, setTrails] = useState<Trail[]>(ALL_TRAILS);
@@ -280,11 +295,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [trailDetails, setTrailDetails] = useState<Record<string, TrailDetail>>(TRAIL_DETAILS);
   const [animalDetails, setAnimalDetails] = useState<Record<string, AnimalDetail>>(ANIMAL_DETAILS);
   const [contentLoaded, setContentLoaded] = useState(false);
+  // Tracks whether the last content load fell back to the bundled static
+  // data (Supabase unreachable/empty) — a ref, not state, since it only
+  // gates a background retry and shouldn't itself trigger a re-render.
+  const usedContentFallbackRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
     fetchContentBundle().then((bundle) => {
       if (cancelled) return;
+      usedContentFallbackRef.current = bundle.trails === ALL_TRAILS;
       setTrails(bundle.trails);
       setAnimals(bundle.animals);
       setTrailDetails(bundle.trailDetails);
@@ -294,6 +314,18 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  const refreshContentIfFallenBack = useCallback(() => {
+    if (!usedContentFallbackRef.current) return;
+    fetchContentBundle().then((bundle) => {
+      if (bundle.trails === ALL_TRAILS) return; // still unreachable — stay on fallback silently
+      usedContentFallbackRef.current = false;
+      setTrails(bundle.trails);
+      setAnimals(bundle.animals);
+      setTrailDetails(bundle.trailDetails);
+      setAnimalDetails(bundle.animalDetails);
+    });
   }, []);
 
   useEffect(() => {
@@ -409,6 +441,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setTrailCompletions([]);
       setAnimalSightings([]);
       setTrips([]);
+      setPendingTrips([]);
       setTripsLoaded(false);
       return;
     }
@@ -439,7 +472,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         .from('trip_photos')
         .select('trip_id, storage_path, slot')
         .eq('user_id', session.user.id),
-    ]).then(async ([trailRes, animalRes, dayActivityRes, dayWeatherRes, tripRes, photoRes]) => {
+      loadPendingTrips(session.user.id),
+    ]).then(async ([trailRes, animalRes, dayActivityRes, dayWeatherRes, tripRes, photoRes, loadedPendingTrips]) => {
       const trailRows: TrailCompletionRow[] = trailRes.data ?? [];
       const animalRows: AnimalSightingRow[] = animalRes.data ?? [];
       const dayActivityRows: DayActivityRow[] = dayActivityRes.data ?? [];
@@ -447,15 +481,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const photoRows = photoRes.data ?? [];
       setTrailCompletions(trailRows);
       setAnimalSightings(animalRows);
+      const fetchedTripRows = tripRes.data ?? [];
+      const fetchedIds = new Set(fetchedTripRows.map((row) => row.id));
+      // A pending trip whose id already came back from Supabase synced from
+      // elsewhere (or a previous sync pass) between being queued and now —
+      // drop it from the queue rather than showing/syncing it twice.
+      const stillPending = loadedPendingTrips.filter((t) => !fetchedIds.has(t.id));
+      setPendingTrips(stillPending);
+      if (stillPending.length !== loadedPendingTrips.length) {
+        savePendingTrips(session.user.id, stillPending);
+      }
       if (!tripRes.data) {
-        setTrips([]);
+        setTrips(stillPending);
         return;
       }
       // One batched signed-URL request for every trip's photos, rather than
       // one Storage round trip per photo.
       const photoUrlMap = await signedUrlsFromStoragePaths(photoRows.map((p) => p.storage_path));
-      setTrips(
-        tripRes.data.map((row) => {
+      const fetchedTrips: Trip[] = tripRes.data.map((row) => {
           const tripTrailRows = trailRows.filter((t) => t.trip_id === row.id);
           const tripAnimalRows = animalRows.filter((a) => a.trip_id === row.id);
           const tripDayActivityRows = dayActivityRows.filter((a) => a.trip_id === row.id);
@@ -517,14 +560,22 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             elevationGainFt: row.elevation_gain_ft ?? undefined,
             days: days.length > 0 ? days : undefined,
           };
-        })
+      });
+      setTrips(
+        [...stillPending, ...fetchedTrips].sort((a, b) => b.startDate.localeCompare(a.startDate))
       );
     })
       .catch((error) => {
         console.error('Failed to load trips/trail completions/animal sightings:', error);
         setTrailCompletions([]);
         setAnimalSightings([]);
-        setTrips([]);
+        // The Supabase fetch itself failed (e.g. no network at all) — that's
+        // exactly the case a locally-queued trip needs to survive, so still
+        // show whatever's in the on-device queue rather than wiping it too.
+        loadPendingTrips(session.user.id).then((queued) => {
+          setPendingTrips(queued);
+          setTrips(queued);
+        });
       })
       .finally(() => setTripsLoaded(true));
   }, [session]);
@@ -672,6 +723,99 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     persistParkStatus(parkId, current?.status ?? 'notVisited', nextFavorite);
   }, [parks, persistParkStatus]);
 
+  // Writes a trip (and its day-by-day rows/photos) to Supabase, upserting
+  // the trip row by its already-known client-generated id rather than
+  // inserting, so retrying a trip that partially synced on a previous
+  // attempt is safe to redo instead of hitting a duplicate-key error. Day
+  // rows are deleted-then-reinserted, the same idempotent pattern
+  // `updateTrip` already uses below, for the same reason. Throws on any
+  // stage failure instead of swallowing it — a background sync retry needs
+  // "did this fully succeed or not" as a single answer, unlike the
+  // immediate/online path where a user is present to see a per-stage toast.
+  const persistTripToSupabase = useCallback(async (trip: Trip, activeSession: Session): Promise<Trip> => {
+    const { error: upsertError } = await supabase.from('trips').upsert({
+      id: trip.id,
+      park_id: trip.parkId,
+      trip_type: trip.tripType,
+      start_date: trip.startDate,
+      end_date: trip.endDate,
+      activities: trip.activities,
+      notes: trip.notes,
+      favorite_trail: trip.favoriteTrail ?? null,
+      wildlife_sightings: trip.wildlifeSightings ?? null,
+      rating: trip.rating ?? null,
+      miles_hiked: trip.milesHiked ?? null,
+      elevation_gain_ft: trip.elevationGainFt ?? null,
+    });
+    if (upsertError) throw upsertError;
+
+    let photos = trip.photos;
+    if (photos.length) {
+      photos = await syncTripPhotos(trip.id, activeSession.user.id, photos);
+    }
+
+    if (trip.days?.length) {
+      const days = trip.days;
+      await Promise.all([
+        supabase.from('user_trail_completions').delete().eq('trip_id', trip.id),
+        supabase.from('user_animal_sightings').delete().eq('trip_id', trip.id),
+        supabase.from('trip_day_activities').delete().eq('trip_id', trip.id),
+        supabase.from('trip_day_weather').delete().eq('trip_id', trip.id),
+      ]);
+      const trailRows = buildTrailRows(days, trip.id, trip.parkId);
+      const animalRows = buildAnimalRows(days, trip.id, trip.parkId, animals);
+      const activityRows = buildDayActivityRows(days, trip.id);
+      const weatherRows = buildDayWeatherRows(days, trip.id);
+      if (trailRows.length) {
+        const { error } = await supabase.from('user_trail_completions').insert(trailRows);
+        if (error) throw error;
+        setTrailCompletions((prev) => [...prev.filter((t) => t.trip_id !== trip.id), ...trailRows]);
+      }
+      if (animalRows.length) {
+        const { error } = await supabase.from('user_animal_sightings').insert(animalRows);
+        if (error) throw error;
+        setAnimalSightings((prev) => [...prev.filter((a) => a.trip_id !== trip.id), ...animalRows]);
+      }
+      if (activityRows.length) {
+        const { error } = await supabase.from('trip_day_activities').insert(activityRows);
+        if (error) throw error;
+      }
+      if (weatherRows.length) {
+        const { error } = await supabase.from('trip_day_weather').insert(weatherRows);
+        if (error) throw error;
+      }
+    }
+
+    return { ...trip, photos };
+  }, [animals]);
+
+  // Attempts every queued trip in the order it was created, stopping at the
+  // first failure (a failure usually means still-offline, so trying the
+  // rest would just produce a burst of redundant failures) — the remainder
+  // simply stays queued for the next reconnect/foreground trigger.
+  const syncPendingTrips = useCallback(async () => {
+    if (!session || syncInFlightRef.current) return;
+    syncInFlightRef.current = true;
+    try {
+      for (const pending of pendingTrips) {
+        try {
+          const synced = await persistTripToSupabase(pending, session);
+          setTrips((prev) => prev.map((t) => (t.id === synced.id ? synced : t)));
+          setPendingTrips((prev) => {
+            const next = prev.filter((t) => t.id !== pending.id);
+            savePendingTrips(session.user.id, next);
+            return next;
+          });
+        } catch (error) {
+          console.error('Trip sync failed, will retry later:', error);
+          break;
+        }
+      }
+    } finally {
+      syncInFlightRef.current = false;
+    }
+  }, [session, pendingTrips, persistTripToSupabase]);
+
   const logTrip = useCallback(async (trip: Omit<Trip, 'id'>) => {
     const aggregate = trip.days?.length ? aggregateFromDays(trip.days) : null;
     const activities = aggregate?.activities ?? trip.activities;
@@ -680,52 +824,18 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const milesHiked = aggregate?.milesHiked ?? trip.trailsHiked?.reduce((acc, t) => acc + t.miles, 0) ?? trip.milesHiked;
     const elevationGainFt = aggregate?.elevationGainFt ?? trip.trailsHiked?.reduce((acc, t) => acc + t.elevationGainFt, 0) ?? trip.elevationGainFt;
 
-    let tripId = `trip-${Date.now()}`;
-    if (session) {
-      const { data, error } = await supabase
-        .from('trips')
-        .insert({
-          park_id: trip.parkId,
-          trip_type: trip.tripType,
-          start_date: trip.startDate,
-          end_date: trip.endDate,
-          activities,
-          notes: trip.notes,
-          favorite_trail: trip.favoriteTrail ?? null,
-          wildlife_sightings: wildlifeSightings ?? null,
-          rating: trip.rating ?? null,
-          miles_hiked: milesHiked ?? null,
-          elevation_gain_ft: elevationGainFt ?? null,
-        })
-        .select('id')
-        .single();
-      if (error || !data) {
-        // Don't fabricate a trip in local state that never actually saved —
-        // that's exactly the "looks saved but isn't" trust problem we're fixing.
-        reportError('save your trip', error);
-        return;
-      }
-      tripId = data.id;
-    }
+    const tripId = Crypto.randomUUID();
+    const newTrip: Trip = { ...trip, activities, wildlifeSightings, trailsHiked, milesHiked, elevationGainFt, id: tripId };
 
-    let photos = trip.photos;
-    if (session && photos.length) {
-      try {
-        photos = await syncTripPhotos(tripId, session.user.id, photos);
-      } catch (error) {
-        // The trip row itself already saved — don't lose the whole trip over
-        // a photo failure, just warn and keep the original local photo URIs.
-        reportError('upload your trip photos', error);
-      }
-    }
-
-    const newTrip: Trip = { ...trip, activities, wildlifeSightings, trailsHiked, photos, milesHiked, elevationGainFt, id: tripId };
+    // Show it right away, before any network attempt — the point of this
+    // queue is that "did this save" shouldn't wait on connectivity.
     setTrips((prev) => [newTrip, ...prev]);
 
     // Logging a trip always means "I went" — 'visited', as before. Planning
     // one sets 'planned' unless the park is already 'visited' (don't
     // downgrade a park you've actually been to just because you're planning
-    // a return trip).
+    // a return trip). This happens regardless of sync outcome below — the
+    // park status reflects what the user did, not whether it's synced yet.
     const currentStatus = parks.find((p) => p.id === trip.parkId)?.status ?? 'notVisited';
     const isFavorite = parks.find((p) => p.id === trip.parkId)?.isFavorite ?? false;
     const nextStatus: ParkStatus =
@@ -735,48 +845,38 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       persistParkStatus(trip.parkId, nextStatus, isFavorite);
     }
 
-    if (session && newTrip.days?.length) {
-      const days = newTrip.days;
-      const trailRows = buildTrailRows(days, tripId, trip.parkId);
-      const animalRows = buildAnimalRows(days, tripId, trip.parkId, animals);
-      const activityRows = buildDayActivityRows(days, tripId);
-      const weatherRows = buildDayWeatherRows(days, tripId);
-      if (trailRows.length) {
-        setTrailCompletions((prev) => [...prev, ...trailRows]);
-        supabase
-          .from('user_trail_completions')
-          .insert(trailRows)
-          .then(({ error }) => {
-            if (error) reportError('save the trails from this trip', error);
-          });
-      }
-      if (animalRows.length) {
-        setAnimalSightings((prev) => [...prev, ...animalRows]);
-        supabase
-          .from('user_animal_sightings')
-          .insert(animalRows)
-          .then(({ error }) => {
-            if (error) reportError('save the wildlife sightings from this trip', error);
-          });
-      }
-      if (activityRows.length) {
-        supabase
-          .from('trip_day_activities')
-          .insert(activityRows)
-          .then(({ error }) => {
-            if (error) reportError('save the activities from this trip', error);
-          });
-      }
-      if (weatherRows.length) {
-        supabase
-          .from('trip_day_weather')
-          .insert(weatherRows)
-          .then(({ error }) => {
-            if (error) reportError('save the weather for this trip', error);
-          });
-      }
+    if (!session) return; // logged-out/local-only usage — nothing to sync
+
+    try {
+      const synced = await persistTripToSupabase(newTrip, session);
+      setTrips((prev) => prev.map((t) => (t.id === tripId ? synced : t)));
+    } catch (error) {
+      // Not a failure the user needs a toast for — this is the expected,
+      // handled path now. The pending indicator on the trip card communicates
+      // status instead, and syncPendingTrips retries automatically.
+      console.error('Failed to sync new trip, queuing for later:', error);
+      setPendingTrips((prev) => {
+        const next = [...prev, newTrip];
+        savePendingTrips(session.user.id, next);
+        return next;
+      });
     }
-  }, [parks, persistParkStatus, session, animals]);
+  }, [parks, persistParkStatus, session, persistTripToSupabase]);
+
+  // Reconnecting is the only signal that should trigger a retry — NetInfo
+  // decides *when* to attempt a sync, never whether logTrip itself queues or
+  // goes live (that's decided by whether the real Supabase call above
+  // actually succeeds, since NetInfo's "connected" can be a false positive,
+  // e.g. a wifi captive portal with no real internet).
+  useEffect(() => {
+    const unsubscribe = NetInfo.addEventListener((state) => {
+      if (state.isConnected) {
+        syncPendingTrips();
+        refreshContentIfFallenBack();
+      }
+    });
+    return () => unsubscribe();
+  }, [syncPendingTrips, refreshContentIfFallenBack]);
 
   const updateTrip = useCallback(async (trip: Trip) => {
     const previousTrip = trips.find((t) => t.id === trip.id);
@@ -960,8 +1060,17 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const deleteTrip = useCallback((tripId: string) => {
     const deletedTrip = trips.find((t) => t.id === tripId);
+    const wasPending = isTripPending(tripId);
     setTrips((prev) => prev.filter((t) => t.id !== tripId));
-    if (session) {
+    if (wasPending && session) {
+      // No row exists server-side yet for a still-queued trip — nothing to
+      // delete remotely, just drop it from the queue so it never gets synced.
+      setPendingTrips((prev) => {
+        const next = prev.filter((t) => t.id !== tripId);
+        savePendingTrips(session.user.id, next);
+        return next;
+      });
+    } else if (session) {
       // trip_photos rows cascade with the trip, but the underlying Storage
       // objects don't — remove those explicitly before the row disappears.
       supabase
@@ -1006,7 +1115,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         updateParkStatus(deletedTrip.parkId, 'notVisited');
       }
     }
-  }, [session, trips, parks, updateParkStatus]);
+  }, [session, trips, parks, updateParkStatus, isTripPending]);
 
   // Patches profile fields without touching onboarding_complete — used by
   // Settings screens editing an already-onboarded profile. completeOnboarding
@@ -1172,6 +1281,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         isAnimalSpotted,
         markTrailCompleted,
         unmarkTrailCompleted,
+        isTripPending,
       }}
     >
       {children}

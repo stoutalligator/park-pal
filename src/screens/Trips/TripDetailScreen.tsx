@@ -105,7 +105,7 @@ function StarIcon({ filled, size = 16 }: { filled: boolean; size?: number }) {
 
 export default function TripDetailScreen({ route, navigation }: Props) {
   const { tripId } = route.params;
-  const { trips, deleteTrip, userProfile } = useApp();
+  const { trips, deleteTrip, isTripPending, userProfile } = useApp();
   const units = userProfile.units;
   const insets = useSafeAreaInsets();
   const trip = trips.find((t) => t.id === tripId);
@@ -114,6 +114,9 @@ export default function TripDetailScreen({ route, navigation }: Props) {
   if (!trip || !park) return null;
 
   const planned = trip.tripType === 'planned';
+  // Editing or completing a trip that hasn't synced yet would try to update
+  // a row that doesn't exist server-side — hide those actions until it has.
+  const pending = isTripPending(trip.id);
 
   const confirmDelete = () => {
     const remove = () => {
@@ -140,12 +143,14 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             <BackArrowIcon />
           </TouchableOpacity>
           <View style={[styles.heroActions, { top: insets.top + 16 }]}>
-            <TouchableOpacity
-              style={styles.heroActionBtn}
-              onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { tripId: trip.id } })}
-            >
-              <EditIcon />
-            </TouchableOpacity>
+            {!pending && (
+              <TouchableOpacity
+                style={styles.heroActionBtn}
+                onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { tripId: trip.id } })}
+              >
+                <EditIcon />
+              </TouchableOpacity>
+            )}
             <TouchableOpacity style={styles.heroActionBtn} onPress={confirmDelete}>
               <TrashIcon />
             </TouchableOpacity>
@@ -155,8 +160,9 @@ export default function TripDetailScreen({ route, navigation }: Props) {
         <View style={styles.content}>
           <Text style={styles.parkName}>{park.name}</Text>
           <Text style={styles.dates}>{formatDate(trip.startDate)} – {formatDate(trip.endDate)}</Text>
+          {pending && <Text style={styles.pendingNote}>Saved on this device — will sync once you're back online.</Text>}
 
-          {planned && (
+          {planned && !pending && (
             <View style={styles.plannedBlock}>
               <Text style={styles.plannedDaysUntil}>{daysUntilLabel(trip.startDate)}</Text>
               <PrimaryButton
@@ -344,6 +350,7 @@ const styles = StyleSheet.create({
   },
   parkName: { ...typography.h2, color: colors.textPrimary },
   dates: { ...typography.body, color: colors.textSecondary },
+  pendingNote: { ...typography.caption, color: colors.textMuted, fontStyle: 'italic' },
   plannedBlock: {
     backgroundColor: colors.surfaceWarm,
     borderRadius: radius.lg,

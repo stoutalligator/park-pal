@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import Svg, { Rect, Circle } from 'react-native-svg';
+import Svg, { Rect, Circle, Path } from 'react-native-svg';
 import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
 import { getParkById } from '@/data/parks';
 import { getParkImage } from '@/data/parkImages';
 import { formatDateRange, daysUntilLabel } from '@/utils/dates';
+import { useApp } from '@/context/AppContext';
 
 interface Props {
   trip: Trip;
@@ -22,10 +23,29 @@ function PhotoIcon({ size = 18, color = colors.textMuted }: { size?: number; col
   );
 }
 
+// Cloud-with-arrow — signals "saved on this device, not uploaded yet" for a
+// trip still waiting to sync, so a user isn't left wondering if it was lost.
+function PendingSyncIcon({ size = 18, color = colors.textMuted }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M7 18a4.5 4.5 0 0 1-.6-8.96A5.5 5.5 0 0 1 17.4 9.1 4 4 0 0 1 17 18H7Z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinejoin="round"
+      />
+      <Path d="M12 12v6M9.5 15.5 12 13l2.5 2.5" fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
 export default function TripCard({ trip, onPress }: Props) {
+  const { isTripPending } = useApp();
   const park = getParkById(trip.parkId);
   const planned = trip.tripType === 'planned';
   const hasPhotos = trip.photos.length > 0;
+  const pending = isTripPending(trip.id);
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={[styles.card, planned && styles.cardPlanned]}>
@@ -41,7 +61,10 @@ export default function TripCard({ trip, onPress }: Props) {
           <Text style={styles.notes} numberOfLines={1}>{trip.notes}</Text>
         ) : null}
       </View>
-      {hasPhotos && <PhotoIcon />}
+      <View style={styles.iconStack}>
+        {pending && <PendingSyncIcon />}
+        {hasPhotos && <PhotoIcon />}
+      </View>
       <Text style={styles.chevron}>›</Text>
     </TouchableOpacity>
   );
@@ -94,6 +117,10 @@ const styles = StyleSheet.create({
   daysUntil: {
     ...typography.labelSmall,
     color: colors.sky,
+  },
+  iconStack: {
+    flexDirection: 'row',
+    gap: spacing.xs,
   },
   chevron: {
     fontSize: 22,
