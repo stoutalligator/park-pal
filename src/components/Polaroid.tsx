@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ImageStyle, StyleProp } from 'react-native';
+import { View, Text, Image, StyleSheet, ImageStyle, StyleProp, ImageSourcePropType } from 'react-native';
 import { colors, radius, shadows, typography } from '@/theme';
 
 // A little washi-tape variety across stacks/photos so the album doesn't feel
@@ -11,7 +11,12 @@ export function tapeColorForIndex(index: number): string {
 }
 
 interface Props {
-  uri: string;
+  // A photo's URI, or `source` for a bundled image (e.g. a park scene).
+  uri?: string;
+  source?: ImageSourcePropType;
+  // Fires once the image has loaded (or failed), so a caller that is about to
+  // capture the frame as a picture knows when it's safe to.
+  onLoad?: () => void;
   size: number;
   tapeColor?: string;
   rotate?: number;
@@ -28,6 +33,8 @@ interface Props {
 
 export default function Polaroid({
   uri,
+  source,
+  onLoad,
   size,
   tapeColor = colors.tan,
   rotate = 0,
@@ -55,7 +62,13 @@ export default function Polaroid({
         style,
       ]}
     >
-      <Image source={{ uri }} style={styles.photo} resizeMode="cover" />
+      <Image
+        source={source ?? { uri: uri ?? '' }}
+        style={styles.photo}
+        resizeMode="cover"
+        onLoad={onLoad}
+        onError={onLoad}
+      />
       <View
         style={[
           styles.tape,

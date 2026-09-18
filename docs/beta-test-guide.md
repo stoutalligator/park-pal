@@ -1,4 +1,4 @@
-# Park Pal — What to Test
+# Parks Pal — What to Test
 
 A quick guide for beta testers. You don't need to test everything — pick the areas that match how you'd actually use the app, and tell us where it felt confusing, slow, or wrong. Rough edges are exactly what we're looking for.
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path, Polygon } from 'react-native-svg';
@@ -11,6 +11,7 @@ import { getParkScene } from '@/data/parkImages';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 import { parseLocalDate, daysUntilLabel } from '@/utils/dates';
 import PrimaryButton from '@/components/PrimaryButton';
+import RecapPreview from '@/components/RecapPreview';
 import Polaroid, { tapeColorForIndex } from '@/components/Polaroid';
 import {
   WeatherSunnyIcon,
@@ -77,6 +78,21 @@ function EditIcon() {
   );
 }
 
+function ShareIcon() {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 24 24">
+      <Path
+        d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"
+        fill="none"
+        stroke={colors.textPrimary}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
 function TrashIcon() {
   return (
     <Svg width={16} height={16} viewBox="0 0 24 24">
@@ -108,6 +124,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
   const { trips, deleteTrip, isTripPending, userProfile } = useApp();
   const units = userProfile.units;
   const insets = useSafeAreaInsets();
+  const [recapVisible, setRecapVisible] = useState(false);
   const trip = trips.find((t) => t.id === tripId);
   const park = trip ? getParkById(trip.parkId) : null;
 
@@ -144,6 +161,15 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             <BackArrowIcon />
           </TouchableOpacity>
           <View style={[styles.heroActions, { top: insets.top + 16 }]}>
+            {!planned && (
+              <TouchableOpacity
+                style={styles.heroActionBtn}
+                onPress={() => setRecapVisible(true)}
+                accessibilityLabel="Share trip recap"
+              >
+                <ShareIcon />
+              </TouchableOpacity>
+            )}
             <TouchableOpacity
               style={styles.heroActionBtn}
               onPress={() => (navigation as any).navigate('LogTripForm', { tripId: trip.id })}
@@ -335,6 +361,8 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           </View>
         </View>
       </ScrollView>
+
+      <RecapPreview visible={recapVisible} trip={trip} onClose={() => setRecapVisible(false)} />
     </View>
   );
 }

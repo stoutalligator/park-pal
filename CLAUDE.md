@@ -1,4 +1,4 @@
-# Park Pal — National Park Tracker
+# Parks Pal — National Park Tracker
 
 A cozy, illustrated mobile app that lets users track U.S. National Parks they've visited, log trips, save memories and photos, collect digital passport stamps, earn badges, and wishlist future parks. The app should feel like a playful adventure journal crossed with a collectible passport — not a corporate dashboard.
 
@@ -171,7 +171,7 @@ These features are not being built yet. However, the code must be structured so 
 
 ## Notes
 
-- The app is named **Park Pal** but the display title on the welcome screen reads **"National Park Tracker"** — match the reference image exactly.
+- The app is named **Parks Pal** but the display title on the welcome screen reads **"National Park Tracker"** — match the reference image exactly.
 - The motto is: **"COLLECT. EXPLORE. REMEMBER."** — used in onboarding/marketing surfaces.
 - There are exactly **63 U.S. National Parks** — the progress ring tracks visited / 63.
 - The bottom tab center button is a `+` FAB for "Log a Trip" — it is NOT a standard tab; it opens a modal stack.

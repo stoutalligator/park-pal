@@ -1,4 +1,4 @@
-# Park Pal — Asset Generation Prompts
+# Parks Pal — Asset Generation Prompts
 
 Prompts for generating illustrated art outside the repo (Midjourney, DALL-E, etc.) so everything stays visually consistent. Each file is self-contained: paste that file's **base style block**, then swap in the subject.
 

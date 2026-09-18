@@ -6,11 +6,10 @@ import Svg, { Circle } from 'react-native-svg';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
-import { getParkById, TOTAL_PARKS } from '@/data/parks';
-import { getParkImage } from '@/data/parkImages';
+import { TOTAL_PARKS } from '@/data/parks';
 import ProgressRing from '@/components/ProgressRing';
 import ScreenHeader from '@/components/ScreenHeader';
-import { parseLocalDate } from '@/utils/dates';
+import TripStamp, { STAMP_INK_COLORS } from '@/components/TripStamp';
 
 // Alpha-suffixed theme-token derivatives (matches the `${colors.x}NN` pattern
 // used elsewhere, e.g. DateRangePicker's range-highlight) rather than
@@ -37,40 +36,6 @@ function SealRing({ size }: { size: number }) {
 
 const STAMPS_PER_SIDE = 3;
 const STAMPS_PER_SPREAD = STAMPS_PER_SIDE * 2;
-
-// Rotates through the palette so consecutive stamps don't share ink color,
-// evoking different checkpoint stamps rather than one uniform badge.
-const STAMP_INK_COLORS = [colors.primary, colors.orange, colors.sage, colors.rose, colors.brown];
-
-function formatStampDate(dateStr: string): string {
-  const d = parseLocalDate(dateStr);
-  return d
-    .toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })
-    .toUpperCase();
-}
-
-// Deterministic pseudo-rotation per trip so each stamp looks hand-pressed
-// but stays stable across re-renders instead of jittering on every render.
-function stampRotation(seed: string): number {
-  let hash = 0;
-  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
-  return (hash % 13) - 6;
-}
-
-function TripStamp({ trip, ink }: { trip: Trip; ink: string }) {
-  const park = getParkById(trip.parkId);
-  if (!park) return null;
-  const rotation = stampRotation(trip.id);
-  return (
-    <View style={[styles.stamp, { transform: [{ rotate: `${rotation}deg` }] }]}>
-      <View style={[styles.stampRing, { borderColor: ink }]}>
-        <Image source={getParkImage(park.id)} style={styles.stampImage} resizeMode="cover" />
-      </View>
-      <Text style={[styles.stampDate, { color: ink }]}>{formatStampDate(trip.startDate)}</Text>
-      <Text style={styles.stampName} numberOfLines={2}>{park.name}</Text>
-    </View>
-  );
-}
 
 export default function PassportScreen() {
   const { trips, stats } = useApp();
@@ -264,25 +229,6 @@ const styles = StyleSheet.create({
   spreadSide: { flex: 1, padding: spacing.lg, justifyContent: 'space-evenly', alignItems: 'center' },
   spreadSeam: { width: 0, marginVertical: spacing.lg, borderLeftWidth: 1.5, borderStyle: 'dashed', borderColor: colors.border },
   pageNumber: { ...typography.caption, color: colors.textMuted, textAlign: 'center', marginTop: spacing.md },
-
-  stamp: { alignItems: 'center', gap: 2, width: '100%' },
-  stampRing: {
-    width: 76,
-    height: 76,
-    borderRadius: 38,
-    borderWidth: 2.5,
-    backgroundColor: colors.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden',
-  },
-  // The source art is a circular badge inset on a white square canvas — the
-  // badge itself only spans ~66% of the canvas width (measured directly off
-  // the PNGs) — so the image is oversized ~1/0.66 and clipped by the ring's
-  // overflow:hidden to crop that built-in white margin away entirely.
-  stampImage: { width: '160%', height: '160%' },
-  stampDate: { ...typography.caption, fontSize: 10, letterSpacing: 0.5, marginTop: 4 },
-  stampName: { ...typography.labelSmall, color: colors.textPrimary, textAlign: 'center' },
 
   emptyPage: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.md },
   emptyMascot: { width: 88, height: 88 },

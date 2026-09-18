@@ -1,8 +1,8 @@
-# Park Pal — National Park Tracker
+# Parks Pal — National Park Tracker
 
 A cozy, illustrated mobile app for tracking U.S. National Parks you've visited: log trips, save memories and photos, collect digital passport stamps, earn badges, and wishlist parks you want to see next.
 
-> The app is named **Park Pal**, but the welcome screen displays the title **"National Park Tracker"** — this is intentional, see `docs/reference-images/login-screen.png`.
+> The app is named **Parks Pal**, but the welcome screen displays the title **"National Park Tracker"** — this is intentional, see `docs/reference-images/login-screen.png`.
 
 ## Tech Stack
 
