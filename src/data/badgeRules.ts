@@ -86,6 +86,9 @@ export const BADGE_PROGRESS: Record<string, (ctx: BadgeContext) => number> = {
   'channel-islands-fox': ({ spottedAnimalIds }) =>
     spottedAnimalIds.includes('channel-islands-island-fox') ? 1 : 0,
   'acadia-puffin': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('acadia-atlantic-puffin') ? 1 : 0),
+  'yellowstone-wolf': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('yellowstone-gray-wolf') ? 1 : 0),
+  'pinnacles-condor': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('pinnacles-california-condor') ? 1 : 0),
+  'everglades-manatee': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('everglades-manatee') ? 1 : 0),
   'near-death': ({ completedTrailIds }) => (completedTrailIds.includes('zion-angels-landing') ? 1 : 0),
 
   // Secret badges

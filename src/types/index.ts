@@ -212,7 +212,10 @@ export type ProfileAvatar =
   | 'rock-climbing'
   | 'winter-activity'
   | 'channel-islands-fox'
-  | 'acadia-puffin';
+  | 'acadia-puffin'
+  | 'yellowstone-wolf'
+  | 'pinnacles-condor'
+  | 'everglades-manatee';
 
 export type Units = 'mi' | 'km';
 

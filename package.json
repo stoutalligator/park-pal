@@ -47,6 +47,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "seed:supabase": "node --env-file=.env scripts/seed-supabase.mjs",
+    "db:diff": "node --env-file=.env scripts/db-diff.mjs",
     "test:supabase": "node --env-file=.env scripts/test-supabase-connection.mjs"
   },
   "private": true

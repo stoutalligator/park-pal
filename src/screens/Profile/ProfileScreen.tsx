@@ -64,6 +64,24 @@ const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number; unloc
     source: require('@/assets/activities/pal-acadia-puffin.png'),
     unlockedByBadgeId: 'acadia-puffin',
   },
+  {
+    key: 'yellowstone-wolf',
+    label: 'Wolf Watcher',
+    source: require('@/assets/activities/pal-yellowstone-wolf.png'),
+    unlockedByBadgeId: 'yellowstone-wolf',
+  },
+  {
+    key: 'pinnacles-condor',
+    label: 'Condor Pal',
+    source: require('@/assets/activities/pal-pinnacles-condor.png'),
+    unlockedByBadgeId: 'pinnacles-condor',
+  },
+  {
+    key: 'everglades-manatee',
+    label: 'Sea Cow',
+    source: require('@/assets/activities/pal-everglades-manatee.png'),
+    unlockedByBadgeId: 'everglades-manatee',
+  },
 ];
 
 const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.source])) as Record<

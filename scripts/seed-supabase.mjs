@@ -8,14 +8,10 @@
 //   node --env-file=.env scripts/seed-supabase.mjs
 // (requires SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY — see .env.example)
 
-import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import WebSocket from 'ws';
 import { createClient } from '@supabase/supabase-js';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '..');
+import { ROOT, extractArrayLiteral, buildContentRows } from './lib/content-rows.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.EXPO_PUBLIC_SUPABASE_URL;
 const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -32,34 +28,6 @@ const supabase = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
   auth: { autoRefreshToken: false, persistSession: false },
   realtime: { transport: WebSocket },
 });
-
-// Pulls the runtime array literal out of a `export const NAME: Type[] = [...]`
-// TS file without needing a TypeScript loader — the literal itself (strings,
-// numbers, nested arrays) is plain JS, only the surrounding type annotation
-// is TS-specific, so we can `Function()` just the extracted literal.
-function extractArrayLiteral(filePath, exportName) {
-  const src = fs.readFileSync(filePath, 'utf8');
-  const marker = `export const ${exportName}`;
-  const startIdx = src.indexOf(marker);
-  if (startIdx === -1) throw new Error(`Could not find "${exportName}" in ${filePath}`);
-  const eqIdx = src.indexOf('=', startIdx);
-  const arrayStart = src.indexOf('[', eqIdx);
-  let depth = 0;
-  let i = arrayStart;
-  for (; i < src.length; i++) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        i++;
-        break;
-      }
-    }
-  }
-  const arrayLiteral = src.slice(arrayStart, i);
-  // eslint-disable-next-line no-new-func -- trusted local project source file
-  return new Function(`return ${arrayLiteral};`)();
-}
 
 async function seedParks() {
   const parks = extractArrayLiteral(path.join(ROOT, 'src/data/parks.ts'), 'ALL_PARKS');
@@ -93,94 +61,22 @@ async function seedBadges() {
   console.log(`Seeded ${rows.length} badges.`);
 }
 
-async function seedTrails() {
-  const trails = extractArrayLiteral(path.join(ROOT, 'src/data/trails.ts'), 'ALL_TRAILS');
-  const rows = trails.map((t) => ({
-    id: t.id,
-    park_id: t.parkId,
-    name: t.name,
-    description: t.description,
-    miles: t.miles,
-    elevation_gain_ft: t.elevationGainFt,
-    difficulty: t.difficulty,
-  }));
-  const { error } = await supabase.from('trails').upsert(rows, { onConflict: 'id' });
-  if (error) throw new Error(`Seeding trails failed: ${error.message}`);
-  console.log(`Seeded ${rows.length} trails.`);
-}
-
-async function seedAnimals() {
-  const animals = extractArrayLiteral(path.join(ROOT, 'src/data/animals.ts'), 'ALL_ANIMALS');
-  const rows = animals.map((a) => ({
-    id: a.id,
-    park_id: a.parkId,
-    name: a.name,
-    description: a.description,
-    rarity: a.rarity,
-  }));
-  const { error } = await supabase.from('animals').upsert(rows, { onConflict: 'id' });
-  if (error) throw new Error(`Seeding animals failed: ${error.message}`);
-  console.log(`Seeded ${rows.length} animals.`);
-}
-
-// Reads the per-park research files directly (the actual authoring source),
-// rather than the generated src/data/trailDetails.ts / animalDetails.ts,
-// which exist to serve the bundled-app fallback, not this script.
-function readCompendiumFiles() {
-  const dir = path.join(ROOT, 'docs/compendium-research');
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
-}
-
-async function seedTrailDetails(parksData) {
-  const rows = parksData.flatMap((park) =>
-    (park.trails ?? []).map((t) => ({
-      id: t.id,
-      estimated_time: t.estimatedTime,
-      best_season: t.bestSeason,
-      tags: t.tags,
-      trail_tip: t.trailTip,
-      did_you_know: t.didYouKnow,
-      elevation_profile: t.elevationProfile,
-      last_verified: t.lastVerified ?? null,
-    }))
-  );
-  const { error } = await supabase.from('trail_details').upsert(rows, { onConflict: 'id' });
-  if (error) throw new Error(`Seeding trail_details failed: ${error.message}`);
-  console.log(`Seeded ${rows.length} trail_details.`);
-}
-
-async function seedAnimalDetails(parksData) {
-  const rows = parksData.flatMap((park) =>
-    (park.animals ?? []).map((a) => ({
-      id: a.id,
-      scientific_name: a.scientificName,
-      best_time_of_day: a.bestTimeOfDay,
-      best_season: a.bestSeason,
-      where_to_look: a.whereToLook,
-      tags: a.tags,
-      viewing_tip: a.viewingTip,
-      did_you_know: a.didYouKnow,
-      last_verified: a.lastVerified ?? null,
-    }))
-  );
-  const { error } = await supabase.from('animal_details').upsert(rows, { onConflict: 'id' });
-  if (error) throw new Error(`Seeding animal_details failed: ${error.message}`);
-  console.log(`Seeded ${rows.length} animal_details.`);
+async function seedContent(table, rows) {
+  const { error } = await supabase.from(table).upsert(rows, { onConflict: 'id' });
+  if (error) throw new Error(`Seeding ${table} failed: ${error.message}`);
+  console.log(`Seeded ${rows.length} ${table}.`);
 }
 
 async function main() {
   await seedParks();
   await seedBadges();
-  await seedTrails();
-  await seedAnimals();
   // Detail tables FK-reference trails.id/animals.id, so they must be seeded
-  // after the base tables above.
-  const parksData = readCompendiumFiles();
-  await seedTrailDetails(parksData);
-  await seedAnimalDetails(parksData);
+  // after the base tables — buildContentRows() returns them in that order.
+  const rows = buildContentRows();
+  await seedContent('trails', rows.trails);
+  await seedContent('animals', rows.animals);
+  await seedContent('trail_details', rows.trail_details);
+  await seedContent('animal_details', rows.animal_details);
   console.log('Seed complete.');
 }
 
