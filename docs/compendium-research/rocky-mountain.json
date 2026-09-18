@@ -1,143 +1,400 @@
 {
   "parkId": "rocky-mountain",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov (romo)", "AllTrails", "Recreation.gov", "9news.com", "KDVR/FOX31", "14ers.com"],
+  "sources": [
+    "NPS.gov (romo)",
+    "AllTrails",
+    "Recreation.gov",
+    "9news.com",
+    "KDVR/FOX31",
+    "14ers.com"
+  ],
   "trails": [
     {
       "id": "rocky-mountain-dream-lake",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Jun-Oct snow-free; hikeable year-round with traction devices in winter",
-      "tags": ["Family Friendly", "Lake Views", "Popular"],
+      "tags": [
+        "Family Friendly",
+        "Lake Views",
+        "Popular"
+      ],
       "trailTip": "Arrive at the Bear Lake trailhead before 7am in summer or plan on the free shuttle — the lot regularly fills by mid-morning.",
       "didYouKnow": "Dream Lake sits directly beneath Hallett Peak and Flattop Mountain and is one of the most photographed lakes in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Bear Lake Trailhead" },
-        { "mile": 0.6, "elevationFt": 200, "label": "Nymph Lake" },
-        { "mile": 1.1, "elevationFt": 425, "label": "Dream Lake" },
-        { "mile": 1.6, "elevationFt": 200 },
-        { "mile": 2.2, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Bear Lake Trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 100
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 200,
+          "label": "Nymph Lake"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 425,
+          "label": "Dream Lake"
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 90
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-sky-pond",
       "estimatedTime": "5-6 hrs",
       "bestSeason": "Jul-Sep (snowfields and an unmaintained scramble near Timberline Falls linger into early summer)",
-      "tags": ["Exposure", "Scramble", "Popular"],
+      "tags": [
+        "Exposure",
+        "Scramble",
+        "Popular"
+      ],
       "trailTip": "The short scramble beside Timberline Falls is exposed and slick with spray — take your time and avoid it if the rock is icy or wet with recent rain.",
       "didYouKnow": "Sky Pond sits in a glacially carved cirque directly below the jagged spires known as the Sharkstooth and Petit Grepon.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Glacier Gorge Trailhead" },
-        { "mile": 0.9, "elevationFt": 230, "label": "Alberta Falls" },
-        { "mile": 2.3, "elevationFt": 700, "label": "The Loch" },
-        { "mile": 3.9, "elevationFt": 1400, "label": "Timberline Falls" },
-        { "mile": 4.5, "elevationFt": 1780, "label": "Sky Pond" },
-        { "mile": 7.0, "elevationFt": 600 },
-        { "mile": 9.0, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Glacier Gorge Trailhead"
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 230,
+          "label": "Alberta Falls"
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": 700,
+          "label": "The Loch"
+        },
+        {
+          "mile": 3.9,
+          "elevationFt": 1400,
+          "label": "Timberline Falls"
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": 1780,
+          "label": "Sky Pond"
+        },
+        {
+          "mile": 7,
+          "elevationFt": 600
+        },
+        {
+          "mile": 9,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-bear-lake",
       "estimatedTime": "20-30 min",
       "bestSeason": "Year-round",
-      "tags": ["Wheelchair Accessible", "Family Friendly"],
+      "tags": [
+        "Wheelchair Accessible",
+        "Family Friendly"
+      ],
       "trailTip": "This flat, paved loop is one of the easiest ways to see a classic alpine lake view and works well as a sunrise or sunset stroll.",
       "didYouKnow": "Bear Lake sits at 9,450 feet, but the mostly flat loop around it makes it one of the most accessible high-elevation walks in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 43, "label": "Far Shore" },
-        { "mile": 0.8, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 43,
+          "label": "Far Shore"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 0,
+          "label": "Loop Complete"
+        }
       ]
     },
     {
       "id": "rocky-mountain-longs-peak",
       "estimatedTime": "10-15 hrs",
       "bestSeason": "Mid-Jul-early Sep only for the non-technical scramble; the rest of the year requires winter mountaineering skills and gear",
-      "tags": ["Exposure", "Alpine Start Required", "Scramble"],
+      "tags": [
+        "Exposure",
+        "Alpine Start Required",
+        "Scramble"
+      ],
       "trailTip": "Start by 2-3am to summit and be back below the Keyhole before early-afternoon thunderstorms build, which is the leading cause of incidents on this route.",
       "didYouKnow": "Longs Peak is the only fourteener in Rocky Mountain National Park, and the Keyhole Route is only a non-technical scramble for roughly six to eight weeks a year.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Longs Peak Trailhead" },
-        { "mile": 3.0, "elevationFt": 1500, "label": "Battle Mountain" },
-        { "mile": 4.6, "elevationFt": 2500, "label": "Boulder Field" },
-        { "mile": 5.5, "elevationFt": 3200, "label": "The Keyhole" },
-        { "mile": 7.25, "elevationFt": 5100, "label": "Summit" },
-        { "mile": 10.0, "elevationFt": 2000 },
-        { "mile": 14.5, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Longs Peak Trailhead"
+        },
+        {
+          "mile": 3,
+          "elevationFt": 1500,
+          "label": "Battle Mountain"
+        },
+        {
+          "mile": 4.6,
+          "elevationFt": 2500,
+          "label": "Boulder Field"
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": 3200,
+          "label": "The Keyhole"
+        },
+        {
+          "mile": 7.25,
+          "elevationFt": 5100,
+          "label": "Summit"
+        },
+        {
+          "mile": 10,
+          "elevationFt": 2000
+        },
+        {
+          "mile": 14.5,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-alberta-falls",
       "estimatedTime": "45 min-1 hr",
       "bestSeason": "Year-round; icy in winter without traction",
-      "tags": ["Family Friendly", "Waterfall"],
+      "tags": [
+        "Family Friendly",
+        "Waterfall"
+      ],
       "trailTip": "This is the most heavily used trail from the Glacier Gorge trailhead — go early to beat both parking congestion and crowds at the falls.",
       "didYouKnow": "Alberta Falls drops through a narrow granite chute carved by Glacier Creek and is fed by snowmelt from Taylor and Andrews glaciers.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Glacier Gorge Trailhead" },
-        { "mile": 0.8, "elevationFt": 230, "label": "Alberta Falls" },
-        { "mile": 1.6, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Glacier Gorge Trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 130
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 230,
+          "label": "Alberta Falls"
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 110
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 55
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-emerald-lake",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Jun-Oct snow-free",
-      "tags": ["Popular", "Lake Views"],
+      "tags": [
+        "Popular",
+        "Lake Views"
+      ],
       "trailTip": "Continuing past Dream Lake to Emerald thins out the crowds noticeably compared to stopping at the first lake.",
       "didYouKnow": "Emerald Lake occupies a basin scoured directly beneath the sheer east face of Hallett Peak and Flattop Mountain.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Bear Lake Trailhead" },
-        { "mile": 0.6, "elevationFt": 200, "label": "Nymph Lake" },
-        { "mile": 1.1, "elevationFt": 350, "label": "Dream Lake" },
-        { "mile": 1.8, "elevationFt": 605, "label": "Emerald Lake" },
-        { "mile": 2.7, "elevationFt": 250 },
-        { "mile": 3.6, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Bear Lake Trailhead"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 200,
+          "label": "Nymph Lake"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 350,
+          "label": "Dream Lake"
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 605,
+          "label": "Emerald Lake"
+        },
+        {
+          "mile": 2.7,
+          "elevationFt": 250
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-chasm-lake",
       "estimatedTime": "4-5 hrs",
       "bestSeason": "Jul-Sep (snowfields linger into early summer above Chasm Meadows)",
-      "tags": ["Alpine", "Exposure"],
+      "tags": [
+        "Alpine",
+        "Exposure"
+      ],
       "trailTip": "Weather turns quickly above treeline here — start early and be prepared to turn back if thunderheads build, since there's no cover for the final push.",
       "didYouKnow": "Chasm Lake sits at the base of the sheer 2,000-foot east face (the Diamond) of Longs Peak, a wall famous among technical climbers.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Longs Peak Trailhead" },
-        { "mile": 1.5, "elevationFt": 700 },
-        { "mile": 3.0, "elevationFt": 1600, "label": "Chasm Meadows" },
-        { "mile": 4.2, "elevationFt": 2360, "label": "Chasm Lake" },
-        { "mile": 6.0, "elevationFt": 900 },
-        { "mile": 8.4, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Longs Peak Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 700
+        },
+        {
+          "mile": 3,
+          "elevationFt": 1600,
+          "label": "Chasm Meadows"
+        },
+        {
+          "mile": 4.2,
+          "elevationFt": 2360,
+          "label": "Chasm Lake"
+        },
+        {
+          "mile": 6,
+          "elevationFt": 900
+        },
+        {
+          "mile": 8.4,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-ute-trail",
       "estimatedTime": "3-4 hrs",
       "bestSeason": "Jul-Sep only — Trail Ridge Road, which most access points depend on, is typically closed by snow the rest of the year",
-      "tags": ["Above Treeline", "Historic Route", "Exposure"],
+      "tags": [
+        "Above Treeline",
+        "Historic Route",
+        "Exposure"
+      ],
       "trailTip": "There is no shade or shelter above treeline here — carry sun protection and extra water, and watch the sky for afternoon storms building over the tundra.",
       "didYouKnow": "The Ute Trail follows a route Ute travelers used for centuries to cross the mountains between summer and winter hunting grounds.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Ute Crossing Trailhead" },
-        { "mile": 1.5, "elevationFt": 300 },
-        { "mile": 3.0, "elevationFt": 700, "label": "High point near treeline" },
-        { "mile": 4.5, "elevationFt": 400 },
-        { "mile": 6.0, "elevationFt": 100, "label": "Fall River Pass Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Ute Crossing Trailhead"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 150
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 300
+        },
+        {
+          "mile": 3,
+          "elevationFt": 700,
+          "label": "High point near treeline"
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": 400
+        },
+        {
+          "mile": 6,
+          "elevationFt": 100,
+          "label": "Fall River Pass Trailhead"
+        }
       ]
     },
     {
       "id": "rocky-mountain-gem-lake",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Year-round; hot and exposed on summer afternoons",
-      "tags": ["Rock Outcrops", "Exposure"],
+      "tags": [
+        "Rock Outcrops",
+        "Exposure"
+      ],
       "trailTip": "This south-facing trail near Estes Park has little shade and gets hot fast in summer — an early morning start is more comfortable than the alpine trails' typical afternoon storm concerns.",
       "didYouKnow": "Gem Lake is unusual for the park in having no inlet or outlet stream — it's fed entirely by rain and snowmelt collecting in a granite basin.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Lumpy Ridge Trailhead" },
-        { "mile": 0.8, "elevationFt": 400, "label": "Paul Bunyan's Boot" },
-        { "mile": 1.7, "elevationFt": 1000, "label": "Gem Lake" },
-        { "mile": 2.6, "elevationFt": 400 },
-        { "mile": 3.4, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Lumpy Ridge Trailhead"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 400,
+          "label": "Paul Bunyan's Boot"
+        },
+        {
+          "mile": 1.7,
+          "elevationFt": 1000,
+          "label": "Gem Lake"
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 700
+        },
+        {
+          "mile": 2.6,
+          "elevationFt": 400
+        },
+        {
+          "mile": 3.4,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     }
   ],
@@ -148,7 +405,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Sep-Oct rut most dramatic; present year-round",
       "whereToLook": "Moraine Park, Horseshoe Park, and Upper Beaver Meadows",
-      "tags": ["Rut Season", "Seasonal Closure"],
+      "tags": [
+        "Rut Season",
+        "Seasonal Closure"
+      ],
       "viewingTip": "As of September 2026, per NPS.gov and park announcements, annual meadow closures run September 1 through October 31 (5pm-10am) in Horseshoe Park, Moraine Park, Upper Beaver Meadows, Harbison Meadow, and Holzwarth Meadow to protect rutting elk — view bugling bulls from roadside pullouts or established viewpoints with binoculars, staying at least 75 feet back at all times.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "A bull elk's bugle can carry more than a mile across a mountain valley during the fall rut."
@@ -159,7 +419,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round; most visible in summer among willow flats",
       "whereToLook": "Kawuneeche Valley along the Colorado River",
-      "tags": ["Wetland", "Uncommon"],
+      "tags": [
+        "Wetland",
+        "Uncommon"
+      ],
       "viewingTip": "View moose from the road or a boardwalk with binoculars rather than walking into willow thickets after them — moose can charge with little warning, especially cows with calves.",
       "didYouKnow": "Moose are not native to the immediate Rocky Mountain area; the Kawuneeche Valley population descends from moose introduced to North Park, Colorado in the late 1970s that later expanded into the park."
     },
@@ -169,7 +432,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Apr-May at Sheep Lakes mineral licks; year-round in high country",
       "whereToLook": "Sheep Lakes in Horseshoe Park during spring migration",
-      "tags": ["Seasonal Migration", "Mineral Lick"],
+      "tags": [
+        "Seasonal Migration",
+        "Mineral Lick"
+      ],
       "viewingTip": "During spring, park volunteers staff a 'Bighorn Crossing Zone' at Sheep Lakes and briefly stop road traffic — stay in your car or behind the roped viewing area and use binoculars rather than walking toward the flock.",
       "didYouKnow": "Bighorn ewes and lambs travel down from steep, predator-safe terrain to Sheep Lakes each spring specifically to eat mineral-rich soil they can't get at higher elevations."
     },
@@ -179,7 +445,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Apr-Nov (dens in winter)",
       "whereToLook": "Forested montane slopes and berry patches, generally away from busy trail corridors",
-      "tags": ["Elusive", "Food Storage"],
+      "tags": [
+        "Elusive",
+        "Food Storage"
+      ],
       "viewingTip": "If you spot one, watch from at least 100 yards with binoculars, and never leave food or trash accessible — habituated bears are often relocated or, in repeat cases, euthanized for public safety.",
       "didYouKnow": "Rocky Mountain's black bears can range in color from black to cinnamon-brown, which sometimes leads visitors to mistake them for grizzlies (a species that no longer occurs in Colorado)."
     },
@@ -189,7 +458,10 @@
       "bestTimeOfDay": "Daytime, most active in cooler morning hours",
       "bestSeason": "Jun-Sep above treeline",
       "whereToLook": "Talus and rockslides near Rock Cut and the Tundra Communities Trail on Trail Ridge Road",
-      "tags": ["Alpine", "Talus Dweller"],
+      "tags": [
+        "Alpine",
+        "Talus Dweller"
+      ],
       "viewingTip": "Stay on the boardwalk or trail rather than climbing into rockslides to get closer — pikas are sensitive to heat stress and to trampling of the fragile alpine tundra they depend on; a pause and a listen for their sharp 'eep' call is usually enough to spot one.",
       "didYouKnow": "Pikas don't hibernate — they spend all summer gathering 'haypiles' of dried plants to survive on under the snow all winter."
     },
@@ -199,7 +471,10 @@
       "bestTimeOfDay": "Dawn / Dusk / Night",
       "bestSeason": "Year-round, rarely seen",
       "whereToLook": "Montane forests and rocky terrain across the park",
-      "tags": ["Elusive", "Apex Predator"],
+      "tags": [
+        "Elusive",
+        "Apex Predator"
+      ],
       "viewingTip": "A sighting is genuinely rare — if it happens, stay calm, do not run, back away slowly while facing the animal, and give it a clear path to leave rather than moving toward it for a photo.",
       "didYouKnow": "Mountain lions in the park are almost entirely nocturnal ambush hunters and can go undetected for years even in areas visitors hike regularly."
     },
@@ -209,7 +484,10 @@
       "bestTimeOfDay": "Midday (basking)",
       "bestSeason": "May-Sep; hibernates the rest of the year",
       "whereToLook": "Rock outcrops near Bear Lake and other subalpine trailheads",
-      "tags": ["Common", "Sunbather"],
+      "tags": [
+        "Common",
+        "Sunbather"
+      ],
       "viewingTip": "Marmots at popular trailheads are used to people but should never be fed — human food causes serious digestive harm and habituates them to approaching visitors, which puts them at greater risk. Photograph with a zoom lens from where you're standing.",
       "didYouKnow": "Yellow-bellied marmots spend up to 80% of their lives underground, including roughly eight months of winter hibernation."
     },
@@ -219,7 +497,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Open meadows such as Moraine Park and Horseshoe Park",
-      "tags": ["Common", "Meadow Hunter"],
+      "tags": [
+        "Common",
+        "Meadow Hunter"
+      ],
       "viewingTip": "Watch from a roadside pullout with binoculars — never offer food, since roadside-fed coyotes lose their natural wariness and become a hazard to themselves and visitors.",
       "didYouKnow": "Coyotes here hunt voles and pocket gophers using a distinctive high pounce, jumping straight up before diving down on prey hidden under grass or snow."
     },
@@ -229,7 +510,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Year-round; most visible above treeline in summer",
       "whereToLook": "Treeline overlooks and pullouts along Trail Ridge Road",
-      "tags": ["Alpine", "Seed Cacher"],
+      "tags": [
+        "Alpine",
+        "Seed Cacher"
+      ],
       "viewingTip": "These bold jays will approach picnic areas looking for handouts — keep food packed away and enjoy them with binoculars or a camera rather than hand-feeding, which encourages unhealthy dependence on human food.",
       "didYouKnow": "A single Clark's nutcracker can cache tens of thousands of pine seeds each fall and remembers the location of thousands of them months later."
     }

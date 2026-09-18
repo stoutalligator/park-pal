@@ -5,8 +5,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ALL_ANIMALS } from '@/data/animals';
-import { ANIMAL_DETAILS } from '@/data/animalDetails';
 import { AnimalRarity } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 
@@ -41,10 +39,10 @@ function SpottedBadge({ spotted }: { spotted: boolean }) {
 
 export default function AnimalDetailScreen({ route, navigation }: Props) {
   const { animalId } = route.params;
-  const { parks, isAnimalSpotted } = useApp();
+  const { parks, animals, animalDetails, isAnimalSpotted } = useApp();
 
-  const animal = ALL_ANIMALS.find((a) => a.id === animalId);
-  const detail = ANIMAL_DETAILS[animalId];
+  const animal = animals.find((a) => a.id === animalId);
+  const detail = animalDetails[animalId];
   const park = animal ? parks.find((p) => p.id === animal.parkId) : undefined;
 
   if (!animal) {

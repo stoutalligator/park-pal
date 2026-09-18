@@ -21,29 +21,12 @@
       "trailTip": "This loop is accessible by private vehicle to the Savage River check station year-round road conditions permitting, and it's a reliable spot for Dall sheep on the surrounding slopes — carry bear spray and make noise on blind corners near the willow brush.",
       "didYouKnow": "Savage River marks the point beyond which private vehicles cannot continue on the Denali Park Road without a permit.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 0.5,
-          "elevationFt": 50
-        },
-        {
-          "mile": 1,
-          "elevationFt": 100,
-          "label": "Savage River canyon"
-        },
-        {
-          "mile": 1.5,
-          "elevationFt": 50
-        },
-        {
-          "mile": 2,
-          "elevationFt": 0,
-          "label": "Return to trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 25 },
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 1.0, "elevationFt": 100, "label": "Savage River canyon" },
+        { "mile": 1.5, "elevationFt": 50 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -57,29 +40,13 @@
       "trailTip": "A short but steep switchback descent leads down to the lake, so save some energy for the climb back out; look for beaver activity along the shoreline in early morning or evening.",
       "didYouKnow": "The oxbow-shaped lake was left behind when the Nenana River shifted course, and it remains a favorite feeding spot for resident beavers.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 0.53,
-          "elevationFt": 125
-        },
-        {
-          "mile": 1.05,
-          "elevationFt": 250,
-          "label": "Horseshoe Lake overlook"
-        },
-        {
-          "mile": 1.58,
-          "elevationFt": 125
-        },
-        {
-          "mile": 2.1,
-          "elevationFt": 0,
-          "label": "Return to trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.35, "elevationFt": 90 },
+        { "mile": 0.7, "elevationFt": 180 },
+        { "mile": 1.05, "elevationFt": 250, "label": "Horseshoe Lake overlook" },
+        { "mile": 1.4, "elevationFt": 150 },
+        { "mile": 1.75, "elevationFt": 60 },
+        { "mile": 2.1, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -93,29 +60,13 @@
       "trailTip": "The trail climbs above treeline into open bear habitat, so carry bear spray, make noise, and hike in a group; the ridge stays windy even on calm days down at the visitor center.",
       "didYouKnow": "On clear days the overlook offers one of the few frontcountry views of Denali's summit without needing to ride a park bus.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 1.35,
-          "elevationFt": 850
-        },
-        {
-          "mile": 2.7,
-          "elevationFt": 1700,
-          "label": "Mount Healy Overlook"
-        },
-        {
-          "mile": 4.05,
-          "elevationFt": 850
-        },
-        {
-          "mile": 5.4,
-          "elevationFt": 0,
-          "label": "Return to trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.9, "elevationFt": 500 },
+        { "mile": 1.8, "elevationFt": 1100 },
+        { "mile": 2.7, "elevationFt": 1700, "label": "Mount Healy Overlook" },
+        { "mile": 3.6, "elevationFt": 1100 },
+        { "mile": 4.5, "elevationFt": 500 },
+        { "mile": 5.4, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -129,31 +80,15 @@
       "trailTip": "This is the longest maintained trail near the entrance area and sees far fewer hikers than Mount Healy — carry bear spray, let someone know your plan, and start early to allow a full day.",
       "didYouKnow": "The trail links three small kettle lakes carved by retreating glaciers thousands of years ago.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 2.38,
-          "elevationFt": 400,
-          "label": "First lake"
-        },
-        {
-          "mile": 5.23,
-          "elevationFt": 880,
-          "label": "Second lake"
-        },
-        {
-          "mile": 7.6,
-          "elevationFt": 1280,
-          "label": "Third lake"
-        },
-        {
-          "mile": 9.5,
-          "elevationFt": 1600,
-          "label": "Trail end"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 200 },
+        { "mile": 2.38, "elevationFt": 400, "label": "First lake" },
+        { "mile": 4.0, "elevationFt": 650 },
+        { "mile": 5.23, "elevationFt": 880, "label": "Second lake" },
+        { "mile": 6.5, "elevationFt": 1080 },
+        { "mile": 7.6, "elevationFt": 1280, "label": "Third lake" },
+        { "mile": 8.6, "elevationFt": 1450 },
+        { "mile": 9.5, "elevationFt": 1600, "label": "Trail end" }
       ]
     },
     {
@@ -169,29 +104,13 @@
       "didYouKnow": "The trail climbs Thorofare Ridge for one of the closest frontcountry views of Denali's summit, on the rare days the mountain isn't hidden in its own weather.",
       "lastVerified": "2026-09-15",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Eielson Visitor Center"
-        },
-        {
-          "mile": 0.7,
-          "elevationFt": 500
-        },
-        {
-          "mile": 1.5,
-          "elevationFt": 1000,
-          "label": "Thorofare Ridge"
-        },
-        {
-          "mile": 2.2,
-          "elevationFt": 400
-        },
-        {
-          "mile": 3,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Eielson Visitor Center" },
+        { "mile": 0.5, "elevationFt": 350 },
+        { "mile": 1.0, "elevationFt": 700 },
+        { "mile": 1.5, "elevationFt": 1000, "label": "Thorofare Ridge" },
+        { "mile": 2.0, "elevationFt": 600 },
+        { "mile": 2.5, "elevationFt": 250 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -205,26 +124,13 @@
       "trailTip": "Best hiked from Mountain Vista to Savage River (net downhill) if you can arrange a pickup; the ridge is fully exposed, so check the forecast for wind and lightning before starting.",
       "didYouKnow": "The trail connects the Savage River and Mountain Vista areas, gaining nearly 1,500 feet across roughly four miles of open alpine ridge.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 1.64,
-          "elevationFt": 600,
-          "label": "Ridge crest"
-        },
-        {
-          "mile": 2.87,
-          "elevationFt": 1050,
-          "label": "Alpine tundra section"
-        },
-        {
-          "mile": 4.1,
-          "elevationFt": 1500,
-          "label": "Trail end"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 250 },
+        { "mile": 1.64, "elevationFt": 600, "label": "Ridge crest" },
+        { "mile": 2.3, "elevationFt": 850 },
+        { "mile": 2.87, "elevationFt": 1050, "label": "Alpine tundra section" },
+        { "mile": 3.5, "elevationFt": 1300 },
+        { "mile": 4.1, "elevationFt": 1500, "label": "Trail end" }
       ]
     },
     {
@@ -239,29 +145,13 @@
       "didYouKnow": "The mile-wide gravel bar at trail's end was a historic starting point for some of the earliest Denali summit expeditions.",
       "lastVerified": "2026-09-15",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Wonder Lake Trailhead"
-        },
-        {
-          "mile": 1,
-          "elevationFt": 150
-        },
-        {
-          "mile": 2,
-          "elevationFt": 300,
-          "label": "McKinley River Bar"
-        },
-        {
-          "mile": 3,
-          "elevationFt": 100
-        },
-        {
-          "mile": 4,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Wonder Lake Trailhead" },
+        { "mile": 0.7, "elevationFt": 100 },
+        { "mile": 1.4, "elevationFt": 220 },
+        { "mile": 2.0, "elevationFt": 300, "label": "McKinley River Bar" },
+        { "mile": 2.7, "elevationFt": 180 },
+        { "mile": 3.3, "elevationFt": 70 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -276,29 +166,13 @@
       "trailTip": "There's no maintained tread here — this is a cross-country tundra route, so bring navigation tools, expect wet tussocks underfoot, and carry bear spray since visibility can be limited in the low brush lower on the slope.",
       "didYouKnow": "This off-trail route is a favorite for July wildflower displays, when the ridge blooms with alpine forget-me-nots, Alaska's state flower.",
       "elevationProfile": [
-        {
-          "mile": 0,
-          "elevationFt": 0,
-          "label": "Trailhead"
-        },
-        {
-          "mile": 1.25,
-          "elevationFt": 900
-        },
-        {
-          "mile": 2.5,
-          "elevationFt": 1800,
-          "label": "Primrose Ridge high point"
-        },
-        {
-          "mile": 3.75,
-          "elevationFt": 900
-        },
-        {
-          "mile": 5,
-          "elevationFt": 0,
-          "label": "Return to trailhead"
-        }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 500 },
+        { "mile": 1.6, "elevationFt": 1100 },
+        { "mile": 2.5, "elevationFt": 1800, "label": "Primrose Ridge high point" },
+        { "mile": 3.4, "elevationFt": 1100 },
+        { "mile": 4.2, "elevationFt": 500 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     }
   ],

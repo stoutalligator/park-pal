@@ -1,147 +1,420 @@
 {
   "parkId": "arches",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "AllTrails", "hikedesert.com", "morethanjustparks.com"],
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "hikedesert.com",
+    "morethanjustparks.com"
+  ],
   "trails": [
     {
       "id": "arches-delicate-arch",
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Mar-May, Sept-Nov (avoid midday in summer heat)",
-      "tags": ["Exposure", "Slickrock", "No Shade"],
+      "tags": [
+        "Exposure",
+        "Slickrock",
+        "No Shade"
+      ],
       "trailTip": "There is no shade and little water on this hike — carry at least 1 liter per person and avoid midday starts in summer, when slickrock surface temperatures soar.",
       "didYouKnow": "Delicate Arch stands 46 feet tall and is the most photographed arch in the park, but geologists estimate it could naturally collapse within a few centuries as erosion continues.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Wolfe Ranch trailhead" },
-        { "mile": 0.4, "elevationFt": 100 },
-        { "mile": 0.9, "elevationFt": 280, "label": "Open slickrock slope" },
-        { "mile": 1.3, "elevationFt": 420, "label": "Cliff-edge ledge approach" },
-        { "mile": 1.5, "elevationFt": 480, "label": "Delicate Arch" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Wolfe Ranch trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 100
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 280,
+          "label": "Open slickrock slope"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 420,
+          "label": "Cliff-edge ledge approach"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 480,
+          "label": "Delicate Arch (turnaround)"
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 340
+        },
+        {
+          "mile": 2.4,
+          "elevationFt": 150
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Return to Wolfe Ranch trailhead"
+        }
       ]
     },
     {
       "id": "arches-devils-garden",
       "estimatedTime": "4-5 hrs",
       "bestSeason": "Mar-May, Sept-Nov",
-      "tags": ["Exposure", "Fin Scrambling", "Route-Finding"],
+      "tags": [
+        "Exposure",
+        "Fin Scrambling",
+        "Route-Finding"
+      ],
       "trailTip": "The Primitive Loop past Double O Arch involves narrow fins and drop-offs requiring hands-on scrambling — most hikers turn around at Double O Arch and retrace their steps instead.",
       "didYouKnow": "Devils Garden passes more named arches than any other trail in the park, including Landscape Arch, at over 300 feet the longest natural stone span in North America.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Devils Garden trailhead" },
-        { "mile": 0.4, "elevationFt": 60 },
-        { "mile": 0.9, "elevationFt": 150, "label": "Landscape Arch" },
-        { "mile": 1.8, "elevationFt": 400, "label": "Navajo Arch junction" },
-        { "mile": 2.6, "elevationFt": 700, "label": "Double O Arch" },
-        { "mile": 3.6, "elevationFt": 950, "label": "Primitive Loop fins" },
-        { "mile": 5.0, "elevationFt": 1100, "label": "Dark Angel spur" },
-        { "mile": 7.2, "elevationFt": 300, "label": "Loop closes near trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Devils Garden trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 60
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 150,
+          "label": "Landscape Arch"
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 400,
+          "label": "Navajo Arch junction"
+        },
+        {
+          "mile": 2.6,
+          "elevationFt": 700,
+          "label": "Double O Arch"
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 1100,
+          "label": "Primitive Loop fins"
+        },
+        {
+          "mile": 4.3,
+          "elevationFt": 750,
+          "label": "Dark Angel spur"
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": 400
+        },
+        {
+          "mile": 6.5,
+          "elevationFt": 150
+        },
+        {
+          "mile": 7.2,
+          "elevationFt": 0,
+          "label": "Loop closes near trailhead"
+        }
       ]
     },
     {
       "id": "arches-windows",
       "estimatedTime": "45 min-1 hr",
       "bestSeason": "Year-round (early morning or evening in summer)",
-      "tags": ["Family Friendly", "Short Loop"],
+      "tags": [
+        "Family Friendly",
+        "Short Loop"
+      ],
       "trailTip": "This is one of the most popular short hikes in the park — arrive early or late in the day in summer to beat both the heat and the parking crowds.",
       "didYouKnow": "The North and South Windows are sometimes called the 'Spectacles' because, seen from a distance, the two openings resemble a pair of eyeglasses.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Windows trailhead" },
-        { "mile": 0.3, "elevationFt": 80, "label": "North Window" },
-        { "mile": 0.5, "elevationFt": 150, "label": "South Window" },
-        { "mile": 0.8, "elevationFt": 60, "label": "Turret Arch" },
-        { "mile": 1.0, "elevationFt": 10, "label": "Loop closes near trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Windows trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 80,
+          "label": "North Window"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 150,
+          "label": "South Window"
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 105
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 60,
+          "label": "Turret Arch"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 10,
+          "label": "Loop closes near trailhead"
+        }
       ]
     },
     {
       "id": "arches-landscape-arch",
       "estimatedTime": "45 min-1 hr",
       "bestSeason": "Year-round",
-      "tags": ["Family Friendly", "Flat"],
+      "tags": [
+        "Family Friendly",
+        "Flat"
+      ],
       "trailTip": "Stay on the trail and off the slope beneath the arch — a large slab fell from Landscape Arch in 1991, and the area directly underneath remains closed for safety.",
       "didYouKnow": "At roughly 306 feet long, Landscape Arch is the longest natural arch in North America — its thinnest section is narrower than a school bus is long.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Devils Garden trailhead" },
-        { "mile": 0.5, "elevationFt": 20 },
-        { "mile": 0.9, "elevationFt": 60, "label": "Landscape Arch viewpoint" },
-        { "mile": 1.6, "elevationFt": 10, "label": "Return to trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Devils Garden trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 60,
+          "label": "Landscape Arch viewpoint"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 35
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 10,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "arches-park-avenue",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Year-round (avoid midday heat in summer)",
-      "tags": ["Slickrock", "Scenic Canyon"],
+      "tags": [
+        "Slickrock",
+        "Scenic Canyon"
+      ],
       "trailTip": "Arranging a car shuttle between the Park Avenue and Courthouse Towers viewpoints lets you hike one-way instead of retracing your steps.",
       "didYouKnow": "Park Avenue is named for its resemblance to a canyon of skyscrapers — the towering sandstone fins were carved from a single rock layer by water working along parallel fractures.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Park Avenue trailhead" },
-        { "mile": 0.4, "elevationFt": 80, "label": "Sandstone fin canyon" },
-        { "mile": 0.8, "elevationFt": 200, "label": "Courthouse Towers view" },
-        { "mile": 1.0, "elevationFt": 320, "label": "Courthouse Towers trailhead (turnaround)" },
-        { "mile": 1.5, "elevationFt": 150 },
-        { "mile": 2.0, "elevationFt": 20, "label": "Return to Park Avenue trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Park Avenue trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 80,
+          "label": "Sandstone fin canyon"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 200,
+          "label": "Courthouse Towers view"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 320,
+          "label": "Courthouse Towers trailhead (turnaround)"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 150
+        },
+        {
+          "mile": 2,
+          "elevationFt": 20,
+          "label": "Return to Park Avenue trailhead"
+        }
       ]
     },
     {
       "id": "arches-double-o-arch",
       "estimatedTime": "3-3.5 hrs",
       "bestSeason": "Mar-May, Sept-Nov",
-      "tags": ["Exposure", "Slickrock", "No Shade"],
+      "tags": [
+        "Exposure",
+        "Slickrock",
+        "No Shade"
+      ],
       "trailTip": "Carry more water than you think you'll need — this route has no shade and the slickrock sections past Landscape Arch add real elevation gain on the way out.",
       "didYouKnow": "Double O Arch is named for its two stacked openings, a large arch sitting directly above a smaller one, a rare formation even among the park's more than 2,000 catalogued arches.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Devils Garden trailhead" },
-        { "mile": 0.4, "elevationFt": 60 },
-        { "mile": 0.9, "elevationFt": 150, "label": "Landscape Arch" },
-        { "mile": 1.6, "elevationFt": 250, "label": "Navajo Arch junction" },
-        { "mile": 2.1, "elevationFt": 300, "label": "Double O Arch" },
-        { "mile": 3.0, "elevationFt": 150 },
-        { "mile": 4.2, "elevationFt": 20, "label": "Return to trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Devils Garden trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 60
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 150,
+          "label": "Landscape Arch"
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 250,
+          "label": "Navajo Arch junction"
+        },
+        {
+          "mile": 2.1,
+          "elevationFt": 300,
+          "label": "Double O Arch"
+        },
+        {
+          "mile": 3,
+          "elevationFt": 150
+        },
+        {
+          "mile": 4.2,
+          "elevationFt": 20,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "arches-broken-arch",
       "estimatedTime": "45 min-1 hr",
       "bestSeason": "Year-round",
-      "tags": ["Flat", "Family Friendly"],
+      "tags": [
+        "Flat",
+        "Family Friendly"
+      ],
       "trailTip": "You can walk directly through the opening of Broken Arch itself — a rare chance in the park to pass under an arch rather than just view it.",
       "didYouKnow": "Broken Arch isn't actually broken — the crack across its top is a narrow fracture that hasn't yet caused the span to fail, and it may stand for a very long time.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Sand Dune Arch trailhead" },
-        { "mile": 0.5, "elevationFt": 20 },
-        { "mile": 0.8, "elevationFt": 40, "label": "Broken Arch" },
-        { "mile": 1.3, "elevationFt": 10, "label": "Loop closes near Devils Garden Campground" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Sand Dune Arch trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 40,
+          "label": "Broken Arch"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 25
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 10,
+          "label": "Loop closes near Devils Garden Campground"
+        }
       ]
     },
     {
       "id": "arches-tower-arch",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Mar-May, Sept-Nov",
-      "tags": ["Remote", "Sandy Wash", "Route-Finding"],
+      "tags": [
+        "Remote",
+        "Sandy Wash",
+        "Route-Finding"
+      ],
       "trailTip": "The route crosses soft sand washes and unmarked slickrock in places — carry a map or offline GPS track, since this corner of the park sees far fewer hikers.",
       "didYouKnow": "Tower Arch sits in the Klondike Bluffs area, one of the quietest corners of Arches, named for early 20th-century guide Alexander Ringhoffer, whose reports of the area helped establish the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Klondike Bluffs trailhead" },
-        { "mile": 0.8, "elevationFt": 150, "label": "Sandy wash" },
-        { "mile": 1.5, "elevationFt": 300, "label": "Slickrock climb" },
-        { "mile": 1.9, "elevationFt": 400, "label": "Tower Arch" },
-        { "mile": 2.7, "elevationFt": 200 },
-        { "mile": 3.4, "elevationFt": 30, "label": "Return to trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Klondike Bluffs trailhead"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 150,
+          "label": "Sandy wash"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 300,
+          "label": "Slickrock climb"
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 400,
+          "label": "Tower Arch"
+        },
+        {
+          "mile": 2.7,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3.4,
+          "elevationFt": 30,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "arches-fiery-furnace",
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Apr-Oct (permits sell out in peak season)",
-      "tags": ["Permit Required", "Route-Finding", "Narrow Canyons"],
+      "tags": [
+        "Permit Required",
+        "Route-Finding",
+        "Narrow Canyons"
+      ],
       "lastVerified": "2026-09-15",
       "trailTip": "As of September 2026, NPS.gov requires either a ranger-guided hike or a self-guided exploration permit booked through Recreation.gov in advance — walk-up access isn't allowed, and permits can sell out days ahead in peak season.",
       "didYouKnow": "The Fiery Furnace gets its name from the way its narrow sandstone fins glow orange-red at sunset, not from any heat — inside, the maze-like canyons stay noticeably cooler than the open desert.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Fiery Furnace entrance (permit checkpoint)" },
-        { "mile": 0.5, "elevationFt": 80, "label": "Narrow sandstone canyon maze" },
-        { "mile": 1.0, "elevationFt": 200, "label": "High route past Kissing Turtles" },
-        { "mile": 1.5, "elevationFt": 100 },
-        { "mile": 2.0, "elevationFt": 20, "label": "Loop closes near entrance" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Fiery Furnace entrance (permit checkpoint)"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 40
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 80,
+          "label": "Narrow sandstone canyon maze"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 200,
+          "label": "High route past Kissing Turtles"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 100
+        },
+        {
+          "mile": 2,
+          "elevationFt": 20,
+          "label": "Loop closes near entrance"
+        }
       ]
     }
   ],
@@ -152,7 +425,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Nov-Dec (rut), otherwise year-round",
       "whereToLook": "Cache Valley and the Klondike Bluffs area",
-      "tags": ["Reintroduced", "Rare"],
+      "tags": [
+        "Reintroduced",
+        "Rare"
+      ],
       "viewingTip": "Scan distant slickrock benches with binoculars rather than expecting a close encounter — the herd is small and keeps to remote terrain.",
       "didYouKnow": "Arches' bighorn sheep population was reintroduced in the 1980s after the original population was extirpated by disease and hunting in the early 20th century."
     },
@@ -162,7 +438,10 @@
       "bestTimeOfDay": "Midday",
       "bestSeason": "Apr-Sept",
       "whereToLook": "Sunny slickrock outcrops throughout the park",
-      "tags": ["Common", "Sun Basking"],
+      "tags": [
+        "Common",
+        "Sun Basking"
+      ],
       "viewingTip": "Look for a flash of bright green-blue on warm rock in the middle of the day — collared lizards are most active in full sun, unlike many desert reptiles.",
       "didYouKnow": "Collared lizards can sprint on their hind legs alone, lifting their front half off the ground in a bipedal run when chasing prey or fleeing danger."
     },
@@ -172,7 +451,10 @@
       "bestTimeOfDay": "Night",
       "bestSeason": "Year-round",
       "whereToLook": "Sandy desert flats and dens throughout the park",
-      "tags": ["Nocturnal", "Rare"],
+      "tags": [
+        "Nocturnal",
+        "Rare"
+      ],
       "viewingTip": "Daytime sightings are very unlikely — your best chance is spotting fresh tracks in the sand in early morning. If you find a den, admire it from a distance rather than lingering or approaching it, since kit foxes will abandon a den site they perceive as disturbed.",
       "didYouKnow": "Kit foxes are among the smallest fox species in North America and have oversized ears that help radiate excess body heat in the desert."
     },
@@ -182,7 +464,10 @@
       "bestTimeOfDay": "Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Open desert scrub near roads and campgrounds",
-      "tags": ["Common", "Crepuscular"],
+      "tags": [
+        "Common",
+        "Crepuscular"
+      ],
       "viewingTip": "Drive park roads slowly around dusk, when jackrabbits become active and are easy to spot bounding through headlight range.",
       "didYouKnow": "A jackrabbit's oversized ears aren't just for hearing — they're full of blood vessels that help the animal shed heat in the desert without sweating."
     },
@@ -192,7 +477,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Feb-Jun (nesting)",
       "whereToLook": "Soaring above sandstone fins and cliff faces park-wide",
-      "tags": ["Cliff Nester", "Raptor"],
+      "tags": [
+        "Cliff Nester",
+        "Raptor"
+      ],
       "viewingTip": "Scan open sky above fins and cliff lines rather than the ground — golden eagles hunt by soaring high and stooping on rabbits and rodents below.",
       "didYouKnow": "Golden eagles can spot a rabbit from over a mile away thanks to eyesight roughly four to eight times sharper than a human's."
     },
@@ -202,7 +490,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Campgrounds, picnic areas, and brushy desert edges",
-      "tags": ["Common", "Crepuscular"],
+      "tags": [
+        "Common",
+        "Crepuscular"
+      ],
       "viewingTip": "Check shaded brush near campgrounds in early morning — cottontails rest through the heat of the day and are easiest to see in cooler hours.",
       "didYouKnow": "Desert cottontails can survive without ever drinking free water, getting all the moisture they need from the plants they eat."
     },
@@ -212,7 +503,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Mar-Jul (nesting)",
       "whereToLook": "High sandstone cliffs, including near Devils Garden and Park Avenue",
-      "tags": ["Cliff Nester", "Fast Flier"],
+      "tags": [
+        "Cliff Nester",
+        "Fast Flier"
+      ],
       "viewingTip": "Look for a falcon perched on a high ledge or stooping in a steep dive near cliff faces — avoid lingering directly beneath an active nest ledge in spring.",
       "didYouKnow": "Peregrine falcons were removed from the U.S. Endangered Species List in 1999 after populations rebounded from a near-collapse caused by the pesticide DDT."
     },
@@ -222,7 +516,10 @@
       "bestTimeOfDay": "Night (summer) / Day (spring, fall)",
       "bestSeason": "Apr-Oct",
       "whereToLook": "Sunny slickrock and rock crevices throughout the park",
-      "tags": ["Venomous", "Well-Camouflaged"],
+      "tags": [
+        "Venomous",
+        "Well-Camouflaged"
+      ],
       "viewingTip": "Watch where you place your hands and feet on rock ledges, since this small rattlesnake's pale, faded coloring blends almost seamlessly into sandstone — if you spot one, give it a wide berth and let it be rather than trying to move it or get a closer look.",
       "didYouKnow": "Despite its small size, the midget faded rattlesnake's venom is considered unusually potent relative to its body size compared to other rattlesnake subspecies."
     },
@@ -232,7 +529,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Year-round",
       "whereToLook": "Overlooks, fins, and picnic areas throughout the park",
-      "tags": ["Common", "Scavenger"],
+      "tags": [
+        "Common",
+        "Scavenger"
+      ],
       "viewingTip": "Keep food secured at overlooks and picnic tables — ravens are notoriously bold and intelligent, and quick to snatch an unattended snack.",
       "didYouKnow": "Ravens are among the most intelligent birds known, capable of problem-solving, tool use, and remembering human faces for years."
     }

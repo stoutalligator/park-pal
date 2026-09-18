@@ -12,9 +12,13 @@
       "didYouKnow": "Old Faithful is not the park's biggest geyser, but it's the most predictable, erupting every 44 to 125 minutes.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
-        { "mile": 0.4, "elevationFt": 20 },
-        { "mile": 0.9, "elevationFt": 40, "label": "Geyser Hill" },
-        { "mile": 1.5, "elevationFt": 50, "label": "Loop Return" }
+        { "mile": 0.2, "elevationFt": 15 },
+        { "mile": 0.4, "elevationFt": 30 },
+        { "mile": 0.6, "elevationFt": 40 },
+        { "mile": 0.9, "elevationFt": 50, "label": "Geyser Hill" },
+        { "mile": 1.1, "elevationFt": 35 },
+        { "mile": 1.3, "elevationFt": 15 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -26,9 +30,14 @@
       "didYouKnow": "At 200 feet, Fairy Falls is one of the tallest waterfalls in Yellowstone, fed by Spray and Iron Springs Creek.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 100, "label": "Grand Prismatic Overlook spur" },
-        { "mile": 2.7, "elevationFt": 180 },
-        { "mile": 3.0, "elevationFt": 200, "label": "Fairy Falls" }
+        { "mile": 0.5, "elevationFt": 50, "label": "Grand Prismatic Overlook spur" },
+        { "mile": 1.2, "elevationFt": 100 },
+        { "mile": 1.9, "elevationFt": 150 },
+        { "mile": 2.7, "elevationFt": 200, "label": "Fairy Falls" },
+        { "mile": 3.4, "elevationFt": 150 },
+        { "mile": 4.1, "elevationFt": 100 },
+        { "mile": 4.8, "elevationFt": 50 },
+        { "mile": 5.4, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -40,9 +49,15 @@
       "didYouKnow": "The fire lookout on the summit is staffed in summer and is one of the best places in the park to spot bighorn sheep along the trail.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Dunraven Pass Trailhead" },
-        { "mile": 2.0, "elevationFt": 500 },
-        { "mile": 4.0, "elevationFt": 1000 },
-        { "mile": 6.2, "elevationFt": 1400, "label": "Summit Lookout" }
+        { "mile": 0.6, "elevationFt": 300 },
+        { "mile": 1.2, "elevationFt": 600 },
+        { "mile": 1.8, "elevationFt": 900 },
+        { "mile": 2.4, "elevationFt": 1150 },
+        { "mile": 3.1, "elevationFt": 1400, "label": "Summit Lookout" },
+        { "mile": 3.8, "elevationFt": 1150 },
+        { "mile": 4.6, "elevationFt": 850 },
+        { "mile": 5.4, "elevationFt": 450 },
+        { "mile": 6.2, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -54,9 +69,15 @@
       "didYouKnow": "Lamar Valley is nicknamed the 'Serengeti of North America' for the density of bison, wolves, and pronghorn visible from a single overlook.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 100 },
-        { "mile": 2.8, "elevationFt": 250 },
-        { "mile": 4.0, "elevationFt": 300, "label": "Turnaround" }
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.8, "elevationFt": 150 },
+        { "mile": 1.2, "elevationFt": 220 },
+        { "mile": 1.6, "elevationFt": 280 },
+        { "mile": 2.0, "elevationFt": 300, "label": "Turnaround" },
+        { "mile": 2.6, "elevationFt": 220 },
+        { "mile": 3.1, "elevationFt": 140 },
+        { "mile": 3.6, "elevationFt": 60 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -68,9 +89,15 @@
       "didYouKnow": "Grand Prismatic Spring's rainbow colors come from heat-loving pigmented bacteria that ring the pool, shifting color by season and water temperature.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.6, "elevationFt": 200 },
-        { "mile": 1.1, "elevationFt": 350 },
-        { "mile": 1.6, "elevationFt": 400, "label": "Overlook" }
+        { "mile": 0.15, "elevationFt": 120 },
+        { "mile": 0.3, "elevationFt": 220 },
+        { "mile": 0.5, "elevationFt": 320 },
+        { "mile": 0.65, "elevationFt": 380 },
+        { "mile": 0.8, "elevationFt": 400, "label": "Overlook" },
+        { "mile": 0.95, "elevationFt": 300 },
+        { "mile": 1.1, "elevationFt": 180 },
+        { "mile": 1.3, "elevationFt": 80 },
+        { "mile": 1.6, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -83,9 +110,14 @@
       "didYouKnow": "The trail passes through a marmot colony along the lakeshore boulders before looping back through lodgepole forest.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Indian Pond Trailhead" },
-        { "mile": 1.0, "elevationFt": 60 },
-        { "mile": 1.6, "elevationFt": 100, "label": "Storm Point" },
-        { "mile": 2.3, "elevationFt": 40, "label": "Loop Return" }
+        { "mile": 0.4, "elevationFt": 40 },
+        { "mile": 0.8, "elevationFt": 70 },
+        { "mile": 1.0, "elevationFt": 90 },
+        { "mile": 1.2, "elevationFt": 100, "label": "Storm Point" },
+        { "mile": 1.5, "elevationFt": 70 },
+        { "mile": 1.8, "elevationFt": 40 },
+        { "mile": 2.1, "elevationFt": 15 },
+        { "mile": 2.3, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -98,9 +130,14 @@
       "didYouKnow": "Pelican Valley has one of the highest concentrations of grizzly bears in the lower 48 states, which is exactly why its access hours are so tightly restricted.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 100 },
-        { "mile": 4.2, "elevationFt": 200, "label": "Pelican Creek" },
-        { "mile": 6.4, "elevationFt": 150, "label": "Turnaround" }
+        { "mile": 0.8, "elevationFt": 60 },
+        { "mile": 1.6, "elevationFt": 120 },
+        { "mile": 2.4, "elevationFt": 170 },
+        { "mile": 3.2, "elevationFt": 200, "label": "Pelican Creek" },
+        { "mile": 4.0, "elevationFt": 160 },
+        { "mile": 4.8, "elevationFt": 110 },
+        { "mile": 5.6, "elevationFt": 50 },
+        { "mile": 6.4, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -112,9 +149,15 @@
       "didYouKnow": "Bunsen Peak is the eroded core of an ancient volcano, named after the physicist Robert Bunsen for his studies of geyser mechanics.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 500 },
-        { "mile": 3.0, "elevationFt": 1000 },
-        { "mile": 4.2, "elevationFt": 1300, "label": "Summit" }
+        { "mile": 0.3, "elevationFt": 200 },
+        { "mile": 0.6, "elevationFt": 450 },
+        { "mile": 0.9, "elevationFt": 700 },
+        { "mile": 1.5, "elevationFt": 1000 },
+        { "mile": 2.1, "elevationFt": 1300, "label": "Summit" },
+        { "mile": 2.7, "elevationFt": 1000 },
+        { "mile": 3.3, "elevationFt": 650 },
+        { "mile": 3.8, "elevationFt": 300 },
+        { "mile": 4.2, "elevationFt": 0, "label": "Trailhead return" }
       ]
     }
   ],

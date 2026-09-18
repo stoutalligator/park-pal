@@ -1,118 +1,353 @@
 {
   "parkId": "canyonlands",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "AllTrails", "Outdoor Status", "PermitSnag"],
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "Outdoor Status",
+    "PermitSnag"
+  ],
   "trails": [
     {
       "id": "canyonlands-mesa-arch",
       "estimatedTime": "20-30 min",
       "bestSeason": "Year-round",
-      "tags": ["Sunrise Spot", "Family Friendly", "Popular"],
+      "tags": [
+        "Sunrise Spot",
+        "Family Friendly",
+        "Popular"
+      ],
       "trailTip": "Arrive well before sunrise if you want a clear view — this short loop is the park's most popular sunrise photography spot and the small overlook fills up fast.",
       "didYouKnow": "Mesa Arch frames a 500-foot drop and the La Sal Mountains beyond, making it one of the most photographed arches in Utah.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 100, "label": "Mesa Arch" },
-        { "mile": 0.5, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 100,
+          "label": "Mesa Arch"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 75
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 0
+        }
       ]
     },
     {
       "id": "canyonlands-grand-view-point",
       "estimatedTime": "1 hr",
       "bestSeason": "Year-round",
-      "tags": ["Rim Walk", "Panoramic Views"],
+      "tags": [
+        "Rim Walk",
+        "Panoramic Views"
+      ],
       "trailTip": "The trail hugs an unfenced rim in places, so keep kids and pets close, especially in wind.",
       "didYouKnow": "Grand View Point looks out over the confluence country where the Green and Colorado Rivers carved Canyonlands' three districts apart.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1, "elevationFt": 80, "label": "Grand View Point" },
-        { "mile": 2, "elevationFt": 100 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 40
+        },
+        {
+          "mile": 1,
+          "elevationFt": 100,
+          "label": "Grand View Point (turnaround)"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 50
+        },
+        {
+          "mile": 2,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "canyonlands-chesler-park",
       "estimatedTime": "6-8 hrs",
       "bestSeason": "Mar-May, Sep-Nov",
-      "tags": ["Overnight Permit Required", "No Reliable Water", "Needles District"],
+      "tags": [
+        "Overnight Permit Required",
+        "No Reliable Water",
+        "Needles District"
+      ],
       "trailTip": "No permit is needed for a day hike of this loop, but overnight camping at Chesler Park's designated sites requires a backcountry permit reserved in advance — as of September 2026, per NPS.gov — and there is no reliable water anywhere on the route, so carry at least 4 liters per person.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The Joint Trail section of this loop squeezes hikers through a sandstone fracture barely wider than a backpack for about 400 feet.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Elephant Hill trailhead" },
-        { "mile": 3, "elevationFt": 400 },
-        { "mile": 5.5, "elevationFt": 800, "label": "Chesler Park meadow" },
-        { "mile": 8, "elevationFt": 1000, "label": "Joint Trail" },
-        { "mile": 11, "elevationFt": 0, "label": "Return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Elephant Hill trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3,
+          "elevationFt": 400
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": 800,
+          "label": "Chesler Park meadow"
+        },
+        {
+          "mile": 8,
+          "elevationFt": 1000,
+          "label": "Joint Trail"
+        },
+        {
+          "mile": 11,
+          "elevationFt": 0,
+          "label": "Return"
+        }
       ]
     },
     {
       "id": "canyonlands-upheaval-dome",
       "estimatedTime": "1 hr",
       "bestSeason": "Year-round",
-      "tags": ["Overlook", "Geologic Mystery"],
+      "tags": [
+        "Overlook",
+        "Geologic Mystery"
+      ],
       "trailTip": "Bring sun protection — the trail to the second overlook has little shade and crosses open slickrock.",
       "didYouKnow": "Geologists still debate whether Upheaval Dome is a collapsed salt dome or an ancient meteorite impact crater.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 200, "label": "First overlook" },
-        { "mile": 1.6, "elevationFt": 300, "label": "Second overlook" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.35,
+          "elevationFt": 150,
+          "label": "First overlook"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 225
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 300,
+          "label": "Second overlook (turnaround)"
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 150
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "canyonlands-syncline-loop",
       "estimatedTime": "5-6 hrs",
       "bestSeason": "Mar-May, Sep-Nov",
-      "tags": ["Strenuous", "Little Shade", "Route-Finding"],
+      "tags": [
+        "Strenuous",
+        "Little Shade",
+        "Route-Finding"
+      ],
       "trailTip": "Carry a map or GPS track — this loop has long exposed stretches and cairned route-finding sections that are easy to lose in bright midday light.",
       "didYouKnow": "The Syncline Loop circles Upheaval Dome entirely, dropping into and climbing back out of the crater basin.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2, "elevationFt": -600 },
-        { "mile": 4.5, "elevationFt": -1200, "label": "Crater floor spur" },
-        { "mile": 6.5, "elevationFt": -400 },
-        { "mile": 8.3, "elevationFt": 0, "label": "Return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": -500
+        },
+        {
+          "mile": 3,
+          "elevationFt": -1000
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": -1500,
+          "label": "Crater floor spur"
+        },
+        {
+          "mile": 6,
+          "elevationFt": -900
+        },
+        {
+          "mile": 7.2,
+          "elevationFt": -400
+        },
+        {
+          "mile": 8.3,
+          "elevationFt": 0,
+          "label": "Return"
+        }
       ]
     },
     {
       "id": "canyonlands-druid-arch",
       "estimatedTime": "6-7 hrs",
       "bestSeason": "Mar-May, Sep-Nov",
-      "tags": ["Remote", "Needles District", "No Reliable Water"],
+      "tags": [
+        "Remote",
+        "Needles District",
+        "No Reliable Water"
+      ],
       "trailTip": "This is a long day in exposed desert terrain with no reliable water source, so start early and carry more water than you think you'll need.",
       "didYouKnow": "Druid Arch's massive, blocky form was named for its resemblance to the megaliths of Stonehenge.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Elephant Hill trailhead" },
-        { "mile": 4, "elevationFt": 400 },
-        { "mile": 7, "elevationFt": 700 },
-        { "mile": 10, "elevationFt": 1000, "label": "Druid Arch" },
-        { "mile": 10.8, "elevationFt": 950 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Elephant Hill trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3,
+          "elevationFt": 500
+        },
+        {
+          "mile": 4.2,
+          "elevationFt": 800
+        },
+        {
+          "mile": 5.4,
+          "elevationFt": 1000,
+          "label": "Druid Arch (turnaround)"
+        },
+        {
+          "mile": 6.8,
+          "elevationFt": 700
+        },
+        {
+          "mile": 8.2,
+          "elevationFt": 400
+        },
+        {
+          "mile": 9.5,
+          "elevationFt": 150
+        },
+        {
+          "mile": 10.8,
+          "elevationFt": 0,
+          "label": "Return"
+        }
       ]
     },
     {
       "id": "canyonlands-white-rim-overlook",
       "estimatedTime": "1 hr",
       "bestSeason": "Year-round",
-      "tags": ["Family Friendly", "Panoramic Views"],
+      "tags": [
+        "Family Friendly",
+        "Panoramic Views"
+      ],
       "trailTip": "This flat trail delivers a big payoff view without much elevation gain, but the overlook itself is unfenced, so keep an eye on kids near the edge.",
       "didYouKnow": "The overlook takes its name from the pale White Rim sandstone bench visible far below, which also gives the famous White Rim jeep/bike road its name.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.9, "elevationFt": 80, "label": "White Rim Overlook" },
-        { "mile": 1.8, "elevationFt": 100 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.45,
+          "elevationFt": 40
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 100,
+          "label": "White Rim Overlook (turnaround)"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 75
+        },
+        {
+          "mile": 1.35,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 0,
+          "label": "Return"
+        }
       ]
     },
     {
       "id": "canyonlands-lathrop",
       "estimatedTime": "5-6 hrs to White Rim Road and back",
       "bestSeason": "Mar-May, Sep-Nov",
-      "tags": ["Remote", "Long Descent", "Little Shade"],
+      "tags": [
+        "Remote",
+        "Long Descent",
+        "Little Shade"
+      ],
       "trailTip": "Lathrop drops nearly 1,600 feet from the Island in the Sky mesa to the White Rim bench, so budget extra time and water for the steep climb back out.",
       "didYouKnow": "Lathrop Trail is one of only a few routes that connect the Island in the Sky mesa top down to the White Rim Road below.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Mesa trailhead" },
-        { "mile": 3, "elevationFt": -700 },
-        { "mile": 6, "elevationFt": -1300 },
-        { "mile": 8.8, "elevationFt": -1600, "label": "White Rim Road junction" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Mesa trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": -350
+        },
+        {
+          "mile": 3,
+          "elevationFt": -700
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": -1000
+        },
+        {
+          "mile": 6,
+          "elevationFt": -1300
+        },
+        {
+          "mile": 8.8,
+          "elevationFt": -1600,
+          "label": "White Rim Road junction"
+        }
       ]
     }
   ],
@@ -123,7 +358,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Nov-Dec (rut)",
       "whereToLook": "Canyon walls and mesas near the Colorado and Green River corridors",
-      "tags": ["Rutting Season", "Canyon Cliffs"],
+      "tags": [
+        "Rutting Season",
+        "Canyon Cliffs"
+      ],
       "viewingTip": "During the fall rut, give rams extra space and watch any clashes from a distance with binoculars — approaching can provoke a defensive charge or spook the herd off precarious terrain.",
       "didYouKnow": "Bighorn rams can weigh over 300 pounds, and their curled horns alone can weigh as much as all the bones in the rest of their body combined."
     },
@@ -133,7 +371,10 @@
       "bestTimeOfDay": "Midday (warm hours)",
       "bestSeason": "Apr-Sep",
       "whereToLook": "Sunny slickrock outcrops throughout the park",
-      "tags": ["Common", "Basking"],
+      "tags": [
+        "Common",
+        "Basking"
+      ],
       "viewingTip": "Watch from a few feet back with a zoom lens — collared lizards bask in the open but dart away instantly if crowded.",
       "didYouKnow": "Collared lizards can run bipedally on their hind legs when startled, reaching impressive short bursts of speed."
     },
@@ -143,7 +384,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Thermals above mesa rims and canyon overlooks",
-      "tags": ["Soaring Raptor", "Cliff Nester"],
+      "tags": [
+        "Soaring Raptor",
+        "Cliff Nester"
+      ],
       "viewingTip": "Scan the sky above rim overlooks with binoculars rather than approaching any cliff-edge nest site you might spot.",
       "didYouKnow": "Golden eagles can spot a rabbit from over a mile away thanks to eyesight several times sharper than a human's."
     },
@@ -153,7 +397,11 @@
       "bestTimeOfDay": "Night",
       "bestSeason": "Year-round",
       "whereToLook": "Desert flats and pinyon-juniper woodland, mostly after dark",
-      "tags": ["Nocturnal", "Rare", "Den Dweller"],
+      "tags": [
+        "Nocturnal",
+        "Rare",
+        "Den Dweller"
+      ],
       "viewingTip": "Kit foxes den underground and are rarely seen — if you spot tracks or a burrow, admire from a distance and never linger near or dig at a den entrance.",
       "didYouKnow": "Kit foxes are the smallest fox species in North America, weighing as little as 3-6 pounds."
     },
@@ -163,7 +411,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Summer",
       "whereToLook": "Island in the Sky grasslands",
-      "tags": ["Rare Sighting", "Grassland"],
+      "tags": [
+        "Rare Sighting",
+        "Grassland"
+      ],
       "viewingTip": "Pronghorn are wary and fast — use binoculars from a pullout rather than approaching across open grassland.",
       "didYouKnow": "Pronghorn evolved their speed to outrun now-extinct American cheetahs, far faster than any predator they face today."
     },
@@ -173,7 +424,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Pinyon-juniper woodlands throughout the park",
-      "tags": ["Common", "Crepuscular"],
+      "tags": [
+        "Common",
+        "Crepuscular"
+      ],
       "viewingTip": "Watch from the trail with binoculars rather than following a deer off-trail for a closer photo.",
       "didYouKnow": "Mule deer can jump all four legs simultaneously in a stiff-legged bound called 'stotting' while fleeing predators."
     },
@@ -183,7 +437,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Year-round",
       "whereToLook": "Overlooks and picnic areas throughout the park",
-      "tags": ["Common", "Scavenger"],
+      "tags": [
+        "Common",
+        "Scavenger"
+      ],
       "viewingTip": "Ravens are bold around people, but resist feeding them — human food makes them more aggressive around visitors and overlook parking areas.",
       "didYouKnow": "Ravens are among the most intelligent birds, capable of problem-solving and tool use."
     },
@@ -193,7 +450,10 @@
       "bestTimeOfDay": "Dusk / warm evenings",
       "bestSeason": "Apr-Oct",
       "whereToLook": "Sunny slickrock ledges and rock crevices",
-      "tags": ["Venomous", "Give Space"],
+      "tags": [
+        "Venomous",
+        "Give Space"
+      ],
       "viewingTip": "This venomous snake is small and well-camouflaged against pale slickrock — if you spot one, back away slowly and give it a wide berth rather than trying to move or handle it.",
       "didYouKnow": "Despite its small size, the midget faded rattlesnake's venom is considered among the most potent of any North American rattlesnake."
     }

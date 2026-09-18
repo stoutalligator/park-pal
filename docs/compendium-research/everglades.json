@@ -12,7 +12,10 @@
       "didYouKnow": "The boardwalk sits atop a natural alligator hole that stays wet even during the driest months, concentrating wildlife nearby.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 2 },
+        { "mile": 0.3, "elevationFt": 4 },
         { "mile": 0.4, "elevationFt": 5, "label": "Alligator Overlook" },
+        { "mile": 0.6, "elevationFt": 2 },
         { "mile": 0.8, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -25,7 +28,10 @@
       "didYouKnow": "Despite its name, no sharks live in Shark Valley — it's named for the sawgrass slough that drains toward the historic Shark River.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 3.0, "elevationFt": 4 },
+        { "mile": 6.0, "elevationFt": 8 },
         { "mile": 7.5, "elevationFt": 10, "label": "Observation Tower" },
+        { "mile": 11.0, "elevationFt": 5 },
         { "mile": 15.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -38,7 +44,10 @@
       "didYouKnow": "Pa-hay-okee means 'grassy waters' in Seminole, the same phrase behind the Everglades' nickname, the 'River of Grass.'",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.04, "elevationFt": 2 },
+        { "mile": 0.08, "elevationFt": 4 },
         { "mile": 0.1, "elevationFt": 5, "label": "Overlook" },
+        { "mile": 0.15, "elevationFt": 2 },
         { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -51,7 +60,10 @@
       "didYouKnow": "The trail is named for the gumbo limbo tree, nicknamed the 'tourist tree' for its reddish, peeling bark.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.08, "elevationFt": 2 },
+        { "mile": 0.15, "elevationFt": 4 },
         { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.3, "elevationFt": 2 },
         { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -64,7 +76,10 @@
       "didYouKnow": "The boardwalk winds through one of the largest mangrove forests in the Western Hemisphere.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 2 },
+        { "mile": 0.2, "elevationFt": 4 },
         { "mile": 0.25, "elevationFt": 5, "label": "West Lake Overlook" },
+        { "mile": 0.35, "elevationFt": 2 },
         { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -77,7 +92,10 @@
       "didYouKnow": "The hammock shelters the largest living mahogany tree in the United States.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.08, "elevationFt": 2 },
+        { "mile": 0.15, "elevationFt": 4 },
         { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.3, "elevationFt": 2 },
         { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -90,7 +108,10 @@
       "didYouKnow": "Pine rockland habitat depends on periodic fire to clear underbrush and let pine seedlings take root.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.08, "elevationFt": 2 },
+        { "mile": 0.15, "elevationFt": 4 },
         { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.3, "elevationFt": 2 },
         { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -103,7 +124,10 @@
       "didYouKnow": "The pine rockland here is one of the most fire-dependent and imperiled habitats in Florida.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 10 },
+        { "mile": 0.8, "elevationFt": 4 },
+        { "mile": 1.5, "elevationFt": 10, "label": "High point" },
+        { "mile": 2.3, "elevationFt": 6 },
+        { "mile": 3.0, "elevationFt": 2 },
         { "mile": 3.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -117,7 +141,10 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Clubhouse Beach Trailhead" },
-        { "mile": 3.5, "elevationFt": 5 },
+        { "mile": 1.5, "elevationFt": 2 },
+        { "mile": 3.0, "elevationFt": 4 },
+        { "mile": 4.5, "elevationFt": 5 },
+        { "mile": 6.0, "elevationFt": 3 },
         { "mile": 7.5, "elevationFt": 0, "label": "Coastal Prairie Campsite" }
       ]
     }

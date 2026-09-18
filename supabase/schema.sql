@@ -138,6 +138,35 @@ create table public.animals (
   rarity text not null check (rarity in ('Common', 'Uncommon', 'Rare'))
 );
 
+-- Researched enrichment data, keyed 1:1 to a trail/animal id — kept as
+-- separate tables (rather than jsonb columns on trails/animals) so the base
+-- "how many cards to render" queries stay small, and so a trail/animal with
+-- no research yet just has no matching row here. Seeded from
+-- docs/compendium-research/*.json via scripts/seed-supabase.mjs. Not every
+-- trail/animal has a row yet — content is filled in incrementally.
+create table public.trail_details (
+  id text primary key references public.trails(id) on delete cascade,
+  estimated_time text not null,
+  best_season text not null,
+  tags jsonb not null default '[]',
+  trail_tip text not null,
+  did_you_know text not null,
+  elevation_profile jsonb not null default '[]',
+  last_verified text
+);
+
+create table public.animal_details (
+  id text primary key references public.animals(id) on delete cascade,
+  scientific_name text not null,
+  best_time_of_day text not null,
+  best_season text not null,
+  where_to_look text not null,
+  tags jsonb not null default '[]',
+  viewing_tip text not null,
+  did_you_know text not null,
+  last_verified text
+);
+
 -- One row per completion/sighting event (not upserted) — repeat hikes of the
 -- same trail across different trips each add a row, so sum(miles) correctly
 -- accumulates, while "has this ever been done" is just "a row exists".
@@ -206,6 +235,8 @@ alter table public.trip_photos enable row level security;
 alter table public.user_badges enable row level security;
 alter table public.trails enable row level security;
 alter table public.animals enable row level security;
+alter table public.trail_details enable row level security;
+alter table public.animal_details enable row level security;
 alter table public.user_trail_completions enable row level security;
 alter table public.user_animal_sightings enable row level security;
 alter table public.trip_day_activities enable row level security;
@@ -219,6 +250,10 @@ create policy "badges are publicly readable" on public.badges
 create policy "trails are publicly readable" on public.trails
   for select using (true);
 create policy "animals are publicly readable" on public.animals
+  for select using (true);
+create policy "trail details are publicly readable" on public.trail_details
+  for select using (true);
+create policy "animal details are publicly readable" on public.animal_details
   for select using (true);
 
 create policy "users manage their own profile" on public.profiles
@@ -271,6 +306,8 @@ grant select on public.parks to anon, authenticated;
 grant select on public.badges to anon, authenticated;
 grant select on public.trails to anon, authenticated;
 grant select on public.animals to anon, authenticated;
+grant select on public.trail_details to anon, authenticated;
+grant select on public.animal_details to anon, authenticated;
 
 grant select, insert, update, delete on public.profiles to authenticated;
 grant select, insert, update, delete on public.user_park_status to authenticated;

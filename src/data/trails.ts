@@ -173,7 +173,7 @@ export const ALL_TRAILS: Trail[] = [
   { id: 'mammoth-cave-mammoth-dome-sink', parkId: 'mammoth-cave', name: 'Mammoth Dome Sink Trail', description: 'Short walk to a dramatic collapsed sinkhole.', miles: 0.4, elevationGainFt: 60, difficulty: 'Easy' },
 
   // --- Virgin Islands ---
-  { id: 'virgin-islands-reef-bay', parkId: 'virgin-islands', name: 'Reef Bay Trail', description: 'Descends through tropical forest past ancient petroglyphs to a beach.', miles: 2.2, elevationGainFt: 900, difficulty: 'Moderate' },
+  { id: 'virgin-islands-reef-bay', parkId: 'virgin-islands', name: 'Reef Bay Trail', description: 'Descends through tropical forest past ancient petroglyphs to a beach.', miles: 4.4, elevationGainFt: 900, difficulty: 'Moderate' },
   { id: 'virgin-islands-ram-head', parkId: 'virgin-islands', name: 'Ram Head Trail', description: 'Coastal walk to a dramatic overlook at the island\'s southern tip.', miles: 2.0, elevationGainFt: 200, difficulty: 'Moderate' },
   { id: 'virgin-islands-annaberg', parkId: 'virgin-islands', name: 'Annaberg Sugar Plantation Loop', description: 'Short loop past the ruins of a historic sugar mill.', miles: 0.3, elevationGainFt: 20, difficulty: 'Easy' },
   { id: 'virgin-islands-lind-point', parkId: 'virgin-islands', name: 'Lind Point Trail', description: 'Forest trail connecting to a secluded snorkeling beach.', miles: 1.1, elevationGainFt: 250, difficulty: 'Easy' },
@@ -385,7 +385,7 @@ export const ALL_TRAILS: Trail[] = [
 
   // --- Saguaro ---
   { id: 'saguaro-cactus-forest', parkId: 'saguaro', name: 'Cactus Forest Loop Trail', description: 'Path through a dense forest of towering saguaro cacti.', miles: 2.5, elevationGainFt: 100, difficulty: 'Easy' },
-  { id: 'saguaro-douglas-spring', parkId: 'saguaro', name: 'Douglas Spring Trail', description: 'Desert trail to a seasonal spring in the Rincon foothills.', miles: 6.0, elevationGainFt: 1900, difficulty: 'Hard' },
+  { id: 'saguaro-douglas-spring', parkId: 'saguaro', name: 'Douglas Spring Trail', description: 'Desert trail to a seasonal spring in the Rincon foothills.', miles: 12.0, elevationGainFt: 1900, difficulty: 'Hard' },
   { id: 'saguaro-hugh-norris', parkId: 'saguaro', name: 'Hugh Norris Trail', description: 'Long ridgeline climb with panoramic desert views.', miles: 10.0, elevationGainFt: 2400, difficulty: 'Hard' },
   { id: 'saguaro-freeman-homestead', parkId: 'saguaro', name: 'Freeman Homestead Trail', description: 'Short loop past an old homestead site among saguaros.', miles: 1.0, elevationGainFt: 100, difficulty: 'Easy' },
   { id: 'saguaro-signal-hill', parkId: 'saguaro', name: 'Signal Hill Trail', description: 'Short walk to ancient petroglyphs carved by the Hohokam.', miles: 0.3, elevationGainFt: 50, difficulty: 'Easy' },

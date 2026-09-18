@@ -1,146 +1,405 @@
 {
   "parkId": "acadia",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "AllTrails", "Friends of Acadia", "Joe's Guide to Acadia", "Earthtrekkers", "morethanjustparks.com"],
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "Friends of Acadia",
+    "Joe's Guide to Acadia",
+    "Earthtrekkers",
+    "morethanjustparks.com"
+  ],
   "trails": [
     {
       "id": "acadia-precipice",
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Mid-Aug to Oct (closed roughly mid-Mar-mid-Aug for peregrine falcon nesting)",
-      "tags": ["Exposure", "Iron Rungs", "Seasonal Closure"],
+      "tags": [
+        "Exposure",
+        "Iron Rungs",
+        "Seasonal Closure"
+      ],
       "lastVerified": "2026-09-15",
       "trailTip": "As of September 2026, NPS.gov confirms this trail closes annually, typically from March through mid-August, to protect nesting peregrine falcons — always check the park's current closures page before you go, since exact dates vary by year.",
       "didYouKnow": "The Precipice is one of the most exposed non-technical trails in the eastern U.S., climbing roughly 1,000 feet up sheer granite cliffs on iron rungs and ladders in well under a mile.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 250 },
-        { "mile": 0.9, "elevationFt": 500, "label": "Iron rung section begins" },
-        { "mile": 1.3, "elevationFt": 800 },
-        { "mile": 1.6, "elevationFt": 950, "label": "Exposed knife-edge ridge" },
-        { "mile": 2.1, "elevationFt": 1000, "label": "Champlain Mountain summit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 250
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 500,
+          "label": "Iron rung section begins"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 800
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 1000,
+          "label": "Champlain Mountain summit"
+        },
+        {
+          "mile": 1.85,
+          "elevationFt": 500,
+          "label": "Descent via North Ridge Trail"
+        },
+        {
+          "mile": 2.1,
+          "elevationFt": 0,
+          "label": "Loop closes near trailhead"
+        }
       ]
     },
     {
       "id": "acadia-cadillac-mountain",
       "estimatedTime": "3-4 hrs",
       "bestSeason": "May-Oct",
-      "tags": ["Exposed Ridge", "Summit Views"],
+      "tags": [
+        "Exposed Ridge",
+        "Summit Views"
+      ],
       "trailTip": "The open granite ridge has little shade and can be windy even on a warm day — bring layers and sun protection.",
       "didYouKnow": "Cadillac Mountain is the highest point on the U.S. Atlantic coast, and from roughly early October to early March it's the first place in the country to see the sunrise.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead (Route 233)" },
-        { "mile": 0.6, "elevationFt": 200 },
-        { "mile": 1.1, "elevationFt": 450 },
-        { "mile": 1.6, "elevationFt": 750, "label": "Open granite ridge" },
-        { "mile": 2.0, "elevationFt": 1000 },
-        { "mile": 2.2, "elevationFt": 1100, "label": "Cadillac Mountain summit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead (Route 233)"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 450
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 750,
+          "label": "Open granite ridge"
+        },
+        {
+          "mile": 2,
+          "elevationFt": 1000
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 1100,
+          "label": "Cadillac Mountain summit"
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": 700
+        },
+        {
+          "mile": 3.5,
+          "elevationFt": 350
+        },
+        {
+          "mile": 4.4,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "acadia-jordan-pond",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "May-Oct (spring/fall can be muddy)",
-      "tags": ["Flat Loop", "Family Friendly"],
+      "tags": [
+        "Flat Loop",
+        "Family Friendly"
+      ],
       "trailTip": "The eastern shore crosses a short boulder field below Penobscot Mountain — wear sturdy shoes even though the trail is billed as flat.",
       "didYouKnow": "Jordan Pond's water is famous for its clarity, and the trail passes directly beneath 'the Bubbles,' twin granite peaks left behind by receding glaciers.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Jordan Pond House" },
-        { "mile": 0.8, "elevationFt": 10 },
-        { "mile": 1.6, "elevationFt": 20, "label": "Bubbles overlook" },
-        { "mile": 2.4, "elevationFt": 30, "label": "Boulder talus below Penobscot cliffs" },
-        { "mile": 3.3, "elevationFt": 5, "label": "Loop closes near Jordan Pond House" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Jordan Pond House"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 10
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 20,
+          "label": "Bubbles overlook"
+        },
+        {
+          "mile": 2.4,
+          "elevationFt": 30,
+          "label": "Boulder talus below Penobscot cliffs"
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": 20
+        },
+        {
+          "mile": 3.3,
+          "elevationFt": 5,
+          "label": "Loop closes near Jordan Pond House"
+        }
       ]
     },
     {
       "id": "acadia-beehive",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Late June-Oct (avoid when wet — granite gets slick)",
-      "tags": ["Exposure", "Iron Rungs", "Not for Kids/Pets"],
+      "tags": [
+        "Exposure",
+        "Iron Rungs",
+        "Not for Kids/Pets"
+      ],
       "trailTip": "Skip this trail in the rain — the granite ledges and iron rungs get dangerously slick, and the route isn't recommended for young children, pets, or anyone afraid of heights.",
       "didYouKnow": "Despite its short length, the Beehive is one of Acadia's most thrilling hikes, gaining about 450 feet up exposed granite in under a mile via iron rungs and narrow ledges.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead (Sand Beach Rd)" },
-        { "mile": 0.3, "elevationFt": 150, "label": "Iron rung section begins" },
-        { "mile": 0.6, "elevationFt": 350, "label": "Exposed ladder climb" },
-        { "mile": 0.8, "elevationFt": 450, "label": "Beehive summit" },
-        { "mile": 1.1, "elevationFt": 300, "label": "Descent past The Bowl" },
-        { "mile": 1.5, "elevationFt": 50, "label": "Loop closes near trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead (Sand Beach Rd)"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 150,
+          "label": "Iron rung section begins"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 350,
+          "label": "Exposed ladder climb"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 450,
+          "label": "Beehive summit"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 300,
+          "label": "Descent past The Bowl"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 50,
+          "label": "Loop closes near trailhead"
+        }
       ]
     },
     {
       "id": "acadia-ocean-path",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Year-round (summer/fall busiest)",
-      "tags": ["Coastal", "Family Friendly"],
+      "tags": [
+        "Coastal",
+        "Family Friendly"
+      ],
       "trailTip": "Time a visit near high tide for the loudest show at Thunder Hole, and stay well back from the edge on all coastal rocks — rogue waves are a real hazard.",
       "didYouKnow": "Ocean Path runs almost the entire length of Park Loop Road along the shoreline, connecting Sand Beach to Otter Cliff, one of the highest headlands directly on the U.S. Atlantic coast.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Sand Beach trailhead" },
-        { "mile": 1.0, "elevationFt": 40, "label": "Thunder Hole" },
-        { "mile": 2.0, "elevationFt": 90 },
-        { "mile": 3.0, "elevationFt": 160, "label": "Otter Cliff" },
-        { "mile": 4.4, "elevationFt": 60, "label": "Otter Point" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Sand Beach trailhead"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 40,
+          "label": "Thunder Hole"
+        },
+        {
+          "mile": 2,
+          "elevationFt": 90
+        },
+        {
+          "mile": 3,
+          "elevationFt": 160,
+          "label": "Otter Cliff"
+        },
+        {
+          "mile": 3.7,
+          "elevationFt": 110
+        },
+        {
+          "mile": 4.4,
+          "elevationFt": 60,
+          "label": "Otter Point"
+        }
       ]
     },
     {
       "id": "acadia-gorham-mountain",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "May-Oct",
-      "tags": ["Coastal Views", "Summit"],
+      "tags": [
+        "Coastal Views",
+        "Summit"
+      ],
       "trailTip": "The Cadillac Cliffs alternate route near the start adds a short scramble past an old sea cave — a fun detour, but skip it if the rock is wet.",
       "didYouKnow": "Gorham Mountain's summit sits just 525 feet above sea level but offers one of the widest ocean panoramas in the park, taking in Sand Beach, Otter Cliff, and the open Atlantic.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead (Route 3)" },
-        { "mile": 0.4, "elevationFt": 150 },
-        { "mile": 0.8, "elevationFt": 350, "label": "Cadillac Cliffs junction" },
-        { "mile": 1.2, "elevationFt": 525, "label": "Gorham Mountain summit" },
-        { "mile": 1.8, "elevationFt": 200, "label": "Descent toward Ocean Path" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead (Route 3)"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 150
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 350,
+          "label": "Cadillac Cliffs junction"
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 525,
+          "label": "Gorham Mountain summit"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 250
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 0,
+          "label": "Loop closes near trailhead"
+        }
       ]
     },
     {
       "id": "acadia-south-bubble",
       "estimatedTime": "45 min-1 hr",
       "bestSeason": "May-Oct",
-      "tags": ["Short Climb", "Family Friendly"],
+      "tags": [
+        "Short Climb",
+        "Family Friendly"
+      ],
       "trailTip": "Stay behind the marked barrier at Bubble Rock — the glacial erratic looks precarious but people have been injured trying to pose right beneath it.",
       "didYouKnow": "Bubble Rock is a glacial erratic, a boulder carried and deposited by the ice sheet that carved Acadia's landscape thousands of years ago — geologists have traced its origin to bedrock miles away.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Bubble Rock parking area" },
-        { "mile": 0.2, "elevationFt": 200 },
-        { "mile": 0.4, "elevationFt": 400 },
-        { "mile": 0.6, "elevationFt": 450, "label": "South Bubble summit (Bubble Rock)" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Bubble Rock parking area"
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": 200
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 450,
+          "label": "South Bubble summit (Bubble Rock)"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 325
+        },
+        {
+          "mile": 0.45,
+          "elevationFt": 200
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 0,
+          "label": "Return to parking area"
+        }
       ]
     },
     {
       "id": "acadia-jordan-cliffs",
       "estimatedTime": "2.5-3 hrs",
       "bestSeason": "Mid-Aug to Oct (closed spring-summer for peregrine falcon nesting)",
-      "tags": ["Exposure", "Iron Rungs", "Seasonal Closure"],
+      "tags": [
+        "Exposure",
+        "Iron Rungs",
+        "Seasonal Closure"
+      ],
       "lastVerified": "2026-09-15",
       "trailTip": "As of September 2026, NPS.gov confirms this trail closes most years from around March through mid-August for peregrine falcon nesting — check current conditions before planning your hike, since exact reopening dates vary by year.",
       "didYouKnow": "Jordan Cliffs gains over 1,000 feet in under a mile along its steepest cliffside section, using iron rungs bolted directly into the rock face.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead near Jordan Pond" },
-        { "mile": 0.5, "elevationFt": 200 },
-        { "mile": 0.9, "elevationFt": 700, "label": "Iron rung cliffside section" },
-        { "mile": 1.3, "elevationFt": 950, "label": "Jordan Cliffs high point" },
-        { "mile": 2.5, "elevationFt": 500, "label": "Descent toward Deer Brook" },
-        { "mile": 3.6, "elevationFt": 50, "label": "Loop closes near Jordan Pond House" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead near Jordan Pond"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 200
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 700,
+          "label": "Iron rung cliffside section"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 950,
+          "label": "Jordan Cliffs high point"
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 500,
+          "label": "Descent toward Deer Brook"
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 50,
+          "label": "Loop closes near Jordan Pond House"
+        }
       ]
     },
     {
       "id": "acadia-great-head",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Year-round (summer/fall busiest)",
-      "tags": ["Coastal", "Short Loop"],
+      "tags": [
+        "Coastal",
+        "Short Loop"
+      ],
       "trailTip": "Start from the far end of Sand Beach and go early to avoid crowded beach parking in summer.",
       "didYouKnow": "Great Head is a granite headland shaped by the same glacial and wave action that formed Sand Beach, and it's one of the highest points directly on Acadia's coastline.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead (Sand Beach)" },
-        { "mile": 0.5, "elevationFt": 80 },
-        { "mile": 0.9, "elevationFt": 175, "label": "Great Head summit" },
-        { "mile": 1.4, "elevationFt": 90 },
-        { "mile": 1.8, "elevationFt": 20, "label": "Loop closes near Sand Beach" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead (Sand Beach)"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 40
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 80
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 175,
+          "label": "Great Head summit"
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 90
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 20,
+          "label": "Loop closes near Sand Beach"
+        }
       ]
     }
   ],
@@ -151,7 +410,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Apr-Aug (nesting)",
       "whereToLook": "Precipice, Jordan Cliffs, and Valley Cove cliff faces",
-      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "tags": [
+        "Cliff Nester",
+        "Seasonal Closure"
+      ],
       "viewingTip": "Use the ranger-staffed spotting scope often set up near Precipice or Jordan Pond during nesting season rather than approaching closed trails.",
       "didYouKnow": "Peregrine falcons can reach speeds over 200 mph in a hunting dive, making them the fastest animal on Earth — Acadia's cliff-nesting pairs were part of the species' recovery after DDT nearly wiped it out."
     },
@@ -161,7 +423,10 @@
       "bestTimeOfDay": "Midday (near low tide)",
       "bestSeason": "Year-round (most visible late spring-fall)",
       "whereToLook": "Rocky ledges and offshore islands, visible from Ocean Path or by boat tour",
-      "tags": ["Coastal", "Tide-Dependent"],
+      "tags": [
+        "Coastal",
+        "Tide-Dependent"
+      ],
       "viewingTip": "Bring binoculars — seals haul out on rocks that are only exposed around low tide, and boats must keep a legal distance away.",
       "didYouKnow": "Harbor seals can dive for over 20 minutes at a time, but they still need to haul out on rocks daily to rest, regulate body temperature, and avoid predators."
     },
@@ -171,7 +436,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round (fall rut most active)",
       "whereToLook": "Forest edges and carriage roads throughout the island",
-      "tags": ["Common", "Carriage Roads"],
+      "tags": [
+        "Common",
+        "Carriage Roads"
+      ],
       "viewingTip": "Drive carriage roads and park roads slowly at dawn and dusk, when deer are most active near the roadside.",
       "didYouKnow": "Acadia's white-tailed deer are capable swimmers and have been spotted crossing Somes Sound between the island's forested peninsulas."
     },
@@ -181,7 +449,9 @@
       "bestTimeOfDay": "Early Morning",
       "bestSeason": "May-Sept (nesting)",
       "whereToLook": "Jordan Pond, Eagle Lake, and other quiet ponds",
-      "tags": ["Nesting Waterbird"],
+      "tags": [
+        "Nesting Waterbird"
+      ],
       "viewingTip": "Keep a wide distance from shoreline nests and let chicks be — loons are easily flushed off eggs, and paddlers should give calling adults plenty of room.",
       "didYouKnow": "A loon's haunting wail can carry over a mile across still water, and the species needs a long open-water runway — sometimes a quarter mile — just to take flight."
     },
@@ -191,7 +461,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Year-round",
       "whereToLook": "Spruce-fir forest throughout the park, especially near conifer stands",
-      "tags": ["Common", "Vocal"],
+      "tags": [
+        "Common",
+        "Vocal"
+      ],
       "viewingTip": "Follow the chattering scold call — red squirrels are territorial and loudly announce anyone passing through their patch of forest.",
       "didYouKnow": "A single red squirrel can cache thousands of spruce and fir cones in a midden pile to survive Acadia's winter, sometimes reusing the same pile for generations."
     },
@@ -201,7 +474,10 @@
       "bestTimeOfDay": "Dusk / Night",
       "bestSeason": "Year-round",
       "whereToLook": "Spruce-fir forest, often resting high in tree branches",
-      "tags": ["Nocturnal", "Tree Dweller"],
+      "tags": [
+        "Nocturnal",
+        "Tree Dweller"
+      ],
       "viewingTip": "Look up — porcupines often spend the day resting in the crooks of conifer branches rather than on the ground.",
       "didYouKnow": "A porcupine carries roughly 30,000 quills, which detach easily on contact and have a barbed tip that can slowly work into skin over hours."
     },
@@ -211,7 +487,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Apr-Sept (nesting)",
       "whereToLook": "Somes Sound and Long Pond",
-      "tags": ["Fish Hunter", "Nesting"],
+      "tags": [
+        "Fish Hunter",
+        "Nesting"
+      ],
       "viewingTip": "Watch the water near known nest platforms — ospreys hover briefly before folding their wings into a dramatic feet-first dive for fish.",
       "didYouKnow": "Ospreys have reversible outer toes and barbed foot pads that let them grip slippery fish, and they carry prey head-first in flight to reduce wind drag."
     },
@@ -221,7 +500,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round (coat changes seasonally)",
       "whereToLook": "Dense understory and thickets throughout the park",
-      "tags": ["Camouflage", "Crepuscular"],
+      "tags": [
+        "Camouflage",
+        "Crepuscular"
+      ],
       "viewingTip": "Look for movement rather than shape in dense brush — their coat, brown in summer and white in winter, is built to disappear against the season.",
       "didYouKnow": "Snowshoe hares get their name from oversized hind feet that spread their weight across snow, letting them outrun predators like lynx and fox in deep winter snowpack."
     },
@@ -231,7 +513,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Apr-Nov (denning in winter)",
       "whereToLook": "Remote inland sections away from developed areas",
-      "tags": ["Rare", "Elusive"],
+      "tags": [
+        "Rare",
+        "Elusive"
+      ],
       "viewingTip": "Sightings are uncommon on Mount Desert Island — if you do see one, keep a safe distance and never approach or offer food.",
       "didYouKnow": "Acadia's black bear population is small and shy compared to mainland Maine, likely limited by the island's fragmented forest and proximity to development."
     }

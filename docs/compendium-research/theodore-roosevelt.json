@@ -12,7 +12,13 @@
       "didYouKnow": "The canyon's wind-sculpted walls overlook a sweeping bend of the Little Missouri River, a popular sunset viewpoint in the South Unit.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.05, "elevationFt": 20 },
+        { "mile": 0.1, "elevationFt": 50 },
+        { "mile": 0.15, "elevationFt": 80 },
         { "mile": 0.2, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 0.25, "elevationFt": 70 },
+        { "mile": 0.3, "elevationFt": 40 },
+        { "mile": 0.35, "elevationFt": 15 },
         { "mile": 0.4, "elevationFt": 0 }
       ]
     },
@@ -25,10 +31,14 @@
       "didYouKnow": "The petrified wood scattered along this trail comes from an ancient forest buried roughly 55 million years ago, later exposed as the surrounding badlands eroded.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 150 },
-        { "mile": 5.0, "elevationFt": 300, "label": "Petrified stumps area" },
-        { "mile": 7.5, "elevationFt": 350 },
-        { "mile": 10.0, "elevationFt": 400 }
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 2.5, "elevationFt": 220 },
+        { "mile": 4.0, "elevationFt": 350, "label": "Petrified stumps area" },
+        { "mile": 5.0, "elevationFt": 400, "label": "High point" },
+        { "mile": 6.5, "elevationFt": 280 },
+        { "mile": 8.0, "elevationFt": 150 },
+        { "mile": 9.0, "elevationFt": 60 },
+        { "mile": 10.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -40,7 +50,11 @@
       "didYouKnow": "At 2,855 feet, Buck Hill is one of the highest points accessible by a short trail in the South Unit, with views stretching across the badlands.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.03, "elevationFt": 30 },
+        { "mile": 0.06, "elevationFt": 60 },
         { "mile": 0.1, "elevationFt": 100, "label": "Summit" },
+        { "mile": 0.14, "elevationFt": 60 },
+        { "mile": 0.17, "elevationFt": 25 },
         { "mile": 0.2, "elevationFt": 0 }
       ]
     },
@@ -53,9 +67,13 @@
       "didYouKnow": "The trail's caprock formations are hardened layers of rock that erode more slowly than the surrounding badlands, leaving them perched above the softer terrain.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 200 },
-        { "mile": 3.0, "elevationFt": 350 },
-        { "mile": 4.3, "elevationFt": 400 }
+        { "mile": 0.8, "elevationFt": 120 },
+        { "mile": 1.5, "elevationFt": 220 },
+        { "mile": 2.3, "elevationFt": 350, "label": "High coulee point" },
+        { "mile": 3.0, "elevationFt": 400, "label": "Caprock formations" },
+        { "mile": 3.6, "elevationFt": 250 },
+        { "mile": 4.0, "elevationFt": 100 },
+        { "mile": 4.3, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -67,8 +85,12 @@
       "didYouKnow": "The canyon's banded colors come from layers of ancient sediment, lignite, and volcanic ash exposed by erosion over millions of years.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 100, "label": "Canyon floor" },
-        { "mile": 0.9, "elevationFt": 0 }
+        { "mile": 0.15, "elevationFt": 40 },
+        { "mile": 0.3, "elevationFt": 80 },
+        { "mile": 0.45, "elevationFt": 100, "label": "High point" },
+        { "mile": 0.6, "elevationFt": 70 },
+        { "mile": 0.75, "elevationFt": 30 },
+        { "mile": 0.9, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -80,9 +102,13 @@
       "didYouKnow": "The Ekblom Trail connects to the North Unit's other backcountry routes, offering a quieter way to explore the same badlands terrain as the more popular Caprock Coulee loop.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 150 },
-        { "mile": 3.0, "elevationFt": 300 },
-        { "mile": 5.0, "elevationFt": 400 }
+        { "mile": 1.0, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 280 },
+        { "mile": 3.0, "elevationFt": 380 },
+        { "mile": 3.5, "elevationFt": 400, "label": "High point" },
+        { "mile": 4.2, "elevationFt": 220 },
+        { "mile": 4.7, "elevationFt": 80 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -94,10 +120,15 @@
       "didYouKnow": "The Achenbach Trail is the longest and most rugged maintained trail in the park, looping through the North Unit's most remote badlands terrain.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 5.0, "elevationFt": 500 },
-        { "mile": 10.0, "elevationFt": 900 },
-        { "mile": 14.0, "elevationFt": 1200, "label": "River ford" },
-        { "mile": 18.0, "elevationFt": 1500 }
+        { "mile": 2.0, "elevationFt": 300 },
+        { "mile": 4.0, "elevationFt": 600 },
+        { "mile": 6.0, "elevationFt": 900 },
+        { "mile": 8.0, "elevationFt": 1200, "label": "High badlands point" },
+        { "mile": 10.0, "elevationFt": 1500, "label": "Peak elevation" },
+        { "mile": 12.0, "elevationFt": 1100 },
+        { "mile": 14.0, "elevationFt": 700, "label": "River ford" },
+        { "mile": 16.0, "elevationFt": 300 },
+        { "mile": 18.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -109,8 +140,12 @@
       "didYouKnow": "The trail passes the site of a lignite coal seam that burned underground for years starting in 1951, baking the surrounding clay into the reddish 'scoria' rock common throughout the park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 30 },
+        { "mile": 0.3, "elevationFt": 60 },
         { "mile": 0.4, "elevationFt": 80, "label": "Burned coal vein site" },
-        { "mile": 0.8, "elevationFt": 0 }
+        { "mile": 0.55, "elevationFt": 50 },
+        { "mile": 0.7, "elevationFt": 15 },
+        { "mile": 0.8, "elevationFt": 0, "label": "Loop end" }
       ]
     }
   ],

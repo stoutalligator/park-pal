@@ -12,8 +12,12 @@
       "didYouKnow": "Climbing High Dune is deceptively strenuous because loose sand gives way underfoot with every step, so the round trip typically takes far longer than the short mileage suggests.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Main Dunes Parking Area" },
-        { "mile": 1.0, "elevationFt": 350 },
-        { "mile": 2.5, "elevationFt": 650, "label": "High Dune Summit" }
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.8, "elevationFt": 350 },
+        { "mile": 1.25, "elevationFt": 650, "label": "High Dune Summit (turnaround)" },
+        { "mile": 1.7, "elevationFt": 350 },
+        { "mile": 2.1, "elevationFt": 150 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Back at parking area" }
       ]
     },
     {
@@ -25,9 +29,14 @@
       "didYouKnow": "At roughly 750 feet of prominence, Star Dune is considered the tallest dune in North America, built up where wind patterns converge from multiple directions to pile sand into a star-shaped peak.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Main Dunes Parking Area" },
-        { "mile": 2.0, "elevationFt": 400 },
-        { "mile": 4.0, "elevationFt": 600 },
-        { "mile": 6.0, "elevationFt": 750, "label": "Star Dune Summit" }
+        { "mile": 0.8, "elevationFt": 200 },
+        { "mile": 1.6, "elevationFt": 400 },
+        { "mile": 2.4, "elevationFt": 600 },
+        { "mile": 3.0, "elevationFt": 750, "label": "Star Dune Summit (turnaround)" },
+        { "mile": 3.6, "elevationFt": 600 },
+        { "mile": 4.4, "elevationFt": 400 },
+        { "mile": 5.2, "elevationFt": 200 },
+        { "mile": 6.0, "elevationFt": 0, "label": "Back at parking area" }
       ]
     },
     {
@@ -39,8 +48,14 @@
       "didYouKnow": "Mosca Pass was once a route used by Ute travelers and later by settlers moving between the San Luis Valley and the plains to the east, long before the park's dunes-focused trails existed.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Montville/Mosca Pass Trailhead" },
-        { "mile": 1.5, "elevationFt": 700 },
-        { "mile": 3.5, "elevationFt": 1400, "label": "Mosca Pass" }
+        { "mile": 0.4, "elevationFt": 300 },
+        { "mile": 0.9, "elevationFt": 600 },
+        { "mile": 1.4, "elevationFt": 1000 },
+        { "mile": 1.75, "elevationFt": 1400, "label": "Mosca Pass (turnaround)" },
+        { "mile": 2.2, "elevationFt": 1000 },
+        { "mile": 2.7, "elevationFt": 600 },
+        { "mile": 3.2, "elevationFt": 300 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -52,8 +67,11 @@
       "didYouKnow": "The trail passes the site of the former town of Montville, a short-lived 1930s settlement built to serve early visitors before the National Monument (the park's original designation) was established.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Montville Trailhead" },
-        { "mile": 0.25, "elevationFt": 60 },
-        { "mile": 0.5, "elevationFt": 100 }
+        { "mile": 0.1, "elevationFt": 30 },
+        { "mile": 0.2, "elevationFt": 70 },
+        { "mile": 0.25, "elevationFt": 100, "label": "Overlook high point" },
+        { "mile": 0.35, "elevationFt": 60 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -65,9 +83,14 @@
       "didYouKnow": "Medano Lake sits in an alpine basin beneath the Sangre de Cristo peaks and is one of the few named lakes accessible within the park's mountainous eastern section, in sharp visual contrast to the dunefield below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Medano Pass Trailhead" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 4.0, "elevationFt": 1500 },
-        { "mile": 6.0, "elevationFt": 2000, "label": "Medano Lake" }
+        { "mile": 0.8, "elevationFt": 300 },
+        { "mile": 1.6, "elevationFt": 700 },
+        { "mile": 2.4, "elevationFt": 1300 },
+        { "mile": 3.0, "elevationFt": 2000, "label": "Medano Lake (turnaround)" },
+        { "mile": 3.6, "elevationFt": 1300 },
+        { "mile": 4.4, "elevationFt": 700 },
+        { "mile": 5.2, "elevationFt": 300 },
+        { "mile": 6.0, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -79,8 +102,12 @@
       "didYouKnow": "Zapata Falls sits just outside the main park boundary on adjacent National Forest land, but is managed as a popular companion stop to a Great Sand Dunes visit.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Zapata Falls Trailhead" },
-        { "mile": 0.3, "elevationFt": 150 },
-        { "mile": 0.6, "elevationFt": 200, "label": "Zapata Falls" }
+        { "mile": 0.1, "elevationFt": 80 },
+        { "mile": 0.2, "elevationFt": 150 },
+        { "mile": 0.3, "elevationFt": 200, "label": "Zapata Falls (turnaround)" },
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.5, "elevationFt": 80 },
+        { "mile": 0.6, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -92,8 +119,12 @@
       "didYouKnow": "The overlook here gives one of the best perspectives on how the dunefield is boxed in by the Sangre de Cristo Mountains, a geography that helped trap the windblown sand into the tallest dunes in North America.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Piñon Flats Trailhead" },
-        { "mile": 0.7, "elevationFt": 250 },
-        { "mile": 1.4, "elevationFt": 400, "label": "Dunes Overlook" }
+        { "mile": 0.25, "elevationFt": 150 },
+        { "mile": 0.5, "elevationFt": 300 },
+        { "mile": 0.7, "elevationFt": 400, "label": "Dunes Overlook (turnaround)" },
+        { "mile": 0.9, "elevationFt": 300 },
+        { "mile": 1.15, "elevationFt": 150 },
+        { "mile": 1.4, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -105,8 +136,11 @@
       "didYouKnow": "The Sand Ramp Trail connects several backcountry campsites and offers one of the only ways to experience the dunefield's edge on foot without committing to a full dune ascent.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Point of No Return Trailhead" },
+        { "mile": 2.0, "elevationFt": 150 },
         { "mile": 4.0, "elevationFt": 300 },
+        { "mile": 6.0, "elevationFt": 450 },
         { "mile": 8.0, "elevationFt": 600 },
+        { "mile": 9.5, "elevationFt": 700 },
         { "mile": 11.0, "elevationFt": 800, "label": "Sand Creek Trail junction" }
       ]
     }

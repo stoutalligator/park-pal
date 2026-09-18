@@ -13,8 +13,12 @@
       "didYouKnow": "The grove here includes bristlecone pines more than 3,000 years old — among the oldest living non-clonal organisms on Earth, predating the construction of many ancient Egyptian monuments.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Bristlecone/Alpine Lakes Trailhead" },
-        { "mile": 1.4, "elevationFt": 400 },
-        { "mile": 2.8, "elevationFt": 600, "label": "Bristlecone Pine Grove" }
+        { "mile": 0.5, "elevationFt": 150 },
+        { "mile": 1.0, "elevationFt": 350 },
+        { "mile": 1.4, "elevationFt": 600, "label": "Bristlecone Pine Grove (turnaround)" },
+        { "mile": 1.8, "elevationFt": 350 },
+        { "mile": 2.3, "elevationFt": 150 },
+        { "mile": 2.8, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -26,9 +30,14 @@
       "didYouKnow": "At 13,065 feet, Wheeler Peak is Nevada's second-highest point and the high point of the entire Snake Range, visible from over a hundred miles away across the Great Basin desert.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Summit Trailhead" },
+        { "mile": 1.0, "elevationFt": 500 },
         { "mile": 2.0, "elevationFt": 1000 },
         { "mile": 3.5, "elevationFt": 2000, "label": "Treeline" },
-        { "mile": 4.3, "elevationFt": 2900, "label": "Wheeler Peak Summit" }
+        { "mile": 4.3, "elevationFt": 2900, "label": "Wheeler Peak Summit (turnaround)" },
+        { "mile": 5.1, "elevationFt": 2000 },
+        { "mile": 6.6, "elevationFt": 1000 },
+        { "mile": 7.6, "elevationFt": 500 },
+        { "mile": 8.6, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -41,8 +50,10 @@
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Bristlecone/Alpine Lakes Trailhead" },
         { "mile": 0.8, "elevationFt": 250, "label": "Stella Lake" },
-        { "mile": 1.8, "elevationFt": 500, "label": "Teresa Lake" },
-        { "mile": 2.7, "elevationFt": 600 }
+        { "mile": 1.4, "elevationFt": 450 },
+        { "mile": 1.8, "elevationFt": 600, "label": "Teresa Lake" },
+        { "mile": 2.2, "elevationFt": 300 },
+        { "mile": 2.7, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -54,8 +65,12 @@
       "didYouKnow": "Lexington Arch is unusually made of limestone rather than the sandstone typical of most Southwest arches, and some geologists believe it may be the remnant of a collapsed cave system rather than a wind-and-water-carved arch.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Lexington Arch Trailhead" },
-        { "mile": 1.5, "elevationFt": 600 },
-        { "mile": 3.4, "elevationFt": 1100, "label": "Lexington Arch" }
+        { "mile": 0.6, "elevationFt": 300 },
+        { "mile": 1.2, "elevationFt": 700 },
+        { "mile": 1.7, "elevationFt": 1100, "label": "Lexington Arch (turnaround)" },
+        { "mile": 2.3, "elevationFt": 700 },
+        { "mile": 2.9, "elevationFt": 300 },
+        { "mile": 3.4, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -67,8 +82,11 @@
       "didYouKnow": "The trail's interpretive signs highlight how the pinyon-juniper woodland here has slowly expanded over the past century, a shift ecologists partly attribute to changes in wildfire frequency across the Great Basin.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead near Lehman Caves Visitor Center" },
-        { "mile": 0.15, "elevationFt": 30 },
-        { "mile": 0.3, "elevationFt": 50 }
+        { "mile": 0.06, "elevationFt": 15 },
+        { "mile": 0.12, "elevationFt": 35 },
+        { "mile": 0.15, "elevationFt": 50 },
+        { "mile": 0.22, "elevationFt": 25 },
+        { "mile": 0.3, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -80,9 +98,14 @@
       "didYouKnow": "Baker Lake sits in a glacial cirque below Baker Peak and is one of the least-visited alpine lakes in the park despite being nearly as scenic as the more popular Stella and Teresa Lakes.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Baker Creek Trailhead" },
-        { "mile": 4.0, "elevationFt": 1200 },
-        { "mile": 8.0, "elevationFt": 2200 },
-        { "mile": 12.0, "elevationFt": 2600, "label": "Baker Lake" }
+        { "mile": 1.5, "elevationFt": 500 },
+        { "mile": 3.0, "elevationFt": 1200 },
+        { "mile": 4.5, "elevationFt": 2000 },
+        { "mile": 6.0, "elevationFt": 2600, "label": "Baker Lake (turnaround)" },
+        { "mile": 7.5, "elevationFt": 2000 },
+        { "mile": 9.0, "elevationFt": 1200 },
+        { "mile": 10.5, "elevationFt": 500 },
+        { "mile": 12.0, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -95,7 +118,11 @@
       "didYouKnow": "The trail follows Lehman Creek closely enough that hikers can usually hear running water for most of the route, a rarity in this famously arid range.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Upper Lehman Creek Campground" },
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 2.0, "elevationFt": 600 },
         { "mile": 3.0, "elevationFt": 1000 },
+        { "mile": 4.5, "elevationFt": 1400 },
+        { "mile": 5.7, "elevationFt": 1700 },
         { "mile": 6.9, "elevationFt": 2000, "label": "Wheeler Peak Campground" }
       ]
     },
@@ -108,8 +135,14 @@
       "didYouKnow": "The Osceola Ditch was a 19th-century engineering effort to carry water more than 18 miles to a nearby gold-mining district — an operation that ultimately failed due to massive water loss from leakage along its route.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Osceola Ditch Trailhead" },
-        { "mile": 2.5, "elevationFt": 200 },
-        { "mile": 5.0, "elevationFt": 400 }
+        { "mile": 0.6, "elevationFt": 80 },
+        { "mile": 1.3, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 300 },
+        { "mile": 2.5, "elevationFt": 400, "label": "Turnaround point along the ditch grade" },
+        { "mile": 3.2, "elevationFt": 300 },
+        { "mile": 4.0, "elevationFt": 150 },
+        { "mile": 4.4, "elevationFt": 80 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     }
   ],

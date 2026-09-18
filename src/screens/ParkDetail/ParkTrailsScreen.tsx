@@ -5,7 +5,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ALL_TRAILS } from '@/data/trails';
 import { Trail, TrailDifficulty, Units } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
@@ -59,16 +58,16 @@ function TrailListCard({ trail, completed, units, onToggleCompleted, onPress }: 
 
 export default function ParkTrailsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
+  const { parks, trails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
   const units = userProfile.units;
   const [search, setSearch] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<'All' | TrailDifficulty>('All');
 
   const park = parks.find((p) => p.id === parkId);
-  const allTrails = ALL_TRAILS.filter((t) => t.parkId === parkId);
+  const allTrails = trails.filter((t) => t.parkId === parkId);
   const completedCount = allTrails.filter((t) => isTrailCompleted(t.id)).length;
 
-  const trails = allTrails
+  const filteredTrails = allTrails
     .filter((t) => {
       const matchesSearch = t.name.toLowerCase().includes(search.trim().toLowerCase());
       const matchesDifficulty = difficultyFilter === 'All' || t.difficulty === difficultyFilter;
@@ -105,7 +104,7 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
       </View>
       <Text style={styles.progressText}>{completedCount} of {allTrails.length} completed</Text>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        {trails.map((trail) => (
+        {filteredTrails.map((trail) => (
           <TrailListCard
             key={trail.id}
             trail={trail}

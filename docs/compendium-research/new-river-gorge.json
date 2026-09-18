@@ -11,9 +11,15 @@
       "trailTip": "Time your hike for late afternoon light on the New River Gorge Bridge, and note the final overlook has no guardrail, so keep kids and pets close to the edge.",
       "didYouKnow": "Long Point frames one of the most photographed views of the New River Gorge Bridge, once the longest steel single-span arch bridge in the world.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1400, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 1500 },
-        { "mile": 1.6, "elevationFt": 1600, "label": "Long Point Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 90 },
+        { "mile": 0.8, "elevationFt": 180 },
+        { "mile": 1.2, "elevationFt": 280 },
+        { "mile": 1.6, "elevationFt": 350, "label": "Long Point Overlook" },
+        { "mile": 2.0, "elevationFt": 280 },
+        { "mile": 2.4, "elevationFt": 180 },
+        { "mile": 2.8, "elevationFt": 90 },
+        { "mile": 3.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -25,10 +31,12 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Endless Wall's sandstone cliffs offer some of the best rock climbing in the eastern U.S. and were part of the peregrine falcon recovery program's release sites in the Gorge.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1300, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 1450 },
-        { "mile": 2.0, "elevationFt": 1550, "label": "Diamond Point Junction Area" },
-        { "mile": 2.4, "elevationFt": 1550, "label": "Endless Wall Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Fern Creek Trailhead" },
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 180 },
+        { "mile": 1.5, "elevationFt": 230 },
+        { "mile": 2.0, "elevationFt": 250, "label": "Diamond Point Junction Area" },
+        { "mile": 2.4, "elevationFt": 250, "label": "Endless Wall / Nuttall Trailhead" }
       ]
     },
     {
@@ -39,10 +47,15 @@
       "trailTip": "The trail includes a long staircase (roughly 800 steps) down to the old coal mine ruins, so pace yourself on the return climb and bring water even for this shorter hike.",
       "didYouKnow": "Kaymoor was once one of the most productive coal mines in the New River Gorge, and the trail passes the ruins of its coke ovens and mine structures.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1500, "label": "Trailhead" },
-        { "mile": 0.7, "elevationFt": 1100 },
-        { "mile": 1.4, "elevationFt": 700, "label": "Coke Ovens" },
-        { "mile": 2.0, "elevationFt": 600, "label": "Mine Ruins / River" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": -200 },
+        { "mile": 0.5, "elevationFt": -450, "label": "Coke Ovens" },
+        { "mile": 0.75, "elevationFt": -700 },
+        { "mile": 1.0, "elevationFt": -900, "label": "Mine Ruins / River" },
+        { "mile": 1.25, "elevationFt": -700 },
+        { "mile": 1.5, "elevationFt": -450 },
+        { "mile": 1.75, "elevationFt": -200 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -53,9 +66,15 @@
       "trailTip": "Stick to the marked overlooks along the rim — the cliff edges are unfenced in several spots, so keep a firm hold on kids' hands near the viewpoints.",
       "didYouKnow": "Grandview's overlooks sit above one of the river's most dramatic horseshoe bends, formed as the New River — one of the oldest rivers in the world — cuts through ancient rock.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 2500, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 2600 },
-        { "mile": 3.2, "elevationFt": 2650, "label": "Turkey Spur Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 120 },
+        { "mile": 0.8, "elevationFt": 230 },
+        { "mile": 1.2, "elevationFt": 330 },
+        { "mile": 1.6, "elevationFt": 400, "label": "Turkey Spur Overlook" },
+        { "mile": 2.0, "elevationFt": 330 },
+        { "mile": 2.4, "elevationFt": 230 },
+        { "mile": 2.8, "elevationFt": 120 },
+        { "mile": 3.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -66,9 +85,13 @@
       "trailTip": "A short, easy loop good for families — stick to the trail around the sandstone boulders rather than climbing on them, since the rock can be slick when damp.",
       "didYouKnow": "The sandstone boulders along this trail formed from the same resistant Nuttall Sandstone layer that caps many of the Gorge's climbing cliffs.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1600, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 1700, "label": "Castle Rock" },
-        { "mile": 1.0, "elevationFt": 1600, "label": "Loop close" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 70 },
+        { "mile": 0.4, "elevationFt": 130 },
+        { "mile": 0.5, "elevationFt": 150, "label": "Castle Rock" },
+        { "mile": 0.7, "elevationFt": 90 },
+        { "mile": 0.85, "elevationFt": 40 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Loop close" }
       ]
     },
     {
@@ -79,9 +102,13 @@
       "trailTip": "This short boardwalk loop is wheelchair- and stroller-friendly and offers one of the easiest classic views of the New River Gorge Bridge in the park.",
       "didYouKnow": "The New River Gorge Bridge visible from this overlook rises 876 feet above the river, making it one of the highest bridges in the United States.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1600, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 1630, "label": "Bridge Overlook" },
-        { "mile": 0.5, "elevationFt": 1600, "label": "Loop close" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 20 },
+        { "mile": 0.2, "elevationFt": 40 },
+        { "mile": 0.25, "elevationFt": 50, "label": "Bridge Overlook" },
+        { "mile": 0.35, "elevationFt": 30 },
+        { "mile": 0.42, "elevationFt": 12 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Loop close" }
       ]
     },
     {
@@ -92,9 +119,12 @@
       "trailTip": "A quiet, shaded creekside walk near Fayetteville that's a good low-key option after a busier hike elsewhere in the park.",
       "didYouKnow": "Fern Creek's shaded, moist ravine supports a noticeably different, ferny understory than the drier rim trails just above it.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1550, "label": "Trailhead" },
-        { "mile": 0.45, "elevationFt": 1650, "label": "Creek Crossing" },
-        { "mile": 0.9, "elevationFt": 1750, "label": "Trail End" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 30 },
+        { "mile": 0.3, "elevationFt": 70, "label": "Creek Crossing" },
+        { "mile": 0.5, "elevationFt": 120 },
+        { "mile": 0.7, "elevationFt": 170 },
+        { "mile": 0.9, "elevationFt": 200, "label": "Trail End" }
       ]
     },
     {
@@ -105,9 +135,12 @@
       "trailTip": "This flat former rail bed follows the river past the historic town of Thurmond — bring a bike if you'd rather ride than walk the full 5 miles.",
       "didYouKnow": "Thurmond was once one of the busiest rail towns on the C&O Railway, shipping more freight revenue in the early 1900s than Cincinnati and Richmond combined.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1400, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 1500 },
-        { "mile": 5.0, "elevationFt": 1600, "label": "Trail End" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 40 },
+        { "mile": 2.0, "elevationFt": 90 },
+        { "mile": 3.0, "elevationFt": 140 },
+        { "mile": 4.0, "elevationFt": 180 },
+        { "mile": 5.0, "elevationFt": 200, "label": "Trail End" }
       ]
     },
     {
@@ -118,9 +151,12 @@
       "trailTip": "This gentle riverside trail through hemlock forest is a good spring wildflower walk — watch your footing on tree roots near the river's edge.",
       "didYouKnow": "The hemlocks along this trail are part of a forest type increasingly threatened across Appalachia by the invasive hemlock woolly adelgid.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1450, "label": "Trailhead" },
-        { "mile": 1.3, "elevationFt": 1500 },
-        { "mile": 2.7, "elevationFt": 1550, "label": "Arrowhead Trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Cunard Trailhead" },
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 190 },
+        { "mile": 2.7, "elevationFt": 250, "label": "Arrowhead Trailhead" }
       ]
     }
   ],

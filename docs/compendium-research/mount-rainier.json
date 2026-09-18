@@ -11,12 +11,14 @@
       "trailTip": "Snow can linger on the upper loop into July even in a normal year, so check the park's trail-conditions page before attempting the full loop early season; the view of Rainier from Panorama Point is best on a clear morning before afternoon clouds build.",
       "didYouKnow": "The Skyline Trail's Paradise meadows sit in one of the snowiest recorded spots on Earth, averaging over 640 inches of snow a year.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 5400, "label": "Paradise Trailhead" },
-        { "mile": 1.2, "elevationFt": 6000 },
-        { "mile": 2.2, "elevationFt": 6800, "label": "Panorama Point" },
-        { "mile": 2.8, "elevationFt": 7100, "label": "High Point / Glacier Vista" },
-        { "mile": 4.0, "elevationFt": 6200 },
-        { "mile": 5.5, "elevationFt": 5400, "label": "Paradise (loop close)" }
+        { "mile": 0, "elevationFt": 0, "label": "Paradise Trailhead" },
+        { "mile": 1.2, "elevationFt": 600 },
+        { "mile": 2.2, "elevationFt": 1400, "label": "Panorama Point" },
+        { "mile": 2.8, "elevationFt": 1700, "label": "High Point / Glacier Vista" },
+        { "mile": 3.4, "elevationFt": 1200 },
+        { "mile": 4.0, "elevationFt": 800 },
+        { "mile": 4.8, "elevationFt": 400 },
+        { "mile": 5.5, "elevationFt": 0, "label": "Paradise (loop close)" }
       ]
     },
     {
@@ -27,11 +29,12 @@
       "trailTip": "Hike the loop counter-clockwise from Tipsoo Lake for the best sequence of wildflower meadows and Mount Rainier views; a short section briefly leaves the national park into adjacent national forest land.",
       "didYouKnow": "Naches Peak Loop is one of the few trails in the park that crosses jurisdictions, dipping from Mount Rainier National Park into the Okanogan-Wenatchee National Forest.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 5400, "label": "Tipsoo Lake Trailhead" },
-        { "mile": 1.0, "elevationFt": 5700 },
-        { "mile": 1.8, "elevationFt": 6000, "label": "Naches Peak Saddle" },
-        { "mile": 2.6, "elevationFt": 5700 },
-        { "mile": 3.5, "elevationFt": 5400, "label": "Tipsoo Lake (loop close)" }
+        { "mile": 0, "elevationFt": 0, "label": "Tipsoo Lake Trailhead" },
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 1.8, "elevationFt": 600, "label": "Naches Peak Saddle" },
+        { "mile": 2.6, "elevationFt": 300 },
+        { "mile": 3.0, "elevationFt": 150 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Tipsoo Lake (loop close)" }
       ]
     },
     {
@@ -43,10 +46,14 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The lookout atop Tolmie Peak was built in 1933 and looks out over Eunice Lake with an unusually close view of Mount Rainier's Mowich Face.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4900, "label": "Mowich Lake Trailhead" },
-        { "mile": 1.0, "elevationFt": 5000 },
-        { "mile": 2.5, "elevationFt": 5200, "label": "Eunice Lake" },
-        { "mile": 3.25, "elevationFt": 5939, "label": "Tolmie Peak Lookout" }
+        { "mile": 0, "elevationFt": 0, "label": "Mowich Lake Trailhead" },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 2.5, "elevationFt": 300, "label": "Eunice Lake" },
+        { "mile": 3.25, "elevationFt": 1039, "label": "Tolmie Peak Lookout" },
+        { "mile": 4.0, "elevationFt": 700 },
+        { "mile": 4.9, "elevationFt": 300 },
+        { "mile": 5.6, "elevationFt": 150 },
+        { "mile": 6.5, "elevationFt": 0, "label": "Mowich Lake Trailhead" }
       ]
     },
     {
@@ -57,10 +64,15 @@
       "trailTip": "The trail crosses Van Trump Creek on a footbridge and can stay snow-covered or icy into early July in many years, so trekking poles and traction help on the steep switchbacks below the falls.",
       "didYouKnow": "At roughly 320 feet, Comet Falls is one of the tallest waterfalls in Mount Rainier National Park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3600, "label": "Trailhead" },
-        { "mile": 0.9, "elevationFt": 4000, "label": "Van Trump Creek Crossing" },
-        { "mile": 1.6, "elevationFt": 4500 },
-        { "mile": 1.9, "elevationFt": 4900, "label": "Comet Falls" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.45, "elevationFt": 140 },
+        { "mile": 0.9, "elevationFt": 380, "label": "Van Trump Creek Crossing" },
+        { "mile": 1.4, "elevationFt": 750 },
+        { "mile": 1.9, "elevationFt": 1200, "label": "Comet Falls" },
+        { "mile": 2.4, "elevationFt": 750 },
+        { "mile": 2.9, "elevationFt": 380 },
+        { "mile": 3.35, "elevationFt": 140 },
+        { "mile": 3.8, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -71,9 +83,13 @@
       "trailTip": "An easy, flat loop past historic mineral springs — a good option for young kids or to stretch your legs near the Longmire Museum.",
       "didYouKnow": "The mineral springs along this trail are what first drew James Longmire to build a wilderness resort here in 1884, decades before the park was established.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 2700, "label": "Trailhead" },
-        { "mile": 0.35, "elevationFt": 2710, "label": "Mineral Springs" },
-        { "mile": 0.7, "elevationFt": 2700, "label": "Loop close" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.12, "elevationFt": 8 },
+        { "mile": 0.23, "elevationFt": 16 },
+        { "mile": 0.35, "elevationFt": 20, "label": "Mineral Springs" },
+        { "mile": 0.47, "elevationFt": 12 },
+        { "mile": 0.58, "elevationFt": 5 },
+        { "mile": 0.7, "elevationFt": 0, "label": "Loop close" }
       ]
     },
     {
@@ -85,10 +101,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Spray Park's wildflower meadows sit near Spray Falls and are among the most extensive subalpine meadow displays in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4900, "label": "Mowich Lake Trailhead" },
-        { "mile": 1.5, "elevationFt": 5000, "label": "Spray Falls" },
-        { "mile": 3.0, "elevationFt": 5800 },
-        { "mile": 4.0, "elevationFt": 6400, "label": "Spray Park Meadow" }
+        { "mile": 0, "elevationFt": 0, "label": "Mowich Lake Trailhead" },
+        { "mile": 1.5, "elevationFt": 150, "label": "Spray Falls" },
+        { "mile": 2.5, "elevationFt": 900 },
+        { "mile": 3.0, "elevationFt": 1500 },
+        { "mile": 4.0, "elevationFt": 2000, "label": "Spray Park Meadow" },
+        { "mile": 5.0, "elevationFt": 1500 },
+        { "mile": 6.0, "elevationFt": 900 },
+        { "mile": 7.0, "elevationFt": 400 },
+        { "mile": 8.0, "elevationFt": 0, "label": "Mowich Lake Trailhead" }
       ]
     },
     {
@@ -100,10 +121,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Summerland's meadows are a reliable place to spot mountain goats grazing on the slopes above Meany Crest.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 2400, "label": "White River Trailhead" },
-        { "mile": 2.0, "elevationFt": 3600 },
-        { "mile": 3.5, "elevationFt": 5000 },
-        { "mile": 4.2, "elevationFt": 5900, "label": "Summerland" }
+        { "mile": 0, "elevationFt": 0, "label": "White River Trailhead" },
+        { "mile": 1.0, "elevationFt": 400 },
+        { "mile": 2.0, "elevationFt": 900 },
+        { "mile": 3.0, "elevationFt": 1500 },
+        { "mile": 4.2, "elevationFt": 2200, "label": "Summerland" },
+        { "mile": 5.4, "elevationFt": 1500 },
+        { "mile": 6.4, "elevationFt": 900 },
+        { "mile": 7.4, "elevationFt": 400 },
+        { "mile": 8.4, "elevationFt": 0, "label": "White River Trailhead" }
       ]
     },
     {
@@ -115,11 +141,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "At roughly 3,600 feet, the Carbon Glacier's terminus is the lowest-elevation glacier point in the contiguous United States, thanks to the deep, shaded valley and heavy Cascade snowfall.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 2100, "label": "Carbon River Trailhead" },
-        { "mile": 2.0, "elevationFt": 2300 },
-        { "mile": 4.0, "elevationFt": 2500, "label": "Ipsut Creek" },
-        { "mile": 6.0, "elevationFt": 2700 },
-        { "mile": 8.0, "elevationFt": 2800, "label": "Carbon Glacier Viewpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Carbon River Trailhead" },
+        { "mile": 1.0, "elevationFt": 150, "label": "Ipsut Creek" },
+        { "mile": 2.0, "elevationFt": 350 },
+        { "mile": 3.0, "elevationFt": 550 },
+        { "mile": 4.0, "elevationFt": 700, "label": "Carbon Glacier Viewpoint" },
+        { "mile": 5.0, "elevationFt": 550 },
+        { "mile": 6.0, "elevationFt": 350 },
+        { "mile": 7.0, "elevationFt": 150 },
+        { "mile": 8.0, "elevationFt": 0, "label": "Carbon River Trailhead" }
       ]
     }
   ],

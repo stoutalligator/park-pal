@@ -5,7 +5,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ALL_ANIMALS } from '@/data/animals';
 import { Animal, AnimalRarity } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 
@@ -51,15 +50,15 @@ function AnimalListCard({ animal, spotted, onPress }: { animal: Animal; spotted:
 
 export default function ParkAnimalsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, isAnimalSpotted } = useApp();
+  const { parks, animals, isAnimalSpotted } = useApp();
   const [search, setSearch] = useState('');
   const [rarityFilter, setRarityFilter] = useState<'All' | AnimalRarity>('All');
 
   const park = parks.find((p) => p.id === parkId);
-  const allAnimals = ALL_ANIMALS.filter((a) => a.parkId === parkId);
+  const allAnimals = animals.filter((a) => a.parkId === parkId);
   const spottedCount = allAnimals.filter((a) => isAnimalSpotted(a.id)).length;
 
-  const animals = allAnimals
+  const filteredAnimals = allAnimals
     .filter((a) => {
       const matchesSearch = a.name.toLowerCase().includes(search.trim().toLowerCase());
       const matchesRarity = rarityFilter === 'All' || a.rarity === rarityFilter;
@@ -96,7 +95,7 @@ export default function ParkAnimalsScreen({ route, navigation }: Props) {
       </View>
       <Text style={styles.progressText}>{spottedCount} of {allAnimals.length} spotted</Text>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        {animals.map((animal) => (
+        {filteredAnimals.map((animal) => (
           <AnimalListCard
             key={animal.id}
             animal={animal}

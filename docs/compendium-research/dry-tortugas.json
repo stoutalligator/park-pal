@@ -12,7 +12,10 @@
       "didYouKnow": "Fort Jefferson is built from more than 16 million bricks, making it one of the largest masonry structures in the Americas.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Fort Entrance" },
+        { "mile": 0.15, "elevationFt": 2 },
+        { "mile": 0.3, "elevationFt": 4 },
         { "mile": 0.35, "elevationFt": 5, "label": "Bastion Overlook" },
+        { "mile": 0.5, "elevationFt": 3 },
         { "mile": 0.7, "elevationFt": 0, "label": "Fort Entrance" }
       ]
     },
@@ -25,7 +28,10 @@
       "didYouKnow": "Garden Key's scrubby coastal vegetation provides a crucial rest stop for migratory songbirds crossing the Gulf of Mexico each spring and fall.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 2 },
+        { "mile": 0.2, "elevationFt": 4 },
         { "mile": 0.25, "elevationFt": 5 },
+        { "mile": 0.35, "elevationFt": 3 },
         { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -38,7 +44,10 @@
       "didYouKnow": "The moat wall was designed to protect the fort's foundation from both cannon fire and storm surge.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Fort Entrance" },
+        { "mile": 0.1, "elevationFt": 4 },
+        { "mile": 0.2, "elevationFt": 8 },
         { "mile": 0.25, "elevationFt": 10, "label": "Moat Wall" },
+        { "mile": 0.35, "elevationFt": 5 },
         { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -51,7 +60,10 @@
       "didYouKnow": "The coaling dock once refueled steam-powered Navy ships making the long, remote crossing toward Cuba and Central America.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.08, "elevationFt": 2 },
+        { "mile": 0.15, "elevationFt": 4 },
         { "mile": 0.2, "elevationFt": 5, "label": "Coaling Dock Ruins" },
+        { "mile": 0.3, "elevationFt": 2 },
         { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -65,8 +77,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Sandbar Start" },
-        { "mile": 0.5, "elevationFt": 5 },
-        { "mile": 1.0, "elevationFt": 0, "label": "Bush Key" }
+        { "mile": 0.2, "elevationFt": 2 },
+        { "mile": 0.4, "elevationFt": 4 },
+        { "mile": 0.5, "elevationFt": 5, "label": "Bush Key" },
+        { "mile": 0.7, "elevationFt": 2 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Return" }
       ]
     },
     {
@@ -78,7 +93,10 @@
       "didYouKnow": "Loggerhead Key's lighthouse, built in 1858, still helps ships navigate the reefs that gave the Tortugas their treacherous reputation.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Boat Landing" },
+        { "mile": 0.1, "elevationFt": 2 },
+        { "mile": 0.2, "elevationFt": 4 },
         { "mile": 0.25, "elevationFt": 5, "label": "Lighthouse" },
+        { "mile": 0.35, "elevationFt": 2 },
         { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -91,7 +109,10 @@
       "didYouKnow": "The clear water here sits above one of the healthier coral reef systems remaining in the greater Florida Keys region.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.05, "elevationFt": 2 },
+        { "mile": 0.1, "elevationFt": 4 },
         { "mile": 0.15, "elevationFt": 5 },
+        { "mile": 0.22, "elevationFt": 2 },
         { "mile": 0.3, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -104,7 +125,10 @@
       "didYouKnow": "The ramp once served Pan American seaplanes ferrying passengers to the remote fort in the 1930s.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.04, "elevationFt": 2 },
+        { "mile": 0.08, "elevationFt": 4 },
         { "mile": 0.1, "elevationFt": 5, "label": "Seaplane Ramp" },
+        { "mile": 0.15, "elevationFt": 2 },
         { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     }

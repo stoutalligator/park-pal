@@ -1,114 +1,359 @@
 {
   "parkId": "petrified-forest",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov (pefo)", "AllTrails", "10Adventures", "HikeArizona", "npshistory.com"],
+  "sources": [
+    "NPS.gov (pefo)",
+    "AllTrails",
+    "10Adventures",
+    "HikeArizona",
+    "npshistory.com"
+  ],
   "trails": [
     {
       "id": "petrified-forest-blue-mesa",
       "estimatedTime": "30-45 min",
       "bestSeason": "Year-round; best Oct-Apr to avoid summer heat",
-      "tags": ["Badlands", "Paved"],
+      "tags": [
+        "Badlands",
+        "Paved"
+      ],
       "trailTip": "The pavement has uneven, sometimes loose-gravel sections on the descent into the badlands, so sturdy shoes help even on this short loop.",
       "didYouKnow": "Blue Mesa's blue-gray hills are bentonite clay that swells and shifts with every rain, slowly exposing new petrified logs each year.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.3, "elevationFt": 100, "label": "Descent into badlands" },
-        { "mile": 0.6, "elevationFt": 200 },
-        { "mile": 1.0, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": -60,
+          "label": "Descent into badlands"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": -150
+        },
+        {
+          "mile": 0.45,
+          "elevationFt": -200,
+          "label": "Lowest point"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": -150
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": -70
+        },
+        {
+          "mile": 1,
+          "elevationFt": 0,
+          "label": "Loop Complete"
+        }
       ]
     },
     {
       "id": "petrified-forest-giant-logs",
       "estimatedTime": "15-20 min",
       "bestSeason": "Year-round",
-      "tags": ["Wheelchair Accessible", "Paved"],
+      "tags": [
+        "Wheelchair Accessible",
+        "Paved"
+      ],
       "trailTip": "Located right behind the Rainbow Forest Museum, this is a good first stop for seeing the park's largest petrified logs up close.",
       "didYouKnow": "'Old Faithful,' one of the largest logs on this trail, is nearly 10 feet across at its base.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Rainbow Forest Museum" },
-        { "mile": 0.2, "elevationFt": 20 },
-        { "mile": 0.4, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Rainbow Forest Museum"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.35,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 5,
+          "label": "Loop Complete"
+        }
       ]
     },
     {
       "id": "petrified-forest-crystal-forest",
       "estimatedTime": "20-30 min",
       "bestSeason": "Year-round",
-      "tags": ["Paved", "Wheelchair Accessible"],
+      "tags": [
+        "Paved",
+        "Wheelchair Accessible"
+      ],
       "trailTip": "Stay on the paved path — removing even small pieces of petrified wood is illegal and has stripped areas near older, unpatrolled trails bare over the decades.",
       "didYouKnow": "The 'crystals' in the trail's name are quartz and amethyst that formed inside the logs as they petrified over roughly 200 million years.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 20 },
-        { "mile": 0.75, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 0,
+          "label": "Loop Complete"
+        }
       ]
     },
     {
       "id": "petrified-forest-painted-desert-rim",
       "estimatedTime": "30 min",
       "bestSeason": "Year-round; sunrise or sunset for the best color",
-      "tags": ["Scenic Overlook", "Paved"],
+      "tags": [
+        "Scenic Overlook",
+        "Paved"
+      ],
       "trailTip": "Time this walk for early morning or late afternoon light, when the badlands' banded colors are most vivid.",
       "didYouKnow": "The Painted Desert's banded colors come from iron and manganese minerals deposited in ancient floodplain sediment layers.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Tawa Point" },
-        { "mile": 0.5, "elevationFt": 50 },
-        { "mile": 1.0, "elevationFt": 30, "label": "Kachina Point" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Tawa Point"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 40
+        },
+        {
+          "mile": 1,
+          "elevationFt": 30,
+          "label": "Kachina Point"
+        }
       ]
     },
     {
       "id": "petrified-forest-long-logs",
       "estimatedTime": "45-60 min",
       "bestSeason": "Year-round; best Oct-Apr",
-      "tags": ["Badlands", "Combined with Agate House"],
+      "tags": [
+        "Badlands",
+        "Combined with Agate House"
+      ],
       "trailTip": "This loop can be combined with the Agate House spur for a longer walk — carry water, since there's no shade anywhere on the route.",
       "didYouKnow": "This area holds one of the densest concentrations of petrified wood in the park, including logs that would have measured over 170 feet long when whole.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 30 },
-        { "mile": 1.6, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 15
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 30
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 15
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 10
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 0,
+          "label": "Loop Complete"
+        }
       ]
     },
     {
       "id": "petrified-forest-agate-house",
       "estimatedTime": "1 hr",
       "bestSeason": "Year-round; best Oct-Apr",
-      "tags": ["Historic Site", "Combined with Long Logs"],
+      "tags": [
+        "Historic Site",
+        "Combined with Long Logs"
+      ],
       "trailTip": "Agate House is a partially reconstructed pueblo built from petrified wood — stay on the trail and don't climb on the original masonry walls.",
       "didYouKnow": "Ancestral Puebloans built this eight-room pueblo almost entirely out of petrified wood roughly 700 years ago.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 100, "label": "Agate House" },
-        { "mile": 2.0, "elevationFt": 0, "label": "Back at Trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 30
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 60
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 85
+        },
+        {
+          "mile": 1,
+          "elevationFt": 100,
+          "label": "Agate House"
+        },
+        {
+          "mile": 1.25,
+          "elevationFt": 75
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.75,
+          "elevationFt": 20
+        },
+        {
+          "mile": 2,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "petrified-forest-devils-playground",
       "estimatedTime": "3-4 hrs",
       "bestSeason": "Oct-Apr; avoid summer heat and afternoon thunderstorms",
-      "tags": ["Unmarked Route", "Navigation Required", "Permit Required"],
+      "tags": [
+        "Unmarked Route",
+        "Navigation Required",
+        "Permit Required"
+      ],
       "trailTip": "As of September 2026, per NPS backcountry-access guidance, this route has no maintained trail and requires a free day-use permit obtained in person at the Painted Desert Visitor Center on the day of your hike, with only a handful issued per week — bring a GPS track, since markers are sporadic and a high-clearance vehicle is needed to reach the start.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Devil's Playground is known for wind- and water-sculpted hoodoos and a dry waterfall carved into the badlands, with no marked path connecting them.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Backcountry access point" },
-        { "mile": 1.5, "elevationFt": 100 },
-        { "mile": 3.0, "elevationFt": 300, "label": "Hoodoo formations" },
-        { "mile": 4.5, "elevationFt": 150 },
-        { "mile": 6.0, "elevationFt": 0, "label": "Back at access point" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Backcountry access point"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 100
+        },
+        {
+          "mile": 2.25,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3,
+          "elevationFt": 300,
+          "label": "Hoodoo formations"
+        },
+        {
+          "mile": 3.75,
+          "elevationFt": 225
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": 150
+        },
+        {
+          "mile": 5.25,
+          "elevationFt": 75
+        },
+        {
+          "mile": 6,
+          "elevationFt": 0,
+          "label": "Back at access point"
+        }
       ]
     },
     {
       "id": "petrified-forest-puerco-pueblo",
       "estimatedTime": "15-20 min",
       "bestSeason": "Year-round",
-      "tags": ["Historic Site", "Wheelchair Accessible"],
+      "tags": [
+        "Historic Site",
+        "Wheelchair Accessible"
+      ],
       "trailTip": "Look for petroglyphs on the boulders near the loop's midpoint, including a solstice marker ancestral Puebloans used to track the sun.",
       "didYouKnow": "Puerco Pueblo once housed around 200 people in the 1300s, making it one of the larger villages in the area at the time.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.15, "elevationFt": 5 },
-        { "mile": 0.3, "elevationFt": 0, "label": "Loop Complete" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.05,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 5,
+          "label": "Petroglyph boulders"
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 3
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 0,
+          "label": "Loop Complete"
+        }
       ]
     }
   ],
@@ -119,7 +364,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Open grasslands near the Painted Desert and Rainbow Forest areas",
-      "tags": ["Common", "Grassland"],
+      "tags": [
+        "Common",
+        "Grassland"
+      ],
       "viewingTip": "View from a road pullout with binoculars — don't approach or chase one for a photo, since pronghorn spook easily and can bolt into traffic.",
       "didYouKnow": "Pronghorn are the fastest land animal in North America and can sustain speeds near 55 mph over long distances."
     },
@@ -129,7 +377,10 @@
       "bestTimeOfDay": "Midday (basking)",
       "bestSeason": "Apr-Sep",
       "whereToLook": "Rocky outcrops along Blue Mesa and Crystal Forest",
-      "tags": ["Common", "Basking"],
+      "tags": [
+        "Common",
+        "Basking"
+      ],
       "viewingTip": "Observe from a few feet away without cornering it, and use a zoom lens rather than reaching for a closer photo.",
       "didYouKnow": "Male collared lizards turn vivid blue-green during breeding season and can run upright on their hind legs when startled."
     },
@@ -139,7 +390,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Grassland flats throughout the park",
-      "tags": ["Common"],
+      "tags": [
+        "Common"
+      ],
       "viewingTip": "Watch from the road with binoculars and never feed one — roadside-fed coyotes lose their wariness of vehicles and people, which puts them at greater risk.",
       "didYouKnow": "Petrified Forest's coyotes hunt largely by sound, pinpointing rodents moving under grass before pouncing."
     },
@@ -149,7 +402,10 @@
       "bestTimeOfDay": "Daytime",
       "bestSeason": "Year-round",
       "whereToLook": "Overlooks throughout the Painted Desert",
-      "tags": ["Common", "Scavenger"],
+      "tags": [
+        "Common",
+        "Scavenger"
+      ],
       "viewingTip": "Keep food packed away at overlooks and picnic areas — ravens are quick to snatch unattended snacks — and enjoy their acrobatic flight from a distance rather than tossing them food.",
       "didYouKnow": "Ravens are among the most intelligent birds studied, capable of solving multi-step puzzles to reach food."
     },
@@ -159,7 +415,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Apr-Oct",
       "whereToLook": "Grassland and badlands habitat, especially near rodent burrows",
-      "tags": ["Non-Venomous", "Burrow Associate"],
+      "tags": [
+        "Non-Venomous",
+        "Burrow Associate"
+      ],
       "viewingTip": "Admire from a few feet away and let it move on — bullsnakes mimic rattlesnakes by hissing and vibrating their tails when threatened, but are harmless if simply given space rather than handled.",
       "didYouKnow": "Bullsnakes are often mistaken for rattlesnakes because of this defensive bluff, but they have no venom and pose no threat to people who leave them alone."
     },
@@ -169,7 +428,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Soaring above the Painted Desert badlands",
-      "tags": ["Raptor", "Uncommon"],
+      "tags": [
+        "Raptor",
+        "Uncommon"
+      ],
       "viewingTip": "Scan the sky from overlooks with binoculars; if you notice a nest on a rock ledge, view it from a distance rather than approaching the cliff base.",
       "didYouKnow": "Golden eagles can spot a rabbit-sized animal from well over a mile away thanks to eyesight several times sharper than a human's."
     },
@@ -179,7 +441,10 @@
       "bestTimeOfDay": "Midday",
       "bestSeason": "May-Sep",
       "whereToLook": "Sandy, sparsely vegetated ground in grassland and badlands areas",
-      "tags": ["Camouflaged", "Uncommon"],
+      "tags": [
+        "Camouflaged",
+        "Uncommon"
+      ],
       "viewingTip": "Look, but don't pick one up — horned lizards rely on staying still and camouflaged, and handling causes real stress; photograph from a low angle instead.",
       "didYouKnow": "When seriously threatened, this species can squirt a thin stream of blood from its eyes to deter predators."
     },
@@ -189,7 +454,10 @@
       "bestTimeOfDay": "Night / Dawn",
       "bestSeason": "Year-round",
       "whereToLook": "Desert grasslands; mostly nocturnal and rarely seen",
-      "tags": ["Nocturnal", "Rare"],
+      "tags": [
+        "Nocturnal",
+        "Rare"
+      ],
       "viewingTip": "If you spot a den entrance, observe from well back with binoculars and don't linger nearby — kit foxes will abandon a den if repeatedly disturbed, and food should never be left out to lure one closer.",
       "didYouKnow": "Kit foxes are the smallest wild canid in North America, weighing about as much as a housecat."
     }

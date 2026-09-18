@@ -1,136 +1,526 @@
 {
   "parkId": "yosemite",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "AllTrails", "Recreation.gov", "She Dreams of Alpine", "Yosemite Hikes"],
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "Recreation.gov",
+    "She Dreams of Alpine",
+    "Yosemite Hikes"
+  ],
   "trails": [
     {
       "id": "yosemite-mist-trail",
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Apr-Oct (icy and partly closed in winter)",
-      "tags": ["Waterfall", "Slippery Rock", "Seasonal Closure"],
+      "tags": [
+        "Waterfall",
+        "Slippery Rock",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, the granite steps above the Vernal Fall footbridge typically close each winter due to ice, with the John Muir Trail serving as the alternate route — expect heavy spray and slick stone even in season, especially during peak spring runoff.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The trail's granite steps are famously wet enough that hikers can feel the waterfall's mist from a hundred yards away during peak spring flow.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Happy Isles" },
-        { "mile": 1.0, "elevationFt": 400 },
-        { "mile": 1.5, "elevationFt": 700, "label": "Vernal Fall footbridge" },
-        { "mile": 3.0, "elevationFt": 1000, "label": "Top of Vernal Fall" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Happy Isles"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 150
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 400,
+          "label": "Vernal Fall footbridge"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 700
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 1000,
+          "label": "Top of Vernal Fall"
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 700
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": 400
+        },
+        {
+          "mile": 2.7,
+          "elevationFt": 150
+        },
+        {
+          "mile": 3,
+          "elevationFt": 0,
+          "label": "Happy Isles return"
+        }
       ]
     },
     {
       "id": "yosemite-half-dome",
       "estimatedTime": "10-14 hrs",
       "bestSeason": "Late May-mid Oct (cables season, weather dependent)",
-      "tags": ["Cables", "Exposure", "Permit Required"],
+      "tags": [
+        "Cables",
+        "Exposure",
+        "Permit Required"
+      ],
       "trailTip": "As of September 2026, per NPS and Recreation.gov, a permit is required to pass the base of the sub-dome to the cables — apply in the preseason lottery (March 1-31, results mid-April) or the daily lottery (opens two days before each hike date); the cables are scheduled to be up May 25-Oct 16, 2026, and are never safe to climb when down.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The final 400 feet up the cable route climbs granite pitched at roughly 45 degrees, steep enough that hikers pull themselves up hand-over-hand.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Happy Isles" },
-        { "mile": 3.0, "elevationFt": 1000, "label": "Vernal Fall" },
-        { "mile": 6.0, "elevationFt": 2600 },
-        { "mile": 8.2, "elevationFt": 4400, "label": "Sub-Dome / cable base" },
-        { "mile": 8.5, "elevationFt": 4800, "label": "Half Dome summit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Happy Isles"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2,
+          "elevationFt": 1000,
+          "label": "Vernal Fall"
+        },
+        {
+          "mile": 3.5,
+          "elevationFt": 1800,
+          "label": "Nevada Fall"
+        },
+        {
+          "mile": 5,
+          "elevationFt": 2600
+        },
+        {
+          "mile": 6,
+          "elevationFt": 3400
+        },
+        {
+          "mile": 6.7,
+          "elevationFt": 4100,
+          "label": "Sub-Dome / cable base"
+        },
+        {
+          "mile": 7.1,
+          "elevationFt": 4800,
+          "label": "Half Dome summit"
+        },
+        {
+          "mile": 8.5,
+          "elevationFt": 3800
+        },
+        {
+          "mile": 10,
+          "elevationFt": 2600
+        },
+        {
+          "mile": 11.5,
+          "elevationFt": 1500
+        },
+        {
+          "mile": 14.2,
+          "elevationFt": 0,
+          "label": "Happy Isles return"
+        }
       ]
     },
     {
       "id": "yosemite-lower-falls",
       "estimatedTime": "30-45 min",
       "bestSeason": "Apr-Jun for peak flow (often dry by late summer/fall)",
-      "tags": ["Waterfall", "Paved"],
+      "tags": [
+        "Waterfall",
+        "Paved"
+      ],
       "trailTip": "Flow peaks with snowmelt in May and June and the fall can slow to a trickle or run dry by late summer — visit in spring for the full roar and mist.",
       "didYouKnow": "Lower Yosemite Fall is the last of three drops in the Yosemite Falls system, which together plunge 2,425 feet, one of the tallest waterfalls in North America.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 30 },
-        { "mile": 1.0, "elevationFt": 50, "label": "Loop return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": 15
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 30
+        },
+        {
+          "mile": 0.45,
+          "elevationFt": 45
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 50,
+          "label": "Base of Lower Yosemite Fall"
+        },
+        {
+          "mile": 0.65,
+          "elevationFt": 35
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 15
+        },
+        {
+          "mile": 1,
+          "elevationFt": 0,
+          "label": "Loop return"
+        }
       ]
     },
     {
       "id": "yosemite-sentinel-dome",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Late May-Oct",
-      "tags": ["Summit", "Seasonal Closure"],
+      "tags": [
+        "Summit",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, Glacier Point Road — the trailhead access — closes to vehicles each winter, typically from around November through late May depending on snowpack, so check current road status before planning a trip.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The dome's famous lone Jeffrey pine, made iconic by Ansel Adams photographs, died in the 1970s but its bleached snag stood for decades afterward.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 250 },
-        { "mile": 1.1, "elevationFt": 500, "label": "Summit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 120
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 250
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 380
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 460
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 500,
+          "label": "Summit"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 400
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 250
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 100
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 0,
+          "label": "Trailhead return"
+        }
       ]
     },
     {
       "id": "yosemite-taft-point",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Late May-Oct",
-      "tags": ["Exposure", "Seasonal Closure"],
+      "tags": [
+        "Exposure",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, this trail shares the same Glacier Point Road access that closes each winter (roughly November through late May depending on snowpack) — the fissures at the point itself have no guardrails, so keep children close.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The deep vertical fissures at Taft Point drop straight to the valley floor nearly 3,500 feet below.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 150 },
-        { "mile": 1.1, "elevationFt": 300, "label": "Taft Point" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 80
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 150
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 220
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 280
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 300,
+          "label": "Taft Point"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": 220
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 140
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 60
+        },
+        {
+          "mile": 2.2,
+          "elevationFt": 0,
+          "label": "Trailhead return"
+        }
       ]
     },
     {
       "id": "yosemite-four-mile-trail",
-      "estimatedTime": "5-7 hrs round trip",
+      "estimatedTime": "5-7 hrs",
       "bestSeason": "May-Oct",
-      "tags": ["Switchbacks", "Seasonal Closure"],
+      "tags": [
+        "Switchbacks",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, the Four Mile Trail is typically closed in winter (roughly December through April) due to snow and ice on its steep switchbacks.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Despite the name, the trail is actually closer to 4.8 miles one-way, a naming holdover from an older, more direct alignment.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Valley Floor Trailhead" },
-        { "mile": 2.0, "elevationFt": 1400 },
-        { "mile": 3.5, "elevationFt": 2500 },
-        { "mile": 4.8, "elevationFt": 3200, "label": "Glacier Point" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Valley Floor Trailhead"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 400
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 900
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": 1500
+        },
+        {
+          "mile": 2.4,
+          "elevationFt": 2000
+        },
+        {
+          "mile": 3,
+          "elevationFt": 2500
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 2800
+        },
+        {
+          "mile": 4.2,
+          "elevationFt": 3050
+        },
+        {
+          "mile": 4.8,
+          "elevationFt": 3200,
+          "label": "Glacier Point"
+        }
       ]
     },
     {
       "id": "yosemite-cathedral-lakes",
       "estimatedTime": "3-4 hrs",
       "bestSeason": "Jul-Sep (Tioga Road access closes seasonally)",
-      "tags": ["Seasonal Closure"],
+      "tags": [
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, Tioga Road — the only access to this trailhead — closes to vehicles each year with the first significant snowfall, typically by November, and often doesn't reopen until late May or June.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Lower Cathedral Lake sits directly beneath Cathedral Peak, the granite spire John Muir made the first recorded ascent of in 1869.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Tioga Road Trailhead" },
-        { "mile": 2.5, "elevationFt": 600 },
-        { "mile": 3.5, "elevationFt": 1000, "label": "Lower Cathedral Lake" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Tioga Road Trailhead"
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 400
+        },
+        {
+          "mile": 2.1,
+          "elevationFt": 600
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": 800
+        },
+        {
+          "mile": 3.5,
+          "elevationFt": 1000,
+          "label": "Lower Cathedral Lake"
+        },
+        {
+          "mile": 4.2,
+          "elevationFt": 800
+        },
+        {
+          "mile": 4.9,
+          "elevationFt": 550
+        },
+        {
+          "mile": 5.6,
+          "elevationFt": 300
+        },
+        {
+          "mile": 6.3,
+          "elevationFt": 100
+        },
+        {
+          "mile": 7,
+          "elevationFt": 0,
+          "label": "Trailhead return"
+        }
       ]
     },
     {
       "id": "yosemite-mirror-lake",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Apr-Jun for the reflecting lake (often a dry meadow by late summer)",
-      "tags": ["Family Friendly"],
+      "tags": [
+        "Family Friendly"
+      ],
       "trailTip": "Visit in late spring for the classic Half Dome reflection — by late summer the lake is usually reduced to a sandy meadow as Tenaya Creek's flow drops.",
       "didYouKnow": "Mirror Lake is technically a naturally forming, slowly filling pool on Tenaya Creek rather than a permanent lake, and it has been quietly shrinking for decades.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 50 },
-        { "mile": 2.4, "elevationFt": 100, "label": "Mirror Lake" },
-        { "mile": 5.0, "elevationFt": 60, "label": "Loop return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 20
+        },
+        {
+          "mile": 1,
+          "elevationFt": 45,
+          "label": "Trail junction"
+        },
+        {
+          "mile": 1.7,
+          "elevationFt": 70
+        },
+        {
+          "mile": 2.4,
+          "elevationFt": 100,
+          "label": "Mirror Lake"
+        },
+        {
+          "mile": 3,
+          "elevationFt": 75
+        },
+        {
+          "mile": 3.7,
+          "elevationFt": 45
+        },
+        {
+          "mile": 4.4,
+          "elevationFt": 15
+        },
+        {
+          "mile": 5,
+          "elevationFt": 0,
+          "label": "Loop return"
+        }
       ]
     },
     {
       "id": "yosemite-north-dome",
       "estimatedTime": "5-6 hrs",
       "bestSeason": "Jun-Oct (Tioga Road access closes seasonally)",
-      "tags": ["Seasonal Closure"],
+      "tags": [
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS, this trailhead is reached off Tioga Road, which closes to vehicles for winter (typically November through late May/June depending on snowpack) — plan the hike for the open season.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "North Dome offers one of the only eye-level, face-to-face views of Half Dome's sheer northwest face rather than looking up at it from the valley.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Porcupine Creek Trailhead" },
-        { "mile": 3.0, "elevationFt": 600 },
-        { "mile": 4.7, "elevationFt": 1100 },
-        { "mile": 4.7, "elevationFt": 1400, "label": "North Dome" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Porcupine Creek Trailhead"
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 250
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2.4,
+          "elevationFt": 750
+        },
+        {
+          "mile": 3.2,
+          "elevationFt": 1000
+        },
+        {
+          "mile": 3.9,
+          "elevationFt": 1250
+        },
+        {
+          "mile": 4.7,
+          "elevationFt": 1400,
+          "label": "North Dome"
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": 1150
+        },
+        {
+          "mile": 6.3,
+          "elevationFt": 850
+        },
+        {
+          "mile": 7.2,
+          "elevationFt": 550
+        },
+        {
+          "mile": 8.2,
+          "elevationFt": 250
+        },
+        {
+          "mile": 9.4,
+          "elevationFt": 0,
+          "label": "Trailhead return"
+        }
       ]
     }
   ],
@@ -141,7 +531,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Apr-Nov (active outside denning season)",
       "whereToLook": "Valley meadows and oak woodlands",
-      "tags": ["Den Site"],
+      "tags": [
+        "Den Site"
+      ],
       "viewingTip": "View from at least 50 yards with binoculars and never feed a bear — Yosemite has strict food-storage rules precisely because a fed bear often has to be relocated or, in repeat cases, euthanized.",
       "didYouKnow": "Despite the name, Yosemite's black bears range in color from black to blond, and the park has had no resident grizzlies since the early 1900s."
     },
@@ -151,7 +543,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Oct-Nov rut; May-Jun fawning",
       "whereToLook": "Valley meadows near Cook's Meadow and El Capitan Meadow",
-      "tags": ["Rut"],
+      "tags": [
+        "Rut"
+      ],
       "viewingTip": "Give bucks extra space during the fall rut and never approach a fawn left alone in tall grass in late spring — the doe is usually nearby and hidden fawns are normal, not abandoned.",
       "didYouKnow": "Yosemite Valley's deer are so used to visitors that they sometimes graze within a few yards of trails, but they remain wild animals capable of kicking."
     },
@@ -161,7 +555,10 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Mar-Jul nesting season",
       "whereToLook": "El Capitan and Middle Cathedral cliff faces",
-      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "tags": [
+        "Cliff Nester",
+        "Seasonal Closure"
+      ],
       "viewingTip": "As of September 2026, per NPS, select rock-climbing routes on cliffs such as El Capitan and Middle Cathedral close annually, typically March through July, to protect nesting peregrines — view nests from the valley floor with a scope rather than from a nearby route or ledge.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Peregrine falcons can reach speeds over 200 mph in a hunting dive, making them the fastest animal on Earth."
@@ -172,7 +569,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Nov-Dec rut",
       "whereToLook": "High alpine terrain near Tioga Pass and Mount Gibbs",
-      "tags": ["Endangered", "Rut"],
+      "tags": [
+        "Endangered",
+        "Rut"
+      ],
       "viewingTip": "This is a critically endangered, actively managed subspecies — view only from a distance with a spotting scope and never approach a herd, especially during the fall rut.",
       "didYouKnow": "Sierra Nevada bighorn sheep dropped to roughly 100 animals in the 1990s before an intensive recovery program brought the population back into the high hundreds."
     },
@@ -202,7 +602,10 @@
       "bestTimeOfDay": "Dusk",
       "bestSeason": "May-Aug nesting season",
       "whereToLook": "High-elevation meadow edges such as Crane Flat and Peregoy Meadow",
-      "tags": ["Meadow Hunter", "Sensitive Habitat"],
+      "tags": [
+        "Meadow Hunter",
+        "Sensitive Habitat"
+      ],
       "viewingTip": "View from the meadow's edge with binoculars or a scope at dusk and never walk out into the meadow itself — this is a genetically distinct, state-endangered California population, and disturbing hunting or nesting habitat directly harms their already small numbers.",
       "didYouKnow": "Great gray owls can hear rodents moving under two feet of snow and punch through the crust feet-first to catch them."
     },

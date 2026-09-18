@@ -11,9 +11,13 @@
       "trailTip": "A short, easy loop through coastal spruce-hemlock rainforest near Glacier Bay Lodge — a good option right off the boat or floatplane while getting oriented at Bartlett Cove.",
       "didYouKnow": "The forest here is still relatively young by rainforest standards, having grown in the roughly 200 years since glacial ice retreated from Bartlett Cove.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead near lodge" },
-        { "mile": 0.5, "elevationFt": 120 },
-        { "mile": 1, "elevationFt": 20 }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead near lodge" },
+        { "mile": 0.15, "elevationFt": 40 },
+        { "mile": 0.3, "elevationFt": 80 },
+        { "mile": 0.4, "elevationFt": 100 },
+        { "mile": 0.55, "elevationFt": 80 },
+        { "mile": 0.75, "elevationFt": 40 },
+        { "mile": 1, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -24,9 +28,13 @@
       "trailTip": "This interpretive path connects Bartlett Cove landmarks tied to the Huna Tlingit, the original inhabitants of Glacier Bay — read the waysides for context before or after visiting the nearby Tribal House.",
       "didYouKnow": "The Huna Tlingit lived in the Glacier Bay area for generations before a rapidly advancing glacier forced their ancestors to relocate in the 1700s, a history now honored at the Xunaa Shuká Hít tribal house near the trail.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 10, "label": "Bartlett Cove dock" },
-        { "mile": 0.5, "elevationFt": 60 },
-        { "mile": 1, "elevationFt": 15, "label": "Tribal house area" }
+        { "mile": 0, "elevationFt": 0, "label": "Bartlett Cove dock" },
+        { "mile": 0.2, "elevationFt": 20 },
+        { "mile": 0.4, "elevationFt": 45 },
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 0.65, "elevationFt": 35 },
+        { "mile": 0.8, "elevationFt": 20 },
+        { "mile": 1, "elevationFt": 5, "label": "Tribal house area" }
       ]
     },
     {
@@ -37,9 +45,13 @@
       "trailTip": "The trail ends at a tidal river estuary that's excellent for wildlife but also prime bear habitat — travel in a group, make noise, and carry bear spray, and check a tide table since the estuary crossing is easiest near low tide.",
       "didYouKnow": "The estuary at the trail's end is a key feeding area where brown bears fish for salmon and Bonaparte's gulls gather to feed on outmigrating smolt.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 120 },
-        { "mile": 3, "elevationFt": 20, "label": "Bartlett River estuary" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 40 },
+        { "mile": 1.0, "elevationFt": 80 },
+        { "mile": 1.5, "elevationFt": 100, "label": "Bartlett River estuary (turnaround)" },
+        { "mile": 2.0, "elevationFt": 80 },
+        { "mile": 2.5, "elevationFt": 40 },
+        { "mile": 3, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -50,9 +62,13 @@
       "trailTip": "This walk follows a wide tidal beach, so time it around a falling or low tide for the easiest footing, and watch for bear tracks in the sand since brown bears regularly forage this stretch of shoreline.",
       "didYouKnow": "Point Gustavus sits at the mouth of Glacier Bay, where tidal currents from the bay meet Icy Strait and often concentrate feeding seabirds.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 10, "label": "Trailhead" },
-        { "mile": 2, "elevationFt": 20 },
-        { "mile": 4, "elevationFt": 30, "label": "Point Gustavus" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 8 },
+        { "mile": 1.4, "elevationFt": 15 },
+        { "mile": 2.0, "elevationFt": 20, "label": "Point Gustavus (turnaround)" },
+        { "mile": 2.6, "elevationFt": 15 },
+        { "mile": 3.3, "elevationFt": 8 },
+        { "mile": 4, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -63,9 +79,13 @@
       "trailTip": "A quiet forested route to a backcountry lake through classic brown bear habitat — carry bear spray, make noise on blind corners, and store food properly if you plan to linger at the lake.",
       "didYouKnow": "Bartlett Lake is one of the few maintained-trail destinations in a park where most of the interior is accessible only by boat or floatplane.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 30, "label": "Trailhead" },
-        { "mile": 2, "elevationFt": 200 },
-        { "mile": 4, "elevationFt": 330, "label": "Bartlett Lake" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 90 },
+        { "mile": 1.4, "elevationFt": 200 },
+        { "mile": 2.0, "elevationFt": 300, "label": "Bartlett Lake (turnaround)" },
+        { "mile": 2.6, "elevationFt": 200 },
+        { "mile": 3.3, "elevationFt": 90 },
+        { "mile": 4, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -76,9 +96,13 @@
       "trailTip": "An easy forest loop right near park headquarters and the lodge — a relaxed way to fill time before or after a day-boat tour into the bay.",
       "didYouKnow": "Bartlett Cove is the only spot in the park connected to Alaska's road and ferry system, making it the gateway for nearly every visitor before they head into the bay itself.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 10, "label": "Headquarters" },
-        { "mile": 0.8, "elevationFt": 60 },
-        { "mile": 1.5, "elevationFt": 10 }
+        { "mile": 0, "elevationFt": 0, "label": "Headquarters" },
+        { "mile": 0.3, "elevationFt": 20 },
+        { "mile": 0.6, "elevationFt": 45 },
+        { "mile": 0.75, "elevationFt": 50 },
+        { "mile": 0.95, "elevationFt": 35 },
+        { "mile": 1.2, "elevationFt": 15 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Back at headquarters" }
       ]
     },
     {
@@ -89,9 +113,13 @@
       "trailTip": "A short interpretive loop through coastal spruce forest with waysides on rainforest ecology — well suited to visitors with limited time between boat departures.",
       "didYouKnow": "Glacier Bay's coastal rainforest receives well over 70 inches of precipitation a year, feeding the moss- and lichen-draped understory along this loop.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 15, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 65 },
-        { "mile": 1, "elevationFt": 15 }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 20 },
+        { "mile": 0.3, "elevationFt": 40 },
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 0.65, "elevationFt": 35 },
+        { "mile": 0.8, "elevationFt": 15 },
+        { "mile": 1, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -102,9 +130,12 @@
       "trailTip": "This route extends the Bartlett River Trail out to a quiet tidal beach — plan around the tide for an easier beach walk and stay alert for bears using the same estuary and shoreline corridor.",
       "didYouKnow": "The beach at the route's end looks out toward Pleasant Island and is one of the quieter shoreline stretches accessible without a boat charter.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
-        { "mile": 2, "elevationFt": 120 },
-        { "mile": 4, "elevationFt": 10, "label": "Tidal beach" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 60 },
+        { "mile": 2.0, "elevationFt": 100, "label": "Inland rise (turnaround approach)" },
+        { "mile": 2.6, "elevationFt": 60 },
+        { "mile": 3.3, "elevationFt": 20 },
+        { "mile": 4, "elevationFt": 0, "label": "Tidal beach" }
       ]
     }
   ],

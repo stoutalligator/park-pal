@@ -11,10 +11,15 @@
       "trailTip": "This is one of the only maintained, signed trails in the park, reached by floatplane or boat to Port Alsworth — there is no road access anywhere in Lake Clark, so budget travel time and cost for a bush flight before you ever reach the trailhead.",
       "didYouKnow": "Port Alsworth, the trail's starting point, is a small floatplane-access community that also serves as the park's headquarters.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
-        { "mile": 1.5, "elevationFt": 350 },
-        { "mile": 3.0, "elevationFt": 500 },
-        { "mile": 4.0, "elevationFt": 650, "label": "Tanalian Falls" }
+        { "mile": 0, "elevationFt": 0, "label": "Port Alsworth trailhead" },
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 1.5, "elevationFt": 320 },
+        { "mile": 2.0, "elevationFt": 400, "label": "Tanalian Falls" },
+        { "mile": 2.5, "elevationFt": 320 },
+        { "mile": 3.0, "elevationFt": 200 },
+        { "mile": 3.5, "elevationFt": 100 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Port Alsworth trailhead" }
       ]
     },
     {
@@ -25,10 +30,15 @@
       "trailTip": "The maintained trail ends partway up; the final push above treeline is a use-path over loose rock with no markers, so carry a map/GPS and turn back in poor visibility since there is no rescue infrastructure nearby.",
       "didYouKnow": "On a clear day the summit offers views of Lake Clark, Six-Mile Lake, and the volcanic peaks of the Chigmit Mountains.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
-        { "mile": 2.0, "elevationFt": 900 },
-        { "mile": 4.0, "elevationFt": 2200, "label": "Treeline" },
-        { "mile": 6.5, "elevationFt": 3650, "label": "Summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Port Alsworth trailhead" },
+        { "mile": 1.0, "elevationFt": 650 },
+        { "mile": 2.0, "elevationFt": 2000, "label": "Treeline" },
+        { "mile": 2.6, "elevationFt": 2900 },
+        { "mile": 3.25, "elevationFt": 3400, "label": "Summit" },
+        { "mile": 3.9, "elevationFt": 2900 },
+        { "mile": 4.5, "elevationFt": 2000, "label": "Treeline" },
+        { "mile": 5.5, "elevationFt": 650 },
+        { "mile": 6.5, "elevationFt": 0, "label": "Port Alsworth trailhead" }
       ]
     },
     {
@@ -39,9 +49,13 @@
       "trailTip": "A rougher, less-maintained continuation past the Tanalian trails — expect muddy, root-crossed tread and make noise around bends, since dense brush near the lake limits sightlines for bears.",
       "didYouKnow": "Kontrashibuna Lake's strikingly clear turquoise color comes from fine glacial sediment ('rock flour') suspended in the water.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Port Alsworth trailhead" },
-        { "mile": 1.8, "elevationFt": 400 },
-        { "mile": 3.5, "elevationFt": 550, "label": "Kontrashibuna Lake" }
+        { "mile": 0, "elevationFt": 0, "label": "Port Alsworth trailhead" },
+        { "mile": 0.6, "elevationFt": 120 },
+        { "mile": 1.2, "elevationFt": 220 },
+        { "mile": 1.75, "elevationFt": 300, "label": "Kontrashibuna Lake" },
+        { "mile": 2.3, "elevationFt": 220 },
+        { "mile": 2.9, "elevationFt": 120 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Port Alsworth trailhead" }
       ]
     },
     {
@@ -53,8 +67,12 @@
       "didYouKnow": "Silver Salmon Creek is renowned for brown bears that dig for clams directly on the open tidal flats at low tide.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Beach landing" },
-        { "mile": 1.0, "elevationFt": 20 },
-        { "mile": 2.0, "elevationFt": 50, "label": "Creek mouth" }
+        { "mile": 0.33, "elevationFt": 20 },
+        { "mile": 0.67, "elevationFt": 40 },
+        { "mile": 1.0, "elevationFt": 50, "label": "Creek mouth" },
+        { "mile": 1.33, "elevationFt": 40 },
+        { "mile": 1.67, "elevationFt": 20 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Beach landing" }
       ]
     },
     {
@@ -65,9 +83,12 @@
       "trailTip": "A historic portage route between interior lakes rather than a graded trail — used mainly by paddlers moving between water bodies, so most visitors will only walk it as part of a longer canoe/kayak trip.",
       "didYouKnow": "Portage routes like this one were long used by the Dena'ina people to travel between the region's interconnected lake systems without a boat capable of open water.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Put-in" },
-        { "mile": 0.8, "elevationFt": 400 },
-        { "mile": 1.5, "elevationFt": 500, "label": "Take-out" }
+        { "mile": 0, "elevationFt": 0, "label": "Put-in" },
+        { "mile": 0.3, "elevationFt": 50 },
+        { "mile": 0.6, "elevationFt": 100 },
+        { "mile": 0.9, "elevationFt": 150 },
+        { "mile": 1.2, "elevationFt": 180 },
+        { "mile": 1.5, "elevationFt": 200, "label": "Take-out" }
       ]
     },
     {
@@ -78,9 +99,12 @@
       "trailTip": "An unmaintained backcountry route to a remote lake beneath the Chigmit volcanoes — this is true off-trail wilderness travel, so bring navigation tools and file a trip plan since there is no cell coverage and rescue could take days.",
       "didYouKnow": "Crescent Lake sits in the shadow of Mount Iliamna, one of two active volcanoes visible from within the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Air/boat drop-off" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 4.0, "elevationFt": 1100, "label": "Crescent Lake" }
+        { "mile": 0, "elevationFt": 0, "label": "Air/boat drop-off" },
+        { "mile": 0.8, "elevationFt": 200 },
+        { "mile": 1.6, "elevationFt": 400 },
+        { "mile": 2.4, "elevationFt": 550 },
+        { "mile": 3.2, "elevationFt": 700 },
+        { "mile": 4.0, "elevationFt": 800, "label": "Crescent Lake" }
       ]
     },
     {
@@ -91,10 +115,12 @@
       "trailTip": "This historic cross-country travel corridor has no tread, bridges, or markers for most of its length — it is a multi-day wilderness route for experienced backcountry travelers, not a day hike, and river crossings can be dangerous at high water.",
       "didYouKnow": "The Telaquana Route follows a traditional Dena'ina travel corridor connecting Lake Clark to the Telaquana Lake area, long used for seasonal subsistence travel.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 400, "label": "Starting drainage" },
-        { "mile": 10, "elevationFt": 1200 },
-        { "mile": 20, "elevationFt": 1800 },
-        { "mile": 30, "elevationFt": 2100, "label": "Telaquana Lake area" }
+        { "mile": 0, "elevationFt": 0, "label": "Starting drainage" },
+        { "mile": 6, "elevationFt": 400 },
+        { "mile": 12, "elevationFt": 800 },
+        { "mile": 18, "elevationFt": 1200 },
+        { "mile": 24, "elevationFt": 1400 },
+        { "mile": 30, "elevationFt": 1500, "label": "Telaquana Lake area" }
       ]
     },
     {
@@ -107,8 +133,14 @@
       "didYouKnow": "Chinitna Bay's tidal salt marsh can host 20 or more brown bears grazing sedge grass at once, one of the densest concentrations of viewable bears in the state.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Beach landing" },
-        { "mile": 1.0, "elevationFt": 10 },
-        { "mile": 2.0, "elevationFt": 20, "label": "Designated viewing area" }
+        { "mile": 0.25, "elevationFt": 15 },
+        { "mile": 0.5, "elevationFt": 30 },
+        { "mile": 0.75, "elevationFt": 42 },
+        { "mile": 1.0, "elevationFt": 50, "label": "Designated viewing area" },
+        { "mile": 1.25, "elevationFt": 42 },
+        { "mile": 1.5, "elevationFt": 30 },
+        { "mile": 1.75, "elevationFt": 15 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Beach landing" }
       ]
     }
   ],

@@ -12,7 +12,10 @@
       "didYouKnow": "The Riverfront Trail runs directly below the Arch's east leg, offering one of the few vantage points where you can see the monument's full 630-foot height reflected in the Mississippi.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "North end" },
-        { "mile": 1, "elevationFt": 10 },
+        { "mile": 0.4, "elevationFt": 5 },
+        { "mile": 0.8, "elevationFt": 10 },
+        { "mile": 1.2, "elevationFt": 15 },
+        { "mile": 1.6, "elevationFt": 15 },
         { "mile": 2, "elevationFt": 20, "label": "South end" }
       ]
     },
@@ -25,6 +28,10 @@
       "didYouKnow": "Kiener Plaza is named for Olympic gymnast Walter Kiener and has served as a downtown gathering space since the 1960s, around the same time the Arch was completed.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Arch grounds" },
+        { "mile": 0.1, "elevationFt": 2 },
+        { "mile": 0.2, "elevationFt": 3 },
+        { "mile": 0.3, "elevationFt": 4 },
+        { "mile": 0.4, "elevationFt": 5 },
         { "mile": 0.5, "elevationFt": 5, "label": "Kiener Plaza" }
       ]
     },
@@ -37,7 +44,11 @@
       "didYouKnow": "The Gateway Arch is the tallest man-made monument in the Western Hemisphere at 630 feet, and its footprint forms a perfect catenary curve.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "North leg" },
+        { "mile": 0.2, "elevationFt": 5 },
+        { "mile": 0.4, "elevationFt": 8 },
         { "mile": 0.5, "elevationFt": 10 },
+        { "mile": 0.7, "elevationFt": 6 },
+        { "mile": 0.85, "elevationFt": 3 },
         { "mile": 1, "elevationFt": 0, "label": "South leg" }
       ]
     },
@@ -50,6 +61,10 @@
       "didYouKnow": "The square is named for the St. Louis civic leader who championed creating the riverfront memorial in the 1930s, decades before the Arch itself was built.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Old Courthouse" },
+        { "mile": 0.08, "elevationFt": 1 },
+        { "mile": 0.16, "elevationFt": 2 },
+        { "mile": 0.24, "elevationFt": 3 },
+        { "mile": 0.32, "elevationFt": 4 },
         { "mile": 0.4, "elevationFt": 5, "label": "Arch grounds" }
       ]
     },
@@ -62,7 +77,10 @@
       "didYouKnow": "Opened in 1874, the Eads Bridge was the first bridge to cross the Mississippi River at St. Louis and one of the first large-scale uses of steel (rather than iron) in American bridge construction.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Riverfront" },
-        { "mile": 1, "elevationFt": 10, "label": "Eads Bridge approach" },
+        { "mile": 0.3, "elevationFt": 3 },
+        { "mile": 0.6, "elevationFt": 6 },
+        { "mile": 0.9, "elevationFt": 8 },
+        { "mile": 1.1, "elevationFt": 10, "label": "Eads Bridge approach" },
         { "mile": 1.5, "elevationFt": 10 }
       ]
     },
@@ -75,6 +93,10 @@
       "didYouKnow": "The area is named for Auguste Chouteau, a co-founder of St. Louis in 1764, whose original landing site was along this stretch of riverfront.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Arch grounds south end" },
+        { "mile": 0.2, "elevationFt": 3 },
+        { "mile": 0.4, "elevationFt": 5 },
+        { "mile": 0.6, "elevationFt": 7 },
+        { "mile": 0.8, "elevationFt": 9 },
         { "mile": 1, "elevationFt": 10, "label": "Landing site" }
       ]
     },
@@ -87,7 +109,10 @@
       "didYouKnow": "The riverwalk is named for Leonor K. Sullivan, a longtime U.S. Representative from St. Louis who championed federal support for the riverfront and the Arch grounds.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "North end" },
-        { "mile": 1.25, "elevationFt": 5 },
+        { "mile": 0.5, "elevationFt": 3 },
+        { "mile": 1.0, "elevationFt": 5 },
+        { "mile": 1.5, "elevationFt": 7 },
+        { "mile": 2.0, "elevationFt": 9 },
         { "mile": 2.5, "elevationFt": 10, "label": "South end" }
       ]
     },
@@ -100,7 +125,11 @@
       "didYouKnow": "The Old Courthouse was the site of the first two trials of Dred Scott v. Sandford in 1847 and 1850, a case that helped set the stage for the Civil War.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Courthouse entrance" },
-        { "mile": 0.3, "elevationFt": 5 }
+        { "mile": 0.06, "elevationFt": 1 },
+        { "mile": 0.12, "elevationFt": 3 },
+        { "mile": 0.15, "elevationFt": 5 },
+        { "mile": 0.22, "elevationFt": 3 },
+        { "mile": 0.3, "elevationFt": 0, "label": "Back at entrance" }
       ]
     }
   ],

@@ -12,8 +12,14 @@
       "didYouKnow": "Root Glacier is a tributary of the much larger Kennicott Glacier, and both are actively retreating, visibly reshaping the valley year to year.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Kennecott Mill Town" },
-        { "mile": 2.0, "elevationFt": 100 },
-        { "mile": 4.0, "elevationFt": 200, "label": "Glacier overlook" }
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 1.0, "elevationFt": 100 },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 200, "label": "Glacier overlook" },
+        { "mile": 2.5, "elevationFt": 150 },
+        { "mile": 3.0, "elevationFt": 100 },
+        { "mile": 3.5, "elevationFt": 50 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -25,9 +31,16 @@
       "didYouKnow": "The Bonanza Mine ruins sit at roughly 5,865 feet, marking one of the richest copper deposits ever discovered, which financed the Kennecott mill complex below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Kennecott Mill Town" },
-        { "mile": 2.0, "elevationFt": 1200 },
-        { "mile": 4.0, "elevationFt": 2600 },
-        { "mile": 4.5, "elevationFt": 3800, "label": "Bonanza Mine ruins" }
+        { "mile": 1.0, "elevationFt": 600 },
+        { "mile": 2.0, "elevationFt": 1300 },
+        { "mile": 3.0, "elevationFt": 2100 },
+        { "mile": 3.7, "elevationFt": 2900 },
+        { "mile": 4.5, "elevationFt": 3800, "label": "Bonanza Mine ruins" },
+        { "mile": 5.3, "elevationFt": 2900 },
+        { "mile": 6.0, "elevationFt": 2100 },
+        { "mile": 7.0, "elevationFt": 1300 },
+        { "mile": 8.0, "elevationFt": 600 },
+        { "mile": 9.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -39,9 +52,16 @@
       "didYouKnow": "Erie Lake sits in a glacially carved cirque high above the Kennecott valley, fed by snowmelt that keeps it ice-covered well into summer.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 3.0, "elevationFt": 1400 },
-        { "mile": 5.5, "elevationFt": 2400 },
-        { "mile": 7.0, "elevationFt": 3000, "label": "Erie Lake" }
+        { "mile": 0.7, "elevationFt": 500 },
+        { "mile": 1.4, "elevationFt": 1000 },
+        { "mile": 2.1, "elevationFt": 1600 },
+        { "mile": 2.8, "elevationFt": 2300 },
+        { "mile": 3.5, "elevationFt": 3000, "label": "Erie Lake" },
+        { "mile": 4.2, "elevationFt": 2300 },
+        { "mile": 4.9, "elevationFt": 1600 },
+        { "mile": 5.6, "elevationFt": 900 },
+        { "mile": 6.3, "elevationFt": 400 },
+        { "mile": 7.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -54,8 +74,15 @@
       "didYouKnow": "The cabin is a converted historic structure and one of only a handful of maintained backcountry shelters in a park with almost no other overnight infrastructure.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 7.0, "elevationFt": 300 },
-        { "mile": 14.0, "elevationFt": 500, "label": "Nugget Creek Cabin" }
+        { "mile": 1.5, "elevationFt": 100 },
+        { "mile": 3.0, "elevationFt": 200 },
+        { "mile": 4.5, "elevationFt": 300 },
+        { "mile": 6.0, "elevationFt": 420 },
+        { "mile": 7.0, "elevationFt": 500, "label": "Nugget Creek Cabin" },
+        { "mile": 8.5, "elevationFt": 380 },
+        { "mile": 10.0, "elevationFt": 260 },
+        { "mile": 11.5, "elevationFt": 140 },
+        { "mile": 14.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -67,8 +94,12 @@
       "didYouKnow": "Kennecott's copper mill operated from 1911 to 1938 and was abandoned almost overnight when the ore ran out, leaving buildings largely as workers left them.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Kennecott townsite" },
-        { "mile": 0.4, "elevationFt": 30 },
-        { "mile": 0.75, "elevationFt": 50, "label": "Loop return" }
+        { "mile": 0.15, "elevationFt": 20 },
+        { "mile": 0.3, "elevationFt": 40 },
+        { "mile": 0.4, "elevationFt": 50, "label": "Historic building area" },
+        { "mile": 0.55, "elevationFt": 30 },
+        { "mile": 0.65, "elevationFt": 10 },
+        { "mile": 0.75, "elevationFt": 0, "label": "Loop return" }
       ]
     },
     {
@@ -80,9 +111,15 @@
       "didYouKnow": "Donoho Basin offers close-up views of the Root Glacier icefall from above, a perspective most visitors only see from the valley floor.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 5.0, "elevationFt": 1400 },
-        { "mile": 9.0, "elevationFt": 2400 },
-        { "mile": 12.0, "elevationFt": 3000, "label": "Donoho Basin" }
+        { "mile": 1.0, "elevationFt": 500 },
+        { "mile": 2.5, "elevationFt": 1200 },
+        { "mile": 4.0, "elevationFt": 2000 },
+        { "mile": 5.0, "elevationFt": 2600 },
+        { "mile": 6.0, "elevationFt": 3000, "label": "Donoho Basin" },
+        { "mile": 7.0, "elevationFt": 2400 },
+        { "mile": 8.5, "elevationFt": 1600 },
+        { "mile": 10.0, "elevationFt": 800 },
+        { "mile": 12.0, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -94,9 +131,14 @@
       "didYouKnow": "The Goat Trail follows a route originally used by prospectors and, before them, Ahtna people traveling between the coast and interior.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Air taxi drop-off" },
-        { "mile": 10.0, "elevationFt": 1500 },
-        { "mile": 20.0, "elevationFt": 2500 },
-        { "mile": 30.0, "elevationFt": 3000, "label": "Route end" }
+        { "mile": 4, "elevationFt": 400 },
+        { "mile": 8, "elevationFt": 900 },
+        { "mile": 12, "elevationFt": 1500 },
+        { "mile": 16, "elevationFt": 2000 },
+        { "mile": 20, "elevationFt": 2500, "label": "High pass" },
+        { "mile": 24, "elevationFt": 2200 },
+        { "mile": 27, "elevationFt": 1800 },
+        { "mile": 30, "elevationFt": 1500, "label": "Route end / air taxi pickup" }
       ]
     },
     {
@@ -108,8 +150,14 @@
       "didYouKnow": "The overlook takes in both the Kennicott and Root Glaciers at once, along with the peaks of the Wrangell Mountains beyond.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "McCarthy" },
-        { "mile": 1.7, "elevationFt": 500 },
-        { "mile": 3.5, "elevationFt": 900, "label": "Overlook" }
+        { "mile": 0.4, "elevationFt": 250 },
+        { "mile": 0.8, "elevationFt": 500 },
+        { "mile": 1.2, "elevationFt": 700 },
+        { "mile": 1.75, "elevationFt": 900, "label": "Overlook" },
+        { "mile": 2.2, "elevationFt": 650 },
+        { "mile": 2.7, "elevationFt": 400 },
+        { "mile": 3.1, "elevationFt": 150 },
+        { "mile": 3.5, "elevationFt": 0, "label": "McCarthy return" }
       ]
     }
   ],

@@ -11,9 +11,14 @@
       "trailTip": "A free, self-guided permit-free trail, but the narrow ledge sections require some scrambling — pick up the interpretive brochure at the trailhead to identify the petroglyph panel rather than touching the rock art itself.",
       "didYouKnow": "The petroglyph panel along this trail is believed to have been carved by Ancestral Puebloans and later reinterpreted by Ute artists.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6970, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 6900, "label": "Petroglyph panel" },
-        { "mile": 2.4, "elevationFt": 6970, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": -60 },
+        { "mile": 0.8, "elevationFt": -120 },
+        { "mile": 1.0, "elevationFt": -150, "label": "Petroglyph panel" },
+        { "mile": 1.5, "elevationFt": -20 },
+        { "mile": 1.9, "elevationFt": 100 },
+        { "mile": 2.2, "elevationFt": 150 },
+        { "mile": 2.4, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -25,9 +30,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Cliff Palace is the largest cliff dwelling in North America, with roughly 150 rooms and 23 kivas built into a natural sandstone alcove.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 7000, "label": "Overlook/trailhead" },
-        { "mile": 0.1, "elevationFt": 6920, "label": "Cliff Palace" },
-        { "mile": 0.25, "elevationFt": 7000, "label": "Back to overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Overlook/trailhead" },
+        { "mile": 0.03, "elevationFt": -30 },
+        { "mile": 0.06, "elevationFt": -70 },
+        { "mile": 0.1, "elevationFt": -100, "label": "Cliff Palace" },
+        { "mile": 0.15, "elevationFt": -60 },
+        { "mile": 0.2, "elevationFt": -25 },
+        { "mile": 0.25, "elevationFt": 0, "label": "Back to overlook" }
       ]
     },
     {
@@ -39,9 +48,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Balcony House's original access required residents to climb hand-and-toe holds carved directly into the cliff face, since no ladders existed at the time it was inhabited.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6960, "label": "Trailhead" },
-        { "mile": 0.2, "elevationFt": 6880, "label": "Balcony House" },
-        { "mile": 0.6, "elevationFt": 6960, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.07, "elevationFt": -50 },
+        { "mile": 0.13, "elevationFt": -100 },
+        { "mile": 0.2, "elevationFt": -150, "label": "Balcony House" },
+        { "mile": 0.3, "elevationFt": -100 },
+        { "mile": 0.45, "elevationFt": -50 },
+        { "mile": 0.6, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -52,9 +65,15 @@
       "trailTip": "The trail drops steeply from the museum into the canyon and climbs back out, so save some energy for the return; check at the museum whether the trail is open, since it can close after heavy rain or snow.",
       "didYouKnow": "Spruce Canyon's cooler, moister microclimate supports Douglas fir and other trees uncommon elsewhere on the sun-baked mesa top.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6960, "label": "Trailhead (museum)" },
-        { "mile": 1.0, "elevationFt": 6600, "label": "Canyon floor" },
-        { "mile": 2.4, "elevationFt": 6960, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead (museum)" },
+        { "mile": 0.3, "elevationFt": -150 },
+        { "mile": 0.6, "elevationFt": -320 },
+        { "mile": 0.9, "elevationFt": -450 },
+        { "mile": 1.2, "elevationFt": -500, "label": "Canyon floor" },
+        { "mile": 1.5, "elevationFt": -350 },
+        { "mile": 1.8, "elevationFt": -200 },
+        { "mile": 2.1, "elevationFt": -80 },
+        { "mile": 2.4, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -65,9 +84,15 @@
       "trailTip": "The trail is exposed to sun and wind along the mesa edge, so bring water and sun protection even on a short hike; watch your footing near the unfenced overlook edges.",
       "didYouKnow": "Point Lookout was historically used as a lookout by both Ancestral Puebloans and, later, the park's early rangers watching for wildfire smoke.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 7000, "label": "Trailhead" },
-        { "mile": 1.1, "elevationFt": 7425, "label": "Point Lookout summit" },
-        { "mile": 2.2, "elevationFt": 7000, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.28, "elevationFt": 110 },
+        { "mile": 0.55, "elevationFt": 220 },
+        { "mile": 0.83, "elevationFt": 330 },
+        { "mile": 1.1, "elevationFt": 425, "label": "Point Lookout summit" },
+        { "mile": 1.38, "elevationFt": 330 },
+        { "mile": 1.65, "elevationFt": 220 },
+        { "mile": 1.93, "elevationFt": 110 },
+        { "mile": 2.2, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -78,8 +103,13 @@
       "trailTip": "A flat, family-friendly walk to a fenced overlook of Balcony House across the canyon — a good option if you weren't able to reserve a guided tour ticket.",
       "didYouKnow": "From this overlook you can see Balcony House tucked into the opposite cliff face without needing a permit or guided tour.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 7060, "label": "Trailhead" },
-        { "mile": 0.6, "elevationFt": 7060, "label": "Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 40 },
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.6, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 0.8, "elevationFt": 70 },
+        { "mile": 1.0, "elevationFt": 30 },
+        { "mile": 1.2, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -90,9 +120,15 @@
       "trailTip": "Follows the roadbed of the park's original 1914 entrance road; popular at sunset for views over the Montezuma Valley, so bring a headlamp for the walk back if you stay late.",
       "didYouKnow": "This trail traces the original road built to bring the park's first automobile tourists up onto the mesa.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6700, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 6750, "label": "Overlook" },
-        { "mile": 2.0, "elevationFt": 6700, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 30 },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 0.75, "elevationFt": 85 },
+        { "mile": 1.0, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 1.25, "elevationFt": 85 },
+        { "mile": 1.5, "elevationFt": 60 },
+        { "mile": 1.75, "elevationFt": 30 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -103,8 +139,13 @@
       "trailTip": "A very short paved walk suitable for nearly any visitor — a quick stop to see the dwelling without needing a reserved tour ticket.",
       "didYouKnow": "Square Tower House contains the tallest standing structure in Mesa Verde, rising about four stories from the canyon floor.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 7050, "label": "Trailhead" },
-        { "mile": 0.1, "elevationFt": 7050, "label": "Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.017, "elevationFt": 7 },
+        { "mile": 0.033, "elevationFt": 15 },
+        { "mile": 0.05, "elevationFt": 20, "label": "Overlook" },
+        { "mile": 0.067, "elevationFt": 15 },
+        { "mile": 0.083, "elevationFt": 7 },
+        { "mile": 0.1, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     }
   ],

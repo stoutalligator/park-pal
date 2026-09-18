@@ -12,9 +12,11 @@
       "didYouKnow": "Cavern Point Loop is the most-hiked trail in the park because it starts right at the Scorpion Anchorage pier where the Island Packers ferry lands.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Scorpion Anchorage" },
-        { "mile": 0.4, "elevationFt": 120 },
+        { "mile": 0.3, "elevationFt": 80 },
+        { "mile": 0.5, "elevationFt": 140 },
         { "mile": 0.75, "elevationFt": 200, "label": "Cavern Point overlook" },
-        { "mile": 1.1, "elevationFt": 90 },
+        { "mile": 1.0, "elevationFt": 150 },
+        { "mile": 1.25, "elevationFt": 60 },
         { "mile": 1.5, "elevationFt": 0, "label": "Loop back to anchorage" }
       ]
     },
@@ -28,7 +30,10 @@
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Landing cove staircase" },
         { "mile": 0.3, "elevationFt": 150, "label": "Top of staircase" },
-        { "mile": 0.75, "elevationFt": 160, "label": "Inspiration Point" },
+        { "mile": 0.55, "elevationFt": 280 },
+        { "mile": 0.75, "elevationFt": 400, "label": "Inspiration Point" },
+        { "mile": 1.0, "elevationFt": 250 },
+        { "mile": 1.25, "elevationFt": 100 },
         { "mile": 1.5, "elevationFt": 0, "label": "Return to landing" }
       ]
     },
@@ -44,6 +49,8 @@
         { "mile": 1.0, "elevationFt": 200 },
         { "mile": 2.0, "elevationFt": 350 },
         { "mile": 2.5, "elevationFt": 400, "label": "Potato Harbor overlook" },
+        { "mile": 3.0, "elevationFt": 350 },
+        { "mile": 4.0, "elevationFt": 200 },
         { "mile": 5.0, "elevationFt": 0, "label": "Return to anchorage" }
       ]
     },
@@ -55,10 +62,12 @@
       "trailTip": "The descent to Prisoners Harbor loses elevation gradually through island scrub — carry more water than you think you'll need, since there's no shade or water source along the way.",
       "didYouKnow": "Prisoners Harbor was a working ranch and shipping point for Santa Cruz Island long before the island became parkland.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 500, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 300 },
-        { "mile": 2.5, "elevationFt": 100 },
-        { "mile": 3.5, "elevationFt": 0, "label": "Prisoners Harbor" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": -100 },
+        { "mile": 1.4, "elevationFt": -200 },
+        { "mile": 2.1, "elevationFt": -300 },
+        { "mile": 2.8, "elevationFt": -400 },
+        { "mile": 3.5, "elevationFt": -500, "label": "Prisoners Harbor" }
       ]
     },
     {
@@ -70,9 +79,12 @@
       "didYouKnow": "Water Canyon Beach is one of the longest stretches of undeveloped white-sand beach in Southern California.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Water Canyon Campground" },
-        { "mile": 2.0, "elevationFt": 200 },
-        { "mile": 4.0, "elevationFt": 400 },
-        { "mile": 6.0, "elevationFt": 500, "label": "Upper canyon" }
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 2.0, "elevationFt": 350 },
+        { "mile": 3.0, "elevationFt": 500, "label": "Upper canyon turnaround" },
+        { "mile": 4.0, "elevationFt": 350 },
+        { "mile": 5.0, "elevationFt": 200 },
+        { "mile": 6.0, "elevationFt": 0, "label": "Return to campground" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -85,9 +97,12 @@
       "didYouKnow": "This grove is one of only two natural populations of Torrey pine on Earth — the other is near San Diego, over 175 miles away.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 150 },
-        { "mile": 2.0, "elevationFt": 300 },
-        { "mile": 3.0, "elevationFt": 400, "label": "Torrey pine grove" }
+        { "mile": 0.5, "elevationFt": 150 },
+        { "mile": 1.0, "elevationFt": 280 },
+        { "mile": 1.5, "elevationFt": 400, "label": "Torrey pine grove" },
+        { "mile": 2.0, "elevationFt": 280 },
+        { "mile": 2.5, "elevationFt": 150 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Return to trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -99,10 +114,15 @@
       "trailTip": "As of September 2026, per NPS.gov, confirm current access before setting out — this route crosses backcountry terrain on Santa Rosa Island that may still be affected by the 2026 fire closures.",
       "didYouKnow": "Lobo Canyon's colorful, wind-carved sandstone walls are one of the most photographed features on Santa Rosa Island.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 400, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 550 },
-        { "mile": 4.0, "elevationFt": 600 },
-        { "mile": 6.0, "elevationFt": 0, "label": "Canyon mouth / beach" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.75, "elevationFt": 200, "label": "Canyon rim high point" },
+        { "mile": 1.5, "elevationFt": -50 },
+        { "mile": 2.25, "elevationFt": -250 },
+        { "mile": 3.0, "elevationFt": -400, "label": "Canyon mouth / beach" },
+        { "mile": 3.75, "elevationFt": -250 },
+        { "mile": 4.5, "elevationFt": -50 },
+        { "mile": 5.25, "elevationFt": 200, "label": "Canyon rim high point" },
+        { "mile": 6.0, "elevationFt": 0, "label": "Return to trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -115,8 +135,13 @@
       "didYouKnow": "At 2,450 feet, Signal Peak is the highest point in Channel Islands National Park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Scorpion Anchorage" },
+        { "mile": 2.0, "elevationFt": 400 },
         { "mile": 4.0, "elevationFt": 800 },
+        { "mile": 6.0, "elevationFt": 1400 },
         { "mile": 8.0, "elevationFt": 2000, "label": "Signal Peak summit" },
+        { "mile": 10.0, "elevationFt": 1400 },
+        { "mile": 12.0, "elevationFt": 800 },
+        { "mile": 14.0, "elevationFt": 400 },
         { "mile": 16.0, "elevationFt": 0, "label": "Return to anchorage" }
       ]
     }

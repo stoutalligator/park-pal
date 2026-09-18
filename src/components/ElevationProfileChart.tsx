@@ -38,17 +38,21 @@ export default function ElevationProfileChart({ profile, units }: Props) {
   const widthRef = useRef(0);
 
   const maxMile = profile[profile.length - 1].mile;
-  const maxElevation = Math.max(...profile.map((p) => p.elevationFt), 1);
+  const elevations = profile.map((p) => p.elevationFt);
+  const maxElevation = Math.max(...elevations);
+  const minElevation = Math.min(...elevations, 0);
+  const elevationRange = Math.max(maxElevation - minElevation, 1);
 
   const toX = (mile: number) => (width <= 0 ? 0 : (mile / maxMile) * width);
   const toY = (elevationFt: number) =>
-    TOP_PAD + (1 - elevationFt / maxElevation) * (CHART_HEIGHT - TOP_PAD - BOTTOM_PAD);
+    TOP_PAD + (1 - (elevationFt - minElevation) / elevationRange) * (CHART_HEIGHT - TOP_PAD - BOTTOM_PAD);
+  const baselineY = toY(minElevation);
 
   const linePoints = useMemo(
     () => profile.map((p) => `${toX(p.mile)},${toY(p.elevationFt)}`).join(' '),
-    [profile, width, maxMile, maxElevation]
+    [profile, width, maxMile, minElevation, elevationRange]
   );
-  const fillPoints = `${toX(0)},${CHART_HEIGHT} ${linePoints} ${toX(maxMile)},${CHART_HEIGHT}`;
+  const fillPoints = `${toX(0)},${baselineY} ${linePoints} ${toX(maxMile)},${baselineY}`;
 
   const panResponder = useRef(
     PanResponder.create({

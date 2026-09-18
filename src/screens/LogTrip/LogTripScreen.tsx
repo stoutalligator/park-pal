@@ -17,8 +17,6 @@ import {
   Animal,
   Units,
 } from '@/types';
-import { ALL_TRAILS } from '@/data/trails';
-import { ALL_ANIMALS } from '@/data/animals';
 import PrimaryButton from '@/components/PrimaryButton';
 import DateRangePicker from '@/components/DateRangePicker';
 import { showToast } from '@/components/Toast';
@@ -862,7 +860,7 @@ function buildDayEntriesMap(trip: { days?: TripDayEntry[] } | undefined): Record
 }
 
 export default function LogTripScreen() {
-  const { parks, trips, logTrip, updateTrip, completeTrip, userProfile } = useApp();
+  const { parks, trips, trails, animals, logTrip, updateTrip, completeTrip, userProfile } = useApp();
   const units = userProfile.units;
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
@@ -942,10 +940,10 @@ export default function LogTripScreen() {
 
   const selectedPark = parks.find((p) => p.id === selectedParkId);
   const sortedParks = [...parks].sort((a, b) => a.name.localeCompare(b.name));
-  const parkTrails = ALL_TRAILS.filter((t) => t.parkId === selectedParkId).sort(
+  const parkTrails = trails.filter((t) => t.parkId === selectedParkId).sort(
     (a, b) => DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty]
   );
-  const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === selectedParkId).sort(
+  const parkAnimals = animals.filter((a) => a.parkId === selectedParkId).sort(
     (a, b) => RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]
   );
 

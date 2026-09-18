@@ -1,20 +1,56 @@
 {
   "parkId": "hawaii-volcanoes",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "USGS Hawaiian Volcano Observatory (HVO)", "Big Island Now", "Big Island Video News", "AllTrails"],
+  "sources": [
+    "NPS.gov",
+    "USGS Hawaiian Volcano Observatory (HVO)",
+    "Big Island Now",
+    "Big Island Video News",
+    "AllTrails"
+  ],
   "trails": [
     {
       "id": "hawaii-volcanoes-kilauea-iki",
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Year-round (conditions change with eruption activity)",
-      "tags": ["Volcanic Hazard", "Seasonal Closure"],
+      "tags": [
+        "Volcanic Hazard",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, Kilauea remains at Volcano Alert Level WATCH with intermittent eruptive episodes at the summit; this trail across the 1959 lava lake floor has generally stayed open between active episodes, but conditions change quickly, so check the park's current alerts page and heed any ranger closures for volcanic gas (sulfur dioxide) before hiking.",
       "didYouKnow": "The crater floor you cross was a churning lava lake during the 1959 eruption, and the ground can still be warm to the touch in spots decades later.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4000, "label": "Kilauea Iki Overlook" },
-        { "mile": 1.0, "elevationFt": 3700, "label": "Crater Floor" },
-        { "mile": 2.3, "elevationFt": 3700 },
-        { "mile": 3.3, "elevationFt": 4000, "label": "Loop Return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Kilauea Iki Overlook"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": -180
+        },
+        {
+          "mile": 1,
+          "elevationFt": -400,
+          "label": "Crater Floor"
+        },
+        {
+          "mile": 1.8,
+          "elevationFt": -380
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": -350
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": -150
+        },
+        {
+          "mile": 3.3,
+          "elevationFt": 0,
+          "label": "Loop Return"
+        }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -22,13 +58,39 @@
       "id": "hawaii-volcanoes-devastation",
       "estimatedTime": "30-45 min",
       "bestSeason": "Year-round (SO2 dependent)",
-      "tags": ["Volcanic Hazard", "Paved"],
+      "tags": [
+        "Volcanic Hazard",
+        "Paved"
+      ],
       "trailTip": "As of September 2026, per NPS.gov, this paved summit-area trail can be closed on short notice when volcanic gas (SO2) levels spike during an active eruptive episode, especially for visitors with heart or respiratory conditions; check the park's current conditions page the day of your visit.",
       "didYouKnow": "The trail crosses a barren cinder field created by the 1959 Kilauea Iki eruption, whose cinder fallout killed the forest that once stood here.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3900, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 3950 },
-        { "mile": 1.0, "elevationFt": 4000, "label": "Devastation Trail End" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 15
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 28
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 38
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 46
+        },
+        {
+          "mile": 1,
+          "elevationFt": 50,
+          "label": "Devastation Trail End"
+        }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -36,13 +98,53 @@
       "id": "hawaii-volcanoes-halemaumau",
       "estimatedTime": "1-2 hrs (to closure point)",
       "bestSeason": "Year-round",
-      "tags": ["Volcanic Hazard", "Seasonal Closure"],
+      "tags": [
+        "Volcanic Hazard",
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS.gov, the Halema'uma'u Trail across the caldera floor is closed beyond stop 10 because of the active eruptive vent building a spatter cone inside Halema'uma'u Crater; hikers can still walk from Volcano House down to the caldera floor, but should not attempt to bypass barricades toward the vent and should watch for elevated SO2 gas.",
       "didYouKnow": "Halema'uma'u is considered the sacred home of the volcano goddess Pele in Hawaiian tradition, and its crater has repeatedly collapsed and refilled with lava over the past two centuries.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4000, "label": "Volcano House Trailhead" },
-        { "mile": 0.7, "elevationFt": 3700, "label": "Caldera Floor" },
-        { "mile": 1.5, "elevationFt": 3600, "label": "Stop 10 (closure point)" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Volcano House Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": -180
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": -300,
+          "label": "Caldera Floor"
+        },
+        {
+          "mile": 1.3,
+          "elevationFt": -450
+        },
+        {
+          "mile": 1.95,
+          "elevationFt": -500,
+          "label": "Stop 10 (closure point, turnaround)"
+        },
+        {
+          "mile": 2.6,
+          "elevationFt": -450
+        },
+        {
+          "mile": 3.2,
+          "elevationFt": -300
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": -150
+        },
+        {
+          "mile": 3.9,
+          "elevationFt": 0,
+          "label": "Return to Volcano House"
+        }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -50,26 +152,102 @@
       "id": "hawaii-volcanoes-puu-loa",
       "estimatedTime": "30-45 min",
       "bestSeason": "Year-round",
-      "tags": ["Cultural Site", "No Rubbing/Touching"],
+      "tags": [
+        "Cultural Site",
+        "No Rubbing/Touching"
+      ],
       "trailTip": "Stay on the boardwalk and never touch, chalk, or make rubbings of the petroglyphs; the panels are sacred and legally protected cultural features, and body oils and foot traffic accelerate erosion.",
       "didYouKnow": "Puu Loa contains over 23,000 petroglyphs, one of the largest concentrations in Hawaii, many believed to mark the umbilical cords (piko) of newborns placed here for good fortune.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 750, "label": "Trailhead" },
-        { "mile": 0.7, "elevationFt": 770, "label": "Petroglyph Field" },
-        { "mile": 1.4, "elevationFt": 750, "label": "Trail End" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 45,
+          "label": "Petroglyph Field (turnaround)"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 25
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 10
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ]
     },
     {
       "id": "hawaii-volcanoes-napau-crater",
       "estimatedTime": "8-10 hrs",
       "bestSeason": "Variable — closed during active East Rift Zone unrest",
-      "tags": ["Volcanic Hazard", "Seasonal Closure", "Remote"],
+      "tags": [
+        "Volcanic Hazard",
+        "Seasonal Closure",
+        "Remote"
+      ],
       "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, this East Rift Zone route (via the Naulu Trail) has a documented history of being fully closed for extended periods during eruptive unrest due to gas emissions, ground cracking, and wildfire risk near Pu'u 'O'o and Maunaulu, and the park sustained further trail damage from Hurricane Lala in August 2026; confirm current status on the park's alerts page or by calling the visitor center (808-985-6011) before attempting it, since it may be closed at any given time.",
       "didYouKnow": "The trail leads to Napau Crater near Pu'u 'O'o, a vent that erupted almost continuously from 1983 to 2018 and reshaped this part of the rift zone.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 2900, "label": "Trailhead" },
-        { "mile": 5.0, "elevationFt": 2600, "label": "Naulu Trail Junction" },
-        { "mile": 7.0, "elevationFt": 2500, "label": "Napau Crater Overlook" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 300
+        },
+        {
+          "mile": 3,
+          "elevationFt": -300
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": 100,
+          "label": "Naulu Trail Junction"
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": -450
+        },
+        {
+          "mile": 7,
+          "elevationFt": -600,
+          "label": "Napau Crater Overlook (turnaround)"
+        },
+        {
+          "mile": 8.5,
+          "elevationFt": -450
+        },
+        {
+          "mile": 10,
+          "elevationFt": 100
+        },
+        {
+          "mile": 11.5,
+          "elevationFt": -300
+        },
+        {
+          "mile": 12.5,
+          "elevationFt": 300
+        },
+        {
+          "mile": 14,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -77,26 +255,79 @@
       "id": "hawaii-volcanoes-thurston-lava-tube",
       "estimatedTime": "20-30 min",
       "bestSeason": "Year-round",
-      "tags": ["Cave", "Low Light"],
+      "tags": [
+        "Cave",
+        "Low Light"
+      ],
       "trailTip": "Bring a flashlight or headlamp for the unlit far section of the tube, and watch your head on low ceiling sections; the surrounding fern forest boardwalk can be slippery when wet.",
       "didYouKnow": "The lava tube, known as Nahuku, formed roughly 500 years ago when the outer surface of a lava flow cooled and hardened while lava continued draining through the interior.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4000, "label": "Trailhead" },
-        { "mile": 0.2, "elevationFt": 4030, "label": "Lava Tube Entrance" },
-        { "mile": 0.4, "elevationFt": 4050, "label": "Tube Exit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.08,
+          "elevationFt": 15
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": 35
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 50,
+          "label": "Lava Tube Entrance"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 25
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 0,
+          "label": "Tube Exit / Loop Return"
+        }
       ]
     },
     {
       "id": "hawaii-volcanoes-kipuka-puaulu",
       "estimatedTime": "1 hr",
       "bestSeason": "Currently closed",
-      "tags": ["Seasonal Closure"],
+      "tags": [
+        "Seasonal Closure"
+      ],
       "trailTip": "As of September 2026, per NPS.gov's August 24, 2026 park reopening notice, the Kipuka Puaulu Trail remains closed due to hazardous storm-damaged trees following Hurricane Lala; check the park's current conditions page before planning a visit, as this closure has no announced reopening date.",
       "didYouKnow": "Kipuka Puaulu (\"Bird Park\") is an ecological island of old-growth forest that was spared by surrounding lava flows, sheltering native trees and birds found nowhere else nearby.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 4000, "label": "Trailhead" },
-        { "mile": 0.6, "elevationFt": 4060 },
-        { "mile": 1.2, "elevationFt": 4100, "label": "Loop Return" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 30
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 70
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 100,
+          "label": "High point"
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 50
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 0,
+          "label": "Loop Return"
+        }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -104,14 +335,48 @@
       "id": "hawaii-volcanoes-mauna-iki",
       "estimatedTime": "4-5 hrs",
       "bestSeason": "Year-round (SO2 dependent)",
-      "tags": ["No Shade", "Volcanic Hazard"],
+      "tags": [
+        "No Shade",
+        "Volcanic Hazard"
+      ],
       "trailTip": "This crossing of the Ka'u Desert has no shade or water and can be affected by drifting volcanic gas (vog) from the summit depending on wind direction, so check the day's air quality/SO2 forecast and carry sun protection and extra water.",
       "didYouKnow": "The Ka'u Desert's stark cinder plain was formed by fallout from the highly explosive 1790 Kilauea eruption, one of the deadliest volcanic events in Hawaiian history.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3200, "label": "Trailhead" },
-        { "mile": 3.0, "elevationFt": 3400 },
-        { "mile": 5.5, "elevationFt": 3600, "label": "Mauna Iki Overlook" },
-        { "mile": 8.0, "elevationFt": 3700, "label": "Trail End" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 150
+        },
+        {
+          "mile": 3,
+          "elevationFt": 350
+        },
+        {
+          "mile": 4,
+          "elevationFt": 500,
+          "label": "Mauna Iki Overlook (turnaround)"
+        },
+        {
+          "mile": 5,
+          "elevationFt": 350
+        },
+        {
+          "mile": 6,
+          "elevationFt": 150
+        },
+        {
+          "mile": 7,
+          "elevationFt": 50
+        },
+        {
+          "mile": 8,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
+        }
       ]
     }
   ],
@@ -122,7 +387,11 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round (nesting Oct-Mar)",
       "whereToLook": "Summit-area grassy fields and roadsides",
-      "tags": ["Endangered", "Nesting Season", "No Feeding"],
+      "tags": [
+        "Endangered",
+        "Nesting Season",
+        "No Feeding"
+      ],
       "viewingTip": "Never feed nene, even when they approach parking areas or picnic sites, since roadside feeding leads to vehicle collisions; give nesting pairs or goslings a wide berth and observe from your car or with binoculars.",
       "didYouKnow": "The nene is Hawaii's state bird and the world's rarest goose, having recovered from fewer than 30 birds in the 1950s through captive breeding and reintroduction."
     },
@@ -132,7 +401,10 @@
       "bestTimeOfDay": "Dusk / Night",
       "bestSeason": "Year-round (pupping season Jun-Aug)",
       "whereToLook": "Forest edges near Kipuka Puaulu and Kilauea's rainforest zones",
-      "tags": ["Endangered", "Roost Sensitive"],
+      "tags": [
+        "Endangered",
+        "Roost Sensitive"
+      ],
       "viewingTip": "Watch quietly at dusk for silhouettes overhead rather than shining lights into trees or searching for day roosts, since disturbing a roost, especially during pupping season, can cause a mother to abandon her pup.",
       "didYouKnow": "The Hawaiian hoary bat is the only native land mammal in Hawaii, having colonized the islands from a mainland ancestor an estimated 10,000 years ago."
     },
@@ -142,7 +414,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round (peak Ohia bloom Feb-Jun)",
       "whereToLook": "Native ohia forest along Kipuka Puaulu and Crater Rim Trail sections",
-      "tags": ["Native Species", "Endangered"],
+      "tags": [
+        "Native Species",
+        "Endangered"
+      ],
       "viewingTip": "Watch flowering ohia trees quietly from the trail with binoculars rather than approaching the tree closely, since disturbance can interrupt feeding on scarce nectar sources this vulnerable species depends on.",
       "didYouKnow": "The i'iwi's curved bill is specially adapted to sip nectar from tubular native lobelia and ohia flowers, and the bird is highly susceptible to avian malaria carried by introduced mosquitoes."
     },
@@ -152,7 +427,9 @@
       "bestTimeOfDay": "Midday",
       "bestSeason": "Year-round",
       "whereToLook": "Native forest patches with mamaki understory",
-      "tags": ["Native Species"],
+      "tags": [
+        "Native Species"
+      ],
       "viewingTip": "Photograph with a zoom lens from a short distance rather than catching or handling it, and avoid trampling mamaki plants, its only host plant.",
       "didYouKnow": "Named for King Kamehameha, this is one of only two butterfly species native to the Hawaiian Islands."
     },
@@ -162,7 +439,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Rainforest understory near Kipuka Puaulu and wetter trail sections",
-      "tags": ["Introduced Species"],
+      "tags": [
+        "Introduced Species"
+      ],
       "viewingTip": "Keep a clear distance and never attempt to feed or corner one, since feral pigs can act defensively if surprised at close range; they are managed as an invasive species due to the damage rooting causes to native forest.",
       "didYouKnow": "Feral pigs descend from Polynesian and later European pigs and spread invasive plant seeds through the rainforest in their droppings, accelerating habitat degradation."
     },
@@ -172,7 +451,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round (peak Ohia bloom Feb-Jun)",
       "whereToLook": "Ohia forest canopy throughout the park's higher-elevation trails",
-      "tags": ["Native Species", "Common Sighting"],
+      "tags": [
+        "Native Species",
+        "Common Sighting"
+      ],
       "viewingTip": "Enjoy this active, vocal species from the trail with binoculars; it moves quickly between blossoms, so patience with optics works better than trying to approach a perched bird.",
       "didYouKnow": "The 'apapane is the most abundant native Hawaiian honeycreeper and can fly long distances between islands and elevations chasing ohia bloom cycles."
     },
@@ -182,7 +464,10 @@
       "bestTimeOfDay": "Night (most active)",
       "bestSeason": "Year-round",
       "whereToLook": "Undersides of native leaves in wet forest, e.g. near Thurston Lava Tube",
-      "tags": ["Endemic Species", "Tiny/Camouflaged"],
+      "tags": [
+        "Endemic Species",
+        "Tiny/Camouflaged"
+      ],
       "viewingTip": "Look gently under leaves with a light rather than picking leaves or disturbing foliage, and let it be if you don't spot the marking right away; this spider is easily overlooked and shouldn't be handled.",
       "didYouKnow": "Each happy face spider has a slightly different pattern on its abdomen, and the species is found only in Hawaii's wet native forests."
     },
@@ -192,7 +477,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Dense native rainforest understory, e.g. Kipuka Puaulu area",
-      "tags": ["Native Species", "Songbird"],
+      "tags": [
+        "Native Species",
+        "Songbird"
+      ],
       "viewingTip": "Listen for its varied, whistling song and scan low branches with binoculars rather than pursuing it into dense undergrowth, since it's shy and easily flushed.",
       "didYouKnow": "The 'oma'o is one of the few native Hawaiian thrushes to survive avian disease and habitat loss that eliminated related species on other islands."
     }

@@ -12,9 +12,11 @@
       "didYouKnow": "The Hot Springs Mountain Tower sits atop the highest point in the park and has offered panoramic views of the Ouachita Mountains since 1983.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 150 },
-        { "mile": 1.0, "elevationFt": 300, "label": "Overlook" },
-        { "mile": 1.7, "elevationFt": 400, "label": "Hot Springs Mountain Tower" }
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.8, "elevationFt": 300, "label": "Overlook" },
+        { "mile": 1.0, "elevationFt": 400, "label": "Hot Springs Mountain Tower" },
+        { "mile": 1.3, "elevationFt": 250 },
+        { "mile": 1.7, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -26,9 +28,13 @@
       "didYouKnow": "At over 10 miles one-way, the Sunset Trail is the longest continuous trail in the smallest national park in the system.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "West Mountain Trailhead" },
+        { "mile": 1.4, "elevationFt": 300 },
         { "mile": 2.8, "elevationFt": 400, "label": "West Mountain segment end" },
+        { "mile": 4.1, "elevationFt": 250 },
         { "mile": 5.4, "elevationFt": 700, "label": "Sugarloaf Mountain" },
+        { "mile": 6.7, "elevationFt": 550 },
         { "mile": 8.0, "elevationFt": 950 },
+        { "mile": 9.3, "elevationFt": 1100 },
         { "mile": 10.6, "elevationFt": 1200, "label": "Stonebridge Road end" }
       ]
     },
@@ -41,9 +47,11 @@
       "didYouKnow": "Gulpha Gorge Campground sits atop the same geothermal aquifer that feeds the park's famous hot springs.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead near campground" },
-        { "mile": 1.0, "elevationFt": 100 },
-        { "mile": 2.0, "elevationFt": 200 },
-        { "mile": 3.0, "elevationFt": 300, "label": "Loop end" }
+        { "mile": 0.6, "elevationFt": 120 },
+        { "mile": 1.2, "elevationFt": 250 },
+        { "mile": 1.5, "elevationFt": 300, "label": "High point" },
+        { "mile": 2.25, "elevationFt": 150 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -55,8 +63,11 @@
       "didYouKnow": "Hot Springs National Park's forest lies in the Ouachita Mountains, one of the few major east-west mountain ranges in North America.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.2, "elevationFt": 150 },
-        { "mile": 2.5, "elevationFt": 250, "label": "Loop end" }
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 1.25, "elevationFt": 250, "label": "High point" },
+        { "mile": 1.9, "elevationFt": 120 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -68,7 +79,10 @@
       "didYouKnow": "You can walk directly from a historic bathhouse to a mountain summit trailhead in Hot Springs — a rarity among national parks.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Downtown trailhead" },
-        { "mile": 0.8, "elevationFt": 300 },
+        { "mile": 0.3, "elevationFt": 110 },
+        { "mile": 0.6, "elevationFt": 230 },
+        { "mile": 0.9, "elevationFt": 340 },
+        { "mile": 1.2, "elevationFt": 430 },
         { "mile": 1.5, "elevationFt": 500, "label": "Summit area" }
       ]
     },
@@ -81,8 +95,11 @@
       "didYouKnow": "North Mountain's overlooks give one of the best views of the historic Bathhouse Row streetscape below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 150 },
-        { "mile": 1.5, "elevationFt": 300, "label": "Overlook" }
+        { "mile": 0.3, "elevationFt": 100 },
+        { "mile": 0.6, "elevationFt": 220 },
+        { "mile": 0.8, "elevationFt": 300, "label": "Overlook" },
+        { "mile": 1.1, "elevationFt": 150 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -94,7 +111,10 @@
       "didYouKnow": "Many of Hot Springs' trails, including this one, were built or improved by the Civilian Conservation Corps in the 1930s.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 200 },
+        { "mile": 0.4, "elevationFt": 100 },
+        { "mile": 0.8, "elevationFt": 180 },
+        { "mile": 1.2, "elevationFt": 250 },
+        { "mile": 1.6, "elevationFt": 300 },
         { "mile": 2.0, "elevationFt": 350, "label": "Goat Rock overlook" }
       ]
     },
@@ -107,8 +127,11 @@
       "didYouKnow": "Hot Springs National Park protects thermal water estimated to have fallen as rain roughly 4,000 years ago before slowly percolating back to the surface.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 60 },
-        { "mile": 0.7, "elevationFt": 100, "label": "Loop end" }
+        { "mile": 0.15, "elevationFt": 35 },
+        { "mile": 0.3, "elevationFt": 80 },
+        { "mile": 0.35, "elevationFt": 100, "label": "High point" },
+        { "mile": 0.5, "elevationFt": 50 },
+        { "mile": 0.7, "elevationFt": 0, "label": "Loop end" }
       ]
     }
   ],

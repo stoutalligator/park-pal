@@ -7,8 +7,6 @@ import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkScene } from '@/data/parkImages';
-import { ALL_TRAILS } from '@/data/trails';
-import { ALL_ANIMALS } from '@/data/animals';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -93,12 +91,12 @@ function TreeIcon({ size = 20 }: { size?: number }) {
 
 export default function ParkDetailScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, trips, toggleFavorite, updateParkStatus, isTrailCompleted, isAnimalSpotted } = useApp();
+  const { parks, trips, trails, animals, toggleFavorite, updateParkStatus, isTrailCompleted, isAnimalSpotted } = useApp();
   const insets = useSafeAreaInsets();
   const park = parks.find((p) => p.id === parkId);
   const parkTrips = trips.filter((t) => t.parkId === parkId);
-  const parkTrails = ALL_TRAILS.filter((t) => t.parkId === parkId);
-  const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === parkId);
+  const parkTrails = trails.filter((t) => t.parkId === parkId);
+  const parkAnimals = animals.filter((a) => a.parkId === parkId);
   const trailsCompletedCount = parkTrails.filter((t) => isTrailCompleted(t.id)).length;
   const animalsSpottedCount = parkAnimals.filter((a) => isAnimalSpotted(a.id)).length;
 

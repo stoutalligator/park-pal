@@ -13,9 +13,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.75, "elevationFt": 200 },
+        { "mile": 0.5, "elevationFt": 130 },
+        { "mile": 1.0, "elevationFt": 280 },
         { "mile": 1.5, "elevationFt": 400, "label": "Red Cathedral" },
-        { "mile": 2.25, "elevationFt": 180 },
+        { "mile": 2.0, "elevationFt": 250 },
+        { "mile": 2.5, "elevationFt": 100 },
         { "mile": 3.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -29,8 +31,10 @@
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
         { "mile": 0.5, "elevationFt": 150, "label": "Polished Narrows" },
+        { "mile": 1.0, "elevationFt": 320 },
         { "mile": 1.75, "elevationFt": 500, "label": "Upper Canyon" },
-        { "mile": 2.6, "elevationFt": 200 },
+        { "mile": 2.4, "elevationFt": 300 },
+        { "mile": 3.0, "elevationFt": 120 },
         { "mile": 3.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -43,7 +47,10 @@
       "didYouKnow": "At 282 feet below sea level, Badwater Basin is the lowest point in North America — yet Telescope Peak, visible from the salt flat, rises more than two miles above it.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Boardwalk" },
+        { "mile": 0.2, "elevationFt": 2 },
+        { "mile": 0.35, "elevationFt": 4 },
         { "mile": 0.5, "elevationFt": 5, "label": "Salt Flat" },
+        { "mile": 0.75, "elevationFt": 2 },
         { "mile": 1.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -56,10 +63,12 @@
       "didYouKnow": "On a clear day the summit offers one of the greatest vertical-relief views in the Lower 48 — Mount Whitney, the highest point in the contiguous U.S., is visible in the same panorama as Badwater Basin, the lowest.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Mahogany Flat Trailhead" },
-        { "mile": 3, "elevationFt": 1200 },
-        { "mile": 5, "elevationFt": 2000, "label": "Arcane Meadows" },
+        { "mile": 2, "elevationFt": 800 },
+        { "mile": 4, "elevationFt": 1600 },
+        { "mile": 5.5, "elevationFt": 2300, "label": "Arcane Meadows" },
         { "mile": 7, "elevationFt": 3000, "label": "Summit" },
-        { "mile": 10, "elevationFt": 1500 },
+        { "mile": 9, "elevationFt": 2000 },
+        { "mile": 11, "elevationFt": 1000 },
         { "mile": 14, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -73,8 +82,10 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 80 },
         { "mile": 0.4, "elevationFt": 150, "label": "Natural Bridge" },
         { "mile": 0.7, "elevationFt": 200, "label": "Canyon Dryfall" },
+        { "mile": 1.0, "elevationFt": 100 },
         { "mile": 1.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
@@ -103,7 +114,9 @@
       "didYouKnow": "The half-mile-wide crater formed within the last few thousand years when rising magma met groundwater in a violent steam explosion.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 150 },
         { "mile": 0.6, "elevationFt": 300, "label": "Rim High Point" },
+        { "mile": 0.9, "elevationFt": 200 },
         { "mile": 1.1, "elevationFt": 150 },
         { "mile": 1.5, "elevationFt": 0, "label": "Trailhead" }
       ]

@@ -1,119 +1,390 @@
 {
   "parkId": "saguaro",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "AllTrails", "Saguaro National Park Trails Illustrated map"],
+  "sources": [
+    "NPS.gov",
+    "AllTrails",
+    "Saguaro National Park Trails Illustrated map"
+  ],
   "trails": [
     {
       "id": "saguaro-cactus-forest",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Oct-Apr",
-      "tags": ["Flat", "Wildflowers"],
+      "tags": [
+        "Flat",
+        "Wildflowers"
+      ],
       "trailTip": "This loop is also open to the one-way Cactus Forest Drive, so stick to the marked footpath and watch for cyclists where the trail parallels the road.",
       "didYouKnow": "The Rincon Mountain District's Cactus Forest holds some of the densest stands of saguaro in the entire park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 40 },
-        { "mile": 1.6, "elevationFt": 90 },
-        { "mile": 2.5, "elevationFt": 20, "label": "Loop closure" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 20
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 40
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 70
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 90
+        },
+        {
+          "mile": 2,
+          "elevationFt": 50
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 0,
+          "label": "Loop closure"
+        }
       ]
     },
     {
       "id": "saguaro-douglas-spring",
-      "estimatedTime": "4-6 hrs",
+      "estimatedTime": "7-9 hrs",
       "bestSeason": "Nov-Mar",
-      "tags": ["Exposure", "No Reliable Water"],
+      "tags": [
+        "Exposure",
+        "No Reliable Water"
+      ],
       "trailTip": "Carry all the water you'll need — Douglas Spring itself is frequently dry, and there is no shade for most of the route; start at first light in warmer months.",
       "didYouKnow": "The trail climbs into the Rincon foothills, transitioning from saguaro-studded desert scrub into oak-juniper woodland.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 500 },
-        { "mile": 3.0, "elevationFt": 1100 },
-        { "mile": 4.5, "elevationFt": 1600 },
-        { "mile": 6.0, "elevationFt": 1900, "label": "Douglas Spring" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 400
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 900
+        },
+        {
+          "mile": 4,
+          "elevationFt": 1400
+        },
+        {
+          "mile": 5,
+          "elevationFt": 1700
+        },
+        {
+          "mile": 6,
+          "elevationFt": 1900,
+          "label": "Douglas Spring"
+        },
+        {
+          "mile": 7.5,
+          "elevationFt": 1400
+        },
+        {
+          "mile": 9,
+          "elevationFt": 900
+        },
+        {
+          "mile": 10.5,
+          "elevationFt": 400
+        },
+        {
+          "mile": 12,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "saguaro-hugh-norris",
       "estimatedTime": "5-7 hrs",
       "bestSeason": "Nov-Mar",
-      "tags": ["Exposure", "Long Ridgeline", "No Reliable Water"],
+      "tags": [
+        "Exposure",
+        "Long Ridgeline",
+        "No Reliable Water"
+      ],
       "trailTip": "This is one of the longest sustained ridge hikes in the park with almost no shade — avoid it entirely on summer afternoons and carry more water than feels necessary.",
       "didYouKnow": "The ridge is named for a Tohono O'odham tribal leader and offers views stretching from the Tucson Mountains to the Santa Catalinas.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 800 },
-        { "mile": 5.0, "elevationFt": 1500 },
-        { "mile": 7.5, "elevationFt": 2000 },
-        { "mile": 10.0, "elevationFt": 2400, "label": "Wasson Peak" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.25,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 1000
+        },
+        {
+          "mile": 3.75,
+          "elevationFt": 1700
+        },
+        {
+          "mile": 5,
+          "elevationFt": 2400,
+          "label": "Wasson Peak"
+        },
+        {
+          "mile": 6.25,
+          "elevationFt": 1700
+        },
+        {
+          "mile": 7.5,
+          "elevationFt": 1000
+        },
+        {
+          "mile": 8.75,
+          "elevationFt": 500
+        },
+        {
+          "mile": 10,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "saguaro-freeman-homestead",
       "estimatedTime": "30-45 min",
       "bestSeason": "Oct-Apr",
-      "tags": ["Flat", "Family Friendly"],
+      "tags": [
+        "Flat",
+        "Family Friendly"
+      ],
       "trailTip": "A shaded wash section partway through makes this a good midday option even when it's warm.",
       "didYouKnow": "The loop passes the site of a small early-1900s homestead in a wash lined with mesquite and desert hackberry.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 60, "label": "Wash crossing" },
-        { "mile": 1.0, "elevationFt": 10, "label": "Loop closure" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 25
+        },
+        {
+          "mile": 0.25,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 95,
+          "label": "Wash crossing"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 45
+        },
+        {
+          "mile": 1,
+          "elevationFt": 0,
+          "label": "Loop closure"
+        }
       ]
     },
     {
       "id": "saguaro-signal-hill",
       "estimatedTime": "15-20 min",
       "bestSeason": "Year-round",
-      "tags": ["Family Friendly", "Historic"],
+      "tags": [
+        "Family Friendly",
+        "Historic"
+      ],
       "trailTip": "Please don't touch or trace the petroglyphs — skin oils accelerate erosion of the rock art.",
       "didYouKnow": "The petroglyphs at the summit were pecked into volcanic rock by the Hohokam people roughly 800 years ago.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.15, "elevationFt": 50, "label": "Petroglyph summit" },
-        { "mile": 0.3, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.075,
+          "elevationFt": 25
+        },
+        {
+          "mile": 0.15,
+          "elevationFt": 50,
+          "label": "Petroglyph summit"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 40
+        },
+        {
+          "mile": 0.225,
+          "elevationFt": 25
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "saguaro-king-canyon",
       "estimatedTime": "4-6 hrs",
       "bestSeason": "Nov-Mar",
-      "tags": ["Exposure", "Mine Ruins", "Steep"],
+      "tags": [
+        "Exposure",
+        "Mine Ruins",
+        "Steep"
+      ],
       "trailTip": "The old Gould Mine ruins partway up are fenced off and unstable — view them from the trail rather than climbing on the structures.",
       "didYouKnow": "King Canyon follows an old mining and ranching route up toward Wasson Peak, the highest point in the Tucson Mountain District.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 4.0, "elevationFt": 1200, "label": "Gould Mine ruins" },
-        { "mile": 5.5, "elevationFt": 1500 },
-        { "mile": 7.1, "elevationFt": 1700, "label": "Wasson Peak junction" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2,
+          "elevationFt": 900,
+          "label": "Gould Mine ruins"
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": 1300
+        },
+        {
+          "mile": 3.55,
+          "elevationFt": 1700,
+          "label": "Wasson Peak junction"
+        },
+        {
+          "mile": 4.5,
+          "elevationFt": 1300
+        },
+        {
+          "mile": 5.5,
+          "elevationFt": 900
+        },
+        {
+          "mile": 6.3,
+          "elevationFt": 500
+        },
+        {
+          "mile": 7.1,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "saguaro-tanque-verde-ridge",
       "estimatedTime": "5-7 hrs",
       "bestSeason": "Nov-Mar",
-      "tags": ["Exposure", "Long Ridgeline", "No Reliable Water"],
+      "tags": [
+        "Exposure",
+        "Long Ridgeline",
+        "No Reliable Water"
+      ],
       "trailTip": "There is no shade and no water source along the ridge — this is a serious undertaking in anything but cool weather.",
       "didYouKnow": "The trail climbs from saguaro-dominated desert up through successive vegetation zones toward the pine-forested Rincon high country.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 4.0, "elevationFt": 1400 },
-        { "mile": 6.0, "elevationFt": 2000 },
-        { "mile": 8.0, "elevationFt": 2500, "label": "Juniper Basin area" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1,
+          "elevationFt": 700
+        },
+        {
+          "mile": 2,
+          "elevationFt": 1400
+        },
+        {
+          "mile": 3,
+          "elevationFt": 2000
+        },
+        {
+          "mile": 4,
+          "elevationFt": 2500,
+          "label": "Turnaround (Juniper Basin area)"
+        },
+        {
+          "mile": 5,
+          "elevationFt": 2000
+        },
+        {
+          "mile": 6,
+          "elevationFt": 1400
+        },
+        {
+          "mile": 7,
+          "elevationFt": 700
+        },
+        {
+          "mile": 8,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "saguaro-valley-view-overlook",
       "estimatedTime": "30-40 min",
       "bestSeason": "Oct-Apr",
-      "tags": ["Flat", "Family Friendly", "Sunset Spot"],
+      "tags": [
+        "Flat",
+        "Family Friendly",
+        "Sunset Spot"
+      ],
       "trailTip": "A popular sunset walk in the Tucson Mountain District — arrive with time to spare since the small trailhead lot fills up in the evening.",
       "didYouKnow": "On clear days the overlook offers views west across Avra Valley toward the Ironwood Forest area.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 100, "label": "Overlook" },
-        { "mile": 0.8, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 100,
+          "label": "Overlook"
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 50
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 25
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     }
   ],
@@ -124,7 +395,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Apr-Jun",
       "whereToLook": "Rocky bajadas and washes, especially after spring rain",
-      "tags": ["Venomous", "Slow Moving"],
+      "tags": [
+        "Venomous",
+        "Slow Moving"
+      ],
       "viewingTip": "If you spot one, admire it from several feet away and never handle it — its bite is rare but medically serious, and it's illegal in Arizona to touch or collect one.",
       "didYouKnow": "Gila monsters spend an estimated 95% of their lives underground and can survive on just a few large meals a year."
     },
@@ -134,7 +408,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Desert scrub and washes near trailheads",
-      "tags": ["Herd Animal"],
+      "tags": [
+        "Herd Animal"
+      ],
       "viewingTip": "Give a javelina herd plenty of room, especially if young are present — they travel in tight family groups and can act defensively if they feel cornered; never feed them.",
       "didYouKnow": "Despite their pig-like look, javelinas are peccaries, a separate family more closely related to hippos than to pigs."
     },
@@ -144,7 +420,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Open trail edges and low desert scrub",
-      "tags": ["Ground Bird"],
+      "tags": [
+        "Ground Bird"
+      ],
       "viewingTip": "Roadrunners are usually unbothered by quiet observers at a normal trail distance — pause and watch rather than chasing after one for a closer look.",
       "didYouKnow": "Roadrunners can reach speeds of up to 20 mph on foot and rarely fly except to escape danger."
     },
@@ -154,7 +432,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Apr-Jun",
       "whereToLook": "Saguaro cavities throughout the Cactus Forest",
-      "tags": ["Cavity Nester"],
+      "tags": [
+        "Cavity Nester"
+      ],
       "viewingTip": "Watch nest cavities from a distance with binoculars rather than approaching the saguaro — repeated close visits can cause the pair to abandon the nest.",
       "didYouKnow": "The cavities Gila woodpeckers carve into saguaros are later reused by elf owls, purple martins, and other cavity-nesting species."
     },
@@ -164,7 +444,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Mar-Oct",
       "whereToLook": "Rocky slopes in the Tucson Mountain District",
-      "tags": ["Protected Species", "Slow Moving"],
+      "tags": [
+        "Protected Species",
+        "Slow Moving"
+      ],
       "viewingTip": "Never pick up a desert tortoise — when frightened it may void its bladder, losing water it needs to survive for months; simply step back and let it move on undisturbed.",
       "didYouKnow": "A desert tortoise can store enough water in its bladder to last through most of the dry season."
     },
@@ -174,7 +457,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Open desert flats and wash corridors",
-      "tags": ["Adaptable"],
+      "tags": [
+        "Adaptable"
+      ],
       "viewingTip": "Enjoy coyote sightings from the trail with binoculars and never feed or try to call one in — habituated coyotes become a safety problem for both people and the animal.",
       "didYouKnow": "Coyotes in the Sonoran Desert often den in old badger burrows or dense wash vegetation."
     },
@@ -184,7 +469,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Saguaro stands and open desert near the Cactus Forest",
-      "tags": ["Cooperative Hunter"],
+      "tags": [
+        "Cooperative Hunter"
+      ],
       "viewingTip": "Watch hunting groups with binoculars from a distance — Harris's hawks are one of the few raptors that hunt cooperatively in family groups, and a scope will reveal more of the behavior than getting close ever could.",
       "didYouKnow": "Harris's hawks sometimes stack on top of one another on a single saguaro, a behavior nicknamed 'backstacking' that helps them scan for prey."
     },
@@ -194,7 +481,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Mar-Jun",
       "whereToLook": "Cholla and saguaro stands throughout the park",
-      "tags": ["Cavity Nester", "State Bird"],
+      "tags": [
+        "Cavity Nester",
+        "State Bird"
+      ],
       "viewingTip": "Look and listen for its harsh, rattling call from the trail rather than reaching into cholla or saguaro nests to look inside — both the spines and a disturbed nest can hurt bird and hiker alike.",
       "didYouKnow": "Arizona's state bird builds football-shaped nests tucked deep inside cholla cacti, using the spines as a natural predator deterrent."
     }

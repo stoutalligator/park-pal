@@ -12,10 +12,14 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Alkali Flat is the dry bed of ancient Lake Otero, and the trail is marked only by orange posts since footprints vanish quickly in the wind-blown gypsum sand.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3880, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 3950 },
-        { "mile": 3.0, "elevationFt": 4080, "label": "Alkali Flat overlook" },
-        { "mile": 5.0, "elevationFt": 3880, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.8, "elevationFt": 80 },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 2.2, "elevationFt": 190 },
+        { "mile": 3.0, "elevationFt": 200, "label": "Alkali Flat overlook" },
+        { "mile": 3.8, "elevationFt": 140 },
+        { "mile": 4.4, "elevationFt": 70 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -26,9 +30,13 @@
       "trailTip": "Interpretive markers along this loop explain how plants and animals like the kit fox and bleached earless lizard survive on the shifting gypsum dunes — a good first stop before attempting a longer dune hike.",
       "didYouKnow": "Several species here, including the bleached earless lizard, evolved lighter coloring in just a few thousand years to match the unusually white gypsum sand.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3900, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 4000, "label": "Dune overlook" },
-        { "mile": 1.0, "elevationFt": 3900, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": 40 },
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.5, "elevationFt": 100, "label": "Dune overlook" },
+        { "mile": 0.7, "elevationFt": 60 },
+        { "mile": 0.85, "elevationFt": 20 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -40,9 +48,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "This wheelchair- and stroller-accessible boardwalk was built to protect the fragile interdune crust that supports plant life between the shifting dunes.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3970, "label": "Trailhead" },
-        { "mile": 0.2, "elevationFt": 3975, "label": "Overlook platform" },
-        { "mile": 0.4, "elevationFt": 3970, "label": "End" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.08, "elevationFt": 1 },
+        { "mile": 0.15, "elevationFt": 3 },
+        { "mile": 0.2, "elevationFt": 5, "label": "Overlook platform" },
+        { "mile": 0.28, "elevationFt": 2 },
+        { "mile": 0.34, "elevationFt": 1 },
+        { "mile": 0.4, "elevationFt": 0, "label": "End" }
       ]
     },
     {
@@ -54,9 +66,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The loop connects a set of primitive campsites tucked between dunes, offering one of the only places in the National Park System to camp inside an active dunefield.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3900, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 4050, "label": "Campsite area" },
-        { "mile": 2.0, "elevationFt": 3900, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.8, "elevationFt": 120 },
+        { "mile": 1.0, "elevationFt": 150, "label": "Campsite area" },
+        { "mile": 1.3, "elevationFt": 100 },
+        { "mile": 1.6, "elevationFt": 50 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -67,9 +83,14 @@
       "trailTip": "The seasonal playa is usually dry and cracked, but can hold a thin sheet of water after winter rains — stay on the marked path to avoid sinking into soft mud near the edges.",
       "didYouKnow": "A playa is a temporary lakebed that fills only after significant rain, and this one gives a small preview of the much larger Lake Lucero basin nearby.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3930, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 3910, "label": "Playa overlook" },
-        { "mile": 0.5, "elevationFt": 3930, "label": "End" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.06, "elevationFt": -8 },
+        { "mile": 0.12, "elevationFt": -15 },
+        { "mile": 0.18, "elevationFt": -20 },
+        { "mile": 0.25, "elevationFt": -20, "label": "Playa overlook" },
+        { "mile": 0.32, "elevationFt": -15 },
+        { "mile": 0.4, "elevationFt": -8 },
+        { "mile": 0.5, "elevationFt": 0, "label": "End" }
       ]
     },
     {
@@ -81,9 +102,12 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Lake Lucero is the source of the entire dunefield — selenite crystals dissolve here, and the wind-borne gypsum grains eventually pile up as the white dunes seen throughout the rest of the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3910, "label": "Caravan meeting point" },
-        { "mile": 2.0, "elevationFt": 3880 },
-        { "mile": 4.0, "elevationFt": 3810, "label": "Lake Lucero playa" }
+        { "mile": 0, "elevationFt": 0, "label": "Caravan meeting point" },
+        { "mile": 0.8, "elevationFt": -20 },
+        { "mile": 1.6, "elevationFt": -45 },
+        { "mile": 2.4, "elevationFt": -65 },
+        { "mile": 3.2, "elevationFt": -85 },
+        { "mile": 4.0, "elevationFt": -100, "label": "Lake Lucero playa" }
       ]
     },
     {
@@ -95,9 +119,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "When it was running, this ranger-led walk was timed to end right as the sun set behind the San Andres Mountains, lighting the gypsum dunes in shades of pink and gold.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3950, "label": "Meeting point" },
-        { "mile": 0.5, "elevationFt": 4000, "label": "Sunset viewpoint" },
-        { "mile": 1.0, "elevationFt": 3950, "label": "End" }
+        { "mile": 0, "elevationFt": 0, "label": "Meeting point" },
+        { "mile": 0.2, "elevationFt": 20 },
+        { "mile": 0.4, "elevationFt": 40 },
+        { "mile": 0.5, "elevationFt": 50, "label": "Sunset viewpoint" },
+        { "mile": 0.7, "elevationFt": 30 },
+        { "mile": 0.85, "elevationFt": 10 },
+        { "mile": 1.0, "elevationFt": 0, "label": "End" }
       ]
     },
     {
@@ -108,9 +136,13 @@
       "trailTip": "This short walk near the picnic area is a good spot to safely photograph soaptree yuccas without leaving the developed part of the park — a great option on days with extreme heat warnings.",
       "didYouKnow": "Soaptree yuccas can grow their stems fast enough to keep pace with a rising dune, sometimes ending up more than 20 feet tall as measured from their buried base.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 3945, "label": "Trailhead" },
-        { "mile": 0.15, "elevationFt": 3950, "label": "Yucca grove" },
-        { "mile": 0.3, "elevationFt": 3945, "label": "End" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.05, "elevationFt": 2 },
+        { "mile": 0.1, "elevationFt": 6 },
+        { "mile": 0.15, "elevationFt": 10, "label": "Yucca grove" },
+        { "mile": 0.2, "elevationFt": 6 },
+        { "mile": 0.25, "elevationFt": 2 },
+        { "mile": 0.3, "elevationFt": 0, "label": "End" }
       ]
     }
   ],

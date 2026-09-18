@@ -12,10 +12,16 @@
       "didYouKnow": "The knob was named after a hiking companion of horticulturalist Charlies (Charlie) Conner slipped near the summit in the 1920s, and the trail follows the Appalachian Trail for most of its length.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Newfound Gap Trailhead" },
+        { "mile": 0.85, "elevationFt": 150 },
         { "mile": 1.7, "elevationFt": 300 },
         { "mile": 2.7, "elevationFt": 600, "label": "Icewater Spring Shelter" },
         { "mile": 3.6, "elevationFt": 900 },
-        { "mile": 4.0, "elevationFt": 1640, "label": "Charlies Bunion" }
+        { "mile": 4.05, "elevationFt": 1640, "label": "Charlies Bunion (turnaround)" },
+        { "mile": 4.9, "elevationFt": 900 },
+        { "mile": 5.8, "elevationFt": 600 },
+        { "mile": 6.75, "elevationFt": 300 },
+        { "mile": 7.6, "elevationFt": 150 },
+        { "mile": 8.1, "elevationFt": 0, "label": "Back at Newfound Gap" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -28,8 +34,13 @@
       "didYouKnow": "Laurel Falls is named for the mountain laurel that blooms along the trail each spring, and its paved surface (built in 1963) makes it one of the most heavily used trails in the park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 150 },
-        { "mile": 1.3, "elevationFt": 315, "label": "Laurel Falls" }
+        { "mile": 0.3, "elevationFt": 60 },
+        { "mile": 0.6, "elevationFt": 120 },
+        { "mile": 0.9, "elevationFt": 220 },
+        { "mile": 1.3, "elevationFt": 315, "label": "Laurel Falls (turnaround)" },
+        { "mile": 1.7, "elevationFt": 220 },
+        { "mile": 2.1, "elevationFt": 120 },
+        { "mile": 2.6, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -42,7 +53,12 @@
       "didYouKnow": "The observation tower sits atop Kuwohi, the highest point in the Smokies and third-highest peak east of the Mississippi; on a clear day views extend over 100 miles.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 332, "label": "Observation Tower" }
+        { "mile": 0.15, "elevationFt": 100 },
+        { "mile": 0.3, "elevationFt": 220 },
+        { "mile": 0.5, "elevationFt": 332, "label": "Observation Tower (turnaround)" },
+        { "mile": 0.65, "elevationFt": 220 },
+        { "mile": 0.8, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -55,8 +71,14 @@
       "didYouKnow": "The trail passes through Arch Rock, a natural tunnel carved by centuries of freeze-thaw weathering, and the \"cave\" itself is actually a large concave bluff, not a true cave.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.7, "elevationFt": 150 },
         { "mile": 1.4, "elevationFt": 400, "label": "Arch Rock" },
-        { "mile": 2.3, "elevationFt": 1200, "label": "Alum Cave Bluffs" }
+        { "mile": 1.8, "elevationFt": 800 },
+        { "mile": 2.2, "elevationFt": 1200, "label": "Alum Cave Bluffs (turnaround)" },
+        { "mile": 2.6, "elevationFt": 800 },
+        { "mile": 3.0, "elevationFt": 400 },
+        { "mile": 3.6, "elevationFt": 150 },
+        { "mile": 4.4, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -69,8 +91,14 @@
       "didYouKnow": "At 80 feet, Rainbow Falls is the tallest single-drop waterfall in the park, and it earns its name from the rainbow that forms in its mist on sunny afternoons.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Cherokee Orchard Trailhead" },
+        { "mile": 0.75, "elevationFt": 250 },
         { "mile": 1.5, "elevationFt": 500 },
-        { "mile": 2.7, "elevationFt": 1500, "label": "Rainbow Falls" }
+        { "mile": 2.1, "elevationFt": 900 },
+        { "mile": 2.7, "elevationFt": 1500, "label": "Rainbow Falls (turnaround)" },
+        { "mile": 3.3, "elevationFt": 900 },
+        { "mile": 3.9, "elevationFt": 500 },
+        { "mile": 4.65, "elevationFt": 250 },
+        { "mile": 5.4, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -83,9 +111,14 @@
       "didYouKnow": "The trail passes directly behind Grotto Falls, letting hikers walk through a natural rock overhang without getting wet, and it's the only Mount LeConte route llamas can navigate.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.3, "elevationFt": 500, "label": "Grotto Falls" },
-        { "mile": 4.0, "elevationFt": 2400 },
-        { "mile": 6.7, "elevationFt": 3600, "label": "Mount LeConte" }
+        { "mile": 0.65, "elevationFt": 250, "label": "Grotto Falls" },
+        { "mile": 1.5, "elevationFt": 900 },
+        { "mile": 2.4, "elevationFt": 2000 },
+        { "mile": 3.35, "elevationFt": 3600, "label": "Mount LeConte (turnaround)" },
+        { "mile": 4.3, "elevationFt": 2000 },
+        { "mile": 5.2, "elevationFt": 900 },
+        { "mile": 6.05, "elevationFt": 250 },
+        { "mile": 6.7, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -98,8 +131,14 @@
       "didYouKnow": "The trail was named for the twin rock \"chimneys\" that once had a smoke-like haze visible from the valley below, and the November 2016 wildfire that damaged much of the summit was traced back to this area.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 700 },
-        { "mile": 1.9, "elevationFt": 1400, "label": "Observation Area (pinnacles closed beyond)" }
+        { "mile": 0.5, "elevationFt": 250 },
+        { "mile": 1.0, "elevationFt": 500 },
+        { "mile": 1.5, "elevationFt": 1000 },
+        { "mile": 1.9, "elevationFt": 1400, "label": "Observation Area (pinnacles closed beyond, turnaround)" },
+        { "mile": 2.4, "elevationFt": 1000 },
+        { "mile": 2.9, "elevationFt": 500 },
+        { "mile": 3.4, "elevationFt": 250 },
+        { "mile": 3.8, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -112,7 +151,14 @@
       "didYouKnow": "Despite its modest 20-foot height, Abrams Falls moves an unusually large volume of water, which is why the pool below it is so dangerous.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 340, "label": "Abrams Falls" }
+        { "mile": 0.6, "elevationFt": 80 },
+        { "mile": 1.2, "elevationFt": 180 },
+        { "mile": 1.9, "elevationFt": 280 },
+        { "mile": 2.5, "elevationFt": 340, "label": "Abrams Falls (turnaround)" },
+        { "mile": 3.1, "elevationFt": 280 },
+        { "mile": 3.8, "elevationFt": 180 },
+        { "mile": 4.4, "elevationFt": 80 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -125,8 +171,14 @@
       "didYouKnow": "Andrews Bald is one of the park's few remaining grassy \"balds,\" open, treeless summits whose origin (Cherokee burning, grazing, or natural causes) is still debated by ecologists.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Clingmans Dome Trailhead" },
-        { "mile": 1.2, "elevationFt": 400 },
-        { "mile": 1.8, "elevationFt": 900, "label": "Andrews Bald" }
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.8, "elevationFt": 300 },
+        { "mile": 1.2, "elevationFt": 600 },
+        { "mile": 1.8, "elevationFt": 900, "label": "Andrews Bald (turnaround)" },
+        { "mile": 2.4, "elevationFt": 600 },
+        { "mile": 2.8, "elevationFt": 300 },
+        { "mile": 3.2, "elevationFt": 150 },
+        { "mile": 3.6, "elevationFt": 0, "label": "Back at trailhead" }
       ],
       "lastVerified": "2026-09-15"
     }

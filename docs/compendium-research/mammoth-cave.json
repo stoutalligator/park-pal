@@ -12,9 +12,12 @@
       "didYouKnow": "The bluffs offer some of the best views in the park of the Green River, the waterway responsible for carving much of the cave system below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 200 },
-        { "mile": 4.0, "elevationFt": 350 },
-        { "mile": 5.9, "elevationFt": 400, "label": "Bluff overlook" }
+        { "mile": 1.0, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 300 },
+        { "mile": 3.0, "elevationFt": 400, "label": "Bluff overlook" },
+        { "mile": 4.0, "elevationFt": 300 },
+        { "mile": 5.0, "elevationFt": 150 },
+        { "mile": 5.9, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -25,9 +28,13 @@
       "trailTip": "The descent into the sinkhole is on wooden stairs that can be slippery when wet or leaf-covered, so take the steps slowly, especially on the way back up.",
       "didYouKnow": "Cedar Sink formed when the roof of an underground cave passage collapsed, exposing a stream that briefly surfaces before disappearing underground again.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 100, "label": "Sinkhole floor" },
-        { "mile": 1.7, "elevationFt": 300, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": -100 },
+        { "mile": 0.6, "elevationFt": -220 },
+        { "mile": 0.85, "elevationFt": -300, "label": "Sinkhole floor" },
+        { "mile": 1.1, "elevationFt": -220 },
+        { "mile": 1.4, "elevationFt": -100 },
+        { "mile": 1.7, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -38,8 +45,13 @@
       "trailTip": "The shelter cave itself is fenced off from entry to protect the site and visitors, since this is where a famous 1925 cave rescue attempt ended in tragedy — view it from the overlook rather than trying to go inside.",
       "didYouKnow": "Sand Cave is the site of the 1925 death of Floyd Collins, whose entrapment here became a national media sensation.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 550, "label": "Trailhead" },
-        { "mile": 0.1, "elevationFt": 590, "label": "Sand Cave overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.033, "elevationFt": 13 },
+        { "mile": 0.067, "elevationFt": 27 },
+        { "mile": 0.1, "elevationFt": 40, "label": "Sand Cave overlook" },
+        { "mile": 0.133, "elevationFt": 27 },
+        { "mile": 0.167, "elevationFt": 13 },
+        { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -50,9 +62,13 @@
       "trailTip": "A gentle out-and-back along the Green River to where cave water resurfaces — good for an easy add-on after a cave tour, with no significant elevation change.",
       "didYouKnow": "Echo River, one of the cave system's underground rivers, resurfaces here after flowing unseen beneath the ridge above.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 425, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 420 },
-        { "mile": 1.0, "elevationFt": 425, "label": "Echo River Spring" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.17, "elevationFt": -30 },
+        { "mile": 0.33, "elevationFt": -70 },
+        { "mile": 0.5, "elevationFt": -100, "label": "Echo River Spring" },
+        { "mile": 0.67, "elevationFt": -70 },
+        { "mile": 0.83, "elevationFt": -30 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -63,9 +79,13 @@
       "trailTip": "A short loop with interpretive signs near the historic entrance — a good option if you have limited time before or after a scheduled cave tour.",
       "didYouKnow": "The historic entrance on this loop was used by 19th-century saltpeter miners and later by early cave tour guides, including enslaved guide Stephen Bishop.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 620, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 650 },
-        { "mile": 0.75, "elevationFt": 620, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.15, "elevationFt": 30 },
+        { "mile": 0.3, "elevationFt": 70 },
+        { "mile": 0.4, "elevationFt": 100, "label": "Historic entrance" },
+        { "mile": 0.55, "elevationFt": 60 },
+        { "mile": 0.65, "elevationFt": 25 },
+        { "mile": 0.75, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -76,9 +96,13 @@
       "trailTip": "One of the less-traveled loops in the park's surface backcountry, so let someone know your route and expected return time since cell coverage is patchy here.",
       "didYouKnow": "This trail crosses a landscape riddled with sinkholes, a telltale sign of the karst cave system honeycombing the ground beneath it.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 500, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 4.5, "elevationFt": 850, "label": "High point" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.75, "elevationFt": 80 },
+        { "mile": 1.5, "elevationFt": 180 },
+        { "mile": 2.25, "elevationFt": 350, "label": "High point" },
+        { "mile": 3.0, "elevationFt": 250 },
+        { "mile": 3.75, "elevationFt": 130 },
+        { "mile": 4.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -90,10 +114,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Sal Hollow is one of the longest above-ground trails in the park, traversing hardwood ridges far from the cave tour routes.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
-        { "mile": 3.0, "elevationFt": 750 },
-        { "mile": 6.0, "elevationFt": 850 },
-        { "mile": 8.7, "elevationFt": 900, "label": "High ridge" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.5, "elevationFt": 100 },
+        { "mile": 3.0, "elevationFt": 250 },
+        { "mile": 4.5, "elevationFt": 400 },
+        { "mile": 6.0, "elevationFt": 450, "label": "High ridge" },
+        { "mile": 7.3, "elevationFt": 220 },
+        { "mile": 8.7, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -104,8 +131,13 @@
       "trailTip": "A quick walk to view another collapsed sinkhole from above; stay on the marked path since the sinkhole edges can be unstable.",
       "didYouKnow": "This sinkhole formed above the same passage system that includes Mammoth Dome, one of the tallest vertical shafts in the cave.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 580, "label": "Trailhead" },
-        { "mile": 0.2, "elevationFt": 640, "label": "Sinkhole overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.067, "elevationFt": 20 },
+        { "mile": 0.133, "elevationFt": 45 },
+        { "mile": 0.2, "elevationFt": 60, "label": "Sinkhole overlook" },
+        { "mile": 0.267, "elevationFt": 45 },
+        { "mile": 0.333, "elevationFt": 20 },
+        { "mile": 0.4, "elevationFt": 0, "label": "Trailhead" }
       ]
     }
   ],

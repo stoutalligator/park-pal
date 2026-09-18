@@ -13,9 +13,11 @@
       "didYouKnow": "Mount Baldy is a 'live' dune that migrates inland several feet a year, burying trees as it moves — a process visible in the park's 'ghost forest.'",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 60 },
-        { "mile": 1.0, "elevationFt": 100 },
-        { "mile": 1.5, "elevationFt": 130, "label": "Summit (ranger-led access only)" }
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.8, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 130, "label": "Summit (ranger-led access only)" },
+        { "mile": 1.25, "elevationFt": 60 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -27,8 +29,11 @@
       "didYouKnow": "The dune succession visible here helped inspire early 20th-century ecologist Henry Cowles' pioneering studies of plant succession.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 100 },
-        { "mile": 1.7, "elevationFt": 200, "label": "Loop end" }
+        { "mile": 0.3, "elevationFt": 60 },
+        { "mile": 0.6, "elevationFt": 150 },
+        { "mile": 0.8, "elevationFt": 200, "label": "High point" },
+        { "mile": 1.2, "elevationFt": 100 },
+        { "mile": 1.7, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -40,9 +45,11 @@
       "didYouKnow": "Cowles Bog is a National Natural Landmark named for Henry Cowles, whose research here helped found the science of ecology.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 80 },
-        { "mile": 3.0, "elevationFt": 150 },
-        { "mile": 4.7, "elevationFt": 200, "label": "Lake Michigan overlook" }
+        { "mile": 1.0, "elevationFt": 60 },
+        { "mile": 2.0, "elevationFt": 120 },
+        { "mile": 3.0, "elevationFt": 200, "label": "Lake Michigan overlook" },
+        { "mile": 3.8, "elevationFt": 120 },
+        { "mile": 4.7, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -54,7 +61,10 @@
       "didYouKnow": "The Great Marsh was once slated for drainage and development before restoration returned it to one of the largest interdunal wetlands on the Great Lakes.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.6, "elevationFt": 5 },
+        { "mile": 0.25, "elevationFt": 2 },
+        { "mile": 0.5, "elevationFt": 4 },
+        { "mile": 0.75, "elevationFt": 5, "label": "Boardwalk midpoint" },
+        { "mile": 1.0, "elevationFt": 3 },
         { "mile": 1.2, "elevationFt": 5, "label": "Boardwalk end" }
       ]
     },
@@ -67,8 +77,11 @@
       "didYouKnow": "Indiana Dunes protects one of the most biodiverse national parks in the system, packing over 1,100 plant species into a small footprint.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 60 },
-        { "mile": 0.8, "elevationFt": 100, "label": "Loop end" }
+        { "mile": 0.15, "elevationFt": 35 },
+        { "mile": 0.3, "elevationFt": 80 },
+        { "mile": 0.4, "elevationFt": 100, "label": "High point" },
+        { "mile": 0.6, "elevationFt": 50 },
+        { "mile": 0.8, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -80,8 +93,11 @@
       "didYouKnow": "Tolleston Dunes are among the oldest dune ridges in the park, formed thousands of years before the active dunes along today's shoreline.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 80 },
-        { "mile": 1.6, "elevationFt": 150, "label": "Loop end" }
+        { "mile": 0.3, "elevationFt": 50 },
+        { "mile": 0.6, "elevationFt": 120 },
+        { "mile": 0.8, "elevationFt": 150, "label": "High point" },
+        { "mile": 1.2, "elevationFt": 70 },
+        { "mile": 1.6, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -93,8 +109,11 @@
       "didYouKnow": "The trail is named for a great blue heron rookery once found nearby along the river corridor.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.7, "elevationFt": 30 },
-        { "mile": 3.4, "elevationFt": 50, "label": "Trail end" }
+        { "mile": 0.6, "elevationFt": 20 },
+        { "mile": 1.2, "elevationFt": 40 },
+        { "mile": 1.7, "elevationFt": 50, "label": "Trail end (turnaround)" },
+        { "mile": 2.55, "elevationFt": 30 },
+        { "mile": 3.4, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -106,8 +125,11 @@
       "didYouKnow": "Inland Marsh sits in a low area between old dune ridges, making it a haven for wetland-adapted plants and amphibians.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.3, "elevationFt": 60 },
-        { "mile": 2.6, "elevationFt": 100, "label": "Loop end" }
+        { "mile": 0.5, "elevationFt": 35 },
+        { "mile": 1.0, "elevationFt": 80 },
+        { "mile": 1.3, "elevationFt": 100, "label": "High point" },
+        { "mile": 1.95, "elevationFt": 50 },
+        { "mile": 2.6, "elevationFt": 0, "label": "Loop end" }
       ]
     }
   ],

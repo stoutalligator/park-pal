@@ -12,9 +12,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The Harding Icefield feeds nearly 40 glaciers and is one of only four remaining icefields in the United States.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 450, "label": "Exit Glacier Nature Center" },
-        { "mile": 2.0, "elevationFt": 1600, "label": "Marmot Meadows" },
-        { "mile": 4.1, "elevationFt": 3950, "label": "Icefield overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Exit Glacier Nature Center" },
+        { "mile": 1.0, "elevationFt": 700 },
+        { "mile": 2.0, "elevationFt": 1150, "label": "Marmot Meadows" },
+        { "mile": 3.0, "elevationFt": 2500 },
+        { "mile": 4.1, "elevationFt": 3500, "label": "Icefield overlook (turnaround)" },
+        { "mile": 5.2, "elevationFt": 2500 },
+        { "mile": 6.2, "elevationFt": 1150 },
+        { "mile": 7.2, "elevationFt": 700 },
+        { "mile": 8.2, "elevationFt": 0, "label": "Return to Nature Center" }
       ]
     },
     {
@@ -26,9 +32,12 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Exit Glacier has retreated more than half a mile since the early 1990s, and markers along the access road date each historic ice-edge position.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 350, "label": "Nature Center" },
-        { "mile": 0.5, "elevationFt": 420 },
-        { "mile": 1.0, "elevationFt": 450, "label": "Glacier viewpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Nature Center" },
+        { "mile": 0.2, "elevationFt": 35 },
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.5, "elevationFt": 100, "label": "Glacier viewpoint (turnaround)" },
+        { "mile": 0.75, "elevationFt": 50 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Return to Nature Center" }
       ]
     },
     {
@@ -39,9 +48,12 @@
       "trailTip": "This loop climbs just high enough above the valley floor for a wider view of Exit Glacier than the paved path below, so bring a light layer since it's noticeably cooler near the ice.",
       "didYouKnow": "The cottonwood and alder forest along this loop is itself a living record of glacial retreat, having grown in over just the past several decades of exposed ground.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 400, "label": "Nature Center" },
-        { "mile": 1.0, "elevationFt": 650, "label": "Overlook" },
-        { "mile": 2.0, "elevationFt": 450, "label": "Loop return" }
+        { "mile": 0, "elevationFt": 0, "label": "Nature Center" },
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.8, "elevationFt": 250 },
+        { "mile": 1.0, "elevationFt": 300, "label": "Overlook" },
+        { "mile": 1.5, "elevationFt": 130 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Loop return" }
       ]
     },
     {
@@ -52,9 +64,15 @@
       "trailTip": "This is the alpine meadow section of the Harding Icefield route — treat it as a turnaround option on a shorter timeline, and watch for hoary marmots sunning on the rock outcrops that give the meadow its name.",
       "didYouKnow": "The meadow blooms with lupine, fireweed, and monkeyflower for a brief window each July before the short growing season closes back down.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 1600, "label": "Marmot Meadows" },
-        { "mile": 4.0, "elevationFt": 2350, "label": "Upper meadow" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 500 },
+        { "mile": 1.0, "elevationFt": 1150, "label": "Marmot Meadows" },
+        { "mile": 1.5, "elevationFt": 1600 },
+        { "mile": 2.0, "elevationFt": 1900, "label": "Upper meadow (turnaround)" },
+        { "mile": 2.5, "elevationFt": 1600 },
+        { "mile": 3.0, "elevationFt": 1150 },
+        { "mile": 3.5, "elevationFt": 500 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -65,9 +83,15 @@
       "trailTip": "Check a tide table before heading out — the final stretch to Tonsina Point crosses beach sections that are impassable at high tide.",
       "didYouKnow": "This trail is part of the longer Coastal Trail toward Caines Head State Recreation Area, a route historically used to move between Seward-area coastal communities.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Lowell Point trailhead" },
-        { "mile": 2.0, "elevationFt": 120, "label": "Forest high point" },
-        { "mile": 4.0, "elevationFt": 20, "label": "Tonsina Point" }
+        { "mile": 0, "elevationFt": 0, "label": "Lowell Point Trailhead" },
+        { "mile": 0.5, "elevationFt": 80 },
+        { "mile": 1.0, "elevationFt": 200, "label": "Forest high point" },
+        { "mile": 1.5, "elevationFt": 80 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Tonsina Point (turnaround)" },
+        { "mile": 2.5, "elevationFt": 80 },
+        { "mile": 3.0, "elevationFt": 200, "label": "Forest high point (return)" },
+        { "mile": 3.5, "elevationFt": 80 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Return to Lowell Point" }
       ]
     },
     {
@@ -78,9 +102,13 @@
       "trailTip": "This steep connector gains the bulk of its elevation in a short distance, so budget extra time and water even though the mileage looks short on a map.",
       "didYouKnow": "The Saddle Trail links the lower Exit Glacier trail network to the exposed alpine terrain of the Harding Icefield route.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 450, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 1200 },
-        { "mile": 2.0, "elevationFt": 1950, "label": "Saddle" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 250 },
+        { "mile": 0.6, "elevationFt": 550 },
+        { "mile": 1.0, "elevationFt": 900 },
+        { "mile": 1.4, "elevationFt": 1200 },
+        { "mile": 1.7, "elevationFt": 1400 },
+        { "mile": 2.0, "elevationFt": 1500, "label": "Saddle" }
       ]
     },
     {
@@ -91,9 +119,12 @@
       "trailTip": "A short, mostly level loop right from the nature center — a good option for travelers with limited mobility or time who still want a glacier view.",
       "didYouKnow": "Interpretive panels along this loop explain how retreating ice reveals a predictable sequence of plant life, from bare rock to alder thicket to mature spruce forest.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 350, "label": "Nature Center" },
-        { "mile": 0.25, "elevationFt": 365 },
-        { "mile": 0.5, "elevationFt": 370, "label": "Loop return" }
+        { "mile": 0, "elevationFt": 0, "label": "Nature Center" },
+        { "mile": 0.1, "elevationFt": 8 },
+        { "mile": 0.2, "elevationFt": 16 },
+        { "mile": 0.25, "elevationFt": 20, "label": "High point" },
+        { "mile": 0.35, "elevationFt": 10 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Loop return" }
       ]
     },
     {
@@ -104,9 +135,15 @@
       "trailTip": "This remote route toward the Chugach National Forest typically requires fording the Resurrection River, so check current water levels with rangers and be prepared for an unbridged crossing.",
       "didYouKnow": "The trail follows an old mining-era route and, via a connecting Forest Service trail system, links all the way to Hope, Alaska on the far side of the Kenai Peninsula.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 450, "label": "Exit Glacier trailhead" },
-        { "mile": 8.0, "elevationFt": 1100, "label": "Mid-valley" },
-        { "mile": 16.0, "elevationFt": 1750, "label": "Forest boundary" }
+        { "mile": 0, "elevationFt": 0, "label": "Exit Glacier Trailhead" },
+        { "mile": 2.0, "elevationFt": 150 },
+        { "mile": 4.0, "elevationFt": 350 },
+        { "mile": 6.0, "elevationFt": 550 },
+        { "mile": 8.0, "elevationFt": 650, "label": "Mid-valley" },
+        { "mile": 10.0, "elevationFt": 800 },
+        { "mile": 12.0, "elevationFt": 1000 },
+        { "mile": 14.0, "elevationFt": 1150 },
+        { "mile": 16.0, "elevationFt": 1300, "label": "Forest boundary" }
       ]
     }
   ],

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-// Seeds the `parks` and `badges` reference tables in Supabase from the
-// existing local mock data files, so they stay the single source of truth
-// instead of being retyped in SQL.
+// Seeds the `parks`, `badges`, `trails`, `animals`, `trail_details`, and
+// `animal_details` reference tables in Supabase from the existing local mock
+// data files and docs/compendium-research/*.json, so they stay the single
+// source of truth instead of being retyped in SQL.
 //
 // Usage:
 //   node --env-file=.env scripts/seed-supabase.mjs
@@ -122,11 +123,64 @@ async function seedAnimals() {
   console.log(`Seeded ${rows.length} animals.`);
 }
 
+// Reads the per-park research files directly (the actual authoring source),
+// rather than the generated src/data/trailDetails.ts / animalDetails.ts,
+// which exist to serve the bundled-app fallback, not this script.
+function readCompendiumFiles() {
+  const dir = path.join(ROOT, 'docs/compendium-research');
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+}
+
+async function seedTrailDetails(parksData) {
+  const rows = parksData.flatMap((park) =>
+    (park.trails ?? []).map((t) => ({
+      id: t.id,
+      estimated_time: t.estimatedTime,
+      best_season: t.bestSeason,
+      tags: t.tags,
+      trail_tip: t.trailTip,
+      did_you_know: t.didYouKnow,
+      elevation_profile: t.elevationProfile,
+      last_verified: t.lastVerified ?? null,
+    }))
+  );
+  const { error } = await supabase.from('trail_details').upsert(rows, { onConflict: 'id' });
+  if (error) throw new Error(`Seeding trail_details failed: ${error.message}`);
+  console.log(`Seeded ${rows.length} trail_details.`);
+}
+
+async function seedAnimalDetails(parksData) {
+  const rows = parksData.flatMap((park) =>
+    (park.animals ?? []).map((a) => ({
+      id: a.id,
+      scientific_name: a.scientificName,
+      best_time_of_day: a.bestTimeOfDay,
+      best_season: a.bestSeason,
+      where_to_look: a.whereToLook,
+      tags: a.tags,
+      viewing_tip: a.viewingTip,
+      did_you_know: a.didYouKnow,
+      last_verified: a.lastVerified ?? null,
+    }))
+  );
+  const { error } = await supabase.from('animal_details').upsert(rows, { onConflict: 'id' });
+  if (error) throw new Error(`Seeding animal_details failed: ${error.message}`);
+  console.log(`Seeded ${rows.length} animal_details.`);
+}
+
 async function main() {
   await seedParks();
   await seedBadges();
   await seedTrails();
   await seedAnimals();
+  // Detail tables FK-reference trails.id/animals.id, so they must be seeded
+  // after the base tables above.
+  const parksData = readCompendiumFiles();
+  await seedTrailDetails(parksData);
+  await seedAnimalDetails(parksData);
   console.log('Seed complete.');
 }
 

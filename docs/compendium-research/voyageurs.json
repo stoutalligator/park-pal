@@ -11,10 +11,13 @@
       "trailTip": "Unlike most Voyageurs trails, this one starts right at the Rainy Lake Visitor Center parking lot — no boat needed — making it a good option if lake conditions or a rental haven't been arranged yet.",
       "didYouKnow": "The trail is named for Ernest Oberholtzer, a conservationist whose advocacy helped preserve the border-lakes wilderness that later became Voyageurs National Park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1100, "label": "Rainy Lake Visitor Center" },
-        { "mile": 0.8, "elevationFt": 1150 },
-        { "mile": 1.6, "elevationFt": 1200, "label": "Overlook" },
-        { "mile": 2.2, "elevationFt": 1100, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Rainy Lake Visitor Center" },
+        { "mile": 0.4, "elevationFt": 20 },
+        { "mile": 0.8, "elevationFt": 50 },
+        { "mile": 1.2, "elevationFt": 80 },
+        { "mile": 1.6, "elevationFt": 100, "label": "Overlook" },
+        { "mile": 1.9, "elevationFt": 40 },
+        { "mile": 2.2, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -25,9 +28,15 @@
       "trailTip": "This trail begins near the Ash River Visitor Center and can be hiked without a boat, but insect repellent is a must — the forest sections get buggy with mosquitoes in early summer.",
       "didYouKnow": "The trail follows the Kabetogama Peninsula shoreline, part of the largest roadless landmass in Minnesota.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1100, "label": "Ash River Trailhead" },
-        { "mile": 1.2, "elevationFt": 1200 },
-        { "mile": 2.5, "elevationFt": 1250, "label": "Blind Ash Bay overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Ash River Trailhead" },
+        { "mile": 0.3, "elevationFt": 50 },
+        { "mile": 0.6, "elevationFt": 100 },
+        { "mile": 0.9, "elevationFt": 130 },
+        { "mile": 1.25, "elevationFt": 150, "label": "Blind Ash Bay overlook" },
+        { "mile": 1.6, "elevationFt": 100 },
+        { "mile": 1.9, "elevationFt": 50 },
+        { "mile": 2.2, "elevationFt": 20 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {
@@ -39,11 +48,14 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The trail links a chain of remote interior lakes — including Shoepack, Brown, Cruiser, Beast, and Peary — with no motorized boat access, making them some of the quietest paddling in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1150, "label": "Boat/canoe put-in" },
-        { "mile": 2.5, "elevationFt": 1350 },
-        { "mile": 5.0, "elevationFt": 1550, "label": "Cruiser Lake" },
-        { "mile": 7.5, "elevationFt": 1450 },
-        { "mile": 9.5, "elevationFt": 1150, "label": "Trail end" }
+        { "mile": 0, "elevationFt": 0, "label": "Boat/canoe put-in" },
+        { "mile": 1.5, "elevationFt": 150 },
+        { "mile": 3.0, "elevationFt": 300 },
+        { "mile": 4.5, "elevationFt": 400, "label": "Height of land" },
+        { "mile": 6.0, "elevationFt": 300 },
+        { "mile": 7.5, "elevationFt": 200 },
+        { "mile": 8.5, "elevationFt": 100 },
+        { "mile": 9.5, "elevationFt": 50, "label": "Trail end near Cruiser Lake" }
       ]
     },
     {
@@ -55,11 +67,14 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "At 14.5 miles, the Kab-Ash Trail is the longest hiking-only route in the park, connecting the Ash River area to Lake Kabetogama across the interior of the peninsula.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1100, "label": "Ash River end" },
-        { "mile": 4, "elevationFt": 1350 },
-        { "mile": 8, "elevationFt": 1600, "label": "Height of land" },
-        { "mile": 11, "elevationFt": 1400 },
-        { "mile": 14.5, "elevationFt": 1100, "label": "Kabetogama end" }
+        { "mile": 0, "elevationFt": 0, "label": "Ash River end" },
+        { "mile": 2, "elevationFt": 150 },
+        { "mile": 4, "elevationFt": 300 },
+        { "mile": 6, "elevationFt": 450 },
+        { "mile": 8, "elevationFt": 500, "label": "Height of land" },
+        { "mile": 10, "elevationFt": 400 },
+        { "mile": 12, "elevationFt": 250 },
+        { "mile": 14.5, "elevationFt": 100, "label": "Kabetogama end" }
       ]
     },
     {
@@ -70,9 +85,12 @@
       "trailTip": "Cross Kabetogama Lake by boat, canoe, or water taxi to the Locator Lake trailhead near Mallard Point — the trail itself is a short, well-marked walk to a canoe rack on Locator Lake for those continuing into the Chain of Lakes.",
       "didYouKnow": "Locator Lake is the gateway to the park's roadless 'Chain of Lakes,' a string of quiet interior lakes with no motorized boat access.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1150, "label": "Trailhead dock" },
-        { "mile": 1.0, "elevationFt": 1220 },
-        { "mile": 2.0, "elevationFt": 1300, "label": "Locator Lake" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead dock" },
+        { "mile": 0.4, "elevationFt": 40 },
+        { "mile": 0.8, "elevationFt": 80 },
+        { "mile": 1.2, "elevationFt": 110 },
+        { "mile": 1.6, "elevationFt": 135 },
+        { "mile": 2.0, "elevationFt": 150, "label": "Locator Lake" }
       ]
     },
     {
@@ -83,9 +101,14 @@
       "trailTip": "Echo Bay is one of the few Voyageurs trails reachable directly by car, with a trailhead about 3.5 miles north of the Kabetogama Lake Visitor Center — a good pick if you don't have a boat lined up.",
       "didYouKnow": "The trail loops through boreal forest typical of the Kabetogama area, with sections used as cross-country ski trails in winter.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1100, "label": "Trailhead" },
-        { "mile": 2.0, "elevationFt": 1300, "label": "Echo Bay overlook" },
-        { "mile": 3.9, "elevationFt": 1100, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 60 },
+        { "mile": 1.2, "elevationFt": 120 },
+        { "mile": 1.8, "elevationFt": 180 },
+        { "mile": 2.0, "elevationFt": 200, "label": "Echo Bay overlook" },
+        { "mile": 2.6, "elevationFt": 140 },
+        { "mile": 3.2, "elevationFt": 70 },
+        { "mile": 3.9, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -96,9 +119,13 @@
       "trailTip": "Anderson Bay is remote — plan on roughly 20 miles of travel by watercraft from the Rainy Lake side to reach the trailhead, so check the weather and lake conditions carefully before heading out.",
       "didYouKnow": "The trail's exposed granite cliffs rise about 80 feet above Rainy Lake, among the most photographed viewpoints in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1080, "label": "Boat dock" },
-        { "mile": 0.9, "elevationFt": 1180, "label": "Granite cliff overlook" },
-        { "mile": 1.9, "elevationFt": 1080, "label": "Loop end" }
+        { "mile": 0, "elevationFt": 0, "label": "Boat dock" },
+        { "mile": 0.3, "elevationFt": 40 },
+        { "mile": 0.6, "elevationFt": 80 },
+        { "mile": 0.9, "elevationFt": 100, "label": "Granite cliff overlook" },
+        { "mile": 1.2, "elevationFt": 70 },
+        { "mile": 1.5, "elevationFt": 35 },
+        { "mile": 1.9, "elevationFt": 0, "label": "Loop end" }
       ]
     },
     {
@@ -110,9 +137,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Beast Lake sits within the roadless interior of the Kabetogama Peninsula, part of a chain of small lakes with no motorized boat access.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1150, "label": "Trail junction from Cruiser Lake system" },
-        { "mile": 2.3, "elevationFt": 1350 },
-        { "mile": 4.6, "elevationFt": 1200, "label": "Beast Lake" }
+        { "mile": 0, "elevationFt": 0, "label": "Trail junction from Cruiser Lake system" },
+        { "mile": 0.8, "elevationFt": 60 },
+        { "mile": 1.6, "elevationFt": 120 },
+        { "mile": 2.3, "elevationFt": 160 },
+        { "mile": 3.2, "elevationFt": 190 },
+        { "mile": 4.0, "elevationFt": 200, "label": "Approaching Beast Lake" },
+        { "mile": 4.6, "elevationFt": 180, "label": "Beast Lake" }
       ]
     }
   ],

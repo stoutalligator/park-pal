@@ -25,8 +25,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.25,
-          "elevationFt": 50
+          "mile": 0.15,
+          "elevationFt": 30
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 70
         },
         {
           "mile": 0.5,
@@ -34,8 +38,12 @@
           "label": "Hidden Valley overlook"
         },
         {
-          "mile": 0.75,
-          "elevationFt": 50
+          "mile": 0.7,
+          "elevationFt": 70
+        },
+        {
+          "mile": 0.85,
+          "elevationFt": 30
         },
         {
           "mile": 1,
@@ -62,8 +70,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.75,
-          "elevationFt": 525
+          "mile": 0.5,
+          "elevationFt": 350
+        },
+        {
+          "mile": 1.0,
+          "elevationFt": 700
         },
         {
           "mile": 1.5,
@@ -71,8 +83,12 @@
           "label": "Ryan Mountain summit"
         },
         {
-          "mile": 2.25,
-          "elevationFt": 525
+          "mile": 2.0,
+          "elevationFt": 700
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 350
         },
         {
           "mile": 3,
@@ -99,8 +115,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.33,
-          "elevationFt": 50
+          "mile": 0.22,
+          "elevationFt": 35
+        },
+        {
+          "mile": 0.43,
+          "elevationFt": 70
         },
         {
           "mile": 0.65,
@@ -108,8 +128,12 @@
           "label": "Barker Dam"
         },
         {
-          "mile": 0.98,
-          "elevationFt": 50
+          "mile": 0.87,
+          "elevationFt": 70
+        },
+        {
+          "mile": 1.08,
+          "elevationFt": 35
         },
         {
           "mile": 1.3,
@@ -136,8 +160,16 @@
           "label": "Trailhead"
         },
         {
+          "mile": 0.9,
+          "elevationFt": 150
+        },
+        {
           "mile": 1.8,
           "elevationFt": 275
+        },
+        {
+          "mile": 2.7,
+          "elevationFt": 420
         },
         {
           "mile": 3.6,
@@ -145,8 +177,16 @@
           "label": "Lost Palms Oasis"
         },
         {
+          "mile": 4.5,
+          "elevationFt": 420
+        },
+        {
           "mile": 5.4,
           "elevationFt": 275
+        },
+        {
+          "mile": 6.3,
+          "elevationFt": 150
         },
         {
           "mile": 7.2,
@@ -172,8 +212,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.42,
-          "elevationFt": 50
+          "mile": 0.28,
+          "elevationFt": 35
+        },
+        {
+          "mile": 0.56,
+          "elevationFt": 70
         },
         {
           "mile": 0.85,
@@ -181,8 +225,12 @@
           "label": "Skull Rock"
         },
         {
-          "mile": 1.27,
-          "elevationFt": 50
+          "mile": 1.13,
+          "elevationFt": 70
+        },
+        {
+          "mile": 1.42,
+          "elevationFt": 35
         },
         {
           "mile": 1.7,
@@ -209,8 +257,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.75,
-          "elevationFt": 150
+          "mile": 0.5,
+          "elevationFt": 100
+        },
+        {
+          "mile": 1.0,
+          "elevationFt": 220
         },
         {
           "mile": 1.5,
@@ -218,8 +270,12 @@
           "label": "49 Palms Oasis"
         },
         {
-          "mile": 2.25,
-          "elevationFt": 150
+          "mile": 2.0,
+          "elevationFt": 220
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 100
         },
         {
           "mile": 3,
@@ -246,8 +302,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.75,
-          "elevationFt": 200
+          "mile": 0.5,
+          "elevationFt": 130
+        },
+        {
+          "mile": 1.0,
+          "elevationFt": 280
         },
         {
           "mile": 1.5,
@@ -255,8 +315,12 @@
           "label": "Mastodon Peak"
         },
         {
-          "mile": 2.25,
-          "elevationFt": 200
+          "mile": 2.0,
+          "elevationFt": 280
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 130
         },
         {
           "mile": 3,
@@ -283,8 +347,12 @@
           "label": "Trailhead"
         },
         {
-          "mile": 0.06,
-          "elevationFt": 5
+          "mile": 0.05,
+          "elevationFt": 3
+        },
+        {
+          "mile": 0.09,
+          "elevationFt": 7
         },
         {
           "mile": 0.13,
@@ -292,8 +360,12 @@
           "label": "Cholla Garden loop"
         },
         {
-          "mile": 0.19,
-          "elevationFt": 5
+          "mile": 0.17,
+          "elevationFt": 7
+        },
+        {
+          "mile": 0.21,
+          "elevationFt": 3
         },
         {
           "mile": 0.25,

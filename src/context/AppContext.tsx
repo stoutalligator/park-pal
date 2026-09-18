@@ -1,11 +1,15 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units } from '@/types';
+import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
+import { ALL_TRAILS } from '@/data/trails';
 import { ALL_ANIMALS } from '@/data/animals';
+import { TRAIL_DETAILS } from '@/data/trailDetails';
+import { ANIMAL_DETAILS } from '@/data/animalDetails';
+import { fetchContentBundle } from '@/data/contentService';
 import { addDays } from '@/utils/dates';
 import { supabase } from '@/lib/supabase';
 import { showToast } from '@/components/Toast';
@@ -167,8 +171,8 @@ function buildTrailRows(days: TripDayEntry[], tripId: string, parkId: string): T
   );
 }
 
-function buildAnimalRows(days: TripDayEntry[], tripId: string, parkId: string): AnimalSightingRow[] {
-  const parkAnimals = ALL_ANIMALS.filter((a) => a.parkId === parkId);
+function buildAnimalRows(days: TripDayEntry[], tripId: string, parkId: string, animals: Animal[]): AnimalSightingRow[] {
+  const parkAnimals = animals.filter((a) => a.parkId === parkId);
   return days.flatMap((day) =>
     day.wildlifeSightings.map((name) => ({
       animal_id: parkAnimals.find((a) => a.name.toLowerCase() === name.toLowerCase())?.id ?? null,
@@ -223,6 +227,11 @@ interface AppContextValue {
   session: Session | null;
   authLoading: boolean;
   dataLoading: boolean;
+  trails: Trail[];
+  animals: Animal[];
+  trailDetails: Record<string, TrailDetail>;
+  animalDetails: Record<string, AnimalDetail>;
+  contentLoaded: boolean;
 
   updateParkStatus: (parkId: string, status: ParkStatus) => void;
   toggleFavorite: (parkId: string) => void;
@@ -263,6 +272,29 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [badgesLoaded, setBadgesLoaded] = useState(false);
   const [tripsLoaded, setTripsLoaded] = useState(false);
   const dataLoading = !!session && !(parksLoaded && profileLoaded && badgesLoaded && tripsLoaded);
+
+  // Trail/animal reference content — public, not per-user, so this loads
+  // once on mount independent of session/auth, unlike the data above.
+  const [trails, setTrails] = useState<Trail[]>(ALL_TRAILS);
+  const [animals, setAnimals] = useState<Animal[]>(ALL_ANIMALS);
+  const [trailDetails, setTrailDetails] = useState<Record<string, TrailDetail>>(TRAIL_DETAILS);
+  const [animalDetails, setAnimalDetails] = useState<Record<string, AnimalDetail>>(ANIMAL_DETAILS);
+  const [contentLoaded, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchContentBundle().then((bundle) => {
+      if (cancelled) return;
+      setTrails(bundle.trails);
+      setAnimals(bundle.animals);
+      setTrailDetails(bundle.trailDetails);
+      setAnimalDetails(bundle.animalDetails);
+      setContentLoaded(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     supabase.auth
@@ -706,7 +738,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (session && newTrip.days?.length) {
       const days = newTrip.days;
       const trailRows = buildTrailRows(days, tripId, trip.parkId);
-      const animalRows = buildAnimalRows(days, tripId, trip.parkId);
+      const animalRows = buildAnimalRows(days, tripId, trip.parkId, animals);
       const activityRows = buildDayActivityRows(days, tripId);
       const weatherRows = buildDayWeatherRows(days, tripId);
       if (trailRows.length) {
@@ -744,7 +776,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           });
       }
     }
-  }, [parks, persistParkStatus, session]);
+  }, [parks, persistParkStatus, session, animals]);
 
   const updateTrip = useCallback(async (trip: Trip) => {
     const previousTrip = trips.find((t) => t.id === trip.id);
@@ -795,7 +827,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           supabase.from('trip_day_weather').delete().eq('trip_id', trip.id),
         ]);
         const trailRows = buildTrailRows(days, trip.id, trip.parkId);
-        const animalRows = buildAnimalRows(days, trip.id, trip.parkId);
+        const animalRows = buildAnimalRows(days, trip.id, trip.parkId, animals);
         const activityRows = buildDayActivityRows(days, trip.id);
         const weatherRows = buildDayWeatherRows(days, trip.id);
         if (trailRows.length) {
@@ -837,7 +869,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         updateParkStatus(trip.parkId, 'planned');
       }
     }
-  }, [session, trips, parks, updateParkStatus]);
+  }, [session, trips, parks, updateParkStatus, animals]);
 
   // Converts a planned trip to logged in place (same row id, not a new
   // insert) — fills in the "what actually happened" fields (photos, trails,
@@ -902,7 +934,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         supabase.from('trip_day_weather').delete().eq('trip_id', trip.id),
       ]);
       const trailRows = buildTrailRows(days, trip.id, trip.parkId);
-      const animalRows = buildAnimalRows(days, trip.id, trip.parkId);
+      const animalRows = buildAnimalRows(days, trip.id, trip.parkId, animals);
       const activityRows = buildDayActivityRows(days, trip.id);
       const weatherRows = buildDayWeatherRows(days, trip.id);
       if (trailRows.length) {
@@ -924,7 +956,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setTrailCompletions((prev) => [...prev.filter((t) => t.trip_id !== trip.id), ...trailRows]);
       setAnimalSightings((prev) => [...prev.filter((a) => a.trip_id !== trip.id), ...animalRows]);
     }
-  }, [parks, persistParkStatus, session]);
+  }, [parks, persistParkStatus, session, animals]);
 
   const deleteTrip = useCallback((tripId: string) => {
     const deletedTrip = trips.find((t) => t.id === tripId);
@@ -1118,6 +1150,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         session,
         authLoading,
         dataLoading,
+        trails,
+        animals,
+        trailDetails,
+        animalDetails,
+        contentLoaded,
         updateParkStatus,
         toggleFavorite,
         logTrip,

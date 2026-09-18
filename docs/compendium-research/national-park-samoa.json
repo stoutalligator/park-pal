@@ -12,11 +12,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The summit ridge was once linked to Pago Pago Harbor by an aerial tramway until it was dismantled in 1980 after a fatal collision with a Navy aircraft.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Vatia Trailhead" },
-        { "mile": 1.0, "elevationFt": 500 },
-        { "mile": 2.0, "elevationFt": 1000 },
-        { "mile": 3.0, "elevationFt": 1500 },
-        { "mile": 3.5, "elevationFt": 1610, "label": "Mount Alava Summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Vatia Trailhead" },
+        { "mile": 0.4, "elevationFt": 300 },
+        { "mile": 0.9, "elevationFt": 700 },
+        { "mile": 1.4, "elevationFt": 1200 },
+        { "mile": 1.75, "elevationFt": 1600, "label": "Mount Alava Summit" },
+        { "mile": 2.1, "elevationFt": 1200 },
+        { "mile": 2.6, "elevationFt": 700 },
+        { "mile": 3.1, "elevationFt": 300 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Vatia Trailhead" }
       ]
     },
     {
@@ -27,9 +31,15 @@
       "trailTip": "A shorter, less-trafficked alternative to the full Alava ridge with good coastal overlooks — bring plenty of water since shade is inconsistent and tropical humidity is high year-round.",
       "didYouKnow": "The trail passes through tropical rainforest that gets over 200 inches of rain a year, among the wettest forest types protected anywhere in the U.S. park system.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 100, "label": "Trailhead" },
-        { "mile": 0.9, "elevationFt": 500 },
-        { "mile": 1.75, "elevationFt": 800, "label": "Ridge Viewpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.22, "elevationFt": 230 },
+        { "mile": 0.44, "elevationFt": 460 },
+        { "mile": 0.65, "elevationFt": 650 },
+        { "mile": 0.875, "elevationFt": 800, "label": "Ridge Viewpoint" },
+        { "mile": 1.1, "elevationFt": 650 },
+        { "mile": 1.3, "elevationFt": 460 },
+        { "mile": 1.53, "elevationFt": 230 },
+        { "mile": 1.75, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -41,9 +51,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The trail descends through dense rainforest to a remote, undeveloped waterfall and coastline rarely visited by anyone outside Vatia village.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 800, "label": "Vatia Trailhead" },
-        { "mile": 0.9, "elevationFt": 400 },
-        { "mile": 1.8, "elevationFt": 0, "label": "Tuafanua Waterfall / Coast" }
+        { "mile": 0, "elevationFt": 0, "label": "Vatia Trailhead" },
+        { "mile": 0.2, "elevationFt": -150 },
+        { "mile": 0.45, "elevationFt": -400 },
+        { "mile": 0.7, "elevationFt": -650 },
+        { "mile": 0.9, "elevationFt": -800, "label": "Tuafanua Waterfall / Coast" },
+        { "mile": 1.15, "elevationFt": -650 },
+        { "mile": 1.4, "elevationFt": -400 },
+        { "mile": 1.6, "elevationFt": -150 },
+        { "mile": 1.8, "elevationFt": 0, "label": "Vatia Trailhead" }
       ]
     },
     {
@@ -54,8 +70,15 @@
       "trailTip": "A short, family-friendly walk to a viewpoint over Pola Island's sea stack and seabird cliffs — bring binoculars to scan the cliffs for nesting seabirds without needing to get closer.",
       "didYouKnow": "Pola Island is a designated seabird sanctuary and one of the tallest sea stacks in the South Pacific, rising directly from the ocean just offshore.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 100, "label": "Pola Island Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.06, "elevationFt": 20 },
+        { "mile": 0.125, "elevationFt": 40 },
+        { "mile": 0.19, "elevationFt": 65 },
+        { "mile": 0.25, "elevationFt": 80, "label": "Pola Island Overlook" },
+        { "mile": 0.31, "elevationFt": 65 },
+        { "mile": 0.375, "elevationFt": 40 },
+        { "mile": 0.44, "elevationFt": 20 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -66,9 +89,15 @@
       "trailTip": "An easy coastal walk past WWII-era gun emplacements built to defend Tutuila — interpretive signs cover the history, so allow extra time to read them.",
       "didYouKnow": "American Samoa hosted more U.S. Marines per capita than almost any other Pacific location early in WWII, and several coastal defense guns from that era remain along this trail.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
-        { "mile": 0.4, "elevationFt": 60 },
-        { "mile": 0.75, "elevationFt": 100, "label": "Gun Emplacements" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.1, "elevationFt": 35 },
+        { "mile": 0.2, "elevationFt": 65 },
+        { "mile": 0.3, "elevationFt": 85 },
+        { "mile": 0.375, "elevationFt": 100, "label": "Gun Emplacements" },
+        { "mile": 0.45, "elevationFt": 85 },
+        { "mile": 0.55, "elevationFt": 65 },
+        { "mile": 0.65, "elevationFt": 35 },
+        { "mile": 0.75, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -80,9 +109,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The overlook takes in Vatia village nestled between two dramatic volcanic sea stacks, Pola Island and Cockscomb.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Vatia Trailhead" },
-        { "mile": 1.0, "elevationFt": 500 },
-        { "mile": 2.0, "elevationFt": 900, "label": "Vatia Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Vatia Trailhead" },
+        { "mile": 0.25, "elevationFt": 230 },
+        { "mile": 0.5, "elevationFt": 520 },
+        { "mile": 0.75, "elevationFt": 750 },
+        { "mile": 1.0, "elevationFt": 900, "label": "Vatia Overlook" },
+        { "mile": 1.25, "elevationFt": 750 },
+        { "mile": 1.5, "elevationFt": 520 },
+        { "mile": 1.75, "elevationFt": 230 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Vatia Trailhead" }
       ]
     },
     {
@@ -95,8 +130,14 @@
       "didYouKnow": "Ofu Beach is frequently ranked among the most pristine, least-visited beaches in the entire U.S. National Park System.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 10 },
-        { "mile": 1.0, "elevationFt": 20, "label": "Beach End" }
+        { "mile": 0.125, "elevationFt": 8 },
+        { "mile": 0.25, "elevationFt": 15 },
+        { "mile": 0.375, "elevationFt": 18 },
+        { "mile": 0.5, "elevationFt": 20, "label": "Beach End" },
+        { "mile": 0.625, "elevationFt": 15 },
+        { "mile": 0.75, "elevationFt": 10 },
+        { "mile": 0.875, "elevationFt": 5 },
+        { "mile": 1.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -108,10 +149,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Ta'u is home to Lata Mountain, the highest point in American Samoa, and this trail traces some of the most rugged, undeveloped coastline in the entire national park system.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 20, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 300 },
-        { "mile": 2.0, "elevationFt": 500 },
-        { "mile": 2.5, "elevationFt": 600, "label": "Craggy Point" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 150 },
+        { "mile": 0.6, "elevationFt": 330 },
+        { "mile": 0.9, "elevationFt": 490 },
+        { "mile": 1.25, "elevationFt": 600, "label": "Craggy Point" },
+        { "mile": 1.6, "elevationFt": 490 },
+        { "mile": 1.9, "elevationFt": 330 },
+        { "mile": 2.2, "elevationFt": 150 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     }
   ],

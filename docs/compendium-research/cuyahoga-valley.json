@@ -12,7 +12,9 @@
       "didYouKnow": "Brandywine Falls drops 65 feet, making it the tallest waterfall in the park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 60 },
         { "mile": 0.5, "elevationFt": 120, "label": "Falls overlook" },
+        { "mile": 0.8, "elevationFt": 200 },
         { "mile": 1.0, "elevationFt": 220, "label": "Gorge rim" },
         { "mile": 1.4, "elevationFt": 0, "label": "Return" }
       ]
@@ -26,8 +28,10 @@
       "didYouKnow": "The sandstone ledges were quarried in the 1800s, and old chisel marks are still visible on some of the rock faces along the trail.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 60 },
         { "mile": 1.0, "elevationFt": 100 },
         { "mile": 1.6, "elevationFt": 180, "label": "Ledges Overlook" },
+        { "mile": 1.9, "elevationFt": 90 },
         { "mile": 2.2, "elevationFt": 0, "label": "Return" }
       ]
     },
@@ -40,7 +44,10 @@
       "didYouKnow": "The Towpath Trail follows the original path where mules once walked to tow canal boats along the 19th-century Ohio & Erie Canal.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Northern trailhead" },
-        { "mile": 10.0, "elevationFt": 50 },
+        { "mile": 4.0, "elevationFt": 20 },
+        { "mile": 8.0, "elevationFt": 40 },
+        { "mile": 12.0, "elevationFt": 60 },
+        { "mile": 16.0, "elevationFt": 80 },
         { "mile": 20.5, "elevationFt": 100, "label": "Southern trailhead" }
       ]
     },
@@ -52,9 +59,15 @@
       "trailTip": "The short spur down to the falls' base gets slick with mist and mud — wear shoes with good tread and give the ledge above the falls extra space in wet weather.",
       "didYouKnow": "Blue Hen Falls is one of the park's most photographed waterfalls despite requiring only a short walk from the trailhead.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 0, "label": "Blue Hen Falls" },
-        { "mile": 1.6, "elevationFt": 250, "label": "Return" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.2, "elevationFt": -80 },
+        { "mile": 0.4, "elevationFt": -150 },
+        { "mile": 0.6, "elevationFt": -210 },
+        { "mile": 0.8, "elevationFt": -250, "label": "Blue Hen Falls" },
+        { "mile": 1.0, "elevationFt": -210 },
+        { "mile": 1.2, "elevationFt": -150 },
+        { "mile": 1.4, "elevationFt": -80 },
+        { "mile": 1.6, "elevationFt": 0, "label": "Return" }
       ]
     },
     {
@@ -66,8 +79,10 @@
       "didYouKnow": "This section is part of the larger 1,400-mile Buckeye Trail, which loops all the way around the state of Ohio.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Boston Mills trailhead" },
+        { "mile": 1.0, "elevationFt": 120 },
         { "mile": 2.0, "elevationFt": 300 },
         { "mile": 3.5, "elevationFt": 500, "label": "High meadow" },
+        { "mile": 4.3, "elevationFt": 250 },
         { "mile": 5.0, "elevationFt": 0, "label": "Return" }
       ]
     },
@@ -80,7 +95,10 @@
       "didYouKnow": "The Wetmore Trail passes through second-growth forest that has reclaimed what was farmland just a century ago.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.3, "elevationFt": 150 },
+        { "mile": 0.6, "elevationFt": 80 },
+        { "mile": 1.3, "elevationFt": 200, "label": "High point" },
+        { "mile": 1.9, "elevationFt": 100 },
+        { "mile": 2.3, "elevationFt": 40 },
         { "mile": 2.6, "elevationFt": 0, "label": "Return" }
       ]
     },
@@ -93,8 +111,11 @@
       "didYouKnow": "Remnants of old fence lines and foundation stones from former farms are still visible along parts of the Salt Run corridor.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Kendall Lake trailhead" },
+        { "mile": 1.0, "elevationFt": 100 },
         { "mile": 2.0, "elevationFt": 200 },
-        { "mile": 3.9, "elevationFt": 350, "label": "Highest point" }
+        { "mile": 2.8, "elevationFt": 350, "label": "Highest point" },
+        { "mile": 3.4, "elevationFt": 150 },
+        { "mile": 3.9, "elevationFt": 0, "label": "Return" }
       ]
     },
     {
@@ -106,8 +127,11 @@
       "didYouKnow": "The Plateau Trail passes several smaller, less-visited sandstone ledge formations similar to the more famous ones on the main Ledges Trail.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Kendall Lake trailhead" },
+        { "mile": 0.8, "elevationFt": 100 },
         { "mile": 1.6, "elevationFt": 200 },
-        { "mile": 3.2, "elevationFt": 300, "label": "Highest point" }
+        { "mile": 2.4, "elevationFt": 300, "label": "Highest point" },
+        { "mile": 2.8, "elevationFt": 150 },
+        { "mile": 3.2, "elevationFt": 0, "label": "Return" }
       ]
     }
   ],

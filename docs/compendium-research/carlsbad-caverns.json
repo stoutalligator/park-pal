@@ -13,7 +13,11 @@
       "didYouKnow": "This paved switchback trail descends about 750 feet through the cave's original natural opening, the same route early explorers used before an elevator existed.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Natural Entrance" },
-        { "mile": 0.6, "elevationFt": -400 },
+        { "mile": 0.2, "elevationFt": -120 },
+        { "mile": 0.4, "elevationFt": -280 },
+        { "mile": 0.6, "elevationFt": -430 },
+        { "mile": 0.8, "elevationFt": -560 },
+        { "mile": 1.0, "elevationFt": -670 },
         { "mile": 1.25, "elevationFt": -750, "label": "Big Room level" }
       ]
     },
@@ -27,8 +31,12 @@
       "didYouKnow": "The Big Room is one of the largest single cave chambers in North America, large enough to hold several football fields.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Big Room entrance" },
-        { "mile": 0.6, "elevationFt": 50, "label": "Bottomless Pit" },
-        { "mile": 1.25, "elevationFt": 0 }
+        { "mile": 0.2, "elevationFt": 20 },
+        { "mile": 0.4, "elevationFt": 60 },
+        { "mile": 0.6, "elevationFt": 100, "label": "Bottomless Pit" },
+        { "mile": 0.8, "elevationFt": 70 },
+        { "mile": 1.0, "elevationFt": 30 },
+        { "mile": 1.25, "elevationFt": 0, "label": "Return to entrance" }
       ]
     },
     {
@@ -40,8 +48,11 @@
       "didYouKnow": "This loop showcases the same Chihuahuan Desert scrub found across the surface above the cave, home to lechuguilla and sotol plants found almost nowhere else in the U.S.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 40 },
-        { "mile": 0.5, "elevationFt": 0 }
+        { "mile": 0.1, "elevationFt": 15 },
+        { "mile": 0.2, "elevationFt": 35 },
+        { "mile": 0.3, "elevationFt": 50, "label": "High point" },
+        { "mile": 0.4, "elevationFt": 20 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -53,9 +64,14 @@
       "didYouKnow": "Rattlesnake Canyon is named for the western diamondback and rock rattlesnakes that share this rugged desert terrain, not for any unusual abundance of them.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead off Desert Loop Drive" },
-        { "mile": 2, "elevationFt": -300 },
-        { "mile": 4, "elevationFt": -600 },
-        { "mile": 6, "elevationFt": -700, "label": "Canyon floor turnaround" }
+        { "mile": 0.75, "elevationFt": -150 },
+        { "mile": 1.5, "elevationFt": -350 },
+        { "mile": 2.25, "elevationFt": -550 },
+        { "mile": 3.0, "elevationFt": -700, "label": "Canyon floor turnaround" },
+        { "mile": 3.75, "elevationFt": -550 },
+        { "mile": 4.5, "elevationFt": -350 },
+        { "mile": 5.25, "elevationFt": -150 },
+        { "mile": 6.0, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -67,9 +83,12 @@
       "didYouKnow": "In the early 1900s, bat guano mined from the cavern was hauled out along a version of this route to be sold as fertilizer.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 400 },
-        { "mile": 2.5, "elevationFt": 750, "label": "Ridge high point" },
-        { "mile": 3.5, "elevationFt": 600 }
+        { "mile": 0.5, "elevationFt": 250 },
+        { "mile": 1.0, "elevationFt": 500 },
+        { "mile": 1.75, "elevationFt": 750, "label": "Ridge high point" },
+        { "mile": 2.5, "elevationFt": 500 },
+        { "mile": 3.0, "elevationFt": 250 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -82,7 +101,10 @@
       "didYouKnow": "Unlike the main cavern, Slaughter Canyon Cave has no artificial lighting or paved trail, so past tours required every visitor to carry their own flashlight.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.3, "elevationFt": 350 },
+        { "mile": 0.1, "elevationFt": 80 },
+        { "mile": 0.2, "elevationFt": 180 },
+        { "mile": 0.3, "elevationFt": 300 },
+        { "mile": 0.4, "elevationFt": 420 },
         { "mile": 0.5, "elevationFt": 500, "label": "Cave entrance" }
       ]
     },
@@ -96,9 +118,12 @@
       "didYouKnow": "This trail is one segment of the larger 100-mile Guadalupe Ridge Trail, which connects Carlsbad Caverns to Guadalupe Mountains National Park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 3, "elevationFt": 500 },
+        { "mile": 1.5, "elevationFt": 250 },
+        { "mile": 3.0, "elevationFt": 500, "label": "Ridge approach" },
+        { "mile": 4.5, "elevationFt": 750 },
         { "mile": 5.5, "elevationFt": 900 },
-        { "mile": 8, "elevationFt": 1200, "label": "Ridge high point" }
+        { "mile": 6.5, "elevationFt": 1050 },
+        { "mile": 8.0, "elevationFt": 1200, "label": "Ridge high point" }
       ]
     },
     {
@@ -110,9 +135,12 @@
       "didYouKnow": "Yucca Canyon climbs into the same Guadalupe Mountains upthrust that also holds Guadalupe Peak, Texas's highest point, just across the state line.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 900 },
-        { "mile": 2.5, "elevationFt": 1600 },
-        { "mile": 3.5, "elevationFt": 2000, "label": "Ridge top" }
+        { "mile": 0.5, "elevationFt": 600 },
+        { "mile": 1.0, "elevationFt": 1200 },
+        { "mile": 1.75, "elevationFt": 2000, "label": "Ridge top" },
+        { "mile": 2.5, "elevationFt": 1200 },
+        { "mile": 3.0, "elevationFt": 600 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     }
   ],

@@ -13,10 +13,14 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
-        { "mile": 10, "elevationFt": 900 },
-        { "mile": 20, "elevationFt": 1900, "label": "Mount Desor area" },
-        { "mile": 30, "elevationFt": 2500 },
-        { "mile": 40, "elevationFt": 3000, "label": "Lookout Louise / Rock Harbor end" }
+        { "mile": 5, "elevationFt": 400 },
+        { "mile": 10, "elevationFt": 750 },
+        { "mile": 15, "elevationFt": 500 },
+        { "mile": 20, "elevationFt": 800, "label": "Mount Desor area" },
+        { "mile": 25, "elevationFt": 600 },
+        { "mile": 30, "elevationFt": 750 },
+        { "mile": 35, "elevationFt": 400 },
+        { "mile": 40, "elevationFt": 0, "label": "Rock Harbor / Lookout Louise end" }
       ]
     },
     {
@@ -29,9 +33,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
-        { "mile": 1.5, "elevationFt": 100 },
-        { "mile": 3, "elevationFt": 160 },
-        { "mile": 4.2, "elevationFt": 200, "label": "Scoville Point area" }
+        { "mile": 0.8, "elevationFt": 70 },
+        { "mile": 1.6, "elevationFt": 160 },
+        { "mile": 2.1, "elevationFt": 200, "label": "Historic mine pits" },
+        { "mile": 3.1, "elevationFt": 100 },
+        { "mile": 4.2, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -44,9 +50,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
-        { "mile": 1.5, "elevationFt": 70 },
-        { "mile": 3, "elevationFt": 120 },
-        { "mile": 4.2, "elevationFt": 150, "label": "Scoville Point" }
+        { "mile": 0.8, "elevationFt": 60 },
+        { "mile": 1.6, "elevationFt": 130 },
+        { "mile": 2.1, "elevationFt": 150, "label": "Scoville Point (turnaround)" },
+        { "mile": 3.15, "elevationFt": 80 },
+        { "mile": 4.2, "elevationFt": 0, "label": "Return to Rock Harbor" }
       ]
     },
     {
@@ -59,9 +67,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 150 },
-        { "mile": 3, "elevationFt": 320 },
-        { "mile": 4, "elevationFt": 400, "label": "Lookout Louise" }
+        { "mile": 0.8, "elevationFt": 100 },
+        { "mile": 1.6, "elevationFt": 300 },
+        { "mile": 2.0, "elevationFt": 400, "label": "Lookout Louise (turnaround)" },
+        { "mile": 3.0, "elevationFt": 150 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -74,8 +84,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
-        { "mile": 0.6, "elevationFt": 60 },
-        { "mile": 1.2, "elevationFt": 100, "label": "Loop return" }
+        { "mile": 0.2, "elevationFt": 35 },
+        { "mile": 0.4, "elevationFt": 80 },
+        { "mile": 0.6, "elevationFt": 100, "label": "High point" },
+        { "mile": 0.9, "elevationFt": 50 },
+        { "mile": 1.2, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -88,7 +101,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Rock Harbor Trailhead" },
-        { "mile": 3.5, "elevationFt": 180 },
+        { "mile": 1.2, "elevationFt": 100 },
+        { "mile": 2.4, "elevationFt": 180 },
+        { "mile": 3.5, "elevationFt": 220 },
+        { "mile": 4.7, "elevationFt": 260 },
+        { "mile": 5.9, "elevationFt": 280 },
         { "mile": 7.1, "elevationFt": 300, "label": "Daisy Farm" }
       ]
     },
@@ -102,8 +119,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
-        { "mile": 4.8, "elevationFt": 350, "label": "Huginnin Cove campsite" },
-        { "mile": 9.7, "elevationFt": 500, "label": "Loop return" }
+        { "mile": 1.6, "elevationFt": 150 },
+        { "mile": 3.2, "elevationFt": 350 },
+        { "mile": 4.8, "elevationFt": 500, "label": "Huginnin Cove campsite" },
+        { "mile": 7.2, "elevationFt": 250 },
+        { "mile": 9.7, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -116,9 +136,11 @@
       "lastVerified": "2026-09-15",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Windigo Trailhead" },
-        { "mile": 4, "elevationFt": 300 },
-        { "mile": 8, "elevationFt": 700, "label": "Feldtmann Lake" },
-        { "mile": 16, "elevationFt": 1200, "label": "Loop return" }
+        { "mile": 3, "elevationFt": 400 },
+        { "mile": 6, "elevationFt": 900 },
+        { "mile": 8, "elevationFt": 1200, "label": "Feldtmann Lake" },
+        { "mile": 12, "elevationFt": 600 },
+        { "mile": 16, "elevationFt": 0, "label": "Loop Return" }
       ]
     }
   ],

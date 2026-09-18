@@ -13,9 +13,12 @@
       "didYouKnow": "The elevated Falls Platform has a strict capacity limit, and during the peak July sockeye run rangers run a waitlist system so every visitor gets a turn.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Brooks Camp / Lodge" },
-        { "mile": 0.4, "elevationFt": 20 },
-        { "mile": 0.9, "elevationFt": 40, "label": "Corridor to platforms" },
-        { "mile": 1.2, "elevationFt": 50, "label": "Brooks Falls Platform" }
+        { "mile": 0.2, "elevationFt": 20 },
+        { "mile": 0.4, "elevationFt": 40, "label": "Corridor to platforms" },
+        { "mile": 0.6, "elevationFt": 50, "label": "Brooks Falls Platform (turnaround)" },
+        { "mile": 0.8, "elevationFt": 40 },
+        { "mile": 1.0, "elevationFt": 20 },
+        { "mile": 1.2, "elevationFt": 0, "label": "Return to Brooks Camp" }
       ]
     },
     {
@@ -26,10 +29,13 @@
       "trailTip": "Carry bear spray and make noise on blind corners — this trail climbs away from the Brooks River corridor into dense alder where bears are frequently encountered.",
       "didYouKnow": "The overlook bench at about 1.5 miles is a common turnaround point offering a view over Naknek Lake without the full summit push.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
-        { "mile": 1.5, "elevationFt": 800, "label": "First overlook" },
+        { "mile": 0, "elevationFt": 0, "label": "Brooks Camp" },
+        { "mile": 0.75, "elevationFt": 900, "label": "First overlook" },
+        { "mile": 1.5, "elevationFt": 1700 },
+        { "mile": 2.25, "elevationFt": 2400, "label": "Dumpling Mountain summit (turnaround)" },
         { "mile": 3.0, "elevationFt": 1700 },
-        { "mile": 4.5, "elevationFt": 2450, "label": "Dumpling Mountain summit" }
+        { "mile": 3.75, "elevationFt": 900 },
+        { "mile": 4.5, "elevationFt": 0, "label": "Return to Brooks Camp" }
       ]
     },
     {
@@ -41,10 +47,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The valley was buried up to 700 feet deep in ash after the 1912 Novarupta eruption, the largest volcanic eruption of the 20th century.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1400, "label": "Griggs Visitor Center overlook" },
-        { "mile": 1.0, "elevationFt": 1550 },
-        { "mile": 2.0, "elevationFt": 1750, "label": "Valley floor" },
-        { "mile": 3.5, "elevationFt": 1900, "label": "Ukak River confluence" }
+        { "mile": 0, "elevationFt": 0, "label": "Griggs Visitor Center overlook" },
+        { "mile": 0.5, "elevationFt": -150 },
+        { "mile": 1.0, "elevationFt": -350 },
+        { "mile": 1.75, "elevationFt": -500, "label": "Valley floor / Ukak River confluence (turnaround)" },
+        { "mile": 2.5, "elevationFt": -350 },
+        { "mile": 3.0, "elevationFt": -150 },
+        { "mile": 3.5, "elevationFt": 0, "label": "Return to overlook" }
       ]
     },
     {
@@ -55,9 +64,12 @@
       "trailTip": "This spur continues past the main Ten Thousand Smokes overlook into loose volcanic ash and pumice, so wear sturdy boots with good ankle support.",
       "didYouKnow": "Ukak Falls tumbles through a gorge cut into the ash-flow deposit rather than solid bedrock.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 1900, "label": "Trail junction" },
-        { "mile": 0.7, "elevationFt": 2000 },
-        { "mile": 1.5, "elevationFt": 2100, "label": "Ukak Falls overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Trail junction" },
+        { "mile": 0.3, "elevationFt": 90 },
+        { "mile": 0.6, "elevationFt": 180 },
+        { "mile": 0.75, "elevationFt": 200, "label": "Ukak Falls overlook (turnaround)" },
+        { "mile": 1.1, "elevationFt": 120 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Return to junction" }
       ]
     },
     {
@@ -68,8 +80,11 @@
       "trailTip": "This flat connector between Brooks Camp's waterways sees frequent bear traffic, so travel in a group and check with rangers about recent sightings before setting out.",
       "didYouKnow": "The trail links Naknek Lake and the Brooks River, tracing part of the same route bears use to move between fishing spots.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
-        { "mile": 0.7, "elevationFt": 80 },
+        { "mile": 0, "elevationFt": 0, "label": "Brooks Camp" },
+        { "mile": 0.3, "elevationFt": 25 },
+        { "mile": 0.6, "elevationFt": 50 },
+        { "mile": 0.9, "elevationFt": 70 },
+        { "mile": 1.2, "elevationFt": 90 },
         { "mile": 1.5, "elevationFt": 100, "label": "Lake outlet" }
       ]
     },
@@ -81,9 +96,12 @@
       "trailTip": "This unmarked route sees far fewer visitors than the main Brooks Camp trails, so check in with rangers about your plan and carry a map, compass, and bear spray.",
       "didYouKnow": "Margot Creek's open tundra makes it a good spot to look for caribou sign well away from the crowds at Brooks Falls.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 60, "label": "Brooks Camp area" },
-        { "mile": 1.2, "elevationFt": 200 },
-        { "mile": 2.5, "elevationFt": 360, "label": "Margot Creek overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Brooks Camp area" },
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 250 },
+        { "mile": 1.25, "elevationFt": 300, "label": "Margot Creek overlook (turnaround)" },
+        { "mile": 1.9, "elevationFt": 150 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Return to Brooks Camp area" }
       ]
     },
     {
@@ -94,9 +112,12 @@
       "trailTip": "A gentle loop near the visitor center — a good warm-up walk while waiting for your mandatory bear orientation session.",
       "didYouKnow": "Interpretive signs along the loop cover the area's roughly 9,000 years of human history, including ancestral Alutiiq and Sugpiaq use of the Brooks River fishery.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 40, "label": "Visitor Center" },
-        { "mile": 0.25, "elevationFt": 55 },
-        { "mile": 0.5, "elevationFt": 60, "label": "Loop return" }
+        { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
+        { "mile": 0.1, "elevationFt": 8 },
+        { "mile": 0.2, "elevationFt": 16 },
+        { "mile": 0.25, "elevationFt": 20, "label": "High point" },
+        { "mile": 0.35, "elevationFt": 10 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Loop return" }
       ]
     },
     {
@@ -107,9 +128,13 @@
       "trailTip": "This out-and-back follows the Naknek Lake shoreline to a preserved 1920s trapper's cabin — plan for a full day and pack extra food since there's no water treatment available at the cabin.",
       "didYouKnow": "The cabin belonged to trapper Roy Fure, who lived along Naknek Lake into the 1980s; it's one of the last standing structures from Katmai's trapping era.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 50, "label": "Brooks Camp" },
-        { "mile": 3.0, "elevationFt": 150 },
-        { "mile": 6.5, "elevationFt": 250, "label": "Fure's Cabin" }
+        { "mile": 0, "elevationFt": 0, "label": "Brooks Camp" },
+        { "mile": 1.0, "elevationFt": 80 },
+        { "mile": 2.0, "elevationFt": 150 },
+        { "mile": 3.25, "elevationFt": 200, "label": "Fure's Cabin (turnaround)" },
+        { "mile": 4.5, "elevationFt": 150 },
+        { "mile": 5.5, "elevationFt": 80 },
+        { "mile": 6.5, "elevationFt": 0, "label": "Return to Brooks Camp" }
       ]
     }
   ],

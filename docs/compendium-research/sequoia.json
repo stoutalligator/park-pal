@@ -12,8 +12,10 @@
       "didYouKnow": "The loop passes the General Sherman Tree, the largest tree on Earth by volume, along with several other named giant sequoias.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "General Sherman Tree" },
+        { "mile": 0.5, "elevationFt": 60 },
         { "mile": 1.0, "elevationFt": 120 },
-        { "mile": 2.0, "elevationFt": 180 },
+        { "mile": 1.8, "elevationFt": 180 },
+        { "mile": 2.4, "elevationFt": 150 },
         { "mile": 2.9, "elevationFt": 200, "label": "Loop closure" }
       ]
     },
@@ -27,8 +29,12 @@
       "didYouKnow": "The roughly 400-step granite staircase was built in the 1930s and climbs a dome that offers a 360-degree view of the Great Western Divide.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.25, "elevationFt": 180 },
-        { "mile": 0.5, "elevationFt": 300, "label": "Summit" }
+        { "mile": 0.1, "elevationFt": 100 },
+        { "mile": 0.2, "elevationFt": 220 },
+        { "mile": 0.25, "elevationFt": 300, "label": "Summit" },
+        { "mile": 0.35, "elevationFt": 200 },
+        { "mile": 0.45, "elevationFt": 80 },
+        { "mile": 0.5, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -40,8 +46,14 @@
       "didYouKnow": "Tokopah Falls tumbles roughly 1,200 feet down a granite canyon wall carved by glaciers, similar in character to Yosemite's high country.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 200 },
-        { "mile": 1.9, "elevationFt": 600, "label": "Falls overlook" }
+        { "mile": 0.5, "elevationFt": 80 },
+        { "mile": 1.0, "elevationFt": 180 },
+        { "mile": 1.5, "elevationFt": 400 },
+        { "mile": 1.9, "elevationFt": 600, "label": "Falls overlook" },
+        { "mile": 2.5, "elevationFt": 400 },
+        { "mile": 3.0, "elevationFt": 200 },
+        { "mile": 3.4, "elevationFt": 80 },
+        { "mile": 3.8, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -53,8 +65,11 @@
       "didYouKnow": "John Muir called Crescent Meadow the 'gem of the Sierra' after visiting in the 1870s.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 80 },
         { "mile": 0.8, "elevationFt": 150 },
-        { "mile": 1.6, "elevationFt": 200, "label": "Loop closure" }
+        { "mile": 1.1, "elevationFt": 200 },
+        { "mile": 1.4, "elevationFt": 100 },
+        { "mile": 1.6, "elevationFt": 0, "label": "Loop closure" }
       ]
     },
     {
@@ -66,9 +81,15 @@
       "didYouKnow": "At just under 11,200 feet, Alta Peak's summit gives one of the best views in the park of the Great Western Divide and the Kaweah watershed.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Wolverton Trailhead" },
-        { "mile": 3.5, "elevationFt": 1200 },
-        { "mile": 6.0, "elevationFt": 2600 },
-        { "mile": 6.9, "elevationFt": 4000, "label": "Alta Peak summit" }
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 3.0, "elevationFt": 1400 },
+        { "mile": 4.5, "elevationFt": 2400 },
+        { "mile": 6.0, "elevationFt": 3400 },
+        { "mile": 6.9, "elevationFt": 4000, "label": "Alta Peak summit" },
+        { "mile": 8.5, "elevationFt": 3000 },
+        { "mile": 10.0, "elevationFt": 2000 },
+        { "mile": 11.8, "elevationFt": 1000 },
+        { "mile": 13.8, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -80,9 +101,14 @@
       "didYouKnow": "Heather Lake sits in a granite bowl within the Tokopah watershed and is one of several lakes reached via the Lakes Trail system.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Wolverton Trailhead" },
-        { "mile": 2.0, "elevationFt": 700 },
-        { "mile": 3.5, "elevationFt": 1400 },
-        { "mile": 4.3, "elevationFt": 2000, "label": "Heather Lake" }
+        { "mile": 1.0, "elevationFt": 400 },
+        { "mile": 2.0, "elevationFt": 900 },
+        { "mile": 3.0, "elevationFt": 1500 },
+        { "mile": 4.3, "elevationFt": 2000, "label": "Heather Lake" },
+        { "mile": 5.5, "elevationFt": 1500 },
+        { "mile": 6.5, "elevationFt": 900 },
+        { "mile": 7.5, "elevationFt": 400 },
+        { "mile": 8.6, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -94,9 +120,14 @@
       "didYouKnow": "Marble Falls cascades over a formation of marble, a metamorphic rock unusual among the mostly granite peaks of the surrounding Sierra.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Potwisha Trailhead" },
-        { "mile": 2.0, "elevationFt": 600 },
-        { "mile": 3.0, "elevationFt": 1100 },
-        { "mile": 3.7, "elevationFt": 1700, "label": "Marble Falls" }
+        { "mile": 1.0, "elevationFt": 400 },
+        { "mile": 2.0, "elevationFt": 900 },
+        { "mile": 3.0, "elevationFt": 1400 },
+        { "mile": 3.7, "elevationFt": 1700, "label": "Marble Falls" },
+        { "mile": 4.7, "elevationFt": 1300 },
+        { "mile": 5.6, "elevationFt": 800 },
+        { "mile": 6.6, "elevationFt": 300 },
+        { "mile": 7.4, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -108,8 +139,14 @@
       "didYouKnow": "From the summit, hikers can see both the Great Western Divide and, on clear days, the San Joaquin Valley to the west.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 300 },
-        { "mile": 1.7, "elevationFt": 700, "label": "Little Baldy summit" }
+        { "mile": 0.4, "elevationFt": 150 },
+        { "mile": 0.85, "elevationFt": 350 },
+        { "mile": 1.3, "elevationFt": 550 },
+        { "mile": 1.7, "elevationFt": 700, "label": "Little Baldy summit" },
+        { "mile": 2.1, "elevationFt": 550 },
+        { "mile": 2.55, "elevationFt": 350 },
+        { "mile": 3.0, "elevationFt": 150 },
+        { "mile": 3.4, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     }
   ],

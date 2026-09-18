@@ -12,8 +12,11 @@
       "didYouKnow": "From the summit, the trail offers one of the best full views of Wizard Island rising from the caldera lake below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Crater Lake Lodge" },
-        { "mile": 1.0, "elevationFt": 400 },
-        { "mile": 1.7, "elevationFt": 1010, "label": "Garfield Peak summit" },
+        { "mile": 0.5, "elevationFt": 200 },
+        { "mile": 1.0, "elevationFt": 450 },
+        { "mile": 1.7, "elevationFt": 1000, "label": "Garfield Peak summit" },
+        { "mile": 2.4, "elevationFt": 450 },
+        { "mile": 2.9, "elevationFt": 200 },
         { "mile": 3.4, "elevationFt": 0, "label": "Return" }
       ],
       "lastVerified": "2026-09-15"
@@ -26,10 +29,15 @@
       "trailTip": "As of September 2026, per NPS.gov, Cleetwood Cove Trail — the only legal access to the lakeshore — is closed for a multi-year trail and marina rehabilitation project spanning the 2026, 2027, and 2028 seasons, and boat tours are paused during that time; do not attempt to hike down to the water while it's closed.",
       "didYouKnow": "Even when open, this is the only trail in the park that reaches the lake's edge, since the caldera's other walls are too steep to descend safely.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 700, "label": "Rim trailhead" },
-        { "mile": 0.5, "elevationFt": 500 },
-        { "mile": 1.1, "elevationFt": 0, "label": "Lakeshore" },
-        { "mile": 2.2, "elevationFt": 700, "label": "Return to rim" }
+        { "mile": 0, "elevationFt": 0, "label": "Rim trailhead" },
+        { "mile": 0.3, "elevationFt": -200 },
+        { "mile": 0.6, "elevationFt": -400 },
+        { "mile": 0.9, "elevationFt": -600 },
+        { "mile": 1.1, "elevationFt": -700, "label": "Lakeshore" },
+        { "mile": 1.4, "elevationFt": -600 },
+        { "mile": 1.7, "elevationFt": -400 },
+        { "mile": 2.0, "elevationFt": -200 },
+        { "mile": 2.2, "elevationFt": 0, "label": "Return to rim" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -42,8 +50,10 @@
       "didYouKnow": "The historic fire lookout at the summit is still staffed by rangers during peak fire season and offers one of the best sunset views over the caldera.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Watchman Overlook" },
-        { "mile": 0.4, "elevationFt": 200 },
+        { "mile": 0.2, "elevationFt": 100 },
+        { "mile": 0.4, "elevationFt": 220 },
         { "mile": 0.8, "elevationFt": 420, "label": "Watchman Peak lookout" },
+        { "mile": 1.2, "elevationFt": 220 },
         { "mile": 1.6, "elevationFt": 0, "label": "Return" }
       ],
       "lastVerified": "2026-09-15"
@@ -57,7 +67,11 @@
       "didYouKnow": "Plaikni Falls is fed by snowmelt seeping from the base of Mount Scott rather than a visible surface stream for most of its route.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 40 },
+        { "mile": 0.6, "elevationFt": 80 },
         { "mile": 1.0, "elevationFt": 130, "label": "Plaikni Falls" },
+        { "mile": 1.4, "elevationFt": 80 },
+        { "mile": 1.7, "elevationFt": 30 },
         { "mile": 2.0, "elevationFt": 0, "label": "Return" }
       ]
     },
@@ -70,8 +84,11 @@
       "didYouKnow": "At 8,929 feet, Mount Scott is the highest point in the park and hosts a staffed fire lookout at its summit.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 0.7, "elevationFt": 300 },
+        { "mile": 1.4, "elevationFt": 650 },
         { "mile": 2.2, "elevationFt": 1250, "label": "Mount Scott summit" },
+        { "mile": 3.0, "elevationFt": 650 },
+        { "mile": 3.7, "elevationFt": 300 },
         { "mile": 4.4, "elevationFt": 0, "label": "Return" }
       ],
       "lastVerified": "2026-09-15"
@@ -84,9 +101,13 @@
       "trailTip": "The trail descends and re-climbs a steep volcanic canyon on a mix of dirt path and footbridges — footing can be loose in a few spots, so trekking poles help on the return climb.",
       "didYouKnow": "Annie Creek Canyon was carved by meltwater cutting down through loose pumice and ash left by Mount Mazama's eruption roughly 7,700 years ago.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Mazama Village" },
-        { "mile": 0.8, "elevationFt": 0, "label": "Canyon floor" },
-        { "mile": 1.7, "elevationFt": 300, "label": "Return" }
+        { "mile": 0, "elevationFt": 0, "label": "Mazama Village" },
+        { "mile": 0.3, "elevationFt": -120 },
+        { "mile": 0.6, "elevationFt": -220 },
+        { "mile": 0.85, "elevationFt": -300, "label": "Canyon floor" },
+        { "mile": 1.1, "elevationFt": -220 },
+        { "mile": 1.4, "elevationFt": -100 },
+        { "mile": 1.7, "elevationFt": 0, "label": "Return" }
       ]
     },
     {
@@ -98,7 +119,10 @@
       "didYouKnow": "The trail loops through old-growth forest above Munson Creek Canyon, showing off pumice cliffs left by Mount Mazama's eruption.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.25, "elevationFt": 40 },
+        { "mile": 0.5, "elevationFt": 80 },
         { "mile": 0.6, "elevationFt": 100, "label": "Canyon overlook" },
+        { "mile": 0.85, "elevationFt": 50 },
         { "mile": 1.1, "elevationFt": 0, "label": "Return" }
       ]
     },
@@ -111,7 +135,10 @@
       "didYouKnow": "Boundary Springs marks the headwaters of the Rogue River, which flows more than 200 miles to the Pacific Ocean.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Highway 138 trailhead" },
-        { "mile": 1.2, "elevationFt": 200 },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 1.0, "elevationFt": 130 },
+        { "mile": 1.5, "elevationFt": 200 },
+        { "mile": 2.0, "elevationFt": 260 },
         { "mile": 2.5, "elevationFt": 300, "label": "Boundary Springs" }
       ]
     }

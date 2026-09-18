@@ -12,9 +12,12 @@
       "didYouKnow": "The narrow carved steps and handrails through the High Peaks were built by the Civilian Conservation Corps in the 1930s.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.3, "elevationFt": 600 },
+        { "mile": 0.9, "elevationFt": 400 },
+        { "mile": 1.8, "elevationFt": 900 },
         { "mile": 2.5, "elevationFt": 1500, "label": "High Peaks narrows" },
-        { "mile": 3.8, "elevationFt": 900 },
+        { "mile": 3.2, "elevationFt": 1200 },
+        { "mile": 4.0, "elevationFt": 700 },
+        { "mile": 4.7, "elevationFt": 300 },
         { "mile": 5.3, "elevationFt": 0, "label": "Loop Complete" }
       ]
     },
@@ -28,8 +31,12 @@
       "didYouKnow": "Bear Gulch Cave is a talus cave — formed by giant boulders wedged into a narrow canyon, not carved by flowing water.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.35, "elevationFt": 150 },
         { "mile": 0.7, "elevationFt": 300, "label": "Cave entrance" },
+        { "mile": 1.05, "elevationFt": 450 },
         { "mile": 1.4, "elevationFt": 550, "label": "Bear Gulch Reservoir" },
+        { "mile": 1.7, "elevationFt": 350 },
+        { "mile": 2.0, "elevationFt": 150 },
         { "mile": 2.2, "elevationFt": 0, "label": "Loop Complete via Rim Trail" }
       ]
     },
@@ -42,9 +49,13 @@
       "didYouKnow": "Condor Gulch is named for the California condors reintroduced to Pinnacles starting in 2003, after the species had vanished entirely from the wild by 1987.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.9, "elevationFt": 400 },
         { "mile": 1.7, "elevationFt": 800, "label": "Condor Gulch Overlook" },
-        { "mile": 2.9, "elevationFt": 1140, "label": "High Peaks junction" },
-        { "mile": 4.7, "elevationFt": 0, "label": "Loop Complete" }
+        { "mile": 2.3, "elevationFt": 1000 },
+        { "mile": 2.9, "elevationFt": 1140, "label": "High Peaks junction (turnaround)" },
+        { "mile": 3.5, "elevationFt": 750 },
+        { "mile": 4.0, "elevationFt": 400 },
+        { "mile": 4.7, "elevationFt": 0, "label": "Back at Trailhead" }
       ]
     },
     {
@@ -57,8 +68,11 @@
       "didYouKnow": "Balconies Cave requires scrambling through sections so narrow and dark that a flashlight is essential even at midday.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "West Fork Trailhead" },
+        { "mile": 0.5, "elevationFt": 80 },
         { "mile": 1.0, "elevationFt": 150, "label": "Cave entrance" },
-        { "mile": 1.6, "elevationFt": 200 },
+        { "mile": 1.3, "elevationFt": 200 },
+        { "mile": 1.6, "elevationFt": 180 },
+        { "mile": 2.0, "elevationFt": 90 },
         { "mile": 2.4, "elevationFt": 0, "label": "Loop Complete" }
       ]
     },
@@ -71,7 +85,11 @@
       "didYouKnow": "Bear Gulch Reservoir, reached via this trail, was built in 1911-1912 and is one of the oldest reservoirs in California still holding water.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": 100 },
+        { "mile": 0.7, "elevationFt": 200 },
         { "mile": 1.0, "elevationFt": 300, "label": "Bear Gulch Reservoir" },
+        { "mile": 1.4, "elevationFt": 220 },
+        { "mile": 1.8, "elevationFt": 100 },
         { "mile": 2.2, "elevationFt": 0, "label": "Loop Complete" }
       ]
     },
@@ -84,7 +102,11 @@
       "didYouKnow": "This trail follows Chalone Creek, one of the park's few reliable water sources for wildlife in the dry chaparral.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Old Pinnacles Trailhead" },
+        { "mile": 0.7, "elevationFt": 100 },
+        { "mile": 1.4, "elevationFt": 200 },
         { "mile": 2.1, "elevationFt": 300, "label": "Balconies Cave junction" },
+        { "mile": 2.8, "elevationFt": 220 },
+        { "mile": 3.5, "elevationFt": 100 },
         { "mile": 4.3, "elevationFt": 0, "label": "Trail End" }
       ]
     },
@@ -113,8 +135,11 @@
       "didYouKnow": "Juniper Canyon is one of two main western approaches into the High Peaks, climbing through a woodland of gray pine and juniper.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Chaparral Trailhead" },
+        { "mile": 0.7, "elevationFt": 200 },
         { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 2.1, "elevationFt": 850 },
         { "mile": 2.8, "elevationFt": 1100, "label": "High Peaks junction" },
+        { "mile": 3.5, "elevationFt": 1180 },
         { "mile": 4.3, "elevationFt": 1215, "label": "Trail End" }
       ]
     }

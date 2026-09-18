@@ -12,9 +12,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Bumpass Hell is named for a 19th-century guide who fell through the crust and severely burned his leg, later using the story to draw paying tourists to the site.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 8000, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 7900 },
-        { "mile": 1.5, "elevationFt": 7700, "label": "Bumpass Hell basin" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": -100 },
+        { "mile": 1.0, "elevationFt": -200 },
+        { "mile": 1.5, "elevationFt": -300, "label": "Bumpass Hell basin" },
+        { "mile": 2.0, "elevationFt": -200 },
+        { "mile": 2.5, "elevationFt": -100 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -26,10 +30,15 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "Lassen Peak is one of the largest plug dome volcanoes in the world and last erupted in a series of explosions between 1914 and 1917.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 8500, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 9200 },
-        { "mile": 3.0, "elevationFt": 10000 },
-        { "mile": 2.5, "elevationFt": 10457, "label": "Summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.6, "elevationFt": 400 },
+        { "mile": 1.25, "elevationFt": 900 },
+        { "mile": 1.9, "elevationFt": 1500 },
+        { "mile": 2.5, "elevationFt": 2000, "label": "Summit" },
+        { "mile": 3.1, "elevationFt": 1500 },
+        { "mile": 3.75, "elevationFt": 900 },
+        { "mile": 4.4, "elevationFt": 400 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -40,9 +49,15 @@
       "trailTip": "The lower loop past the falls includes a rock staircase section that can be slick when wet, so take the gentler Cascades return route if footing looks unstable.",
       "didYouKnow": "Kings Creek Falls drops about 30 feet over a basalt cliff formed by lava flows from the volcanic activity that shaped the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 7400, "label": "Trailhead" },
-        { "mile": 1.0, "elevationFt": 7100 },
-        { "mile": 1.3, "elevationFt": 6950, "label": "Kings Creek Falls" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.4, "elevationFt": -180 },
+        { "mile": 0.8, "elevationFt": -420 },
+        { "mile": 1.1, "elevationFt": -600 },
+        { "mile": 1.3, "elevationFt": -700, "label": "Kings Creek Falls" },
+        { "mile": 1.6, "elevationFt": -550 },
+        { "mile": 1.9, "elevationFt": -300 },
+        { "mile": 2.1, "elevationFt": -120 },
+        { "mile": 2.3, "elevationFt": 0, "label": "Trailhead (Cascades return)" }
       ]
     },
     {
@@ -53,9 +68,13 @@
       "trailTip": "Popular at sunrise for reflection photos of Lassen Peak across the water; the trail is mostly flat and shaded, making it a good option even on a smoke-hazy day.",
       "didYouKnow": "Manzanita Lake was formed roughly 300 years ago when a rockfall/mudflow off Chaos Crags dammed the creek that fills it.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 5890, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 5900 },
-        { "mile": 1.5, "elevationFt": 5890, "label": "Back to trailhead" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 15 },
+        { "mile": 0.6, "elevationFt": 35 },
+        { "mile": 0.75, "elevationFt": 50, "label": "Reflection point" },
+        { "mile": 1.05, "elevationFt": 30 },
+        { "mile": 1.3, "elevationFt": 12 },
+        { "mile": 1.5, "elevationFt": 0, "label": "Back to trailhead" }
       ]
     },
     {
@@ -66,10 +85,15 @@
       "trailTip": "The final climb is through loose volcanic cinder that slides underfoot, so expect a slower pace than the mileage suggests and bring extra water since there's no shade near the summit.",
       "didYouKnow": "The Cinder Cone's summit crater is ringed by the colorful Painted Dunes, oxidized volcanic ash deposited by an eruption in the 1650s.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 5700, "label": "Trailhead" },
-        { "mile": 1.8, "elevationFt": 6200 },
-        { "mile": 2.5, "elevationFt": 6550, "label": "Base of cone" },
-        { "mile": 2.0, "elevationFt": 6907, "label": "Summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.5, "elevationFt": 150 },
+        { "mile": 1.0, "elevationFt": 350 },
+        { "mile": 1.5, "elevationFt": 600 },
+        { "mile": 2.0, "elevationFt": 850, "label": "Summit" },
+        { "mile": 2.5, "elevationFt": 600 },
+        { "mile": 3.0, "elevationFt": 350 },
+        { "mile": 3.5, "elevationFt": 150 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -80,10 +104,15 @@
       "trailTip": "The upper mile is exposed switchbacks along a ridge with little shade or water, so start early to avoid afternoon thunderstorms common at this elevation in summer.",
       "didYouKnow": "Brokeoff Mountain is a remnant of ancient Mount Tehama, a massive stratovolcano that collapsed roughly 350,000 years ago, of which Lassen Peak is a much younger offshoot.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6650, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 8000 },
-        { "mile": 3.5, "elevationFt": 8800 },
-        { "mile": 3.75, "elevationFt": 9235, "label": "Summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 1.0, "elevationFt": 700 },
+        { "mile": 2.0, "elevationFt": 1500 },
+        { "mile": 2.9, "elevationFt": 2150 },
+        { "mile": 3.75, "elevationFt": 2600, "label": "Summit" },
+        { "mile": 4.6, "elevationFt": 2150 },
+        { "mile": 5.5, "elevationFt": 1500 },
+        { "mile": 6.5, "elevationFt": 700 },
+        { "mile": 7.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -94,8 +123,13 @@
       "trailTip": "Stay on the paved walkway and behind railings near the mudpots — the ground beyond the barriers can be unstable and the steam vents release sulfur gas that's unhealthy to breathe up close.",
       "didYouKnow": "Sulphur Works sits near the center of the collapsed ancient Mount Tehama caldera, making it one of the most accessible thermal areas in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6700, "label": "Trailhead" },
-        { "mile": 0.1, "elevationFt": 6720, "label": "Mudpots" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.033, "elevationFt": 7 },
+        { "mile": 0.067, "elevationFt": 15 },
+        { "mile": 0.1, "elevationFt": 20, "label": "Mudpots" },
+        { "mile": 0.133, "elevationFt": 15 },
+        { "mile": 0.167, "elevationFt": 7 },
+        { "mile": 0.2, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -106,9 +140,15 @@
       "trailTip": "Peak wildflower bloom in the meadow is typically mid-to-late summer; trail can be muddy early season from snowmelt, so waterproof footwear helps.",
       "didYouKnow": "Paradise Meadow floods seasonally with meltwater, creating the shallow lily pond that gives this trail its informal name.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 6700, "label": "Trailhead" },
-        { "mile": 1.2, "elevationFt": 7200 },
-        { "mile": 1.4, "elevationFt": 7400, "label": "Paradise Meadow" }
+        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
+        { "mile": 0.3, "elevationFt": 150 },
+        { "mile": 0.6, "elevationFt": 350 },
+        { "mile": 0.9, "elevationFt": 550 },
+        { "mile": 1.25, "elevationFt": 700, "label": "Paradise Meadow" },
+        { "mile": 1.6, "elevationFt": 550 },
+        { "mile": 1.9, "elevationFt": 350 },
+        { "mile": 2.2, "elevationFt": 150 },
+        { "mile": 2.5, "elevationFt": 0, "label": "Trailhead" }
       ]
     }
   ],

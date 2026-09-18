@@ -12,9 +12,14 @@
       "didYouKnow": "At 8,751 feet, Guadalupe Peak is the highest point in Texas, and a stainless-steel monument at the summit commemorates the Butterfield Overland Mail stagecoach route below.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 1.0, "elevationFt": 700 },
         { "mile": 2.0, "elevationFt": 1200 },
-        { "mile": 3.5, "elevationFt": 2100, "label": "Guadalupe Peak Campground" },
-        { "mile": 4.2, "elevationFt": 3000, "label": "Summit" }
+        { "mile": 3.0, "elevationFt": 1900 },
+        { "mile": 4.2, "elevationFt": 3000, "label": "Summit" },
+        { "mile": 5.4, "elevationFt": 1900 },
+        { "mile": 6.4, "elevationFt": 1200 },
+        { "mile": 7.4, "elevationFt": 700 },
+        { "mile": 8.4, "elevationFt": 0, "label": "Return to Pine Springs Trailhead" }
       ]
     },
     {
@@ -26,9 +31,14 @@
       "didYouKnow": "The trail's namesake \"Devil's Hall\" is a narrow, sheer-walled passage naturally carved through limestone by centuries of flash flooding.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
-        { "mile": 1.2, "elevationFt": 250 },
-        { "mile": 2.0, "elevationFt": 500, "label": "Hikers Staircase" },
-        { "mile": 2.1, "elevationFt": 600, "label": "Devil's Hall" }
+        { "mile": 0.6, "elevationFt": 100 },
+        { "mile": 1.2, "elevationFt": 250, "label": "Hikers Staircase" },
+        { "mile": 1.8, "elevationFt": 450 },
+        { "mile": 2.1, "elevationFt": 600, "label": "Devil's Hall" },
+        { "mile": 2.4, "elevationFt": 450 },
+        { "mile": 3.0, "elevationFt": 250 },
+        { "mile": 3.6, "elevationFt": 100 },
+        { "mile": 4.2, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -40,8 +50,12 @@
       "didYouKnow": "McKittrick Canyon's bigtooth maples put on one of the most vivid fall color displays in Texas, a rarity in a desert mountain range.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.3, "elevationFt": 250, "label": "Pratt Cabin" },
-        { "mile": 4.0, "elevationFt": 500, "label": "Grotto" }
+        { "mile": 0.8, "elevationFt": 100 },
+        { "mile": 1.6, "elevationFt": 200, "label": "Pratt Cabin" },
+        { "mile": 2.4, "elevationFt": 500, "label": "Grotto" },
+        { "mile": 3.2, "elevationFt": 300 },
+        { "mile": 4.0, "elevationFt": 100 },
+        { "mile": 4.8, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -53,8 +67,11 @@
       "didYouKnow": "Smith Spring is one of only a handful of reliable, year-round water sources in the park, creating a rare pocket of lush vegetation amid the surrounding desert.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Frijole Ranch Trailhead" },
-        { "mile": 1.2, "elevationFt": 300, "label": "Smith Spring" },
-        { "mile": 2.3, "elevationFt": 400, "label": "Loop Return" }
+        { "mile": 0.6, "elevationFt": 150 },
+        { "mile": 1.2, "elevationFt": 400, "label": "Smith Spring" },
+        { "mile": 1.6, "elevationFt": 250 },
+        { "mile": 2.0, "elevationFt": 100 },
+        { "mile": 2.3, "elevationFt": 0, "label": "Loop Return" }
       ]
     },
     {
@@ -66,8 +83,14 @@
       "didYouKnow": "El Capitan's 1,000-foot limestone cliff face was once a critical navigation landmark for stagecoach and, later, aircraft crossing the region.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
-        { "mile": 3.0, "elevationFt": 300 },
-        { "mile": 5.6, "elevationFt": 700, "label": "El Capitan Base" }
+        { "mile": 1.5, "elevationFt": 200 },
+        { "mile": 3.0, "elevationFt": 400 },
+        { "mile": 4.5, "elevationFt": 600 },
+        { "mile": 5.65, "elevationFt": 700, "label": "El Capitan Base" },
+        { "mile": 7.0, "elevationFt": 500 },
+        { "mile": 8.5, "elevationFt": 300 },
+        { "mile": 10.0, "elevationFt": 150 },
+        { "mile": 11.3, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -79,8 +102,14 @@
       "didYouKnow": "This trail climbs through one of the best-exposed cross-sections of a fossilized Permian-age reef anywhere in the world, predating the Guadalupe Mountains themselves by over 250 million years.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "McKittrick Canyon Trailhead" },
-        { "mile": 2.0, "elevationFt": 800 },
-        { "mile": 4.2, "elevationFt": 2000, "label": "Reef Overlook" }
+        { "mile": 1.0, "elevationFt": 600 },
+        { "mile": 2.1, "elevationFt": 1200 },
+        { "mile": 3.2, "elevationFt": 1700 },
+        { "mile": 4.2, "elevationFt": 2000, "label": "Reef Overlook" },
+        { "mile": 5.2, "elevationFt": 1500 },
+        { "mile": 6.2, "elevationFt": 1000 },
+        { "mile": 7.2, "elevationFt": 500 },
+        { "mile": 8.4, "elevationFt": 0, "label": "Return to trailhead" }
       ]
     },
     {
@@ -92,9 +121,13 @@
       "didYouKnow": "The Tejas Trail crosses the high-elevation \"bowl\" country of the range, a relict pocket of Douglas-fir and ponderosa forest left over from a cooler climate.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Pine Springs Trailhead" },
+        { "mile": 2.0, "elevationFt": 700 },
         { "mile": 4.0, "elevationFt": 1400 },
-        { "mile": 7.0, "elevationFt": 2000, "label": "Tejas Campsite" },
-        { "mile": 11.8, "elevationFt": 2000, "label": "Dog Canyon" }
+        { "mile": 6.0, "elevationFt": 1900 },
+        { "mile": 7.0, "elevationFt": 2000, "label": "Tejas Campsite / The Bowl" },
+        { "mile": 8.5, "elevationFt": 1500 },
+        { "mile": 10.0, "elevationFt": 900 },
+        { "mile": 11.8, "elevationFt": 500, "label": "Dog Canyon Trailhead" }
       ],
       "lastVerified": "2026-09-15"
     },
@@ -107,8 +140,12 @@
       "didYouKnow": "The Frijole Ranch buildings date to the 1870s-1880s and served as one of the first permanent homesteads in this stretch of the Guadalupe Mountains.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Frijole Ranch Trailhead" },
-        { "mile": 1.6, "elevationFt": 200 },
-        { "mile": 3.2, "elevationFt": 300, "label": "Loop Return" }
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 250 },
+        { "mile": 1.6, "elevationFt": 300, "label": "Loop midpoint" },
+        { "mile": 2.2, "elevationFt": 200 },
+        { "mile": 2.8, "elevationFt": 80 },
+        { "mile": 3.2, "elevationFt": 0, "label": "Loop Return" }
       ]
     }
   ],

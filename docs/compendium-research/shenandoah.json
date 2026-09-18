@@ -1,133 +1,421 @@
 {
   "parkId": "shenandoah",
   "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "Recreation.gov", "AllTrails", "Shenandoah National Park Trust"],
+  "sources": [
+    "NPS.gov",
+    "Recreation.gov",
+    "AllTrails",
+    "Shenandoah National Park Trust"
+  ],
   "trails": [
     {
       "id": "shenandoah-old-rag",
       "estimatedTime": "6-8 hrs",
       "bestSeason": "Mar-Nov",
-      "tags": ["Rock Scramble", "Permit Required", "Exposure"],
+      "tags": [
+        "Rock Scramble",
+        "Permit Required",
+        "Exposure"
+      ],
       "trailTip": "As of September 2026, per NPS.gov, a $2 day-use ticket (in addition to the park entrance pass) is required to hike Old Rag from March through November, sold on Recreation.gov starting 30 days and again 5 days before each date — buy one before you go, and note the main parking lot has reduced capacity in 2026 due to an ongoing improvement project.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "The famous rock scramble near the summit involves squeezing through narrow granite passages and is often considered the most strenuous popular day hike in the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 2.5, "elevationFt": 1200 },
-        { "mile": 3.5, "elevationFt": 2000, "label": "Rock scramble begins" },
-        { "mile": 4.7, "elevationFt": 2415, "label": "Summit" },
-        { "mile": 9.4, "elevationFt": 0, "label": "Trailhead (fire road return)" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 1200
+        },
+        {
+          "mile": 3.5,
+          "elevationFt": 2000,
+          "label": "Rock scramble begins"
+        },
+        {
+          "mile": 4.7,
+          "elevationFt": 2415,
+          "label": "Summit"
+        },
+        {
+          "mile": 6,
+          "elevationFt": 1600
+        },
+        {
+          "mile": 7.5,
+          "elevationFt": 800
+        },
+        {
+          "mile": 9.4,
+          "elevationFt": 0,
+          "label": "Trailhead (fire road return)"
+        }
       ]
     },
     {
       "id": "shenandoah-dark-hollow-falls",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Mar-Nov",
-      "tags": ["Waterfall", "Steep", "Rocky Footing"],
+      "tags": [
+        "Waterfall",
+        "Steep",
+        "Rocky Footing"
+      ],
       "trailTip": "The return climb is steeper than it looks on the way down — pace yourself and expect wet, slick rocks near the falls after rain.",
       "didYouKnow": "At just 1.4 miles round trip, this is the shortest route in the park to a named waterfall, making it one of its most popular short hikes.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.7, "elevationFt": 440, "label": "Dark Hollow Falls" },
-        { "mile": 1.4, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.35,
+          "elevationFt": 250
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 440,
+          "label": "Dark Hollow Falls"
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 320
+        },
+        {
+          "mile": 1.05,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-hawksbill",
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Apr-Nov",
-      "tags": ["Panoramic Views"],
+      "tags": [
+        "Panoramic Views"
+      ],
       "trailTip": "Hawksbill is the highest point in the park, so weather can shift fast — bring a layer even if it's warm at the trailhead.",
       "didYouKnow": "At 4,051 feet, Hawksbill is Shenandoah's highest summit and is home to a small remnant population of high-elevation red spruce.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.9, "elevationFt": 450 },
-        { "mile": 1.5, "elevationFt": 850, "label": "Hawksbill summit" },
-        { "mile": 2.9, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 300
+        },
+        {
+          "mile": 0.9,
+          "elevationFt": 600
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 750
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 850,
+          "label": "Hawksbill summit"
+        },
+        {
+          "mile": 1.9,
+          "elevationFt": 600
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": 300
+        },
+        {
+          "mile": 2.9,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-whiteoak-canyon",
       "estimatedTime": "6-7 hrs",
       "bestSeason": "Mar-Nov",
-      "tags": ["Waterfall", "Rocky Footing", "Stream Crossings"],
+      "tags": [
+        "Waterfall",
+        "Rocky Footing",
+        "Stream Crossings"
+      ],
       "trailTip": "This full Whiteoak Canyon–Cedar Run circuit is rocky with several stream crossings and is rated very strenuous by NPS — budget most of a day, and expect wet feet.",
       "didYouKnow": "The full loop passes seven named waterfalls in total — four on Whiteoak Run, three on Cedar Run — with the tallest dropping about 86 feet.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Hawksbill Gap Trailhead" },
-        { "mile": 1.5, "elevationFt": 500 },
-        { "mile": 2.3, "elevationFt": 1100, "label": "Upper Whiteoak falls" },
-        { "mile": 4.0, "elevationFt": 2000, "label": "Fire road junction" },
-        { "mile": 6.0, "elevationFt": 2794, "label": "Cedar Run falls" },
-        { "mile": 8.1, "elevationFt": 0, "label": "Loop closes at trailhead" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Hawksbill Gap Trailhead"
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 500
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": 1100,
+          "label": "Upper Whiteoak falls"
+        },
+        {
+          "mile": 4,
+          "elevationFt": 2000,
+          "label": "Fire road junction"
+        },
+        {
+          "mile": 6,
+          "elevationFt": 2794,
+          "label": "Cedar Run falls"
+        },
+        {
+          "mile": 8.1,
+          "elevationFt": 0,
+          "label": "Loop closes at trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-stony-man",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Apr-Nov",
-      "tags": ["Family Friendly", "Panoramic Views", "Peregrine Nesting Area"],
+      "tags": [
+        "Family Friendly",
+        "Panoramic Views",
+        "Peregrine Nesting Area"
+      ],
       "trailTip": "As of September 2026, per NPS.gov, some cliff faces near the summit close seasonally, typically May through July, to protect nesting peregrine falcons — stay on the marked trail and respect any posted closure.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "At 4,010 feet, Stony Man is the park's second-highest peak, and its profile from below resembles a reclining face.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 340, "label": "Stony Man summit" },
-        { "mile": 1.6, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 150
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 280
+        },
+        {
+          "mile": 0.8,
+          "elevationFt": 340,
+          "label": "Stony Man summit"
+        },
+        {
+          "mile": 1.1,
+          "elevationFt": 220
+        },
+        {
+          "mile": 1.4,
+          "elevationFt": 90
+        },
+        {
+          "mile": 1.6,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-bearfence-mountain",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Apr-Nov",
-      "tags": ["Rock Scramble", "Panoramic Views"],
+      "tags": [
+        "Rock Scramble",
+        "Panoramic Views"
+      ],
       "trailTip": "The rock scramble section requires hands-on climbing over exposed boulders — not recommended in wet or icy conditions.",
       "didYouKnow": "Bearfence is one of the few spots in the park with a true 360-degree summit view without any tree cover.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 300, "label": "Summit scramble" },
-        { "mile": 1.2, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 120
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 250
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 300,
+          "label": "Summit scramble"
+        },
+        {
+          "mile": 0.75,
+          "elevationFt": 180
+        },
+        {
+          "mile": 1,
+          "elevationFt": 70
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-rose-river-falls",
       "estimatedTime": "2-2.5 hrs",
       "bestSeason": "Mar-Nov",
-      "tags": ["Waterfall", "Historic"],
+      "tags": [
+        "Waterfall",
+        "Historic"
+      ],
       "trailTip": "The old mining ruins along the loop are fragile and partially collapsed — view them from the trail rather than climbing on the structures.",
       "didYouKnow": "The loop passes remnants of the Old Rose River copper mine, which operated briefly in the early 1900s.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.2, "elevationFt": 400, "label": "Rose River Falls" },
-        { "mile": 2.5, "elevationFt": 700, "label": "Mine ruins" },
-        { "mile": 4.0, "elevationFt": 830 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 1.2,
+          "elevationFt": 400,
+          "label": "Rose River Falls"
+        },
+        {
+          "mile": 2.5,
+          "elevationFt": 700,
+          "label": "Mine ruins"
+        },
+        {
+          "mile": 3.2,
+          "elevationFt": 830,
+          "label": "High point"
+        },
+        {
+          "mile": 3.6,
+          "elevationFt": 400
+        },
+        {
+          "mile": 4,
+          "elevationFt": 0,
+          "label": "Loop closes at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-marys-rock",
       "estimatedTime": "2.5-3 hrs",
       "bestSeason": "Apr-Nov",
-      "tags": ["Panoramic Views", "Steep"],
+      "tags": [
+        "Panoramic Views",
+        "Steep"
+      ],
       "trailTip": "The Meadow Spring approach is steeper but shorter than the alternate route from Skyline Drive's Thornton Gap — pace the climb and enjoy the summit views over Panorama.",
       "didYouKnow": "Mary's Rock overlooks Thornton Gap, one of only a few places where a highway (U.S. 211) cuts through the Blue Ridge inside the park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 1.5, "elevationFt": 600 },
-        { "mile": 2.5, "elevationFt": 1000 },
-        { "mile": 3.7, "elevationFt": 1210, "label": "Mary's Rock summit" }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 200
+        },
+        {
+          "mile": 1,
+          "elevationFt": 400
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": 700
+        },
+        {
+          "mile": 1.85,
+          "elevationFt": 1210,
+          "label": "Mary's Rock summit"
+        },
+        {
+          "mile": 2.3,
+          "elevationFt": 850
+        },
+        {
+          "mile": 2.8,
+          "elevationFt": 500
+        },
+        {
+          "mile": 3.3,
+          "elevationFt": 200
+        },
+        {
+          "mile": 3.7,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     },
     {
       "id": "shenandoah-blackrock-summit",
       "estimatedTime": "45 min - 1 hr",
       "bestSeason": "Apr-Nov",
-      "tags": ["Family Friendly", "Boulder Field"],
+      "tags": [
+        "Family Friendly",
+        "Boulder Field"
+      ],
       "trailTip": "The summit is a jumbled boulder field — wear sturdy shoes and watch your footing, especially with kids along.",
       "didYouKnow": "The boulders atop Blackrock are actually ancient quartzite talus, remnants of the erosion-resistant rock that caps many Blue Ridge summits.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.5, "elevationFt": 175, "label": "Blackrock summit" },
-        { "mile": 1.0, "elevationFt": 0 }
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 80
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 150
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 175,
+          "label": "Blackrock summit"
+        },
+        {
+          "mile": 0.7,
+          "elevationFt": 100
+        },
+        {
+          "mile": 0.85,
+          "elevationFt": 40
+        },
+        {
+          "mile": 1,
+          "elevationFt": 0,
+          "label": "Back at Trailhead"
+        }
       ]
     }
   ],
@@ -138,7 +426,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Apr-Nov",
       "whereToLook": "Big Meadows and forested trail corridors throughout the park",
-      "tags": ["Food-Conditioned Risk"],
+      "tags": [
+        "Food-Conditioned Risk"
+      ],
       "viewingTip": "As of September 2026, per NPS.gov, keep at least 150 feet (50 yards) from any bear, never approach for a photo, and store all food and scented items properly — bears here have one of the highest population densities in the East and some individuals near trails and campgrounds have become food-conditioned.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Shenandoah has one of the densest black bear populations in the eastern United States, despite the park's relatively small size."
@@ -149,7 +439,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Big Meadows and open fields along Skyline Drive",
-      "tags": ["Common"],
+      "tags": [
+        "Common"
+      ],
       "viewingTip": "In late spring, watch for fawns bedded alone in tall grass — this is normal behavior, not abandonment, so admire from a distance and never touch or move one.",
       "didYouKnow": "Big Meadows deer are famously unbothered by visitors, having grown accustomed to roadside traffic over decades."
     },
@@ -159,7 +451,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Year-round",
       "whereToLook": "Roadside meadows along Skyline Drive",
-      "tags": ["Common"],
+      "tags": [
+        "Common"
+      ],
       "viewingTip": "Slow down and watch from your car or the roadside — turkeys along Skyline Drive are used to traffic but can still startle if approached on foot.",
       "didYouKnow": "Wild turkeys can run up to 25 mph and fly in short, powerful bursts despite their heavy build."
     },
@@ -169,7 +463,10 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Feb-Aug",
       "whereToLook": "Cliffs near Old Rag's summit and Stony Man Mountain",
-      "tags": ["Cliff Nester", "Seasonal Closure"],
+      "tags": [
+        "Cliff Nester",
+        "Seasonal Closure"
+      ],
       "viewingTip": "As of September 2026, per NPS.gov, nesting cliffs near Old Rag and Stony Man close to visitor access seasonally, typically May through July — view falcons with binoculars from designated overlooks rather than the closed cliff faces.",
       "lastVerified": "2026-09-15",
       "didYouKnow": "Peregrines were extirpated from Shenandoah by the mid-20th century due to DDT and were successfully reestablished through a hacking (release) program starting in the 1980s."
@@ -180,7 +477,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Apr-Oct",
       "whereToLook": "Sunny rock outcrops on ridgelines like Old Rag and Bearfence",
-      "tags": ["Venomous"],
+      "tags": [
+        "Venomous"
+      ],
       "viewingTip": "If you see one basking, step back and give it a wide berth on the trail — it isn't aggressive if left alone, but never try to move or handle it.",
       "didYouKnow": "Timber rattlesnakes are ambush predators that may stay coiled in the same basking spot for days at a time."
     },
@@ -190,7 +489,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Forested hollows away from main trail corridors",
-      "tags": ["Elusive"],
+      "tags": [
+        "Elusive"
+      ],
       "viewingTip": "Sightings are uncommon and brief — if you spot one, stay still and watch quietly with binoculars rather than following it into the brush.",
       "didYouKnow": "Bobcats are largely solitary and territorial, marking their home range with scent rather than relying on sight of other bobcats."
     },
@@ -200,7 +501,10 @@
       "bestTimeOfDay": "Afternoon",
       "bestSeason": "Apr-Oct",
       "whereToLook": "Rocky ledges and leaf litter near trail edges",
-      "tags": ["Venomous", "Camouflaged"],
+      "tags": [
+        "Venomous",
+        "Camouflaged"
+      ],
       "viewingTip": "Copperheads blend in extremely well with leaf litter — watch your footing on rocky sections and give any snake you spot a wide berth rather than reaching near logs or rock crevices.",
       "didYouKnow": "A copperhead's banded pattern is often compared to a stack of Hershey's Kisses, which helps it disappear against dappled forest floor light."
     },
@@ -210,7 +514,9 @@
       "bestTimeOfDay": "Morning",
       "bestSeason": "Mar-May",
       "whereToLook": "Dense understory along forested trails",
-      "tags": ["Ground Nester"],
+      "tags": [
+        "Ground Nester"
+      ],
       "viewingTip": "If you hear a male's drumming display in spring, stay on the trail and enjoy the sound rather than searching the underbrush — grouse nest on the ground and a flushed hen may abandon eggs.",
       "didYouKnow": "A ruffed grouse's drumming sound is made by rapidly beating its wings against the air, not by striking anything — it can be felt as a low thump from a distance."
     },
@@ -220,7 +526,9 @@
       "bestTimeOfDay": "Dawn / Dusk",
       "bestSeason": "Year-round",
       "whereToLook": "Meadow edges and forest clearings along Skyline Drive",
-      "tags": ["Increasingly Common"],
+      "tags": [
+        "Increasingly Common"
+      ],
       "viewingTip": "Watch from a distance with binoculars and never use calls or bait to draw one closer — coyotes that lose their wariness of people are more likely to end up in conflict.",
       "didYouKnow": "Coyotes expanded into the Blue Ridge region over the last century and now fill part of the ecological role once played by wolves in the eastern U.S."
     }

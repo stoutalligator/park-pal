@@ -12,9 +12,13 @@
       "lastVerified": "2026-09-15",
       "didYouKnow": "The Great Kobuk Sand Dunes rise up to 100 feet and are the largest active dune field in the Arctic, formed from glacial outwash ground down after the last ice age.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 150, "label": "Riverbank landing" },
-        { "mile": 3, "elevationFt": 350 },
-        { "mile": 6, "elevationFt": 450, "label": "High dune crest" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank landing" },
+        { "mile": 1, "elevationFt": 100 },
+        { "mile": 2, "elevationFt": 220 },
+        { "mile": 3, "elevationFt": 300, "label": "High dune crest" },
+        { "mile": 4, "elevationFt": 220 },
+        { "mile": 5, "elevationFt": 100 },
+        { "mile": 6, "elevationFt": 0, "label": "Riverbank landing" }
       ]
     },
     {
@@ -25,9 +29,12 @@
       "trailTip": "This route follows the wild Salmon River corridor with no marked path or bridges — expect to ford channels, so scout crossings carefully and turn back if water is high or fast after rain.",
       "didYouKnow": "The Salmon River is a designated Wild River, kept free of development to preserve its natural character.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 400, "label": "Put-in point" },
-        { "mile": 5, "elevationFt": 500 },
-        { "mile": 10, "elevationFt": 600, "label": "Route endpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Put-in point" },
+        { "mile": 2, "elevationFt": 50 },
+        { "mile": 4, "elevationFt": 90 },
+        { "mile": 6, "elevationFt": 130 },
+        { "mile": 8, "elevationFt": 170 },
+        { "mile": 10, "elevationFt": 200, "label": "Route endpoint" }
       ]
     },
     {
@@ -38,9 +45,13 @@
       "trailTip": "Onion Portage is a traditional caribou-crossing site still used by local subsistence hunters during the fall migration — travel quietly, keep your distance from any hunting camps you encounter, and never interfere with subsistence activity.",
       "didYouKnow": "Archaeological digs at Onion Portage uncovered evidence of human occupation stretching back roughly 9,000 years, one of the most important archaeological sites in the Arctic.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Riverbank" },
-        { "mile": 1.5, "elevationFt": 350, "label": "Overlook bluff" },
-        { "mile": 3, "elevationFt": 400, "label": "Route endpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank" },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 1.0, "elevationFt": 110 },
+        { "mile": 1.5, "elevationFt": 150, "label": "Overlook bluff" },
+        { "mile": 2.0, "elevationFt": 110 },
+        { "mile": 2.5, "elevationFt": 60 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Riverbank" }
       ]
     },
     {
@@ -51,9 +62,15 @@
       "trailTip": "A shorter alternative to the Great Kobuk Sand Dunes for parties with less time or experience with cross-country dune travel, though the same navigation and self-rescue skills still apply.",
       "didYouKnow": "The Little Kobuk Dunes sit closer to the river than the Great Dunes, making them a more accessible sample of the park's Saharan-style dune fields.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 150, "label": "Riverbank" },
-        { "mile": 1, "elevationFt": 250 },
-        { "mile": 2, "elevationFt": 300, "label": "Dune crest" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank" },
+        { "mile": 0.25, "elevationFt": 50 },
+        { "mile": 0.5, "elevationFt": 90 },
+        { "mile": 0.75, "elevationFt": 130 },
+        { "mile": 1.0, "elevationFt": 150, "label": "Dune crest" },
+        { "mile": 1.25, "elevationFt": 130 },
+        { "mile": 1.5, "elevationFt": 90 },
+        { "mile": 1.75, "elevationFt": 50 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Riverbank" }
       ]
     },
     {
@@ -64,9 +81,15 @@
       "trailTip": "This tundra-and-boreal-forest route has no cairns or markers of any kind — carry a topographic map and GPS, and expect slow, tussock-heavy walking that takes far longer than the mileage suggests.",
       "didYouKnow": "Boreal forest here grows right up against Arctic tundra, making Kavet Creek a good place to see the transition between the two biomes in a single walk.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Riverbank" },
-        { "mile": 2, "elevationFt": 400 },
-        { "mile": 4, "elevationFt": 500, "label": "Route endpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank" },
+        { "mile": 0.5, "elevationFt": 60 },
+        { "mile": 1.0, "elevationFt": 110 },
+        { "mile": 1.5, "elevationFt": 160 },
+        { "mile": 2.0, "elevationFt": 200, "label": "Turnaround point" },
+        { "mile": 2.5, "elevationFt": 160 },
+        { "mile": 3.0, "elevationFt": 110 },
+        { "mile": 3.5, "elevationFt": 60 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Riverbank" }
       ]
     },
     {
@@ -77,9 +100,15 @@
       "trailTip": "The climb to Tagraq Hill is unmarked and steeper than the mileage implies — budget extra time for route-finding through brush on the lower slopes before the terrain opens up near the top.",
       "didYouKnow": "From the summit, hikers get one of the only elevated views of the Great Kobuk Sand Dunes against the surrounding boreal forest and river valley.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 250, "label": "Riverbank" },
-        { "mile": 2, "elevationFt": 500 },
-        { "mile": 4, "elevationFt": 750, "label": "Tagraq Hill summit" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank" },
+        { "mile": 0.5, "elevationFt": 150 },
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 1.5, "elevationFt": 420 },
+        { "mile": 2.0, "elevationFt": 500, "label": "Tagraq Hill summit" },
+        { "mile": 2.5, "elevationFt": 420 },
+        { "mile": 3.0, "elevationFt": 300 },
+        { "mile": 3.5, "elevationFt": 150 },
+        { "mile": 4.0, "elevationFt": 0, "label": "Riverbank" }
       ]
     },
     {
@@ -90,9 +119,12 @@
       "trailTip": "This remote tributary route requires wading and route-finding through braided channels with no trail tread — a satellite communicator is strongly recommended since this area sees very few other visitors.",
       "didYouKnow": "The Hunt River drains into the Kobuk River, and its valley is one of the quietest, least-visited corners of an already remote park.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 300, "label": "Put-in point" },
-        { "mile": 4, "elevationFt": 400 },
-        { "mile": 8, "elevationFt": 500, "label": "Route endpoint" }
+        { "mile": 0, "elevationFt": 0, "label": "Put-in point" },
+        { "mile": 1.5, "elevationFt": 60 },
+        { "mile": 3.0, "elevationFt": 110 },
+        { "mile": 4.5, "elevationFt": 150 },
+        { "mile": 6.0, "elevationFt": 180 },
+        { "mile": 8.0, "elevationFt": 200, "label": "Route endpoint" }
       ]
     },
     {
@@ -103,9 +135,15 @@
       "trailTip": "This overlook route crosses open tundra with no path to follow — tussocks and wet ground slow travel considerably, so plan for a much slower pace than the same mileage on a maintained trail.",
       "didYouKnow": "The view from this route takes in the wide, braided Kobuk River valley, a landscape shaped by thousands of years of seasonal flooding.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 200, "label": "Riverbank" },
-        { "mile": 2.5, "elevationFt": 400 },
-        { "mile": 5, "elevationFt": 600, "label": "Overlook" }
+        { "mile": 0, "elevationFt": 0, "label": "Riverbank" },
+        { "mile": 0.5, "elevationFt": 120 },
+        { "mile": 1.0, "elevationFt": 220 },
+        { "mile": 1.75, "elevationFt": 320 },
+        { "mile": 2.5, "elevationFt": 400, "label": "Overlook" },
+        { "mile": 3.25, "elevationFt": 320 },
+        { "mile": 4.0, "elevationFt": 220 },
+        { "mile": 4.5, "elevationFt": 120 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Riverbank" }
       ]
     }
   ],

@@ -5,8 +5,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
-import { ALL_TRAILS } from '@/data/trails';
-import { TRAIL_DETAILS } from '@/data/trailDetails';
 import { TrailDifficulty } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 import ElevationProfileChart from '@/components/ElevationProfileChart';
@@ -58,11 +56,11 @@ function CompletionToggle({ completed, onToggle }: { completed: boolean; onToggl
 
 export default function TrailDetailScreen({ route, navigation }: Props) {
   const { trailId } = route.params;
-  const { parks, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
+  const { parks, trails, trailDetails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
   const units = userProfile.units;
 
-  const trail = ALL_TRAILS.find((t) => t.id === trailId);
-  const detail = TRAIL_DETAILS[trailId];
+  const trail = trails.find((t) => t.id === trailId);
+  const detail = trailDetails[trailId];
   const park = trail ? parks.find((p) => p.id === trail.parkId) : undefined;
 
   if (!trail) {

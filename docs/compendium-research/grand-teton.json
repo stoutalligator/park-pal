@@ -12,9 +12,12 @@
       "didYouKnow": "Jenny Lake was carved by a glacier and is named for a Shoshone woman who helped guide some of the first American survey expeditions through the Tetons in the 1870s.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Trailhead" },
-        { "mile": 2.5, "elevationFt": 100 },
-        { "mile": 5.0, "elevationFt": 180, "label": "String Lake junction" },
-        { "mile": 7.1, "elevationFt": 200 }
+        { "mile": 1.8, "elevationFt": 80 },
+        { "mile": 3.5, "elevationFt": 150 },
+        { "mile": 5.0, "elevationFt": 200, "label": "String Lake junction" },
+        { "mile": 6.0, "elevationFt": 120 },
+        { "mile": 6.6, "elevationFt": 50 },
+        { "mile": 7.1, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -26,9 +29,12 @@
       "didYouKnow": "Inspiration Point sits roughly 400 feet above Jenny Lake and offers one of the few spots in the park where you can see both the lake and the sheer granite face of the Cathedral Group at once.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
-        { "mile": 0.5, "elevationFt": 150, "label": "Hidden Falls" },
-        { "mile": 1.0, "elevationFt": 420 },
-        { "mile": 2.0, "elevationFt": 550, "label": "Inspiration Point" }
+        { "mile": 0.3, "elevationFt": 150, "label": "Hidden Falls" },
+        { "mile": 0.6, "elevationFt": 350 },
+        { "mile": 1.0, "elevationFt": 550, "label": "Inspiration Point (turnaround)" },
+        { "mile": 1.4, "elevationFt": 350 },
+        { "mile": 1.7, "elevationFt": 150 },
+        { "mile": 2.0, "elevationFt": 0, "label": "Back at boat dock" }
       ]
     },
     {
@@ -40,8 +46,12 @@
       "didYouKnow": "Much of the forest along this trail regrew after the 1985 Beaver Creek Fire, and the young lodgepole pines you walk through are a textbook example of how the species depends on fire to release seeds from its cones.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Taggart Lake Trailhead" },
-        { "mile": 1.5, "elevationFt": 250 },
-        { "mile": 3.0, "elevationFt": 400, "label": "Taggart Lake" }
+        { "mile": 0.5, "elevationFt": 100 },
+        { "mile": 1.0, "elevationFt": 250 },
+        { "mile": 1.5, "elevationFt": 400, "label": "Taggart Lake (turnaround)" },
+        { "mile": 2.0, "elevationFt": 250 },
+        { "mile": 2.5, "elevationFt": 100 },
+        { "mile": 3.0, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -53,9 +63,12 @@
       "didYouKnow": "The canyon splits at its head into the North and South Forks, framing Grand Teton on one side and the remote backcountry of Lake Solitude and Hurricane Pass on the other.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
-        { "mile": 2.0, "elevationFt": 550, "label": "Inspiration Point" },
-        { "mile": 5.0, "elevationFt": 900 },
-        { "mile": 9.0, "elevationFt": 1100, "label": "Cascade Canyon Forks" }
+        { "mile": 1.0, "elevationFt": 550, "label": "Inspiration Point" },
+        { "mile": 2.5, "elevationFt": 900 },
+        { "mile": 4.5, "elevationFt": 1100, "label": "Cascade Canyon Forks (turnaround)" },
+        { "mile": 6.0, "elevationFt": 900 },
+        { "mile": 7.5, "elevationFt": 550 },
+        { "mile": 9.0, "elevationFt": 0, "label": "Back at boat dock" }
       ]
     },
     {
@@ -67,8 +80,11 @@
       "didYouKnow": "String Lake is unusually shallow and slow-moving because it is really a wide, calm channel connecting Jenny Lake and Leigh Lake rather than a lake with its own separate basin.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "String Lake Trailhead" },
+        { "mile": 0.8, "elevationFt": 60 },
         { "mile": 1.7, "elevationFt": 100 },
-        { "mile": 3.4, "elevationFt": 150 }
+        { "mile": 2.4, "elevationFt": 150, "label": "Far shore" },
+        { "mile": 2.9, "elevationFt": 80 },
+        { "mile": 3.4, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -81,9 +97,14 @@
       "didYouKnow": "Lake Solitude sits in a glacial cirque at nearly 9,000 feet and is often still partly frozen well into summer, feeding the North Fork of Cascade Canyon below it.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Jenny Lake Boat Dock" },
-        { "mile": 9.0, "elevationFt": 1100, "label": "Cascade Canyon Forks" },
-        { "mile": 13.0, "elevationFt": 2100 },
-        { "mile": 15.0, "elevationFt": 2500, "label": "Lake Solitude" }
+        { "mile": 1.0, "elevationFt": 550, "label": "Inspiration Point" },
+        { "mile": 4.5, "elevationFt": 1100, "label": "Cascade Canyon Forks" },
+        { "mile": 6.5, "elevationFt": 2000 },
+        { "mile": 7.5, "elevationFt": 2500, "label": "Lake Solitude (turnaround)" },
+        { "mile": 9.0, "elevationFt": 2000 },
+        { "mile": 11.0, "elevationFt": 1100 },
+        { "mile": 13.5, "elevationFt": 550 },
+        { "mile": 15.0, "elevationFt": 0, "label": "Back at boat dock" }
       ]
     },
     {
@@ -96,9 +117,14 @@
       "didYouKnow": "Despite its ominous name, Death Canyon's origin story is uncertain — the most common account traces it to an 1899 survey party member who went missing near the canyon and was never found.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Death Canyon Trailhead" },
-        { "mile": 2.0, "elevationFt": 500 },
-        { "mile": 4.3, "elevationFt": 1100, "label": "Patrol Cabin" },
-        { "mile": 8.6, "elevationFt": 1700 }
+        { "mile": 1.0, "elevationFt": 300 },
+        { "mile": 2.4, "elevationFt": 1100, "label": "Patrol Cabin" },
+        { "mile": 3.4, "elevationFt": 1450 },
+        { "mile": 4.3, "elevationFt": 1700, "label": "Upper Death Canyon (turnaround)" },
+        { "mile": 5.2, "elevationFt": 1450 },
+        { "mile": 6.2, "elevationFt": 1100 },
+        { "mile": 7.6, "elevationFt": 500 },
+        { "mile": 8.6, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -110,8 +136,12 @@
       "didYouKnow": "Leigh Lake is named for Beaver Dick Leigh, a mountain man and guide whose wife Jenny — for whom neighboring Jenny Lake is named — died along with their children in an 1876 smallpox outbreak.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Leigh Lake Trailhead" },
-        { "mile": 2.0, "elevationFt": 30 },
-        { "mile": 3.7, "elevationFt": 50 }
+        { "mile": 0.5, "elevationFt": 10 },
+        { "mile": 1.0, "elevationFt": 25 },
+        { "mile": 1.85, "elevationFt": 50, "label": "Leigh Lake shoreline (turnaround)" },
+        { "mile": 2.6, "elevationFt": 25 },
+        { "mile": 3.2, "elevationFt": 10 },
+        { "mile": 3.7, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     },
     {
@@ -123,9 +153,14 @@
       "didYouKnow": "At just over 10,700 feet, Static Peak Divide is the highest point reached by any maintained trail in Grand Teton National Park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Death Canyon Trailhead" },
-        { "mile": 4.0, "elevationFt": 1700 },
-        { "mile": 8.0, "elevationFt": 3800 },
-        { "mile": 15.5, "elevationFt": 5200, "label": "Static Peak Divide" }
+        { "mile": 2.4, "elevationFt": 1100, "label": "Patrol Cabin" },
+        { "mile": 4.0, "elevationFt": 2400 },
+        { "mile": 6.0, "elevationFt": 3800 },
+        { "mile": 7.75, "elevationFt": 5200, "label": "Static Peak Divide (turnaround)" },
+        { "mile": 9.5, "elevationFt": 3800 },
+        { "mile": 11.5, "elevationFt": 2400 },
+        { "mile": 13.5, "elevationFt": 1100 },
+        { "mile": 15.5, "elevationFt": 0, "label": "Back at trailhead" }
       ]
     }
   ],
