@@ -55,6 +55,7 @@ export type ProfileStackParamList = {
   Stats: undefined;
   Wishlist: undefined;
   PhotoAlbum: undefined;
+  TripPhotoAlbum: { tripId: string };
   Settings: undefined;
   EditProfile: undefined;
   EditGoal: undefined;
