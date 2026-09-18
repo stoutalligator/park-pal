@@ -192,7 +192,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
                   key={trip.id}
                   trip={trip}
                   onPress={() =>
-                    (navigation as any).navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })
+                    (navigation as any).navigate('TripDetail', { tripId: trip.id })
                   }
                 />
               ))}
@@ -206,20 +206,14 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
         <PrimaryButton
           label={park.status === 'visited' ? 'LOG ANOTHER TRIP' : 'LOG A TRIP'}
           onPress={() =>
-            (navigation as any).navigate('LogTrip', {
-              screen: 'LogTripForm',
-              params: { parkId: park.id, initialTripType: 'logged' },
-            })
+            (navigation as any).navigate('LogTripForm', { parkId: park.id, initialTripType: 'logged' })
           }
           style={styles.ctaBtn}
         />
         <SecondaryButton
           label="PLAN A TRIP"
           onPress={() =>
-            (navigation as any).navigate('LogTrip', {
-              screen: 'LogTripForm',
-              params: { parkId: park.id, initialTripType: 'planned' },
-            })
+            (navigation as any).navigate('LogTripForm', { parkId: park.id, initialTripType: 'planned' })
           }
           style={styles.ctaBtn}
         />

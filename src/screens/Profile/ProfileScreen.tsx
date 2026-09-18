@@ -169,7 +169,7 @@ export default function ProfileScreen() {
               <TripCard
                 key={trip.id}
                 trip={trip}
-                onPress={() => navigation.navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })}
+                onPress={() => navigation.navigate('TripDetail', { tripId: trip.id })}
               />
             ))
           ) : (
@@ -192,7 +192,7 @@ export default function ProfileScreen() {
               <TripCard
                 key={trip.id}
                 trip={trip}
-                onPress={() => navigation.navigate('TripsTab', { screen: 'TripDetail', params: { tripId: trip.id } })}
+                onPress={() => navigation.navigate('TripDetail', { tripId: trip.id })}
               />
             ))
           ) : (

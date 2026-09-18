@@ -58,6 +58,8 @@ function HomeStackNav() {
       <HomeStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
       <HomeStack.Screen name="TrailDetail" component={TrailDetailScreen} />
       <HomeStack.Screen name="AnimalDetail" component={AnimalDetailScreen} />
+      <HomeStack.Screen name="TripDetail" component={TripDetailScreen} />
+      <HomeStack.Screen name="LogTripForm" component={LogTripScreen} />
     </HomeStack.Navigator>
   );
 }
@@ -71,6 +73,8 @@ function ParksStackNav() {
       <ParksStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
       <ParksStack.Screen name="TrailDetail" component={TrailDetailScreen} />
       <ParksStack.Screen name="AnimalDetail" component={AnimalDetailScreen} />
+      <ParksStack.Screen name="TripDetail" component={TripDetailScreen} />
+      <ParksStack.Screen name="LogTripForm" component={LogTripScreen} />
     </ParksStack.Navigator>
   );
 }
@@ -89,6 +93,8 @@ function TripsStackNav() {
     <TripsStack.Navigator screenOptions={{ headerShown: false }}>
       <TripsStack.Screen name="Trips" component={TripsScreen} />
       <TripsStack.Screen name="TripDetail" component={TripDetailScreen} />
+      <TripsStack.Screen name="TripPhotoAlbum" component={TripPhotoAlbumScreen} />
+      <TripsStack.Screen name="LogTripForm" component={LogTripScreen} />
     </TripsStack.Navigator>
   );
 }
@@ -103,6 +109,12 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Wishlist" component={WishlistScreen} />
       <ProfileStack.Screen name="PhotoAlbum" component={PhotoAlbumScreen} />
       <ProfileStack.Screen name="TripPhotoAlbum" component={TripPhotoAlbumScreen} />
+      <ProfileStack.Screen name="TripDetail" component={TripDetailScreen} />
+      <ProfileStack.Screen name="ParkDetail" component={ParkDetailScreen} />
+      <ProfileStack.Screen name="ParkTrails" component={ParkTrailsScreen} />
+      <ProfileStack.Screen name="ParkAnimals" component={ParkAnimalsScreen} />
+      <ProfileStack.Screen name="TrailDetail" component={TrailDetailScreen} />
+      <ProfileStack.Screen name="AnimalDetail" component={AnimalDetailScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
       <ProfileStack.Screen name="EditProfile" component={EditProfileScreen} />
       <ProfileStack.Screen name="EditGoal" component={EditGoalScreen} />

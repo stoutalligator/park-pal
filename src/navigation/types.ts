@@ -15,16 +15,24 @@ export type MainTabParamList = {
   ProfileTab: undefined;
 };
 
+export type LogTripFormParams = {
+  parkId?: string;
+  tripId?: string;
+  completeTripId?: string;
+  initialTripType?: TripType;
+} | undefined;
+
 export type LogTripStackParamList = {
   TripChooser: undefined;
-  LogTripForm: {
-    parkId?: string;
-    tripId?: string;
-    completeTripId?: string;
-    initialTripType?: TripType;
-  } | undefined;
+  LogTripForm: LogTripFormParams;
 };
 
+// ParkDetail and its children, plus TripDetail/LogTripForm, are each
+// registered in every tab whose screens can link to them (mirroring the
+// existing ParkDetail duplication between Home/Parks below) so a link from
+// any tab pushes onto that tab's OWN stack rather than jumping into another
+// tab's separate history — otherwise that other tab's back button pops
+// through its own history instead of returning to where the user came from.
 export type HomeStackParamList = {
   Home: undefined;
   ParkDetail: { parkId: string };
@@ -32,6 +40,8 @@ export type HomeStackParamList = {
   ParkAnimals: { parkId: string };
   TrailDetail: { trailId: string };
   AnimalDetail: { animalId: string };
+  TripDetail: { tripId: string };
+  LogTripForm: LogTripFormParams;
 };
 
 export type ParksStackParamList = {
@@ -41,11 +51,15 @@ export type ParksStackParamList = {
   ParkAnimals: { parkId: string };
   TrailDetail: { trailId: string };
   AnimalDetail: { animalId: string };
+  TripDetail: { tripId: string };
+  LogTripForm: LogTripFormParams;
 };
 
 export type TripsStackParamList = {
   Trips: undefined;
   TripDetail: { tripId: string };
+  TripPhotoAlbum: { tripId: string };
+  LogTripForm: LogTripFormParams;
 };
 
 export type ProfileStackParamList = {
@@ -56,6 +70,12 @@ export type ProfileStackParamList = {
   Wishlist: undefined;
   PhotoAlbum: undefined;
   TripPhotoAlbum: { tripId: string };
+  TripDetail: { tripId: string };
+  ParkDetail: { parkId: string };
+  ParkTrails: { parkId: string };
+  ParkAnimals: { parkId: string };
+  TrailDetail: { trailId: string };
+  AnimalDetail: { animalId: string };
   Settings: undefined;
   EditProfile: undefined;
   EditGoal: undefined;

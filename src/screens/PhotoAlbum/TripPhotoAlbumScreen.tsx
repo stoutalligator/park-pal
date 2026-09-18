@@ -110,7 +110,7 @@ export default function TripPhotoAlbumScreen({ route, navigation }: Props) {
 
       <TouchableOpacity
         style={styles.viewTripLink}
-        onPress={() => navigation.navigate('TripsTab' as any, { screen: 'TripDetail', params: { tripId } })}
+        onPress={() => (navigation as any).navigate('TripDetail', { tripId })}
       >
         <Text style={styles.viewTripLinkText}>View Trip Details</Text>
       </TouchableOpacity>

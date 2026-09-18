@@ -146,7 +146,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             {!pending && (
               <TouchableOpacity
                 style={styles.heroActionBtn}
-                onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { tripId: trip.id } })}
+                onPress={() => (navigation as any).navigate('LogTripForm', { tripId: trip.id })}
               >
                 <EditIcon />
               </TouchableOpacity>
@@ -167,7 +167,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
               <Text style={styles.plannedDaysUntil}>{daysUntilLabel(trip.startDate)}</Text>
               <PrimaryButton
                 label="MARK AS COMPLETED"
-                onPress={() => (navigation as any).navigate('LogTrip', { screen: 'LogTripForm', params: { completeTripId: trip.id } })}
+                onPress={() => (navigation as any).navigate('LogTripForm', { completeTripId: trip.id })}
               />
             </View>
           )}
@@ -206,7 +206,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
                   <TouchableOpacity
                     key={uri}
                     activeOpacity={0.85}
-                    onPress={() => (navigation as any).navigate('ProfileTab', { screen: 'TripPhotoAlbum', params: { tripId: trip.id } })}
+                    onPress={() => (navigation as any).navigate('TripPhotoAlbum', { tripId: trip.id })}
                   >
                     <Polaroid uri={uri} size={PHOTO_SIZE} variant="stack" tapeColor={tapeColorForIndex(i)} rotate={i % 2 === 0 ? -4 : 4} />
                   </TouchableOpacity>
