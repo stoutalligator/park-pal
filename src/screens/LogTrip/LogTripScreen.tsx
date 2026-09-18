@@ -879,6 +879,7 @@ export default function LogTripScreen() {
   const [showParkPicker, setShowParkPicker] = useState(false);
   const [photos, setPhotos] = useState<string[]>(editingTrip?.photos ?? []);
   const [rating, setRating] = useState<number>(editingTrip?.rating ?? completingTrip?.rating ?? 0);
+  const [saving, setSaving] = useState(false);
   // Step 1 ("details") collects everything trip-wide — park, dates, notes,
   // photos, rating. Step 2 ("days") is the per-day pager. Splitting the form
   // into these two steps (rather than one long scroll of stacked
@@ -1011,39 +1012,65 @@ export default function LogTripScreen() {
     });
 
   const handleSave = async () => {
+    if (saving) return;
     if (!selectedParkId || !startDate) {
       Alert.alert('Missing info', 'Please select a park and start date.');
       return;
     }
 
     const days = buildDays();
+    setSaving(true);
+    try {
+      if (mode === 'complete' && completingTrip) {
+        const saved = await completeTrip({
+          ...completingTrip,
+          parkId: selectedParkId,
+          startDate,
+          endDate: endDate || startDate,
+          activities: [],
+          notes,
+          photos,
+          wildlifeSightings: [],
+          trailsHiked: [],
+          milesHiked: undefined,
+          elevationGainFt: undefined,
+          rating: rating || undefined,
+          days,
+        });
+        // A failed save has already shown its own error toast; stay on the
+        // form so nothing the user typed is lost.
+        if (!saved) return;
+        showToast('Trip completed! Your passport is growing.', 'success');
+        (navigation as any).navigate('TripsTab', { screen: 'Trips' });
+        return;
+      }
 
-    if (mode === 'complete' && completingTrip) {
-      await completeTrip({
-        ...completingTrip,
+      if (editingTrip) {
+        const saved = await updateTrip({
+          ...editingTrip,
+          tripType: mode === 'plan' ? 'planned' : 'logged',
+          parkId: selectedParkId,
+          startDate,
+          endDate: endDate || startDate,
+          activities: [],
+          notes,
+          photos,
+          wildlifeSightings: [],
+          trailsHiked: [],
+          milesHiked: undefined,
+          elevationGainFt: undefined,
+          rating: rating || undefined,
+          days,
+        });
+        if (!saved) return;
+        showToast('Trip updated! Your changes have been saved.', 'success');
+        (navigation as any).navigate('TripsTab', { screen: 'Trips' });
+        return;
+      }
+
+      await logTrip({
         parkId: selectedParkId,
-        startDate,
-        endDate: endDate || startDate,
-        activities: [],
-        notes,
-        photos,
-        wildlifeSightings: [],
-        trailsHiked: [],
-        milesHiked: undefined,
-        elevationGainFt: undefined,
-        rating: rating || undefined,
-        days,
-      });
-      showToast('Trip completed! Your passport is growing.', 'success');
-      (navigation as any).navigate('TripsTab', { screen: 'Trips' });
-      return;
-    }
-
-    if (editingTrip) {
-      await updateTrip({
-        ...editingTrip,
         tripType: mode === 'plan' ? 'planned' : 'logged',
-        parkId: selectedParkId,
         startDate,
         endDate: endDate || startDate,
         activities: [],
@@ -1051,37 +1078,20 @@ export default function LogTripScreen() {
         photos,
         wildlifeSightings: [],
         trailsHiked: [],
-        milesHiked: undefined,
-        elevationGainFt: undefined,
         rating: rating || undefined,
         days,
       });
-      showToast('Trip updated! Your changes have been saved.', 'success');
+      // Alert.alert is a no-op on web (same limitation worked around in
+      // SettingsScreen), so success feedback goes through the cross-platform
+      // toast instead — and unlike editing/completing a trip above, saving a
+      // brand-new one used to just reset the form in place with nothing after
+      // it, leaving the user stranded on a blank form instead of seeing where
+      // the trip landed.
+      showToast(mode === 'plan' ? 'Trip planned! We’ll be ready when you are.' : 'Adventure saved! Your passport is growing.', 'success');
       (navigation as any).navigate('TripsTab', { screen: 'Trips' });
-      return;
+    } finally {
+      setSaving(false);
     }
-
-    await logTrip({
-      parkId: selectedParkId,
-      tripType: mode === 'plan' ? 'planned' : 'logged',
-      startDate,
-      endDate: endDate || startDate,
-      activities: [],
-      notes,
-      photos,
-      wildlifeSightings: [],
-      trailsHiked: [],
-      rating: rating || undefined,
-      days,
-    });
-    // Alert.alert is a no-op on web (same limitation worked around in
-    // SettingsScreen), so success feedback goes through the cross-platform
-    // toast instead — and unlike editing/completing a trip above, saving a
-    // brand-new one used to just reset the form in place with nothing after
-    // it, leaving the user stranded on a blank form instead of seeing where
-    // the trip landed.
-    showToast(mode === 'plan' ? 'Trip planned! We’ll be ready when you are.' : 'Adventure saved! Your passport is growing.', 'success');
-    (navigation as any).navigate('TripsTab', { screen: 'Trips' });
   };
 
   return (
@@ -1281,6 +1291,7 @@ export default function LogTripScreen() {
             label={mode === 'complete' ? 'MARK AS COMPLETED' : mode === 'plan' ? 'SAVE PLAN' : editingTrip ? 'SAVE CHANGES' : 'SAVE TRIP'}
             icon={<TreeIcon color={colors.textInverse} />}
             onPress={handleSave}
+            loading={saving}
             style={styles.saveBtn}
           />
         </View>

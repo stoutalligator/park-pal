@@ -10,6 +10,7 @@ import { AppProvider } from '@/context/AppContext';
 import RootNavigator from '@/navigation/RootNavigator';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { ToastHost } from '@/components/Toast';
+import SyncBanner from '@/components/SyncBanner';
 import { BadgeEarnedModalHost } from '@/components/BadgeEarnedModal';
 import { navigationRef } from '@/navigation/navigationRef';
 import { colors, radius, shadows } from '@/theme';
@@ -53,6 +54,7 @@ export default function App() {
             <NavigationContainer ref={navigationRef}>
               <RootNavigator />
             </NavigationContainer>
+            <SyncBanner />
             <ToastHost />
             <BadgeEarnedModalHost />
           </AppProvider>

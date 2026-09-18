@@ -238,6 +238,26 @@ export type ContentReportReason =
   | 'tip_wrong'
   | 'other';
 
+// Row shapes for the per-user trail-completion / animal-sighting tables, as
+// held in AppContext state and in the on-device snapshot cache.
+export interface TrailCompletionRow {
+  trail_id: string | null;
+  trip_id: string | null;
+  park_id: string;
+  name: string;
+  miles: number;
+  elevation_gain_ft: number;
+  day_number?: number | null;
+}
+
+export interface AnimalSightingRow {
+  animal_id: string | null;
+  trip_id: string | null;
+  park_id: string;
+  name: string;
+  day_number?: number | null;
+}
+
 export interface ContentReportInput {
   entryType: ContentEntryType;
   entryId: string;

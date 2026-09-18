@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, Image, ImageSourcePropType, StyleSheet, ViewStyle } from 'react-native';
+import { TouchableOpacity, Text, Image, ImageSourcePropType, StyleSheet, ViewStyle, ActivityIndicator } from 'react-native';
 import { colors, radius, spacing, typography } from '@/theme';
 
 interface Props {
@@ -8,17 +8,21 @@ interface Props {
   icon?: string | ImageSourcePropType | React.ReactElement;
   style?: ViewStyle;
   disabled?: boolean;
+  loading?: boolean;
 }
 
-export default function PrimaryButton({ label, onPress, icon, style, disabled }: Props) {
+export default function PrimaryButton({ label, onPress, icon, style, disabled, loading }: Props) {
+  const inactive = disabled || loading;
   return (
     <TouchableOpacity
       onPress={onPress}
-      disabled={disabled}
+      disabled={inactive}
       activeOpacity={0.82}
-      style={[styles.button, disabled && styles.disabled, style]}
+      style={[styles.button, disabled && styles.disabled, loading && styles.loading, style]}
     >
-      {typeof icon === 'string' ? (
+      {loading ? (
+        <ActivityIndicator size="small" color={colors.textInverse} />
+      ) : typeof icon === 'string' ? (
         <Text style={styles.icon}>{icon}</Text>
       ) : React.isValidElement(icon) ? (
         icon
@@ -43,6 +47,9 @@ const styles = StyleSheet.create({
   },
   disabled: {
     opacity: 0.5,
+  },
+  loading: {
+    opacity: 0.85,
   },
   icon: {
     fontSize: 16,

@@ -114,8 +114,8 @@ export default function TripDetailScreen({ route, navigation }: Props) {
   if (!trip || !park) return null;
 
   const planned = trip.tripType === 'planned';
-  // Editing or completing a trip that hasn't synced yet would try to update
-  // a row that doesn't exist server-side — hide those actions until it has.
+  // A trip saved on this device that hasn't reached the server yet can still
+  // be edited, completed or deleted — those changes just join what's waiting.
   const pending = isTripPending(trip.id);
 
   const confirmDelete = () => {
@@ -143,14 +143,12 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             <BackArrowIcon />
           </TouchableOpacity>
           <View style={[styles.heroActions, { top: insets.top + 16 }]}>
-            {!pending && (
-              <TouchableOpacity
-                style={styles.heroActionBtn}
-                onPress={() => (navigation as any).navigate('LogTripForm', { tripId: trip.id })}
-              >
-                <EditIcon />
-              </TouchableOpacity>
-            )}
+            <TouchableOpacity
+              style={styles.heroActionBtn}
+              onPress={() => (navigation as any).navigate('LogTripForm', { tripId: trip.id })}
+            >
+              <EditIcon />
+            </TouchableOpacity>
             <TouchableOpacity style={styles.heroActionBtn} onPress={confirmDelete}>
               <TrashIcon />
             </TouchableOpacity>
@@ -162,7 +160,7 @@ export default function TripDetailScreen({ route, navigation }: Props) {
           <Text style={styles.dates}>{formatDate(trip.startDate)} – {formatDate(trip.endDate)}</Text>
           {pending && <Text style={styles.pendingNote}>Saved on this device — will sync once you're back online.</Text>}
 
-          {planned && !pending && (
+          {planned && (
             <View style={styles.plannedBlock}>
               <Text style={styles.plannedDaysUntil}>{daysUntilLabel(trip.startDate)}</Text>
               <PrimaryButton

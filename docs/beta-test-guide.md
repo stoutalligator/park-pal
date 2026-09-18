@@ -73,10 +73,10 @@ This is the one we can't check ourselves — **if you've been to a park, please 
 ## 7. Connection and reliability
 
 - Turn on **airplane mode**, log a new trip, then turn it off. The trip should appear right away with a small cloud icon and sync on its own after you reconnect. Did it?
+- Still in airplane mode, try **editing a trip, deleting a trip, marking a trail complete, adding a park to your bucket list, changing your pal or background, and reporting a trail problem**. Each should work instantly, and a small "Offline" note should appear at the top. After you reconnect, do all of them sync, with a "Back online" message?
 - With no connection, can you still browse parks, trails, and animals?
-- Force-quit and reopen the app. Is everything still there?
-
-Not covered offline yet: editing or deleting a trip, marking trails complete, and bucket-list changes will show an error if you're offline. That's known — no need to report it.
+- **Force-quit and reopen the app while still offline.** Do your trips, visited parks, bucket list and profile all still show?
+- Anything that looks like it **undid itself** after reconnecting (a change reverting, a deleted trip coming back, something showing twice)? That's exactly what we want to hear about.
 
 ## 8. Account
 
@@ -88,7 +88,7 @@ Not covered offline yet: editing or deleting a trip, marking trails complete, an
 
 ## Known limitations (no need to report)
 
-- Offline support is limited to **creating new trips** (see section 7).
+- Photos on older trips may look blank when offline (their links expire after a week and refresh when you're back online).
 - Tapping **Back on the "+" Log a Trip chooser screen** may do nothing.
 - Some trail and permit details are **time-sensitive** and may lag reality — but do tell us when they're wrong.
 
