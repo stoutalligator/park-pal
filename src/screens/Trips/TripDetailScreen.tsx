@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path, Polygon } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -11,6 +11,7 @@ import { getParkScene } from '@/data/parkImages';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 import { parseLocalDate, daysUntilLabel } from '@/utils/dates';
 import PrimaryButton from '@/components/PrimaryButton';
+import Polaroid, { tapeColorForIndex } from '@/components/Polaroid';
 import {
   WeatherSunnyIcon,
   WeatherPartlyCloudyIcon,
@@ -22,6 +23,10 @@ import {
 import { WeatherType } from '@/types';
 
 type Props = NativeStackScreenProps<TripsStackParamList, 'TripDetail'>;
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const PHOTO_GAP = spacing.md;
+const PHOTO_SIZE = (SCREEN_WIDTH - spacing.xl * 2 - PHOTO_GAP * 2) / 3;
 
 function formatDate(d: string) {
   return parseLocalDate(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
@@ -191,8 +196,14 @@ export default function TripDetailScreen({ route, navigation }: Props) {
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Photos</Text>
               <View style={styles.photoGrid}>
-                {trip.photos.map((uri) => (
-                  <Image key={uri} source={{ uri }} style={styles.photoThumb} resizeMode="cover" />
+                {trip.photos.map((uri, i) => (
+                  <TouchableOpacity
+                    key={uri}
+                    activeOpacity={0.85}
+                    onPress={() => (navigation as any).navigate('ProfileTab', { screen: 'TripPhotoAlbum', params: { tripId: trip.id } })}
+                  >
+                    <Polaroid uri={uri} size={PHOTO_SIZE} variant="stack" tapeColor={tapeColorForIndex(i)} rotate={i % 2 === 0 ? -4 : 4} />
+                  </TouchableOpacity>
                 ))}
               </View>
             </View>
@@ -364,8 +375,7 @@ const styles = StyleSheet.create({
   dayWeatherLabel: { ...typography.caption, color: colors.textSecondary },
   journalCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, ...shadows.sm },
   journalText: { ...typography.body, color: colors.textPrimary, lineHeight: 22 },
-  photoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
-  photoThumb: { width: '31%', aspectRatio: 1, borderRadius: radius.md, backgroundColor: colors.surfaceWarm },
+  photoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: PHOTO_GAP, marginTop: spacing.md },
   statsRow: { flexDirection: 'row', gap: spacing.md, flexWrap: 'wrap' },
   statChip: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, alignItems: 'center', minWidth: 80, ...shadows.sm },
   statNum: { ...typography.h5, color: colors.textPrimary },
