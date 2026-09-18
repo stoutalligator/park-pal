@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -7,13 +7,13 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
-  Dimensions,
+  useWindowDimensions,
   NativeSyntheticEvent,
   NativeScrollEvent,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
-import { colors, spacing, radius, typography } from '@/theme';
+import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkById } from '@/data/parks';
 import { getParkImage } from '@/data/parkImages';
 import { formatDateRange } from '@/utils/dates';
@@ -22,27 +22,39 @@ import EmptyState from '@/components/EmptyState';
 import Polaroid, { tapeColorForIndex } from '@/components/Polaroid';
 import { Trip } from '@/types';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const PAGE_WIDTH = SCREEN_WIDTH - spacing.xl * 2;
-
 const COLUMNS = 2;
 const ROWS = 3;
 const TRIPS_PER_PAGE = COLUMNS * ROWS;
 const GRID_GAP = spacing.lg;
-const TILE_WIDTH = (PAGE_WIDTH - GRID_GAP * (COLUMNS - 1)) / COLUMNS;
-const STACK_SIZE = TILE_WIDTH * 0.82;
-const TILE_HEIGHT = STACK_SIZE * 1.3 + 40;
-const PAGE_HEIGHT = TILE_HEIGHT * ROWS + GRID_GAP * (ROWS - 1);
 
-// Back photos peek out from behind the front one, but must stay within the
-// tile's own bounds — otherwise, at wider (2-column) layouts, the left-leaning
-// photo bleeds past the tile edge into whatever sits next to it in the
-// horizontal scroll content (the previous album page, for a column-1 tile).
-const BACK_SIZE = STACK_SIZE * 0.9;
-const BACK_MARGIN = (TILE_WIDTH - BACK_SIZE) / 2;
-const BACK_SHIFT = BACK_MARGIN * 0.75;
-const BACK_LEFT_1 = BACK_MARGIN - BACK_SHIFT;
-const BACK_LEFT_2 = BACK_MARGIN + BACK_SHIFT;
+// Computed from the live window width (not a module-level Dimensions
+// snapshot, which is captured once at import time and can be stale) so the
+// grid always matches the screen it's actually rendered on.
+function useAlbumLayout(screenWidth: number) {
+  return useMemo(() => {
+    // The ScrollView and each page are full screen width — matching
+    // TripPhotoAlbumScreen's approach — with the xl inset applied as
+    // padding *inside* each page instead of shrinking-and-centering the
+    // ScrollView itself, which was landing short of the true screen width.
+    const contentWidth = screenWidth - spacing.xl * 2;
+    const tileWidth = (contentWidth - GRID_GAP * (COLUMNS - 1)) / COLUMNS;
+    // Deliberately conservative (not "as big as fits") so the back photos'
+    // peek — see backLeft1/2 below — always clears the tile edge with room
+    // to spare, rather than nearly touching it.
+    const stackSize = tileWidth * 0.72;
+    const tileHeight = stackSize * 1.3 + 40;
+    const pageHeight = tileHeight * ROWS + GRID_GAP * (ROWS - 1);
+    const backSize = stackSize * 0.88;
+    const backMargin = (tileWidth - backSize) / 2;
+    const backShift = backMargin * 0.7;
+    const backLeft1 = backMargin - backShift;
+    const backLeft2 = backMargin + backShift;
+    const parkBadgeSize = stackSize * 0.4;
+    return { tileWidth, stackSize, tileHeight, pageHeight, backSize, backLeft1, backLeft2, parkBadgeSize };
+  }, [screenWidth]);
+}
+
+type Layout = ReturnType<typeof useAlbumLayout>;
 
 function chunk<T>(items: T[], size: number): T[][] {
   const chunks: T[][] = [];
@@ -50,24 +62,27 @@ function chunk<T>(items: T[], size: number): T[][] {
   return chunks;
 }
 
-function PhotoStack({ trip, tapeColor }: { trip: Trip; tapeColor: string }) {
+function PhotoStack({ trip, tapeColor, layout }: { trip: Trip; tapeColor: string; layout: Layout }) {
   const backPhotos = trip.photos.slice(1, 3);
+  const { stackSize, backSize, backLeft1, backLeft2, parkBadgeSize } = layout;
 
   return (
-    <View style={styles.stackWrap}>
+    <View style={[styles.stackWrap, { height: stackSize * 1.3 }]}>
       {backPhotos.map((uri, i) => (
         <Polaroid
           key={uri}
           uri={uri}
-          size={BACK_SIZE}
+          size={backSize}
           variant="stack"
           rotate={i === 0 ? -12 : 10}
-          style={i === 0 ? styles.stackBackPhoto1 : styles.stackBackPhoto2}
+          style={{ position: 'absolute', left: i === 0 ? backLeft1 : backLeft2, top: stackSize * (i === 0 ? 0.1 : 0.12) }}
         />
       ))}
-      <Polaroid uri={trip.photos[0]} size={STACK_SIZE} variant="stack" tapeColor={tapeColor} rotate={-2} />
-      <View style={styles.parkBadge}>
-        <Image source={getParkImage(trip.parkId)} style={styles.parkBadgeImage} resizeMode="cover" />
+      <Polaroid uri={trip.photos[0]} size={stackSize} variant="stack" tapeColor={tapeColor} rotate={-2} />
+      <View style={[styles.parkBadgeShadow, { width: parkBadgeSize, height: parkBadgeSize, bottom: parkBadgeSize * 0.18, right: parkBadgeSize * 0.25 }]}>
+        <View style={styles.parkBadge}>
+          <Image source={getParkImage(trip.parkId)} style={styles.parkBadgeImage} resizeMode="cover" />
+        </View>
       </View>
       {trip.photos.length > 1 && (
         <View style={styles.countBadge}>
@@ -81,6 +96,8 @@ function PhotoStack({ trip, tapeColor }: { trip: Trip; tapeColor: string }) {
 export default function PhotoAlbumScreen() {
   const { trips } = useApp();
   const navigation = useNavigation<any>();
+  const { width: screenWidth } = useWindowDimensions();
+  const layout = useAlbumLayout(screenWidth);
   const [pageIndex, setPageIndex] = useState(0);
 
   // Oldest trip first — flips forward like a keepsake album filled in over time.
@@ -90,7 +107,7 @@ export default function PhotoAlbumScreen() {
   const pages = chunk(tripsWithPhotos, TRIPS_PER_PAGE);
 
   const handleScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
-    setPageIndex(Math.round(e.nativeEvent.contentOffset.x / PAGE_WIDTH));
+    setPageIndex(Math.round(e.nativeEvent.contentOffset.x / screenWidth));
   };
 
   if (tripsWithPhotos.length === 0) {
@@ -117,11 +134,10 @@ export default function PhotoAlbumScreen() {
         onMomentumScrollEnd={handleScroll}
         onScroll={handleScroll}
         scrollEventThrottle={32}
-        style={styles.pager}
-        contentContainerStyle={styles.pagerContent}
+        style={{ width: screenWidth }}
       >
         {pages.map((pageTrips, pageNum) => (
-          <View key={pageNum} style={styles.page}>
+          <View key={pageNum} style={[styles.page, { width: screenWidth, height: layout.pageHeight }]}>
             <View style={styles.grid}>
               {pageTrips.map((trip, i) => {
                 const park = getParkById(trip.parkId);
@@ -129,11 +145,11 @@ export default function PhotoAlbumScreen() {
                 return (
                   <TouchableOpacity
                     key={trip.id}
-                    style={styles.tile}
+                    style={[styles.tile, { width: layout.tileWidth, height: layout.tileHeight }]}
                     activeOpacity={0.85}
                     onPress={() => navigation.navigate('TripPhotoAlbum', { tripId: trip.id })}
                   >
-                    <PhotoStack trip={trip} tapeColor={tapeColorForIndex(globalIndex)} />
+                    <PhotoStack trip={trip} tapeColor={tapeColorForIndex(globalIndex)} layout={layout} />
                     <Text style={styles.parkName} numberOfLines={1}>{park?.name ?? 'Unknown Park'}</Text>
                     <Text style={styles.dateLabel} numberOfLines={1}>{formatDateRange(trip.startDate, trip.endDate)}</Text>
                   </TouchableOpacity>
@@ -158,40 +174,43 @@ export default function PhotoAlbumScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
 
-  pager: { flexGrow: 0, width: PAGE_WIDTH, alignSelf: 'center' },
-  pagerContent: { alignItems: 'flex-start' },
-  page: { width: PAGE_WIDTH, height: PAGE_HEIGHT, paddingTop: spacing.md },
+  page: { paddingTop: spacing.md, paddingHorizontal: spacing.xl },
 
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: GRID_GAP },
-  tile: { width: TILE_WIDTH, height: TILE_HEIGHT, alignItems: 'center' },
+  tile: { alignItems: 'center' },
 
   stackWrap: {
     width: '100%',
-    height: STACK_SIZE * 1.3,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.sm,
   },
-  stackBackPhoto1: { position: 'absolute', left: BACK_LEFT_1, top: STACK_SIZE * 0.1 },
-  stackBackPhoto2: { position: 'absolute', left: BACK_LEFT_2, top: STACK_SIZE * 0.12 },
 
-  parkBadge: {
+  // Sits fully on the polaroid's own white bottom strip rather than hanging
+  // off its rounded corner — overlapping that corner let the frame's drop
+  // shadow bleed around part of the ring, making it read as an uneven halo
+  // instead of a clean circle. Shadow and circular clip are split across two
+  // views since overflow:hidden (needed for the clip) would otherwise also
+  // clip the shadow itself on iOS.
+  parkBadgeShadow: {
     position: 'absolute',
-    bottom: -4,
-    right: TILE_WIDTH * 0.06,
-    width: 28,
-    height: 28,
     borderRadius: radius.full,
-    overflow: 'hidden',
-    borderWidth: 2,
+    ...shadows.sm,
+  },
+  parkBadge: {
+    width: '100%',
+    height: '100%',
+    borderRadius: radius.full,
+    borderWidth: 3,
     borderColor: colors.surface,
+    overflow: 'hidden',
   },
   parkBadgeImage: { width: '100%', height: '100%' },
 
   countBadge: {
     position: 'absolute',
     top: -2,
-    left: TILE_WIDTH * 0.06,
+    left: 6,
     minWidth: 20,
     height: 20,
     borderRadius: radius.full,

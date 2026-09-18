@@ -23,6 +23,7 @@ export default function Polaroid({ uri, size, tapeColor = colors.tan, rotate = 0
   const framePad = variant === 'stack' ? size * 0.05 : size * 0.045;
   const bottomStrip = variant === 'stack' ? size * 0.14 : size * 0.16;
   const tapeWidth = size * 0.42;
+  const tapeHeight = tapeWidth * 0.34;
 
   return (
     <View
@@ -38,19 +39,20 @@ export default function Polaroid({ uri, size, tapeColor = colors.tan, rotate = 0
         style,
       ]}
     >
+      <Image source={{ uri }} style={styles.photo} resizeMode="cover" />
       <View
         style={[
           styles.tape,
           {
             width: tapeWidth,
-            height: tapeWidth * 0.34,
+            height: tapeHeight,
+            top: -tapeHeight * 0.45,
             marginLeft: -tapeWidth / 2,
             backgroundColor: tapeColor,
             transform: [{ rotate: `${rotate < 0 ? 4 : -4}deg` }],
           },
         ]}
       />
-      <Image source={{ uri }} style={styles.photo} resizeMode="cover" />
     </View>
   );
 }
@@ -63,7 +65,6 @@ const styles = StyleSheet.create({
   },
   tape: {
     position: 'absolute',
-    top: -8,
     left: '50%',
     borderRadius: 2,
     opacity: 0.88,

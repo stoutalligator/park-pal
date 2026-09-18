@@ -251,6 +251,20 @@ Real Channel Island foxes (Urocyon littoralis) are notably smaller and grayer th
 
 > [shared style block from the Park Pals roster above] + A gray-and-tan Channel Island fox — grayer back, rusty-orange sides and legs, cream throat and belly, bushy dark-tipped tail, clearly different coloring from a standard orange fox. Standing or sitting beside a small coastal prop (a piece of driftwood, a tuft of coastal grass, or a small seashell) to tie it to a Channel Islands setting. Same big-eyed cute plush-toy proportions and line-weight style as the rest of the roster.
 
+### Puffin → `src/assets/badges/badge-acadia-puffin.png` and `src/assets/activities/pal-acadia-puffin.png`
+
+Unlocked by the `acadia-puffin` badge ("Puffin Pal") in `src/data/badges.ts` ("Spot the Atlantic Puffin at Acadia."). Unlike Channel Island Fox, neither the badge sticker nor the pal art exists yet — both need to be generated. There's no existing default `wildlife-viewing` overlap risk here since no other pal in the roster is a puffin, but the design should still read as a distinct "get" — a real Atlantic Puffin (Fratercula arctica), not a generic seabird — since the whole point of the badge is that specific species callout.
+
+Atlantic Puffins have a distinctive look worth calling out explicitly: black back/wings, white chest and face, a large triangular bill banded orange-yellow-blue-gray (their signature feature), bright orange legs and feet, and small dark eye patches that give them a slightly sad/serious expression even though the overall silhouette is round and comical — lean into that contrast for the cute plush-toy treatment.
+
+**Badge (sticker) →** `src/assets/badges/badge-acadia-puffin.png`
+
+> [badge base style block from the Badges section above] + Subject: an illustrated Atlantic Puffin perched on a rocky coastal outcrop, black back and wings, white chest, and its signature large triangular bill banded orange-yellow-blue-gray, bright orange feet visible on the rock.
+
+**Pal (activity avatar) →** `src/assets/activities/pal-acadia-puffin.png`
+
+> [shared style block from the Park Pals roster above] + A black-and-white Atlantic Puffin with its signature large triangular bill banded orange-yellow-blue-gray and bright orange legs and feet. Standing on a small rocky coastal ledge, wings slightly out to the sides as if balancing, small dark eye patches giving a serious little expression that contrasts with its round, cute plush-toy body. Same big-eyed cute proportions and line-weight style as the rest of the roster.
+
 ---
 
 ## App Icon, Splash & Adaptive Icon (moose face)

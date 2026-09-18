@@ -58,6 +58,12 @@ const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number; unloc
     source: require('@/assets/activities/pal-channel-islands-fox.png'),
     unlockedByBadgeId: 'channel-islands-fox',
   },
+  {
+    key: 'acadia-puffin',
+    label: 'Puffin Pal',
+    source: require('@/assets/activities/pal-acadia-puffin.png'),
+    unlockedByBadgeId: 'acadia-puffin',
+  },
 ];
 
 const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.source])) as Record<

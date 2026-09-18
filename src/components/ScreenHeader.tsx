@@ -24,7 +24,7 @@ export default function ScreenHeader({ title, onBack, right }: Props) {
         <BackArrowIcon />
       </TouchableOpacity>
       <Text style={styles.title} numberOfLines={1}>{title}</Text>
-      {right ?? <View style={styles.backBtn} />}
+      {right ?? <View style={styles.spacer} />}
     </View>
   );
 }
@@ -47,6 +47,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     ...shadows.sm,
+  },
+  // Balances the title's centering when there's no `right` action — same
+  // footprint as backBtn but invisible, so it doesn't read as a dead button.
+  spacer: {
+    width: 36,
+    height: 36,
   },
   title: { ...typography.h4, color: colors.textPrimary, flex: 1, textAlign: 'center' },
 });

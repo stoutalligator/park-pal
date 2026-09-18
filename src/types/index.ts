@@ -211,7 +211,8 @@ export type ProfileAvatar =
   | 'picnic'
   | 'rock-climbing'
   | 'winter-activity'
-  | 'channel-islands-fox';
+  | 'channel-islands-fox'
+  | 'acadia-puffin';
 
 export type Units = 'mi' | 'km';
 

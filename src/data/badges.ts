@@ -36,6 +36,7 @@ export const ALL_BADGES: Badge[] = [
 
   // Animal/trail specific — earned by spotting a specific animal or completing a specific trail
   { id: 'channel-islands-fox', name: 'Island Fox Friend', description: 'Spot the Island Fox at Channel Islands.', category: 'special', earned: false, progress: 0, goal: 1 },
+  { id: 'acadia-puffin', name: 'Puffin Pal', description: 'Spot the Atlantic Puffin at Acadia.', category: 'special', earned: false, progress: 0, goal: 1 },
   { id: 'near-death', name: 'Near Death', description: 'Complete the Angels Landing trail at Zion.', category: 'special', earned: false, progress: 0, goal: 1 },
 
   // Secret badges — placeholders to prove out the mechanic; description stays

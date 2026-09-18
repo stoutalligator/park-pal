@@ -31,6 +31,7 @@ const BADGE_IMAGES: Record<string, number> = {
   'elevation-30000': require('@/assets/badges/badge-elevation-30000.png'),
   'elevation-60000': require('@/assets/badges/badge-elevation-60000.png'),
   'channel-islands-fox': require('@/assets/badges/badge-channel-islands-fox.png'),
+  'acadia-puffin': require('@/assets/badges/badge-acadia-puffin.png'),
   'near-death': require('@/assets/badges/badge-near-death.png'),
   'night-owl': require('@/assets/badges/badge-night-owl.png'),
   'globe-trotter': require('@/assets/badges/badge-globe-trotter.png'),
