@@ -13,7 +13,7 @@ const js = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2020 },
 }).outputText;
 const core = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
-const { enqueueOp, isNetworkError, overlayTrips, overlayParkStatus, overlayTrailCompletions, overlayProfile } = core;
+const { enqueueOp, isNetworkError, overlayTrips, overlayParkStatus, overlayTrailCompletions, overlayProfile, describeOp } = core;
 
 let counter = 0;
 const meta = () => ({ id: `op-${++counter}`, createdAt: '2026-09-18T00:00:00.000Z' });
@@ -128,4 +128,15 @@ test('overlayProfile applies queued patches over the fetched profile', () => {
   const profile = { name: 'John', avatar: 'hiking', units: 'mi', onboardingComplete: true, profileBackground: 'forest' };
   const ops = enqueue([], { type: 'profile.patch', patch: { avatar: 'camping' } });
   assert.deepEqual(overlayProfile(profile, ops), { ...profile, avatar: 'camping' });
+});
+
+test('describeOp gives every queued change a readable title and detail', () => {
+  const lookup = { parkName: (id) => ({ acadia: 'Acadia', zion: 'Zion' }[id] ?? id), trailName: (id) => `Trail ${id}`, badgeName: (id) => `Badge ${id}` };
+  const d = (op) => describeOp(enqueue([], op)[0], lookup);
+  assert.deepEqual(d({ type: 'trip.edit', trip: trip('t1') }), { title: 'Trip changes', detail: 'Acadia · 2026-08-10' });
+  assert.deepEqual(d({ type: 'trip.delete', tripId: 't1', label: 'Zion · 2026-07-04' }), { title: 'Delete trip', detail: 'Zion · 2026-07-04' });
+  assert.deepEqual(d({ type: 'trail.uncomplete', trailId: 'x' }), { title: 'Unmark trail', detail: 'Trail x' });
+  assert.deepEqual(d({ type: 'park.status', parkId: 'zion', status: 'visited', isFavorite: true }), { title: 'Park update', detail: 'Zion · Visited · Bucket list' });
+  assert.deepEqual(d({ type: 'badge.earn', badges: [{ badgeId: 'a', earnedAt: 'x', progress: 1 }, { badgeId: 'b', earnedAt: 'x', progress: 1 }] }), { title: 'Badge earned', detail: 'Badge a, Badge b' });
+  assert.equal(d({ type: 'profile.patch', patch: { avatar: 'camping', units: 'km' } }).detail, 'avatar, units');
 });

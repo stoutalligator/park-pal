@@ -26,6 +26,9 @@ import {
   overlayParkStatus,
   overlayTrailCompletions,
   overlayProfile,
+  describeOp,
+  DescribeLookup,
+  PendingChange,
 } from '@/data/outboxCore';
 import { addDays } from '@/utils/dates';
 import { supabase } from '@/lib/supabase';
@@ -77,6 +80,15 @@ const FLUSH_WAIT_MS = 8000;
 // How long the initial load waits for queued changes to go out before it
 // fetches fresh data anyway.
 const LOAD_GATE_MS = 4000;
+// How often a non-empty queue retries on its own.
+const RETRY_INTERVAL_MS = 30000;
+
+// A short, readable reason for the "waiting to sync" list.
+function errorText(error: unknown): string {
+  const message = (error as { message?: unknown } | null)?.message;
+  const text = typeof message === 'string' && message ? message : String(error);
+  return text.length > 140 ? `${text.slice(0, 137)}...` : text;
+}
 
 const PROFILE_COLUMNS: Record<keyof UserProfile, string> = {
   name: 'name',
@@ -181,6 +193,7 @@ async function syncTripPhotos(
   const keptPaths = new Set<string>();
   const finalPaths: string[] = [];
   const finalCaptions: string[] = [];
+  let skippedPhotos = 0;
   for (const [index, photo] of photos.slice(0, 3).entries()) {
     const caption = (captions[index] ?? '').trim();
     const existingPath = storagePathFromSignedUrl(photo);
@@ -191,14 +204,32 @@ async function syncTripPhotos(
       continue;
     }
     const path = `${userId}/${tripId}/${Date.now()}-${Math.random().toString(36).slice(2)}.jpg`;
-    const response = await fetch(photo);
-    const arrayBuffer = await response.arrayBuffer();
+    // Reading a picked photo is purely local, so a failure here is never "no
+    // signal" — the file is gone (on web a picked photo's link dies when the
+    // page reloads; on a phone the OS can clear its cache). Skip it rather
+    // than letting one dead photo hold the whole trip's sync hostage.
+    let arrayBuffer: ArrayBuffer;
+    try {
+      const response = await fetch(photo);
+      arrayBuffer = await response.arrayBuffer();
+    } catch (error) {
+      console.warn('Skipping a photo that is no longer readable:', error);
+      skippedPhotos += 1;
+      continue;
+    }
     const { error: uploadError } = await supabase.storage
       .from(TRIP_PHOTOS_BUCKET)
       .upload(path, arrayBuffer, { contentType: 'image/jpeg' });
     if (uploadError) throw uploadError;
     finalPaths.push(path);
     finalCaptions.push(caption);
+  }
+
+  if (skippedPhotos > 0) {
+    showToast(
+      `${skippedPhotos === 1 ? 'A photo' : `${skippedPhotos} photos`} couldn't be uploaded — the file is no longer available on this device.`,
+      'error'
+    );
   }
 
   const orphanedPaths = (existingRows ?? [])
@@ -331,7 +362,9 @@ interface AppContextValue {
   submitContentReport: (report: ContentReportInput) => Promise<boolean>;
   // Changes saved on this device that haven't reached the server yet.
   pendingChangeCount: number;
+  pendingChanges: PendingChange[];
   isOffline: boolean;
+  retrySync: () => Promise<void>;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -366,6 +399,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const userId = session?.user.id ?? null;
   useEffect(() => {
     syncedRef.current = { ...UNSYNCED };
+    pendingFailuresRef.current.clear();
+    setSyncIssues({});
   }, [userId]);
 
   // Trips created while offline (or while a Supabase write failed) — the
@@ -394,6 +429,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isOffline, setIsOffline] = useState(false);
   const isOfflineRef = useRef(false);
   const flushOutboxRef = useRef<() => Promise<void>>(async () => {});
+  // Why a queued new trip hasn't synced (its own queue has no per-item
+  // metadata, unlike the outbox). The ref drives retry decisions; the state
+  // mirrors just the messages so the pending list can show them.
+  const pendingFailuresRef = useRef<Map<string, { attempts: number; message: string }>>(new Map());
+  const [syncIssues, setSyncIssues] = useState<Record<string, string>>({});
+  const recordTripIssue = useCallback((tripId: string, failure: { attempts: number; message: string } | null) => {
+    if (failure) pendingFailuresRef.current.set(tripId, failure);
+    else pendingFailuresRef.current.delete(tripId);
+    setSyncIssues((prev) => {
+      const next = { ...prev };
+      if (failure) next[tripId] = failure.message;
+      else delete next[tripId];
+      return next;
+    });
+  }, []);
   const loadGateRef = useRef<Promise<void>>(Promise.resolve());
 
   const isTripPending = useCallback(
@@ -1181,6 +1231,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           } catch (error) {
             if (isNetworkError(error)) {
               queuedOfflineRef.current = true;
+              commitOutbox(
+                outboxRef.current.map((o) => (o.id === op.id ? { ...o, lastError: 'No connection — will retry' } : o))
+              );
               return;
             }
             console.error(`Change "${op.type}" was rejected:`, error);
@@ -1188,7 +1241,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
               commitOutbox(outboxRef.current.filter((o) => o.id !== op.id));
               reportError('sync one of your changes', error);
             } else {
-              commitOutbox(outboxRef.current.map((o) => (o.id === op.id ? { ...o, attempts: o.attempts + 1 } : o)));
+              commitOutbox(
+                outboxRef.current.map((o) =>
+                  o.id === op.id ? { ...o, attempts: o.attempts + 1, lastError: errorText(error) } : o
+                )
+              );
             }
           }
         }
@@ -1202,16 +1259,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [executeOp, commitOutbox, announceIfSynced]);
   flushOutboxRef.current = flushOutbox;
 
-  // Attempts every queued trip in the order it was created, stopping at the
-  // first failure (a failure usually means still-offline, so trying the
-  // rest would just produce a burst of redundant failures) — the remainder
-  // simply stays queued for the next reconnect/foreground trigger.
+  // Attempts every queued new trip in the order it was created. A dropped
+  // connection stops the run (trying the rest would just repeat the failure);
+  // a trip the server keeps rejecting is skipped after MAX_ATTEMPTS so it
+  // can't block the ones behind it, but stays in the queue — it's the user's
+  // data — until they retry it from the "waiting to sync" list.
   const syncPendingTrips = useCallback(async () => {
     const activeSession = sessionRef.current;
     if (!activeSession || syncInFlightRef.current) return;
     syncInFlightRef.current = true;
     try {
       for (const pending of [...pendingTripsRef.current]) {
+        const failure = pendingFailuresRef.current.get(pending.id);
+        if (failure && failure.attempts >= MAX_ATTEMPTS) continue;
         try {
           const synced = await persistTripToSupabase(pending, activeSession);
           const current = pendingTripsRef.current.find((t) => t.id === pending.id);
@@ -1227,16 +1287,60 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           if (current !== pending) continue;
           setTrips((prev) => prev.map((t) => (t.id === synced.id ? synced : t)));
           commitPendingTrips((prev) => prev.filter((t) => t.id !== pending.id));
+          recordTripIssue(pending.id, null);
         } catch (error) {
           console.error('Trip sync failed, will retry later:', error);
-          break;
+          if (isNetworkError(error)) {
+            queuedOfflineRef.current = true;
+            recordTripIssue(pending.id, { attempts: failure?.attempts ?? 0, message: 'No connection — will retry' });
+            break;
+          }
+          recordTripIssue(pending.id, { attempts: (failure?.attempts ?? 0) + 1, message: errorText(error) });
         }
       }
     } finally {
       syncInFlightRef.current = false;
     }
     announceIfSynced();
-  }, [persistTripToSupabase, queueOp, flushInBackground, commitPendingTrips, announceIfSynced]);
+  }, [persistTripToSupabase, queueOp, flushInBackground, commitPendingTrips, announceIfSynced, recordTripIssue]);
+
+  // While anything is waiting, keep trying: NetInfo and app-focus events are
+  // the fast paths, but on a weak or flaky signal neither may fire, and a
+  // queue that only retries on an event can sit there indefinitely.
+  const hasPendingChanges = pendingTrips.length + outboxOps.length > 0;
+  useEffect(() => {
+    if (!userId || !hasPendingChanges) return;
+    const timer = setInterval(() => {
+      syncPendingTrips();
+      flushInBackground();
+    }, RETRY_INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, [userId, hasPendingChanges, syncPendingTrips, flushInBackground]);
+
+  // Manual retry from the "waiting to sync" list: forgets earlier failures
+  // (including the give-up on a trip the server kept rejecting) and tries now.
+  const retrySync = useCallback(async () => {
+    pendingFailuresRef.current.clear();
+    setSyncIssues({});
+    commitOutbox(outboxRef.current.map((o) => ({ ...o, attempts: 0, lastError: undefined })));
+    await Promise.all([syncPendingTrips(), flushOutboxRef.current()]);
+  }, [commitOutbox, syncPendingTrips]);
+
+  const pendingChanges: PendingChange[] = useMemo(() => {
+    const lookup: DescribeLookup = {
+      parkName: (id) => parks.find((p) => p.id === id)?.name ?? id,
+      trailName: (id) => trails.find((t) => t.id === id)?.name ?? id,
+      badgeName: (id) => ALL_BADGES.find((b) => b.id === id)?.name ?? id,
+    };
+    const newTrips = pendingTrips.map((t) => ({
+      id: `trip:${t.id}`,
+      title: 'New trip',
+      detail: `${lookup.parkName(t.parkId)} · ${t.startDate}${t.photos.length ? ` · ${t.photos.length} photo${t.photos.length === 1 ? '' : 's'}` : ''}`,
+      error: syncIssues[t.id],
+    }));
+    const ops = outboxOps.map((op) => ({ id: op.id, ...describeOp(op, lookup), error: op.lastError }));
+    return [...newTrips, ...ops];
+  }, [pendingTrips, outboxOps, syncIssues, parks, trails]);
 
   const logTrip = useCallback(async (trip: Omit<Trip, 'id'>) => {
     const aggregate = trip.days?.length ? aggregateFromDays(trip.days) : null;
@@ -1414,7 +1518,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       // delete remotely, just drop it from the queue so it never gets synced.
       commitPendingTrips((prev) => prev.filter((t) => t.id !== tripId));
     } else {
-      queueOp({ type: 'trip.delete', tripId });
+      queueOp({
+        type: 'trip.delete',
+        tripId,
+        label: deletedTrip
+          ? `${parks.find((p) => p.id === deletedTrip.parkId)?.name ?? 'Trip'} · ${deletedTrip.startDate}`
+          : undefined,
+      });
       flushInBackground();
       // Cascades server-side too; mirror locally so counts/checkmarks update immediately.
       setTrailCompletions((prev) => prev.filter((r) => r.trip_id !== tripId));
@@ -1578,7 +1688,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         isTripPending,
         submitContentReport,
         pendingChangeCount: pendingTrips.length + outboxOps.length,
+        pendingChanges,
         isOffline,
+        retrySync,
       }}
     >
       {children}

@@ -11,12 +11,15 @@ interface OpMeta {
   // Times the server actively rejected this op. Network failures don't count:
   // being offline isn't the op's fault.
   attempts: number;
+  // Why the last attempt failed, shown in the "waiting to sync" details.
+  lastError?: string;
 }
 
 export type OutboxOp = OpMeta &
   (
     | { type: 'trip.edit'; trip: Trip }
-    | { type: 'trip.delete'; tripId: string }
+    // `label` is only for display (the trip itself is already gone locally).
+    | { type: 'trip.delete'; tripId: string; label?: string }
     | { type: 'trail.complete'; row: TrailCompletionRow }
     | { type: 'trail.uncomplete'; trailId: string }
     | { type: 'park.status'; parkId: string; status: ParkStatus; isFavorite: boolean }
@@ -94,6 +97,51 @@ export function isNetworkError(error: unknown): boolean {
   return /network|failed to fetch|fetch failed|load failed|timeout|timed out|connection|offline|internet|econn|enotfound/.test(
     message
   );
+}
+
+// A short, human description of a queued change for the "waiting to sync"
+// list. Names are looked up by the caller so this stays free of app data.
+export interface DescribeLookup {
+  parkName: (parkId: string) => string;
+  trailName: (trailId: string) => string;
+  badgeName: (badgeId: string) => string;
+}
+
+export interface ChangeDescription {
+  title: string;
+  detail?: string;
+}
+
+// One row in the "waiting to sync" list.
+export interface PendingChange extends ChangeDescription {
+  id: string;
+  error?: string;
+}
+
+const STATUS_LABEL: Record<string, string> = { visited: 'Visited', planned: 'Planned', notVisited: 'Not visited' };
+
+export function describeOp(op: OutboxOp, lookup: DescribeLookup): ChangeDescription {
+  switch (op.type) {
+    case 'trip.edit':
+      return { title: 'Trip changes', detail: `${lookup.parkName(op.trip.parkId)} · ${op.trip.startDate}` };
+    case 'trip.delete':
+      return { title: 'Delete trip', detail: op.label };
+    case 'trail.complete':
+      return { title: 'Mark trail done', detail: op.row.name };
+    case 'trail.uncomplete':
+      return { title: 'Unmark trail', detail: lookup.trailName(op.trailId) };
+    case 'park.status':
+      return {
+        title: 'Park update',
+        detail: `${lookup.parkName(op.parkId)} · ${STATUS_LABEL[op.status] ?? op.status}${op.isFavorite ? ' · Bucket list' : ''}`,
+      };
+    case 'profile.patch':
+      return { title: 'Profile update', detail: Object.keys(op.patch).join(', ') };
+    case 'badge.earn':
+      return { title: 'Badge earned', detail: op.badges.map((b) => lookup.badgeName(b.badgeId)).join(', ') };
+    case 'report.submit':
+      return { title: 'Report', detail: op.report.entryName };
+  }
 }
 
 // ---------------------------------------------------------------------------
