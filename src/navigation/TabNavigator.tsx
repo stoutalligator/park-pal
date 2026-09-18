@@ -32,6 +32,7 @@ import PassportScreen from '@/screens/Passport/PassportScreen';
 import CollectionScreen from '@/screens/Collection/CollectionScreen';
 import StatsScreen from '@/screens/Stats/StatsScreen';
 import WishlistScreen from '@/screens/Wishlist/WishlistScreen';
+import PhotoAlbumScreen from '@/screens/PhotoAlbum/PhotoAlbumScreen';
 import SettingsScreen from '@/screens/Settings/SettingsScreen';
 import EditProfileScreen from '@/screens/Settings/EditProfileScreen';
 import EditGoalScreen from '@/screens/Settings/EditGoalScreen';
@@ -99,6 +100,7 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Collection" component={CollectionScreen} />
       <ProfileStack.Screen name="Stats" component={StatsScreen} />
       <ProfileStack.Screen name="Wishlist" component={WishlistScreen} />
+      <ProfileStack.Screen name="PhotoAlbum" component={PhotoAlbumScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
       <ProfileStack.Screen name="EditProfile" component={EditProfileScreen} />
       <ProfileStack.Screen name="EditGoal" component={EditGoalScreen} />

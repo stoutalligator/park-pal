@@ -1010,7 +1010,7 @@ export default function LogTripScreen() {
       };
     });
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!selectedParkId || !startDate) {
       Alert.alert('Missing info', 'Please select a park and start date.');
       return;
@@ -1019,7 +1019,7 @@ export default function LogTripScreen() {
     const days = buildDays();
 
     if (mode === 'complete' && completingTrip) {
-      completeTrip({
+      await completeTrip({
         ...completingTrip,
         parkId: selectedParkId,
         startDate,
@@ -1040,7 +1040,7 @@ export default function LogTripScreen() {
     }
 
     if (editingTrip) {
-      updateTrip({
+      await updateTrip({
         ...editingTrip,
         tripType: mode === 'plan' ? 'planned' : 'logged',
         parkId: selectedParkId,
@@ -1061,7 +1061,7 @@ export default function LogTripScreen() {
       return;
     }
 
-    logTrip({
+    await logTrip({
       parkId: selectedParkId,
       tripType: mode === 'plan' ? 'planned' : 'logged',
       startDate,

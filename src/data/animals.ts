@@ -77,6 +77,7 @@ export const ALL_ANIMALS: Animal[] = [
   { id: 'acadia-osprey', parkId: 'acadia', name: 'Osprey', description: 'Nests along Somes Sound and Long Pond.', rarity: 'Uncommon' },
   { id: 'acadia-snowshoe-hare', parkId: 'acadia', name: 'Snowshoe Hare', description: 'Found in dense understory, changing coat color with the seasons.', rarity: 'Common' },
   { id: 'acadia-black-bear', parkId: 'acadia', name: 'Black Bear', description: "Occasionally seen in the park's more remote inland sections.", rarity: 'Rare' },
+  { id: 'acadia-atlantic-puffin', parkId: 'acadia', name: 'Atlantic Puffin', description: 'Nests on offshore islands like Petit Manan, reachable on seasonal boat tours out of Bar Harbor.', rarity: 'Rare' },
 
   // --- Great Smoky Mountains ---
   { id: 'great-smoky-black-bear', parkId: 'great-smoky', name: 'Black Bear', description: 'The park\'s most iconic resident, with one of the densest populations in the East.', rarity: 'Uncommon' },

@@ -69,6 +69,7 @@ const SHORTCUTS = [
   { label: 'Passport', screen: 'Passport', icon: require('@/assets/icons/icon-passport.png') },
   { label: 'Stats', screen: 'Stats', icon: require('@/assets/icons/icon-explore.png') },
   { label: 'Bucket List', screen: 'Wishlist', icon: require('@/assets/icons/icon-favorites.png') },
+  { label: 'Photo Album', screen: 'PhotoAlbum', icon: require('@/assets/icons/icon-photos.png') },
   { label: 'Settings', screen: 'Settings', icon: require('@/assets/icons/icon-settings.png') },
 ];
 

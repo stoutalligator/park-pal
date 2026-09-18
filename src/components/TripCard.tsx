@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Svg, { Rect, Circle } from 'react-native-svg';
 import { colors, radius, spacing, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
 import { getParkById } from '@/data/parks';
@@ -11,9 +12,20 @@ interface Props {
   onPress: () => void;
 }
 
+function PhotoIcon({ size = 18, color = colors.textMuted }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Rect x={2.5} y={5.5} width={19} height={14} rx={2.5} fill="none" stroke={color} strokeWidth={1.8} />
+      <Circle cx={12} cy={12.5} r={3.4} fill="none" stroke={color} strokeWidth={1.8} />
+      <Rect x={8.5} y={3} width={7} height={3} rx={1} fill={color} />
+    </Svg>
+  );
+}
+
 export default function TripCard({ trip, onPress }: Props) {
   const park = getParkById(trip.parkId);
   const planned = trip.tripType === 'planned';
+  const hasPhotos = trip.photos.length > 0;
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={[styles.card, planned && styles.cardPlanned]}>
@@ -29,6 +41,7 @@ export default function TripCard({ trip, onPress }: Props) {
           <Text style={styles.notes} numberOfLines={1}>{trip.notes}</Text>
         ) : null}
       </View>
+      {hasPhotos && <PhotoIcon />}
       <Text style={styles.chevron}>›</Text>
     </TouchableOpacity>
   );

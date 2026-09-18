@@ -54,6 +54,7 @@ export type ProfileStackParamList = {
   Collection: undefined;
   Stats: undefined;
   Wishlist: undefined;
+  PhotoAlbum: undefined;
   Settings: undefined;
   EditProfile: undefined;
   EditGoal: undefined;

@@ -1,13 +1,16 @@
 {
   "parkId": "acadia",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-09-18",
   "sources": [
     "NPS.gov",
     "AllTrails",
     "Friends of Acadia",
     "Joe's Guide to Acadia",
     "Earthtrekkers",
-    "morethanjustparks.com"
+    "morethanjustparks.com",
+    "Bar Harbor Whale Watch Co.",
+    "Acadian Boat Tours",
+    "visitmaine.net"
   ],
   "trails": [
     {
@@ -519,6 +522,20 @@
       ],
       "viewingTip": "Sightings are uncommon on Mount Desert Island — if you do see one, keep a safe distance and never approach or offer food.",
       "didYouKnow": "Acadia's black bear population is small and shy compared to mainland Maine, likely limited by the island's fragmented forest and proximity to development."
+    },
+    {
+      "id": "acadia-atlantic-puffin",
+      "scientificName": "Fratercula arctica",
+      "bestTimeOfDay": "Morning",
+      "bestSeason": "Late May-mid Aug (nesting; adults depart by early Sep)",
+      "whereToLook": "Offshore nesting islands like Petit Manan, reached via naturalist-led boat tours departing Bar Harbor",
+      "tags": [
+        "Boat Tour Required",
+        "Nesting Colony"
+      ],
+      "viewingTip": "As of September 2026, per Bar Harbor Whale Watch Co. and Acadian Boat Tours, puffins nest on protected offshore islands with no public landing — book a naturalist-led lighthouse/puffin cruise from Bar Harbor and view the colony from the boat with binoculars rather than approaching by kayak or personal boat.",
+      "lastVerified": "2026-09-18",
+      "didYouKnow": "Puffins aren't found within Acadia's own boundaries — nearby colonies like Petit Manan Island support only a few hundred breeding pairs, so researchers there radio updates to passing tour boats in real time."
     }
   ]
 }
