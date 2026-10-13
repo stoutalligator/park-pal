@@ -128,6 +128,19 @@ export interface ParkGuide {
   parkActivities?: ParkActivityType[];
 }
 
+/** A live alert from the NPS API (developer.nps.gov), stored verbatim — this
+ * is NPS's wording, kept separate from Parks Pal's own written content. */
+export interface ParkAlert {
+  id: string;
+  parkCode: string;
+  /** NPS category, usually 'Danger' | 'Caution' | 'Park Closure' | 'Information'. */
+  category: string;
+  title: string;
+  description: string;
+  url?: string;
+  lastIndexedDate?: string;
+}
+
 export type TrailDifficulty = 'Easy' | 'Moderate' | 'Hard';
 
 export interface Trail {

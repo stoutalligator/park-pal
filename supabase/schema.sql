@@ -266,6 +266,25 @@ create table public.app_config (
 );
 
 insert into public.app_config (key, value) values ('enabled_upcoming_parks', '[]'::jsonb);
+insert into public.app_config (key, value) values ('nps_alerts_synced_at', 'null'::jsonb);
+
+-- Live NPS alerts, copied verbatim from the NPS API every 30 minutes by the
+-- sync-nps-alerts Edge Function (scheduled with pg_cron — see
+-- supabase/migrations/2026-10-13-nps-alerts.sql). Read-only to clients.
+create table public.park_alerts (
+  id text primary key,
+  park_code text not null,
+  category text not null,
+  title text not null,
+  description text not null default '',
+  url text,
+  last_indexed_date timestamptz,
+  fetched_at timestamptz not null default now()
+);
+
+create index park_alerts_park_code on public.park_alerts (park_code);
+
+alter table public.park_alerts enable row level security;
 
 alter table public.app_config enable row level security;
 alter table public.parks enable row level security;
@@ -287,6 +306,8 @@ alter table public.content_reports enable row level security;
 
 -- Reference data: readable by anyone, no client writes (seeded via SQL only).
 create policy "app config is publicly readable" on public.app_config
+  for select using (true);
+create policy "park alerts are publicly readable" on public.park_alerts
   for select using (true);
 create policy "parks are publicly readable" on public.parks
   for select using (true);
@@ -352,6 +373,7 @@ create policy "users can submit content reports" on public.content_reports
 grant usage on schema public to anon, authenticated, service_role;
 
 grant select on public.app_config to anon, authenticated;
+grant select on public.park_alerts to anon, authenticated;
 grant select on public.parks to anon, authenticated;
 grant select on public.badges to anon, authenticated;
 grant select on public.trails to anon, authenticated;

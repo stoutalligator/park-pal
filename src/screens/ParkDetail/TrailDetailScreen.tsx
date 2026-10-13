@@ -10,6 +10,9 @@ import { TrailDifficulty } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
 import ElevationProfileChart from '@/components/ElevationProfileChart';
 import VerifiedNote from '@/components/VerifiedNote';
+import NpsAlertsCard from '@/components/NpsAlertsCard';
+import { alertsForTrail } from '@/data/npsAlerts';
+import { getParkGuide } from '@/data/parkGuides';
 import ReportSheet, { ReportFlagButton } from '@/components/ReportSheet';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
@@ -59,7 +62,7 @@ function CompletionToggle({ completed, onToggle }: { completed: boolean; onToggl
 
 export default function TrailDetailScreen({ route, navigation }: Props) {
   const { trailId } = route.params;
-  const { parks, trails, trailDetails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
+  const { parks, trails, trailDetails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile, parkAlerts, alertsSyncedAt } = useApp();
   const units = userProfile.units;
   const [reportVisible, setReportVisible] = useState(false);
 
@@ -146,6 +149,13 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
         )}
 
         <Text style={styles.description}>{trail.description}</Text>
+
+        <NpsAlertsCard
+          alerts={alertsForTrail(parkAlerts, trail)}
+          syncedAt={alertsSyncedAt}
+          npsCode={getParkGuide(trail.parkId)?.npsCode}
+          title="NPS alerts mentioning this trail"
+        />
 
         {detail && (
           <>

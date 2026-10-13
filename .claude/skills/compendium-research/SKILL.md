@@ -96,6 +96,8 @@ Every trail and animal already in `trails.ts`/`animals.ts` for the park must hav
 
 ## Sourcing
 
+**Temporary closures come from live NPS alerts, not tips.** The app shows current NPS alerts on park and trail pages, synced every 30 minutes and labeled as NPS content (`park_alerts`, see `src/data/npsAlerts.ts`). So a `trailTip`/`viewingTip` should only state *recurring* rules (annual nesting closures, standing permit systems, seasonal road openings), never a one-off "currently closed for repairs" that the live alert already covers and that would go stale in the tip. If a tip from an earlier pass describes a temporary closure, rewrite it to the recurring guidance, or drop the closure from it, and note that in the report. The park's alerts are on its `nps.gov/<code>/planyourvisit/conditions.htm` page.
+
 Use real, current information (NPS.gov park pages, NPS trail-condition pages, reputable hiking/wildlife references). Prefer NPS's own site as the primary source for permits, closures, and seasonal access since those change and the app must not tell someone to hike something that's currently closed or misrepresent a permit requirement.
 
 ## Workflow — first-time research on a park

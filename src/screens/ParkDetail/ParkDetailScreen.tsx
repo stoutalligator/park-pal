@@ -8,6 +8,8 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkScene } from '@/data/parkImages';
 import { getParkGuide } from '@/data/parkGuides';
+import { alertsForPark } from '@/data/npsAlerts';
+import NpsAlertsCard from '@/components/NpsAlertsCard';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -92,7 +94,7 @@ function TreeIcon({ size = 20 }: { size?: number }) {
 
 export default function ParkDetailScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, trips, trails, animals, toggleFavorite, updateParkStatus, isTrailCompleted, isAnimalSpotted } = useApp();
+  const { parks, trips, trails, animals, toggleFavorite, updateParkStatus, isTrailCompleted, isAnimalSpotted, parkAlerts, alertsSyncedAt } = useApp();
   const insets = useSafeAreaInsets();
   const park = parks.find((p) => p.id === parkId);
   const parkTrips = trips.filter((t) => t.parkId === parkId);
@@ -101,6 +103,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
   const trailsCompletedCount = parkTrails.filter((t) => isTrailCompleted(t.id)).length;
   const animalsSpottedCount = parkAnimals.filter((a) => isAnimalSpotted(a.id)).length;
   const guide = getParkGuide(parkId);
+  const alerts = alertsForPark(parkAlerts, parkId);
 
   if (!park) return null;
 
@@ -139,6 +142,8 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
             </View>
             <StatusBadge status={park.status} detail />
           </View>
+
+          <NpsAlertsCard alerts={alerts} syncedAt={alertsSyncedAt} npsCode={guide?.npsCode} />
 
           <Text style={styles.description}>{park.description}</Text>
 
@@ -229,9 +234,10 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
             <Text style={styles.sourceTitle}>About this info</Text>
             <Text style={styles.sourceText}>
               Parks Pal is an independent app and isn't affiliated with or endorsed by the National Park
-              Service. Park info is gathered from NPS.gov and other public sources, and suggestions come from
-              our own trips plus those of fellow users and pals. Hours, roads, permits, and conditions change,
-              so check the official NPS site for the most up-to-date info before you go.
+              Service. Park info is gathered from NPS.gov and other public sources and written in our own
+              words, and suggestions come from our own trips plus those of fellow users and pals. Cards marked
+              NPS Alerts are the exception: they come live from the National Park Service, word for word. Hours,
+              roads, permits, and conditions change, so check the official NPS site before you go.
             </Text>
             <TouchableOpacity
               onPress={() => Linking.openURL(guide ? `https://www.nps.gov/${guide.npsCode}` : 'https://www.nps.gov')}

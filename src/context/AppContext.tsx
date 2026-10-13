@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import * as Crypto from 'expo-crypto';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, TripActivity, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput, TrailCompletionRow, AnimalSightingRow } from '@/types';
+import { ParkAlert, Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, TripActivity, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput, TrailCompletionRow, AnimalSightingRow } from '@/types';
 import { ALL_PARKS, UPCOMING_PARKS, visibleParks } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
@@ -14,6 +14,7 @@ import { TRAIL_DETAILS } from '@/data/trailDetails';
 import { ANIMAL_DETAILS } from '@/data/animalDetails';
 import { fetchContentBundle } from '@/data/contentService';
 import { loadCachedEnabledUpcomingParks, fetchEnabledUpcomingParks } from '@/data/appConfig';
+import { loadCachedAlerts, fetchAlerts } from '@/data/npsAlerts';
 import { loadPendingTrips, savePendingTrips } from '@/data/offlineTrips';
 import { loadSnapshot, saveSnapshot, clearSnapshot, ParkStatusSnapshot, SnapshotPatch } from '@/data/localCache';
 import { loadOutbox, saveOutbox, clearOutbox } from '@/data/outbox';
@@ -350,6 +351,9 @@ function aggregateFromDays(days: TripDayEntry[]) {
 
 interface AppContextValue {
   parks: Park[];
+  /** Live NPS alerts (verbatim NPS content) and when they were last synced. */
+  parkAlerts: ParkAlert[];
+  alertsSyncedAt: string | null;
   trips: Trip[];
   badges: Badge[];
   userProfile: UserProfile;
@@ -568,14 +572,29 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const [parkAlerts, setParkAlerts] = useState<ParkAlert[]>([]);
+  const [alertsSyncedAt, setAlertsSyncedAt] = useState<string | null>(null);
+
   const refreshAppConfig = useCallback(() => {
     fetchEnabledUpcomingParks().then((ids) => {
       if (ids) setEnabledUpcomingParks(ids);
     });
+    fetchAlerts().then((snapshot) => {
+      if (!snapshot) return;
+      setParkAlerts(snapshot.alerts);
+      setAlertsSyncedAt(snapshot.syncedAt);
+    });
   }, []);
 
   useEffect(() => {
-    loadCachedEnabledUpcomingParks().then(setEnabledUpcomingParks).then(refreshAppConfig);
+    Promise.all([
+      loadCachedEnabledUpcomingParks().then(setEnabledUpcomingParks),
+      loadCachedAlerts().then((snapshot) => {
+        if (!snapshot) return;
+        setParkAlerts(snapshot.alerts);
+        setAlertsSyncedAt(snapshot.syncedAt);
+      }),
+    ]).then(refreshAppConfig);
   }, [refreshAppConfig]);
 
   const refreshContentIfFallenBack = useCallback(() => {
@@ -1695,6 +1714,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     <AppContext.Provider
       value={{
         parks,
+        parkAlerts,
+        alertsSyncedAt,
         trips,
         badges,
         userProfile,

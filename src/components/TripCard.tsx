@@ -7,6 +7,7 @@ import { getParkById } from '@/data/parks';
 import { getParkImage } from '@/data/parkImages';
 import { formatDateRange, daysUntilLabel } from '@/utils/dates';
 import { useApp } from '@/context/AppContext';
+import { tripHeadsUpAlerts } from '@/data/npsAlerts';
 
 interface Props {
   trip: Trip;
@@ -41,11 +42,12 @@ function PendingSyncIcon({ size = 18, color = colors.textMuted }: { size?: numbe
 }
 
 export default function TripCard({ trip, onPress }: Props) {
-  const { isTripPending } = useApp();
+  const { isTripPending, parkAlerts } = useApp();
   const park = getParkById(trip.parkId);
   const planned = trip.tripType === 'planned';
   const hasPhotos = trip.photos.length > 0;
   const pending = isTripPending(trip.id);
+  const headsUp = tripHeadsUpAlerts(parkAlerts, trip);
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.85} style={[styles.card, planned && styles.cardPlanned]}>
@@ -56,7 +58,14 @@ export default function TripCard({ trip, onPress }: Props) {
         <Text style={styles.parkName} numberOfLines={1}>{park?.name ?? 'Unknown Park'}</Text>
         <Text style={styles.dates}>{formatDateRange(trip.startDate, trip.endDate)}</Text>
         {planned ? (
-          <Text style={styles.daysUntil}>{daysUntilLabel(trip.startDate)}</Text>
+          <>
+            <Text style={styles.daysUntil}>{daysUntilLabel(trip.startDate)}</Text>
+            {headsUp.length > 0 && (
+              <Text style={styles.headsUp} numberOfLines={1}>
+                {headsUp.length === 1 ? `NPS alert: ${headsUp[0].title}` : `${headsUp.length} NPS alerts for this park`}
+              </Text>
+            )}
+          </>
         ) : trip.notes ? (
           <Text style={styles.notes} numberOfLines={1}>{trip.notes}</Text>
         ) : null}
@@ -117,6 +126,11 @@ const styles = StyleSheet.create({
   daysUntil: {
     ...typography.labelSmall,
     color: colors.sky,
+  },
+  headsUp: {
+    ...typography.labelSmall,
+    color: colors.orange,
+    marginTop: 2,
   },
   iconStack: {
     flexDirection: 'row',

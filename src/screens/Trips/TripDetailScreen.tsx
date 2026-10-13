@@ -12,6 +12,9 @@ import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/util
 import { parseLocalDate, daysUntilLabel } from '@/utils/dates';
 import PrimaryButton from '@/components/PrimaryButton';
 import RecapPreview from '@/components/RecapPreview';
+import NpsAlertsCard from '@/components/NpsAlertsCard';
+import { alertsForPark, isTripInAlertWindow } from '@/data/npsAlerts';
+import { getParkGuide } from '@/data/parkGuides';
 import Polaroid, { tapeColorForIndex } from '@/components/Polaroid';
 import {
   WeatherSunnyIcon,
@@ -133,7 +136,7 @@ function StarIcon({ filled, size = 16 }: { filled: boolean; size?: number }) {
 
 export default function TripDetailScreen({ route, navigation }: Props) {
   const { tripId } = route.params;
-  const { trips, deleteTrip, isTripPending, userProfile } = useApp();
+  const { trips, deleteTrip, isTripPending, userProfile, parkAlerts, alertsSyncedAt } = useApp();
   const units = userProfile.units;
   const insets = useSafeAreaInsets();
   const [recapVisible, setRecapVisible] = useState(false);
@@ -207,6 +210,15 @@ export default function TripDetailScreen({ route, navigation }: Props) {
                 onPress={() => (navigation as any).navigate('LogTripForm', { completeTripId: trip.id })}
               />
             </View>
+          )}
+
+          {isTripInAlertWindow(trip) && (
+            <NpsAlertsCard
+              alerts={alertsForPark(parkAlerts, trip.parkId)}
+              syncedAt={alertsSyncedAt}
+              npsCode={getParkGuide(trip.parkId)?.npsCode}
+              title="Before you go: NPS alerts"
+            />
           )}
 
           {/* Activities — legacy trips only; day-by-day trips show activities

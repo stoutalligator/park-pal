@@ -8,6 +8,7 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { Trail, TrailDifficulty, Units } from '@/types';
 import ScreenHeader from '@/components/ScreenHeader';
+import { alertsForTrail } from '@/data/npsAlerts';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 type Props = NativeStackScreenProps<ParksStackParamList, 'ParkTrails'>;
@@ -38,7 +39,7 @@ function CompletionToggle({ completed, onToggle }: { completed: boolean; onToggl
   );
 }
 
-function TrailListCard({ trail, completed, units, onToggleCompleted, onPress }: { trail: Trail; completed: boolean; units: Units; onToggleCompleted: () => void; onPress: () => void }) {
+function TrailListCard({ trail, completed, units, hasAlert, onToggleCompleted, onPress }: { trail: Trail; completed: boolean; units: Units; hasAlert: boolean; onToggleCompleted: () => void; onPress: () => void }) {
   return (
     <TouchableOpacity style={styles.itemCard} onPress={onPress} activeOpacity={0.8}>
       <View style={styles.itemTitleRow}>
@@ -52,6 +53,11 @@ function TrailListCard({ trail, completed, units, onToggleCompleted, onPress }: 
         <View style={[styles.pill, { backgroundColor: DIFFICULTY_COLOR[trail.difficulty] }]}>
           <Text style={styles.pillText}>{trail.difficulty}</Text>
         </View>
+        {hasAlert && (
+          <View style={styles.alertTag}>
+            <Text style={styles.alertTagText}>NPS alert</Text>
+          </View>
+        )}
       </View>
     </TouchableOpacity>
   );
@@ -59,7 +65,7 @@ function TrailListCard({ trail, completed, units, onToggleCompleted, onPress }: 
 
 export default function ParkTrailsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, trails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile } = useApp();
+  const { parks, trails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile, parkAlerts } = useApp();
   const units = userProfile.units;
   const [search, setSearch] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<'All' | TrailDifficulty>('All');
@@ -111,6 +117,7 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
             trail={trail}
             completed={isTrailCompleted(trail.id)}
             units={units}
+            hasAlert={alertsForTrail(parkAlerts, trail).length > 0}
             onToggleCompleted={() =>
               isTrailCompleted(trail.id)
                 ? unmarkTrailCompleted(trail.id)
@@ -148,6 +155,8 @@ const styles = StyleSheet.create({
   itemMeta: { ...typography.caption, color: colors.textMuted },
   pill: { paddingHorizontal: spacing.sm, paddingVertical: 2, borderRadius: radius.full },
   pillText: { ...typography.labelSmall, fontSize: 10, color: colors.textInverse },
+  alertTag: { paddingHorizontal: spacing.sm, paddingVertical: 2, borderRadius: radius.full, borderWidth: 1, borderColor: colors.orange },
+  alertTagText: { ...typography.labelSmall, fontSize: 10, color: colors.orange },
   checkBadge: { width: 22, height: 22, borderRadius: 11, backgroundColor: colors.surfaceWarm, borderWidth: 2, borderColor: colors.border, alignItems: 'center', justifyContent: 'center' },
   checkBadgeCompleted: { backgroundColor: colors.primary, borderColor: colors.primary },
 });
