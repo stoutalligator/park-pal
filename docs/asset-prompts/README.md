@@ -13,6 +13,7 @@ Prompts for generating illustrated art outside the repo (Midjourney, DALL-E, etc
 | [unlockable-pals.md](unlockable-pals.md) | Badge-unlocked bonus pals — a badge sticker + pal avatar pair (Island Fox, Puffin, ...) | `src/assets/badges/` + `src/assets/activities/` |
 | [profile-backgrounds.md](profile-backgrounds.md) | Profile hero backgrounds, plus trail-unlocked background + badge pairs. **Different, painterly style** from the rest | `src/assets/scenes/` |
 | [moose-mascot.md](moose-mascot.md) | Brand mascot expressions, full-body pose, title scene | `src/assets/mascot/` |
+| [app-store-header.md](app-store-header.md) | App Store product page header (5244×2950 and 3840×1646). **Painterly style**, text added afterward | `Downloads` (upload to App Store Connect, not the app) |
 | [app-icon-splash.md](app-icon-splash.md) | App Store icon, splash, Android adaptive icon, favicon | `assets/` (project root) |
 | [rarity-scenes.md](rarity-scenes.md) | 3 shared animal-detail hero banners (concept, not wired yet) | `src/assets/animals/` |
 

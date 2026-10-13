@@ -91,7 +91,7 @@ Contact Information: developer's real name, phone, and email (this is Apple's pr
 `Your National Park Tracker`
 
 ### iOS Promotional Text (170 char limit, editable without a new build)
-`Track every trip to all 63 U.S. National Parks. Plan visits, log memories and photos, collect postcards, and earn badges along the way.`
+`Track every U.S. National Park you visit. Plan trips with daily itineraries, log memories and photos, collect postcards, and earn badges along the way.`
 
 ### iOS Keywords (100 char limit, comma-separated, no spaces needed after commas)
 `national park,hiking,trip planner,travel journal,postcards,badges,camping,outdoors,nature,trail log`
@@ -99,24 +99,27 @@ Contact Information: developer's real name, phone, and email (this is Apple's pr
 ### Google Play Short Description (80 char limit)
 `Track, plan, and log your visits to all 63 U.S. National Parks.`
 
-### Full Description (works for both stores, ~1500 chars — well under either 4000-char cap)
+### Full Description (works for both stores, ~1650 chars — well under either 4000-char cap)
+Avoids the park count ("every" instead of "63") because the description can only change with a new app version.
 ```
 Parks Pal is your cozy companion for exploring America's National Parks.
 
 Whether you're checking parks off your bucket list or reliving trips you've already taken, Parks Pal helps you track it all:
 
 COLLECT
-Mark every park you've visited and watch your progress fill in toward all 63 U.S. National Parks.
+Mark every park you've visited and watch your illustrated map fill in as you work toward every U.S. National Park. Each trip you log becomes a postcard in your collection.
 
 EXPLORE
-Plan upcoming trips with dates and activities, then browse each park's trails and wildlife.
+Discover what makes each park special, from the Fruita orchards at Capitol Reef to the hoodoos of Bryce Canyon. Short on time? Every park has an "Only Have a Day?" plan to make the most of it. Browse trail guides with elevation charts, best seasons, and tips, plus a wildlife compendium of the animals you might spot.
 
 REMEMBER
-Log completed trips with photos, notes, trail hikes, and wildlife sightings — build a real travel journal you'll want to look back on.
+Plan trips with daily itineraries or log the ones you've taken, day by day: activities, viewpoints, trails hiked, wildlife sightings, weather, notes, and photos. Then share a beautiful trip recap with friends and family.
 
-Along the way, collect postcards from every park and earn badges for milestones like your first hike, your first camping trip, or reaching a new region.
+Along the way, earn badges for milestones like your first hike, your first camping trip, or reaching a new region. Some badges are secret, hidden in specific parks, and a few unlock new animal pals for your profile.
 
-Parks Pal keeps your data private and synced to your own account — no ads, no tracking, no selling your data. Just a simple, illustrated way to keep your park adventures organized.
+Parks Pal keeps your data private and synced to your own account, and it works even when you're out of signal: your trips save on your phone and sync once you're back in range. No ads, no tracking, no selling your data. Just a simple, illustrated way to keep your park adventures organized.
+
+Parks Pal is an independent app and isn't affiliated with or endorsed by the National Park Service. Conditions, closures, and permits change, so always check NPS.gov before you go.
 
 COLLECT. EXPLORE. REMEMBER.
 ```
