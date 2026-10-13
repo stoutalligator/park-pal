@@ -1,6 +1,6 @@
 {
   "parkId": "canyonlands",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": [
     "NPS.gov",
     "AllTrails",
@@ -347,6 +347,54 @@
           "mile": 8.8,
           "elevationFt": -1600,
           "label": "White Rim Road junction"
+        }
+      ]
+    },
+    {
+      "id": "canyonlands-pothole-point",
+      "estimatedTime": "40-45 min",
+      "bestSeason": "Year-round (best soon after rain)",
+      "tags": [
+        "Family Friendly",
+        "Slickrock",
+        "Fragile Ecosystem",
+        "Needles District"
+      ],
+      "trailTip": "Follow the cairns across the slickrock and walk around every pothole, even dry ones, without touching the water. As of October 2026, per NPS.gov, dogs are not allowed on this trail, and its uneven rock and stone steps make it unsuitable for wheelchairs.",
+      "lastVerified": "2026-10-13",
+      "didYouKnow": "When the potholes dry out, microscopic tardigrades living in them slow their metabolism to 0.1 percent of normal, and some pothole creatures can be fully active again within 30 minutes of the next rain.",
+      "elevationProfile": [
+        {
+          "mile": 0,
+          "elevationFt": 0,
+          "label": "Trailhead"
+        },
+        {
+          "mile": 0.1,
+          "elevationFt": 10
+        },
+        {
+          "mile": 0.2,
+          "elevationFt": 20,
+          "label": "Pothole slickrock"
+        },
+        {
+          "mile": 0.3,
+          "elevationFt": 25,
+          "label": "Needles viewpoint"
+        },
+        {
+          "mile": 0.4,
+          "elevationFt": 15
+        },
+        {
+          "mile": 0.5,
+          "elevationFt": 5
+        },
+        {
+          "mile": 0.6,
+          "elevationFt": 0,
+          "label": "Return to trailhead"
         }
       ]
     }
