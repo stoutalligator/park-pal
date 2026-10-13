@@ -15,9 +15,9 @@
       "bestSeason": "Year-round (conditions change with eruption activity)",
       "tags": [
         "Volcanic Hazard",
-        "Seasonal Closure"
+        "Rough Terrain"
       ],
-      "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, Kilauea remains at Volcano Alert Level WATCH with intermittent eruptive episodes at the summit; this trail across the 1959 lava lake floor has generally stayed open between active episodes, but conditions change quickly, so check the park's current alerts page and heed any ranger closures for volcanic gas (sulfur dioxide) before hiking.",
+      "trailTip": "As of October 2026, per NPS.gov, this 3.3-mile loop drops and climbs about 400 ft on steep, rocky trail to the 1959 lava-lake floor; follow the existing ahu (cairns) and don't build new ones, watch for deep cracks and razor-sharp lava, and know that the park closes summit trails and overlooks on short notice during Kilauea eruptive episodes, tephra fallout, or seismic unrest. Volcanic gas is most hazardous to people with heart or respiratory conditions, pregnant women, infants, and children, so check air quality before you go.",
       "didYouKnow": "The crater floor you cross was a churning lava lake during the 1959 eruption, and the ground can still be warm to the touch in spots decades later.",
       "elevationProfile": [
         {
@@ -52,7 +52,7 @@
           "label": "Loop Return"
         }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "hawaii-volcanoes-devastation",
@@ -60,9 +60,10 @@
       "bestSeason": "Year-round (SO2 dependent)",
       "tags": [
         "Volcanic Hazard",
-        "Paved"
+        "Paved",
+        "Wheelchair Accessible"
       ],
-      "trailTip": "As of September 2026, per NPS.gov, this paved summit-area trail can be closed on short notice when volcanic gas (SO2) levels spike during an active eruptive episode, especially for visitors with heart or respiratory conditions; check the park's current conditions page the day of your visit.",
+      "trailTip": "As of October 2026, per NPS.gov, this 1-mile round-trip paved path is wheelchair and stroller accessible, though some sections are steeper than 8%; stay on the pavement and don't handle Pele's hair or fresh tephra, which irritate skin and eyes. Crater Rim Drive East and the Keanakako'i side of the summit, including Devastation, close on short notice during eruptive episodes and heavy tephra fallout (as in March 2026), and volcanic gas is most hazardous to people with heart or respiratory conditions, pregnant women, infants, and children.",
       "didYouKnow": "The trail crosses a barren cinder field created by the 1959 Kilauea Iki eruption, whose cinder fallout killed the forest that once stood here.",
       "elevationProfile": [
         {
@@ -92,17 +93,17 @@
           "label": "Devastation Trail End"
         }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "hawaii-volcanoes-halemaumau",
-      "estimatedTime": "1-2 hrs (to closure point)",
+      "estimatedTime": "1-2 hrs",
       "bestSeason": "Year-round",
       "tags": [
         "Volcanic Hazard",
-        "Seasonal Closure"
+        "Rockfall Risk"
       ],
-      "trailTip": "As of September 2026, per NPS.gov, the Halema'uma'u Trail across the caldera floor is closed beyond stop 10 because of the active eruptive vent building a spatter cone inside Halema'uma'u Crater; hikers can still walk from Volcano House down to the caldera floor, but should not attempt to bypass barricades toward the vent and should watch for elevated SO2 gas.",
+      "trailTip": "As of October 2026, per NPS.gov, this trail starts behind Volcano House and descends about 425 ft through rainforest to the floor of Kaluapele (Kilauea caldera), 0.8 mile one-way, or 1.3 miles to Uealoha (Byron Ledge). It drops from the caldera rim and has a history of dangerous rockfalls, so the park closes it during summit seismic unrest and eruptive activity; stay on the marked trail, never enter closed areas or go near cliff edges, and check air quality first if you have heart or respiratory conditions, are pregnant, or are hiking with infants or children.",
       "didYouKnow": "Halema'uma'u is considered the sacred home of the volcano goddess Pele in Hawaiian tradition, and its crater has repeatedly collapsed and refilled with lava over the past two centuries.",
       "elevationProfile": [
         {
@@ -126,7 +127,7 @@
         {
           "mile": 1.95,
           "elevationFt": -500,
-          "label": "Stop 10 (closure point, turnaround)"
+          "label": "Stop 10 (turnaround)"
         },
         {
           "mile": 2.6,
@@ -146,7 +147,7 @@
           "label": "Return to Volcano House"
         }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "hawaii-volcanoes-puu-loa",

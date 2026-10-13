@@ -1,6 +1,6 @@
 {
   "parkId": "grand-teton",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "AllTrails", "Grand Teton National Park Foundation", "Jackson Hole News & Guide", "WyoFile"],
   "trails": [
     {
@@ -111,9 +111,9 @@
       "id": "grand-teton-death-canyon",
       "estimatedTime": "5-6 hrs",
       "bestSeason": "July-Sept",
-      "tags": ["Bear Country", "Access Closure"],
-      "trailTip": "As of September 2026, per NPS.gov, the Death Canyon Road and Trailhead are closed to all traffic, including hikers on foot, for a multi-year rehabilitation project expected to run through June 2027, so the trail is not currently reachable from its usual trailhead; check the park's road construction page for detour or reopening updates before planning a trip.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Bear Country", "Lake Views", "Steep Return Climb"],
+      "trailTip": "The trail climbs about a mile to the Phelps Lake Overlook, then drops on switchbacks toward the lake before climbing back up into the canyon along Death Canyon Creek over rocky, talus-lined switchbacks to the historic CCC patrol cabin, so save energy for the climb back over the overlook on the way out. As of October 2026, per NPS.gov, the trailhead sits at the end of a rutted dirt spur road that isn't recommended for low-clearance vehicles (pull fully off the road if you park on the shoulder), trails here can hold snow until mid-July, and bears are commonly active, so carry bear spray and make noise.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "Despite its ominous name, Death Canyon's origin story is uncertain — the most common account traces it to an 1899 survey party member who went missing near the canyon and was never found.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Death Canyon Trailhead" },

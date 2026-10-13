@@ -11,15 +11,15 @@
   "trails": [
     {
       "id": "grand-canyon-bright-angel",
-      "estimatedTime": "3-6 hrs round trip to Havasupai Gardens",
+      "estimatedTime": "4-6 hrs round trip to Three-Mile Resthouse",
       "bestSeason": "Year-round; avoid midday June-Sept",
       "tags": [
         "Below Rim",
         "Exposure",
-        "Seasonal Closure"
+        "Seasonal Water"
       ],
-      "trailTip": "As of September 2026, per NPS.gov, Bright Angel Trail is closed below its junction with the Tonto Trail (below Havasupai Gardens) after an August 29, 2026 flash flood destroyed the inner-canyon water pipeline, so day hikers should plan to turn around at or above Havasupai Gardens; the park also urges avoiding the Inner Canyon between 10 a.m. and 4 p.m. and carrying more water than feels necessary.",
-      "lastVerified": "2026-09-15",
+      "trailTip": "As of October 2026, per NPS.gov, water at Mile-and-a-Half and Three-Mile Resthouses is normally seasonal (roughly May through October) and Havasupai Gardens normally has water year-round, but pipeline breaks can shut any station off without warning, so carry all the water you need; in summer avoid hiking the inner canyon between 10 a.m. and 4 p.m., plan at least twice as long for the climb out as the descent, check with a ranger before attempting Havasupai Gardens as a day hike, and note that any camping below the rim requires a backcountry permit.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "Bright Angel Trail follows an ancient route used by the Havasupai people for centuries before it was widened into a toll trail by prospector Ralph Cameron in the early 1900s.",
       "elevationProfile": [
         {
@@ -28,27 +28,34 @@
           "label": "South Rim Trailhead"
         },
         {
-          "mile": 1,
-          "elevationFt": -1150,
+          "mile": 0.75,
+          "elevationFt": -560
+        },
+        {
+          "mile": 1.5,
+          "elevationFt": -1120,
           "label": "Mile-and-a-Half Resthouse"
         },
         {
-          "mile": 2,
-          "elevationFt": -2150,
-          "label": "Three-Mile Resthouse"
+          "mile": 2.25,
+          "elevationFt": -1620
         },
         {
           "mile": 3,
-          "elevationFt": -3060,
-          "label": "Havasupai Gardens (current turnaround)"
+          "elevationFt": -2120,
+          "label": "Three-Mile Resthouse (turnaround)"
         },
         {
-          "mile": 4,
-          "elevationFt": -2150
+          "mile": 3.75,
+          "elevationFt": -1620
         },
         {
-          "mile": 5,
-          "elevationFt": -1150
+          "mile": 4.5,
+          "elevationFt": -1120
+        },
+        {
+          "mile": 5.25,
+          "elevationFt": -560
         },
         {
           "mile": 6,
@@ -110,8 +117,8 @@
         "Exposure",
         "No Water"
       ],
-      "trailTip": "Ooh Aah Point sits well above Cedar Ridge and the Tip-Off, so as of September 2026 this short segment remains open even though the South Kaibab Trail is closed below the Tip-Off after the August 2026 flash flood; there is no water anywhere on this trail, so carry it all in.",
-      "lastVerified": "2026-09-15",
+      "trailTip": "As of October 2026, per NPS.gov, there is no water anywhere on the South Kaibab Trail, so carry all you need (at least 4 liters per person in hot weather); the shadeless ridgeline is dangerous in summer between 10 a.m. and 4 p.m., the climb back up typically takes about twice as long as the descent, NPS does not recommend going below Skeleton Point as a day hike, and any camping below the rim requires a backcountry permit.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "South Kaibab was built in the 1920s along an exposed ridgeline specifically so mule trains would not have to pay tolls charged on the privately-run Bright Angel Trail.",
       "elevationProfile": [
         {

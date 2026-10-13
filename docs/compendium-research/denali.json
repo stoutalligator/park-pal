@@ -1,6 +1,6 @@
 {
   "parkId": "denali",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": [
     "NPS.gov",
     "Alaska Beacon",
@@ -93,16 +93,20 @@
     },
     {
       "id": "denali-eielson-alpine",
+      "alertKeywords": [
+        "Eielson",
+        "Park Road"
+      ],
       "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Jun-early Sep",
       "tags": [
         "Steep Climb",
         "Bear Country",
-        "Currently Hard to Reach"
+        "Bus Access"
       ],
-      "trailTip": "As of September 2026, per NPS.gov and Alaska Beacon reporting, the Denali Park Road is still closed to vehicles at Mile 43 (Pretty Rocks landslide) and park buses are not running to Eielson (Mile 66) for the rest of this season, so reaching this trailhead currently means biking or hiking roughly 23 extra miles beyond the closure — check nps.gov/dena for updated shuttle status before planning a trip.",
+      "trailTip": "As of October 2026, per NPS.gov, this trail starts at the Eielson Visitor Center (Mile 66), which private cars can't reach in summer — you get there on a park shuttle bus during the summer bus season (roughly mid-May to mid-September), and whether buses go that far depends on how far the Park Road is open, so check current alerts before booking; the trail gains about 1,000 feet in steep switchbacks to the ridgetop, weather on the exposed tundra can turn fast, so pack layers, carry bear spray, and stay at least 300 yards from any bear.",
       "didYouKnow": "The trail climbs Thorofare Ridge for one of the closest frontcountry views of Denali's summit, on the rare days the mountain isn't hidden in its own weather.",
-      "lastVerified": "2026-09-15",
+      "lastVerified": "2026-10-13",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Eielson Visitor Center" },
         { "mile": 0.5, "elevationFt": 350 },
@@ -135,15 +139,20 @@
     },
     {
       "id": "denali-mckinley-bar",
+      "alertKeywords": [
+        "Wonder Lake",
+        "Park Road"
+      ],
       "estimatedTime": "2-3 hrs",
       "bestSeason": "Jun-Sep",
       "tags": [
-        "Currently Hard to Reach",
-        "River Gravel Bar"
+        "River Gravel Bar",
+        "Bus Access",
+        "Bear Country"
       ],
-      "trailTip": "As of September 2026, per Alaska Beacon and NPS reporting, park buses are not yet running to Wonder Lake (Mile 85) this season because of the ongoing Mile 43 landslide closure, so this trailhead is currently reachable only by biking or hiking the closed road corridor — check nps.gov/dena for updated shuttle status before planning a trip.",
+      "trailTip": "As of October 2026, per NPS.gov, this trail leaves from near Wonder Lake Campground at Mile 85 of the Park Road, which private cars can't drive in summer, so it's a park-bus destination in the summer bus season (roughly mid-May to mid-September), and access depends on how far the road is open; expect wet meadows, spruce forest, and heavy mosquitoes from mid-June to mid-August (bring a head net), stay 300 yards from bears, and don't wade the glacier-fed McKinley River at trail's end, which NPS calls extremely difficult to cross most of the summer.",
       "didYouKnow": "The mile-wide gravel bar at trail's end was a historic starting point for some of the earliest Denali summit expeditions.",
-      "lastVerified": "2026-09-15",
+      "lastVerified": "2026-10-13",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Wonder Lake Trailhead" },
         { "mile": 0.7, "elevationFt": 100 },

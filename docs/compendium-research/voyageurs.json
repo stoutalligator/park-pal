@@ -1,6 +1,6 @@
 {
   "parkId": "voyageurs",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "Recreation.gov", "Voyageurs Conservancy", "NPS Voyageurs trail maps", "dwhike.com"],
   "trails": [
     {
@@ -60,12 +60,13 @@
     },
     {
       "id": "voyageurs-kab-ash",
+      "alertKeywords": ["Salmi Road"],
       "estimatedTime": "1-2 days (backcountry, one-way)",
-      "bestSeason": "Jun-Sep",
-      "tags": ["Boat Access Only", "Access Closure", "Long Distance"],
-      "trailTip": "As of the 2024 NPS.gov trail map update, the Salmi Road access point for the Kab-Ash Trail was closed — confirm current trailhead access with a park visitor center before setting out, or reach the trail via one of the park's ranger-led boat tours instead.",
-      "lastVerified": "2026-09-15",
-      "didYouKnow": "At 14.5 miles, the Kab-Ash Trail is the longest hiking-only route in the park, connecting the Ash River area to Lake Kabetogama across the interior of the peninsula.",
+      "bestSeason": "Year-round (early spring and fall best for fewer biting insects)",
+      "tags": ["Drive-To Access", "Long Distance", "Wet Sections", "Wayfinding"],
+      "trailTip": "As of October 2026, per NPS.gov, the Kab-Ash is reached by road (no boat needed) from trailheads on the Ash River Trail (County Road 129), Meadwood Road near the Ash River Visitor Center, and the Ash River community; pets are not allowed, and hikers should expect a narrow, sometimes overgrown path with rock cairns over open ledges, swampy lowlands and beaver-flooded stretches, and heavy summer bugs, so carry repellent, plenty of water, and good navigation.",
+      "lastVerified": "2026-10-13",
+      "didYouKnow": "The Kab-Ash is the only large trail network in Voyageurs you can reach year-round without a boat, winding over granite ridges, blueberry barrens, and black spruce and tamarack bogs where wolves use the trail itself to travel between territories.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Ash River end" },
         { "mile": 2, "elevationFt": 150 },

@@ -1,14 +1,14 @@
 {
   "parkId": "congaree",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "NPS Congaree Trail Guide", "Friends of Congaree Swamp", "Backpacker Magazine"],
   "trails": [
     {
       "id": "congaree-boardwalk-loop",
       "estimatedTime": "1-1.5 hrs",
       "bestSeason": "Year-round",
-      "tags": ["Boardwalk", "Construction"],
-      "trailTip": "As of September 2026, per NPS.gov, a multi-year project replacing low-lying boardwalk sections (B, D, and F) with a higher, sturdier deck began in January 2026 and was expected to finish by summer 2026 — check the park's current conditions page for any remaining rolling detours before you go.",
+      "tags": ["Boardwalk", "Accessible", "Floodplain"],
+      "trailTip": "As of October 2026, per NPS.gov, this flat loop is wheelchair and stroller accessible with benches along the way; its elevated portion stays above most floods, but lower sections sit in a floodplain that overflows roughly ten times a year and can be underwater after heavy rain.",
       "didYouKnow": "The boardwalk winds through one of the tallest and most intact old-growth bottomland hardwood forests left in North America.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Visitor Center" },
@@ -18,7 +18,7 @@
         { "mile": 2.0, "elevationFt": 2 },
         { "mile": 2.4, "elevationFt": 0, "label": "Return to Visitor Center" }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "congaree-weston-lake",

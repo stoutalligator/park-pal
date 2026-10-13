@@ -1,25 +1,26 @@
 {
   "parkId": "white-sands",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "Recreation.gov", "More Than Just Parks"],
   "trails": [
     {
       "id": "white-sands-alkali-flat",
-      "estimatedTime": "2-3 hrs",
+      "estimatedTime": "3 hrs",
       "bestSeason": "Oct-Apr (extreme heat in summer)",
-      "tags": ["Exposed", "No Shade", "Area Closure"],
-      "trailTip": "As of September 2026, per NPS.gov, the park beyond mile marker 3 — which includes the far end of Alkali Flat — remains within an ongoing public-safety closure first announced in May 2024; check the park's current alerts page before you go, and always carry more water than you think you'll need since there is zero shade on this trail.",
-      "lastVerified": "2026-09-15",
-      "didYouKnow": "Alkali Flat is the dry bed of ancient Lake Otero, and the trail is marked only by orange posts since footprints vanish quickly in the wind-blown gypsum sand.",
+      "tags": ["Exposed", "No Shade", "Missile Range Closures"],
+      "trailTip": "Follow the red diamond markers out and back over repeated 60-ft dunes, carry at least a gallon of water per person (turn back when half is gone), don't start if it's 85°F or hotter, turn around if you can't see the next marker in blowing sand, and be off the trail by sunset — and as of October 2026, per NPS.gov, missile tests on the surrounding range can close Dunes Drive for up to three hours, so check the park's military-testing closure schedule before you go.",
+      "lastVerified": "2026-10-13",
+      "didYouKnow": "Alkali Flat is the dry bed of ancient Lake Otero, and the route is marked only by red diamond posts since footprints vanish quickly in the wind-blown gypsum sand.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
-        { "mile": 0.8, "elevationFt": 80 },
-        { "mile": 1.5, "elevationFt": 150 },
-        { "mile": 2.2, "elevationFt": 190 },
-        { "mile": 3.0, "elevationFt": 200, "label": "Alkali Flat overlook" },
-        { "mile": 3.8, "elevationFt": 140 },
-        { "mile": 4.4, "elevationFt": 70 },
-        { "mile": 5.0, "elevationFt": 0, "label": "Loop end" }
+        { "mile": 0.6, "elevationFt": 80 },
+        { "mile": 1.2, "elevationFt": 150 },
+        { "mile": 1.8, "elevationFt": 190 },
+        { "mile": 2.5, "elevationFt": 200, "label": "Alkali Flat (turnaround)" },
+        { "mile": 3.2, "elevationFt": 190 },
+        { "mile": 3.8, "elevationFt": 150 },
+        { "mile": 4.4, "elevationFt": 80 },
+        { "mile": 5.0, "elevationFt": 0, "label": "Trailhead" }
       ]
     },
     {
@@ -43,9 +44,8 @@
       "id": "white-sands-interdune-boardwalk",
       "estimatedTime": "20-30 min",
       "bestSeason": "Year-Round",
-      "tags": ["Accessible", "Area Closure"],
-      "trailTip": "As of September 2026, per NPS.gov, this boardwalk falls partly within the park's ongoing safety closure beyond mile marker 3 (first announced May 2024) — check current alerts before visiting, since sections may be roped off.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Accessible", "Interpretive"],
+      "trailTip": "This flat 0.4-mile round-trip boardwalk is the park's only fully wheelchair- and stroller-accessible trail, with interpretive exhibits on dune geology, plants, and animals plus a shade canopy and benches — a good midday option when longer dune hikes are too hot.",
       "didYouKnow": "This wheelchair- and stroller-accessible boardwalk was built to protect the fragile interdune crust that supports plant life between the shifting dunes.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
@@ -59,11 +59,10 @@
     },
     {
       "id": "white-sands-backcountry-loop",
-      "estimatedTime": "1.5-2 hrs",
+      "estimatedTime": "2-3 hrs",
       "bestSeason": "Oct-Apr",
-      "tags": ["Area Closure", "Backcountry Campsites"],
-      "trailTip": "As of September 2026, per NPS.gov, this trail lies within the park's ongoing safety closure beyond mile marker 3 (first announced May 2024) and is currently inaccessible — check the park's alerts page for the latest status before planning an overnight trip.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Exposed", "No Shade", "Backcountry Campsites"],
+      "trailTip": "Follow the orange spade markers around this 2-mile loop over 40-50 ft dunes, allow at least two hours, and bring a gallon of water per person plus sun protection since there's no shade or water in the dunefield — it's also a great spot to catch the sunset.",
       "didYouKnow": "The loop connects a set of primitive campsites tucked between dunes, offering one of the only places in the National Park System to camp inside an active dunefield.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
@@ -113,11 +112,11 @@
     {
       "id": "white-sands-sunset-stroll",
       "estimatedTime": "1 hr",
-      "bestSeason": "Currently suspended",
-      "tags": ["Area Closure", "Ranger-Led Only"],
-      "trailTip": "As of September 2026, per NPS.gov, the Sunset Stroll evening program is suspended because its meeting area falls within the park's ongoing safety closure beyond mile marker 3 — check the park's current programs page before planning a visit around this activity.",
-      "lastVerified": "2026-09-15",
-      "didYouKnow": "When it was running, this ranger-led walk was timed to end right as the sun set behind the San Andres Mountains, lighting the gypsum dunes in shades of pink and gold.",
+      "bestSeason": "Year-Round (Fri-Sun evenings, start time shifts with sunset)",
+      "tags": ["Ranger-Led Only", "No Reservations"],
+      "trailTip": "As of October 2026, per NPS.gov, this free ranger-led walk of about half a mile runs Friday through Sunday evenings year-round, meeting at the signed Sunset Stroll parking area just past the Backcountry Camping Loop trailhead; no reservations are taken, and it's canceled during heat advisories, bad weather, or missile range activity, so confirm that day's start time with the visitor center.",
+      "lastVerified": "2026-10-13",
+      "didYouKnow": "This ranger-led walk is timed to end right as the sun sets behind the San Andres Mountains, lighting the gypsum dunes in shades of pink and gold.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Meeting point" },
         { "mile": 0.2, "elevationFt": 20 },

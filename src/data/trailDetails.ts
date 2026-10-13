@@ -1854,14 +1854,15 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "grand-canyon-bright-angel": {
     "id": "grand-canyon-bright-angel",
-    "estimatedTime": "3-6 hrs round trip to Havasupai Gardens",
+    "estimatedTime": "4-6 hrs round trip to Three-Mile Resthouse",
     "bestSeason": "Year-round; avoid midday June-Sept",
     "tags": [
       "Below Rim",
       "Exposure",
-      "Seasonal Closure"
+      "Seasonal Water"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, Bright Angel Trail is closed below its junction with the Tonto Trail (below Havasupai Gardens) after an August 29, 2026 flash flood destroyed the inner-canyon water pipeline, so day hikers should plan to turn around at or above Havasupai Gardens; the park also urges avoiding the Inner Canyon between 10 a.m. and 4 p.m. and carrying more water than feels necessary.",
+    "trailTip": "As of October 2026, per NPS.gov, water at Mile-and-a-Half and Three-Mile Resthouses is normally seasonal (roughly May through October) and Havasupai Gardens normally has water year-round, but pipeline breaks can shut any station off without warning, so carry all the water you need; in summer avoid hiking the inner canyon between 10 a.m. and 4 p.m., plan at least twice as long for the climb out as the descent, check with a ranger before attempting Havasupai Gardens as a day hike, and note that any camping below the rim requires a backcountry permit.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "Bright Angel Trail follows an ancient route used by the Havasupai people for centuries before it was widened into a toll trail by prospector Ralph Cameron in the early 1900s.",
     "elevationProfile": [
       {
@@ -1870,35 +1871,41 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "South Rim Trailhead"
       },
       {
-        "mile": 1,
-        "elevationFt": -1150,
+        "mile": 0.75,
+        "elevationFt": -560
+      },
+      {
+        "mile": 1.5,
+        "elevationFt": -1120,
         "label": "Mile-and-a-Half Resthouse"
       },
       {
-        "mile": 2,
-        "elevationFt": -2150,
-        "label": "Three-Mile Resthouse"
+        "mile": 2.25,
+        "elevationFt": -1620
       },
       {
         "mile": 3,
-        "elevationFt": -3060,
-        "label": "Havasupai Gardens (current turnaround)"
+        "elevationFt": -2120,
+        "label": "Three-Mile Resthouse (turnaround)"
       },
       {
-        "mile": 4,
-        "elevationFt": -2150
+        "mile": 3.75,
+        "elevationFt": -1620
       },
       {
-        "mile": 5,
-        "elevationFt": -1150
+        "mile": 4.5,
+        "elevationFt": -1120
+      },
+      {
+        "mile": 5.25,
+        "elevationFt": -560
       },
       {
         "mile": 6,
         "elevationFt": 0,
         "label": "Back at South Rim"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "grand-canyon-rim-trail": {
     "id": "grand-canyon-rim-trail",
@@ -1953,7 +1960,8 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       "Exposure",
       "No Water"
     ],
-    "trailTip": "Ooh Aah Point sits well above Cedar Ridge and the Tip-Off, so as of September 2026 this short segment remains open even though the South Kaibab Trail is closed below the Tip-Off after the August 2026 flash flood; there is no water anywhere on this trail, so carry it all in.",
+    "trailTip": "As of October 2026, per NPS.gov, there is no water anywhere on the South Kaibab Trail, so carry all you need (at least 4 liters per person in hot weather); the shadeless ridgeline is dangerous in summer between 10 a.m. and 4 p.m., the climb back up typically takes about twice as long as the descent, NPS does not recommend going below Skeleton Point as a day hike, and any camping below the rim requires a backcountry permit.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "South Kaibab was built in the 1920s along an exposed ridgeline specifically so mule trains would not have to pay tolls charged on the privately-run Bright Angel Trail.",
     "elevationProfile": [
       {
@@ -1987,8 +1995,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Back at trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "grand-canyon-hermit-trail": {
     "id": "grand-canyon-hermit-trail",
@@ -2564,9 +2571,11 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "July-Sept",
     "tags": [
       "Bear Country",
-      "Access Closure"
+      "Lake Views",
+      "Steep Return Climb"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the Death Canyon Road and Trailhead are closed to all traffic, including hikers on foot, for a multi-year rehabilitation project expected to run through June 2027, so the trail is not currently reachable from its usual trailhead; check the park's road construction page for detour or reopening updates before planning a trip.",
+    "trailTip": "The trail climbs about a mile to the Phelps Lake Overlook, then drops on switchbacks toward the lake before climbing back up into the canyon along Death Canyon Creek over rocky, talus-lined switchbacks to the historic CCC patrol cabin, so save energy for the climb back over the overlook on the way out. As of October 2026, per NPS.gov, the trailhead sits at the end of a rutted dirt spur road that isn't recommended for low-clearance vehicles (pull fully off the road if you park on the shoulder), trails here can hold snow until mid-July, and bears are commonly active, so carry bear spray and make noise.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "Despite its ominous name, Death Canyon's origin story is uncertain — the most common account traces it to an 1899 survey party member who went missing near the canyon and was never found.",
     "elevationProfile": [
       {
@@ -2609,8 +2618,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Back at trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "grand-teton-leigh-lake": {
     "id": "grand-teton-leigh-lake",
@@ -5811,9 +5819,10 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "Year-round",
     "tags": [
       "Boardwalk",
-      "Construction"
+      "Accessible",
+      "Floodplain"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, a multi-year project replacing low-lying boardwalk sections (B, D, and F) with a higher, sturdier deck began in January 2026 and was expected to finish by summer 2026 — check the park's current conditions page for any remaining rolling detours before you go.",
+    "trailTip": "As of October 2026, per NPS.gov, this flat loop is wheelchair and stroller accessible with benches along the way; its elevated portion stays above most floods, but lower sections sit in a floodplain that overflows roughly ten times a year and can be underwater after heavy rain.",
     "didYouKnow": "The boardwalk winds through one of the tallest and most intact old-growth bottomland hardwood forests left in North America.",
     "elevationProfile": [
       {
@@ -5844,7 +5853,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to Visitor Center"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "congaree-weston-lake": {
     "id": "congaree-weston-lake",
@@ -8033,15 +8042,20 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "voyageurs-kab-ash": {
     "id": "voyageurs-kab-ash",
-    "estimatedTime": "1-2 days (backcountry, one-way)",
-    "bestSeason": "Jun-Sep",
-    "tags": [
-      "Boat Access Only",
-      "Access Closure",
-      "Long Distance"
+    "alertKeywords": [
+      "Salmi Road"
     ],
-    "trailTip": "As of the 2024 NPS.gov trail map update, the Salmi Road access point for the Kab-Ash Trail was closed — confirm current trailhead access with a park visitor center before setting out, or reach the trail via one of the park's ranger-led boat tours instead.",
-    "didYouKnow": "At 14.5 miles, the Kab-Ash Trail is the longest hiking-only route in the park, connecting the Ash River area to Lake Kabetogama across the interior of the peninsula.",
+    "estimatedTime": "1-2 days (backcountry, one-way)",
+    "bestSeason": "Year-round (early spring and fall best for fewer biting insects)",
+    "tags": [
+      "Drive-To Access",
+      "Long Distance",
+      "Wet Sections",
+      "Wayfinding"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, the Kab-Ash is reached by road (no boat needed) from trailheads on the Ash River Trail (County Road 129), Meadwood Road near the Ash River Visitor Center, and the Ash River community; pets are not allowed, and hikers should expect a narrow, sometimes overgrown path with rock cairns over open ledges, swampy lowlands and beaver-flooded stretches, and heavy summer bugs, so carry repellent, plenty of water, and good navigation.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The Kab-Ash is the only large trail network in Voyageurs you can reach year-round without a boat, winding over granite ridges, blueberry barrens, and black spruce and tamarack bogs where wolves use the trail itself to travel between territories.",
     "elevationProfile": [
       {
         "mile": 0,
@@ -8078,8 +8092,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 100,
         "label": "Kabetogama end"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "voyageurs-locator-lake": {
     "id": "voyageurs-locator-lake",
@@ -14582,10 +14595,12 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "estimatedTime": "45 min - 1 hr for the surface approach",
     "bestSeason": "Year-round for the surface trail; the cave itself requires a ranger-guided tour",
     "tags": [
-      "Ranger-Guided Tour Suspended",
-      "Steep Approach"
+      "Steep Approach",
+      "Ranger-Guided Cave",
+      "Desert Heat"
     ],
-    "trailTip": "As of September 2026, per NPS.gov and local news coverage, the ranger-guided Slaughter Canyon Cave tour remains suspended indefinitely due to staffing shortages; the steep half-mile surface approach trail to the cave entrance is still hikeable, but the cave itself cannot currently be entered — confirm current tour status before planning a visit around it.",
+    "trailTip": "As of October 2026, per NPS.gov, the cave itself can only be entered on a ranger-guided tour; the rugged half-mile approach climbs about 500 feet with no shade and takes most hikers around 45 minutes, so start early in summer when temperatures can near 100°F, carry plenty of water, and wear sturdy shoes with good grip for the slippery, unpaved route inside the cave.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "Unlike the main cavern, Slaughter Canyon Cave has no artificial lighting or paved trail, so past tours required every visitor to carry their own flashlight.",
     "elevationProfile": [
       {
@@ -14614,8 +14629,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 500,
         "label": "Cave entrance"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "carlsbad-caverns-guadalupe-ridge": {
     "id": "carlsbad-caverns-guadalupe-ridge",
@@ -14710,15 +14724,16 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "white-sands-alkali-flat": {
     "id": "white-sands-alkali-flat",
-    "estimatedTime": "2-3 hrs",
+    "estimatedTime": "3 hrs",
     "bestSeason": "Oct-Apr (extreme heat in summer)",
     "tags": [
       "Exposed",
       "No Shade",
-      "Area Closure"
+      "Missile Range Closures"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the park beyond mile marker 3 — which includes the far end of Alkali Flat — remains within an ongoing public-safety closure first announced in May 2024; check the park's current alerts page before you go, and always carry more water than you think you'll need since there is zero shade on this trail.",
-    "didYouKnow": "Alkali Flat is the dry bed of ancient Lake Otero, and the trail is marked only by orange posts since footprints vanish quickly in the wind-blown gypsum sand.",
+    "trailTip": "Follow the red diamond markers out and back over repeated 60-ft dunes, carry at least a gallon of water per person (turn back when half is gone), don't start if it's 85°F or hotter, turn around if you can't see the next marker in blowing sand, and be off the trail by sunset — and as of October 2026, per NPS.gov, missile tests on the surrounding range can close Dunes Drive for up to three hours, so check the park's military-testing closure schedule before you go.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "Alkali Flat is the dry bed of ancient Lake Otero, and the route is marked only by red diamond posts since footprints vanish quickly in the wind-blown gypsum sand.",
     "elevationProfile": [
       {
         "mile": 0,
@@ -14726,37 +14741,40 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Trailhead"
       },
       {
-        "mile": 0.8,
+        "mile": 0.6,
         "elevationFt": 80
       },
       {
-        "mile": 1.5,
+        "mile": 1.2,
         "elevationFt": 150
       },
       {
-        "mile": 2.2,
+        "mile": 1.8,
         "elevationFt": 190
       },
       {
-        "mile": 3,
+        "mile": 2.5,
         "elevationFt": 200,
-        "label": "Alkali Flat overlook"
+        "label": "Alkali Flat (turnaround)"
+      },
+      {
+        "mile": 3.2,
+        "elevationFt": 190
       },
       {
         "mile": 3.8,
-        "elevationFt": 140
+        "elevationFt": 150
       },
       {
         "mile": 4.4,
-        "elevationFt": 70
+        "elevationFt": 80
       },
       {
         "mile": 5,
         "elevationFt": 0,
-        "label": "Loop end"
+        "label": "Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "white-sands-dune-life": {
     "id": "white-sands-dune-life",
@@ -14808,9 +14826,9 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "Year-Round",
     "tags": [
       "Accessible",
-      "Area Closure"
+      "Interpretive"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, this boardwalk falls partly within the park's ongoing safety closure beyond mile marker 3 (first announced May 2024) — check current alerts before visiting, since sections may be roped off.",
+    "trailTip": "This flat 0.4-mile round-trip boardwalk is the park's only fully wheelchair- and stroller-accessible trail, with interpretive exhibits on dune geology, plants, and animals plus a shade canopy and benches — a good midday option when longer dune hikes are too hot.",
     "didYouKnow": "This wheelchair- and stroller-accessible boardwalk was built to protect the fragile interdune crust that supports plant life between the shifting dunes.",
     "elevationProfile": [
       {
@@ -14844,18 +14862,18 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "End"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "white-sands-backcountry-loop": {
     "id": "white-sands-backcountry-loop",
-    "estimatedTime": "1.5-2 hrs",
+    "estimatedTime": "2-3 hrs",
     "bestSeason": "Oct-Apr",
     "tags": [
-      "Area Closure",
+      "Exposed",
+      "No Shade",
       "Backcountry Campsites"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, this trail lies within the park's ongoing safety closure beyond mile marker 3 (first announced May 2024) and is currently inaccessible — check the park's alerts page for the latest status before planning an overnight trip.",
+    "trailTip": "Follow the orange spade markers around this 2-mile loop over 40-50 ft dunes, allow at least two hours, and bring a gallon of water per person plus sun protection since there's no shade or water in the dunefield — it's also a great spot to catch the sunset.",
     "didYouKnow": "The loop connects a set of primitive campsites tucked between dunes, offering one of the only places in the National Park System to camp inside an active dunefield.",
     "elevationProfile": [
       {
@@ -14889,8 +14907,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Loop end"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "white-sands-playa": {
     "id": "white-sands-playa",
@@ -14983,13 +15000,14 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   "white-sands-sunset-stroll": {
     "id": "white-sands-sunset-stroll",
     "estimatedTime": "1 hr",
-    "bestSeason": "Currently suspended",
+    "bestSeason": "Year-Round (Fri-Sun evenings, start time shifts with sunset)",
     "tags": [
-      "Area Closure",
-      "Ranger-Led Only"
+      "Ranger-Led Only",
+      "No Reservations"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the Sunset Stroll evening program is suspended because its meeting area falls within the park's ongoing safety closure beyond mile marker 3 — check the park's current programs page before planning a visit around this activity.",
-    "didYouKnow": "When it was running, this ranger-led walk was timed to end right as the sun set behind the San Andres Mountains, lighting the gypsum dunes in shades of pink and gold.",
+    "trailTip": "As of October 2026, per NPS.gov, this free ranger-led walk of about half a mile runs Friday through Sunday evenings year-round, meeting at the signed Sunset Stroll parking area just past the Backcountry Camping Loop trailhead; no reservations are taken, and it's canceled during heat advisories, bad weather, or missile range activity, so confirm that day's start time with the visitor center.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "This ranger-led walk is timed to end right as the sun sets behind the San Andres Mountains, lighting the gypsum dunes in shades of pink and gold.",
     "elevationProfile": [
       {
         "mile": 0,
@@ -15022,8 +15040,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "End"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "white-sands-yucca-picnic": {
     "id": "white-sands-yucca-picnic",
@@ -17122,12 +17139,12 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   "channel-islands-water-canyon": {
     "id": "channel-islands-water-canyon",
     "estimatedTime": "3-3.5 hrs",
-    "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a wildfire burned roughly 18,000 acres (about 40% of the island) in May-June 2026, and some backcountry areas in the island's southeastern quadrant remain closed for the rest of the 2026 season.",
+    "bestSeason": "Year-round on the island, but boats run mainly spring through fall; Aug-Oct brings the calmest seas and least fog, and late winter-spring is wildflower season",
     "tags": [
       "Beach Access",
-      "Fire Recovery"
+      "Windy"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, confirm Santa Rosa Island's current access status before you go — post-fire recovery work is ongoing and some areas are still closed.",
+    "trailTip": "As of October 2026, per NPS.gov, Water Canyon Beach is a flat walk of about 1.5 miles from the pier past Water Canyon Campground, and Santa Rosa is one of the windiest islands — 30-knot winds are not unusual any time of year — so pack a windproof layer and plenty of water, and time your turnaround to the boat's departure.",
     "didYouKnow": "Water Canyon Beach is one of the longest stretches of undeveloped white-sand beach in Southern California.",
     "elevationProfile": [
       {
@@ -17162,17 +17179,20 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to campground"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "channel-islands-torrey-pines": {
     "id": "channel-islands-torrey-pines",
+    "alertKeywords": [
+      "Santa Rosa Island"
+    ],
     "estimatedTime": "1.5-2 hrs",
-    "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
+    "bestSeason": "Year-round on the island, but boats run mainly spring through fall; late spring-early summer fog feeds the grove but can hide the views, while Aug-Oct brings the calmest seas and clearest days",
     "tags": [
       "Rare Grove",
-      "Fire Recovery"
+      "Steep Descent"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, check Santa Rosa Island's current conditions page before planning this hike, since post-fire closures are still in effect in parts of the island.",
+    "trailTip": "As of October 2026, per NPS.gov, you can see the pines from the flat Coastal Road (about 5 miles round trip from the pier) or take the strenuous loop to the top of the grove — go up the western edge and down the steep eastern side for the best views.",
     "didYouKnow": "This grove is one of only two natural populations of Torrey pine on Earth — the other is near San Diego, over 175 miles away.",
     "elevationProfile": [
       {
@@ -17207,17 +17227,17 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to trailhead"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "channel-islands-lobo-canyon": {
     "id": "channel-islands-lobo-canyon",
     "estimatedTime": "3.5-4 hrs",
-    "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
+    "bestSeason": "Year-round on the island, but boats run mainly spring through fall; late winter-spring brings wildflowers, and Aug-Oct the calmest seas — the long distance from the pier suits campers or long summer days",
     "tags": [
       "Canyon",
-      "Fire Recovery"
+      "Signed Route Only"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, confirm current access before setting out — this route crosses backcountry terrain on Santa Rosa Island that may still be affected by the 2026 fire closures.",
+    "trailTip": "As of October 2026, per NPS.gov, you must stay on the signed route along the coast between Lobo Canyon and Cow Canyon to protect sensitive resources, and from the pier this is a strenuous roughly 9-mile round trip — too long for most day-trip schedules, so it's best done from Water Canyon Campground.",
     "didYouKnow": "Lobo Canyon's colorful, wind-carved sandstone walls are one of the most photographed features on Santa Rosa Island.",
     "elevationProfile": [
       {
@@ -17262,7 +17282,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to trailhead"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "channel-islands-signal-peak": {
     "id": "channel-islands-signal-peak",
@@ -18919,13 +18939,18 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "mount-rainier-tolmie-peak": {
     "id": "mount-rainier-tolmie-peak",
+    "alertKeywords": [
+      "Mowich Lake"
+    ],
     "estimatedTime": "3-4 hrs",
     "bestSeason": "Jul-Sep",
     "tags": [
       "Fire Lookout",
-      "Access Closed"
+      "Alpine Lake",
+      "Seasonal Road"
     ],
-    "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, so the Mowich Lake / Carbon River corridor that serves this trailhead has no public vehicle, bike, or foot access from that route — reaching Tolmie Peak currently requires a multi-day backcountry approach via the Wonderland Trail, so confirm current access at nps.gov/mora before planning a trip.",
+    "trailTip": "As of October 2026, per NPS.gov, the rough, mostly unpaved Mowich Lake Road to this trailhead is generally open only from mid-July to mid-October, so plan for a short summer window — the trail rolls gently from Mowich Lake to Eunice Lake, then climbs steeply for the last stretch to the lookout.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "The lookout atop Tolmie Peak was built in 1933 and looks out over Eunice Lake with an unusually close view of Mount Rainier's Mowich Face.",
     "elevationProfile": [
       {
@@ -18964,8 +18989,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Mowich Lake Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "mount-rainier-comet-falls": {
     "id": "mount-rainier-comet-falls",
@@ -19066,13 +19090,18 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "mount-rainier-spray-park": {
     "id": "mount-rainier-spray-park",
+    "alertKeywords": [
+      "Mowich Lake"
+    ],
     "estimatedTime": "4-5 hrs",
     "bestSeason": "Jul-Sep",
     "tags": [
       "Wildflowers",
-      "Access Closed"
+      "Steep Switchbacks",
+      "Seasonal Road"
     ],
-    "trailTip": "As of September 2026, per WSDOT, the trailhead near Mowich Lake has no public vehicle access because the SR 165 Fairfax Bridge is permanently closed — check nps.gov/mora for current approach options before planning this hike.",
+    "trailTip": "As of October 2026, per NPS.gov, the Mowich Lake Road to this trailhead is generally open only from mid-July to mid-October; Spray Falls is a short spur about 2 miles in, after which steep switchbacks climb to the meadows, where you should stay on the main trail and rest on rock to protect the fragile heather.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "Spray Park's wildflower meadows sit near Spray Falls and are among the most extensive subalpine meadow displays in the park.",
     "elevationProfile": [
       {
@@ -19115,8 +19144,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Mowich Lake Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "mount-rainier-summerland": {
     "id": "mount-rainier-summerland",
@@ -19125,9 +19153,10 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "tags": [
       "Wildflowers",
       "Wildlife",
-      "Seasonal Closure"
+      "Steep Finish"
     ],
-    "trailTip": "As of September 2026, per NPS Mount Rainier alerts, the White River/Sunrise approach and nearby Wonderland Trail segments have been subject to temporary wildfire-related closures in late summer, so check current conditions at nps.gov/mora before heading out this time of year.",
+    "trailTip": "As of October 2026, per NPS.gov, this is one of the park's busiest trails — trailhead parking fills early on sunny summer days, camping at popular Summerland Camp requires a wilderness permit, and after a steep final half mile you should stay on the constructed trail and rest on rocks to protect the fragile meadows.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "Summerland's meadows are a reliable place to spot mountain goats grazing on the slopes above Meany Crest.",
     "elevationProfile": [
       {
@@ -19169,8 +19198,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "White River Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "mount-rainier-carbon-river": {
     "id": "mount-rainier-carbon-river",
@@ -19178,21 +19206,21 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "Jun-Sep",
     "tags": [
       "Rainforest",
-      "Access Closed",
-      "Glacier"
+      "Glacier",
+      "Bike Approach"
     ],
-    "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, cutting off the standard Carbon River entrance road — the trail is now reachable only via a long approach on the Wonderland Trail, so confirm current access at nps.gov/mora before planning this hike.",
+    "trailTip": "As of October 2026, per NPS.gov, the old Carbon River Road has been closed to vehicles since the 2006 flood, so you walk or bike about 5 miles from the Carbon River Entrance to Ipsut Creek (bikes aren't allowed past the campground) before this trail begins — log footbridges often wash out over winter, and view the glacier from the trail rather than approaching its snout, where rockfall is common.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "At roughly 3,600 feet, the Carbon Glacier's terminus is the lowest-elevation glacier point in the contiguous United States, thanks to the deep, shaded valley and heavy Cascade snowfall.",
     "elevationProfile": [
       {
         "mile": 0,
         "elevationFt": 0,
-        "label": "Carbon River Trailhead"
+        "label": "Ipsut Creek Trailhead"
       },
       {
         "mile": 1,
-        "elevationFt": 150,
-        "label": "Ipsut Creek"
+        "elevationFt": 150
       },
       {
         "mile": 2,
@@ -19222,10 +19250,9 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       {
         "mile": 8,
         "elevationFt": 0,
-        "label": "Carbon River Trailhead"
+        "label": "Ipsut Creek Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "north-cascades-cascade-pass": {
     "id": "north-cascades-cascade-pass",
@@ -20348,9 +20375,9 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "Year-round (conditions change with eruption activity)",
     "tags": [
       "Volcanic Hazard",
-      "Seasonal Closure"
+      "Rough Terrain"
     ],
-    "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, Kilauea remains at Volcano Alert Level WATCH with intermittent eruptive episodes at the summit; this trail across the 1959 lava lake floor has generally stayed open between active episodes, but conditions change quickly, so check the park's current alerts page and heed any ranger closures for volcanic gas (sulfur dioxide) before hiking.",
+    "trailTip": "As of October 2026, per NPS.gov, this 3.3-mile loop drops and climbs about 400 ft on steep, rocky trail to the 1959 lava-lake floor; follow the existing ahu (cairns) and don't build new ones, watch for deep cracks and razor-sharp lava, and know that the park closes summit trails and overlooks on short notice during Kilauea eruptive episodes, tephra fallout, or seismic unrest. Volcanic gas is most hazardous to people with heart or respiratory conditions, pregnant women, infants, and children, so check air quality before you go.",
     "didYouKnow": "The crater floor you cross was a churning lava lake during the 1959 eruption, and the ground can still be warm to the touch in spots decades later.",
     "elevationProfile": [
       {
@@ -20385,7 +20412,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Loop Return"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "hawaii-volcanoes-devastation": {
     "id": "hawaii-volcanoes-devastation",
@@ -20393,9 +20420,10 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
     "bestSeason": "Year-round (SO2 dependent)",
     "tags": [
       "Volcanic Hazard",
-      "Paved"
+      "Paved",
+      "Wheelchair Accessible"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, this paved summit-area trail can be closed on short notice when volcanic gas (SO2) levels spike during an active eruptive episode, especially for visitors with heart or respiratory conditions; check the park's current conditions page the day of your visit.",
+    "trailTip": "As of October 2026, per NPS.gov, this 1-mile round-trip paved path is wheelchair and stroller accessible, though some sections are steeper than 8%; stay on the pavement and don't handle Pele's hair or fresh tephra, which irritate skin and eyes. Crater Rim Drive East and the Keanakako'i side of the summit, including Devastation, close on short notice during eruptive episodes and heavy tephra fallout (as in March 2026), and volcanic gas is most hazardous to people with heart or respiratory conditions, pregnant women, infants, and children.",
     "didYouKnow": "The trail crosses a barren cinder field created by the 1959 Kilauea Iki eruption, whose cinder fallout killed the forest that once stood here.",
     "elevationProfile": [
       {
@@ -20425,17 +20453,17 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Devastation Trail End"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "hawaii-volcanoes-halemaumau": {
     "id": "hawaii-volcanoes-halemaumau",
-    "estimatedTime": "1-2 hrs (to closure point)",
+    "estimatedTime": "1-2 hrs",
     "bestSeason": "Year-round",
     "tags": [
       "Volcanic Hazard",
-      "Seasonal Closure"
+      "Rockfall Risk"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the Halema'uma'u Trail across the caldera floor is closed beyond stop 10 because of the active eruptive vent building a spatter cone inside Halema'uma'u Crater; hikers can still walk from Volcano House down to the caldera floor, but should not attempt to bypass barricades toward the vent and should watch for elevated SO2 gas.",
+    "trailTip": "As of October 2026, per NPS.gov, this trail starts behind Volcano House and descends about 425 ft through rainforest to the floor of Kaluapele (Kilauea caldera), 0.8 mile one-way, or 1.3 miles to Uealoha (Byron Ledge). It drops from the caldera rim and has a history of dangerous rockfalls, so the park closes it during summit seismic unrest and eruptive activity; stay on the marked trail, never enter closed areas or go near cliff edges, and check air quality first if you have heart or respiratory conditions, are pregnant, or are hiking with infants or children.",
     "didYouKnow": "Halema'uma'u is considered the sacred home of the volcano goddess Pele in Hawaiian tradition, and its crater has repeatedly collapsed and refilled with lava over the past two centuries.",
     "elevationProfile": [
       {
@@ -20459,7 +20487,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       {
         "mile": 1.95,
         "elevationFt": -500,
-        "label": "Stop 10 (closure point, turnaround)"
+        "label": "Stop 10 (turnaround)"
       },
       {
         "mile": 2.6,
@@ -20479,7 +20507,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to Volcano House"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "hawaii-volcanoes-puu-loa": {
     "id": "hawaii-volcanoes-puu-loa",
@@ -21319,15 +21347,20 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "denali-eielson-alpine": {
     "id": "denali-eielson-alpine",
+    "alertKeywords": [
+      "Eielson",
+      "Park Road"
+    ],
     "estimatedTime": "1.5-2 hrs",
     "bestSeason": "Jun-early Sep",
     "tags": [
       "Steep Climb",
       "Bear Country",
-      "Currently Hard to Reach"
+      "Bus Access"
     ],
-    "trailTip": "As of September 2026, per NPS.gov and Alaska Beacon reporting, the Denali Park Road is still closed to vehicles at Mile 43 (Pretty Rocks landslide) and park buses are not running to Eielson (Mile 66) for the rest of this season, so reaching this trailhead currently means biking or hiking roughly 23 extra miles beyond the closure — check nps.gov/dena for updated shuttle status before planning a trip.",
+    "trailTip": "As of October 2026, per NPS.gov, this trail starts at the Eielson Visitor Center (Mile 66), which private cars can't reach in summer — you get there on a park shuttle bus during the summer bus season (roughly mid-May to mid-September), and whether buses go that far depends on how far the Park Road is open, so check current alerts before booking; the trail gains about 1,000 feet in steep switchbacks to the ridgetop, weather on the exposed tundra can turn fast, so pack layers, carry bear spray, and stay at least 300 yards from any bear.",
     "didYouKnow": "The trail climbs Thorofare Ridge for one of the closest frontcountry views of Denali's summit, on the rare days the mountain isn't hidden in its own weather.",
+    "lastVerified": "2026-10-13",
     "elevationProfile": [
       {
         "mile": 0,
@@ -21360,8 +21393,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "denali-savage-alpine": {
     "id": "denali-savage-alpine",
@@ -21410,14 +21442,20 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "denali-mckinley-bar": {
     "id": "denali-mckinley-bar",
+    "alertKeywords": [
+      "Wonder Lake",
+      "Park Road"
+    ],
     "estimatedTime": "2-3 hrs",
     "bestSeason": "Jun-Sep",
     "tags": [
-      "Currently Hard to Reach",
-      "River Gravel Bar"
+      "River Gravel Bar",
+      "Bus Access",
+      "Bear Country"
     ],
-    "trailTip": "As of September 2026, per Alaska Beacon and NPS reporting, park buses are not yet running to Wonder Lake (Mile 85) this season because of the ongoing Mile 43 landslide closure, so this trailhead is currently reachable only by biking or hiking the closed road corridor — check nps.gov/dena for updated shuttle status before planning a trip.",
+    "trailTip": "As of October 2026, per NPS.gov, this trail leaves from near Wonder Lake Campground at Mile 85 of the Park Road, which private cars can't drive in summer, so it's a park-bus destination in the summer bus season (roughly mid-May to mid-September), and access depends on how far the road is open; expect wet meadows, spruce forest, and heavy mosquitoes from mid-June to mid-August (bring a head net), stay 300 yards from bears, and don't wade the glacier-fed McKinley River at trail's end, which NPS calls extremely difficult to cross most of the summer.",
     "didYouKnow": "The mile-wide gravel bar at trail's end was a historic starting point for some of the earliest Denali summit expeditions.",
+    "lastVerified": "2026-10-13",
     "elevationProfile": [
       {
         "mile": 0,
@@ -21450,8 +21488,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "denali-primrose-ridge": {
     "id": "denali-primrose-ridge",

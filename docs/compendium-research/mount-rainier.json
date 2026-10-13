@@ -1,7 +1,7 @@
 {
   "parkId": "mount-rainier",
-  "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov (Mount Rainier National Park)", "WSDOT.wa.gov", "USGS", "Washington Trails Association (WTA)"],
+  "researchedOn": "2026-10-13",
+  "sources": ["NPS.gov (Mount Rainier National Park)", "USGS", "Washington Trails Association (WTA)"],
   "trails": [
     {
       "id": "mount-rainier-skyline",
@@ -39,11 +39,12 @@
     },
     {
       "id": "mount-rainier-tolmie-peak",
+      "alertKeywords": ["Mowich Lake"],
       "estimatedTime": "3-4 hrs",
       "bestSeason": "Jul-Sep",
-      "tags": ["Fire Lookout", "Access Closed"],
-      "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, so the Mowich Lake / Carbon River corridor that serves this trailhead has no public vehicle, bike, or foot access from that route — reaching Tolmie Peak currently requires a multi-day backcountry approach via the Wonderland Trail, so confirm current access at nps.gov/mora before planning a trip.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Fire Lookout", "Alpine Lake", "Seasonal Road"],
+      "trailTip": "As of October 2026, per NPS.gov, the rough, mostly unpaved Mowich Lake Road to this trailhead is generally open only from mid-July to mid-October, so plan for a short summer window — the trail rolls gently from Mowich Lake to Eunice Lake, then climbs steeply for the last stretch to the lookout.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "The lookout atop Tolmie Peak was built in 1933 and looks out over Eunice Lake with an unusually close view of Mount Rainier's Mowich Face.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Mowich Lake Trailhead" },
@@ -94,11 +95,12 @@
     },
     {
       "id": "mount-rainier-spray-park",
+      "alertKeywords": ["Mowich Lake"],
       "estimatedTime": "4-5 hrs",
       "bestSeason": "Jul-Sep",
-      "tags": ["Wildflowers", "Access Closed"],
-      "trailTip": "As of September 2026, per WSDOT, the trailhead near Mowich Lake has no public vehicle access because the SR 165 Fairfax Bridge is permanently closed — check nps.gov/mora for current approach options before planning this hike.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Wildflowers", "Steep Switchbacks", "Seasonal Road"],
+      "trailTip": "As of October 2026, per NPS.gov, the Mowich Lake Road to this trailhead is generally open only from mid-July to mid-October; Spray Falls is a short spur about 2 miles in, after which steep switchbacks climb to the meadows, where you should stay on the main trail and rest on rock to protect the fragile heather.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "Spray Park's wildflower meadows sit near Spray Falls and are among the most extensive subalpine meadow displays in the park.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Mowich Lake Trailhead" },
@@ -116,9 +118,9 @@
       "id": "mount-rainier-summerland",
       "estimatedTime": "5-6 hrs",
       "bestSeason": "Jul-Sep",
-      "tags": ["Wildflowers", "Wildlife", "Seasonal Closure"],
-      "trailTip": "As of September 2026, per NPS Mount Rainier alerts, the White River/Sunrise approach and nearby Wonderland Trail segments have been subject to temporary wildfire-related closures in late summer, so check current conditions at nps.gov/mora before heading out this time of year.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Wildflowers", "Wildlife", "Steep Finish"],
+      "trailTip": "As of October 2026, per NPS.gov, this is one of the park's busiest trails — trailhead parking fills early on sunny summer days, camping at popular Summerland Camp requires a wilderness permit, and after a steep final half mile you should stay on the constructed trail and rest on rocks to protect the fragile meadows.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "Summerland's meadows are a reliable place to spot mountain goats grazing on the slopes above Meany Crest.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "White River Trailhead" },
@@ -136,20 +138,20 @@
       "id": "mount-rainier-carbon-river",
       "estimatedTime": "4-5 hrs",
       "bestSeason": "Jun-Sep",
-      "tags": ["Rainforest", "Access Closed", "Glacier"],
-      "trailTip": "As of September 2026, per WSDOT, the SR 165 Fairfax Bridge remains permanently closed, cutting off the standard Carbon River entrance road — the trail is now reachable only via a long approach on the Wonderland Trail, so confirm current access at nps.gov/mora before planning this hike.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Rainforest", "Glacier", "Bike Approach"],
+      "trailTip": "As of October 2026, per NPS.gov, the old Carbon River Road has been closed to vehicles since the 2006 flood, so you walk or bike about 5 miles from the Carbon River Entrance to Ipsut Creek (bikes aren't allowed past the campground) before this trail begins — log footbridges often wash out over winter, and view the glacier from the trail rather than approaching its snout, where rockfall is common.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "At roughly 3,600 feet, the Carbon Glacier's terminus is the lowest-elevation glacier point in the contiguous United States, thanks to the deep, shaded valley and heavy Cascade snowfall.",
       "elevationProfile": [
-        { "mile": 0, "elevationFt": 0, "label": "Carbon River Trailhead" },
-        { "mile": 1.0, "elevationFt": 150, "label": "Ipsut Creek" },
+        { "mile": 0, "elevationFt": 0, "label": "Ipsut Creek Trailhead" },
+        { "mile": 1.0, "elevationFt": 150 },
         { "mile": 2.0, "elevationFt": 350 },
         { "mile": 3.0, "elevationFt": 550 },
         { "mile": 4.0, "elevationFt": 700, "label": "Carbon Glacier Viewpoint" },
         { "mile": 5.0, "elevationFt": 550 },
         { "mile": 6.0, "elevationFt": 350 },
         { "mile": 7.0, "elevationFt": 150 },
-        { "mile": 8.0, "elevationFt": 0, "label": "Carbon River Trailhead" }
+        { "mile": 8.0, "elevationFt": 0, "label": "Ipsut Creek Trailhead" }
       ]
     }
   ],

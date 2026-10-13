@@ -1,6 +1,6 @@
 {
   "parkId": "carlsbad-caverns",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "Recreation.gov", "AllTrails", "National Parks Traveler", "KFOX/KRQE news coverage"],
   "trails": [
     {
@@ -95,9 +95,9 @@
       "id": "carlsbad-caverns-slaughter-canyon",
       "estimatedTime": "45 min - 1 hr for the surface approach",
       "bestSeason": "Year-round for the surface trail; the cave itself requires a ranger-guided tour",
-      "tags": ["Ranger-Guided Tour Suspended", "Steep Approach"],
-      "trailTip": "As of September 2026, per NPS.gov and local news coverage, the ranger-guided Slaughter Canyon Cave tour remains suspended indefinitely due to staffing shortages; the steep half-mile surface approach trail to the cave entrance is still hikeable, but the cave itself cannot currently be entered — confirm current tour status before planning a visit around it.",
-      "lastVerified": "2026-09-15",
+      "tags": ["Steep Approach", "Ranger-Guided Cave", "Desert Heat"],
+      "trailTip": "As of October 2026, per NPS.gov, the cave itself can only be entered on a ranger-guided tour; the rugged half-mile approach climbs about 500 feet with no shade and takes most hikers around 45 minutes, so start early in summer when temperatures can near 100°F, carry plenty of water, and wear sturdy shoes with good grip for the slippery, unpaved route inside the cave.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "Unlike the main cavern, Slaughter Canyon Cave has no artificial lighting or paved trail, so past tours required every visitor to carry their own flashlight.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },

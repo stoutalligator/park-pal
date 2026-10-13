@@ -1,7 +1,7 @@
 {
   "parkId": "channel-islands",
-  "researchedOn": "2026-09-15",
-  "sources": ["NPS.gov", "NPS Santa Rosa Island Hiking Guide", "NPS Santa Cruz Island Hiking Guide", "AllTrails", "Backpacker Magazine"],
+  "researchedOn": "2026-10-13",
+  "sources": ["NPS.gov", "NPS Santa Rosa Island Hiking Guide", "NPS Santa Cruz Island Hiking Guide", "AllTrails", "Backpacker Magazine", "Island Packers"],
   "trails": [
     {
       "id": "channel-islands-cavern-point",
@@ -73,9 +73,9 @@
     {
       "id": "channel-islands-water-canyon",
       "estimatedTime": "3-3.5 hrs",
-      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a wildfire burned roughly 18,000 acres (about 40% of the island) in May-June 2026, and some backcountry areas in the island's southeastern quadrant remain closed for the rest of the 2026 season.",
-      "tags": ["Beach Access", "Fire Recovery"],
-      "trailTip": "As of September 2026, per NPS.gov, confirm Santa Rosa Island's current access status before you go — post-fire recovery work is ongoing and some areas are still closed.",
+      "bestSeason": "Year-round on the island, but boats run mainly spring through fall; Aug-Oct brings the calmest seas and least fog, and late winter-spring is wildflower season",
+      "tags": ["Beach Access", "Windy"],
+      "trailTip": "As of October 2026, per NPS.gov, Water Canyon Beach is a flat walk of about 1.5 miles from the pier past Water Canyon Campground, and Santa Rosa is one of the windiest islands — 30-knot winds are not unusual any time of year — so pack a windproof layer and plenty of water, and time your turnaround to the boat's departure.",
       "didYouKnow": "Water Canyon Beach is one of the longest stretches of undeveloped white-sand beach in Southern California.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Water Canyon Campground" },
@@ -86,14 +86,15 @@
         { "mile": 5.0, "elevationFt": 200 },
         { "mile": 6.0, "elevationFt": 0, "label": "Return to campground" }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "channel-islands-torrey-pines",
+      "alertKeywords": ["Santa Rosa Island"],
       "estimatedTime": "1.5-2 hrs",
-      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
-      "tags": ["Rare Grove", "Fire Recovery"],
-      "trailTip": "As of September 2026, per NPS.gov, check Santa Rosa Island's current conditions page before planning this hike, since post-fire closures are still in effect in parts of the island.",
+      "bestSeason": "Year-round on the island, but boats run mainly spring through fall; late spring-early summer fog feeds the grove but can hide the views, while Aug-Oct brings the calmest seas and clearest days",
+      "tags": ["Rare Grove", "Steep Descent"],
+      "trailTip": "As of October 2026, per NPS.gov, you can see the pines from the flat Coastal Road (about 5 miles round trip from the pier) or take the strenuous loop to the top of the grove — go up the western edge and down the steep eastern side for the best views.",
       "didYouKnow": "This grove is one of only two natural populations of Torrey pine on Earth — the other is near San Diego, over 175 miles away.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
@@ -104,14 +105,14 @@
         { "mile": 2.5, "elevationFt": 150 },
         { "mile": 3.0, "elevationFt": 0, "label": "Return to trailhead" }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "channel-islands-lobo-canyon",
       "estimatedTime": "3.5-4 hrs",
-      "bestSeason": "Year-round; check current conditions before visiting — as of September 2026, per NPS.gov, Santa Rosa Island reopened for day use on July 1, 2026 after a May-June 2026 wildfire, with some backcountry areas still closed for the remainder of the 2026 season.",
-      "tags": ["Canyon", "Fire Recovery"],
-      "trailTip": "As of September 2026, per NPS.gov, confirm current access before setting out — this route crosses backcountry terrain on Santa Rosa Island that may still be affected by the 2026 fire closures.",
+      "bestSeason": "Year-round on the island, but boats run mainly spring through fall; late winter-spring brings wildflowers, and Aug-Oct the calmest seas — the long distance from the pier suits campers or long summer days",
+      "tags": ["Canyon", "Signed Route Only"],
+      "trailTip": "As of October 2026, per NPS.gov, you must stay on the signed route along the coast between Lobo Canyon and Cow Canyon to protect sensitive resources, and from the pier this is a strenuous roughly 9-mile round trip — too long for most day-trip schedules, so it's best done from Water Canyon Campground.",
       "didYouKnow": "Lobo Canyon's colorful, wind-carved sandstone walls are one of the most photographed features on Santa Rosa Island.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Trailhead" },
@@ -124,7 +125,7 @@
         { "mile": 5.25, "elevationFt": 200, "label": "Canyon rim high point" },
         { "mile": 6.0, "elevationFt": 0, "label": "Return to trailhead" }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "channel-islands-signal-peak",
