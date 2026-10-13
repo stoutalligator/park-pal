@@ -106,6 +106,7 @@ export const ALL_IMAGE_ASSETS: number[] = [
   require('@/assets/parks-scenes/parks-scene-redwood.jpg'),
   require('@/assets/parks-scenes/parks-scene-rocky-mountain.jpg'),
   require('@/assets/parks-scenes/parks-scene-saguaro.jpg'),
+  require('@/assets/parks-scenes/parks-scene-chiricahua.jpg'),
   require('@/assets/parks-scenes/parks-scene-sequoia.jpg'),
   require('@/assets/parks-scenes/parks-scene-shenandoah.jpg'),
   require('@/assets/parks-scenes/parks-scene-theodore-roosevelt.jpg'),

@@ -69,4 +69,4 @@
 | wrangell-st-elias | a massive glacier winding between huge mountains |
 | gates-arctic | remote, roadless tundra mountains |
 | gateway-arch | a tall stainless steel arch over a riverfront skyline |
-| chiricahua (upcoming, #64) | a cluster of tall tan-and-orange rhyolite rock spires, one topped by a huge boulder balanced on a narrow neck (Big Balanced Rock), with a few small pines at the base |
+| chiricahua (upcoming, #64; generated and wired) | a cluster of tall tan-and-orange rhyolite rock spires, one topped by a huge boulder balanced on a narrow neck (Big Balanced Rock), with a few small pines at the base |
