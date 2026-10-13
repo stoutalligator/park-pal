@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Path, Circle } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
@@ -64,22 +64,52 @@ function CarIcon({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
+function CompassIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="12" cy="12" r="9" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path
+        d="M15.2 8.8 13 13l-4.2 2.2L11 11z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Circle cx="12" cy="12" r="0.9" fill={color} />
+    </Svg>
+  );
+}
+
+function CameraIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M9 5.5 7.8 7.7H4.6A1.6 1.6 0 0 0 3 9.3v8.1a1.6 1.6 0 0 0 1.6 1.6h14.8a1.6 1.6 0 0 0 1.6-1.6V9.3a1.6 1.6 0 0 0-1.6-1.6h-3.2L15 5.5z" fill="none" stroke={color} strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" />
+      <Circle cx="12" cy="13" r="3.4" fill="none" stroke={color} strokeWidth={1.6} />
+      <Path d="M17.3 10.4h1.3" stroke={color} strokeWidth={1.3} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+function TrophyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M7.5 3.6h9v5.1a4.5 4.5 0 0 1-9 0z" fill="none" stroke={color} strokeWidth={1.6} strokeLinejoin="round" strokeLinecap="round" />
+      <Path d="M7.5 5H4.8v1.6a3 3 0 0 0 3 3" fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" />
+      <Path d="M16.5 5h2.7v1.6a3 3 0 0 1-3 3" fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" />
+      <Path d="M12 13.2v3.4" stroke={color} strokeWidth={1.5} strokeLinecap="round" />
+      <Path d="M8.7 20.4a3.3 3.3 0 0 1 6.6 0z" fill="none" stroke={color} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
 const STYLES: { label: ExplorerStyle; render: (color: string) => React.ReactElement }[] = [
-  {
-    label: 'Casual Explorer',
-    render: (c) => <Image source={require('@/assets/icons/icon-explore.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
-  },
+  { label: 'Casual Explorer', render: (c) => <CompassIcon color={c} /> },
   { label: 'Road Tripper', render: (c) => <CarIcon color={c} /> },
   { label: 'Hiker', render: (c) => <BootIcon color={c} /> },
-  {
-    label: 'Photographer',
-    render: (c) => <Image source={require('@/assets/icons/icon-photos.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
-  },
+  { label: 'Photographer', render: (c) => <CameraIcon color={c} /> },
   { label: 'Camper', render: (c) => <TentIcon color={c} /> },
-  {
-    label: 'Completionist',
-    render: (c) => <Image source={require('@/assets/icons/icon-achievements.png')} style={[styles.optionIconImg, { tintColor: c }]} resizeMode="contain" />,
-  },
+  { label: 'Completionist', render: (c) => <TrophyIcon color={c} /> },
 ];
 
 export default function EditProfileScreen() {
@@ -159,7 +189,6 @@ const styles = StyleSheet.create({
     ...shadows.sm,
   },
   optionActive: { borderColor: colors.primary, backgroundColor: colors.primary },
-  optionIconImg: { width: 22, height: 22 },
   optionLabel: { ...typography.labelSemiBold, color: colors.textSecondary, textAlign: 'center' },
   optionLabelActive: { color: colors.textInverse },
 
