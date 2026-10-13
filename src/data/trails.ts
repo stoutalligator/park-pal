@@ -18,7 +18,7 @@ export const ALL_TRAILS: Trail[] = [
   { id: 'zion-riverside-walk', parkId: 'zion', name: 'Riverside Walk', description: 'Paved, flat path along the Virgin River to the mouth of The Narrows.', miles: 2.2, elevationGainFt: 57, difficulty: 'Easy' },
   { id: 'zion-canyon-overlook', parkId: 'zion', name: 'Canyon Overlook', description: 'Short but rewarding hike to a cliffside view of lower Zion Canyon.', miles: 1.0, elevationGainFt: 163, difficulty: 'Moderate' },
   { id: 'zion-west-rim', parkId: 'zion', name: 'West Rim Trail', description: 'Long backcountry trail climbing past Scout Lookout to the West Rim plateau.', miles: 14.2, elevationGainFt: 3600, difficulty: 'Hard' },
-  { id: 'zion-observation-point', parkId: 'zion', name: 'Observation Point Trail', description: 'Strenuous climb to a sweeping overlook above Angels Landing.', miles: 8.0, elevationGainFt: 2148, difficulty: 'Hard' },
+  { id: 'zion-observation-point', parkId: 'zion', name: 'Observation Point Trail', description: 'Mostly level mesa-top hike from the East Mesa Trailhead to a sweeping overlook above Angels Landing.', miles: 6.8, elevationGainFt: 300, difficulty: 'Moderate' },
   { id: 'zion-watchman-trail', parkId: 'zion', name: 'Watchman Trail', description: 'Climbs to a viewpoint framing the Watchman formation above the visitor center.', miles: 3.3, elevationGainFt: 610, difficulty: 'Moderate' },
   { id: 'zion-kolob-arch', parkId: 'zion', name: 'Kolob Arch Trail', description: "Long trail through La Verkin Creek to one of the world's longest freestanding arches.", miles: 14.0, elevationGainFt: 800, difficulty: 'Hard' },
 
@@ -560,7 +560,7 @@ export const ALL_TRAILS: Trail[] = [
   { id: 'hawaii-volcanoes-devastation', parkId: 'hawaii-volcanoes', name: 'Devastation Trail', description: 'Paved walk through a stark landscape of volcanic cinder.', miles: 1.0, elevationGainFt: 50, difficulty: 'Easy' },
   { id: 'hawaii-volcanoes-halemaumau', parkId: 'hawaii-volcanoes', name: 'Halemaumau Trail', description: 'Trail along the rim of the summit caldera.', miles: 3.9, elevationGainFt: 500, difficulty: 'Moderate' },
   { id: 'hawaii-volcanoes-puu-loa', parkId: 'hawaii-volcanoes', name: 'Puu Loa Petroglyphs Trail', description: "Short walk to one of Hawaii's largest petroglyph fields.", miles: 1.4, elevationGainFt: 50, difficulty: 'Easy' },
-  { id: 'hawaii-volcanoes-napau-crater', parkId: 'hawaii-volcanoes', name: 'Napau Crater Trail', description: 'Remote trail across lava fields to an active crater.', miles: 14.0, elevationGainFt: 900, difficulty: 'Hard' },
+  { id: 'hawaii-volcanoes-napau-crater', parkId: 'hawaii-volcanoes', name: 'Napau Crater Trail', description: 'Remote East Rift Zone trail across lava fields to Napau Crater.', miles: 12.4, elevationGainFt: 900, difficulty: 'Hard' },
   { id: 'hawaii-volcanoes-thurston-lava-tube', parkId: 'hawaii-volcanoes', name: 'Thurston Lava Tube Trail', description: 'Short walk through a natural lava tube cave.', miles: 0.4, elevationGainFt: 50, difficulty: 'Easy' },
   { id: 'hawaii-volcanoes-kipuka-puaulu', parkId: 'hawaii-volcanoes', name: 'Kipuka Puaulu Trail', description: 'Loop through an old-growth forest island surrounded by lava.', miles: 1.2, elevationGainFt: 100, difficulty: 'Easy' },
   { id: 'hawaii-volcanoes-mauna-iki', parkId: 'hawaii-volcanoes', name: 'Mauna Iki Trail', description: "Remote trail across the Ka'u Desert lava fields.", miles: 8.0, elevationGainFt: 500, difficulty: 'Moderate' },

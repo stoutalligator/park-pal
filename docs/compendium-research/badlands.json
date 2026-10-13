@@ -1,6 +1,6 @@
 {
   "parkId": "badlands",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": [
     "NPS.gov",
     "AllTrails",
@@ -11,15 +11,13 @@
   "trails": [
     {
       "id": "badlands-notch",
-      "estimatedTime": "1-1.5 hrs",
+      "estimatedTime": "1.5-2 hrs",
       "bestSeason": "Apr-Oct (avoid ice/snow on the log ladder in winter)",
       "tags": [
         "Ladder Climb",
-        "Exposure",
-        "Trail Closure"
+        "Exposure"
       ],
-      "trailTip": "As of September 2026, per NPS.gov, the Notch Trail's log ladder section is closed until further notice for safety repairs, with the closure extending to all areas within 100 feet of the trail — check the park's current alerts page before heading out.",
-      "lastVerified": "2026-09-15",
+      "trailTip": "The log-and-cable ladder and the narrow ledge beyond it come with steep drop-offs and loose gravel, so wear boots with ankle support, skip it if you're uneasy with heights, avoid it during or right after rain when the clay turns treacherous, and carry plenty of water (NPS suggests two quarts per person for a two-hour hike).",
       "didYouKnow": "The trail's final overlook frames the White River Valley, one of the few spots in the park where hikers can see all the way to the river that carved the badlands formations over millions of years.",
       "elevationProfile": [
         {

@@ -779,13 +779,14 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "zion-observation-point": {
     "id": "zion-observation-point",
-    "estimatedTime": "5-6 hrs",
-    "bestSeason": "Year-round",
+    "estimatedTime": "3-4 hrs",
+    "bestSeason": "May-Oct (access road often muddy or impassable in winter/spring)",
     "tags": [
       "Overlook",
-      "Trail Rerouted"
+      "4WD Access"
     ],
-    "trailTip": "As of September 2026, per NPS, the classic Weeping Rock route to Observation Point remains closed due to rockfall damage — the only current access is via the East Mesa Trail, which is actually an easier approach than the old route.",
+    "trailTip": "Since a major rockfall cut the old Weeping Rock route from Zion Canyon, Observation Point is reached from the east on the mostly level East Mesa Trail; as of October 2026, per NPS.gov, its trailhead is reachable only by high-clearance/4WD dirt roads off North Fork Road that can turn impassable with mud in winter, spring, and after storms, so check road conditions and never park on the neighboring private land.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "At 6,507 feet, Observation Point looks down on Angels Landing from nearly 700 feet above it.",
     "elevationProfile": [
       {
@@ -794,53 +795,40 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "East Mesa Trailhead"
       },
       {
-        "mile": 0.6,
-        "elevationFt": 400
+        "mile": 1,
+        "elevationFt": -40
       },
       {
-        "mile": 1.2,
-        "elevationFt": 800
+        "mile": 2,
+        "elevationFt": -120
       },
       {
-        "mile": 1.8,
-        "elevationFt": 1200
+        "mile": 2.8,
+        "elevationFt": -240
       },
       {
-        "mile": 2.4,
-        "elevationFt": 1600
-      },
-      {
-        "mile": 3.2,
-        "elevationFt": 1950
-      },
-      {
-        "mile": 4,
-        "elevationFt": 2148,
+        "mile": 3.4,
+        "elevationFt": -300,
         "label": "Observation Point"
       },
       {
+        "mile": 4,
+        "elevationFt": -240
+      },
+      {
         "mile": 4.8,
-        "elevationFt": 1750
+        "elevationFt": -120
       },
       {
-        "mile": 5.6,
-        "elevationFt": 1300
+        "mile": 5.8,
+        "elevationFt": -40
       },
       {
-        "mile": 6.4,
-        "elevationFt": 850
-      },
-      {
-        "mile": 7.2,
-        "elevationFt": 400
-      },
-      {
-        "mile": 8,
+        "mile": 6.8,
         "elevationFt": 0,
         "label": "Trailhead return"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "zion-watchman-trail": {
     "id": "zion-watchman-trail",
@@ -2113,7 +2101,8 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       "Seasonal Closure",
       "Permit Required"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the entire North Kaibab Trail is closed until further notice following the August 29, 2026 flash flood, and a separate closure begins October 15, 2026 between Redwall Bridge and Cottonwood Campground for waterline repair work; the trail is also only accessible when the North Rim itself is open, roughly mid-May through mid-November depending on weather, and overnight stays below the rim require a backcountry permit.",
+    "trailTip": "As of October 2026, per NPS.gov, this trail is reachable only while the North Rim is open (full services roughly May 15 to Oct 15, with day use often continuing until the first major snowstorm or Nov 30), and any overnight stay below the rim, including Cottonwood Campground, requires a backcountry permit; inner-canyon heat is extreme in summer, so start at dawn, carry plenty of water and salty snacks, and treat Roaring Springs as a day hiker's turnaround since the climb back out is the hard part.",
+    "lastVerified": "2026-10-13",
     "didYouKnow": "North Kaibab is the only maintained trail descending from the North Rim, and at full length it drops nearly 6,000 feet to the Colorado River — deeper than the depth of the Grand Canyon at many South Rim overlooks.",
     "elevationProfile": [
       {
@@ -2148,8 +2137,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": -5850,
         "label": "Colorado River / Phantom Ranch"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "grand-canyon-widforss": {
     "id": "grand-canyon-widforss",
@@ -8647,14 +8635,13 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "badlands-notch": {
     "id": "badlands-notch",
-    "estimatedTime": "1-1.5 hrs",
+    "estimatedTime": "1.5-2 hrs",
     "bestSeason": "Apr-Oct (avoid ice/snow on the log ladder in winter)",
     "tags": [
       "Ladder Climb",
-      "Exposure",
-      "Trail Closure"
+      "Exposure"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, the Notch Trail's log ladder section is closed until further notice for safety repairs, with the closure extending to all areas within 100 feet of the trail — check the park's current alerts page before heading out.",
+    "trailTip": "The log-and-cable ladder and the narrow ledge beyond it come with steep drop-offs and loose gravel, so wear boots with ankle support, skip it if you're uneasy with heights, avoid it during or right after rain when the clay turns treacherous, and carry plenty of water (NPS suggests two quarts per person for a two-hour hike).",
     "didYouKnow": "The trail's final overlook frames the White River Valley, one of the few spots in the park where hikers can see all the way to the river that carved the badlands formations over millions of years.",
     "elevationProfile": [
       {
@@ -8694,8 +8681,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Return to trailhead"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "badlands-door": {
     "id": "badlands-door",
@@ -19683,12 +19669,14 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   "crater-lake-cleetwood-cove": {
     "id": "crater-lake-cleetwood-cove",
     "estimatedTime": "1.5-2 hrs when open",
-    "bestSeason": "Normally Jun-Sep; closed for rehabilitation as of 2026",
+    "bestSeason": "Jun-Oct (when open, snow permitting)",
     "tags": [
-      "Trail Closed",
-      "Construction"
+      "Lakeshore Access",
+      "Steep Switchbacks",
+      "Swimming",
+      "Seasonal Closure"
     ],
-    "trailTip": "As of September 2026, per NPS.gov, Cleetwood Cove Trail — the only legal access to the lakeshore — is closed for a multi-year trail and marina rehabilitation project spanning the 2026, 2027, and 2028 seasons, and boat tours are paused during that time; do not attempt to hike down to the water while it's closed.",
+    "trailTip": "As of October 2026, per NPS.gov, this is the only legal route to the lakeshore and is usually open from mid/late June to late October depending on snow (it opens each year only after roads are plowed); the 1.1-mile descent drops 700 ft on loose pumice switchbacks, so save energy for the climb out — NPS likens it to 65 flights of stairs — and if you swim, stay within 100 yards of the cove in water that averages about 57°F in summer.",
     "didYouKnow": "Even when open, this is the only trail in the park that reaches the lake's edge, since the caldera's other walls are too steep to descend safely.",
     "elevationProfile": [
       {
@@ -19731,7 +19719,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "label": "Return to rim"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "crater-lake-watchman-peak": {
     "id": "crater-lake-watchman-peak",
@@ -20536,65 +20524,65 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   "hawaii-volcanoes-napau-crater": {
     "id": "hawaii-volcanoes-napau-crater",
     "estimatedTime": "8-10 hrs",
-    "bestSeason": "Variable — closed during active East Rift Zone unrest",
+    "bestSeason": "Year-round when open — closes during East Rift Zone eruptive unrest",
     "tags": [
       "Volcanic Hazard",
-      "Seasonal Closure",
-      "Remote"
+      "Remote",
+      "No Water"
     ],
-    "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, this East Rift Zone route (via the Naulu Trail) has a documented history of being fully closed for extended periods during eruptive unrest due to gas emissions, ground cracking, and wildfire risk near Pu'u 'O'o and Maunaulu, and the park sustained further trail damage from Hurricane Lala in August 2026; confirm current status on the park's alerts page or by calling the visitor center (808-985-6011) before attempting it, since it may be closed at any given time.",
+    "trailTip": "As of October 2026, per NPS.gov, the Napau Trail starts at the Maunaulu parking area and the park closes it in whole or part during East Rift Zone eruptive unrest (gas, new ground cracks, wildfire), as in 2011 and 2024; no day-hike permit is listed, but any overnight stay requires a $10 backcountry permit via Recreation.gov, and there is no drinking water anywhere on the route.",
     "didYouKnow": "The trail leads to Napau Crater near Pu'u 'O'o, a vent that erupted almost continuously from 1983 to 2018 and reshaped this part of the rift zone.",
     "elevationProfile": [
       {
         "mile": 0,
         "elevationFt": 0,
-        "label": "Trailhead"
+        "label": "Maunaulu Trailhead"
       },
       {
-        "mile": 1.5,
+        "mile": 1.3,
         "elevationFt": 300
       },
       {
-        "mile": 3,
+        "mile": 2.7,
         "elevationFt": -300
       },
       {
-        "mile": 4.5,
+        "mile": 4,
         "elevationFt": 100,
         "label": "Naulu Trail Junction"
       },
       {
-        "mile": 5.5,
+        "mile": 4.9,
         "elevationFt": -450
       },
       {
-        "mile": 7,
+        "mile": 6.2,
         "elevationFt": -600,
         "label": "Napau Crater Overlook (turnaround)"
       },
       {
-        "mile": 8.5,
+        "mile": 7.5,
         "elevationFt": -450
       },
       {
-        "mile": 10,
+        "mile": 8.9,
         "elevationFt": 100
       },
       {
-        "mile": 11.5,
+        "mile": 10.2,
         "elevationFt": -300
       },
       {
-        "mile": 12.5,
+        "mile": 11.1,
         "elevationFt": 300
       },
       {
-        "mile": 14,
+        "mile": 12.4,
         "elevationFt": 0,
         "label": "Return to trailhead"
       }
     ],
-    "lastVerified": "2026-09-15"
+    "lastVerified": "2026-10-13"
   },
   "hawaii-volcanoes-thurston-lava-tube": {
     "id": "hawaii-volcanoes-thurston-lava-tube",
@@ -20638,12 +20626,14 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
   },
   "hawaii-volcanoes-kipuka-puaulu": {
     "id": "hawaii-volcanoes-kipuka-puaulu",
-    "estimatedTime": "1 hr",
-    "bestSeason": "Currently closed",
+    "estimatedTime": "1-1.5 hrs",
+    "bestSeason": "Year-round (early morning best for birds)",
     "tags": [
-      "Seasonal Closure"
+      "Birding",
+      "Native Forest",
+      "Easy Loop"
     ],
-    "trailTip": "As of September 2026, per NPS.gov's August 24, 2026 park reopening notice, the Kipuka Puaulu Trail remains closed due to hazardous storm-damaged trees following Hurricane Lala; check the park's current conditions page before planning a visit, as this closure has no announced reopening date.",
+    "trailTip": "Walk this gentle 1.2-mile dirt loop early in the morning, when native birds like the red 'apapane are most active; move slowly, pause often, and use binoculars rather than leaving the trail to close in, skip playing recorded bird calls, and bring rain gear since mist is common.",
     "didYouKnow": "Kipuka Puaulu (\"Bird Park\") is an ecological island of old-growth forest that was spared by surrounding lava flows, sheltering native trees and birds found nowhere else nearby.",
     "elevationProfile": [
       {
@@ -20673,8 +20663,7 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
         "elevationFt": 0,
         "label": "Loop Return"
       }
-    ],
-    "lastVerified": "2026-09-15"
+    ]
   },
   "hawaii-volcanoes-mauna-iki": {
     "id": "hawaii-volcanoes-mauna-iki",

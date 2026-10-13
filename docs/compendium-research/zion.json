@@ -1,6 +1,6 @@
 {
   "parkId": "zion",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "AllTrails", "St George Utah News", "National Parks Traveler", "Bearfoot Theory"],
   "trails": [
     {
@@ -127,25 +127,22 @@
     },
     {
       "id": "zion-observation-point",
-      "estimatedTime": "5-6 hrs",
-      "bestSeason": "Year-round",
-      "tags": ["Overlook", "Trail Rerouted"],
-      "trailTip": "As of September 2026, per NPS, the classic Weeping Rock route to Observation Point remains closed due to rockfall damage — the only current access is via the East Mesa Trail, which is actually an easier approach than the old route.",
-      "lastVerified": "2026-09-15",
+      "estimatedTime": "3-4 hrs",
+      "bestSeason": "May-Oct (access road often muddy or impassable in winter/spring)",
+      "tags": ["Overlook", "4WD Access"],
+      "trailTip": "Since a major rockfall cut the old Weeping Rock route from Zion Canyon, Observation Point is reached from the east on the mostly level East Mesa Trail; as of October 2026, per NPS.gov, its trailhead is reachable only by high-clearance/4WD dirt roads off North Fork Road that can turn impassable with mud in winter, spring, and after storms, so check road conditions and never park on the neighboring private land.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "At 6,507 feet, Observation Point looks down on Angels Landing from nearly 700 feet above it.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "East Mesa Trailhead" },
-        { "mile": 0.6, "elevationFt": 400 },
-        { "mile": 1.2, "elevationFt": 800 },
-        { "mile": 1.8, "elevationFt": 1200 },
-        { "mile": 2.4, "elevationFt": 1600 },
-        { "mile": 3.2, "elevationFt": 1950 },
-        { "mile": 4.0, "elevationFt": 2148, "label": "Observation Point" },
-        { "mile": 4.8, "elevationFt": 1750 },
-        { "mile": 5.6, "elevationFt": 1300 },
-        { "mile": 6.4, "elevationFt": 850 },
-        { "mile": 7.2, "elevationFt": 400 },
-        { "mile": 8.0, "elevationFt": 0, "label": "Trailhead return" }
+        { "mile": 1.0, "elevationFt": -40 },
+        { "mile": 2.0, "elevationFt": -120 },
+        { "mile": 2.8, "elevationFt": -240 },
+        { "mile": 3.4, "elevationFt": -300, "label": "Observation Point" },
+        { "mile": 4.0, "elevationFt": -240 },
+        { "mile": 4.8, "elevationFt": -120 },
+        { "mile": 5.8, "elevationFt": -40 },
+        { "mile": 6.8, "elevationFt": 0, "label": "Trailhead return" }
       ]
     },
     {

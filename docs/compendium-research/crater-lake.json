@@ -1,6 +1,6 @@
 {
   "parkId": "crater-lake",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": ["NPS.gov", "NPS Cleetwood Cove Trail and Marina Rehabilitation page", "Crater Lake Institute", "AllTrails"],
   "trails": [
     {
@@ -24,9 +24,9 @@
     {
       "id": "crater-lake-cleetwood-cove",
       "estimatedTime": "1.5-2 hrs when open",
-      "bestSeason": "Normally Jun-Sep; closed for rehabilitation as of 2026",
-      "tags": ["Trail Closed", "Construction"],
-      "trailTip": "As of September 2026, per NPS.gov, Cleetwood Cove Trail — the only legal access to the lakeshore — is closed for a multi-year trail and marina rehabilitation project spanning the 2026, 2027, and 2028 seasons, and boat tours are paused during that time; do not attempt to hike down to the water while it's closed.",
+      "bestSeason": "Jun-Oct (when open, snow permitting)",
+      "tags": ["Lakeshore Access", "Steep Switchbacks", "Swimming", "Seasonal Closure"],
+      "trailTip": "As of October 2026, per NPS.gov, this is the only legal route to the lakeshore and is usually open from mid/late June to late October depending on snow (it opens each year only after roads are plowed); the 1.1-mile descent drops 700 ft on loose pumice switchbacks, so save energy for the climb out — NPS likens it to 65 flights of stairs — and if you swim, stay within 100 yards of the cove in water that averages about 57°F in summer.",
       "didYouKnow": "Even when open, this is the only trail in the park that reaches the lake's edge, since the caldera's other walls are too steep to descend safely.",
       "elevationProfile": [
         { "mile": 0, "elevationFt": 0, "label": "Rim trailhead" },
@@ -39,7 +39,7 @@
         { "mile": 2.0, "elevationFt": -200 },
         { "mile": 2.2, "elevationFt": 0, "label": "Return to rim" }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "crater-lake-watchman-peak",

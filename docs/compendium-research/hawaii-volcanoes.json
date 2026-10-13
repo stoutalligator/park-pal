@@ -1,6 +1,6 @@
 {
   "parkId": "hawaii-volcanoes",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": [
     "NPS.gov",
     "USGS Hawaiian Volcano Observatory (HVO)",
@@ -191,65 +191,65 @@
     {
       "id": "hawaii-volcanoes-napau-crater",
       "estimatedTime": "8-10 hrs",
-      "bestSeason": "Variable — closed during active East Rift Zone unrest",
+      "bestSeason": "Year-round when open — closes during East Rift Zone eruptive unrest",
       "tags": [
         "Volcanic Hazard",
-        "Seasonal Closure",
-        "Remote"
+        "Remote",
+        "No Water"
       ],
-      "trailTip": "As of September 2026, per NPS.gov and USGS/HVO, this East Rift Zone route (via the Naulu Trail) has a documented history of being fully closed for extended periods during eruptive unrest due to gas emissions, ground cracking, and wildfire risk near Pu'u 'O'o and Maunaulu, and the park sustained further trail damage from Hurricane Lala in August 2026; confirm current status on the park's alerts page or by calling the visitor center (808-985-6011) before attempting it, since it may be closed at any given time.",
+      "trailTip": "As of October 2026, per NPS.gov, the Napau Trail starts at the Maunaulu parking area and the park closes it in whole or part during East Rift Zone eruptive unrest (gas, new ground cracks, wildfire), as in 2011 and 2024; no day-hike permit is listed, but any overnight stay requires a $10 backcountry permit via Recreation.gov, and there is no drinking water anywhere on the route.",
       "didYouKnow": "The trail leads to Napau Crater near Pu'u 'O'o, a vent that erupted almost continuously from 1983 to 2018 and reshaped this part of the rift zone.",
       "elevationProfile": [
         {
           "mile": 0,
           "elevationFt": 0,
-          "label": "Trailhead"
+          "label": "Maunaulu Trailhead"
         },
         {
-          "mile": 1.5,
+          "mile": 1.3,
           "elevationFt": 300
         },
         {
-          "mile": 3,
+          "mile": 2.7,
           "elevationFt": -300
         },
         {
-          "mile": 4.5,
+          "mile": 4.0,
           "elevationFt": 100,
           "label": "Naulu Trail Junction"
         },
         {
-          "mile": 5.5,
+          "mile": 4.9,
           "elevationFt": -450
         },
         {
-          "mile": 7,
+          "mile": 6.2,
           "elevationFt": -600,
           "label": "Napau Crater Overlook (turnaround)"
         },
         {
-          "mile": 8.5,
+          "mile": 7.5,
           "elevationFt": -450
         },
         {
-          "mile": 10,
+          "mile": 8.9,
           "elevationFt": 100
         },
         {
-          "mile": 11.5,
+          "mile": 10.2,
           "elevationFt": -300
         },
         {
-          "mile": 12.5,
+          "mile": 11.1,
           "elevationFt": 300
         },
         {
-          "mile": 14,
+          "mile": 12.4,
           "elevationFt": 0,
           "label": "Return to trailhead"
         }
       ],
-      "lastVerified": "2026-09-15"
+      "lastVerified": "2026-10-13"
     },
     {
       "id": "hawaii-volcanoes-thurston-lava-tube",
@@ -293,12 +293,14 @@
     },
     {
       "id": "hawaii-volcanoes-kipuka-puaulu",
-      "estimatedTime": "1 hr",
-      "bestSeason": "Currently closed",
+      "estimatedTime": "1-1.5 hrs",
+      "bestSeason": "Year-round (early morning best for birds)",
       "tags": [
-        "Seasonal Closure"
+        "Birding",
+        "Native Forest",
+        "Easy Loop"
       ],
-      "trailTip": "As of September 2026, per NPS.gov's August 24, 2026 park reopening notice, the Kipuka Puaulu Trail remains closed due to hazardous storm-damaged trees following Hurricane Lala; check the park's current conditions page before planning a visit, as this closure has no announced reopening date.",
+      "trailTip": "Walk this gentle 1.2-mile dirt loop early in the morning, when native birds like the red 'apapane are most active; move slowly, pause often, and use binoculars rather than leaving the trail to close in, skip playing recorded bird calls, and bring rain gear since mist is common.",
       "didYouKnow": "Kipuka Puaulu (\"Bird Park\") is an ecological island of old-growth forest that was spared by surrounding lava flows, sheltering native trees and birds found nowhere else nearby.",
       "elevationProfile": [
         {
@@ -328,8 +330,7 @@
           "elevationFt": 0,
           "label": "Loop Return"
         }
-      ],
-      "lastVerified": "2026-09-15"
+      ]
     },
     {
       "id": "hawaii-volcanoes-mauna-iki",

@@ -1,6 +1,6 @@
 {
   "parkId": "grand-canyon",
-  "researchedOn": "2026-09-15",
+  "researchedOn": "2026-10-13",
   "sources": [
     "NPS.gov",
     "AllTrails",
@@ -258,8 +258,8 @@
         "Seasonal Closure",
         "Permit Required"
       ],
-      "trailTip": "As of September 2026, per NPS.gov, the entire North Kaibab Trail is closed until further notice following the August 29, 2026 flash flood, and a separate closure begins October 15, 2026 between Redwall Bridge and Cottonwood Campground for waterline repair work; the trail is also only accessible when the North Rim itself is open, roughly mid-May through mid-November depending on weather, and overnight stays below the rim require a backcountry permit.",
-      "lastVerified": "2026-09-15",
+      "trailTip": "As of October 2026, per NPS.gov, this trail is reachable only while the North Rim is open (full services roughly May 15 to Oct 15, with day use often continuing until the first major snowstorm or Nov 30), and any overnight stay below the rim, including Cottonwood Campground, requires a backcountry permit; inner-canyon heat is extreme in summer, so start at dawn, carry plenty of water and salty snacks, and treat Roaring Springs as a day hiker's turnaround since the climb back out is the hard part.",
+      "lastVerified": "2026-10-13",
       "didYouKnow": "North Kaibab is the only maintained trail descending from the North Rim, and at full length it drops nearly 6,000 feet to the Colorado River — deeper than the depth of the Grand Canyon at many South Rim overlooks.",
       "elevationProfile": [
         {
