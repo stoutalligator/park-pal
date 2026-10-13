@@ -28,7 +28,7 @@ function stampRotation(seed: string): number {
 interface Props {
   trip: Trip;
   ink: string;
-  // Diameter of the round stamp; the passport uses the default.
+  // Diameter of the round stamp.
   size?: number;
   // The recap card already names the park in its title.
   hideName?: boolean;

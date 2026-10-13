@@ -19,6 +19,7 @@ const TEXTURE = require('@/assets/textures/texture-cream.png');
 const MASCOT = require('@/assets/mascot/mascot-happy.png');
 
 const PHOTO_AREA_HEIGHT = 188;
+const TEXTURE_BLEED = 40;
 const MAX_PHOTOS = 3;
 const MAX_CHIP_CHARS = 44;
 
@@ -202,7 +203,20 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 22,
   },
-  texture: { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%', opacity: 0.55 },
+  // The texture PNG has its own rounded frame baked in ~10px from its edges,
+  // which `cover` crops on the sides but not top/bottom, leaving a stray line
+  // just off the card's real frame. Oversizing the image pushes every baked
+  // edge outside the card's overflow:hidden bounds.
+  // Explicit width/height (not just insets) because react-native-web renders
+  // an Image without them at the PNG's tiny intrinsic size.
+  texture: {
+    position: 'absolute',
+    top: -TEXTURE_BLEED,
+    left: -TEXTURE_BLEED,
+    width: RECAP_CARD_WIDTH + TEXTURE_BLEED * 2,
+    height: RECAP_CARD_HEIGHT + TEXTURE_BLEED * 2,
+    opacity: 0.55,
+  },
   frame: {
     position: 'absolute',
     top: 8,

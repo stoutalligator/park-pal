@@ -47,6 +47,11 @@ Badges tied to an unlockable Park Pal (Island Fox, Puffin, and future ones) have
 | everglades-manatee | Seeking Sea Cows | a Florida manatee gliding past seagrass and mangrove roots (see unlockable-pals.md) |
 | half-dome | Cable Climber | Half Dome's granite face with its cables (see profile-backgrounds.md) |
 | near-death | Near Death | a chain-link handhold on a narrow cliffside trail |
+| canyonlands-needles | Needle in a Haystack | a cluster of red-and-cream banded sandstone spires (Canyonlands' Needles District), with a tiny silver sewing needle and a loop of orange thread tucked playfully among the spires |
+| capitol-reef-apples (secret) | Bobbing for Apples | a red apple bobbing in a small wooden barrel of water, with an orchard tree branch above and red cliffs behind (see unlockable-pals.md) |
+| delicate-arch | An Arch Delicacy | Delicate Arch standing alone on the rim of a smooth slickrock bowl, glowing orange at golden hour, snowcapped La Sal Mountains small in the distance |
+| hoodoo-queen | Hoodoo Queen | a tall orange-and-cream hoodoo spire wearing a small golden crown on its cap rock, with smaller hoodoos and a few green pines at its base |
+| grand-canyon-both-rims | Salt or Sugar? Both! | a layered red-and-orange Grand Canyon cross-section with the Colorado River winding through the bottom, a tiny salt shaker on the left (South) rim among junipers and a tiny sugar bowl on the right (North) rim among tall pines |
 | night-owl (secret) | Night Owl | an owl perched under a crescent moon and stars |
 | globe-trotter (secret) | Globe Trotter | a globe with two location pins, one near Alaska one near Hawaii |
 | perfect-trip (secret) | Perfect Trip | a five-star ribbon beside a camera and journal |

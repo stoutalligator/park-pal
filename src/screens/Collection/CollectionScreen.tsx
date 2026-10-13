@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Path, Rect } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
@@ -24,7 +25,7 @@ export default function CollectionScreen() {
   const lockedBadges = badges.filter((b) => !b.earned);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="Badge Collection" onBack={() => navigation.goBack()} />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Polyline, Rect, Line, Circle } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
@@ -68,7 +69,7 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
 
   if (!trail) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView edges={['top']} style={styles.container}>
         <ScreenHeader title="Trail" onBack={() => navigation.goBack()} />
         <Text style={styles.notFound}>Trail not found.</Text>
       </SafeAreaView>
@@ -78,7 +79,7 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
   const completed = isTrailCompleted(trail.id);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader
         title={trail.name}
         onBack={() => navigation.goBack()}

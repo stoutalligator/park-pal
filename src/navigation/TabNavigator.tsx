@@ -28,7 +28,7 @@ import LogTripScreen from '@/screens/LogTrip/LogTripScreen';
 import TripsScreen from '@/screens/Trips/TripsScreen';
 import TripDetailScreen from '@/screens/Trips/TripDetailScreen';
 import ProfileScreen from '@/screens/Profile/ProfileScreen';
-import PassportScreen from '@/screens/Passport/PassportScreen';
+import PostcardsScreen from '@/screens/Postcards/PostcardsScreen';
 import CollectionScreen from '@/screens/Collection/CollectionScreen';
 import StatsScreen from '@/screens/Stats/StatsScreen';
 import WishlistScreen from '@/screens/Wishlist/WishlistScreen';
@@ -103,7 +103,7 @@ function ProfileStackNav() {
   return (
     <ProfileStack.Navigator screenOptions={{ headerShown: false }}>
       <ProfileStack.Screen name="Profile" component={ProfileScreen} />
-      <ProfileStack.Screen name="Passport" component={PassportScreen} />
+      <ProfileStack.Screen name="Postcards" component={PostcardsScreen} />
       <ProfileStack.Screen name="Collection" component={CollectionScreen} />
       <ProfileStack.Screen name="Stats" component={StatsScreen} />
       <ProfileStack.Screen name="Wishlist" component={WishlistScreen} />

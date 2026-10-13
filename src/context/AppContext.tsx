@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import * as Crypto from 'expo-crypto';
 import type { Session } from '@supabase/supabase-js';
-import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, ActivityType, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput, TrailCompletionRow, AnimalSightingRow } from '@/types';
+import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, TripActivity, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput, TrailCompletionRow, AnimalSightingRow } from '@/types';
 import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
@@ -773,7 +773,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             date: addDays(row.start_date, dayNumber - 1),
             activities: tripDayActivityRows
               .filter((a) => a.day_number === dayNumber)
-              .map((a) => ({ activity: a.activity as ActivityType, viewpoint: a.viewpoint ?? undefined })),
+              .map((a) => ({ activity: a.activity as TripActivity, viewpoint: a.viewpoint ?? undefined })),
             trailsHiked: tripTrailRows
               .filter((t) => t.day_number === dayNumber)
               .map((t) => ({
@@ -792,7 +792,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             tripType: (row.trip_type as TripType) ?? 'logged',
             startDate: row.start_date,
             endDate: row.end_date,
-            activities: row.activities as ActivityType[],
+            activities: row.activities as TripActivity[],
             notes: row.notes,
             photos: tripPhotos.map((p) => photoUrlMap[p.storage_path]),
             photoCaptions: tripPhotos.map((p) => p.caption ?? ''),

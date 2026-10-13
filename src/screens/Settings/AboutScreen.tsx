@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -10,7 +11,7 @@ export default function AboutScreen() {
   const navigation = useNavigation<any>();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="About Parks Pal" onBack={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <Image source={require('@/assets/mascot/mascot-happy.png')} style={styles.mascot} resizeMode="contain" />
@@ -19,9 +20,25 @@ export default function AboutScreen() {
         <Text style={styles.motto}>COLLECT. EXPLORE. REMEMBER.</Text>
         <Text style={styles.body}>
           Parks Pal is your cozy companion for tracking every U.S. National Park you visit. Log
-          trips, save memories, collect digital passport stamps, and watch your progress toward
+          trips, save memories, collect postcards from every adventure, and watch your progress toward
           all 63 parks fill in — one adventure at a time.
         </Text>
+        <View style={styles.sourceCard}>
+          <Text style={styles.sourceTitle}>Where our info comes from</Text>
+          <Text style={styles.sourceText}>
+            Parks Pal is an independent app and is not affiliated with, endorsed by, or operated by the
+            National Park Service. Park, trail, and wildlife info is gathered from NPS.gov and other public
+            sources. Suggestions and day plans are based on our own experiences plus those of fellow users
+            and pals.
+          </Text>
+          <Text style={styles.sourceText}>
+            Conditions, closures, permits, and hours change often, so the official NPS website will always
+            have the most up-to-date info. Spot something wrong or have a recommendation? Let us know below.
+          </Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://www.nps.gov')} hitSlop={8}>
+            <Text style={styles.sourceLink}>Visit nps.gov {'›'}</Text>
+          </TouchableOpacity>
+        </View>
         <View style={styles.supportCard}>
           <Text style={styles.supportLabel}>Need help or have feedback?</Text>
           <TouchableOpacity onPress={() => Linking.openURL(`mailto:${SUPPORT_EMAIL}`)}>
@@ -50,6 +67,17 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
     ...shadows.sm,
   },
+  sourceCard: {
+    alignSelf: 'stretch',
+    marginTop: spacing.lg,
+    backgroundColor: colors.surfaceWarm,
+    borderRadius: radius.xl,
+    padding: spacing.xl,
+    gap: spacing.sm,
+  },
+  sourceTitle: { ...typography.labelBold, color: colors.textPrimary },
+  sourceText: { ...typography.bodySmall, color: colors.textSecondary, lineHeight: 20 },
+  sourceLink: { ...typography.labelSemiBold, color: colors.primary },
   supportCard: {
     marginTop: spacing.lg,
     alignItems: 'center',

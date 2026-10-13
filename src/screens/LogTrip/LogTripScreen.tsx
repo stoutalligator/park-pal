@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert, Dimensions, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, TextInput, Alert, Dimensions, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import * as ImagePicker from 'expo-image-picker';
 import Svg, { Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
@@ -7,6 +8,8 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import {
   ActivityType,
+  ParkActivityType,
+  TripActivity,
   TripTrailEntry,
   TrailDifficulty,
   AnimalRarity,
@@ -17,6 +20,7 @@ import {
   Animal,
   Units,
 } from '@/types';
+import { getParkGuide } from '@/data/parkGuides';
 import PrimaryButton from '@/components/PrimaryButton';
 import PhotoCaptionSheet from '@/components/PhotoCaptionSheet';
 import DateRangePicker from '@/components/DateRangePicker';
@@ -220,6 +224,33 @@ function CompassIcon({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
+function BinocularsIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx="6.5" cy="15.5" r="4" fill="none" stroke={color} strokeWidth={1.8} />
+      <Circle cx="17.5" cy="15.5" r="4" fill="none" stroke={color} strokeWidth={1.8} />
+      <Path d="M10.5 15.2h3" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <Path d="M3.2 13.2 5.6 5.4a1.6 1.6 0 0 1 3.1.5v5.8M20.8 13.2l-2.4-7.8a1.6 1.6 0 0 0-3.1.5v5.8" fill="none" stroke={color} strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+function AppleIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M12 7.6c-1.3-1-3.9-1.5-5.6.2-2 2-1.6 6 .3 9.2 1.3 2.2 2.9 3.6 4.1 3 .7-.3 1.7-.3 2.4 0 1.2.6 2.8-.8 4.1-3 1.9-3.2 2.3-7.2.3-9.2-1.7-1.7-4.3-1.2-5.6-.2z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.7}
+        strokeLinejoin="round"
+      />
+      <Path d="M12 7.6c0-1.8.6-3.4 1.8-4.6" fill="none" stroke={color} strokeWidth={1.7} strokeLinecap="round" />
+      <Path d="M12.6 5.4c1.6-1.4 3.6-1.5 4.8-1-.6 1.6-2.6 2.6-4.8 1z" fill={color} />
+    </Svg>
+  );
+}
+
 const WEATHER_CLOUD_PATH = 'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z';
 
 export function WeatherSunnyIcon({ color, size = 22 }: { color: string; size?: number }) {
@@ -345,6 +376,80 @@ export function WeatherSnowyIcon({ color, size = 22 }: { color: string; size?: n
   );
 }
 
+export function WeatherFlashFloodIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(3,-3) scale(0.7)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M8.5 11.2 7.7 13M12.5 11.2l-.8 1.8M16.5 11.2l-.8 1.8" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
+      <Path
+        d="M2.5 17c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3 1.2M2.5 20.6c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3 1.2"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function WeatherExtremeHeatIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M8 4.5a2 2 0 0 1 4 0v9.3a3.8 3.8 0 1 1-4 0z"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinejoin="round"
+      />
+      <Circle cx="10" cy="17" r="1.7" fill={color} />
+      <Path d="M10 15.3V8" stroke={color} strokeWidth={1.6} strokeLinecap="round" />
+      <Path d="M15.5 6.5h2.5M15.5 10h4M15.5 13.5h2.5" stroke={color} strokeWidth={1.5} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+export function WeatherFoggyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d={WEATHER_CLOUD_PATH}
+        transform="translate(3,-3) scale(0.7)"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M3 15h13M6 18.2h15M3 21.4h12" stroke={color} strokeWidth={1.6} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+export function WeatherWindyIcon({ color, size = 22 }: { color: string; size?: number }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M2.5 9h11.3a2.7 2.7 0 1 0-2.6-3.3M2.5 13h16.2a2.8 2.8 0 1 1-2.6 3.6M2.5 17h8.5"
+        fill="none"
+        stroke={color}
+        strokeWidth={1.7}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
 function TreeIcon({ color, size = 18 }: { color: string; size?: number }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 20 20">
@@ -419,6 +524,7 @@ const ACTIVITIES: { label: ActivityType; render: (color: string) => React.ReactE
   { label: 'Stargazing', render: (c) => <StarIcon color={c} /> },
   { label: 'Sunrise', render: (c) => <SunriseIcon color={c} /> },
   { label: 'Sunset', render: (c) => <SunsetIcon color={c} /> },
+  { label: 'Viewpoint', render: (c) => <BinocularsIcon color={c} /> },
   { label: 'Other', render: (c) => <CompassIcon color={c} /> },
 ];
 
@@ -429,7 +535,21 @@ const WEATHER_OPTIONS: { type: WeatherType; label: string; render: (color: strin
   { type: 'Rainy', label: 'Rainy', render: (c) => <WeatherRainyIcon color={c} /> },
   { type: 'Stormy', label: 'Stormy', render: (c) => <WeatherStormyIcon color={c} /> },
   { type: 'Snowy', label: 'Snowy', render: (c) => <WeatherSnowyIcon color={c} /> },
+  { type: 'FlashFlood', label: 'Flash Flood', render: (c) => <WeatherFlashFloodIcon color={c} /> },
+  { type: 'ExtremeHeat', label: 'Extreme Heat', render: (c) => <WeatherExtremeHeatIcon color={c} /> },
+  { type: 'Foggy', label: 'Foggy / Smoky', render: (c) => <WeatherFoggyIcon color={c} /> },
+  { type: 'Windy', label: 'Windy', render: (c) => <WeatherWindyIcon color={c} /> },
 ];
+
+const PARK_ACTIVITY_ICONS: Record<ParkActivityType, (color: string) => React.ReactElement> = {
+  'Apple Picking': (c) => <AppleIcon color={c} />,
+};
+
+function viewpointPlaceholder(activity: TripActivity): string {
+  if (activity === 'Other') return 'What did you do? (optional)';
+  if (activity === 'Viewpoint') return 'Which viewpoints? e.g. Sunset Point (optional)';
+  return 'Where? (optional)';
+}
 
 function RatingStarIcon({ filled, size = 26 }: { filled: boolean; size?: number }) {
   return (
@@ -466,6 +586,7 @@ interface DayPageProps {
   units: Units;
   parkTrails: Trail[];
   parkAnimals: Animal[];
+  parkActivities: ParkActivityType[];
   value: DayFormState;
   onChange: (next: DayFormState) => void;
   width: number;
@@ -475,7 +596,7 @@ interface DayPageProps {
 // form used to show once for the whole trip (activity chips + viewpoint,
 // trail picker with custom-add, wildlife picker with custom-add, weather),
 // just scoped to a single day's DayFormState instead of the whole trip.
-function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, value, onChange, width }: DayPageProps) {
+function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, parkActivities, value, onChange, width }: DayPageProps) {
   const [wildlifeInput, setWildlifeInput] = useState('');
   const [customTrailName, setCustomTrailName] = useState('');
   const [customTrailMiles, setCustomTrailMiles] = useState('');
@@ -512,7 +633,7 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
     });
   }, [editingTrailKey]);
 
-  const toggleActivity = (label: ActivityType) => {
+  const toggleActivity = (label: TripActivity) => {
     const exists = value.activities.some((a) => a.activity === label);
     onChange({
       ...value,
@@ -522,7 +643,7 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
     });
   };
 
-  const setViewpoint = (label: ActivityType, text: string) => {
+  const setViewpoint = (label: TripActivity, text: string) => {
     onChange({
       ...value,
       activities: value.activities.map((a) => (a.activity === label ? { ...a, viewpoint: text } : a)),
@@ -638,6 +759,29 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
           })}
         </View>
 
+        {parkActivities.length > 0 && (
+          <>
+            <Text style={[styles.sublabel, styles.sublabelSpaced]}>Only at this park</Text>
+            <View style={styles.activityGrid}>
+              {parkActivities.map((label) => {
+                const active = value.activities.some((a) => a.activity === label);
+                const iconColor = active ? colors.textInverse : colors.brown;
+                return (
+                  <TouchableOpacity
+                    key={label}
+                    style={[styles.activityChip, active && styles.activityChipActive]}
+                    onPress={() => toggleActivity(label)}
+                    activeOpacity={0.8}
+                  >
+                    {PARK_ACTIVITY_ICONS[label](iconColor)}
+                    <Text style={[styles.activityLabel, active && styles.activityLabelActive]}>{label}</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </>
+        )}
+
         {/* Hiking and Wildlife already get their "what/where" from the trail
             and animal pickers below, so a separate viewpoint field would just
             duplicate that. "Other" asks what happened instead of where,
@@ -651,7 +795,7 @@ function DayPage({ dayNumber, dateLabel, mode, units, parkTrails, parkAnimals, v
                   <Text style={styles.viewpointLabel}>{a.activity}</Text>
                   <TextInput
                     style={styles.wildlifeInput}
-                    placeholder={a.activity === 'Other' ? 'What did you do? (optional)' : 'Where? (optional)'}
+                    placeholder={viewpointPlaceholder(a.activity)}
                     placeholderTextColor={colors.textMuted}
                     value={a.viewpoint ?? ''}
                     onChangeText={(t) => setViewpoint(a.activity, t)}
@@ -954,6 +1098,8 @@ export default function LogTripScreen() {
     (a, b) => RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]
   );
 
+  const parkActivities = getParkGuide(selectedParkId)?.parkActivities ?? [];
+
   const dayCount = startDate ? dayCountBetween(startDate, endDate || startDate) : 0;
   const dayNumbers = Array.from({ length: dayCount }, (_, i) => i + 1);
 
@@ -1055,7 +1201,7 @@ export default function LogTripScreen() {
         // A failed save has already shown its own error toast; stay on the
         // form so nothing the user typed is lost.
         if (!saved) return;
-        showToast('Trip completed! Your passport is growing.', 'success');
+        showToast('Trip completed! A new postcard was added to your collection.', 'success');
         (navigation as any).navigate('TripsTab', { screen: 'Trips' });
         return;
       }
@@ -1104,7 +1250,7 @@ export default function LogTripScreen() {
       // brand-new one used to just reset the form in place with nothing after
       // it, leaving the user stranded on a blank form instead of seeing where
       // the trip landed.
-      showToast(mode === 'plan' ? 'Trip planned! We’ll be ready when you are.' : 'Adventure saved! Your passport is growing.', 'success');
+      showToast(mode === 'plan' ? 'Trip planned! We’ll be ready when you are.' : 'Adventure saved! A new postcard was added to your collection.', 'success');
       (navigation as any).navigate('TripsTab', { screen: 'Trips' });
     } finally {
       setSaving(false);
@@ -1112,7 +1258,7 @@ export default function LogTripScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity
@@ -1296,6 +1442,7 @@ export default function LogTripScreen() {
                 units={units}
                 parkTrails={parkTrails}
                 parkAnimals={parkAnimals}
+                parkActivities={parkActivities}
                 value={dayEntries[dayNumber] ?? emptyDay()}
                 onChange={(next) => setDayEntry(dayNumber, next)}
                 width={PAGE_WIDTH}

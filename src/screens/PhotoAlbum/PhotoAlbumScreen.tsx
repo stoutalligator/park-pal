@@ -4,13 +4,13 @@ import {
   Text,
   Image,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   useWindowDimensions,
   NativeSyntheticEvent,
   NativeScrollEvent,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
@@ -112,7 +112,7 @@ export default function PhotoAlbumScreen() {
 
   if (tripsWithPhotos.length === 0) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView edges={['top']} style={styles.container}>
         <ScreenHeader title="Photo Album" onBack={() => navigation.goBack()} />
         <EmptyState
           title="No Photos Yet"
@@ -125,7 +125,7 @@ export default function PhotoAlbumScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="Photo Album" onBack={() => navigation.goBack()} />
       <ScrollView
         horizontal

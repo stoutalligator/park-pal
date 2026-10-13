@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -11,7 +12,7 @@ const SECTIONS = [
   },
   {
     title: 'How We Use It',
-    body: 'Solely to power your Parks Pal passport — tracking progress, showing your trip history, and calculating stats and badges. We do not sell your data.',
+    body: 'Solely to power your Parks Pal experience — tracking progress, showing your trip history, and calculating stats and badges. We do not sell your data.',
   },
   {
     title: 'Where It Lives',
@@ -31,7 +32,7 @@ export default function PrivacyPolicyScreen() {
   const navigation = useNavigation<any>();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="Privacy Policy" onBack={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {SECTIONS.map(({ title, body }) => (

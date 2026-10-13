@@ -26,6 +26,30 @@ const COASTAL_PARK_IDS = [
   'national-park-samoa',
 ];
 
+// Our Canyonlands trails that start in the Needles District (the rest are
+// Island in the Sky).
+const CANYONLANDS_NEEDLES_TRAIL_IDS = [
+  'canyonlands-chesler-park',
+  'canyonlands-druid-arch',
+  'canyonlands-pothole-point',
+  'canyonlands-slickrock',
+];
+
+const GRAND_CANYON_SOUTH_RIM_TRAIL_IDS = [
+  'grand-canyon-bright-angel',
+  'grand-canyon-rim-trail',
+  'grand-canyon-south-kaibab',
+  'grand-canyon-hermit-trail',
+  'grand-canyon-shoshone-point',
+  'grand-canyon-grandview-trail',
+];
+
+const GRAND_CANYON_NORTH_RIM_TRAIL_IDS = [
+  'grand-canyon-north-kaibab',
+  'grand-canyon-widforss',
+  'grand-canyon-cape-final',
+];
+
 function visitedCount(parks: Park[]): number {
   return parks.filter((p) => p.status === 'visited').length;
 }
@@ -91,6 +115,16 @@ export const BADGE_PROGRESS: Record<string, (ctx: BadgeContext) => number> = {
   'everglades-manatee': ({ spottedAnimalIds }) => (spottedAnimalIds.includes('everglades-manatee') ? 1 : 0),
   'half-dome': ({ completedTrailIds }) => (completedTrailIds.includes('yosemite-half-dome') ? 1 : 0),
   'near-death': ({ completedTrailIds }) => (completedTrailIds.includes('zion-angels-landing') ? 1 : 0),
+  'canyonlands-needles': ({ completedTrailIds }) =>
+    CANYONLANDS_NEEDLES_TRAIL_IDS.some((id) => completedTrailIds.includes(id)) ? 1 : 0,
+  'capitol-reef-apples': ({ trips }) =>
+    trips.some((t) => t.parkId === 'capitol-reef' && t.activities.includes('Apple Picking')) ? 1 : 0,
+  'delicate-arch': ({ completedTrailIds }) => (completedTrailIds.includes('arches-delicate-arch') ? 1 : 0),
+  'hoodoo-queen': ({ completedTrailIds }) => (completedTrailIds.includes('bryce-canyon-queens-garden') ? 1 : 0),
+  // One point per rim, so the badge shows 1/2 progress after the first.
+  'grand-canyon-both-rims': ({ completedTrailIds }) =>
+    (GRAND_CANYON_SOUTH_RIM_TRAIL_IDS.some((id) => completedTrailIds.includes(id)) ? 1 : 0) +
+    (GRAND_CANYON_NORTH_RIM_TRAIL_IDS.some((id) => completedTrailIds.includes(id)) ? 1 : 0),
 
   // Secret badges
   'night-owl': ({ trips }) =>

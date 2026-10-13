@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Path, Rect, Line, Circle } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
@@ -58,7 +59,7 @@ export default function TripChooserScreen() {
   const navigation = useNavigation<any>();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="New Adventure" onBack={() => navigation.goBack()} />
       <View style={styles.cards}>
         <ChoiceCard

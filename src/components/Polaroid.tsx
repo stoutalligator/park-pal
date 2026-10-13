@@ -45,6 +45,7 @@ export default function Polaroid({
 }: Props) {
   const framePad = variant === 'stack' ? size * 0.05 : size * 0.045;
   const bottomStrip = roomForCaption ? size * 0.27 : variant === 'stack' ? size * 0.14 : size * 0.16;
+  const photoSize = size - framePad * 2;
   const tapeWidth = size * 0.42;
   const tapeHeight = tapeWidth * 0.34;
 
@@ -64,7 +65,7 @@ export default function Polaroid({
     >
       <Image
         source={source ?? { uri: uri ?? '' }}
-        style={styles.photo}
+        style={[styles.photo, { width: photoSize, height: photoSize }]}
         resizeMode="cover"
         onLoad={onLoad}
         onError={onLoad}
@@ -121,8 +122,6 @@ const styles = StyleSheet.create({
   },
   caption: { ...typography.labelSemiBold, color: colors.brownDark, textAlign: 'center' },
   photo: {
-    width: '100%',
-    aspectRatio: 1,
     borderRadius: 2,
     backgroundColor: colors.surfaceWarm,
   },

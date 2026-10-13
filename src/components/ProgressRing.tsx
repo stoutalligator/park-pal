@@ -7,7 +7,7 @@ interface Props {
   percentage: number;
   size?: number;
   strokeWidth?: number;
-  /** Overrides for use on a dark/colored background (e.g. the passport cover) — default to the normal light-background look. */
+  /** Overrides for use on a dark/colored background (e.g. a forest-green card) — default to the normal light-background look. */
   trackColor?: string;
   fillColor?: string;
   textColor?: string;

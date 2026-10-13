@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, useWindowDimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, useWindowDimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ProfileStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
@@ -30,7 +31,7 @@ export default function TripPhotoAlbumScreen({ route, navigation }: Props) {
 
   if (!trip || photos.length === 0) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView edges={['top']} style={styles.container}>
         <ScreenHeader title="Photo Album" onBack={() => navigation.goBack()} />
         <Text style={styles.notFound}>No photos to show.</Text>
       </SafeAreaView>
@@ -38,7 +39,7 @@ export default function TripPhotoAlbumScreen({ route, navigation }: Props) {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title={park?.name ?? 'Trip Photos'} onBack={() => navigation.goBack()} />
       <Text style={styles.dateLabel}>{formatDateRange(trip.startDate, trip.endDate)}</Text>
 

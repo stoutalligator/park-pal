@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Polyline } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
@@ -27,7 +28,7 @@ export default function WishlistScreen() {
 
   if (wishlist.length === 0) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView edges={['top']} style={styles.container}>
         <ScreenHeader title="Bucket List" onBack={() => navigation.goBack()} />
         <EmptyState title="Dream up your next adventure." subtitle="Add parks to your bucket list from the Parks tab." />
       </SafeAreaView>
@@ -35,7 +36,7 @@ export default function WishlistScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader title="Bucket List" onBack={() => navigation.goBack()} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {wishlist.map((park) => (

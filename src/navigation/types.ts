@@ -64,7 +64,7 @@ export type TripsStackParamList = {
 
 export type ProfileStackParamList = {
   Profile: undefined;
-  Passport: undefined;
+  Postcards: undefined;
   Collection: undefined;
   Stats: undefined;
   Wishlist: undefined;

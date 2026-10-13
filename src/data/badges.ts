@@ -42,10 +42,15 @@ export const ALL_BADGES: Badge[] = [
   { id: 'everglades-manatee', name: 'Seeking Sea Cows', description: 'Spot the Manatee at Everglades.', category: 'special', earned: false, progress: 0, goal: 1 },
   { id: 'half-dome', name: 'Cable Climber', description: 'Complete the Half Dome trail at Yosemite.', category: 'special', earned: false, progress: 0, goal: 1 },
   { id: 'near-death', name: 'Near Death', description: 'Complete the Angels Landing trail at Zion.', category: 'special', earned: false, progress: 0, goal: 1 },
+  { id: 'canyonlands-needles', name: 'Needle in a Haystack', description: 'Complete a hike in the Needles District of Canyonlands.', category: 'special', earned: false, progress: 0, goal: 1 },
+  { id: 'delicate-arch', name: 'An Arch Delicacy', description: 'Complete the Delicate Arch hike at Arches.', category: 'special', earned: false, progress: 0, goal: 1 },
+  { id: 'hoodoo-queen', name: 'Hoodoo Queen', description: 'Complete the Queens Garden Trail at Bryce Canyon.', category: 'special', earned: false, progress: 0, goal: 1 },
+  { id: 'grand-canyon-both-rims', name: 'Salt or Sugar? Both!', description: 'Hike from both the South Rim and the North Rim of the Grand Canyon.', category: 'special', earned: false, progress: 0, goal: 2 },
 
   // Secret badges — placeholders to prove out the mechanic; description stays
   // hidden until earned (see CollectionScreen). Swap these out as you like.
   { id: 'night-owl', name: 'Night Owl', description: 'Camp and stargaze on the same trip.', category: 'secret', earned: false, progress: 0, goal: 1, secret: true },
   { id: 'globe-trotter', name: 'Globe Trotter', description: 'Visit a park in Alaska and a park in Hawaii.', category: 'secret', earned: false, progress: 0, goal: 1, secret: true },
+  { id: 'capitol-reef-apples', name: 'Bobbing for Apples', description: 'Go apple picking in the Fruita orchards at Capitol Reef.', category: 'secret', earned: false, progress: 0, goal: 1, secret: true },
   { id: 'perfect-trip', name: 'Perfect Trip', description: 'Log a 5-star trip with both notes and photos.', category: 'secret', earned: false, progress: 0, goal: 1, secret: true },
 ];

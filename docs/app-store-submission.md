@@ -65,7 +65,7 @@ A pre-confirmed reviewer account exists so reviewers can skip the email-confirma
 
 Beta App Description ("What to Test"):
 ```
-Parks Pal is a national park tracker — log trips, track which of the 63 U.S. National Parks you've visited, collect digital passport stamps, and earn badges.
+Parks Pal is a national park tracker — log trips, track which of the 63 U.S. National Parks you've visited, collect postcards from every trip, and earn badges.
 
 Please test:
 - Signing up for an account (requires confirming your email)
@@ -89,13 +89,13 @@ Contact Information: developer's real name, phone, and email (this is Apple's pr
 **Parks Pal - Park Tracker** (App Store Connect's "Name" field, 30-char limit — "Parks Pal" alone was already taken by another developer, so this tweak clears that collision). This is the App Store listing name only; the internal bundle identifiers (`com.parks-pal.app` iOS, `com.parkspal.app` Android) aren't user-visible and don't need to match, and the in-app/home-screen display name stays "Parks Pal" (`app.json`'s `expo.name` is separate from the store listing name and doesn't need to change).
 
 ### iOS Subtitle (30 char limit)
-`Your National Park Passport`
+`Your National Park Tracker`
 
 ### iOS Promotional Text (170 char limit, editable without a new build)
-`Track every trip to all 63 U.S. National Parks. Plan visits, log memories and photos, collect passport stamps, and earn badges along the way.`
+`Track every trip to all 63 U.S. National Parks. Plan visits, log memories and photos, collect postcards, and earn badges along the way.`
 
 ### iOS Keywords (100 char limit, comma-separated, no spaces needed after commas)
-`national park,hiking,trip planner,travel journal,passport,badges,camping,outdoors,nature,trail log`
+`national park,hiking,trip planner,travel journal,postcards,badges,camping,outdoors,nature,trail log`
 
 ### Google Play Short Description (80 char limit)
 `Track, plan, and log your visits to all 63 U.S. National Parks.`
@@ -115,7 +115,7 @@ Plan upcoming trips with dates and activities, then browse each park's trails an
 REMEMBER
 Log completed trips with photos, notes, trail hikes, and wildlife sightings — build a real travel journal you'll want to look back on.
 
-Along the way, collect digital passport stamps and earn badges for milestones like your first hike, your first camping trip, or reaching a new region.
+Along the way, collect postcards from every park and earn badges for milestones like your first hike, your first camping trip, or reaching a new region.
 
 Parks Pal keeps your data private and synced to your own account — no ads, no tracking, no selling your data. Just a simple, illustrated way to keep your park adventures organized.
 
@@ -196,4 +196,4 @@ No manual `PrivacyInfo.xcprivacy` file is needed in this project. The only depen
 - iOS: 6.9" display (iPhone 16 Pro Max class, 1320×2868 or 2868×1320) — **required**. 6.5" and 5.5" are optional now that Apple auto-scales, but including them avoids relying on that.
 - Android: phone screenshots, minimum 320px, recommended 1080×1920 or similar 16:9/9:16.
 
-Recommended shots (5–6, in this order): Explore/map screen, a Park Detail sheet, Log/Plan a Trip, Trip Detail with photos, Profile/passport stamps screen. Since there's no real device farm set up, the fastest path is running the iOS Simulator (6.9" class device) and Android Emulator locally and capturing each screen with the demo account populated with a few trips so the screens don't look empty.
+Recommended shots (5–6, in this order): Explore/map screen, a Park Detail sheet, Log/Plan a Trip, Trip Detail with photos, Profile/Postcard Collection screen. Since there's no real device farm set up, the fastest path is running the iOS Simulator (6.9" class device) and Android Emulator locally and capturing each screen with the demo account populated with a few trips so the screens don't look empty.

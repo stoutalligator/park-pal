@@ -100,6 +100,26 @@ Manatees are already round and plush, so this should be the cutest of the set: g
 
 ---
 
+## Mule Deer (Capitol Reef)
+
+**Files:** `src/assets/badges/badge-capitol-reef-apples.png` and `src/assets/activities/pal-capitol-reef-apples.png`
+
+Badge id `capitol-reef-apples` ("Bobbing for Apples"), earned by logging the park-only **Apple Picking** activity on a Capitol Reef trip. Mule deer are a familiar sight grazing the historic Fruita orchards, so the pal is a mule deer picking an apple. No deer exists in the default roster, but the picnic beaver already holds an apple, so this pose should be about *reaching up and picking* from a branch, not holding one at rest.
+
+Real mule deer are named for their very large, mule-like ears. They have a gray-brown coat, a white throat patch, a big white rump patch, and a short, thin, black-tipped tail (not the fluffy white tail of a white-tailed deer). Bucks have forked antlers; keep this one antler-free (a doe or young deer) so the head stays round and the ears read clearly.
+
+**Badge (sticker):**
+
+> [badge base style block from badges.md] + Subject: a shiny red apple bobbing in a small wooden barrel of water with a few ripples around it, an apple-tree branch with green leaves and two more apples arching over the top, and red-and-cream sandstone cliffs behind (Capitol Reef's Fruita orchards).
+
+**Pal (activity avatar):**
+
+> [shared style block from park-pals.md] + A gray-brown mule deer with very large, oversized mule-like ears, a white throat patch, a white rump patch and a short thin black-tipped tail, no antlers. Standing up on its hind legs with its front hooves lifted, stretching its neck to gently pick a red apple off a small leafy apple branch with its mouth, a second apple still hanging on the branch. Only the deer and the apple branch, no tree trunk or ground. Same big-eyed cute plush-toy proportions and line-weight style as the rest of the roster.
+
+---
+
 ## Status
+
+Mule Deer (`capitol-reef-apples`) is generated and wired: badge 512x512, pal fit to 250x250.
 
 Gray Wolf, California Condor and Florida Manatee are generated and wired (badge id = pal id: `yellowstone-wolf`, `pinnacles-condor`, `everglades-manatee`). Generating a badge and its pal as one side-by-side image (badge left, pal right) worked well — the two match — then split and fit to 512x512 (badge) and 250x250 (pal).

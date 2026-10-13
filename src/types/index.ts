@@ -38,7 +38,14 @@ export type ActivityType =
   | 'Stargazing'
   | 'Sunrise'
   | 'Sunset'
+  | 'Viewpoint'
   | 'Other';
+
+/** Activities only offered at specific parks (see PARK_GUIDES), stored by
+ * label the same way as standard activities. */
+export type ParkActivityType = 'Apple Picking';
+
+export type TripActivity = ActivityType | ParkActivityType;
 
 export interface TripTrailEntry {
   trailId?: string;
@@ -50,10 +57,20 @@ export interface TripTrailEntry {
 
 export type TripType = 'planned' | 'logged';
 
-export type WeatherType = 'Sunny' | 'PartlyCloudy' | 'Cloudy' | 'Rainy' | 'Stormy' | 'Snowy';
+export type WeatherType =
+  | 'Sunny'
+  | 'PartlyCloudy'
+  | 'Cloudy'
+  | 'Rainy'
+  | 'Stormy'
+  | 'Snowy'
+  | 'FlashFlood'
+  | 'ExtremeHeat'
+  | 'Foggy'
+  | 'Windy';
 
 export interface TripDayActivity {
-  activity: ActivityType;
+  activity: TripActivity;
   viewpoint?: string;
 }
 
@@ -76,7 +93,7 @@ export interface Trip {
   tripType: TripType;
   startDate: string;
   endDate: string;
-  activities: ActivityType[];
+  activities: TripActivity[];
   notes: string;
   photos: string[];
   /** Optional caption per photo, index-aligned with `photos` (missing or
@@ -93,6 +110,22 @@ export interface Trip {
    * flow. Absent/empty for older trips, which fall back to the flat fields
    * above for display. */
   days?: TripDayEntry[];
+}
+
+export type DayPlanSlot = 'Morning' | 'Midday' | 'Afternoon' | 'Evening';
+
+export interface DayPlanStop {
+  when: DayPlanSlot;
+  text: string;
+}
+
+/** Per-park guide content keyed by Park.id — staged alongside Park rather than
+ * merged into it, same pattern as TrailDetail. */
+export interface ParkGuide {
+  /** nps.gov park code, e.g. 'care' for https://www.nps.gov/care */
+  npsCode: string;
+  oneDay: DayPlanStop[];
+  parkActivities?: ParkActivityType[];
 }
 
 export type TrailDifficulty = 'Easy' | 'Moderate' | 'Hard';
@@ -225,7 +258,8 @@ export type ProfileAvatar =
   | 'acadia-puffin'
   | 'yellowstone-wolf'
   | 'pinnacles-condor'
-  | 'everglades-manatee';
+  | 'everglades-manatee'
+  | 'capitol-reef-apples';
 
 export type Units = 'mi' | 'km';
 

@@ -57,7 +57,7 @@ This is the one we can't check ourselves — **if you've been to a park, please 
 ## 5. Progress, badges, and profile
 
 - Mark a park as **visited**, add it to your **bucket list**, and check the **map** and progress ring update.
-- Check **Passport**, **Collection** (badges), **Stats**, and **Bucket List**.
+- Check **Postcards**, **Collection** (badges), **Stats**, and **Bucket List**.
 - Do **badges** unlock when you'd expect? Are the descriptions clear? (Log a trip with a spotted Island Fox at Channel Islands, Atlantic Puffin at Acadia, Gray Wolf at Yellowstone, California Condor at Pinnacles, or Manatee at Everglades to unlock the bonus pals.)
 - Mark **Angels Landing** (Zion) or **Half Dome** (Yosemite) as completed to unlock bonus profile backgrounds (Profile → the photo icon on the header). Locked ones show a lock and tell you what to earn.
 - Change your **profile avatar and background**. Do locked pals explain how to unlock them?

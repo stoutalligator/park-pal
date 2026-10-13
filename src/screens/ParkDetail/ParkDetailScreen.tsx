@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Polyline, Polygon, Path, Circle } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -7,6 +7,7 @@ import { ParksStackParamList } from '@/navigation/types';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { getParkScene } from '@/data/parkImages';
+import { getParkGuide } from '@/data/parkGuides';
 import StatusBadge from '@/components/StatusBadge';
 import TripCard from '@/components/TripCard';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -99,6 +100,7 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
   const parkAnimals = animals.filter((a) => a.parkId === parkId);
   const trailsCompletedCount = parkTrails.filter((t) => isTrailCompleted(t.id)).length;
   const animalsSpottedCount = parkAnimals.filter((a) => isAnimalSpotted(a.id)).length;
+  const guide = getParkGuide(parkId);
 
   if (!park) return null;
 
@@ -180,6 +182,30 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
             </View>
           )}
 
+          {guide && (
+            <View style={styles.dayPlanCard}>
+              <View style={styles.dayPlanHeader}>
+                <Image source={require('@/assets/mascot/mascot-tip.png')} style={styles.dayPlanMascot} resizeMode="contain" />
+                <View style={styles.dayPlanHeaderText}>
+                  <Text style={styles.sectionTitle}>Only Have a Day?</Text>
+                  <Text style={styles.dayPlanSubtitle}>Try this out</Text>
+                </View>
+              </View>
+              {guide.oneDay.map((stop, i) => (
+                <View key={stop.when} style={styles.dayPlanStop}>
+                  <View style={styles.dayPlanRail}>
+                    <View style={styles.dayPlanDot} />
+                    {i < guide.oneDay.length - 1 && <View style={styles.dayPlanLine} />}
+                  </View>
+                  <View style={styles.dayPlanStopBody}>
+                    <Text style={styles.dayPlanWhen}>{stop.when}</Text>
+                    <Text style={styles.dayPlanText}>{stop.text}</Text>
+                  </View>
+                </View>
+              ))}
+            </View>
+          )}
+
           {/* Memories */}
           {parkTrips.length > 0 && (
             <View style={styles.section}>
@@ -198,6 +224,24 @@ export default function ParkDetailScreen({ route, navigation }: Props) {
               ))}
             </View>
           )}
+
+          <View style={styles.sourceNote}>
+            <Text style={styles.sourceTitle}>About this info</Text>
+            <Text style={styles.sourceText}>
+              Parks Pal is an independent app and isn't affiliated with or endorsed by the National Park
+              Service. Park info is gathered from NPS.gov and other public sources, and suggestions come from
+              our own trips plus those of fellow users and pals. Hours, roads, permits, and conditions change,
+              so check the official NPS site for the most up-to-date info before you go.
+            </Text>
+            <TouchableOpacity
+              onPress={() => Linking.openURL(guide ? `https://www.nps.gov/${guide.npsCode}` : 'https://www.nps.gov')}
+              hitSlop={8}
+            >
+              <Text style={styles.sourceLink}>
+                {guide ? `Visit nps.gov/${guide.npsCode}` : 'Visit nps.gov'} {'›'}
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
 
@@ -267,6 +311,24 @@ const styles = StyleSheet.create({
   summaryTitle: { ...typography.labelBold, color: colors.textPrimary },
   summarySubtitle: { ...typography.bodySmall, color: colors.textSecondary },
   chevron: { fontSize: 22, color: colors.textMuted },
+
+  dayPlanCard: { backgroundColor: colors.surface, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm, ...shadows.sm },
+  dayPlanHeader: { flexDirection: 'row', alignItems: 'center', gap: spacing.md, marginBottom: spacing.xs },
+  dayPlanMascot: { width: 48, height: 48 },
+  dayPlanHeaderText: { flex: 1 },
+  dayPlanSubtitle: { ...typography.bodySmall, color: colors.textSecondary },
+  dayPlanStop: { flexDirection: 'row', gap: spacing.md },
+  dayPlanRail: { width: 12, alignItems: 'center', paddingTop: 5 },
+  dayPlanDot: { width: 10, height: 10, borderRadius: 5, backgroundColor: colors.sage },
+  dayPlanLine: { flex: 1, width: 2, backgroundColor: colors.divider, marginTop: 4 },
+  dayPlanStopBody: { flex: 1, paddingBottom: spacing.sm, gap: 2 },
+  dayPlanWhen: { ...typography.labelBold, color: colors.primary },
+  dayPlanText: { ...typography.bodySmall, color: colors.textSecondary, lineHeight: 20 },
+
+  sourceNote: { backgroundColor: colors.surfaceWarm, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.xs },
+  sourceTitle: { ...typography.labelBold, color: colors.textPrimary },
+  sourceText: { ...typography.caption, color: colors.textSecondary, lineHeight: 18 },
+  sourceLink: { ...typography.labelSemiBold, color: colors.primary, marginTop: spacing.xs },
 
   footer: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: spacing.xl, gap: spacing.sm, backgroundColor: colors.background },
   ctaBtn: { width: '100%' },

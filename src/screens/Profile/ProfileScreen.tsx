@@ -95,6 +95,12 @@ const AVATAR_OPTIONS: { key: ProfileAvatar; label: string; source: number; unloc
     source: require('@/assets/activities/pal-everglades-manatee.png'),
     unlockedByBadgeId: 'everglades-manatee',
   },
+  {
+    key: 'capitol-reef-apples',
+    label: 'Mule Deer',
+    source: require('@/assets/activities/pal-capitol-reef-apples.png'),
+    unlockedByBadgeId: 'capitol-reef-apples',
+  },
 ];
 
 const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.source])) as Record<
@@ -103,7 +109,7 @@ const AVATAR_BY_KEY = Object.fromEntries(AVATAR_OPTIONS.map((o) => [o.key, o.sou
 >;
 
 const SHORTCUTS = [
-  { label: 'Passport', screen: 'Passport', icon: require('@/assets/icons/icon-passport.png') },
+  { label: 'Postcards', screen: 'Postcards', icon: require('@/assets/icons/icon-passport.png') },
   { label: 'Stats', screen: 'Stats', icon: require('@/assets/icons/icon-explore.png') },
   { label: 'Bucket List', screen: 'Wishlist', icon: require('@/assets/icons/icon-favorites.png') },
   { label: 'Photo Album', screen: 'PhotoAlbum', icon: require('@/assets/icons/icon-photos.png') },
@@ -299,8 +305,12 @@ export default function ProfileScreen() {
                     activeOpacity={0.85}
                     onPress={() => {
                       if (locked) {
-                        const badgeName = badges.find((b) => b.id === requiredBadgeId)?.name ?? 'a hidden badge';
-                        showToast(`Earn "${badgeName}" to unlock this pal`);
+                        const requiredBadge = badges.find((b) => b.id === requiredBadgeId);
+                        showToast(
+                          requiredBadge && !requiredBadge.secret
+                            ? `Earn "${requiredBadge.name}" to unlock this pal`
+                            : 'Earn a secret badge to unlock this pal'
+                        );
                         return;
                       }
                       updateProfileAvatar(option.key);

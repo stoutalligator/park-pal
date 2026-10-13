@@ -20,6 +20,10 @@ import {
   WeatherRainyIcon,
   WeatherStormyIcon,
   WeatherSnowyIcon,
+  WeatherFlashFloodIcon,
+  WeatherExtremeHeatIcon,
+  WeatherFoggyIcon,
+  WeatherWindyIcon,
 } from '@/screens/LogTrip/LogTripScreen';
 import { WeatherType } from '@/types';
 
@@ -44,6 +48,10 @@ const WEATHER_ICONS: Record<WeatherType, (color: string) => React.ReactElement> 
   Rainy: (c) => <WeatherRainyIcon color={c} size={18} />,
   Stormy: (c) => <WeatherStormyIcon color={c} size={18} />,
   Snowy: (c) => <WeatherSnowyIcon color={c} size={18} />,
+  FlashFlood: (c) => <WeatherFlashFloodIcon color={c} size={18} />,
+  ExtremeHeat: (c) => <WeatherExtremeHeatIcon color={c} size={18} />,
+  Foggy: (c) => <WeatherFoggyIcon color={c} size={18} />,
+  Windy: (c) => <WeatherWindyIcon color={c} size={18} />,
 };
 
 const WEATHER_LABELS: Record<WeatherType, string> = {
@@ -53,6 +61,10 @@ const WEATHER_LABELS: Record<WeatherType, string> = {
   Rainy: 'Rainy',
   Stormy: 'Stormy',
   Snowy: 'Snowy',
+  FlashFlood: 'Flash Flood',
+  ExtremeHeat: 'Extreme Heat',
+  Foggy: 'Foggy / Smoky',
+  Windy: 'Windy',
 };
 
 function BackArrowIcon() {

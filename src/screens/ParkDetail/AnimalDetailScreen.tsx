@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Polyline } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ParksStackParamList } from '@/navigation/types';
@@ -50,7 +51,7 @@ export default function AnimalDetailScreen({ route, navigation }: Props) {
 
   if (!animal) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView edges={['top']} style={styles.container}>
         <ScreenHeader title="Animal" onBack={() => navigation.goBack()} />
         <Text style={styles.notFound}>Animal not found.</Text>
       </SafeAreaView>
@@ -60,7 +61,7 @@ export default function AnimalDetailScreen({ route, navigation }: Props) {
   const spotted = isAnimalSpotted(animal.id);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={['top']} style={styles.container}>
       <ScreenHeader
         title={animal.name}
         onBack={() => navigation.goBack()}

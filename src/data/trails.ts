@@ -342,6 +342,8 @@ export const ALL_TRAILS: Trail[] = [
   { id: 'canyonlands-druid-arch', parkId: 'canyonlands', name: 'Druid Arch Trail', description: 'Remote Needles district trail to a massive stone arch.', miles: 10.8, elevationGainFt: 1000, difficulty: 'Hard' },
   { id: 'canyonlands-white-rim-overlook', parkId: 'canyonlands', name: 'White Rim Overlook Trail', description: 'Island in the Sky trail with sweeping canyon views.', miles: 1.8, elevationGainFt: 100, difficulty: 'Easy' },
   { id: 'canyonlands-lathrop', parkId: 'canyonlands', name: 'Lathrop Trail', description: 'Long remote trail descending toward the White Rim road.', miles: 8.8, elevationGainFt: 1600, difficulty: 'Hard' },
+  { id: 'canyonlands-pothole-point', parkId: 'canyonlands', name: 'Pothole Point Trail', description: 'Short Needles district slickrock loop past rain-filled potholes teeming with tiny life.', miles: 0.6, elevationGainFt: 20, difficulty: 'Easy' },
+  { id: 'canyonlands-slickrock', parkId: 'canyonlands', name: 'Slickrock Trail', description: 'Needles district slickrock loop with four viewpoints over the canyons and spires.', miles: 2.4, elevationGainFt: 150, difficulty: 'Moderate' },
 
   // --- Capitol Reef ---
   { id: 'capitol-reef-hickman-bridge', parkId: 'capitol-reef', name: 'Hickman Bridge Trail', description: 'Short trail to a massive natural stone bridge.', miles: 1.8, elevationGainFt: 400, difficulty: 'Moderate' },
