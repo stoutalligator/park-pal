@@ -10,7 +10,8 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.parks-pal.app",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryAddUsageDescription": "Parks Pal saves your trip recap picture to your photo library when you choose Save Image."
       }
     },
     "android": {
@@ -21,10 +22,7 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false,
-      "permissions": [
-        "android.permission.RECORD_AUDIO"
-      ]
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -35,7 +33,9 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Parks Pal uses your photos to add memories to your trip log."
+          "photosPermission": "Parks Pal uses your photos to add memories to your trip log.",
+          "cameraPermission": false,
+          "microphonePermission": false
         }
       ],
       [

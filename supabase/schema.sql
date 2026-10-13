@@ -387,7 +387,7 @@ values (
   'trip-photos',
   'trip-photos',
   false,
-  5242880, -- 5MB
+  20971520, -- 20MB: full-resolution phone camera photos often exceed 5MB
   array['image/jpeg', 'image/png', 'image/webp', 'image/heic']
 )
 on conflict (id) do nothing;

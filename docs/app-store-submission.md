@@ -30,8 +30,8 @@ The confirmation page itself (`site/confirmed/index.html`) is a static page matc
 
 **iOS: get a build onto your phone**
 3. `npx eas login` (or `eas login`) — link the project to your Expo account if not already.
-4. `eas build --platform ios --profile preview` — first run will prompt to create/link iOS credentials (signing certificate + provisioning profile); let EAS manage these automatically unless you already have your own.
-5. `eas submit --platform ios --latest` — uploads that build to App Store Connect / TestFlight.
+4. `npx eas-cli build --platform ios --profile production` — first run will prompt to create/link iOS credentials (signing certificate + provisioning profile); let EAS manage these automatically unless you already have your own. Use `production`, not `preview`: the iOS `preview` profile is internal (ad-hoc) distribution, which can't be uploaded to TestFlight. Build numbers auto-increment (`autoIncrement` + remote version source).
+5. `npx eas-cli submit --platform ios --latest` — uploads that build to App Store Connect / TestFlight. (Or add `--auto-submit` to step 4 to do both in one go.)
 6. Install **TestFlight** from the App Store on your phone, accept the invite, install the build, actually use the app end to end on real hardware (not just launch it) — this is where you'd catch anything Expo Go's sandbox hid, like the Sentry native module.
 
 **Android: get a build onto your phone (optional but cheap to do in parallel)**
@@ -54,9 +54,7 @@ The confirmation page itself (`site/confirmed/index.html`) is a static page matc
 17. In Play Console, promote the tested build from internal testing to production (or go through Google's closed/open testing track first if you want more real-world testers before a full release). Review time: usually a few hours to 1 day.
 
 **Demo account (App Store Connect → "Sign-In Required" / TestFlight Beta App Review → Sign-In Information):**
-A pre-confirmed reviewer account exists so reviewers can skip the email-confirmation step entirely — created via the Supabase admin API (`email_confirm: true`) using the support inbox:
-- Email: `parkpal.support@gmail.com`
-- Password: `ParksPalReview2026!`
+A pre-confirmed reviewer account exists so reviewers can skip the email-confirmation step entirely, filled with example trips so every screen has content. **The credentials are not stored in this repo** (it's public): the email and password are in the local `.env` (`DEMO_ACCOUNT_EMAIL` / `DEMO_ACCOUNT_PASSWORD`) and get pasted straight into App Store Connect's Sign-In Information fields.
 
 **App Review notes (paste into App Store Connect → App Review Information → Notes):**
 > A demo account is provided (see Sign-In Information) that's already confirmed and ready to log in with — no email confirmation step needed for it. If you'd rather create your own account instead, note that new sign-ups do require confirming an email address before you can log in, since that's a standard part of the app's account flow.
@@ -156,8 +154,11 @@ Go to App Store Connect → App Privacy → and declare:
 | User Content | Other User Content | Yes | Yes | No | App Functionality (trip notes, activities, trail/wildlife logs) |
 | Identifiers | User ID | Yes | Yes | No | App Functionality (account/session) |
 | Diagnostics | Crash Data | Yes | **No** | No | App Functionality (Sentry crash reporting — no email/user ID attached, see note below) |
+| Diagnostics | Performance Data | Yes | **No** | No | App Functionality (Sentry performance tracing, `tracesSampleRate: 0.2`, plus session tracking — same no-identity note) |
 
 Everything else (Location, Financial Info, Health & Fitness, Contacts, Browsing History, Search History, Usage Data, Purchases, Messages) → **not collected**.
+
+"Other User Content" also covers the trail/animal problem reports users can submit (reason + optional note, linked to the account, deleted with it).
 
 **Note on Diagnostics / Sentry:** the code never calls `Sentry.setUser()`, so crash reports carry device/OS info but no email or account identifier — that's why Diagnostics is "not linked to identity." If a `setUser` call is ever added later, this answer needs to flip to "linked."
 

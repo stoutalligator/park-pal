@@ -99,7 +99,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective <strong>September 14, 2026</strong> &middot; Applies to the Parks Pal mobile app (iOS &amp; Android)</p>
+  <p class="meta">Effective <strong>October 13, 2026</strong> &middot; Applies to the Parks Pal mobile app (iOS &amp; Android)</p>
 
   <p class="lede">
     Parks Pal is a national park tracker — it tracks the parks you've visited, the trips you log or plan,
@@ -114,8 +114,10 @@
       <li><strong>Park &amp; trip data</strong> — parks you mark visited, wishlisted, or planned; trip dates, activities, trail and wildlife entries, and any notes you write.</li>
       <li><strong>Photos</strong> — images you choose to attach to a trip log, uploaded only when you add them.</li>
       <li><strong>Profile details</strong> — your display name, explorer style, avatar, park goal, and unit preference (miles/kilometers).</li>
+      <li><strong>Problem reports</strong> — if you flag a trail or animal as wrong, the entry you flagged, the reason, and any note you add, linked to your account so we can review and fix it.</li>
+      <li><strong>Crash &amp; performance diagnostics</strong> — when the app crashes or hits an error, and for a sample of app sessions, technical details like device model, operating system, app version, the error, and how long screens took to load. These are <em>not</em> linked to your email or account.</li>
     </ul>
-    <p>We don't collect location data, contacts, or anything from your device beyond what you enter into the app yourself.</p>
+    <p>Beyond those technical diagnostics, we don't collect location data, contacts, or anything from your device beyond what you enter into the app yourself.</p>
   </section>
 
   <section>
@@ -135,6 +137,10 @@
       and trip photos are served through short-lived private links only you can generate — no one else, signed
       in or not, can read your trips, photos, or profile.
     </p>
+    <p>
+      Crash and performance diagnostics go to <strong>Sentry</strong>, our crash-reporting provider, and are used
+      only to find and fix bugs.
+    </p>
     <div class="table-scroll">
       <table>
         <thead>
@@ -144,6 +150,8 @@
           <tr><td>Account &amp; profile</td><td>Supabase (Postgres)</td><td>Until you delete your account</td></tr>
           <tr><td>Trips, trails, wildlife logs</td><td>Supabase (Postgres)</td><td>Until you delete the trip or account</td></tr>
           <tr><td>Trip photos</td><td>Supabase Storage (private)</td><td>Until you delete the photo, trip, or account</td></tr>
+          <tr><td>Problem reports</td><td>Supabase (Postgres)</td><td>Until you delete your account</td></tr>
+          <tr><td>Crash &amp; performance diagnostics</td><td>Sentry</td><td>Deleted automatically after Sentry's retention period</td></tr>
         </tbody>
       </table>
     </div>

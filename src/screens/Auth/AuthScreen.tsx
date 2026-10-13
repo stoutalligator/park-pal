@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, TextInput, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Path, Circle, Rect } from 'react-native-svg';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -452,6 +452,20 @@ export default function AuthScreen({ navigation }: Props) {
           style={styles.submitBtn}
         />
 
+        {mode === 'Sign Up' && (
+          <Text style={styles.legalText}>
+            By creating an account, you agree to our{' '}
+            <Text style={styles.legalLink} onPress={() => Linking.openURL('https://parks-pal.com/terms')}>
+              {'Terms\u00A0of\u00A0Service'}
+            </Text>{' '}
+            and{' '}
+            <Text style={styles.legalLink} onPress={() => Linking.openURL('https://parks-pal.com/privacy')}>
+              {'Privacy\u00A0Policy'}
+            </Text>
+            .
+          </Text>
+        )}
+
         <TouchableOpacity
           onPress={() => {
             setMode(mode === 'Log In' ? 'Sign Up' : 'Log In');
@@ -513,6 +527,8 @@ const styles = StyleSheet.create({
   forgotLinkText: { ...typography.bodySmall, color: colors.primary },
 
   submitBtn: { width: '100%', marginTop: spacing.xl },
+  legalText: { ...typography.caption, color: colors.textMuted, textAlign: 'center', marginTop: spacing.md, lineHeight: 18 },
+  legalLink: { color: colors.primary, textDecorationLine: 'underline' },
   switchLink: { marginTop: spacing.lg },
   switchLinkText: { ...typography.bodySmall, color: colors.textSecondary },
   switchLinkTextBold: { color: colors.primary, fontFamily: typography.labelBold.fontFamily },

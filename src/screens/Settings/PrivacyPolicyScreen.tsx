@@ -8,7 +8,7 @@ import ScreenHeader from '@/components/ScreenHeader';
 const SECTIONS = [
   {
     title: 'What We Collect',
-    body: 'Your account email, the parks you mark visited or wishlisted, trip logs you write, and any photos you attach to a trip.',
+    body: 'Your account email, the parks you mark visited or wishlisted, trip logs you write, any photos you attach to a trip, and any trail or animal you flag as wrong. If the app crashes or hits an error, and for a sample of sessions, technical diagnostics (device model, OS, app version, the error) are sent to our crash-reporting provider — never linked to your email or account.',
   },
   {
     title: 'How We Use It',
@@ -16,7 +16,7 @@ const SECTIONS = [
   },
   {
     title: 'Where It Lives',
-    body: 'Your data is stored securely and is only accessible from your signed-in account.',
+    body: 'Your data is stored securely with Supabase and is only accessible from your signed-in account. Crash and performance diagnostics go to Sentry and are used only to find and fix bugs.',
   },
   {
     title: 'Your Control',

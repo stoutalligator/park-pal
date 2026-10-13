@@ -146,6 +146,8 @@ interface DayWeatherRow {
 }
 
 const TRIP_PHOTOS_BUCKET = 'trip-photos';
+// Must match the bucket's file_size_limit (supabase/schema.sql).
+const MAX_PHOTO_BYTES = 20 * 1024 * 1024;
 // The bucket is private (not `public: true`) — trip photos are personal, so
 // they're served through short-lived signed URLs the owning user generates
 // on demand, not a permanent public link anyone with it could view forever.
@@ -200,6 +202,7 @@ async function syncTripPhotos(
   const finalPaths: string[] = [];
   const finalCaptions: string[] = [];
   let skippedPhotos = 0;
+  let oversizedPhotos = 0;
   for (const [index, photo] of photos.slice(0, 3).entries()) {
     const caption = (captions[index] ?? '').trim();
     const existingPath = storagePathFromSignedUrl(photo);
@@ -223,12 +226,25 @@ async function syncTripPhotos(
       skippedPhotos += 1;
       continue;
     }
+    // The bucket would reject it anyway; skipping here keeps one huge photo
+    // from failing (and endlessly retrying) the whole trip's sync.
+    if (arrayBuffer.byteLength > MAX_PHOTO_BYTES) {
+      oversizedPhotos += 1;
+      continue;
+    }
     const { error: uploadError } = await supabase.storage
       .from(TRIP_PHOTOS_BUCKET)
       .upload(path, arrayBuffer, { contentType: 'image/jpeg' });
     if (uploadError) throw uploadError;
     finalPaths.push(path);
     finalCaptions.push(caption);
+  }
+
+  if (oversizedPhotos > 0) {
+    showToast(
+      `${oversizedPhotos === 1 ? 'A photo was' : `${oversizedPhotos} photos were`} too large to upload (20 MB max) — try a smaller version.`,
+      'error'
+    );
   }
 
   if (skippedPhotos > 0) {
