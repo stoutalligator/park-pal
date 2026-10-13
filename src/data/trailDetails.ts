@@ -23903,4 +23903,519 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       }
     ]
   },
+  "chiricahua-massai-point-nature-trail": {
+    "id": "chiricahua-massai-point-nature-trail",
+    "estimatedTime": "20-30 min",
+    "bestSeason": "Year-round",
+    "tags": [
+      "High Elevation",
+      "Steps",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov's hiking guide, pets are not allowed on this trail; expect uneven footing and steps, and take it slow, since the trail sits at about 6,870 feet and the thin air catches many visitors off guard.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The paved section leads to a small exhibit building, and the summit overlook takes in the whole maze of rhyolite pinnacles that earned the area the nickname \"Wonderland of Rocks.\"",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Massai Point parking"
+      },
+      {
+        "mile": 0.1,
+        "elevationFt": 20
+      },
+      {
+        "mile": 0.2,
+        "elevationFt": 40,
+        "label": "Exhibit building"
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": 50
+      },
+      {
+        "mile": 0.4,
+        "elevationFt": 25
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": 0,
+        "label": "Loop closure"
+      }
+    ]
+  },
+  "chiricahua-echo-canyon-grottoes": {
+    "id": "chiricahua-echo-canyon-grottoes",
+    "estimatedTime": "30-60 min",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Rock Formations",
+      "Family Friendly",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, pets are not allowed on Echo Canyon Trail; the Grotto is on the right about half a mile in, so turn around there before the trail starts its steep switchback descent into the canyon.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The pinnacles around the Grotto are rhyolite tuff, volcanic ash from an eruption of the Turkey Creek Caldera roughly 27 million years ago that welded into rock and then eroded along its cracks into columns.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Echo Canyon Trailhead"
+      },
+      {
+        "mile": 0.15,
+        "elevationFt": -20
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": -50
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": -90,
+        "label": "The Grotto (turnaround)"
+      },
+      {
+        "mile": 0.7,
+        "elevationFt": -50
+      },
+      {
+        "mile": 0.85,
+        "elevationFt": -20
+      },
+      {
+        "mile": 1,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-silver-spur-meadow": {
+    "id": "chiricahua-silver-spur-meadow",
+    "estimatedTime": "45 min-1 hr one way",
+    "bestSeason": "Year-round",
+    "tags": [
+      "History",
+      "Birding",
+      "Leashed Pets OK",
+      "Stream Crossings"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov's hiking guide, this is one of the few trails where leashed pets are permitted; stream crossings can be hazardous during spring snowmelt or summer monsoon runoff, and the 1.2 miles is one way, so plan to double it if you return on foot.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "Stafford Cabin along this trail was built around 1880 as a homestead, and Swedish immigrants Neil and Emma Erickson started neighboring Faraway Ranch in 1886. Their daughter Lillian ran it, partly as a guest ranch, until her death in 1977.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Faraway Ranch"
+      },
+      {
+        "mile": 0.2,
+        "elevationFt": 10
+      },
+      {
+        "mile": 0.45,
+        "elevationFt": 20,
+        "label": "Stafford Cabin"
+      },
+      {
+        "mile": 0.7,
+        "elevationFt": 30
+      },
+      {
+        "mile": 0.9,
+        "elevationFt": 40,
+        "label": "Silver Spur Meadow"
+      },
+      {
+        "mile": 1.2,
+        "elevationFt": 50,
+        "label": "Trail end"
+      }
+    ]
+  },
+  "chiricahua-sugarloaf-mountain": {
+    "id": "chiricahua-sugarloaf-mountain",
+    "estimatedTime": "1-2 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Summit",
+      "Fire Lookout",
+      "Lightning Risk",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, pets are not allowed on this trail; it is the most exposed summit in the park, so head down at once if you see lightning or hear thunder during the July-September monsoon.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The Civilian Conservation Corps built the stone fire lookout on the 7,310-foot summit in the 1930s, and the trail passes through a short tunnel the CCC cut through pale volcanic tuff.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Sugarloaf Trailhead"
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": 120
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": 230,
+        "label": "CCC tunnel"
+      },
+      {
+        "mile": 0.7,
+        "elevationFt": 360
+      },
+      {
+        "mile": 0.9,
+        "elevationFt": 470,
+        "label": "Summit fire lookout"
+      },
+      {
+        "mile": 1.1,
+        "elevationFt": 360
+      },
+      {
+        "mile": 1.3,
+        "elevationFt": 230
+      },
+      {
+        "mile": 1.5,
+        "elevationFt": 120
+      },
+      {
+        "mile": 1.8,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-echo-canyon-loop": {
+    "id": "chiricahua-echo-canyon-loop",
+    "estimatedTime": "2-4 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Rock Formations",
+      "Drop-offs",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, pets are not allowed on this loop, and the park recommends hiking it counterclockwise (down Echo Canyon, back up Ed Riggs) for better views and an easier climb. Hailstone Trail is not recommended for anyone with a significant fear of heights.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "Hailstone Trail is named for the hail-like spherulites embedded in the rock, small round crystal clusters that formed as the hot volcanic ash cooled.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Echo Canyon Trailhead"
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": -90,
+        "label": "The Grotto"
+      },
+      {
+        "mile": 1,
+        "elevationFt": -200,
+        "label": "Wall Street"
+      },
+      {
+        "mile": 1.6,
+        "elevationFt": -400,
+        "label": "Echo Park"
+      },
+      {
+        "mile": 2,
+        "elevationFt": -360
+      },
+      {
+        "mile": 2.4,
+        "elevationFt": -380,
+        "label": "Hailstone Trail"
+      },
+      {
+        "mile": 2.6,
+        "elevationFt": -420,
+        "label": "Ed Riggs junction"
+      },
+      {
+        "mile": 3,
+        "elevationFt": -200
+      },
+      {
+        "mile": 3.4,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-natural-bridge": {
+    "id": "chiricahua-natural-bridge",
+    "estimatedTime": "2-4 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Solitude",
+      "Burn Area",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, pets are not allowed on this trail; it climbs to a ridge, then drops into Picket Park, so you face a second climb on the way back. The trail ends at an overlook across the canyon, and there is no trail to the bridge itself.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "NPS calls this the park's least-used trail, and the small bridge sits about 150 feet above the viewpoint across a streambed, so binoculars help in morning shade.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Trailhead"
+      },
+      {
+        "mile": 0.6,
+        "elevationFt": 100
+      },
+      {
+        "mile": 1.2,
+        "elevationFt": 280
+      },
+      {
+        "mile": 1.6,
+        "elevationFt": 450,
+        "label": "Ridge / plateau rim"
+      },
+      {
+        "mile": 2,
+        "elevationFt": 150,
+        "label": "Picket Park"
+      },
+      {
+        "mile": 2.4,
+        "elevationFt": 250,
+        "label": "Natural Bridge overlook"
+      },
+      {
+        "mile": 2.8,
+        "elevationFt": 150
+      },
+      {
+        "mile": 3.2,
+        "elevationFt": 450,
+        "label": "Ridge"
+      },
+      {
+        "mile": 3.6,
+        "elevationFt": 280
+      },
+      {
+        "mile": 4.2,
+        "elevationFt": 100
+      },
+      {
+        "mile": 4.8,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-heart-of-rocks": {
+    "id": "chiricahua-heart-of-rocks",
+    "estimatedTime": "4-6 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Balanced Rocks",
+      "Rock Scrambling",
+      "Late-Start Warning",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov's park guide, pets are not allowed and hikers should not start this hike after 1 pm. Hike the Heart of Rocks Loop clockwise by climbing the large boulders at the signed junction; NPS says the loop is too difficult to follow in reverse.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The 1-mile loop at the end of this hike threads through the park's densest cluster of named hoodoos, and NPS credits the Civilian Conservation Corps crews of the 1930s with naming many of the park's rock formations.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Echo Canyon Trailhead"
+      },
+      {
+        "mile": 0.7,
+        "elevationFt": -400,
+        "label": "Ed Riggs / Mushroom Rock junction"
+      },
+      {
+        "mile": 1.9,
+        "elevationFt": 210,
+        "label": "Top of Mushroom Rock Trail"
+      },
+      {
+        "mile": 2.9,
+        "elevationFt": 150,
+        "label": "Big Balanced Rock"
+      },
+      {
+        "mile": 3.2,
+        "elevationFt": 100,
+        "label": "Heart of Rocks Loop junction"
+      },
+      {
+        "mile": 3.7,
+        "elevationFt": 230,
+        "label": "Heart of Rocks high point"
+      },
+      {
+        "mile": 4.2,
+        "elevationFt": 100,
+        "label": "Loop closure"
+      },
+      {
+        "mile": 5.4,
+        "elevationFt": 210
+      },
+      {
+        "mile": 6.6,
+        "elevationFt": -400
+      },
+      {
+        "mile": 7.3,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-big-loop": {
+    "id": "chiricahua-big-loop",
+    "estimatedTime": "5-8 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "All-Day",
+      "Big Climb",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov, pets are not allowed on any of the upper trails. Start early, carry plenty of water and salty snacks, and expect the steepest work on Sarah Deming Trail, which NPS says gains 880 feet.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The NPS route strings together eight named trails: Echo Canyon, Upper Rhyolite Canyon, Sarah Deming, Heart of Rocks Loop, Big Balanced Rock, Inspiration Point, Mushroom Rock, and Ed Riggs.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Echo Canyon Trailhead"
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": -90,
+        "label": "The Grotto"
+      },
+      {
+        "mile": 1.6,
+        "elevationFt": -400,
+        "label": "Echo Park"
+      },
+      {
+        "mile": 2.7,
+        "elevationFt": -800,
+        "label": "Sarah Deming junction"
+      },
+      {
+        "mile": 4.3,
+        "elevationFt": 80,
+        "label": "Top of Sarah Deming"
+      },
+      {
+        "mile": 4.9,
+        "elevationFt": 230,
+        "label": "Heart of Rocks"
+      },
+      {
+        "mile": 5.4,
+        "elevationFt": 100
+      },
+      {
+        "mile": 6.4,
+        "elevationFt": 160,
+        "label": "Big Balanced Rock"
+      },
+      {
+        "mile": 7,
+        "elevationFt": 120,
+        "label": "Inspiration Point"
+      },
+      {
+        "mile": 7.6,
+        "elevationFt": 210,
+        "label": "Top of Mushroom Rock"
+      },
+      {
+        "mile": 8.8,
+        "elevationFt": -400,
+        "label": "Ed Riggs junction"
+      },
+      {
+        "mile": 9.5,
+        "elevationFt": 0,
+        "label": "Back at Trailhead"
+      }
+    ]
+  },
+  "chiricahua-inspiration-point": {
+    "id": "chiricahua-inspiration-point",
+    "estimatedTime": "2.5-4 hrs",
+    "bestSeason": "Mar-May, Sep-Nov",
+    "tags": [
+      "Panoramic Views",
+      "Little Shade",
+      "No Pets"
+    ],
+    "trailTip": "As of October 2026, per NPS.gov's hiking guide, pets are not allowed on this trail. From Massai Point the route first drops about 400 feet on Ed Riggs Trail, then climbs 610 feet up Mushroom Rock Trail before the mostly level spur to the point, so save water and energy for the climb back out of the canyon on the return.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "NPS calls the mostly level Inspiration Point spur a good place to slow your heart rate after the climb up Mushroom Rock Trail, and the spur is one of the eight trails strung together in the park's 9.5-mile Big Loop.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Massai Point"
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": -80,
+        "label": "Ed Riggs Trail"
+      },
+      {
+        "mile": 1.1,
+        "elevationFt": -470,
+        "label": "Mushroom Rock junction"
+      },
+      {
+        "mile": 1.7,
+        "elevationFt": -150
+      },
+      {
+        "mile": 2.2,
+        "elevationFt": 140,
+        "label": "Big Balanced Rock junction"
+      },
+      {
+        "mile": 2.7,
+        "elevationFt": 190,
+        "label": "Inspiration Point"
+      },
+      {
+        "mile": 3.2,
+        "elevationFt": 140
+      },
+      {
+        "mile": 3.7,
+        "elevationFt": -150
+      },
+      {
+        "mile": 4.3,
+        "elevationFt": -470,
+        "label": "Mushroom Rock junction"
+      },
+      {
+        "mile": 5.1,
+        "elevationFt": -80
+      },
+      {
+        "mile": 5.4,
+        "elevationFt": 0,
+        "label": "Back at Massai Point"
+      }
+    ]
+  },
 };

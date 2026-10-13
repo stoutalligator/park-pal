@@ -30,7 +30,12 @@ const supabase = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
 });
 
 async function seedParks() {
-  const parks = extractArrayLiteral(path.join(ROOT, 'src/data/parks.ts'), 'ALL_PARKS');
+  // Upcoming parks are seeded too: their trails/animals reference parks.id,
+  // and the app decides visibility from app_config, not from this table.
+  const parks = [
+    ...extractArrayLiteral(path.join(ROOT, 'src/data/parks.ts'), 'ALL_PARKS'),
+    ...extractArrayLiteral(path.join(ROOT, 'src/data/parks.ts'), 'UPCOMING_PARKS'),
+  ];
   const rows = parks.map((p) => ({
     id: p.id,
     name: p.name,

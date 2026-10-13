@@ -645,4 +645,15 @@ export const ALL_TRAILS: Trail[] = [
   { id: 'gates-arctic-noatak-river', parkId: 'gates-arctic', name: 'Noatak River Route', description: 'Wilderness river corridor route through the Brooks Range.', miles: 20.0, elevationGainFt: 500, difficulty: 'Hard' },
   { id: 'gates-arctic-mount-igikpak', parkId: 'gates-arctic', name: 'Mount Igikpak Route', description: 'Remote route toward a dramatic granite peak.', miles: 15.0, elevationGainFt: 4000, difficulty: 'Hard' },
   { id: 'gates-arctic-walker-lake', parkId: 'gates-arctic', name: 'Walker Lake Route', description: 'Cross-country route to a remote glacial lake.', miles: 10.0, elevationGainFt: 800, difficulty: 'Hard' },
+
+  // --- Chiricahua (upcoming park — hidden until the app_config switch is on) ---
+  { id: 'chiricahua-massai-point-nature-trail', parkId: 'chiricahua', name: 'Massai Point Nature Trail', description: 'Short rim walk at nearly 6,900 ft with sweeping views and a huge balanced rock.', miles: 0.5, elevationGainFt: 50, difficulty: 'Easy' },
+  { id: 'chiricahua-echo-canyon-grottoes', parkId: 'chiricahua', name: 'Echo Canyon Grottoes', description: 'Short walk among the rock pinnacles to a shaded grotto you can step inside.', miles: 1.0, elevationGainFt: 100, difficulty: 'Easy' },
+  { id: 'chiricahua-silver-spur-meadow', parkId: 'chiricahua', name: 'Silver Spur Meadow Trail', description: 'Leisurely walk through the Faraway Ranch historic district past an 1880s cabin.', miles: 1.2, elevationGainFt: 50, difficulty: 'Easy' },
+  { id: 'chiricahua-sugarloaf-mountain', parkId: 'chiricahua', name: 'Sugarloaf Mountain Trail', description: 'Climb to an old fire lookout on one of the highest points in the park.', miles: 1.8, elevationGainFt: 470, difficulty: 'Moderate' },
+  { id: 'chiricahua-echo-canyon-loop', parkId: 'chiricahua', name: 'Echo Canyon Loop', description: 'Classic loop through the Grottoes and Wall Street, among towering rhyolite spires.', miles: 3.4, elevationGainFt: 560, difficulty: 'Moderate' },
+  { id: 'chiricahua-natural-bridge', parkId: 'chiricahua', name: 'Natural Bridge Trail', description: 'Quiet trail through oak woodland and pine forest to an overlook of a small water-carved bridge across the canyon.', miles: 4.8, elevationGainFt: 1000, difficulty: 'Moderate' },
+  { id: 'chiricahua-heart-of-rocks', parkId: 'chiricahua', name: 'Heart of Rocks Loop', description: "Rugged loop past the park's most famous balancing rocks, including Big Balanced Rock.", miles: 7.3, elevationGainFt: 1000, difficulty: 'Hard' },
+  { id: 'chiricahua-inspiration-point', parkId: 'chiricahua', name: 'Inspiration Point Trail', description: 'Drops from Massai Point into the canyon, then climbs Mushroom Rock Trail to a ridge-top viewpoint over Cochise Head and the pinnacles.', miles: 5.4, elevationGainFt: 1050, difficulty: 'Hard' },
+  { id: 'chiricahua-big-loop', parkId: 'chiricahua', name: 'The Big Loop', description: 'All-day route linking Echo Canyon, Heart of Rocks, and Inspiration Point.', miles: 9.5, elevationGainFt: 1800, difficulty: 'Hard' },
 ];

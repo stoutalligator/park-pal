@@ -65,6 +65,7 @@ A pre-confirmed reviewer account exists so reviewers can skip the email-confirma
 
 Beta App Description ("What to Test"):
 ```
+<!-- When Chiricahua (#64) is switched on, update every "63" in this file to 64. -->
 Parks Pal is a national park tracker — log trips, track which of the 63 U.S. National Parks you've visited, collect postcards from every trip, and earn badges.
 
 Please test:

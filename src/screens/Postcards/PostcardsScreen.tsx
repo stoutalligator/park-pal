@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import { Trip } from '@/types';
-import { TOTAL_PARKS, getParkById } from '@/data/parks';
+import { getParkById } from '@/data/parks';
 import { getParkImage, getParkScene } from '@/data/parkImages';
 import { formatDateRange } from '@/utils/dates';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -65,7 +65,7 @@ export default function PostcardsScreen() {
       ) : (
         <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
           <Text style={styles.summary}>
-            {postcards.length} {postcards.length === 1 ? 'postcard' : 'postcards'} · {stats.totalVisited} / {TOTAL_PARKS} parks
+            {postcards.length} {postcards.length === 1 ? 'postcard' : 'postcards'} · {stats.totalVisited} / {stats.totalParks} parks
           </Text>
           {postcards.map((trip) => (
             <Postcard key={trip.id} trip={trip} onPress={() => navigation.navigate('TripDetail', { tripId: trip.id })} />

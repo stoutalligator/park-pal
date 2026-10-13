@@ -203,6 +203,8 @@ export interface Badge {
 }
 
 export interface UserStats {
+  /** Parks currently in the app — 63, or more once an upcoming park is switched on. */
+  totalParks: number;
   totalVisited: number;
   totalRemaining: number;
   bucketListCount: number;

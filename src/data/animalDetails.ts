@@ -6598,5 +6598,136 @@ export const ANIMAL_DETAILS: Record<string, AnimalDetail> = {
     ],
     "viewingTip": "Watch soaring eagles from canyon-floor overlooks with binoculars rather than trying to get closer to a rim nest site.",
     "didYouKnow": "Golden eagles can spot a rabbit from over a mile away thanks to eyesight roughly four to eight times sharper than a human's."
-  }
+  },
+  "acadia-atlantic-puffin": {
+    "id": "acadia-atlantic-puffin",
+    "scientificName": "Fratercula arctica",
+    "bestTimeOfDay": "Morning",
+    "bestSeason": "Late May-mid Aug (nesting; adults depart by early Sep)",
+    "whereToLook": "Offshore nesting islands like Petit Manan, reached via naturalist-led boat tours departing Bar Harbor",
+    "tags": [
+      "Boat Tour Required",
+      "Nesting Colony"
+    ],
+    "viewingTip": "As of September 2026, per Bar Harbor Whale Watch Co. and Acadian Boat Tours, puffins nest on protected offshore islands with no public landing — book a naturalist-led lighthouse/puffin cruise from Bar Harbor and view the colony from the boat with binoculars rather than approaching by kayak or personal boat.",
+    "lastVerified": "2026-09-18",
+    "didYouKnow": "Puffins aren't found within Acadia's own boundaries — nearby colonies like Petit Manan Island support only a few hundred breeding pairs, so researchers there radio updates to passing tour boats in real time."
+  },
+  "chiricahua-white-nosed-coati": {
+    "id": "chiricahua-white-nosed-coati",
+    "scientificName": "Nasua narica",
+    "bestTimeOfDay": "Daytime",
+    "bestSeason": "Sep-Feb",
+    "whereToLook": "Lower elevations around Silver Spur Meadow and Bonita Canyon Campground",
+    "tags": [
+      "Social Bands",
+      "Day Active"
+    ],
+    "viewingTip": "Watch bands from a respectful distance with binoculars and never feed them. NPS warns that any wild mammal can carry rabies, and coatis that learn to beg from people are a danger to themselves and to visitors.",
+    "didYouKnow": "Females and young travel together in noisy bands, while adult males usually live alone, which is why you often see either a crowd of coatis or just one."
+  },
+  "chiricahua-coues-white-tailed-deer": {
+    "id": "chiricahua-coues-white-tailed-deer",
+    "scientificName": "Odocoileus virginianus couesi",
+    "bestTimeOfDay": "Dawn / Dusk",
+    "bestSeason": "Year-round",
+    "whereToLook": "Lower Bonita Canyon, Silver Spur Meadow Trail, and along the scenic drive",
+    "tags": [
+      "Lower Canyons",
+      "Roadside"
+    ],
+    "viewingTip": "Drive the scenic drive slowly at dawn and dusk, when deer often cross. If you spot a fawn lying alone in summer, view it only from a distance and move on, because its mother is almost always nearby.",
+    "didYouKnow": "In a 2022 NPS camera survey of the park, white-tailed deer were by far the most-detected animal, with 448 detections, mostly at lower elevations."
+  },
+  "chiricahua-javelina": {
+    "id": "chiricahua-javelina",
+    "scientificName": "Pecari tajacu",
+    "bestTimeOfDay": "Dawn / Dusk",
+    "bestSeason": "Year-round",
+    "whereToLook": "Lower-elevation woodlands and washes of Bonita Canyon",
+    "tags": [
+      "Herd Animal",
+      "Lower Canyons"
+    ],
+    "viewingTip": "Give herds plenty of room and watch them with binoculars. Javelina can turn defensive if surprised at close range, especially around dogs, so keep pets leashed where they are allowed and never feed them.",
+    "didYouKnow": "Despite the pig-like look, javelina are not pigs; peccaries belong to a separate New World family."
+  },
+  "chiricahua-acorn-woodpecker": {
+    "id": "chiricahua-acorn-woodpecker",
+    "scientificName": "Melanerpes formicivorus",
+    "bestTimeOfDay": "Morning",
+    "bestSeason": "Year-round",
+    "whereToLook": "Riparian oaks and sycamores along Silver Spur Meadow Trail and Bonita Creek",
+    "tags": [
+      "Year-round Resident",
+      "Riparian"
+    ],
+    "viewingTip": "Listen for their raucous 'waka-waka' calls, then use binoculars to pick out the group; NPS notes that if you see one, others are usually nearby.",
+    "didYouKnow": "Family groups drill holes into a single granary tree and wedge an acorn into each one, building up a communal winter food store."
+  },
+  "chiricahua-fox-squirrel": {
+    "id": "chiricahua-fox-squirrel",
+    "scientificName": "Sciurus nayaritensis chiricahuae",
+    "bestTimeOfDay": "Morning",
+    "bestSeason": "Year-round",
+    "whereToLook": "Oak, pine, and streamside woodlands in the canyons",
+    "tags": [
+      "Sky Island Specialty",
+      "Woodland"
+    ],
+    "viewingTip": "Scan the oak and pine canopy quietly with binoculars, and never offer food. Hand-fed squirrels lose their wariness and can carry disease.",
+    "didYouKnow": "This Mexican fox squirrel reaches the U.S. only in southeastern Arizona's sky islands, but NPS says it is a fairly common sight in the park."
+  },
+  "chiricahua-banded-rock-rattlesnake": {
+    "id": "chiricahua-banded-rock-rattlesnake",
+    "scientificName": "Crotalus lepidus klauberi",
+    "bestTimeOfDay": "Early morning / Late afternoon",
+    "bestSeason": "Apr-Oct",
+    "whereToLook": "Rocky slopes and gravelly drainages",
+    "tags": [
+      "Venomous",
+      "Rocky Slopes"
+    ],
+    "viewingTip": "If you see one, give it plenty of space and let it continue on its way. NPS asks visitors never to harm or handle rattlesnakes and to watch where they put their hands and feet among the rocks.",
+    "didYouKnow": "Adult males are often greenish while females tend to be gray. Both blend into lichen-covered rock so well that many hikers walk right past them."
+  },
+  "chiricahua-elegant-trogon": {
+    "id": "chiricahua-elegant-trogon",
+    "scientificName": "Trogon ambiguus (formerly Trogon elegans)",
+    "bestTimeOfDay": "Morning",
+    "bestSeason": "Apr-Sep",
+    "whereToLook": "Sycamore- and oak-lined riparian canyons such as Bonita Creek",
+    "tags": [
+      "Mexican Specialty",
+      "Cavity Nester"
+    ],
+    "viewingTip": "Listen for its hoarse, repeated call and watch from well back with binoculars. Never use recorded calls to lure one in, and keep well away from nest cavities so the birds are not disturbed.",
+    "didYouKnow": "Trogons don't dig their own nests. In Arizona they mostly reuse old woodpecker holes in sycamores, and in 2025 eBird's taxonomy renamed the U.S. population the Coppery-tailed Trogon."
+  },
+  "chiricahua-black-bear": {
+    "id": "chiricahua-black-bear",
+    "scientificName": "Ursus americanus",
+    "bestTimeOfDay": "Dawn / Dusk",
+    "bestSeason": "May-Sep",
+    "whereToLook": "Forested canyons and ridges throughout the park",
+    "tags": [
+      "Summer Visitor",
+      "Keep Food Secured"
+    ],
+    "viewingTip": "If you see a bear, stay at least 100 yards away, watch only with binoculars, and never leave food or trash unattended at campsites or picnic areas.",
+    "didYouKnow": "Bears are seldom seen by visitors, yet NPS wildlife cameras recorded 70 black bear detections in just six weeks of the 2022 survey."
+  },
+  "chiricahua-mexican-jay": {
+    "id": "chiricahua-mexican-jay",
+    "scientificName": "Aphelocoma wollweberi",
+    "bestTimeOfDay": "Daytime",
+    "bestSeason": "Year-round",
+    "whereToLook": "Oak, pine, and juniper woodlands throughout the park",
+    "tags": [
+      "Year-round Resident",
+      "Family Flocks"
+    ],
+    "viewingTip": "These social jays often seem unafraid of people, but NPS asks visitors not to feed them, so watch with binoculars, keep picnic food packed away, and stay well back from any nest during the spring breeding season.",
+    "didYouKnow": "A flock of roughly 5 to 25 jays shares a permanent territory, and many flock members, not just the parents, help feed the nestlings. Much of what is known about this comes from a banded flock studied every year from 1969 to 2006 at a research station in the Chiricahua Mountains."
+  },
 };

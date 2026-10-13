@@ -11,7 +11,7 @@ A cozy, illustrated mobile app that lets users track U.S. National Parks they've
 - **Styling**: NativeWind (Tailwind for RN) — utility classes; shared design tokens in `src/theme/`
 - **Navigation**: React Navigation v6 — bottom tab navigator + native stack navigators per tab
 - **State**: React Context + local state for v1; architected so Supabase/Firebase can replace mock data later
-- **Data**: Local mock data in `src/data/` — all 63 parks stubbed out in v1 so real data can be swapped in without structural changes
+- **Data**: Local mock data in `src/data/` — all 63 parks stubbed out in v1 so real data can be swapped in without structural changes (plus any pending parks in `UPCOMING_PARKS`, hidden until switched on — see Notes)
 - **Fonts**: Fredoka Bold (headings), Nunito Regular (body) — loaded via `expo-font`
 - **Icons**: Custom illustrated SVG icons + `@expo/vector-icons` for utility icons
 - **Images**: Local illustrated assets in `src/assets/` — no real photography
@@ -66,7 +66,7 @@ docs/
 |---|---|
 | `src/theme/colors.ts` | Single source of truth for the full color palette |
 | `src/theme/typography.ts` | Font families, sizes, and weights |
-| `src/data/parks.ts` | All 63 national parks — every park has a stub entry (id, name, state, region, description placeholder) so no park is missing from the list even before real content is added |
+| `src/data/parks.ts` | All 63 national parks in `ALL_PARKS`, plus pending parks in `UPCOMING_PARKS` — every park has a stub entry (id, name, state, region, description placeholder) so no park is missing from the list even before real content is added |
 | `src/context/AppContext.tsx` | Global state — visited, wishlist, trips, badges |
 | `src/navigation/RootNavigator.tsx` | App-level navigator (onboarding vs main tabs) |
 | `src/navigation/TabNavigator.tsx` | Bottom tab bar with floating center + button |
@@ -173,6 +173,6 @@ These features are not being built yet. However, the code must be structured so 
 
 - The app is named **Parks Pal** but the display title on the welcome screen reads **"National Park Tracker"** — match the reference image exactly.
 - The motto is: **"COLLECT. EXPLORE. REMEMBER."** — used in onboarding/marketing surfaces.
-- There are exactly **63 U.S. National Parks** — the progress ring tracks visited / 63.
+- There are **63 U.S. National Parks**, with **Chiricahua (#64)** pending: its bill passed Congress in Oct 2026 and awaits signature. It's fully built but lives in `UPCOMING_PARKS` and stays hidden until its id is in the Supabase `app_config` row `enabled_upcoming_parks` (see `supabase/migrations/2026-10-13-app-config.sql`). Never hardcode 63 — use `stats.totalParks` / `parks.length`, which follow the switch.
 - The bottom tab center button is a `+` FAB for "Log a Trip" — it is NOT a standard tab; it opens a modal stack.
 - Onboarding (explorer style + goal selection) is skippable and should not block access to the app.

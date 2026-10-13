@@ -5,7 +5,7 @@ import NetInfo from '@react-native-community/netinfo';
 import * as Crypto from 'expo-crypto';
 import type { Session } from '@supabase/supabase-js';
 import { Park, Trip, TripType, TripTrailEntry, TripDayEntry, WeatherType, Badge, UserStats, UserProfile, ParkStatus, TripActivity, ProfileBackground, ProfileAvatar, Units, Trail, Animal, TrailDetail, AnimalDetail, ContentReportInput, TrailCompletionRow, AnimalSightingRow } from '@/types';
-import { ALL_PARKS, TOTAL_PARKS } from '@/data/parks';
+import { ALL_PARKS, UPCOMING_PARKS, visibleParks } from '@/data/parks';
 import { ALL_BADGES } from '@/data/badges';
 import { BADGE_PROGRESS } from '@/data/badgeRules';
 import { ALL_TRAILS } from '@/data/trails';
@@ -13,6 +13,7 @@ import { ALL_ANIMALS } from '@/data/animals';
 import { TRAIL_DETAILS } from '@/data/trailDetails';
 import { ANIMAL_DETAILS } from '@/data/animalDetails';
 import { fetchContentBundle } from '@/data/contentService';
+import { loadCachedEnabledUpcomingParks, fetchEnabledUpcomingParks } from '@/data/appConfig';
 import { loadPendingTrips, savePendingTrips } from '@/data/offlineTrips';
 import { loadSnapshot, saveSnapshot, clearSnapshot, ParkStatusSnapshot, SnapshotPatch } from '@/data/localCache';
 import { loadOutbox, saveOutbox, clearOutbox } from '@/data/outbox';
@@ -108,9 +109,14 @@ function profilePatchToColumns(patch: Partial<UserProfile>): Record<string, unkn
   );
 }
 
+// Every park the app knows about, including upcoming ones that may still be
+// switched off — statuses are tracked for all of them, and `parks` (below)
+// exposes only the visible subset.
+const PARK_ENTRIES: Park[] = [...ALL_PARKS, ...UPCOMING_PARKS];
+
 function parksFromStatus(rows: ParkStatusSnapshot[]): Park[] {
   const byId = new Map(rows.map((row) => [row.parkId, row]));
-  return ALL_PARKS.map((park) => {
+  return PARK_ENTRIES.map((park) => {
     const row = byId.get(park.id);
     return { ...park, status: row?.status ?? 'notVisited', isFavorite: row?.isFavorite ?? false };
   });
@@ -370,7 +376,12 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue | null>(null);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [parks, setParks] = useState<Park[]>(ALL_PARKS);
+  const [parkStates, setParks] = useState<Park[]>(PARK_ENTRIES);
+  const [enabledUpcomingParks, setEnabledUpcomingParks] = useState<string[]>([]);
+  const parks = useMemo(() => {
+    const visibleIds = new Set(visibleParks(enabledUpcomingParks).map((p) => p.id));
+    return parkStates.filter((p) => visibleIds.has(p.id));
+  }, [parkStates, enabledUpcomingParks]);
   const [trips, setTrips] = useState<Trip[]>([]);
   const [earnedDates, setEarnedDates] = useState<Record<string, string>>({});
   const earnedIdsRef = useRef<Set<string>>(new Set());
@@ -541,6 +552,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const refreshAppConfig = useCallback(() => {
+    fetchEnabledUpcomingParks().then((ids) => {
+      if (ids) setEnabledUpcomingParks(ids);
+    });
+  }, []);
+
+  useEffect(() => {
+    loadCachedEnabledUpcomingParks().then(setEnabledUpcomingParks).then(refreshAppConfig);
+  }, [refreshAppConfig]);
+
   const refreshContentIfFallenBack = useCallback(() => {
     if (!usedContentFallbackRef.current) return;
     fetchContentBundle().then((bundle) => {
@@ -615,7 +636,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!userId) {
-      setParks(ALL_PARKS);
+      setParks(PARK_ENTRIES);
       setParksLoaded(false);
       return;
     }
@@ -886,7 +907,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const patch: SnapshotPatch = {};
       if (synced.profile !== 'none') patch.profile = userProfile;
       if (synced.parks !== 'none') {
-        patch.parkStatus = parks.map((p) => ({ parkId: p.id, status: p.status, isFavorite: p.isFavorite }));
+        patch.parkStatus = parkStates.map((p) => ({ parkId: p.id, status: p.status, isFavorite: p.isFavorite }));
       }
       if (synced.badges !== 'none') patch.earnedDates = earnedDates;
       if (synced.trips !== 'none') {
@@ -898,7 +919,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       if (Object.keys(patch).length) saveSnapshot(userId, patch);
     }, 800);
     return () => clearTimeout(timer);
-  }, [userId, userProfile, parks, earnedDates, trips, pendingTrips, trailCompletions, animalSightings]);
+  }, [userId, userProfile, parkStates, earnedDates, trips, pendingTrips, trailCompletions, animalSightings]);
 
   const isTrailCompleted = useCallback(
     (trailId: string) => trailCompletions.some((row) => row.trail_id === trailId),
@@ -918,7 +939,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const completedTrailIds = trailCompletions.map((row) => row.trail_id).filter((id): id is string => !!id);
     const spottedAnimalIds = animalSightings.map((row) => row.animal_id).filter((id): id is string => !!id);
     return ALL_BADGES.map((badge) => {
-      const goal = badge.goal ?? 1;
+      const goal = badge.id === 'parks-all' ? parks.length : badge.goal ?? 1;
       const rawProgress = BADGE_PROGRESS[badge.id]?.({ parks, trips: loggedTrips, completedTrailIds, spottedAnimalIds }) ?? 0;
       const progress = Math.min(rawProgress, goal);
       const earned = progress >= goal;
@@ -991,11 +1012,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const loggedTrips = trips.filter((t) => t.tripType === 'logged');
 
   const stats: UserStats = {
+    totalParks: parks.length,
     totalVisited: parks.filter((p) => p.status === 'visited').length,
-    totalRemaining: TOTAL_PARKS - parks.filter((p) => p.status === 'visited').length,
+    totalRemaining: parks.length - parks.filter((p) => p.status === 'visited').length,
     bucketListCount: parks.filter((p) => p.isFavorite).length,
     completionPercentage: Math.round(
-      (parks.filter((p) => p.status === 'visited').length / TOTAL_PARKS) * 100
+      (parks.filter((p) => p.status === 'visited').length / parks.length) * 100
     ),
     totalTrips: loggedTrips.length,
     totalPhotos: loggedTrips.reduce((acc, t) => acc + t.photos.length, 0),
@@ -1410,6 +1432,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         syncPendingTrips();
         flushInBackground();
         refreshContentIfFallenBack();
+        refreshAppConfig();
       }
     });
     const appStateSub = AppState.addEventListener('change', (next) => {
@@ -1422,7 +1445,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       unsubscribe();
       appStateSub.remove();
     };
-  }, [syncPendingTrips, flushInBackground, refreshContentIfFallenBack]);
+  }, [syncPendingTrips, flushInBackground, refreshContentIfFallenBack, refreshAppConfig]);
 
   // Applies a saved edit to a trip locally and gets it to the server: a
   // not-yet-synced new trip just has its queued copy rewritten; an already-

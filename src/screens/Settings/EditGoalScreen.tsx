@@ -34,7 +34,7 @@ const GOALS: { label: ExplorerGoal; render: (color: string) => React.ReactElemen
 ];
 
 export default function EditGoalScreen() {
-  const { userProfile, updateProfile } = useApp();
+  const { userProfile, updateProfile, stats } = useApp();
   const navigation = useNavigation<any>();
   const [selectedGoal, setSelectedGoal] = useState<ExplorerGoal | undefined>(userProfile.goal);
 
@@ -49,6 +49,7 @@ export default function EditGoalScreen() {
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <Text style={styles.label}>What's your adventure goal?</Text>
         <View style={styles.grid}>
+          {/* The stored goal value predates park #64, so only its display tracks the live count. */}
           {GOALS.map(({ label, render }) => {
             const active = selectedGoal === label;
             const iconColor = active ? colors.textInverse : colors.brown;
@@ -60,7 +61,7 @@ export default function EditGoalScreen() {
                 activeOpacity={0.8}
               >
                 {render(iconColor)}
-                <Text style={[styles.optionLabel, active && styles.optionLabelActive]}>{label}</Text>
+                <Text style={[styles.optionLabel, active && styles.optionLabelActive]}>{label === 'Visit all 63 National Parks' ? `Visit all ${stats.totalParks} National Parks` : label}</Text>
               </TouchableOpacity>
             );
           })}

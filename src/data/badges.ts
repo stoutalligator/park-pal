@@ -6,7 +6,7 @@ export const ALL_BADGES: Badge[] = [
   { id: 'parks-10', name: 'Trail Seeker', description: 'Visit 10 national parks.', category: 'parks', earned: false, progress: 0, goal: 10 },
   { id: 'parks-25', name: 'Ranger in Training', description: 'Visit 25 national parks.', category: 'parks', earned: false, progress: 0, goal: 25 },
   { id: 'parks-50', name: 'Park Legend', description: 'Visit 50 national parks.', category: 'parks', earned: false, progress: 0, goal: 50 },
-  { id: 'parks-all', name: 'Ultimate Ranger', description: 'Visit all 63 national parks.', category: 'parks', earned: false, progress: 0, goal: 63 },
+  { id: 'parks-all', name: 'Ultimate Ranger', description: 'Visit every national park.', category: 'parks', earned: false, progress: 0, goal: 63 },
   { id: 'hiker', name: 'Trail Blazer', description: 'Log a hike in 5 different parks.', category: 'activity', earned: false, progress: 0, goal: 5 },
   { id: 'camper', name: 'Night Under Stars', description: 'Camp in a national park.', category: 'activity', earned: false, progress: 0, goal: 1 },
   { id: 'wildlife', name: 'Wildlife Spotter', description: 'Spot wildlife in 3 different parks.', category: 'activity', earned: false, progress: 0, goal: 3 },

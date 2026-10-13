@@ -8,7 +8,6 @@ import ProgressRing from '@/components/ProgressRing';
 import UsMap from '@/components/UsMap';
 import SegmentedToggle from '@/components/SegmentedToggle';
 import { ParkStatus } from '@/types';
-import { TOTAL_PARKS } from '@/data/parks';
 
 type Filter = 'All Parks' | 'Visited' | 'Bucket List' | 'Planned';
 
@@ -51,7 +50,7 @@ export default function HomeScreen() {
         <View style={styles.progressLeft}>
           <Text style={styles.progressTitle}>Your Progress</Text>
           <Text style={styles.progressCount}>
-            {stats.totalVisited} / {TOTAL_PARKS}
+            {stats.totalVisited} / {stats.totalParks}
           </Text>
           <Text style={styles.progressSub}>National Parks Visited</Text>
         </View>

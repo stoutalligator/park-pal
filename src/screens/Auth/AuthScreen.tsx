@@ -205,7 +205,7 @@ const GOALS: { label: ExplorerGoal; render: (color: string) => React.ReactElemen
 ];
 
 export default function AuthScreen({ navigation }: Props) {
-  const { completeOnboarding } = useApp();
+  const { completeOnboarding, stats } = useApp();
   const [mode, setMode] = useState<Mode>('Log In');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -422,6 +422,7 @@ export default function AuthScreen({ navigation }: Props) {
             <View style={styles.field}>
               <Text style={styles.label}>What's your adventure goal?</Text>
               <View style={styles.grid}>
+                {/* The stored goal value predates park #64, so only its display tracks the live count. */}
                 {GOALS.map(({ label, render }) => {
                   const active = selectedGoal === label;
                   const iconColor = active ? colors.textInverse : colors.brown;
@@ -433,7 +434,7 @@ export default function AuthScreen({ navigation }: Props) {
                       activeOpacity={0.8}
                     >
                       {render(iconColor)}
-                      <Text style={[styles.optionLabel, active && styles.optionLabelActive]}>{label}</Text>
+                      <Text style={[styles.optionLabel, active && styles.optionLabelActive]}>{label === 'Visit all 63 National Parks' ? `Visit all ${stats.totalParks} National Parks` : label}</Text>
                     </TouchableOpacity>
                   );
                 })}

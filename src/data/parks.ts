@@ -81,10 +81,22 @@ export const ALL_PARKS: Park[] = [
   { id: 'gateway-arch', name: 'Gateway Arch', state: 'Missouri', region: 'SouthCentral', description: 'The 630-foot stainless steel Gateway Arch is the tallest human-made monument in the U.S. It sits on the St. Louis riverfront, honoring the westward expansion of the nation and the people it affected. Ride the tiny tram pods to the top and explore the museum beneath its legs.', establishedYear: 2018, acres: 193, status: 'notVisited', isFavorite: false, lat: 38.62, lng: -90.18 },
 ];
 
-export const TOTAL_PARKS = 63;
+// Parks whose designation is pending (e.g. a bill awaiting signature). They're
+// fully set up — trails, animals, guide — but stay hidden until their id is
+// listed in the remote `enabled_upcoming_parks` switch (see src/data/appConfig.ts).
+export const UPCOMING_PARKS: Park[] = [
+  { id: 'chiricahua', name: 'Chiricahua', state: 'Arizona', region: 'Mountain', description: 'A "wonderland of rocks" in southeast Arizona, where thousands of rhyolite spires, pinnacles, and impossibly balanced boulders rise from a sky island. They were left by a massive volcanic eruption about 27 million years ago. Hike among the hoodoos to Heart of Rocks and Big Balanced Rock, look for coatis and Mexican birds like the coppery-tailed trogon that barely reach the U.S., and tour the historic Faraway Ranch.', establishedYear: 2026, acres: 11985, status: 'notVisited', isFavorite: false, lat: 32.01, lng: -109.36 },
+];
 
+// The parks a user can see: every established park plus any upcoming park
+// that's been switched on.
+export function visibleParks(enabledUpcomingIds: string[]): Park[] {
+  return [...ALL_PARKS, ...UPCOMING_PARKS.filter((p) => enabledUpcomingIds.includes(p.id))];
+}
+
+// Searches upcoming parks too, so lookups by id (e.g. for a trip) still resolve.
 export const getParkById = (id: string): Park | undefined =>
-  ALL_PARKS.find((p) => p.id === id);
+  ALL_PARKS.find((p) => p.id === id) ?? UPCOMING_PARKS.find((p) => p.id === id);
 
 export const getParksByStatus = (status: Park['status']): Park[] =>
   ALL_PARKS.filter((p) => p.status === status);

@@ -255,6 +255,19 @@ create unique index content_reports_one_open_per_reason
 -- Row Level Security
 -- ---------------------------------------------------------------------------
 
+-- Remote switches the app reads at launch (see src/data/appConfig.ts), so a
+-- change like turning on a newly designated park reaches everyone without an
+-- app update. Readable by anyone; changed only from the dashboard/service role.
+--   enabled_upcoming_parks: JSON array of UPCOMING_PARKS ids to show, e.g. ["chiricahua"]
+create table public.app_config (
+  key text primary key,
+  value jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+insert into public.app_config (key, value) values ('enabled_upcoming_parks', '[]'::jsonb);
+
+alter table public.app_config enable row level security;
 alter table public.parks enable row level security;
 alter table public.badges enable row level security;
 alter table public.profiles enable row level security;
@@ -273,6 +286,8 @@ alter table public.trip_day_weather enable row level security;
 alter table public.content_reports enable row level security;
 
 -- Reference data: readable by anyone, no client writes (seeded via SQL only).
+create policy "app config is publicly readable" on public.app_config
+  for select using (true);
 create policy "parks are publicly readable" on public.parks
   for select using (true);
 create policy "badges are publicly readable" on public.badges
@@ -336,6 +351,7 @@ create policy "users can submit content reports" on public.content_reports
 
 grant usage on schema public to anon, authenticated, service_role;
 
+grant select on public.app_config to anon, authenticated;
 grant select on public.parks to anon, authenticated;
 grant select on public.badges to anon, authenticated;
 grant select on public.trails to anon, authenticated;

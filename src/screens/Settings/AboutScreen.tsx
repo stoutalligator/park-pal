@@ -20,8 +20,8 @@ export default function AboutScreen() {
         <Text style={styles.motto}>COLLECT. EXPLORE. REMEMBER.</Text>
         <Text style={styles.body}>
           Parks Pal is your cozy companion for tracking every U.S. National Park you visit. Log
-          trips, save memories, collect postcards from every adventure, and watch your progress toward
-          all 63 parks fill in — one adventure at a time.
+          trips, save memories, collect postcards from every adventure, and watch your national park map fill
+          in — one adventure at a time.
         </Text>
         <View style={styles.sourceCard}>
           <Text style={styles.sourceTitle}>Where our info comes from</Text>

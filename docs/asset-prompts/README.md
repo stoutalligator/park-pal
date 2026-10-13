@@ -7,6 +7,7 @@ Prompts for generating illustrated art outside the repo (Midjourney, DALL-E, etc
 | File | Covers | Output location |
 |---|---|---|
 | [park-icons.md](park-icons.md) | Map-pin / list thumbnails for all 63 parks | `src/assets/parks-icons/` |
+| [park-scenes.md](park-scenes.md) | Park Detail hero images (also on postcards and share recaps). **Painterly style**, like profile backgrounds | `src/assets/parks-scenes/` |
 | [badges.md](badges.md) | Achievement stickers (the badge catalog) | `src/assets/badges/` |
 | [park-pals.md](park-pals.md) | Default 15-animal activity avatar roster | `src/assets/activities/pal-<activity>.png` |
 | [unlockable-pals.md](unlockable-pals.md) | Badge-unlocked bonus pals — a badge sticker + pal avatar pair (Island Fox, Puffin, ...) | `src/assets/badges/` + `src/assets/activities/` |

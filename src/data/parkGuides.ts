@@ -357,6 +357,15 @@ export const PARK_GUIDES: Record<string, ParkGuide> = {
       { when: 'Evening', text: 'Watch the white sand turn pink and gold at sunset. Note that the park can briefly close for missile range testing.' },
     ],
   },
+  chiricahua: {
+    npsCode: 'chir',
+    oneDay: [
+      { when: 'Morning', text: 'Hike the Echo Canyon Loop (3.4 mi) while it\'s cool, winding through the Grottoes and the narrow Wall Street among towering rock spires. On some mornings a hikers\' shuttle runs up to the trailheads, so you can hike one way downhill.' },
+      { when: 'Midday', text: 'Drive the 8-mile Bonita Canyon Scenic Drive up to Massai Point and walk the short nature trail for views of Cochise Head and a sea of pinnacles.' },
+      { when: 'Afternoon', text: 'Explore the Faraway Ranch historic district and Stafford Cabin, or, if you have energy left, tackle Heart of Rocks to see Big Balanced Rock. Watch for coatis along the way.' },
+      { when: 'Evening', text: 'Catch sunset from Massai Point, then stay for the stars. This remote corner of Arizona has some of the darkest skies around.' },
+    ],
+  },
   'great-basin': {
     npsCode: 'grba',
     oneDay: [

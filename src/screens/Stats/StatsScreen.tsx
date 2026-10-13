@@ -6,7 +6,6 @@ import { useApp } from '@/context/AppContext';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
 import ProgressRing from '@/components/ProgressRing';
 import ScreenHeader from '@/components/ScreenHeader';
-import { TOTAL_PARKS } from '@/data/parks';
 import { convertMiles, convertFeet, distanceLabel, elevationLabel } from '@/utils/units';
 
 export default function StatsScreen() {
@@ -40,7 +39,7 @@ export default function StatsScreen() {
         <View style={styles.ringCard}>
           <ProgressRing percentage={stats.completionPercentage} size={100} strokeWidth={10} />
           <View>
-            <Text style={styles.ringCount}>{stats.totalVisited} / {TOTAL_PARKS}</Text>
+            <Text style={styles.ringCount}>{stats.totalVisited} / {stats.totalParks}</Text>
             <Text style={styles.ringLabel}>Parks Visited</Text>
             <Text style={styles.ringPct}>{stats.completionPercentage}% Complete</Text>
           </View>

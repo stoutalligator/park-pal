@@ -7,7 +7,6 @@ import { colors, spacing, radius, shadows, typography } from '@/theme';
 import FilterPill from '@/components/FilterPill';
 import ParkCard from '@/components/ParkCard';
 import { ParkStatus } from '@/types';
-import { TOTAL_PARKS } from '@/data/parks';
 
 type Filter = 'All Parks' | 'Visited' | 'Bucket List' | 'Planned' | 'Not Visited';
 
@@ -47,7 +46,7 @@ export default function ExploreScreen() {
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.title}>Parks</Text>
-        <Text style={styles.subtitle}>{stats.totalVisited} / {TOTAL_PARKS} visited</Text>
+        <Text style={styles.subtitle}>{stats.totalVisited} / {stats.totalParks} visited</Text>
       </View>
 
       {/* Search */}

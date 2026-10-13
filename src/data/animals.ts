@@ -645,4 +645,15 @@ export const ALL_ANIMALS: Animal[] = [
   { id: 'gates-arctic-moose', parkId: 'gates-arctic', name: 'Moose', description: 'Found browsing willow thickets in remote river valleys.', rarity: 'Uncommon' },
   { id: 'gates-arctic-arctic-fox', parkId: 'gates-arctic', name: 'Arctic Fox', description: 'Occasionally seen hunting across the open tundra.', rarity: 'Rare' },
   { id: 'gates-arctic-golden-eagle', parkId: 'gates-arctic', name: 'Golden Eagle', description: 'Nests on remote cliffs throughout the Brooks Range.', rarity: 'Uncommon' },
+
+  // --- Chiricahua (upcoming park — hidden until the app_config switch is on) ---
+  { id: 'chiricahua-white-nosed-coati', parkId: 'chiricahua', name: 'White-nosed Coati', description: 'Social, ringed-tail relative of the raccoon, often seen foraging by day.', rarity: 'Common' },
+  { id: 'chiricahua-coues-white-tailed-deer', parkId: 'chiricahua', name: "Coues' White-tailed Deer", description: 'Small desert subspecies of whitetail, frequent in lower Bonita Canyon.', rarity: 'Common' },
+  { id: 'chiricahua-javelina', parkId: 'chiricahua', name: 'Javelina', description: 'Herds of collared peccary root through the canyon woodlands.', rarity: 'Uncommon' },
+  { id: 'chiricahua-acorn-woodpecker', parkId: 'chiricahua', name: 'Acorn Woodpecker', description: 'Noisy, clown-faced woodpecker that stores acorns in granary trees year-round.', rarity: 'Common' },
+  { id: 'chiricahua-fox-squirrel', parkId: 'chiricahua', name: 'Chiricahua Fox Squirrel', description: 'Mexican squirrel at the northern edge of its range, rare elsewhere in the U.S.', rarity: 'Common' },
+  { id: 'chiricahua-banded-rock-rattlesnake', parkId: 'chiricahua', name: 'Banded Rock Rattlesnake', description: 'Small, well-camouflaged rattlesnake of rocky slopes and gravelly washes.', rarity: 'Uncommon' },
+  { id: 'chiricahua-mexican-jay', parkId: 'chiricahua', name: 'Mexican Jay', description: 'Noisy blue-and-gray jay that travels in family flocks through oak and pine woodlands year-round.', rarity: 'Common' },
+  { id: 'chiricahua-elegant-trogon', parkId: 'chiricahua', name: 'Coppery-tailed Trogon', description: 'Mexican bird, formerly called the elegant trogon, that reaches only a few U.S. sky islands.', rarity: 'Rare' },
+  { id: 'chiricahua-black-bear', parkId: 'chiricahua', name: 'Black Bear', description: 'Roams the Chiricahua Mountains and is sometimes seen in the park, especially in summer.', rarity: 'Rare' },
 ];
