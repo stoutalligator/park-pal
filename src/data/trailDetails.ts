@@ -23791,4 +23791,116 @@ export const TRAIL_DETAILS: Record<string, TrailDetail> = {
       }
     ]
   },
+  "canyonlands-pothole-point": {
+    "id": "canyonlands-pothole-point",
+    "estimatedTime": "40-45 min",
+    "bestSeason": "Year-round (best soon after rain)",
+    "tags": [
+      "Family Friendly",
+      "Slickrock",
+      "Fragile Ecosystem",
+      "Needles District"
+    ],
+    "trailTip": "Follow the cairns across the slickrock and walk around every pothole, even dry ones, without touching the water. As of October 2026, per NPS.gov, dogs are not allowed on this trail, and its uneven rock and stone steps make it unsuitable for wheelchairs.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "When the potholes dry out, microscopic tardigrades living in them slow their metabolism to 0.1 percent of normal, and some pothole creatures can be fully active again within 30 minutes of the next rain.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Trailhead"
+      },
+      {
+        "mile": 0.1,
+        "elevationFt": 14
+      },
+      {
+        "mile": 0.2,
+        "elevationFt": 29,
+        "label": "Pothole slickrock"
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": 36,
+        "label": "Needles viewpoint"
+      },
+      {
+        "mile": 0.4,
+        "elevationFt": 22
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": 7
+      },
+      {
+        "mile": 0.6,
+        "elevationFt": 0,
+        "label": "Return to trailhead"
+      }
+    ]
+  },
+  "canyonlands-slickrock": {
+    "id": "canyonlands-slickrock",
+    "estimatedTime": "1.5-3 hrs",
+    "bestSeason": "Year-round (best Mar-May, Sep-Nov)",
+    "tags": [
+      "Slickrock",
+      "Unfenced Edges",
+      "Cairned Route",
+      "Needles District"
+    ],
+    "trailTip": "Follow the cairns across the open slickrock and use extreme caution at all four viewpoints, which are unfenced canyon edges. As of October 2026, per NPS.gov, dogs are not allowed on this trail, and traction devices are recommended when winter snow or ice is present.",
+    "lastVerified": "2026-10-13",
+    "didYouKnow": "The gray and purple layers seen from Viewpoint 3 in Little Spring Canyon are mostly limestone holding fossil crinoids and brachiopods, left by a shallow sea that once covered the red-and-white Needles country.",
+    "elevationProfile": [
+      {
+        "mile": 0,
+        "elevationFt": 0,
+        "label": "Trailhead"
+      },
+      {
+        "mile": 0.3,
+        "elevationFt": 40,
+        "label": "Viewpoint 1 (Panorama)"
+      },
+      {
+        "mile": 0.5,
+        "elevationFt": 30,
+        "label": "Loop junction"
+      },
+      {
+        "mile": 0.7,
+        "elevationFt": 25,
+        "label": "Viewpoint 2 (Upper Little Spring Canyon)"
+      },
+      {
+        "mile": 1,
+        "elevationFt": 55,
+        "label": "Viewpoint 3 (Lower Little Spring Canyon)"
+      },
+      {
+        "mile": 1.3,
+        "elevationFt": 50,
+        "label": "Viewpoint 4 (Big Spring Canyon)"
+      },
+      {
+        "mile": 1.6,
+        "elevationFt": 75
+      },
+      {
+        "mile": 1.9,
+        "elevationFt": 30,
+        "label": "Loop junction"
+      },
+      {
+        "mile": 2.2,
+        "elevationFt": 20
+      },
+      {
+        "mile": 2.4,
+        "elevationFt": 0,
+        "label": "Return to trailhead"
+      }
+    ]
+  },
 };

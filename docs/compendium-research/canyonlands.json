@@ -374,25 +374,25 @@
         },
         {
           "mile": 0.1,
-          "elevationFt": 10
+          "elevationFt": 14
         },
         {
           "mile": 0.2,
-          "elevationFt": 20,
+          "elevationFt": 29,
           "label": "Pothole slickrock"
         },
         {
           "mile": 0.3,
-          "elevationFt": 25,
+          "elevationFt": 36,
           "label": "Needles viewpoint"
         },
         {
           "mile": 0.4,
-          "elevationFt": 15
+          "elevationFt": 22
         },
         {
           "mile": 0.5,
-          "elevationFt": 5
+          "elevationFt": 7
         },
         {
           "mile": 0.6,
@@ -436,7 +436,7 @@
           "label": "Viewpoint 2 (Upper Little Spring Canyon)"
         },
         {
-          "mile": 1.0,
+          "mile": 1,
           "elevationFt": 55,
           "label": "Viewpoint 3 (Lower Little Spring Canyon)"
         },
