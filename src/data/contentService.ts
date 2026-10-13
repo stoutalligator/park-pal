@@ -39,6 +39,7 @@ interface TrailDetailRow {
   did_you_know: string;
   elevation_profile: ElevationPoint[];
   last_verified: string | null;
+  alert_keywords?: string[] | null;
 }
 
 interface AnimalDetailRow {
@@ -85,6 +86,7 @@ function mapTrailDetailRow(row: TrailDetailRow): TrailDetail {
     didYouKnow: row.did_you_know,
     elevationProfile: row.elevation_profile,
     lastVerified: row.last_verified ?? undefined,
+    alertKeywords: row.alert_keywords?.length ? row.alert_keywords : undefined,
   };
 }
 

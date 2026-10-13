@@ -154,7 +154,9 @@ create table public.trail_details (
   trail_tip text not null,
   did_you_know text not null,
   elevation_profile jsonb not null default '[]',
-  last_verified text
+  last_verified text,
+  -- Extra place names that tie a live NPS alert to this trail (see npsAlerts.ts).
+  alert_keywords jsonb not null default '[]'
 );
 
 create table public.animal_details (

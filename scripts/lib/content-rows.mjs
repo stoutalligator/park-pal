@@ -82,6 +82,7 @@ export function buildContentRows() {
         did_you_know: t.didYouKnow,
         elevation_profile: t.elevationProfile,
         last_verified: t.lastVerified ?? null,
+        alert_keywords: t.alertKeywords ?? [],
       }))
     ),
     animal_details: parksData.flatMap((park) =>

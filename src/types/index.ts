@@ -185,6 +185,9 @@ export interface TrailDetail {
   didYouKnow: string;
   elevationProfile: ElevationPoint[];
   lastVerified?: string;
+  /** Extra place names that tie a live NPS alert to this trail when the alert
+   * doesn't name the trail itself (e.g. "Mowich Lake" for its access road). */
+  alertKeywords?: string[];
 }
 
 /** Researched enrichment data for an Animal, keyed by Animal.id — same staging pattern as TrailDetail. */

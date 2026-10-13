@@ -93,29 +93,45 @@ const GENERIC_WORDS = new Set([
   'scenic', 'drive', 'road', 'upper', 'lower', 'north', 'south', 'east', 'west',
 ]);
 
+// Drops accents and Hawaiian ʻokina/apostrophes so "Halemaʻumaʻu" in an NPS
+// alert matches our "Halemaumau".
 function normalize(text: string): string {
   return text
     .toLowerCase()
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
+    .replace(/['ʻ‘’]/g, '')
     .replace(/[^a-z0-9 ]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
-function trailKey(name: string): string | null {
-  const key = normalize(name).replace(/ (trail|trails|loop|route)$/, '');
-  const distinctive = key.split(' ').filter((w) => !GENERIC_WORDS.has(w)).join('');
-  return distinctive.length >= 5 ? key : null;
+// The trail's name, plus the part before " to " for names like "South Kaibab
+// to Ooh Aah Point", since alerts usually name just the trail.
+function trailKeys(name: string): string[] {
+  const full = normalize(name).replace(/ (trail|trails|loop|route)$/, '');
+  const keys = full.includes(' to ') ? [full, full.split(' to ')[0]] : [full];
+  return keys.filter((k) => k.split(' ').filter((w) => !GENERIC_WORDS.has(w)).join('').length >= 5);
 }
 
-/** Alerts at the trail's park whose title or description names the trail. */
-export function alertsForTrail(alerts: ParkAlert[], trail: Trail): ParkAlert[] {
-  const key = trailKey(trail.name);
-  if (!key) return [];
-  return alertsForPark(alerts, trail.parkId).filter((a) =>
-    ` ${normalize(`${a.title} ${a.description}`)} `.includes(` ${key} `)
-  );
+/** Alerts at the trail's park that name the trail, or one of its curated
+ * alert keywords (from the trail's research detail). */
+export function alertsForTrail(alerts: ParkAlert[], trail: Trail, alertKeywords: string[] = []): ParkAlert[] {
+  const keys = trailKeys(trail.name);
+  const extra = alertKeywords.map(normalize).filter(Boolean);
+  if (keys.length === 0 && extra.length === 0) return [];
+  return alertsForPark(alerts, trail.parkId).filter((a) => {
+    const text = normalize(`${a.title} ${a.description}`);
+    const squashed = text.replace(/ /g, '');
+    if (extra.some((k) => ` ${text} `.includes(` ${k} `))) return true;
+    return keys.some((k) => {
+      if (` ${text} `.includes(` ${k} `)) return true;
+      // "Kipuka Puaulu" vs "Kīpukapuaulu": compare without spaces, but only
+      // for long keys so short ones can't match inside unrelated words.
+      const sk = k.replace(/ /g, '');
+      return sk.length >= 8 && squashed.includes(sk);
+    });
+  });
 }
 
 export function formatAlertsUpdated(syncedAt: string | null, now = Date.now()): string {

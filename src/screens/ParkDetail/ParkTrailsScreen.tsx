@@ -65,7 +65,7 @@ function TrailListCard({ trail, completed, units, hasAlert, onToggleCompleted, o
 
 export default function ParkTrailsScreen({ route, navigation }: Props) {
   const { parkId } = route.params;
-  const { parks, trails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile, parkAlerts } = useApp();
+  const { parks, trails, trailDetails, isTrailCompleted, markTrailCompleted, unmarkTrailCompleted, userProfile, parkAlerts } = useApp();
   const units = userProfile.units;
   const [search, setSearch] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<'All' | TrailDifficulty>('All');
@@ -117,7 +117,7 @@ export default function ParkTrailsScreen({ route, navigation }: Props) {
             trail={trail}
             completed={isTrailCompleted(trail.id)}
             units={units}
-            hasAlert={alertsForTrail(parkAlerts, trail).length > 0}
+            hasAlert={alertsForTrail(parkAlerts, trail, trailDetails[trail.id]?.alertKeywords).length > 0}
             onToggleCompleted={() =>
               isTrailCompleted(trail.id)
                 ? unmarkTrailCompleted(trail.id)

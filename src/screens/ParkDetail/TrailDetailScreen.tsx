@@ -151,7 +151,7 @@ export default function TrailDetailScreen({ route, navigation }: Props) {
         <Text style={styles.description}>{trail.description}</Text>
 
         <NpsAlertsCard
-          alerts={alertsForTrail(parkAlerts, trail)}
+          alerts={alertsForTrail(parkAlerts, trail, detail?.alertKeywords)}
           syncedAt={alertsSyncedAt}
           npsCode={getParkGuide(trail.parkId)?.npsCode}
           title="NPS alerts mentioning this trail"
