@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { colors, spacing, radius, shadows, typography } from '@/theme';
@@ -24,8 +24,8 @@ const SETTINGS_ROWS = [
     section: 'About',
     items: [
       { label: 'About Parks Pal', sub: 'v1.0.0', icon: require('@/assets/icons/icon-parks.png'), screen: 'About' },
-      { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png'), screen: 'PrivacyPolicy' },
-      { label: 'Terms of Service', sub: '', icon: require('@/assets/icons/icon-journal.png'), screen: 'Terms' },
+      { label: 'Privacy Policy', sub: '', icon: require('@/assets/icons/icon-safety.png'), url: 'https://parks-pal.com/privacy' },
+      { label: 'Terms of Service', sub: '', icon: require('@/assets/icons/icon-journal.png'), url: 'https://parks-pal.com/terms' },
     ],
   },
 ];
@@ -77,12 +77,12 @@ export default function SettingsScreen() {
           <View key={section} style={styles.section}>
             <Text style={styles.sectionLabel}>{section.toUpperCase()}</Text>
             <View style={styles.group}>
-              {items.map(({ label, sub, icon, screen }, i) => (
+              {items.map(({ label, sub, icon, screen, url }, i) => (
                 <TouchableOpacity
                   key={label}
                   style={[styles.row, i < items.length - 1 && styles.rowBorder]}
                   activeOpacity={0.7}
-                  onPress={() => navigation.navigate(screen)}
+                  onPress={() => (url ? Linking.openURL(url) : navigation.navigate(screen))}
                 >
                   <Image source={icon} style={styles.rowIcon} resizeMode="contain" />
                   <View style={styles.rowText}>

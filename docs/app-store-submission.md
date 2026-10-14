@@ -182,7 +182,7 @@ Everything else (Location, Financial Info, Health & Fitness, Contacts, Browsing 
 
 Privacy Policy URL for both stores: **https://parks-pal.com/privacy**
 Support URL for both stores: **https://parks-pal.com/support**
-Terms of Service URL: **https://parks-pal.com/terms** (also mirrored in-app at Settings → Terms of Service)
+Terms of Service URL: **https://parks-pal.com/terms** (Settings → Privacy Policy / Terms of Service and About → links all open these web pages; there is no in-app copy of the text)
 
 **App Store Connect EULA field:** optional — leave blank to use Apple's standard EULA, or paste the Terms of Service page's text in if you want Parks Pal's own terms (covering the "as-is"/liability-limitation language and the trail-info disclaimer) to be the actual binding agreement instead of Apple's default. Not required for submission either way.
 

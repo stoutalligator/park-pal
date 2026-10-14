@@ -7,6 +7,12 @@ import ScreenHeader from '@/components/ScreenHeader';
 
 const SUPPORT_EMAIL = 'parkpal.support@gmail.com';
 
+const LEGAL_LINKS = [
+  { label: 'Support', url: 'https://parks-pal.com/support' },
+  { label: 'Privacy Policy', url: 'https://parks-pal.com/privacy' },
+  { label: 'Terms of Service', url: 'https://parks-pal.com/terms' },
+];
+
 export default function AboutScreen() {
   const navigation = useNavigation<any>();
 
@@ -44,6 +50,16 @@ export default function AboutScreen() {
           <TouchableOpacity onPress={() => Linking.openURL(`mailto:${SUPPORT_EMAIL}`)}>
             <Text style={styles.supportEmail}>{SUPPORT_EMAIL}</Text>
           </TouchableOpacity>
+          <View style={styles.legalRow}>
+            {LEGAL_LINKS.map((link, i) => (
+              <React.Fragment key={link.url}>
+                {i > 0 && <Text style={styles.legalDot}>·</Text>}
+                <TouchableOpacity onPress={() => Linking.openURL(link.url)} hitSlop={8}>
+                  <Text style={styles.legalLink}>{link.label}</Text>
+                </TouchableOpacity>
+              </React.Fragment>
+            ))}
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -85,4 +101,7 @@ const styles = StyleSheet.create({
   },
   supportLabel: { ...typography.bodySmall, color: colors.textSecondary },
   supportEmail: { ...typography.labelBold, color: colors.primary },
+  legalRow: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: spacing.sm, marginTop: spacing.md },
+  legalLink: { ...typography.bodySmall, color: colors.primary, textDecorationLine: 'underline' },
+  legalDot: { ...typography.bodySmall, color: colors.textMuted },
 });
