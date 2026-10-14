@@ -2,6 +2,22 @@
 
 Copy-paste source for store listings and the privacy questionnaires. Not app documentation — working content for App Store Connect / Google Play Console.
 
+## iOS Submission Status
+
+**Submitted for App Review on 2026-10-14** (v1.0.0). Google Play has not been submitted yet.
+
+App Store Connect settings as submitted, beyond the listing copy below:
+
+- **Availability:** United States and Canada only. The EU is excluded, so the Digital Services Act trader/non-trader declaration was skipped (its "Set Up" banner stays visible but doesn't block anything). To add the EU later: declare non-trader while the app is free; trader status requires publishing a verified address/phone/email on the EU product page.
+- **Price:** Free ($0.00, US base country). No in-app purchases or subscriptions, so App Store Server Notifications URLs are left blank.
+- **Age rating:** 4+, override set to "Not Applicable" — see section 2.
+- **App Privacy:** seven data types declared, as in section 3.
+- **Encryption documentation:** not needed — `ITSAppUsesNonExemptEncryption: false` in `app.json`; HTTPS and `expo-crypto` both use iOS's built-in encryption.
+- **Accessibility Nutrition Labels:** left blank (optional, and no VoiceOver/Larger Text audit has been done).
+- **Not applicable:** Vietnam Game License, Regulated Medical Devices, Game Center, Promo Codes.
+
+While in review: keep the demo account's password and trips unchanged, and don't push Supabase migrations that could break the live app.
+
 ---
 
 ## Closed Beta Plan (retired)
@@ -41,7 +57,7 @@ The confirmation page itself (`site/confirmed/index.html`) is a static page matc
 **Store listing setup (can happen anytime after accounts exist, in parallel with testing)**
 9. In App Store Connect: create the app record (bundle ID `com.parks-pal.app` — matches `app.json`'s `ios.bundleIdentifier`), fill in listing copy, keywords, category, age rating, and the App Privacy questionnaire — all drafted in sections 1–4 below.
 10. In Play Console: create the app, fill in the Data Safety form and content rating questionnaire, store listing text — also drafted below.
-11. Take the actual screenshots (section 6 below is not done yet) and upload them to both consoles.
+11. Take the actual screenshots and upload them to both consoles (iOS done; Android still to do).
 12. Set Support URL → `https://parks-pal.com/support` and Privacy Policy URL → `https://parks-pal.com/privacy` in both consoles.
 
 **Final checks before hitting submit**
@@ -50,7 +66,7 @@ The confirmation page itself (`site/confirmed/index.html`) is a static page matc
 15. **Sentry auth token — decided: deferred.** The first `eas build` failed because `@sentry/react-native`'s Xcode build phase tries to auto-upload source maps/dSYMs and has no auth token to do it with. Fix applied: set `SENTRY_DISABLE_AUTO_UPLOAD=true` as an EAS environment variable (both `preview` and `production`) to skip that step. Crash reporting itself still works — you just won't get symbolicated stack traces in Sentry until a real `SENTRY_AUTH_TOKEN` is set up later. Custom SMTP (for branded auth emails) — **decided: not needed right now.** Supabase's default email sending works fine for the current volume; revisit only if branding the auth emails becomes a priority later or default sending's rate limits become a real problem.
 
 **Submit**
-16. In App Store Connect, select the TestFlight-tested build, complete the submission questionnaire (export compliance — already answered via `ITSAppUsesNonExemptEncryption: false` in `app.json`), and submit for review. Typical review time: 1–3 days.
+16. **Done — submitted 2026-10-14.** In App Store Connect, select the TestFlight-tested build, complete the submission questionnaire (export compliance — already answered via `ITSAppUsesNonExemptEncryption: false` in `app.json`), and submit for review. Typical review time: 1–3 days.
 17. In Play Console, promote the tested build from internal testing to production (or go through Google's closed/open testing track first if you want more real-world testers before a full release). Review time: usually a few hours to 1 day.
 
 **Demo account (App Store Connect → "Sign-In Required" / TestFlight Beta App Review → Sign-In Information):**
@@ -140,7 +156,9 @@ Primary: **Travel**. Secondary (iOS only, optional): **Lifestyle**
 
 ## 2. Age Rating
 
-**Apple (App Privacy → Age Rating questionnaire):** No objectionable content in any category (violence, mature themes, gambling, etc. all "None") → resolves to **4+**.
+**Apple (App Information → Age Rating):** No objectionable content in any category (violence, mature themes, gambling, etc. all "None") → resolves to **4+**. Answers to the 2025 questions: Health or Wellness Topics, Medical or Treatment Information, Unrestricted Web Access (links open in Safari), User-Generated Content (trip content is private to the account), Messaging, Advertising, and Parental Controls/Age Assurance are all **No**.
+
+Age Categories and Override: **Not Applicable**. Not "Made for Kids" (Kids category rules would apply, and the Terms say the app isn't directed at children under 13), and no higher override is needed because the Terms set no minimum age. If the Terms ever add a 13+ minimum, override to 13+.
 
 **Google Play (Content rating questionnaire, via IARC):** Answer "No" to every mature-content question (violence, sexual content, drugs, gambling, user-generated text shared publicly — trip notes are private to the account, not public/social) → resolves to **Everyone**.
 
@@ -152,6 +170,7 @@ Go to App Store Connect → App Privacy → and declare:
 
 | Category | Data type | Collected? | Linked to identity? | Used for tracking? | Purpose |
 |---|---|---|---|---|---|
+| Contact Info | Name | Yes | Yes | No | App Functionality (profile display name, stored in `profiles.name`) |
 | Contact Info | Email Address | Yes | Yes | No | App Functionality (account login) |
 | User Content | Photos or Videos | Yes | Yes | No | App Functionality (trip photos) |
 | User Content | Other User Content | Yes | Yes | No | App Functionality (trip notes, activities, trail/wildlife logs) |
@@ -174,7 +193,7 @@ Everything else (Location, Financial Info, Health & Fitness, Contacts, Browsing 
 | Section | Answer |
 |---|---|
 | Does your app collect or share any of the required user data types? | Yes |
-| Data types collected | Personal info → Email address · Photos and videos → Photos · App activity → App interactions (trip/park data) · App info and performance → Crash logs |
+| Data types collected | Personal info → Name, Email address · Photos and videos → Photos · App activity → App interactions (trip/park data) · App info and performance → Crash logs |
 | Is all collected data encrypted in transit? | Yes (HTTPS/TLS to Supabase) |
 | Do you provide a way for users to request data deletion? | Yes — in-app (Settings → Delete Account), immediate and permanent |
 | Is data shared with third parties? | No |
@@ -196,7 +215,7 @@ No manual `PrivacyInfo.xcprivacy` file is needed in this project. The only depen
 
 ## 6. Screenshots
 
-**Not yet generated** — `.tmp-screenshots/out` is empty. Required sizes:
+**iOS: done** — uploaded to App Store Connect for the 2026-10-14 submission. Android screenshots still needed. Required sizes:
 
 - iOS: 6.9" display (iPhone 16 Pro Max class, 1320×2868 or 2868×1320) — **required**. 6.5" and 5.5" are optional now that Apple auto-scales, but including them avoids relying on that.
 - Android: phone screenshots, minimum 320px, recommended 1080×1920 or similar 16:9/9:16.
